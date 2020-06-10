@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a05090c18039f9d3a7f9376285ce2863e0482903
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139258"
+제목: "컨테이너 화 된 마이크로 서비스" 설명: "이 장에서는 마이크로 서비스 및 컨테이너를 사용 하 여 민첩 하 고 확장 가능 하며 안정적인 최신 클라우드 응용 프로그램을 빌드하는 방법을 설명 합니다."
+assetid: 5872ad92-04e0-4f1a-9691-79d5602f5683: xamarin-forms author: davidbritch: dabritch:: 08/07/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="containerized-microservices"></a>컨테이너화된 마이크로 서비스
 
 클라이언트-서버 응용 프로그램을 개발 하면 각 계층에서 특정 기술을 사용 하는 계층화 된 응용 프로그램을 구축 하는 데 집중 했습니다. 이러한 응용 프로그램을 종종 *모놀리식* 응용 프로그램 이라고 하며, 최대 부하를 위해 미리 확장 된 하드웨어로 패키지 됩니다. 이 개발 방법의 주요 단점은 각 계층 내의 구성 요소 간 긴밀 한 결합, 개별 구성 요소를 쉽게 확장할 수 없고 테스트 비용입니다. 간단한 업데이트는 계층의 나머지 부분에 예기치 않은 영향을 미칠 수 있으므로 응용 프로그램 구성 요소를 변경 하려면 전체 계층을 retested 하 고 다시 배포 해야 합니다.
@@ -93,11 +79,9 @@ EShopOnContainers reference 응용 프로그램은 그림 8-4에 나와 있는 �
 
 참조 응용 프로그램의 백 엔드 서비스 아키텍처는 공동 마이크로 서비스 및 컨테이너 형식의 여러 자치 하위 시스템으로 분해 됩니다. 각 마이크로 서비스는 id 서비스, 카탈로그 서비스, 주문 서비스 및 바구니 서비스의 단일 기능 영역을 제공 합니다.
 
-각 마이크로 서비스에는 자체 데이터베이스가 있으므로 다른 마이크로 서비스에서 완전히 분리 될 수 있습니다. 필요한 경우에는 응용 프로그램 수준 이벤트를 사용 하 여 서로 다른 마이크로 서비스의 데이터베이스 간 일관성을 달성 합니다. 자세한 내용은 [마이크로 서비스 간 통신](#communication_between_microservices)을 참조 하세요.
+각 마이크로 서비스에는 자체 데이터베이스가 있으므로 다른 마이크로 서비스에서 완전히 분리 될 수 있습니다. 필요한 경우에는 응용 프로그램 수준 이벤트를 사용 하 여 서로 다른 마이크로 서비스의 데이터베이스 간 일관성을 달성 합니다. 자세한 내용은 [마이크로 서비스 간 통신](#communication-between-microservices)을 참조 하세요.
 
 참조 응용 프로그램에 대 한 자세한 내용은 [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램 아키텍처](https://aka.ms/microservicesebook)를 참조 하세요.
-
-<a name="communication_between_client_and_microservices" />
 
 ## <a name="communication-between-client-and-microservices"></a>클라이언트와 마이크로 서비스 간의 통신
 
@@ -111,8 +95,6 @@ EShopOnContainers 모바일 앱은 그림 8-5에 표시 된 *직접 클라이언
 
 > [!TIP]
 > API 게이트웨이 통신을 사용 하는 것이 좋습니다. 클라이언트-마이크로 서비스 간 직접 통신은 크고 복잡 한 마이크로 서비스 기반 응용 프로그램을 빌드할 때 단점이 있을 수 있지만 작은 응용 프로그램에는 적합 하지 않습니다. 수십 개의 마이크로 서비스를 사용 하 여 초대형 마이크로 서비스 기반 응용 프로그램을 디자인 하는 경우 API 게이트웨이 통신을 사용 하는 것이 좋습니다. 자세한 내용은 [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램 아키텍처](https://aka.ms/microservicesebook)를 참조 하세요.
-
-<a name="communication_between_microservices" />
 
 ## <a name="communication-between-microservices"></a>마이크로 서비스 간 통신
 

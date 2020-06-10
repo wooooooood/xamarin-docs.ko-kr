@@ -6,12 +6,12 @@ ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 8402a48602dd94578e688faeb038aec69684e7d4
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: e683170b048be5ab5cc39fa8560c82916ead5d50
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305818"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570936"
 ---
 # <a name="unified-api-overview"></a>Unified API 개요
 
@@ -41,12 +41,12 @@ Xamarin의 Unified API를 사용 하면 Mac과 iOS 간에 코드를 공유 하 �
 
 이 시점부터 Api는 다음과 같은 두 가지 방법으로 표시 됩니다.
 
-- **Classic API:** 32 비트 (만)로 제한 되 고 `monotouch.dll` 및 `XamMac.dll` 어셈블리에 노출 됩니다.
-- **Unified API:** `Xamarin.iOS.dll` 및 `Xamarin.Mac.dll` 어셈블리에서 사용할 수 있는 단일 API를 사용 하 여 32 및 64 비트 개발을 모두 지원 합니다.
+- **Classic API:** 32 비트 (전용)로 제한 되 고 `monotouch.dll` 및 어셈블리에서 노출 `XamMac.dll` 됩니다.
+- **Unified API:** 및 어셈블리에서 사용할 수 있는 단일 API를 사용 하 여 32 및 64 비트 개발을 모두 지원 `Xamarin.iOS.dll` `Xamarin.Mac.dll` 합니다.
 
 즉, 엔터프라이즈 개발자 (앱 스토어를 대상으로 하지 않음)의 경우 계속 해 서 계속 유지 관리 하거나 새 Api로 업그레이드할 수 있으므로 기존 클래식 Api를 계속 사용할 수 있습니다.
 
-<a name="namespace-changes" />
+<a name="namespace-changes"></a>
 
 ## <a name="namespace-changes"></a>네임 스페이스 변경
 
@@ -56,7 +56,7 @@ IOS 제품의 접두사 "Monotouch.dialog"와 데이터 형식에 대 한 Mac �
 
 이렇게 하면 조건부 컴파일을 수행 하지 않고 Mac 및 iOS 플랫폼 간에 코드를 보다 간단 하 게 공유할 수 있으며, 소스 코드 파일의 맨 위에 노이즈가 줄어듭니다.
 
-- **Classic API:** 네임 스페이스는 `MonoTouch.` 또는 `MonoMac.` 접두사를 사용 합니다.
+- **Classic API:** 네임 스페이스는 `MonoTouch.` 또는 접두사를 사용 `MonoMac.` 합니다.
 - **Unified API:** 네임 스페이스 접두사가 없습니다.
 
 ## <a name="runtime-defaults"></a>런타임 기본값
@@ -67,7 +67,7 @@ IOS 제품의 접두사 "Monotouch.dialog"와 데이터 형식에 대 한 Mac �
 
 Classic API에 대해서도 새 Refcount를 사용 하도록 설정할 수 있지만 기본값은 보수적인 이며 사용자가 변경할 필요가 없습니다. Unified API를 통해 기본값을 변경 하 고 개발자가 코드를 리팩터링 하 고 다시 테스트할 때 모든 기능을 동시에 제공할 수 있습니다.
 
-## <a name="api-changes"></a>API 변경
+## <a name="api-changes"></a>API 변경 내용
 
 Unified API는 더 이상 사용 되지 않는 메서드를 제거 하 고, 클래식 Api에서 원래 Monotouch.dialog 및 MonoMac 네임 스페이스에 바인딩되는 경우 API 이름에 오타가 있는 몇 가지 인스턴스가 있습니다. 이러한 인스턴스는 새로운 통합 Api에서 수정 되었으며 구성 요소, iOS 및 Mac 응용 프로그램에서 업데이트 해야 합니다. 다음은 실행할 수 있는 가장 일반적인 항목 목록입니다.
 
@@ -84,7 +84,7 @@ Unified API는 더 이상 사용 되지 않는 메서드를 제거 하 고, 클�
 
 ## <a name="updating-to-unified"></a>통합으로 업데이트
 
-**클래식** 의 여러 이전/중단/사용 되지 않는 Api는 **통합** api에서 사용할 수 없습니다. `[Obsolete]` 특성 메시지 (경고의 일부)를 제공 하 여 올바른 API를 안내 하므로 (수동 또는 자동) 업그레이드를 시작 하기 전에 `CS0616` 경고를 수정 하는 것이 더 쉬울 수 있습니다.
+**클래식** 의 여러 이전/중단/사용 되지 않는 Api는 **통합** api에서 사용할 수 없습니다. `CS0616` `[Obsolete]` 적절 한 API를 안내해 주는 특성 메시지 (경고의 일부)가 있으므로 (수동 또는 자동) 업그레이드를 시작 하기 전에 경고를 수정 하는 것이 더 쉬울 수 있습니다.
 
 프로젝트 업데이트 전이나 후에 사용할 수 있는 클래식 및 통합 API 변경 내용의 [*차이*](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md) 를 게시 하 고 있습니다. 클래식에서 obsoletes 호출을 수정 하는 것은 종종 시간 보호기 (문서 조회 감소)입니다.
 
@@ -104,17 +104,17 @@ Unified API에는 호환 되는 패키지 ( **iOS10**)에 대 한 새 플랫폼 
 
 32 및 64 비트 응용 프로그램 지원에 대 한 배경 및 프레임 워크에 대 한 정보는 [32 및 64 Bit 플랫폼 고려 사항](~/cross-platform/macios/32-and-64/index.md)을 참조 하세요.
 
- <a name="new-data-types" />
+ <a name="new-data-types"></a>
 
 #### <a name="new-data-types"></a>새 데이터 형식
 
 차이점의 핵심에서 Mac 및 iOS Api는 모두 32 비트 플랫폼의 경우 항상 32 비트이 고 64 비트 플랫폼에서는 64 비트가 있는 아키텍처 관련 데이터 형식을 사용 합니다.
 
-예를 들어, 목표-C는 32 비트 시스템의 `int32_t`에 `NSInteger` 데이터 형식을 매핑하고 64 비트 시스템에서 `int64_t` 합니다.
+예를 들어, 목표-C는 `NSInteger` `int32_t` 32 비트 시스템 및 `int64_t` 의 64 비트 시스템에 데이터 형식을 매핑합니다.
 
-이 동작을 일치 시키기 위해 Unified API의 이전 `int` 사용 (.NET은 항상 `System.Int32`로 정의 됨)을 새 데이터 형식 (`System.nint`)으로 바꿉니다.  "N"을 의미 "native"로 간주할 수 있으므로 플랫폼의 네이티브 정수 형식입니다.
+이 동작을 일치 시키기 위해 Unified API의 이전 사용 `int` (.net은 항상로 정의 됨 `System.Int32` )을 새 데이터 형식으로 대체 `System.nint` 합니다.  "N"을 의미 "native"로 간주할 수 있으므로 플랫폼의 네이티브 정수 형식입니다.
 
-`nint`, `nuint` 및 `nfloat`를 소개 하 고, 필요한 경우 위에 구축 된 데이터 형식을 제공 합니다.
+`nint` `nuint` 그리고 `nfloat` 필요한 경우 위에 구축 된 데이터 형식을 제공 하는 것도 소개 합니다.
 
 이러한 데이터 형식 변경에 대해 자세히 알아보려면 [네이티브 형식](~/cross-platform/macios/nativetypes.md) 문서를 참조 하세요.
 
@@ -130,11 +130,11 @@ if (IntPtr.Size == 4) {
 }
 ```
 
-<a name="deprecated-apis" />
+<a name="deprecated-apis"></a>
 
 ### <a name="arrays-and-systemcollectionsgeneric"></a>배열 및 System.object
 
-인덱서에 C# 는 `int`형식이 필요 하기 때문에 컬렉션 또는 배열의 요소에 액세스 하려면 `nint` 값을 `int`로 명시적으로 캐스팅 해야 합니다. 다음은 그 예입니다.
+C # 인덱서에는 형식이 필요 하기 때문에 `int` `nint` 컬렉션 또는 배열의 요소에 액세스 하려면 값을로 명시적으로 캐스팅 해야 `int` 합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 public List<string> Names = new List<string>();
@@ -146,11 +146,11 @@ public string GetName(nint index) {
 
 ```
 
-이는 예상 된 동작입니다. `int`에서 `nint`로의 캐스팅이 64 비트의 손실 이기 때문에 암시적 변환이 수행 되지 않습니다.
+이는에서로의 캐스팅이 `int` `nint` 64 비트의 손실이 기 때문에 암시적 변환이 수행 되지 않기 때문에 예상 되는 동작입니다.
 
 ### <a name="converting-datetime-to-nsdate"></a>DateTime을 NSDate로 변환
 
-통합 Api를 사용 하는 경우 `DateTime`를 `NSDate` 값으로 암시적으로 변환 하는 것이 더 이상 수행 되지 않습니다. 이러한 값은 한 형식에서 다른 형식으로 명시적으로 변환 해야 합니다. 다음 확장 메서드를 사용 하 여이 프로세스를 자동화할 수 있습니다.
+통합 Api를 사용 하는 경우 `DateTime` 값을로 암시적으로 변환 하는 `NSDate` 것이 더 이상 수행 되지 않습니다. 이러한 값은 한 형식에서 다른 형식으로 명시적으로 변환 해야 합니다. 다음 확장 메서드를 사용 하 여이 프로세스를 자동화할 수 있습니다.
 
 ```csharp
 public static DateTime NSDateToDateTime(this NSDate date)
@@ -174,27 +174,27 @@ public static NSDate DateTimeToNSDate(this DateTime date)
 
 ```
 
-<a name="deprecated-typos" />
+<a name="deprecated-typos"></a>
 
 ### <a name="deprecated-apis-and-typos"></a>사용 되지 않는 Api 및 오타가 있습니다.
 
-Xamarin.ios 클래식 API (monotouch.dialog) 내에서 `[Obsolete]` 특성은 다음 두 가지 방법으로 사용 되었습니다.
+Xamarin.ios 클래식 API (monotouch.dialog) 내 `[Obsolete]` 에서 특성은 다음 두 가지 방법으로 사용 되었습니다.
 
 - **사용 되지 않는 IOS API:** 이는 Apple 힌트가 API 사용을 중지 하는 것입니다 .이는 새 항목으로 대체 되기 때문입니다. 이전 버전의 iOS를 지 원하는 경우에는 Classic API 계속 해 서 필요한 경우가 많습니다.
- 이러한 API (및 `[Obsolete]` 특성)는 새 Xamarin.ios 어셈블리에 포함 됩니다.
+ 이러한 API (및 `[Obsolete]` 특성)는 새로운 xamarin.ios 어셈블리에 포함 됩니다.
 - **잘못 된 API** 일부 API는 이름에 오타가 있습니다.
 
 원본 어셈블리 (monotouch.dialog 및 XamMac)의 경우 이전 코드를 호환성에 사용할 수 있도록 유지 했지만 Unified API 어셈블리 (Xamarin.ios 및 Xamarin.ios)에서 제거 되었습니다.
 
-<a name="NSObject_ctor" />
+<a name="NSObject_ctor"></a>
 
 ### <a name="nsobject-subclasses-ctorintptr"></a>NSObject 서브 클래스 .ctor (IntPtr)
 
-모든 `NSObject` 서브 클래스에는 `IntPtr`를 허용 하는 생성자가 있습니다. 이는 네이티브 ObjC 핸들에서 새로운 관리 되는 인스턴스를 인스턴스화할 수 있는 방법입니다.
+모든 `NSObject` 서브 클래스에는를 허용 하는 생성자가 있습니다 `IntPtr` . 이는 네이티브 ObjC 핸들에서 새로운 관리 되는 인스턴스를 인스턴스화할 수 있는 방법입니다.
 
 클래식에서는 `public` 생성자 였습니다. 그러나 사용자 코드에서이 기능을 사용 하는 것은 간단 합니다. 예 *를 들어 단일 ObjC 인스턴스에 대해* 여러 개의 관리 되는 인스턴스를 만들거나 필요한 관리 되는 상태 (서브 클래스의 경우)가 없는 관리 되는 인스턴스를 만들 수 있습니다.
 
-이러한 종류의 문제를 방지 하기 위해 `IntPtr` 생성자는 이제 **통합** API에서 `protected` 하 여 서브클래싱에만 사용할 수 있습니다. 이렇게 하면 올바른/안전 API를 사용 하 여 핸들에서 관리 되는 인스턴스를 만들 수 있습니다. 즉,
+이러한 종류의 문제를 방지 하기 위해 `IntPtr` 생성자는 `protected` 이제 **통합** API에 있으므로 서브클래싱에만 사용할 수 있습니다. 이렇게 하면 올바른/안전 API를 사용 하 여 핸들에서 관리 되는 인스턴스를 만들 수 있습니다. 즉,
 
 ```csharp
 var label = Runtime.GetNSObject<UILabel> (handle);
@@ -202,13 +202,13 @@ var label = Runtime.GetNSObject<UILabel> (handle);
 
 이 API는 기존 관리 되는 인스턴스를 반환 하거나 (이미 있는 경우) 새 인스턴스 (필요한 경우)를 만듭니다. 클래식 API와 통합 API 모두에서 이미 사용할 수 있습니다.
 
-이제 `.ctor(NSObjectFlag)` `protected` 수도 있지만이는 하위 클래스 외부에서 거의 사용 되지 않았습니다.
+는 `.ctor(NSObjectFlag)` 이제가 하위 `protected` 클래스 외부에서 거의 사용 되지 않았습니다.
 
-<a name="NSAction" />
+<a name="NSAction"></a>
 
 ### <a name="nsaction-replaced-with-action"></a>NSAction이 작업으로 대체 됨
 
-통합 Api를 사용 하면 표준 .NET `Action`를 위해 `NSAction` 제거 되었습니다. 이는 `Action` 일반적인 .NET 형식 이지만 `NSAction`는 Xamarin.ios와 관련 되어 있기 때문에 크게 향상 된 기능입니다. 두 항목은 모두 정확히 동일한 작업을 수행 하지만 형식이 서로 다르며 호환 되지 않는 형식 이므로 동일한 결과를 얻기 위해 더 많은 코드를 작성 해야 했습니다.
+통합 Api를 사용 하 여은 `NSAction` 표준 .net을 위해 제거 되었습니다 `Action` . `Action`는 일반적으로 xamarin.ios와 관련 되어 있으므로이는 큰 향상 된 기능입니다 `NSAction` . 두 항목은 모두 정확히 동일한 작업을 수행 하지만 형식이 서로 다르며 호환 되지 않는 형식 이므로 동일한 결과를 얻기 위해 더 많은 코드를 작성 해야 했습니다.
 
 예를 들어 기존 Xamarin 응용 프로그램에 다음 코드가 포함 된 경우입니다.
 
@@ -224,27 +224,27 @@ UITapGestureRecognizer singleTap = new UITapGestureRecognizer (new NSAction (del
 UITapGestureRecognizer singleTap = new UITapGestureRecognizer (() => ShowDropDownAnimated(tblDataView));
 ```
 
-이전에는 `Action` `NSAction`에 할당할 수 없기 때문에 컴파일러 오류가 발생 했지만 `UITapGestureRecognizer` 이제는 통합 Api에서 유효한 `NSAction` 대신 `Action`를 사용 합니다.
+이전에는를에 할당할 수 없기 때문에 컴파일러 오류가 발생 했지만, 이제는가 대신을 사용 하기 때문에 `Action` `NSAction` `UITapGestureRecognizer` `Action` `NSAction` 통합 api를 사용할 수 있습니다.
 
-### <a name="custom-delegates-replaced-with-actiont"></a>사용자 지정 대리자를 작업\<T로 대체 >
+### <a name="custom-delegates-replaced-with-actiont"></a>작업으로 대체 된 사용자 지정 대리자\<T>
 
-**통합** 된 몇 가지 간단한 (예: 하나의 매개 변수) .net 대리자는 `Action<T>`로 대체 되었습니다. 예를 들어
+**통합** 된 몇 가지 간단한 (예: 하나의 매개 변수) .net 대리자는로 대체 되었습니다 `Action<T>` . 예를 들어
 
 ```csharp
 public delegate void NSNotificationHandler (NSNotification notification);
 ```
 
-이제를 `Action<NSNotification>`사용할 수 있습니다. 이 코드를 승격 하면 Xamarin.ios와 사용자 고유의 응용 프로그램 내에서 코드 중복을 다시 사용 하 고 줄일 수 있습니다.
+이제를로 사용할 수 있습니다 `Action<NSNotification>` . 이 코드를 승격 하면 Xamarin.ios와 사용자 고유의 응용 프로그램 내에서 코드 중복을 다시 사용 하 고 줄일 수 있습니다.
 
-### <a name="taskbool-replaced-with-taskbooleannserror"></a>작업\<bool >는 Task < Boolean, NSError >로 바뀝니다 >
+### <a name="taskbool-replaced-with-taskbooleannserror"></a>태스크가 \<bool> 작업<부울, NSError>>로 바뀌었습니다.
 
-**클래식** 에는 `Task<bool>`를 반환 하는 비동기 api가 있었습니다. 그러나이 중 일부는 `NSError` 시그니처의 일부일 때를 사용할 수 있습니다. 즉, `bool` 이미 `true` 되었으며 `NSError`를 얻기 위해 예외를 catch 해야 합니다.
+**클래식** 에는를 반환 하는 비동기 api가 있습니다 `Task<bool>` . 그러나가 시그니처의 일부일 때를 사용 해야 하는 경우도 `NSError` 있습니다. 즉, `bool` 가 이미 `true` 있고를 가져오기 위해 예외를 catch `NSError` 해야 합니다.
 
-일부 오류는 매우 일반적 이며 반환 값은 유용 하지 않기 때문에 `Task<Tuple<Boolean,NSError>>`를 반환 하도록 **통합** 에서이 패턴이 변경 되었습니다. 이렇게 하면 비동기 호출 중에 발생 했을 수 있는 성공 및 오류를 모두 확인할 수 있습니다.
+일부 오류는 매우 일반적 이며 반환 값이 유용 하지 않기 때문에를 반환 하도록 **통합** 에서이 패턴을 변경 했습니다 `Task<Tuple<Boolean,NSError>>` . 이렇게 하면 비동기 호출 중에 발생 했을 수 있는 성공 및 오류를 모두 확인할 수 있습니다.
 
 ### <a name="nsstring-vs-string"></a>NSString vs 문자열
 
-일부 경우에는 일부 상수를 `string`에서 `NSString`으로 변경 해야 했습니다 (예: `UITableViewCell`
+일부 경우에는 일부 상수를에서로 변경 해야 `string` 했습니다 `NSString` . 예를 들면 다음과 같습니다.`UITableViewCell`
 
 **클래식**
 
@@ -258,13 +258,13 @@ public virtual string ReuseIdentifier { get; }
 public virtual NSString ReuseIdentifier { get; }
 ```
 
-일반적으로 .NET `System.String` 형식을 선호 합니다. 그러나 Apple 지침에도 불구 하 고, 일부 네이티브 API는 상수 포인터 (문자열 자체 아님)를 비교 하며이는 상수를 `NSString`으로 노출 하는 경우에만 작동할 수 있습니다.
+일반적으로 .NET `System.String` 형식을 선호 합니다. 그러나 Apple 지침에도 불구 하 고, 일부 네이티브 API는 상수 포인터 (문자열 자체 아님)를 비교 하며,이는 상수를로 노출 하는 경우에만 작동할 수 있습니다 `NSString` .
 
- <a name="protocols" />
+ <a name="protocols"></a>
 
 ### <a name="objective-c-protocols"></a>목표-C 프로토콜
 
-원래 Monotouch.dialog는 ObjC 프로토콜에 대 한 완전 한 지원을 제공 하지 않았으며, 가장 일반적인 시나리오를 지원 하기 위해 최적화 되지 않은 몇 가지 API가 추가 되었습니다. 이러한 제한 사항은 더 이상 존재 하지 않지만 이전 버전과의 호환성을 위해 `monotouch.dll` 및 `XamMac.dll`내부에 몇 가지 Api가 유지 됩니다.
+원래 Monotouch.dialog는 ObjC 프로토콜에 대 한 완전 한 지원을 제공 하지 않았으며, 가장 일반적인 시나리오를 지원 하기 위해 최적화 되지 않은 몇 가지 API가 추가 되었습니다. 이 제한은 더 이상 존재 하지 않지만 이전 버전과의 호환성을 위해 및 내에서 몇 가지 Api를 유지 `monotouch.dll` `XamMac.dll` 합니다.
 
 이러한 제한 사항은 통합 Api에서 제거 되 고 정리 되었습니다. 대부분의 변경 내용은 다음과 같습니다.
 
@@ -280,7 +280,7 @@ public virtual AVAssetResourceLoaderDelegate Delegate { get; }
 public virtual IAVAssetResourceLoaderDelegate Delegate { get; }
 ```
 
-`I` 접두사는 지정 된 형식 대신 ObjC 프로토콜에 대 한 인터페이스 **를 제공 하** 는 것을 의미 합니다. 이렇게 하면 Xamarin.ios에서 제공 하는 특정 형식을 서브 클래스 하지 않으려고 할 수 있습니다.
+`I`접두사는 **통합** 은 특정 형식이 아니라 objc 프로토콜에 대 한 인터페이스를 노출 함을 의미 합니다. 이렇게 하면 Xamarin.ios에서 제공 하는 특정 형식을 서브 클래스 하지 않으려고 할 수 있습니다.
 
 또한 일부 API는 보다 정확 하 고 사용 하기 쉽습니다. 예를 들면 다음과 같습니다.
 
@@ -300,10 +300,10 @@ public virtual void SelectionDidChange (IUITextInput uiTextInput);
 
 #### <a name="nscoding-protocol"></a>NSCoding 프로토콜
 
-원래 바인딩에는 `NSCoding` 프로토콜을 지원 하지 않는 경우에도 모든 형식에 대 한 .ctor (NSCoder)가 포함 되어 있습니다.  개체를 인코딩하기 위해 `NSObject`에 단일 `Encode(NSCoder)` 메서드가 있습니다.
+원래 바인딩에는 프로토콜을 지원 하지 않는 경우에도 모든 형식에 대 한 .ctor (NSCoder)가 포함 되어 있습니다. `NSCoding`  개체를 `Encode(NSCoder)` 인코딩하기 위해에 단일 메서드가 `NSObject` 있습니다.
 그러나이 메서드는 인스턴스가 NSCoding 프로토콜에 맞춘 경우에만 작동 합니다.
 
-Unified API에서는이 문제를 해결 했습니다.  형식이 `NSCoding`를 따르는 경우에만 새 어셈블리에 `.ctor(NSCoder)` 있습니다. 또한 이러한 형식에는 이제 `INSCoding` 인터페이스를 따르는 `Encode(NSCoder)` 메서드가 있습니다.
+Unified API에서는이 문제를 해결 했습니다.  새 어셈블리에는 형식이와 일치 하는 경우에만이 있습니다 `.ctor(NSCoder)` `NSCoding` . 또한 이러한 형식에는 `Encode(NSCoder)` 인터페이스를 준수 하는 메서드가 있습니다 `INSCoding` .
 
 낮은 영향: 대부분의 경우이 변경은 이전에 제거 된 생성자를 사용할 수 없기 때문에 응용 프로그램에 영향을 주지 않습니다.
 

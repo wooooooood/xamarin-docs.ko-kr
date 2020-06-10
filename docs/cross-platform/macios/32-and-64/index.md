@@ -6,12 +6,12 @@ ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 5ba451de857444bc5b12b750ae479b62abdb75a3
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: d2c00410581a35e67807f512b5b6fb6d5349ad0f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306010"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571053"
 ---
 # <a name="3264-bit-platform-considerations"></a>32/64 비트 플랫폼 고려 사항
 
@@ -21,11 +21,11 @@ IOS 11부터 32 비트 앱은 더 이상 시작 되지 않으며, [앱 스토어
 
 2018 년 1 월부터 [Mac 앱 스토어에 제출 된 새 앱은 64 비트를 지원 해야](https://developer.apple.com/news/?id=06282017a)하 고, 기존 앱은 6 월 2018 일에 업데이트 되어야 합니다.
 
-Xamarin의 Classic API (`XamMac.dll` 및 `monotouch.dll`)는 32 비트 응용 프로그램만 지원 합니다. 그러나 새 Xamarin.ios 및 Xamarin.ios 응용 프로그램은 기본적으로 [Unified API](~/cross-platform/macios/unified/index.md) (`Xamarin.iOS` 및 `Xamarin.Mac`)를 사용 하므로 필요에 따라 32 및 64 비트를 모두 대상으로 지정할 수 있습니다.
+Xamarin의 Classic API ( `XamMac.dll` 및 `monotouch.dll` )는 32 비트 응용 프로그램만 지원 합니다. 그러나 새 Xamarin.ios 및 Xamarin.ios 응용 프로그램은 기본적으로 [Unified API](~/cross-platform/macios/unified/index.md) ( `Xamarin.iOS` 및)를 사용 `Xamarin.Mac` 하므로 필요에 따라 32 및 64 비트를 모두 대상으로 지정할 수 있습니다.
 
 ## <a name="ios"></a>iOS
 
-<a name="enable-64" />
+<a name="enable-64"></a>
 
 ### <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Xamarin.ios 앱의 64 비트 빌드 사용
 
@@ -40,9 +40,9 @@ Unified API로 변환 된 Xamarin.ios 모바일 응용 프로그램의 경우 �
 
 1. **Solution Pad**에서 응용 프로그램의 프로젝트를 두 번 클릭 하 여 **프로젝트 옵션** 창을 엽니다.
 2. **IOS 빌드**를 선택 합니다.
-3. IPhone 시뮬레이터의 경우 **지원 되는 아키텍처** 드롭다운에서 **x86\_64** 또는 **i386 + x86\_64**를 선택 합니다.
+3. IPhone 시뮬레이터의 경우 **지원 되는 아키텍처** 드롭다운에서 **x86 \_ 64** 또는 **i386 + x86 \_ 64**을 선택 합니다.
 
-   [![지원 되는 아키텍처를 x86\_64 또는 i386 + x86\_64로 설정](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
+   [![지원 되는 아키텍처를 x86 \_ 64 또는 i386 + x86 64로 설정 \_](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
 
 4. 물리적 장치의 경우 사용 가능한 **ARM64** 조합 중 하나를 선택 합니다.
 
@@ -55,9 +55,9 @@ Unified API로 변환 된 Xamarin.ios 모바일 응용 프로그램의 경우 �
 
 1. **솔루션 탐색기**에서 응용 프로그램의 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
 2. **IOS 빌드**를 선택 합니다.
-3. IPhone 시뮬레이터의 경우 **지원 되는 아키텍처** 를 **x86\_64** 또는 **i386 + x86\_64**으로 설정 합니다. 
+3. IPhone 시뮬레이터의 경우 **지원 되는 아키텍처** 를 **x86 \_ 64** 또는 **i386 + x86 \_ 64**으로 설정 합니다. 
 
-   [![지원 되는 아키텍처를 x86_64 또는 i386 + x86\_64로 설정](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
+   [![X86_64 또는 i386 + x86 64에 대해 지원 되는 아키텍처 설정 \_](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
 
 4. 물리적 장치의 경우 사용 가능한 **ARM64** 조합 중 하나를 선택 합니다.
     
@@ -90,7 +90,7 @@ Apple이 32 비트에서 64 비트로 전환 되는 동안 iOS 앱은 32 비트 
 
 최신 Mac 컴퓨터는 32 비트 및 64 비트 응용 프로그램을 모두 지원 합니다.   MacOS 10.6 (눈 Leopard)는 32 비트 시스템에서 실행 되는 마지막 운영 체제 였습니다.   2010 이후 출시 된 대부분의 Mac은 두 시스템을 모두 지원 합니다.
 
-IOS와 달리 최신 버전의 macOS에 도입 된 새로운 프레임 워크 중 상당수는 64 비트 모드 에서만 지원 됩니다 (CloudKit, EventKit, GameController, LocalAuthentication, MediaLibrary, MultipeerConnectivity, NotificationCenter, 글 키트, SpriteKit, 소셜, 및 MapKit).
+IOS와 달리 최신 버전의 macOS에 도입 된 새로운 프레임 워크 중 상당수는 64 비트 모드 (CloudKit, EventKit, GameController, LocalAuthentication, MediaLibrary, MultipeerConnectivity, NotificationCenter, Kit, SpriteKit, 소셜 및 MapKit) 에서만 지원 됩니다.
 
 개발자는 Unified API을 사용 하 여 생성 하려는 응용 프로그램의 종류 (32 비트 또는 64 비트)를 선택할 수 있습니다.
 

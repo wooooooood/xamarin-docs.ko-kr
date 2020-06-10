@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: b9b4d201e02d60bd6131c8693d9ac6a233e4fe10
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 4e2ff46174d9dbb9171a470c389ffe301f6d0d60
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306214"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569649"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Xamarin을 사용 하 여 watchOS Apps 배포 및 테스트
 
@@ -36,7 +36,7 @@ ms.locfileid: "79306214"
   - [테스트를 위해 Apple Watch에 배포](~/ios/watchos/deploy-test/device.md)하거나
   - [앱 스토어에 업로드](~/ios/watchos/deploy-test/appstore.md)합니다.
 
-<a name="App_IDs"/>
+<a name="App_IDs"></a>
 
 ## <a name="app-ids"></a>앱 Id
 
@@ -60,13 +60,13 @@ ms.locfileid: "79306214"
 
 ### <a name="wildcard-app-id"></a>와일드 카드 앱 ID
 
-또는 `com.xamarin.*`와 같은 세 프로젝트 모두와 일치 하는 와일드 카드 **앱 ID** 를 만들 수 있습니다.
+또는와 같은 세 개의 프로젝트 모두와 일치 하는 와일드 카드 **앱 ID** 를 만들 수 있습니다 `com.xamarin.*` .
 
 일부 기능은 와일드 카드 앱 ID (예: 푸시 알림)와 함께 사용할 수 없습니다. 앱이 이러한 기능을 필요로 하는 경우 명시적인 앱 Id를 만들어야 합니다.
 
 배포의 경우 와일드 카드 앱 ID에 대해 하나의 배포 프로 비전 프로필을 만들어야 합니다.
 
-<a name="App_Groups" />
+<a name="App_Groups"></a>
 
 ## <a name="app-groups"></a>앱 그룹
 

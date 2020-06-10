@@ -1,22 +1,8 @@
 ---
-title: Azure Cosmos DB 문서 데이터베이스를 사용 하 여 사용자 인증Xamarin.Forms
-description: 이 문서에서는 사용자가 응용 프로그램에서 자신의 문서에만 액세스할 수 있도록 분할 된 컬렉션 Azure Cosmos DB 액세스 제어를 결합 하는 방법을 설명 합니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b0322db5ebcc70347bf35157e3dc7c057e58cf18
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136099"
+제목: "Azure Cosmos DB 문서 데이터베이스를 사용 하 여 사용자를 인증 하 고 Xamarin.Forms " 설명: "이 문서에서는 사용자가 응용 프로그램에서 자신의 문서에만 액세스할 수 있도록 분할 된 컬렉션 Azure Cosmos DB 액세스 제어를 결합 하는 방법을 설명 Xamarin.Forms 합니다."
+assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D: xamarin-forms author: davidbritch: dabritch:: 06/16/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Azure Cosmos DB 문서 데이터베이스를 사용 하 여 사용자 인증Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
@@ -55,16 +41,14 @@ Cosmos DB 분할에 대 한 자세한 내용은 [Azure Cosmos DB을 분할 하 �
 
 리소스 토큰 브로커를 응용 프로그램에 통합 하는 프로세스는 다음과 같습니다 Xamarin.Forms .
 
-1. 액세스 제어를 사용할 Cosmos DB 계정을 만듭니다. 자세한 내용은 [Cosmos DB 구성](#cosmosdb_configuration)을 참조 하세요.
-1. 리소스 토큰 브로커를 호스트 하는 Azure App Service을 만듭니다. 자세한 내용은 [Azure App Service 구성](#app_service_configuration)을 참조 하세요.
-1. 인증을 수행할 Facebook 앱을 만듭니다. 자세한 내용은 [Facebook 앱 구성](#facebook_configuration)을 참조 하세요.
-1. Facebook을 사용 하 여 간편한 인증을 수행 하도록 Azure App Service를 구성 합니다. 자세한 내용은 [Azure App Service 인증 구성](#app_service_authentication_configuration)을 참조 하세요.
-1. Xamarin.FormsAzure App Service 및 Cosmos DB와 통신 하도록 샘플 응용 프로그램을 구성 합니다. 자세한 내용은 [ Xamarin.Forms 응용 프로그램 구성](#forms_application_configuration)을 참조 하세요.
+1. 액세스 제어를 사용할 Cosmos DB 계정을 만듭니다. 자세한 내용은 [Azure Cosmos DB 구성](#azure-cosmos-db-configuration)을 참조 하세요.
+1. 리소스 토큰 브로커를 호스트 하는 Azure App Service을 만듭니다. 자세한 내용은 [Azure App Service 구성](#azure-app-service-configuration)을 참조 하세요.
+1. 인증을 수행할 Facebook 앱을 만듭니다. 자세한 내용은 [Facebook 앱 구성](#facebook-app-configuration)을 참조 하세요.
+1. Facebook을 사용 하 여 간편한 인증을 수행 하도록 Azure App Service를 구성 합니다. 자세한 내용은 [Azure App Service 인증 구성](#azure-app-service-authentication-configuration)을 참조 하세요.
+1. Xamarin.FormsAzure App Service 및 Cosmos DB와 통신 하도록 샘플 응용 프로그램을 구성 합니다. 자세한 내용은 [ Xamarin.Forms 응용 프로그램 구성](#xamarinforms-application-configuration)을 참조 하세요.
 
 > [!NOTE]
 > [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
-
-<a name="cosmosdb_configuration" />
 
 ### <a name="azure-cosmos-db-configuration"></a>Azure Cosmos DB 구성
 
@@ -72,8 +56,6 @@ Cosmos DB 분할에 대 한 자세한 내용은 [Azure Cosmos DB을 분할 하 �
 
 1. Cosmos DB 계정을 만듭니다. 자세한 내용은 [Azure Cosmos DB 계정 만들기](/azure/cosmos-db/sql-api-dotnetcore-get-started#step-1-create-an-azure-cosmos-db-account)를 참조 하세요.
 1. Cosmos DB 계정에서의 파티션 키를 지정 하 여 라는 새 컬렉션을 만듭니다 `UserItems` `/userid` .
-
-<a name="app_service_configuration" />
 
 ### <a name="azure-app-service-configuration"></a>Azure App Service 구성
 
@@ -93,8 +75,6 @@ Azure App Service에서 리소스 토큰 브로커를 호스트 하는 프로세
 
 1. 리소스 토큰 브로커 솔루션을 Azure App Service 웹 앱에 게시 합니다.
 
-<a name="facebook_configuration" />
-
 ### <a name="facebook-app-configuration"></a>Facebook 앱 구성
 
 Facebook 앱을 만들어 인증을 수행 하는 프로세스는 다음과 같습니다.
@@ -112,8 +92,6 @@ Facebook 앱을 만들어 인증을 수행 하는 프로세스는 다음과 같�
 
 자세한 내용은 [Facebook을 사용 하 여 응용 프로그램 등록](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-nameregister-aregister-your-application-with-facebook)을 참조 하세요.
 
-<a name="app_service_authentication_configuration" />
-
 ### <a name="azure-app-service-authentication-configuration"></a>Azure App Service 인증 구성
 
 App Service 간편한 인증을 구성 하는 프로세스는 다음과 같습니다.
@@ -128,8 +106,6 @@ App Service 간편한 인증을 구성 하는 프로세스는 다음과 같습�
     [![](azure-cosmosdb-auth-images/app-service-authentication-settings.png "App Service Web App Authentication Settings")](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "App Service Web App Authentication Settings")
 
 또한 App Service 웹 앱은 Facebook 앱과 통신 하 여 인증 흐름을 사용 하도록 구성 해야 합니다. Facebook id 공급자를 선택 하 고 facebook 개발자 센터의 Facebook 앱 설정에서 **앱 id** 및 **앱 암호** 값을 입력 하 여이를 수행할 수 있습니다. 자세한 내용은 [응용 프로그램에 Facebook 정보 추가](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application)를 참조 하세요.
-
-<a name="forms_application_configuration" />
 
 ### <a name="xamarinforms-application-configuration"></a>Xamarin.Forms응용 프로그램 구성
 
@@ -237,7 +213,7 @@ while (query.HasMoreResults)
 > [!NOTE]
 > 리소스 토큰 브로커에 의해 생성 된 사용 권한 문서는 응용 프로그램에서 만든 문서와 동일한 문서 컬렉션에 저장 됩니다 Xamarin.Forms . 따라서 문서 쿼리에는 `Where` 문서 컬렉션에 대해 쿼리에 필터링 조건자를 적용 하는 절이 포함 되어 있습니다. 이 절을 사용 하면 문서 컬렉션에서 사용 권한 문서가 반환 되지 않습니다.
 
-문서 컬렉션에서 문서를 검색 하는 방법에 대 한 자세한 내용은 [문서 컬렉션 문서 검색](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md#document_query)을 참조 하세요.
+문서 컬렉션에서 문서를 검색 하는 방법에 대 한 자세한 내용은 [문서 컬렉션 문서 검색](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md#retrieving-document-collection-documents)을 참조 하세요.
 
 ## <a name="inserting-documents"></a>문서 삽입
 
@@ -250,7 +226,7 @@ await client.CreateDocumentAsync(collectionLink, item);
 
 이렇게 하면 문서가 사용자의 분할 된 컬렉션에 삽입 됩니다.
 
-문서 컬렉션에 문서를 삽입 하는 방법에 대 한 자세한 내용은 문서 [컬렉션에 문서 삽입](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md#inserting_document)을 참조 하세요.
+문서 컬렉션에 문서를 삽입 하는 방법에 대 한 자세한 내용은 문서 [컬렉션에 문서 삽입](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md#inserting-a-document-into-a-document-collection)을 참조 하세요.
 
 ## <a name="deleting-documents"></a>문서 삭제
 
@@ -266,7 +242,7 @@ await client.DeleteDocumentAsync(UriFactory.CreateDocumentUri(Constants.Database
 
 이렇게 하면 Cosmos DB에서 문서를 삭제할 분할 된 컬렉션을 알 수 있습니다.
 
-문서 컬렉션에서 문서를 삭제 하는 방법에 대 한 자세한 내용은 [문서 컬렉션에서 문서 삭제](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md#deleting_document)를 참조 하세요.
+문서 컬렉션에서 문서를 삭제 하는 방법에 대 한 자세한 내용은 [문서 컬렉션에서 문서 삭제](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md#deleting-a-document-from-a-document-collection)를 참조 하세요.
 
 ## <a name="summary"></a>요약
 

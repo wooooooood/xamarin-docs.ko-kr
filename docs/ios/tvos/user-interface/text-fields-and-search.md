@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: cfe747d89b3ccbff390326c915dc1311e40a60fc
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 83edaf46519790d9674b7b537fc424ddd7a09a1c
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022163"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84566151"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Xamarin에서 tvOS 텍스트 및 검색 필드 작업
 
@@ -26,7 +26,7 @@ ms.locfileid: "73022163"
 
 이 문서에서는 tvOS 앱에서 텍스트 및 검색 필드 작업에 대 한 세부 정보를 다룹니다.
 
-<a name="About-Text-and-Search-Fields" />
+<a name="About-Text-and-Search-Fields"></a>
 
 ## <a name="about-text-and-search-fields"></a>텍스트 및 검색 필드 정보
 
@@ -34,7 +34,7 @@ ms.locfileid: "73022163"
 
 또한 앱이 사용자에 게 많은 양의 콘텐츠를 제공 하는 경우 (예: 음악, 동영상 또는 그림 컬렉션) 사용자가 적은 양의 텍스트를 입력 하 여 사용 가능한 항목의 목록을 필터링 할 수 있도록 하는 검색 필드를 포함할 수 있습니다.
 
-<a name="Text-Fields" />
+<a name="Text-Fields"></a>
 
 ## <a name="text-fields"></a>텍스트 필드
 
@@ -51,7 +51,7 @@ Apple에는 텍스트 필드 작업에 대 한 다음과 같은 제안이 있습
 - **적절 한 기본 키보드 종류를 선택** 합니다. TvOS은 텍스트 필드에 대해 지정할 수 있는 여러 가지 용도의 기본 키보드 유형을 제공 합니다. 예를 들어 전자 메일 주소 키보드는 사용자가 최근에 입력 한 주소 목록에서 선택할 수 있도록 하 여 쉽게 입력할 수 있습니다.
 - **보안 텍스트 필드를 사용 하는 경우** 에는 보안 텍스트 필드를 사용 합니다. 보안 텍스트 필드는 실제 문자 대신 점으로 입력 된 문자를 표시 합니다. 암호와 같은 중요 한 정보를 수집 하는 경우 항상 보안 텍스트 필드를 사용 합니다.
 
-<a name="Keyboards" />
+<a name="Keyboards"></a>
 
 ## <a name="keyboards"></a>키보드
 
@@ -66,11 +66,11 @@ Apple에는 텍스트 필드 작업에 대 한 다음과 같은 제안이 있습
 Apple은 화상 키보드를 사용할 때 다음과 같은 제안 사항을 제안 합니다.
 
 - **적절 한 기본 키보드 종류를 선택** 합니다. TvOS은 텍스트 필드에 대해 지정할 수 있는 여러 가지 용도의 기본 키보드 유형을 제공 합니다. 예를 들어 전자 메일 주소 키보드는 사용자가 최근에 입력 한 주소 목록에서 선택할 수 있도록 하 여 쉽게 입력할 수 있습니다.
-- **적절 한 경우 키보드 액세서리 보기 사용** -항상 표시 되는 표준 정보 외에, 이미지 또는 레이블과 같은 선택적 액세서리 보기를 화상 키보드에 추가 하 여 텍스트 입력의 용도를 명확 하 게 하거나 지원할 수 있습니다. 필요한 정보를 입력 하는 사용자입니다.
+- **적절 한 경우 키보드 액세서리 보기 사용** -항상 표시 되는 표준 정보 외에, 이미지 또는 레이블과 같은 선택적 액세서리 보기를 화상 키보드에 추가 하 여 텍스트 입력의 목적을 명확히 하거나 사용자가 필요한 정보를 입력 하는 데 도움을 받을 수 있습니다.
 
 화상 키보드를 사용 하는 방법에 대 한 자세한 내용은 Apple의 [UIKeyboardType](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextInputTraits_Protocol/index.html#//apple_ref/c/tdef/UIKeyboardType), [키보드 관리](https://developer.apple.com/library/tvos/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#//apple_ref/doc/uid/TP40009542-CH5-SW1), [데이터 입력에 대 한 사용자 지정 보기](https://developer.apple.com/library/tvos/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/InputViews/InputViews.html#//apple_ref/doc/uid/TP40009542-CH12-SW1) 및 [IOS 설명서에 대 한 텍스트 프로그래밍 가이드](https://developer.apple.com/library/tvos/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Introduction/Introduction.html) 를 참조 하세요.
 
-<a name="Search" />
+<a name="Search"></a>
 
 ## <a name="search"></a>검색
 
@@ -88,7 +88,7 @@ Apple에는 검색 필드 작업에 대 한 다음과 같은 제안이 있습니
 
 자세한 내용은 Apple의 [Uisearchcontroller 클래스 참조](https://developer.apple.com/library/tvos/documentation/UIKit/Reference/UISearchController/index.html)를 참조 하세요.
 
-<a name="Working-with-Text-Fields" />
+<a name="Working-with-Text-Fields"></a>
 
 ## <a name="working-with-text-fields"></a>텍스트 필드 작업
 
@@ -98,9 +98,9 @@ TvOS 앱에서 텍스트 필드를 사용 하는 가장 쉬운 방법은 iOS Des
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-1. **Solution Pad**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집을 위해 엽니다.
+1. **Solution Pad**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. 디자인 화면에서 하나 이상의 **텍스트 필드** 를 뷰로 끌어 옵니다.
 
     [![](text-fields-and-search-images/text02.png "A Text Field")](text-fields-and-search-images/text02.png#lightbox)
@@ -115,7 +115,7 @@ TvOS 앱에서 텍스트 필드를 사용 하는 가장 쉬운 방법은 iOS Des
     [![](text-fields-and-search-images/text05.png "Spell Checking, Capitalization and the default Keyboard Type")](text-fields-and-search-images/text05.png#lightbox)
 1. 스토리 보드에 대 한 변경 내용을 저장 합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. 편집하기 위해 **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭하여 엽니다.
 1. 디자인 화면에서 하나 이상의 **텍스트 필드** 를 뷰로 끌어 옵니다.
@@ -134,7 +134,7 @@ TvOS 앱에서 텍스트 필드를 사용 하는 가장 쉬운 방법은 iOS Des
 
 -----
 
-코드에서 `Text` 속성을 사용 하 여 텍스트 필드의 값을 가져오거나 설정할 수 있습니다.
+코드에서 속성을 사용 하 여 텍스트 필드의 값을 가져오거나 설정할 수 있습니다 `Text` .
 
 ```csharp
 Console.WriteLine ("User ID {0} and Password {1}", UserId.Text, Password.Text);
@@ -142,7 +142,7 @@ Console.WriteLine ("User ID {0} and Password {1}", UserId.Text, Password.Text);
 
 필요에 따라 `Started` 및 `Ended` 텍스트 필드 이벤트를 사용 하 여 시작 및 종료 텍스트 입력에 응답할 수 있습니다.
 
-<a name="Working-with-Search-Fields" />
+<a name="Working-with-Search-Fields"></a>
 
 ## <a name="working-with-search-fields"></a>검색 필드 작업
 
@@ -150,17 +150,17 @@ TvOS 앱에서 검색 필드에 대 한 작업을 수행 하는 가장 쉬운 �
 
 다음을 수행합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-1. **Solution Pad**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집을 위해 엽니다.
+1. **Solution Pad**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. 새 컬렉션 뷰 컨트롤러를 스토리 보드로 끌어 사용자의 검색 결과를 표시 합니다.
 
     [![](text-fields-and-search-images/search02.png "A Collection View Controller")](text-fields-and-search-images/search02.png#lightbox)
-1. **Properties Pad**의 **위젯** 탭에서 **클래스** 에 `SearchResultsViewController`를 사용 하 고 **스토리 보드 ID**로 `SearchResults` 합니다.
+1. **Properties Pad**의 **위젯** 탭에서 `SearchResultsViewController` **클래스** 및 `SearchResults` **스토리 보드 ID**에 대해를 사용 합니다.
 
     [![](text-fields-and-search-images/search03.png "The Widget tab")](text-fields-and-search-images/search03.png#lightbox)
 1. 디자인 화면에서 **셀 프로토타입을** 선택 합니다.
-1. **속성 탐색기**의 **위젯** 탭에서 **클래스** 에 `SearchResultCell`를 사용 하 고 **식별자**에 `ImageCell` 합니다.
+1. **속성 탐색기**의 **위젯** 탭에서 `SearchResultCell` **클래스** 및 식별자에 대해를 사용 합니다 `ImageCell` . **Identifier**
 
     [![](text-fields-and-search-images/search04.png "The Widget tab")](text-fields-and-search-images/search04.png#lightbox)
 1. **셀 프로토타입의** 디자인을 레이아웃 하 고 **속성 탐색기**의 **위젯** 탭에서 각 요소에 고유한 **이름을** 표시 합니다.
@@ -168,17 +168,17 @@ TvOS 앱에서 검색 필드에 대 한 작업을 수행 하는 가장 쉬운 �
     [![](text-fields-and-search-images/search05.png "Layout the design of the Cell Prototype")](text-fields-and-search-images/search05.png#lightbox)
 1. 스토리 보드에 대 한 변경 내용을 저장 합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. 편집하기 위해 **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭하여 엽니다.
 1. 새 컬렉션 뷰 컨트롤러를 스토리 보드로 끌어 사용자의 검색 결과를 표시 합니다.
 
     [![](text-fields-and-search-images/seach02-vs.png "A Collection View Controller")](text-fields-and-search-images/seach02-vs.png#lightbox)
-1. **속성 탐색기**의 **위젯** 탭에서 **클래스** 에 `SearchResultsViewController`를 사용 하 고 **스토리 보드 ID**로 `SearchResults` 합니다.
+1. **속성 탐색기**의 **위젯** 탭에서 `SearchResultsViewController` **클래스** 및 `SearchResults` **Storyboard ID**에 대해를 사용 합니다.
 
     [![](text-fields-and-search-images/search03-vs.png "The Widget tab")](text-fields-and-search-images/search03-vs.png#lightbox)
 1. 디자인 화면에서 **셀 프로토타입을** 선택 합니다.
-1. **속성 탐색기**의 **위젯** 탭에서 **클래스** 에 `SearchResultCell`를 사용 하 고 **식별자**에 `ImageCell` 합니다.
+1. **속성 탐색기**의 **위젯** 탭에서 `SearchResultCell` **클래스** 및 식별자에 대해를 사용 합니다 `ImageCell` . **Identifier**
 
     [![](text-fields-and-search-images/search04-vs.png "The Widget tab")](text-fields-and-search-images/search04-vs.png#lightbox)
 1. **셀 프로토타입의** 디자인을 레이아웃 하 고 **속성 탐색기**의 **위젯** 탭에서 각 요소에 고유한 **이름을** 표시 합니다.
@@ -188,19 +188,19 @@ TvOS 앱에서 검색 필드에 대 한 작업을 수행 하는 가장 쉬운 �
 
 -----
 
-<a name="Provide-a-Data-Model" />
+<a name="Provide-a-Data-Model"></a>
 
 ### <a name="provide-a-data-model"></a>데이터 모델 제공
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-다음으로, 사용자가 검색 하는 결과에 대 한 데이터 모델 역할을 할 클래스를 제공 해야 합니다. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 파일** ... > **일반** > **빈 클래스** 를 선택한 다음 **이름을**입력 합니다.
+다음으로, 사용자가 검색 하는 결과에 대 한 데이터 모델 역할을 할 클래스를 제공 해야 합니다. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 파일**  >  추가 ...를 선택 합니다. **일반**  >  **빈 클래스** 및 **이름을**제공 합니다.
 
 [![](text-fields-and-search-images/search06.png "Select Empty Class and provide a Name")](text-fields-and-search-images/search06.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-다음으로, 사용자가 검색 하는 결과에 대 한 데이터 모델 역할을 할 클래스를 제공 해야 합니다. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 > **새 항목** **추가** ... > **Apple** > **기타** > **클래스** 를 선택 하 고 **이름을**제공 합니다.
+다음으로, 사용자가 검색 하는 결과에 대 한 데이터 모델 역할을 할 클래스를 제공 해야 합니다. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **추가**  >  **새 항목**  >  ...을 선택 합니다. **Apple**  >  **기타**  >  **클래스** 및 **이름을**제공 합니다.
 
 [![](text-fields-and-search-images/search06-vs.png "Select Class and provide a Name")](text-fields-and-search-images/search06-vs.png#lightbox)
 
@@ -235,11 +235,11 @@ namespace tvText
 }
 ```
 
-<a name="The-Collection-View-Cell" />
+<a name="The-Collection-View-Cell"></a>
 
 ### <a name="the-collection-view-cell"></a>컬렉션 뷰 셀
 
-데이터 모델을 배치한 상태에서 **프로토타입 셀** (`SearchResultViewCell.cs`)을 편집 하 고 다음과 같이 표시 되도록 합니다.
+데이터 모델을 배치한 상태에서 **프로토타입 셀** ()을 편집 `SearchResultViewCell.cs` 하 고 다음과 같이 표시 되도록 합니다.
 
 ```csharp
 using Foundation;
@@ -293,13 +293,13 @@ namespace tvText
 }
 ```
 
-`UpdateUI` 메서드는 속성이 업데이트 될 때마다 명명 된 UI 요소에 표시 되는 항목 **정보** 항목의 개별 필드 (`PictureInfo` 속성)를 표시 하는 데 사용 됩니다. 예를 들어 그림과 연결 된 이미지와 제목이 있습니다.
+`UpdateUI`메서드는 속성이 업데이트 될 때마다 명명 된 UI 요소에 **있는** 속성의 개별 필드 (속성)를 표시 하는 데 사용 됩니다 `PictureInfo` . 예를 들어 그림과 연결 된 이미지와 제목이 있습니다.
 
-<a name="The-Collection-View-Controller" />
+<a name="The-Collection-View-Controller"></a>
 
 ### <a name="the-collection-view-controller"></a>컬렉션 뷰 컨트롤러
 
-다음으로 검색 결과 컬렉션 뷰 컨트롤러 (`SearchResultsViewController.cs`)를 편집 하 고 다음과 같이 만듭니다.
+그런 다음 검색 결과 컬렉션 뷰 컨트롤러 ( `SearchResultsViewController.cs` )를 편집 하 고 다음과 같이 만듭니다.
 
 ```csharp
 using Foundation;
@@ -451,7 +451,7 @@ namespace tvText
 }
 ```
 
-먼저 `IUISearchResultsUpdating` 인터페이스를 클래스에 추가 하 여 사용자가 업데이트 중인 검색 컨트롤러 필터를 처리 합니다.
+먼저 인터페이스를 `IUISearchResultsUpdating` 클래스에 추가 하 여 사용자가 업데이트 중인 검색 컨트롤러 필터를 처리 합니다.
 
 ```csharp
 public partial class SearchResultsViewController : UICollectionViewController , IUISearchResultsUpdating
@@ -481,7 +481,7 @@ public string SearchFilter {
 }
 ```
 
-`SearchFilter` 변경 되 면 일치 하는 항목 목록이 업데이트 되 고 컬렉션 뷰의 콘텐츠가 다시 로드 됩니다. `FindPictures` 루틴은 새 검색 용어와 일치 하는 항목을 찾는 작업을 담당 합니다.
+`SearchFilter`이 변경 되 면 일치 하는 항목 목록이 업데이트 되 고 컬렉션 뷰의 콘텐츠가 다시 로드 됩니다. `FindPictures`루틴은 새 검색 용어와 일치 하는 항목을 찾는 작업을 담당 합니다.
 
 ```csharp
 private void FindPictures ()
@@ -502,7 +502,7 @@ private void FindPictures ()
 }
 ```
 
-사용자가 검색 컨트롤러에서 필터를 변경 하면 `SearchFilter`의 값이 업데이트 됩니다 (결과 컬렉션 뷰를 업데이트 함).
+`SearchFilter`사용자가 검색 컨트롤러에서 필터를 변경 하면의 값이 업데이트 됩니다 (결과 컬렉션 뷰를 업데이트 함).
 
 ```csharp
 public void UpdateSearchResultsForSearchController (UISearchController searchController)
@@ -512,7 +512,7 @@ public void UpdateSearchResultsForSearchController (UISearchController searchCon
 }
 ```
 
-`PopulatePictures` 메서드는 처음에 사용 가능한 항목의 컬렉션을 채웁니다.
+`PopulatePictures`메서드는 처음에 사용 가능한 항목의 컬렉션을 채웁니다.
 
 ```csharp
 private void PopulatePictures ()
@@ -528,7 +528,7 @@ private void PopulatePictures ()
 
 이 예제에서는 컬렉션 뷰 컨트롤러를 로드할 때 모든 샘플 데이터가 메모리에 생성 됩니다. 실제 응용 프로그램에서는이 데이터를 데이터베이스 또는 웹 서비스에서 읽을 수 있으며, overrunning에서 Apple TV의 제한 된 메모리를 유지 하는 데 필요한 만큼만 데이터를 읽을 수 있습니다.
 
-`NumberOfSections` 및 `GetItemsCount` 메서드는 일치 하는 항목 수를 제공 합니다.
+`NumberOfSections`및 메서드는 일치 하는 `GetItemsCount` 항목 수를 제공 합니다.
 
 ```csharp
 public override nint NumberOfSections (UICollectionView collectionView)
@@ -544,7 +544,7 @@ public override nint GetItemsCount (UICollectionView collectionView, nint sectio
 }
 ```
 
-`GetCell` 메서드는 스토리 보드에서 위에 정의 된 `CellID`를 기반으로 하 여 컬렉션 뷰의 각 항목에 대 한 새 **프로토타입 셀** 을 반환 합니다.
+`GetCell`메서드는 **Prototype Cell** `CellID` 컬렉션 뷰의 각 항목에 대 한 새 프로토타입 셀 (Storyboard에서 위에 정의 된 항목 기반)을 반환 합니다.
 
 ```csharp
 public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
@@ -555,7 +555,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 }
 ```
 
-`WillDisplayCell` 메서드는 구성 될 수 있도록 셀이 표시 되기 전에 호출 됩니다.
+`WillDisplayCell`메서드는 구성 될 수 있도록 셀이 표시 되기 전에 호출 됩니다.
 
 ```csharp
 public override void WillDisplayCell (UICollectionView collectionView, UICollectionViewCell cell, NSIndexPath indexPath)
@@ -571,7 +571,7 @@ public override void WillDisplayCell (UICollectionView collectionView, UICollect
 }
 ```
 
-`DidUpdateFocus` 메서드는 결과 컬렉션 보기에서 항목을 강조 표시 하는 사용자에 게 시각적 피드백을 제공 합니다.
+`DidUpdateFocus`메서드는 결과 컬렉션 뷰의 항목을 강조 표시 하는 사용자에 게 시각적 피드백을 제공 합니다.
 
 ```csharp
 public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimationCoordinator coordinator)
@@ -592,7 +592,7 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 }
 ```
 
-마지막으로, `ItemSelected` 메서드는 결과 컬렉션 보기에서 항목을 선택 하는 사용자 (Siri 원격에서 Touch Surface 클릭)를 처리 합니다.
+마지막으로, `ItemSelected` 메서드는 결과 컬렉션 보기에서 항목을 선택 하는 사용자를 처리 합니다 (Siri 원격으로 터치 서피스 클릭).
 
 ```csharp
 public override void ItemSelected (UICollectionView collectionView, NSIndexPath indexPath)
@@ -607,11 +607,11 @@ public override void ItemSelected (UICollectionView collectionView, NSIndexPath 
 }
 ```
 
-검색 필드가 모달 대화 상자 보기로 표시 된 경우 (이를 호출 하는 보기의 위쪽에서) `DismissViewController` 메서드를 사용 하 여 사용자가 항목을 선택할 때 검색 보기를 해제 합니다. 이 예에서는 검색 필드가 탭 보기 탭의 콘텐츠로 표시 되므로 여기서는 해제 되지 않습니다.
+검색 필드가 모달 대화 상자 보기로 표시 된 경우 (이를 호출 하는 뷰의 위쪽에 있는) 메서드를 사용 하 여 `DismissViewController` 사용자가 항목을 선택할 때 검색 뷰를 해제 합니다. 이 예에서는 검색 필드가 탭 보기 탭의 콘텐츠로 표시 되므로 여기서는 해제 되지 않습니다.
 
 컬렉션 뷰에 대 한 자세한 내용은 [컬렉션 뷰 작업](~/ios/tvos/user-interface/collection-views.md) 설명서를 참조 하세요.
 
-<a name="Presenting the Search Field" />
+<a name="Presenting the Search Field"></a>
 
 ### <a name="presenting-the-search-field"></a>검색 필드 프레젠테이션
 
@@ -704,7 +704,7 @@ namespace tvText
 public const string SearchResultsID = "SearchResults";
 ```
 
-다음으로 `ShowSearchController` 메서드는 새 검색 보기 컬렉션 컨트롤러를 만들어 필요한 것으로 표시 합니다.
+그런 다음, `ShowSearchController` 메서드는 새 검색 보기 컬렉션 컨트롤러를 만들어 필요한 것으로 표시 합니다.
 
 ```csharp
 public void ShowSearchController ()
@@ -736,16 +736,16 @@ public void ShowSearchController ()
 }
 ```
 
-위의 메서드에서 `SearchResultsViewController` 스토리 보드에서 인스턴스화된 경우 사용자에 게 검색 필드와 화상 키보드를 제공 하는 새 `UISearchController` 만들어집니다. `SearchResultsViewController`에 정의 된 검색 결과 컬렉션이이 키보드 아래에 표시 됩니다.
+위의 메서드에서가 `SearchResultsViewController` 스토리 보드에서 인스턴스화된 후 `UISearchController` 검색 필드 및 화면 키보드를 사용자에 게 표시 하기 위해 새가 만들어집니다. 이 키보드 아래에는에 정의 된 검색 결과 컬렉션이 `SearchResultsViewController` 표시 됩니다.
 
-그런 다음 `SearchBar`는 **자리 표시자** 힌트와 같은 정보로 구성 됩니다. 그러면 수행 중인 검색 유형에 대 한 정보를 사용자에 게 제공 합니다.
+다음으로는 `SearchBar` **자리 표시자** 힌트와 같은 정보를 사용 하 여 구성 됩니다. 그러면 수행 중인 검색 유형에 대 한 정보를 사용자에 게 제공 합니다.
 
 그런 다음 두 가지 방법 중 하나를 사용 하 여 검색 필드를 사용자에 게 표시 합니다.
 
-- **모달 대화 상자 뷰** -기존 뷰 전체 화면에 대 한 검색을 제공 하기 위해 `PresentViewController` 메서드가 호출 됩니다.
-- **콘텐츠 보기** -검색 컨트롤러를 포함 하는 `UISearchContainerViewController` 만들어집니다. 검색 컨테이너를 포함 하는 `UINavigationController` 만든 다음 탐색 컨트롤러가 `AddChildViewController (navController)`뷰 컨트롤러에 추가 되 고 `View.Add (navController.View)`표시 됩니다.
+- **모달 대화 상자 뷰** - `PresentViewController` 기존 뷰 전체 화면에 대 한 검색을 제공 하기 위해 메서드가 호출 됩니다.
+- **콘텐츠 보기** - `UISearchContainerViewController` 검색 컨트롤러를 포함 하는를 만듭니다. `UINavigationController`검색 컨테이너를 포함 하도록를 만든 다음 탐색 컨트롤러를 뷰 컨트롤러에 추가 하 `AddChildViewController (navController)` 고 보기를 표시 `View.Add (navController.View)` 합니다.
 
-마지막으로, 프레젠테이션 유형에 따라 다시 `ViewDidLoad` 또는 `ViewDidAppear` 메서드는 `ShowSearchController` 메서드를 호출 하 여 사용자에 게 검색을 제공 합니다.
+마지막으로, 그리고 프레젠테이션 유형에 따라 `ViewDidLoad` 또는 `ViewDidAppear` 메서드는 메서드를 호출 `ShowSearchController` 하 여 사용자에 게 검색을 제공 합니다.
 
 ```csharp
 public override void ViewDidLoad ()
@@ -778,7 +778,7 @@ public override void ViewDidAppear (bool animated)
 
 사용자는 언제 든 지 검색 결과의 항목으로 포커스를 전환 하 고 Siri 원격의 터치 화면을 클릭 하 여 선택할 수 있습니다.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 

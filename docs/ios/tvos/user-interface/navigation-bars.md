@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: aa376385b000b83a41fdcdc7a4d3c8bf1553f0a7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0d5ec4bc10747a287def3fd9a83a703d2ec4b2a2
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030471"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572379"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Xamarin에서 tvOS 탐색 모음 사용
 
@@ -20,20 +20,20 @@ ms.locfileid: "73030471"
 
 [![](navigation-bars-images/navbar01.png "Sample Navigation Bar")](navigation-bars-images/navbar01.png#lightbox)
 
-가운데에 표시 되는 제목 외에도 탐색 모음은 가로 막대의 왼쪽 및 오른쪽에 하나 이상의 탐색 모음 단추 (`UIBarButtonItem`)를 포함할 수 있습니다.
+가운데에 표시 되는 제목 외에도 탐색 모음에는 `UIBarButtonItem` 막대의 왼쪽과 오른쪽에 하나 이상의 탐색 모음 단추 ()가 포함 될 수 있습니다.
 
 > [!IMPORTANT]
 > 탐색 모음은 기본적으로 완전히 투명 합니다. 탐색 모음의 콘텐츠는 그 아래에 있는 내용에서 읽을 수 있도록 유지 해야 합니다. 예를 들어, 테이블 뷰나 컬렉션의 내용이 그 아래에 스크롤될 때입니다.
 
-<a name="Navigation-Bars-and-Storyboards" />
+<a name="Navigation-Bars-and-Storyboards"></a>
 
 ## <a name="navigation-bars-and-storyboards"></a>탐색 모음 및 Storyboard
 
 TvOS 앱에서 탐색 모음으로 작업 하는 가장 쉬운 방법은 iOS Designer를 사용 하 여 앱의 UI에 추가 하는 것입니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-1. **Solution Pad**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+1. **Solution Pad**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **탐색 모음** 을 끌어 화면 위쪽의 뷰에 놓습니다.
 
     [![](navigation-bars-images/navbar02.png "A Navigation Bar")](navigation-bars-images/navbar02.png#lightbox)
@@ -48,9 +48,9 @@ TvOS 앱에서 탐색 모음으로 작업 하는 가장 쉬운 방법은 iOS Des
     [![](navigation-bars-images/navbar05.png "A Bar Button Item Action")](navigation-bars-images/navbar05.png#lightbox)
 1. 변경 내용을 저장합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+1. **솔루션 탐색기**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **탐색 모음** 을 끌어 화면 위쪽의 뷰에 놓습니다.
 
     [![](navigation-bars-images/navbar02-vs.png "A Navigation Bar")](navigation-bars-images/navbar02-vs.png#lightbox)
@@ -68,9 +68,9 @@ TvOS 앱에서 탐색 모음으로 작업 하는 가장 쉬운 방법은 iOS Des
 -----
 
 > [!IMPORTANT]
-> IOS 디자이너에서 UIButton 등의 UI 요소에 `TouchUpInside`와 같은 이벤트를 할당할 수 있지만, Apple TV에 터치 스크린이 없거나 터치 이벤트가 지원 되기 때문에 호출 되지 않습니다. TvOS 사용자 인터페이스 요소에 대 한 이벤트 처리기를 만들 때는 항상 `Primary Action` 이벤트를 사용 해야 합니다.
+> `TouchUpInside`IOS 디자이너에서 UIButton 등의 UI 요소에와 같은 이벤트를 할당할 수 있지만, APPLE TV에 터치 스크린이 없거나 터치 이벤트가 지원 되기 때문에 호출 되지 않습니다. `Primary Action`TvOS 사용자 인터페이스 요소에 대 한 이벤트 처리기를 만들 때 항상 이벤트를 사용 해야 합니다.
 
-다음 코드는 `ShowFirstHotel`, `ShowSecondHotel`및 `ShowThirdHotel`의 세 가지 다른 바 Buttonitems에 대 한 이벤트 처리기의 예제를 제공 합니다. 각 항목을 클릭 하면 `HotelImage` 배경 이미지가 변경 됩니다. 이는 뷰 컨트롤러 (예: `ViewController.cs`) 파일에서 편집 됩니다.
+다음 코드는 `ShowFirstHotel` , 및의 세 가지 다른 바 Buttonitems에 대 한 이벤트 처리기의 예제를 제공 합니다. `ShowSecondHotel` `ShowThirdHotel` 각 항목을 클릭 하면 배경 이미지가 `HotelImage` 변경 됩니다. 이는 뷰 컨트롤러 (예제) 파일에서 편집 됩니다 `ViewController.cs` .
 
 ```csharp
 using System;
@@ -121,11 +121,11 @@ namespace MySingleView
 }
 ```
 
-단추의 `Enabled` 속성이 `true` 되 고 다른 컨트롤이 나 뷰에서 다루지 않는 한, Siri 원격을 사용 하 여 포커스 내 항목으로 만들 수 있습니다.
+단추의 `Enabled` 속성이이 `true` 고 다른 컨트롤 또는 뷰에서 포함 되지 않는 한, Siri 원격을 사용 하 여 포커스 내 항목으로 만들 수 있습니다.
 
 스토리 보드 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)를 참조 하세요.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 

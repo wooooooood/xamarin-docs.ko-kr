@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/28/2017
-ms.openlocfilehash: fc67c7f683b6c55d3b4f552c2f8c113ee721be61
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c42b41f9b853fba58ef70b8bd2f8ab20a3369647
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73009802"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569251"
 ---
 # <a name="localization-in-xamarinios"></a>Xamarin.ios의 지역화
 
@@ -28,18 +28,18 @@ _이 문서에서는 iOS SDK의 지역화 기능 및 Xamarin을 사용 하 여 �
 
 사용자가 **설정** 앱에서 해당 언어를 선택 합니다. 이 설정은 운영 체제 및 앱에서 표시 하는 언어 문자열과 이미지에 영향을 줍니다.
 
-앱에서 사용 되는 언어를 확인 하려면 `NSBundle.MainBundle.PreferredLocalizations`의 첫 번째 요소를 가져옵니다.
+앱에서 사용 되는 언어를 확인 하려면의 첫 번째 요소를 가져옵니다 `NSBundle.MainBundle.PreferredLocalizations` .
 
 ```csharp
 var lang = NSBundle.MainBundle.PreferredLocalizations[0];
 ```
 
-이 값은 영어에 대 한 `en`, 스페인어 `es`, 일본어 `ja` 등의 언어 코드입니다. 반환 된 값은 응용 프로그램에서 지 원하는 지역화 중 하나로 제한 됩니다 (대체 규칙을 사용 하 여 가장 일치 하는 항목 확인).
+이 값은 `en` 영어, 스페인어, 일본어 등에 대 한 언어 코드 `es` `ja` 입니다. 반환 된 값은 응용 프로그램에서 지 원하는 지역화 중 하나로 제한 됩니다 (대체 규칙을 사용 하 여 가장 일치 하는 항목 확인).
 
 응용 프로그램 코드는 항상이 값을 확인 해야 하는 것은 아닙니다. Xamarin 및 iOS는 모두 사용자 언어에 올바른 문자열이 나 리소스를 자동으로 제공 하는 데 도움이 되는 기능을 제공 합니다. 이러한 기능은이 문서의 나머지 부분에 설명 되어 있습니다.
 
 > [!NOTE]
-> 앱에서 지 원하는 지역화에 관계 없이 `NSLocale.PreferredLanguages`를 사용 하 여 사용자의 언어 기본 설정을 확인 합니다. 이 메서드에서 반환 된 값은 iOS 9에서 변경 되었습니다. 자세한 내용은 [Technical NOTE TN2418](https://developer.apple.com/library/content/technotes/tn2418/_index.html) 를 참조 하세요.
+> `NSLocale.PreferredLanguages`앱에서 지 원하는 지역화에 관계 없이를 사용 하 여 사용자의 언어 기본 설정을 확인 합니다. 이 메서드에서 반환 된 값은 iOS 9에서 변경 되었습니다. 자세한 내용은 [Technical NOTE TN2418](https://developer.apple.com/library/content/technotes/tn2418/_index.html) 를 참조 하세요.
 
 ### <a name="locale"></a>로캘
 
@@ -47,7 +47,7 @@ var lang = NSBundle.MainBundle.PreferredLocalizations[0];
 
 이를 통해 사용자는 12 시간 또는 24 시간 형식이 표시 되는지 여부, 소수 구분 기호가 쉼표 인지 아니면 점 인지 여부, 날짜와 날짜 표시의 순서 등을 선택할 수 있습니다.
 
-Xamarin을 사용 하는 경우 Apple의 iOS 클래스 (`NSNumberFormatter`) 뿐만 아니라 시스템 세계화의 .NET 클래스에 액세스할 수 있습니다. 개발자는 각에서 사용할 수 있는 다양 한 기능을 제공 하므로 요구 사항에 더 적합 한를 평가 해야 합니다. 특히, 기능 키트를 사용 하 여 앱 내 구매 가격을 검색 하 고 표시 하는 경우 반환 되는 가격 정보에 대해 Apple의 서식 지정 클래스를 사용 해야 합니다.
+Xamarin을 사용 하면 Apple의 iOS 클래스 () 뿐만 아니라 `NSNumberFormatter` 시스템 세계화의 .net 클래스에도 액세스할 수 있습니다. 개발자는 각에서 사용할 수 있는 다양 한 기능을 제공 하므로 요구 사항에 더 적합 한를 평가 해야 합니다. 특히, 기능 키트를 사용 하 여 앱 내 구매 가격을 검색 하 고 표시 하는 경우 반환 되는 가격 정보에 대해 Apple의 서식 지정 클래스를 사용 해야 합니다.
 
 다음 두 가지 방법 중 하나로 현재 로캘을 쿼리할 수 있습니다.
 
@@ -64,11 +64,11 @@ Xamarin을 사용 하는 경우 Apple의 iOS 클래스 (`NSNumberFormatter`) 뿐
 > - `CurrentThread.CurrentUICulture`: en-us (Mono API)
 > - `NSLocale.CurrentLocale.LocaleIdentifier`: en_ES (Apple API)
 >
-> Mono는 `CurrentThread.CurrentUICulture` `CurrentThread.CurrentCulture`을 사용 하 여 날짜 및 통화 형식을 지정 하는 데 사용 됩니다. 예를 들어, Mono 기반 지역화 (.resx 파일)는 이러한 언어/지역 조합에 대해 예상 되는 결과를 생성 하지 않을 수 있습니다. 이러한 상황에서는 Apple의 Api를 사용 하 여 필요에 따라 지역화 합니다.
+> Mono는를 사용 하 여 `CurrentThread.CurrentUICulture` 리소스를 선택 하 고 `CurrentThread.CurrentCulture` 날짜 및 통화 형식을 지정 하기 때문에 이러한 언어/지역 조합에 대 한 예상 결과를 생성 하지 못할 수 있습니다. 이러한 상황에서는 Apple의 Api를 사용 하 여 필요에 따라 지역화 합니다.
 
 ### <a name="nscurrentlocaledidchangenotification"></a>NSCurrentLocaleDidChangeNotification
 
-iOS는 사용자가 로캘을 업데이트할 때 `NSCurrentLocaleDidChangeNotification`을 생성 합니다. 응용 프로그램은 실행 되는 동안이 알림을 수신 대기 하 고 UI를 적절 하 게 변경할 수 있습니다.
+iOS는 `NSCurrentLocaleDidChangeNotification` 사용자가 로캘을 업데이트할 때을 생성 합니다. 응용 프로그램은 실행 되는 동안이 알림을 수신 대기 하 고 UI를 적절 하 게 변경할 수 있습니다.
 
 ## <a name="localization-basics-in-ios"></a>IOS의 지역화 기본 사항
 
@@ -76,23 +76,23 @@ iOS는 사용자가 로캘을 업데이트할 때 `NSCurrentLocaleDidChangeNotif
 
 ### <a name="specifying-default-and-supported-languages-in-infoplist"></a>Info.plist에서 지원 되는 기본 언어 및 지원 되는 언어 지정
 
-[기술 Q & A QA1828: ios에서 앱에 대 한 언어를 결정 하는 방법](https://developer.apple.com/library/content/qa/qa1828/_index.html)Apple에서는 ios가 앱에서 사용할 언어를 선택 하는 방법을 설명 합니다. 표시 되는 언어에 영향을 주는 요인은 다음과 같습니다.
+[기술 Q&A QA1828: ios에서 앱에 대 한 언어를 결정 하는 방법](https://developer.apple.com/library/content/qa/qa1828/_index.html)Apple에서는 ios가 앱에서 사용할 언어를 선택 하는 방법을 설명 합니다. 표시 되는 언어에 영향을 주는 요인은 다음과 같습니다.
 
 - 사용자의 기본 설정 언어 ( **설정** 앱에 있음)
 - 앱과 함께 제공 되는 지역화 (.xproj 폴더)
-- `CFBundleDevelopmentRegion` (응용 프로그램의 기본 언어를 지정 하는**info.plist** 값)
-- `CFBundleLocalizations` (지원 되는 모든 지역화를 지정 하는**info.plist** 배열)
+- `CFBundleDevelopmentRegion`(**Info.plist** 값은 앱에 대 한 기본 언어를 지정)
+- `CFBundleLocalizations`(**Info.plist** 배열 (지원 되는 모든 지역화 지정)
 
-기술 Q &에 표시 된 것 처럼 `CFBundleDevelopmentRegion`는 앱의 기본 지역 및 언어를 나타냅니다. 앱에서 사용자의 기본 언어를 명시적으로 지원 하지 않는 경우이 필드에 지정 된 언어를 사용 합니다.
+기술 Q&A에 표시 된 것 처럼는 `CFBundleDevelopmentRegion` 앱의 기본 지역 및 언어를 나타냅니다. 앱에서 사용자의 기본 언어를 명시적으로 지원 하지 않는 경우이 필드에 지정 된 언어를 사용 합니다.
 
 > [!IMPORTANT]
-> iOS 11은 이전 버전의 운영 체제 보다 엄격 하 게이 언어 선택 메커니즘을 적용 합니다. 이로 인해 지역화 파일을 포함 하거나 `CFBundleLocalizations`에 대 한 값을 설정 하 여 지원 되는을 명시적으로 선언 하지 않은 iOS 11 앱은 ios 11에서 iOS 10과 다른 언어를 표시할 수 있습니다.
+> iOS 11은 이전 버전의 운영 체제 보다 엄격 하 게이 언어 선택 메커니즘을 적용 합니다. 이로 인해. lproj 폴더를 포함 하거나 값을 설정 하 여 지원 되는 지역화을 명시적으로 선언 하지 않은 iOS 11 앱은 ios `CFBundleLocalizations` 11에서 ios 10과 다른 언어를 표시할 수 있습니다.
 
-**Info.plist** 파일에 `CFBundleDevelopmentRegion` 지정 되지 않은 경우 xamarin.ios 빌드 도구는 현재 `en_US`기본값을 사용 합니다. 이는 이후 릴리스에서 변경 될 수 있지만 기본 언어는 영어입니다.
+`CFBundleDevelopmentRegion` **Info.plist** 파일에가 지정 되지 않은 경우 xamarin.ios 빌드 도구는 현재 기본값을 사용 `en_US` 합니다. 이는 이후 릴리스에서 변경 될 수 있지만 기본 언어는 영어입니다.
 
 앱이 예상 되는 언어를 선택 하도록 하려면 다음 단계를 수행 합니다.
 
-- 기본 언어를 지정 합니다. **Info.plist** 를 열고 **원본** 뷰를 사용 하 여 `CFBundleDevelopmentRegion` 키에 대 한 값을 설정 합니다. XML에서 다음과 같이 표시 됩니다.
+- 기본 언어를 지정 합니다. **Info.plist** 를 열고 **원본** 뷰를 사용 하 여 키에 대 한 값을 설정 합니다. XML에서는 다음과 같이 표시 `CFBundleDevelopmentRegion` 됩니다.
 
 ```xml
 <key>CFBundleDevelopmentRegion</key>
@@ -101,7 +101,7 @@ iOS는 사용자가 로캘을 업데이트할 때 `NSCurrentLocaleDidChangeNotif
 
 이 예에서는 "es"를 사용 하 여 사용자의 기본 언어가 지원 되지 않는 경우 기본적으로 스페인어로 지정 합니다.
 
-- 지원 되는 모든 지역화를 선언 합니다. **Info.plist**에서 **원본** 뷰를 사용 하 여 `CFBundleLocalizations` 키에 대 한 배열을 설정 합니다. XML에서 다음과 같이 표시 됩니다.
+- 지원 되는 모든 지역화를 선언 합니다. **Info.plist**에서 **원본** 뷰를 사용 하 여 키의 배열을 설정 합니다. XML에서는 다음과 같이 표시 `CFBundleLocalizations` 됩니다.
 
 ```xml
 <key>CFBundleLocalizations</key>
@@ -118,19 +118,19 @@ iOS는 사용자가 로캘을 업데이트할 때 `NSCurrentLocaleDidChangeNotif
 
 ### <a name="getlocalizedstring-method"></a>GetLocalizedString 메서드
 
-`NSBundle.MainBundle.GetLocalizedString` 메서드는 프로젝트의 **. strings** 파일에 저장 된 지역화 된 텍스트를 조회 합니다. 이러한 파일은 언어 별로 구성 됩니다. 특수 하 게 명명 된 디렉터리에는 **.lproj** 접미사가 붙습니다 (확장의 첫 문자는 소문자 "L").
+`NSBundle.MainBundle.GetLocalizedString`메서드는 프로젝트의 **. strings** 파일에 저장 된 지역화 된 텍스트를 조회 합니다. 이러한 파일은 언어 별로 구성 됩니다. 특수 하 게 명명 된 디렉터리에는 **.lproj** 접미사가 붙습니다 (확장의 첫 문자는 소문자 "L").
 
 #### <a name="strings-file-locations"></a>strings 파일 위치
 
 - **Base. lproj** 는 기본 언어에 대 한 리소스를 포함 하는 디렉터리입니다.
   일반적으로 프로젝트 루트에 있지만 **리소스** 폴더에도 배치 될 수 있습니다.
-- **&lt;언어&gt;.** 일반적으로 **Resources** 폴더에 지원 되는 각 언어에 대 한 lproj 디렉터리가 생성 됩니다.
+- ** &lt; 언어 &gt; . lproj** 디렉터리는 일반적으로 **Resources** 폴더에 지원 되는 각 언어에 대해 생성 됩니다.
 
 각 언어 디렉터리에는 다음과 같은 다양 한 **문자열** 파일이 있을 수 있습니다.
 
 - 지역화 가능 **문자열** – 지역화 된 텍스트의 기본 목록입니다.
 - **InfoPlist** –이 파일에는 응용 프로그램 이름과 같은 항목을 변환 하는 데 사용할 수 있는 특정 키가 있습니다.
-- **\<storyboard-이름 >** – storyboard의 사용자 인터페이스 요소에 대 한 번역을 포함 하는 선택적 파일입니다.
+- ** \<storyboard-name> . strings** – storyboard의 사용자 인터페이스 요소에 대 한 번역을 포함 하는 선택적 파일입니다.
 
 이러한 파일에 대 한 **빌드 작업** 은 **번들 리소스**여야 합니다.
 
@@ -145,9 +145,9 @@ iOS는 사용자가 로캘을 업데이트할 때 `NSCurrentLocaleDidChangeNotif
 
 문자열에서 다음 문자를 이스케이프 해야 합니다.
 
-- `\"` 인용
-- `\\` 백슬래시
-- `\n` 줄 바꿈
+- `\"`시세
+- `\\`백슬래시
+- `\n`줄
 
 이는 **es/지역화 가능 문자열** (ie)의 예입니다. 스페인어) 샘플의 파일입니다.
 
@@ -206,9 +206,9 @@ LaunchScreen.xib
 
 ### <a name="dates-and-times"></a>날짜 및 시간
 
-기본 제공 .NET 날짜 및 시간 함수 (현재 `CultureInfo`와 함께)를 사용 하 여 로캘의 날짜 및 시간 형식을 지정할 수 있지만 로캘 별 사용자 설정 (언어와 별도로 설정할 수 있음)은 무시 됩니다.
+기본 제공 .NET 날짜 및 시간 함수 (현재와 함께)를 사용 하 여 `CultureInfo` 로캘의 날짜 및 시간 형식을 지정할 수 있지만 로캘 별 사용자 설정 (언어와 별도로 설정 가능)은 무시 됩니다.
 
-IOS `NSDateFormatter`를 사용 하 여 사용자의 로캘 기본 설정과 일치 하는 출력을 생성 합니다. 다음 샘플 코드에서는 기본 날짜 및 시간 형식 지정 옵션을 보여 줍니다.
+IOS를 사용 `NSDateFormatter` 하 여 사용자의 로캘 기본 설정과 일치 하는 출력을 생성 합니다. 다음 샘플 코드에서는 기본 날짜 및 시간 형식 지정 옵션을 보여 줍니다.
 
 ```csharp
 var date = NSDate.Now;
@@ -242,16 +242,16 @@ Medium,None: 7/8/2015
 
 자세한 내용은 Apple [날짜 포맷터](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/DataFormatting/Articles/dfDateFormatting10_4.html) 설명서를 참조 하세요. 로캘을 구분 하는 날짜 및 시간 형식을 테스트 하는 경우 **IPhone 언어** 와 **지역** 설정을 모두 확인 합니다.
 
-<a name="rtl" />
+<a name="rtl"></a>
 
 ### <a name="right-to-left-rtl-layout"></a>오른쪽에서 왼쪽 (RTL) 레이아웃
 
 iOS는 RTL 인식 앱을 빌드하는 데 도움이 되는 다양 한 기능을 제공 합니다.
 
-- 자동 레이아웃의 `leading` 및 `trailing` 특성을 사용 합니다. 컨트롤 맞춤의 경우 왼쪽 및 오른쪽에 해당 하 고 RTL 언어의 경우 반전 됩니다.
-  [`UIStackView`](~/ios/user-interface/controls/uistackview.md) 컨트롤은 RTL을 인식 하도록 컨트롤을 배치 하는 데 특히 유용 합니다.
-- 텍스트 맞춤에는 `TextAlignment = UITextAlignment.Natural`를 사용 합니다. 대부분의 언어에 대해서는 왼쪽 이지만 RTL의 경우에는 오른쪽에 있습니다.
-- `UINavigationController` 자동으로 뒤로 단추를 대칭 이동 하 고 살짝 밀기 방향을 반대로 바꿉니다.
+- `leading`컨트롤 맞춤에 자동 레이아웃의 및 특성을 사용 `trailing` 합니다 .이는 영어의 왼쪽 및 오른쪽에 해당 하지만 RTL 언어의 경우 반전 됩니다.
+  [`UIStackView`](~/ios/user-interface/controls/uistackview.md)컨트롤은 RTL을 인식 하도록 컨트롤을 배치 하는 데 특히 유용 합니다.
+- `TextAlignment = UITextAlignment.Natural`텍스트 맞춤에는를 사용 합니다. 대부분의 언어에서는 왼쪽 이지만 RTL의 경우에는 바로 사용 됩니다.
+- `UINavigationController`뒤로 단추를 자동으로 대칭 이동 하 고 살짝 밀기 방향을 반대로 바꿉니다.
 
 다음 스크린샷에서는 아랍어 및 히브리어에서 [지역화 된 Tasky 샘플](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) 을 보여 줍니다 (영어는 필드에 입력 됨).
 
@@ -259,10 +259,10 @@ iOS는 RTL 인식 앱을 빌드하는 데 도움이 되는 다양 한 기능을 
 
 [![](images/rtl-he-sml.png "Localization in Hebrew")](images/rtl-he.png#lightbox "Hebrew")
 
-iOS는 자동으로 `UINavigationController`를 반대로 하 고 다른 컨트롤은 `UIStackView` 내부에 배치 되거나 자동 레이아웃에 맞춰 정렬 됩니다.
+iOS는 자동으로 `UINavigationController` 를 반대로 하 고 다른 컨트롤은 `UIStackView` 자동 레이아웃 안에 배치 되거나 정렬 됩니다.
 RTL 텍스트는 LTR 텍스트와 동일한 방식으로 **strings** 파일을 사용 하 여 지역화 됩니다.
 
-<a name="code"/>
+<a name="code"></a>
 
 ## <a name="localizing-the-ui-in-code"></a>코드에서 UI 지역화
 
@@ -292,14 +292,14 @@ RTL 텍스트는 LTR 텍스트와 동일한 방식으로 **strings** 파일을 �
 
 ### <a name="performing-the-localization"></a>지역화 수행
 
-응용 프로그램 코드에서 사용자 인터페이스의 표시 텍스트가 설정 된 위치 (레이블의 텍스트 인지, 입력의 자리 표시자 등) 이면 코드에서 iOS `GetLocalizedString` 함수를 사용 하 여 표시할 올바른 변환을 검색 합니다.
+응용 프로그램 코드에서 사용자 인터페이스의 표시 텍스트가 설정 되는 경우 (레이블의 텍스트 인지, 아니면 입력의 자리 표시자 등), 코드는 iOS 함수를 사용 하 여 `GetLocalizedString` 표시할 올바른 변환을 검색 합니다.
 
 ```csharp
 var localizedString = NSBundle.MainBundle.GetLocalizedString ("key", "optional");
 someControl.Text = localizedString;
 ```
 
-<a name="storyboard"/>
+<a name="storyboard"></a>
 
 ## <a name="localizing-storyboard-uis"></a>스토리 보드 Ui 지역화
 
@@ -330,9 +330,9 @@ someControl.Text = localizedString;
 
 ### <a name="mainstoryboardstrings"></a>Mainstoryboard.storyboard
 
-스토리 보드 변환 파일의 형식은 키 (왼쪽에 있는 값)가 사용자 정의할 수 없지만 대신 매우 구체적인 형식 이어야 한다는 점을 제외 하 고 지역화할 수 있는 **문자열이** 있는 파일의 형식과 유사 합니다. `ObjectID.property`.
+스토리 보드 변환 파일의 형식은 키 (왼쪽에 있는 값)를 사용자 정의할 수는 없지만 대신 매우 구체적인 형식을 사용 해야 한다는 점을 제외 하 고 지역화할 수 있는 **문자열** 파일과 `ObjectID.property` 비슷합니다.
 
-아래 예제 **mainstoryboard.storyboard** 에서 `UITextField`s에 지역화할 수 있는 `placeholder` 텍스트 속성이 있는지 확인할 수 있습니다. `UILabel`에 `text` 속성이 있습니다. 및 `UIButton`s 기본 텍스트는 `normalTitle`를 사용 하 여 설정 됩니다.
+아래 예제 **mainstoryboard.storyboard** 에서 `UITextField` `placeholder` 지역화할 `UILabel` 수 있는 텍스트 속성이 있는 것을 볼 수 있습니다. 에는 `text` 속성이 있으며 `UIButton` s 기본 텍스트는 다음을 사용 하 여 설정 됩니다 `normalTitle` .
 
 ```console
 "SXg-TT-IwM.placeholder" = "nombre de la tarea";
@@ -349,7 +349,7 @@ someControl.Text = localizedString;
 >
 > ![](images/xs-dup-strings.png "Strings files")
 
-<a name="appstore" />
+<a name="appstore"></a>
 
 ## <a name="app-store-listing"></a>앱 스토어 목록
 
@@ -367,5 +367,5 @@ someControl.Text = localizedString;
 - [Tasky (지역화 된 스토리 보드) (샘플)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard)
 - [Apple 지역화 가이드](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html)
 - [플랫폼 간 지역화 개요](~/cross-platform/app-fundamentals/localization.md)
-- [Xamarin Forms 지역화](~/xamarin-forms/app-fundamentals/localization/index.md)
+- [Xamarin.Forms 지역화](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [Android 지역화](~/android/app-fundamentals/localization.md)

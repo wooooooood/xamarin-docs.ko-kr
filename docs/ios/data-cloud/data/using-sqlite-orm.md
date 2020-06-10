@@ -7,26 +7,26 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: fb0981fea906a474d39834a52f0a8bfdf496ca1e
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 5b169323c606e48bf7eb0d721029c6d9a9db2831
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488415"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571712"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Xamarin.ios에서 SQLite.NET 사용
 
 Xamarin에서 권장 하는 SQLite.NET 라이브러리는 iOS 장치에서 로컬 SQLite 데이터베이스의 개체를 저장 하 고 검색 하는 데 사용할 수 있는 기본 ORM입니다.
 ORM은 개체 관계형 매핑을 사용 합니다. 즉, SQL 문을 작성 하지 않고도 데이터베이스에서 "개체"를 저장 하 고 검색할 수 있는 API입니다.
 
-<a name="Usage"/>
+<a name="Usage"></a>
 
-## <a name="usage"></a>용도
+## <a name="usage"></a>사용
 
 Xamarin 앱에 SQLite.NET 라이브러리를 포함 하려면 다음 NuGet 패키지를 프로젝트에 추가 합니다.
 
 - **패키지 이름:** sqlite-net-pcl
-- **작성자:** Frank Krueger
+- **작성자:** Frank A. Krueger
 - **ID:** sqlite-net-pcl
 - **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
@@ -37,7 +37,7 @@ Xamarin 앱에 SQLite.NET 라이브러리를 포함 하려면 다음 NuGet 패�
 
 SQLite.NET 라이브러리를 사용할 수 있게 되 면 다음 세 단계를 수행 하 여 데이터베이스에 액세스 합니다.
 
-1. **Using 문 추가** -데이터 액세스가 필요한 C# 파일에 다음 문을 추가 합니다.
+1. **Using 문 추가** -데이터 액세스가 필요한 c # 파일에 다음 문을 추가 합니다.
 
     ```csharp
     using SQLite;
@@ -69,7 +69,7 @@ SQLite.NET 라이브러리를 사용할 수 있게 되 면 다음 세 단계를 
 
 이 문서에 대 한 *DataAccess_Basic* 샘플 코드는 iOS에서 실행 될 때 다음과 같이 표시 됩니다. 이 코드에서는 간단한 SQLite.NET 작업을 수행 하 고 결과를 응용 프로그램의 주 창에 텍스트로 표시 하는 방법을 보여 줍니다.
 
-**Android**
+**iOS**
 
  [![iOS SQLite.NET 샘플](using-sqlite-orm-images/image2-sml.png)](using-sqlite-orm-images/image2-sml.png#lightbox)
 
@@ -85,7 +85,7 @@ SQLite.NET 라이브러리를 사용할 수 있게 되 면 다음 세 단계를 
 using SQLite; // from the github SQLite.cs class
 ```
 
-이렇게 하려면 [여기](#Usage)에 강조 표시 된 대로 SQLite를 프로젝트에 추가 해야 합니다. SQLite 데이터베이스 테이블은 CREATE TABLE 명령이 아닌 클래스 (`Stock` 클래스)에 특성을 추가 하 여 정의 됩니다.
+이렇게 하려면 [여기](#Usage)에 강조 표시 된 대로 SQLite를 프로젝트에 추가 해야 합니다. SQLite 데이터베이스 테이블은 CREATE TABLE 명령 대신 클래스 (클래스)에 특성을 추가 하 여 정의 됩니다 `Stock` .
 
 ```csharp
 [Table("Items")]
@@ -122,7 +122,7 @@ public static void DoSomeDataAccess () {
 }
 ```
 
-테이블 이름 매개 변수를 지정 하지 않고 `[Table]` 특성을 사용 하면 기본 데이터베이스 테이블의 이름이 클래스 (이 경우 "Stock")와 동일 하 게 지정 됩니다. ORM 데이터 액세스 방법을 사용 하는 대신 데이터베이스에 대해 직접 SQL 쿼리를 작성 하는 경우에는 실제 테이블 이름이 중요 합니다. 마찬가지로 `[Column("_id")]` 특성은 선택 사항이 며, 없는 경우에는 클래스의 속성과 이름이 같은 열이 테이블에 추가 됩니다.
+`[Table]`테이블 이름 매개 변수를 지정 하지 않고 특성을 사용 하면 기본 데이터베이스 테이블의 이름이 클래스 (이 경우 "Stock")와 동일 하 게 됩니다. ORM 데이터 액세스 방법을 사용 하는 대신 데이터베이스에 대해 직접 SQL 쿼리를 작성 하는 경우에는 실제 테이블 이름이 중요 합니다. 마찬가지로 `[Column("_id")]` 특성은 선택 사항이 며, 없는 경우에는 클래스의 속성과 이름이 같은 열이 테이블에 추가 됩니다.
 
 ## <a name="sqlite-attributes"></a>SQLite 특성
 
@@ -130,7 +130,7 @@ public static void DoSomeDataAccess () {
 
 - **[PrimaryKey]** –이 특성을 정수 속성에 적용 하 여 기본 테이블의 기본 키로 지정할 수 있습니다. 복합 기본 키는 지원 되지 않습니다.
 - **[AutoIncrement]** –이 특성은 데이터베이스에 삽입 된 각 새 개체에 대해 정수 속성의 값이 자동으로 증가 하도록 합니다.
-- **[Column (name)]** &ndash; `name` 매개 변수는 기본 데이터베이스 열 이름을 설정 합니다.
+- **[열 (이름)]** &ndash; `name`매개 변수는 기본 데이터베이스 열 이름을 설정 합니다.
 - **[Table (name)]** – 지정 된 이름을 사용 하 여 클래스를 기본 SQLite 테이블에 저장할 수 있는 것으로 표시 합니다.
 - **[MaxLength (value)]** – 데이터베이스 삽입을 시도할 때 텍스트 속성의 길이를 제한 합니다. 데이터베이스 삽입 또는 업데이트 작업을 시도 하는 경우이 특성이 ' 확인 ' 된 경우에만 코드를 사용 하 여이 작업의 유효성을 검사 해야 합니다.
 - **[무시]** – SQLite.NET가이 속성을 무시 하도록 합니다. 이는 데이터베이스에 저장할 수 없는 형식이 있는 속성 또는 자동으로 해결할 수 없는 모델 컬렉션이 자동으로 SQLite 인 속성에 특히 유용 합니다.
@@ -140,14 +140,14 @@ public static void DoSomeDataAccess () {
 
 ## <a name="more-complex-queries"></a>더 복잡 한 쿼리
 
-`SQLiteConnection`에서 다음 메서드를 사용 하 여 다른 데이터 작업을 수행할 수 있습니다.
+의 다음 메서드를 `SQLiteConnection` 사용 하 여 다른 데이터 작업을 수행할 수 있습니다.
 
 - **Insert** – 데이터베이스에 새 개체를 추가 합니다.
-- **Get\<t >** – 기본 키를 사용 하 여 개체를 검색 하려고 합니다.
-- **테이블\<t >** – 테이블의 모든 개체를 반환 합니다.
+- **Get \<T> ** – 기본 키를 사용 하 여 개체를 검색 하려고 시도 합니다.
+- **테이블 \<T> ** – 테이블의 모든 개체를 반환 합니다.
 - **삭제** – 해당 기본 키를 사용 하 여 개체를 삭제 합니다.
-- **Query\<t >** -여러 행을 개체로 반환 하는 SQL 쿼리를 수행 합니다.
-- **Execute** – SQL에서 행을 반환 하지 않을 경우 (예: INSERT, UPDATE 및 DELETE 명령)이 메서드를 사용 합니다 (`Query` 하지 않음).
+- **쿼리 \<T> ** -여러 행을 개체로 반환 하는 SQL 쿼리를 수행 합니다.
+- **Execute** – `Query` SQL에서 행을 반환 하지 않을 경우 (예: INSERT, UPDATE 및 DELETE 명령)이 아닌 메서드를 사용 합니다.
 
 ### <a name="getting-an-object-by-the-primary-key"></a>기본 키로 개체 가져오기
 
@@ -159,7 +159,7 @@ var existingItem = db.Get<Stock>(3);
 
 ### <a name="selecting-an-object-using-linq"></a>Linq를 사용 하 여 개체 선택
 
-컬렉션을 반환 하는 메서드는 IEnumerable\<T >을 지원 하므로 Linq를 사용 하 여 테이블의 내용을 쿼리하거나 정렬할 수 있습니다. 다음 코드에서는 Linq를 사용 하 여 문자 "A"로 시작 하는 모든 항목을 필터링 하는 예제를 보여 줍니다.
+컬렉션을 반환 하는 메서드는 IEnumerable \<T> 을 지원 하므로 Linq를 사용 하 여 테이블의 내용을 쿼리하거나 정렬할 수 있습니다. 다음 코드에서는 Linq를 사용 하 여 문자 "A"로 시작 하는 모든 항목을 필터링 하는 예제를 보여 줍니다.
 
 ```csharp
 var apple = from s in db.Table<Stock>()
@@ -190,13 +190,13 @@ foreach (var s in stocksStartingWithA) {
 var rowcount = db.Delete<Stock>(someStock.Id); // Id is the primary key
 ```
 
-`rowcount`를 확인 하 여 영향을 받는 행의 수를 확인할 수 있습니다 (이 경우 삭제).
+에서 `rowcount` 영향을 받는 행의 수를 확인할 수 있습니다 (이 경우 삭제).
 
 ## <a name="using-sqlitenet-with-multiple-threads"></a>여러 스레드에 SQLite.NET 사용
 
-SQLite는 *단일 스레드*, *다중 스레드*및 *serialize*된 세 가지 스레딩 모드를 지원 합니다. 제한 없이 여러 스레드에서 데이터베이스에 액세스 하려는 경우에는 **serialize** 된 스레딩 모드를 사용 하도록 SQLite를 구성할 수 있습니다. 응용 프로그램의 초기에이 모드를 설정 하는 것이 중요 합니다 (예: `OnCreate` 메서드의 시작).
+SQLite는 *단일 스레드*, *다중 스레드*및 *serialize*된 세 가지 스레딩 모드를 지원 합니다. 제한 없이 여러 스레드에서 데이터베이스에 액세스 하려는 경우에는 **serialize** 된 스레딩 모드를 사용 하도록 SQLite를 구성할 수 있습니다. 응용 프로그램의 초기에이 모드를 설정 하는 것이 중요 합니다 (예: 메서드의 시작 `OnCreate` ).
 
-스레딩 모드를 변경 하려면 `Mono.Data.Sqlite` 네임 스페이스에 있는 `SqliteConnection.SetConfig`를 호출 합니다. 예를 들어 다음 코드 줄은 **serialize** 된 모드에 대해 SQLite를 구성 합니다.
+스레딩 모드를 변경 하려면 `SqliteConnection.SetConfig` 네임 스페이스에 있는를 호출 합니다 `Mono.Data.Sqlite` . 예를 들어 다음 코드 줄은 **serialize** 된 모드에 대해 SQLite를 구성 합니다.
 
 ```csharp
 using Mono.Data.Sqlite;

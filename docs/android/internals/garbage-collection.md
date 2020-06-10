@@ -1,19 +1,19 @@
 ---
-title: 가비지 컬렉션
+title: 가비지 수집
 ms.prod: xamarin
 ms.assetid: 298139E2-194F-4A58-BC2D-1D22231066C4
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018
-ms.openlocfilehash: da00eef7c08f7025239d15e60e6ec42416a36089
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: f8a64a68be042268860889357e46b42612795635
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487843"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567959"
 ---
-# <a name="garbage-collection"></a>가비지 컬렉션
+# <a name="garbage-collection"></a>가비지 수집
 
 Xamarin.ios는 Mono의 [Simple 세대 가비지 수집기](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/)를 사용 합니다. 다음 두 가지 종류의 컬렉션을 포함 하는 두 세대 및 *큰 개체 공간*을 포함 하는 표시 및 스윕 가비지 수집기입니다. 
 
@@ -36,7 +36,7 @@ Xamarin.ios는 Mono의 [Simple 세대 가비지 수집기](https://www.mono-proj
 
 - **Java 개체**: ANDROID 런타임 VM 내에 있지만 Mono vm에 노출 되지 않는 java 유형입니다. 이러한 내용은 보링 이며 더 이상 설명 하지 않습니다. 이러한 기능은 Android 런타임 VM에서 정상적으로 수집 됩니다. 
 
-- **피어 개체**: [IJavaObject](xref:Android.Runtime.IJavaObject) 을 구현 하는 형식 (예 [: 모든](xref:Java.Lang.Object) [java.lang.throwable](xref:Java.Lang.Throwable) 하위 클래스)입니다. 이러한 형식의 인스턴스에는 *관리 되는 피어* 와 *네이티브 피어*라는 두 개의 "halfs"가 있습니다. 관리 되는 피어는 C# 클래스의 인스턴스입니다. 네이티브 피어는 Android 런타임 VM 내에서 Java 클래스의 인스턴스이고 C# [IJavaObject](xref:Android.Runtime.IJavaObject.Handle) 속성은 네이티브 피어에 대 한 JNI 전역 참조를 포함 합니다. 
+- **피어 개체**: [IJavaObject](xref:Android.Runtime.IJavaObject) 을 구현 하는 형식 (예 [: 모든](xref:Java.Lang.Object) [java.lang.throwable](xref:Java.Lang.Throwable) 하위 클래스)입니다. 이러한 형식의 인스턴스에는 *관리 되는 피어* 와 *네이티브 피어*라는 두 개의 "halfs"가 있습니다. 관리 되는 피어는 c # 클래스의 인스턴스입니다. 네이티브 피어는 Android 런타임 VM 내에서 Java 클래스의 인스턴스이고 c # [IJavaObject](xref:Android.Runtime.IJavaObject.Handle) 속성은 네이티브 피어에 대 한 JNI 전역 참조를 포함 합니다. 
 
 Native 피어에는 다음과 같은 두 가지 유형이 있습니다.
 
@@ -57,15 +57,15 @@ Mono 컬렉션은 흥미로운 상황을 말합니다. 관리 되는 개체는 �
 
 2. Android 런타임 VM GC가 호출 됩니다. 모든 네이티브 피어 인스턴스가 수집 될 수 있습니다. 
 
-3. (1)에서 만든 JNI weak global 참조가 선택 됩니다. Weak 참조가 수집 된 경우 피어 개체가 수집 됩니다. Weak 참조가 수집 *되지 않은* 경우 WEAK 참조가 JNI 전역 참조로 바뀌고 피어 개체가 수집 되지 않습니다. 참고: API 14 이상에서는 `IJavaObject.Handle`에서 반환 된 값이 GC 후에 변경 될 수 있습니다. 
+3. (1)에서 만든 JNI weak global 참조가 선택 됩니다. Weak 참조가 수집 된 경우 피어 개체가 수집 됩니다. Weak 참조가 수집 *되지 않은* 경우 WEAK 참조가 JNI 전역 참조로 바뀌고 피어 개체가 수집 되지 않습니다. 참고: API 14 +에서는 GC 이후에에서 반환 된 값이 `IJavaObject.Handle` 변경 될 수 있음을 의미 합니다. 
 
-모든 this의 최종 결과는 피어 개체의 인스턴스가 관리 코드 (예: `static` 변수에 저장 됨)에서 참조 되거나 Java 코드에서 참조 되는 한 활성 상태로 유지 되는 것입니다. 또한 네이티브 피어와 관리 되는 피어를 모두 수집 가능 하 게 될 때까지 네이티브 피어를 수집 하지 않기 때문에 네이티브 피어의 수명은 그에 따라 살고 있는 것 이상으로 확장 됩니다.
+모든 this의 최종 결과는 피어 개체의 인스턴스가 관리 코드 (예: 변수에 저장 됨)에서 참조 `static` 되거나 Java 코드에서 참조 되는 한 활성 상태로 유지 되는 것입니다. 또한 네이티브 피어와 관리 되는 피어를 모두 수집 가능 하 게 될 때까지 네이티브 피어를 수집 하지 않기 때문에 네이티브 피어의 수명은 그에 따라 살고 있는 것 이상으로 확장 됩니다.
 
 ## <a name="object-cycles"></a>개체 주기
 
 피어 개체는 Android 런타임 및 Mono VM 모두에 논리적으로 나타납니다. 예를 들어, [android. 작업](xref:Android.App.Activity) 의 관리 되는 피어 인스턴스는 해당 하는 [android. Activity](https://developer.android.com/reference/android/app/Activity.html) framework 피어 Java 인스턴스를 가집니다. [Java. 개체](xref:Java.Lang.Object) 에서 상속 되는 모든 개체에는 두 vm 내에 표현이 있을 수 있습니다. 
 
-두 Vm 모두에 표시 되는 모든 개체에는 단일 VM 내에만 있는 개체 (예: [`System.Collections.Generic.List<int>`](xref:System.Collections.Generic.List%601))에 비해 확장 되는 수명이 있습니다. [GC를 호출 합니다. ](xref:System.GC.Collect)Xamarin. ANDROID GC는 개체를 수집 하기 전에 VM에서 참조 하지 않도록 해야 하므로 이러한 개체를 수집 하지 않아도 됩니다. 
+두 Vm 모두에 표시 되는 모든 개체는 단일 VM 내에만 있는 개체 (예:)에 비해 확장 된 수명을 가집니다 [`System.Collections.Generic.List<int>`](xref:System.Collections.Generic.List%601) . [GC를 호출 합니다. ](xref:System.GC.Collect)Xamarin. ANDROID GC는 개체를 수집 하기 전에 VM에서 참조 하지 않도록 해야 하므로 이러한 개체를 수집 하지 않아도 됩니다. 
 
 개체 수명을 줄이려면, Java. a d. [Dispose ()](xref:Java.Lang.Object.Dispose) 를 호출 해야 합니다. 이렇게 하면 전역 참조를 해제 하 여 두 Vm 사이에서 개체에 대 한 연결을 "서버"에 수동으로 "연결" 하 여 개체를 더 빠르게 수집할 수 있습니다. 
 
@@ -93,32 +93,32 @@ GC 브리지는 Mono 가비지 수집 중에 작동 하며, Android 런타임 �
 
 3. 정말 데드 된 개체를 확인 합니다. 
 
-이 복잡 한 프로세스는 `Java.Lang.Object`의 서브 클래스가 개체를 자유롭게 참조할 수 있도록 하는 것입니다. 이를 통해 C#바인딩할 수 있는 Java 개체에 대 한 제한 사항이 제거 됩니다. 이러한 복잡성 때문에 브리지 프로세스는 매우 비용이 많이 들고 응용 프로그램에서 일시 중지가 발생할 수 있습니다. 응용 프로그램에 상당한 일시 중지가 발생 하는 경우 다음 3 개의 GC 브리지 구현 중 하나를 조사할 가치가 있습니다. 
+이 복잡 한 프로세스는의 서브 클래스가 개체를 자유롭게 참조할 수 있도록 하는 것입니다 .이를 통해 `Java.Lang.Object` c #에 바인딩할 수 있는 Java 개체에 대 한 제한 사항이 제거 됩니다. 이러한 복잡성 때문에 브리지 프로세스는 매우 비용이 많이 들고 응용 프로그램에서 일시 중지가 발생할 수 있습니다. 응용 프로그램에 상당한 일시 중지가 발생 하는 경우 다음 3 개의 GC 브리지 구현 중 하나를 조사할 가치가 있습니다. 
 
 - **Tarjan** - [Robert Tarjan의 알고리즘과 역방향 참조 전파](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm)를 기반으로 하는 GC 브리지의 완전히 새로운 디자인입니다.
     시뮬레이션 된 워크 로드에서 최상의 성능을 갖지만 실험적 코드를 더 많이 공유 하 고 있습니다. 
 
 - **New** -원래 코드의 주요 재정비입니다 .이는 정방형 동작의 두 인스턴스를 수정 하지만 핵심 알고리즘은 유지 합니다 (강력한 연결 구성 요소를 찾는 [Kosaraju 알고리즘](https://en.wikipedia.org/wiki/Kosaraju's_algorithm) 기반). 
 
-- **이전** -원래 구현 (가장 안정적으로 3 개) `GC_BRIDGE` 일시 중지가 허용 되는 경우 응용 프로그램에서 사용 해야 하는 브리지입니다. 
+- **이전** -원래 구현 (가장 안정적으로 3 개) 일시 중지가 허용 되는 경우 응용 프로그램에서 사용 해야 하는 브리지입니다 `GC_BRIDGE` . 
 
 가장 잘 작동 하는 GC 브리지를 파악 하는 유일한 방법은 응용 프로그램에서 실험 하 고 출력을 분석 하는 것입니다. 벤치마킹을 위해 데이터를 수집 하는 방법에는 두 가지가 있습니다. 
 
-- **로깅 사용** -각 GC 브리지 옵션에 대 한 로깅 ( [구성](~/android/internals/garbage-collection.md) 섹션에서 설명)을 사용 하도록 설정한 다음 각 설정에서 로그 출력을 캡처하고 비교 합니다. 각 옵션에 대 한 `GC` 메시지를 검사 합니다. 특히 `GC_BRIDGE` 메시지입니다. 비 대화형 응용 프로그램에 대해 최대 150ms을 일시 중지 하지만 매우 대화형 응용 프로그램 (예: 게임)의 경우 60ms 이상으로 일시 중지 하는 것은 문제입니다. 
+- **로깅 사용** -각 GC 브리지 옵션에 대 한 로깅 ( [구성](~/android/internals/garbage-collection.md) 섹션에서 설명)을 사용 하도록 설정한 다음 각 설정에서 로그 출력을 캡처하고 비교 합니다. `GC`각 옵션에 대 한 메시지를 검사 합니다. 특히 메시지를 검사 합니다 `GC_BRIDGE` . 비 대화형 응용 프로그램에 대해 최대 150ms을 일시 중지 하지만 매우 대화형 응용 프로그램 (예: 게임)의 경우 60ms 이상으로 일시 중지 하는 것은 문제입니다. 
 
 - 브리지 **계정 사용** -브리지 계정에 브리지 프로세스와 관련 된 각 개체가 가리키는 개체의 평균 비용을 표시 합니다. 이 정보를 크기 별로 정렬 하면 많은 양의 추가 개체를 보유 하 고 있는 것에 대 한 힌트를 제공 합니다. 
 
 기본 설정은 **Tarjan**입니다. 회귀를 발견 한 경우이 옵션을 **이전**으로 설정 해야 할 수 있습니다. 또한 **Tarjan** 가 성능 향상을 생성 하지 않는 경우 더 안정적인 **이전** 옵션을 사용 하도록 선택할 수 있습니다.
 
-응용 프로그램에서 사용 해야 하는 `GC_BRIDGE` 옵션을 지정 하려면 `MONO_GC_PARAMS` 환경 변수에 `bridge-implementation=old`, `bridge-implementation=new` 또는 `bridge-implementation=tarjan`를 전달 합니다. 이 작업을 수행 하려면 `AndroidEnvironment`**빌드 작업** 을 사용 하 여 프로젝트에 새 파일을 추가 합니다. 예를 들면 다음과 같습니다.: 
+응용 프로그램에서 사용 해야 하는 옵션을 지정 하려면를, `GC_BRIDGE` 전달 `bridge-implementation=old` `bridge-implementation=new` 하거나 `bridge-implementation=tarjan` `MONO_GC_PARAMS` 환경 변수에 전달 합니다. 이 작업을 수행 하려면 **빌드 작업** 을 사용 하 여 프로젝트에 새 파일을 추가 `AndroidEnvironment` 합니다. 예를 들면 다음과 같습니다. 
 
 ```shell
 MONO_GC_PARAMS=bridge-implementation=tarjan
 ```
 
-자세한 내용은 [구성](#configuration)을 참조하세요.
+자세한 내용은 [구성](#configuration)을 참고하시기 바랍니다.
 
-<a name="Helping_the_GC" />
+<a name="Helping_the_GC"></a>
 
 ## <a name="helping-the-gc"></a>GC 지원
 
@@ -129,23 +129,23 @@ GC에서 메모리 사용 및 수집 시간을 줄이는 데 도움이 되는 �
 Gc는 프로세스를 불완전 하 게 표시 하며, GC가 메모리가 부족 하다는 것을 알지 못하기 때문에 메모리가 부족 한 경우에는 실행 되지 않을 수 있습니다. 
 
 예를 들어, [Java Lang. 개체](xref:Java.Lang.Object) 형식 또는 파생 형식의 인스턴스는 크기가 20 바이트 이상 (예: 표시 하지 않고 변경 될 수 있습니다. 등)입니다. 
-[관리 되는 호출 가능 래퍼](~/android/internals/architecture.md) 는 추가 인스턴스 멤버를 추가 하지 않습니다. 따라서 10mb의 메모리를 참조 하는 [Android.](xref:Android.Graphics.Bitmap) x s i s. i n s i n. x x 바이트 개체를 참조 하는 경우에 &ndash;는 blob이 20 바이트 개체를 표시 하는 것을 알 수 없으며, 10mb의 메모리를 유지 하는 android 런타임에 할당 된 개체에 연결 되어 있음을 확인할 수 
+[관리 되는 호출 가능 래퍼](~/android/internals/architecture.md) 는 추가 인스턴스 멤버를 추가 하지 않습니다. 따라서 10mb의 메모리를 참조 하는 [Android.](xref:Android.Graphics.Bitmap) x s i s. i n s i s. x x 바이트 개체를 참조 하는 ANDROID의 gc는 &ndash; gc가 20 바이트 개체를 표시 한다는 사실을 인식 하지 못합니다. 
 
 GC를 지원 해야 하는 경우가 많습니다. 아쉽게도 *GC. AddMemoryPressure ()* 및 *GC. RemoveMemoryPressure ()* 은 지원 되지 않으므로 매우 많은 Java 할당 개체 그래프를 *해제 한 경우* 수동으로 GC를 호출 해야 할 수 있습니다 [. 을 수집 ()](xref:System.GC.Collect) 하 여 java 쪽 메모리를 해제 하도록 GC를 요청 하거나, 관리 되는 호출 가능 래퍼와 java 인스턴스 간의 매핑이 손상 될 수 *있습니다.* 예를 들어 [버그 1084](https://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6)을 참조 하세요. 
 
 > [!NOTE]
-> `Java.Lang.Object` 하위 클래스 인스턴스를 삭제 하는 경우 *매우* 주의 해야 합니다.
+> 하위 클래스 인스턴스를 삭제할 때는 *매우* 주의 해야 합니다 `Java.Lang.Object` .
 
-메모리 손상 가능성을 최소화 하려면 `Dispose()`를 호출할 때 다음 지침을 준수 합니다.
+메모리 손상 가능성을 최소화 하려면를 호출할 때 다음 지침을 관찰 하십시오 `Dispose()` .
 
 #### <a name="sharing-between-multiple-threads"></a>여러 스레드 간에 공유
 
-*Java 또는 관리 되* 는 인스턴스를 여러 스레드 간에 공유할 수 있는 **경우에는** *`Dispose()`d가 되지 않아야*합니다. 예: [`Typeface.Create()`](xref:Android.Graphics.Typeface.Create*) 
-*캐시 된 인스턴스*를 반환할 수 있습니다. 여러 스레드가 동일한 인수를 제공 하는 경우 *동일한* 인스턴스를 가져옵니다. 따라서 한 스레드에서 `Typeface` 인스턴스를 `Dispose()`하는 경우 다른 스레드가 무효화 될 수 있습니다 .이 경우 다른 스레드에서 인스턴스가 삭제 되었기 때문에 `JNIEnv.CallVoidMethod()`에서 `ArgumentException`을 발생 시킬 수 있습니다. 
+*Java 또는 관리 되* 는 인스턴스를 여러 스레드 간에 공유할 수 있는 **경우에는** * `Dispose()` d가 될 수 없습니다*. 예를 들어[`Typeface.Create()`](xref:Android.Graphics.Typeface.Create*) 
+*캐시 된 인스턴스*를 반환할 수 있습니다. 여러 스레드가 동일한 인수를 제공 하는 경우 *동일한* 인스턴스를 가져옵니다. 따라서 한 스레드에서 인스턴스를 시작 하면 다른 스레드가 무효화 될 수 있으며,이 `Dispose()` `Typeface` 는 `ArgumentException` `JNIEnv.CallVoidMethod()` 인스턴스가 다른 스레드에서 삭제 되었으므로 다른 스레드를 발생 시킬 수 있습니다. 
 
 #### <a name="disposing-bound-java-types"></a>바인딩된 Java 형식 삭제
 
-인스턴스가 바인딩된 Java 형식이 면 *인스턴스는 관리* 코드에서 다시 사용 되지 않는 한 인스턴스를 삭제할 수 *있으며* , Java 인스턴스는 스레드 간에 공유할 수 없습니다 (이전 `Typeface.Create()` 토론 참조). (이러한 결정을 내리는 것이 어려울 수 있습니다.) 다음 번에 Java 인스턴스가 관리 코드에 들어가면 *새* 래퍼가 생성 됩니다. 
+인스턴스가 바인딩된 Java 형식이 면 *인스턴스는 관리* 코드에서 다시 사용 되지 않는 한 인스턴스를 삭제할 수 *있으며* , Java 인스턴스는 스레드 간에 공유 될 수 없습니다 (이전 `Typeface.Create()` 논의 참조). (이러한 결정을 내리는 것이 어려울 수 있습니다.) 다음 번에 Java 인스턴스가 관리 코드에 들어가면 *새* 래퍼가 생성 됩니다. 
 
 이는 Drawables 및 기타 리소스를 많이 사용할 수 있는 경우에 유용 합니다.
 
@@ -154,11 +154,11 @@ using (var d = Drawable.CreateFromPath ("path/to/filename"))
     imageView.SetImageDrawable (d);
 ```
 
-위 내용은 그릴 수 있는 [CreateFromPath ()](xref:Android.Graphics.Drawables.Drawable.CreateFromPath*) 가 반환 하는 피어는 사용자 피어가 *아닌* 프레임 워크 피어를 참조 하기 때문에 안전 합니다. 블록의 `Dispose()`끝에 있는 호출`using`은 관리 되는 [그릴 수 있는](xref:Android.Graphics.Drawables.Drawable) 인스턴스 및 프레임 워크에서 [그릴 수 있는](https://developer.android.com/reference/android/graphics/drawable/Drawable.html) 인스턴스 간의 관계를 해제 하므로 Android 런타임이 필요한 즉시 Java 인스턴스를 수집할 수 있습니다. 이는 피어 인스턴스가 사용자 피어를 참조 하는 경우 안전 *하지 않습니다* . 여기서는 "외부" 정보를 사용 하 여 `Drawable` 사용자 피어를 참조할 수 없다는 것을 *알* 수 있으므로 `Dispose()` 호출은 안전 합니다. 
+위 내용은 그릴 수 있는 [CreateFromPath ()](xref:Android.Graphics.Drawables.Drawable.CreateFromPath*) 가 반환 하는 피어는 사용자 피어가 *아닌* 프레임 워크 피어를 참조 하기 때문에 안전 합니다. `Dispose()`블록의 끝에 있는 호출은 `using` 관리 되는 [그릴](xref:Android.Graphics.Drawables.Drawable) 수 있는 인스턴스 및 프레임 워크에서 [그릴](https://developer.android.com/reference/android/graphics/drawable/Drawable.html) 수 있는 인스턴스 간의 관계를 해제 하므로 Android 런타임이 필요한 즉시 Java 인스턴스를 수집할 수 있습니다. 이는 피어 인스턴스가 사용자 피어를 참조 하는 경우 안전 *하지 않습니다* . 여기서는 "외부" 정보를 사용 하 *know* 여에서 `Drawable` 사용자 피어를 참조할 수 없으므로 호출이 안전 하다는 것을 알 수 `Dispose()` 있습니다. 
 
 #### <a name="disposing-other-types"></a>기타 형식 삭제 
 
-인스턴스가 Java 유형 (예: 사용자 지정 `Activity`)의 바인딩이 아닌 유형을 참조 *하는 경우* 에는 java 코드가 해당 인스턴스에서 재정의 된 메서드를 호출 하지 않는 한 `Dispose()`를 호출 **하지 마세요** . 이렇게 하지 않으면 [`NotSupportedException`s](~/android/internals/architecture.md#Premature_Dispose_Calls)가 발생 합니다. 
+인스턴스가 Java 유형 (예: 사용자 지정)의 바인딩이 아닌 유형을 참조 하는 경우 `Activity` , java 코드에서 해당 인스턴스에 대해 재정의 된 메서드를 호출 하지 않는 한를 호출 **하지 마십시오** `Dispose()` . *know* 이렇게 하지 않으면 [ `NotSupportedException` s](~/android/internals/architecture.md#Premature_Dispose_Calls)가 발생 합니다. 
 
 예를 들어 사용자 지정 클릭 수신기가 있는 경우 다음을 수행 합니다.
 
@@ -187,9 +187,9 @@ Parameter name: jobject
 at Android.Runtime.JNIEnv.CallVoidMethod
 ```
 
-이 상황은 일반적으로 개체의 첫 번째 dispose로 인해 멤버가 null이 될 때 발생 합니다. 그러면이 null 멤버에 대 한 후속 액세스 시도로 인해 예외가 throw 됩니다. 특히 관리 되는 인스턴스를 기본 Java 인스턴스에 연결 하는 개체의 `Handle`는 첫 번째 dispose에서 무효화 되지만 관리 코드는 더 이상 사용할 수 없는 경우에도이 기본 Java 인스턴스에 대 한 액세스를 계속 시도 합니다 (Java 인스턴스와 관리 되는 인스턴스 간의 매핑에 대 한 자세한 내용은 [관리 되는 호출 가능 래퍼](~/android/internals/architecture.md#Managed_Callable_Wrappers) 참조). 
+이 상황은 일반적으로 개체의 첫 번째 dispose로 인해 멤버가 null이 될 때 발생 합니다. 그러면이 null 멤버에 대 한 후속 액세스 시도로 인해 예외가 throw 됩니다. 특히 관리 되는 인스턴스를 기본 Java 인스턴스에 연결 하는 개체의는 `Handle` 첫 번째 dispose에서 무효화 되지만 관리 코드는 더 이상 사용할 수 없는 경우에도이 기본 java 인스턴스에 대 한 액세스를 계속 시도 합니다. java 인스턴스와 관리 되는 인스턴스 간의 매핑에 대 한 자세한 내용은 [관리 되는 호출 가능 래퍼](~/android/internals/architecture.md#Managed_Callable_Wrappers) 를 참조 하세요. 
 
-이 예외를 방지 하는 좋은 방법은 `Dispose` 메서드에서 관리 되는 인스턴스와 기본 Java 인스턴스 간의 매핑이 여전히 유효함을 명시적으로 확인 하는 것입니다. 즉, 해당 멤버에 액세스 하기 전에 개체의 `Handle` null 인지 (`IntPtr.Zero`) 확인 합니다. 예를 들어 다음 `Dispose` 메서드는 `childViews` 개체에 액세스 합니다. 
+이 예외를 방지 하는 좋은 방법은 `Dispose` 메서드에서 관리 되는 인스턴스와 기본 Java 인스턴스 간의 매핑이 여전히 유효한 지 여부를 명시적으로 확인 하는 것입니다. 즉, 개체의 `Handle` `IntPtr.Zero` 멤버에 액세스 하기 전에 개체의가 null 인지 () 확인 합니다. 예를 들어 다음 `Dispose` 메서드는 개체에 액세스 합니다 `childViews` . 
 
 ```csharp
 class MyClass : Java.Lang.Object, ISomeInterface 
@@ -205,7 +205,7 @@ class MyClass : Java.Lang.Object, ISomeInterface
 }
 ```
 
-초기 dispose 전달으로 인해 `childViews`에 잘못 된 `Handle`있는 경우 `for` 루프 액세스에서 `ArgumentException`을 throw 합니다. 첫 번째 `childViews` 액세스 전에 명시적 `Handle` null 검사를 추가 하 여 다음 `Dispose` 메서드에서 예외가 발생 하지 않도록 합니다. 
+초기 dispose 전달의 원인이 잘못 된 경우 `childViews` `Handle` 루프 액세스는을 `for` throw 합니다 `ArgumentException` . `Handle`첫 번째 액세스 전에 명시적 null 검사를 추가 하 여 `childViews` 다음 `Dispose` 메서드는 예외가 발생 하지 않도록 합니다. 
 
 ```csharp
 class MyClass : Java.Lang.Object, ISomeInterface 
@@ -228,7 +228,7 @@ class MyClass : Java.Lang.Object, ISomeInterface
 
 ### <a name="reduce-referenced-instances"></a>참조 된 인스턴스 줄이기
 
-GC 중에 `Java.Lang.Object` 유형 또는 하위 클래스의 인스턴스를 검색할 때마다 인스턴스가 참조 하는 전체 *개체 그래프가* 검색 되어야 합니다. 개체 그래프는 "루트 인스턴스"가 참조 하는 개체 인스턴스 집합과 루트 인스턴스가 참조 하 *는 항목에서* 참조 하는 모든 항목을 재귀적으로 포함 합니다. 
+`Java.Lang.Object`GC 중에 형식 또는 하위 클래스의 인스턴스를 검색할 때마다 인스턴스가 참조 하는 전체 *개체 그래프가* 검색 되어야 합니다. 개체 그래프는 "루트 인스턴스"가 참조 하는 개체 인스턴스 집합과 루트 인스턴스가 참조 하 *는 항목에서* 참조 하는 모든 항목을 재귀적으로 포함 합니다. 
 
 다음 클래스를 살펴보세요.
 
@@ -248,11 +248,11 @@ class BadActivity : Activity {
 }
 ```
 
-`BadActivity` 생성 될 때 개체 그래프에는 10004 인스턴스 (1x `BadActivity`, 1x `strings`, `strings`에서 보유 한 1x `string[]`, 10000x 문자열 인스턴스가 포함 됨)가 포함 됩니다 .이 *모든* 항목은 `BadActivity` 인스턴스를 검색할 때마다 검색 해야 합니다. 
+`BadActivity`가 생성 되 면 개체 그래프에는 인스턴스를 검색할 때마다 검색 해야 하는 10004 인스턴스 (1x `BadActivity` , 1x `strings` , 1x `string[]` 에서 보유 `strings` 한 *all* , 10000x 문자열 인스턴스) `BadActivity` 가 포함 됩니다. 
 
 이로 인해 컬렉션 시간에 부정적인 영향을 줄 수 있으므로 GC 일시 중지 시간이 늘어납니다. 
 
-사용자 피어 인스턴스를 기반으로 하는 개체 그래프의 크기를 *줄여* GC를 지원할 수 있습니다. 위의 예제에서이 작업을 수행 하려면 `BadActivity.strings`을 다른 클래스로 이동 하 여이 작업을 수행 해야 합니다. 
+사용자 피어 인스턴스를 기반으로 하는 개체 그래프의 크기를 *줄여* GC를 지원할 수 있습니다. 위의 예제에서는이 작업을 수행할 수 있습니다 .이 작업은 `BadActivity.strings` Java. c. 개체에서 상속 하지 않는 별도 클래스로 이동 하 여 수행할 수 있습니다. 
 
 ```csharp
 class HiddenReference<T> {
@@ -309,7 +309,7 @@ class BetterActivity : Activity {
 
 ## <a name="major-collections"></a>주요 컬렉션
 
-주 컬렉션은 GC를 호출 하 여 수동으로 수행할 수 있습니다 [. ()](xref:System.GC.Collect) 또는 `GC.Collect(GC.MaxGeneration)`을 수집 합니다. 
+주 컬렉션은 GC를 호출 하 여 수동으로 수행할 수 있습니다 [. ()](xref:System.GC.Collect) 또는 `GC.Collect(GC.MaxGeneration)` 을 수집 합니다. 
 
 이러한 장치는 거의 수행 되지 않으며, 512MB 힙을 수집할 때 Android 스타일 장치에 일시 중지 시간이 있을 수 있습니다. 
 
@@ -325,11 +325,11 @@ class BetterActivity : Activity {
 
 ## <a name="configuration"></a>구성
 
-Xamarin Android 가비지 수집기는 `MONO_GC_PARAMS` 환경 변수를 설정 하 여 구성할 수 있습니다. 환경 변수는 [Androidenvironment](~/android/deploy-test/environment.md)의 빌드 작업을 사용 하 여 설정할 수 있습니다.
+환경 변수를 설정 하 여 Xamarin.ios 가비지 수집기를 구성할 수 있습니다 `MONO_GC_PARAMS` . 환경 변수는 [Androidenvironment](~/android/deploy-test/environment.md)의 빌드 작업을 사용 하 여 설정할 수 있습니다.
 
-`MONO_GC_PARAMS` 환경 변수는 다음 매개 변수를 쉼표로 구분한 목록입니다. 
+`MONO_GC_PARAMS`환경 변수는 다음 매개 변수를 쉼표로 구분한 목록입니다. 
 
-- `nursery-size` = *크기* : nursery의 크기를 설정 합니다. 크기는 바이트로 지정 되며 2의 거듭제곱 이어야 합니다. 접미사 `k`, `m` 및 `g`를 사용 하 여 각각 메가 gb와 기가바이트를 지정할 수 있습니다. Nursery은 첫 번째 세대 (2)입니다. Nursery 더 큰 경우 일반적으로 프로그램 속도는 향상 되지만 메모리를 더 많이 사용 합니다. 기본 nursery 크기는 512 kb입니다. 
+- `nursery-size` = *크기* : nursery의 크기를 설정 합니다. 크기는 바이트로 지정 되며 2의 거듭제곱 이어야 합니다. 접미사를 `k` `m` `g` 지정 하는 데 사용할 수 있습니다. Nursery은 첫 번째 세대 (2)입니다. Nursery 더 큰 경우 일반적으로 프로그램 속도는 향상 되지만 메모리를 더 많이 사용 합니다. 기본 nursery 크기는 512 kb입니다. 
 
 - `soft-heap-limit` = *크기* : 앱에 대 한 대상 최대 관리 되는 메모리 사용량입니다. 메모리 사용이 지정 된 값 보다 적으면 GC는 실행 시간 (컬렉션 수)에 최적화 됩니다. 
     이 한도를 초과 하면 메모리 사용에 대해 GC가 최적화 됩니다 (더 많은 컬렉션). 
@@ -340,7 +340,7 @@ Xamarin Android 가비지 수집기는 `MONO_GC_PARAMS` 환경 변수를 설정 
 
 - `bridge-require-precise-merge`: Tarjan 브리지에는 최적화가 포함 되어 있으며,이는 드문 경우 이지만 개체가 가비지로 전환 된 후 하나의 GC를 수집 하 게 될 수 있습니다. 이 옵션을 포함 하면 해당 최적화를 사용 하지 않도록 설정 하 여 Gc를 보다 예측 가능한 상태로 만들 수 있습니다.
 
-예를 들어 힙 크기 제한인 128MB를 갖도록 GC를 구성 하려면 `AndroidEnvironment` **빌드 작업** 을 사용 하 여 프로젝트에 새 파일을 추가 합니다. 
+예를 들어 힙 크기 제한인 128MB를 갖도록 GC를 구성 하려면 다음 내용으로의 **빌드 작업** 을 사용 하 여 프로젝트에 새 파일을 추가 합니다 `AndroidEnvironment` . 
 
 ```shell
 MONO_GC_PARAMS=soft-heap-limit=128m

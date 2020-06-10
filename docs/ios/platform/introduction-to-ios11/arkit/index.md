@@ -7,23 +7,23 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: 0094a496ce99addb08648431d993bd4afddca2f4
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 51b28ec05af91dea21b1291956de30c549b1868e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032255"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571677"
 ---
 # <a name="introduction-to-arkit-in-xamarinios"></a>Xamarin.ios의 ARKit 소개
 
 _IOS 11에 대 한 보강 현실_
 
-ARKit를 사용 하면 다양 한 확대 현실 응용 프로그램 및 게임을 사용할 수 있습니다. 이 단원에서는 다음 항목에 대해 설명합니다.
+ARKit를 사용 하면 다양 한 확대 현실 응용 프로그램 및 게임을 사용할 수 있습니다. 이 섹션에서는 다음 항목을 다룹니다.
 
 - [ARKit 시작](#gettingstarted)
 - [UrhoSharp에서 ARKit 사용](urhosharp.md)
 
-<a name="gettingstarted" />
+<a name="gettingstarted"></a>
 
 ## <a name="getting-started-with-arkit"></a>ARKit 시작
 
@@ -39,7 +39,7 @@ ARKit를 사용 하면 다양 한 확대 현실 응용 프로그램 및 게임�
 
 ### <a name="2-configure-the-view"></a>2. 보기 구성
 
-뷰 컨트롤러의 `ViewDidLoad` 메서드에서 장면 자산을 로드 하 고 보기에서 `Scene` 속성을 설정 합니다.
+뷰 컨트롤러의 `ViewDidLoad` 메서드에서 장면 자산을 로드 하 고 `Scene` 보기에서 속성을 설정 합니다.
 
 ```csharp
 ARSCNView SceneView = (View as ARSCNView);
@@ -66,7 +66,7 @@ public class SessionDelegate : ARSessionDelegate
 }
 ```
 
-`ViewDidLoad` 메서드의에서 대리자를 할당 합니다.
+메서드의에서 대리자를 할당 합니다 `ViewDidLoad` .
 
 ```csharp
 // Track changes to the session
@@ -75,7 +75,7 @@ SceneView.Session.Delegate = new SessionDelegate();
 
 ### <a name="4-position-the-3d-model-in-the-world"></a>4. 전 세계에 3D 모델 배치
 
-`ViewWillAppear`에서 다음 코드는 ARKit 세션을 설정 하 고 장치의 카메라를 기준으로 3D 모델의 위치를 공간으로 설정 합니다.
+에서 `ViewWillAppear` 다음 코드는 ARKit 세션을 설정 하 고 장치 카메라를 기준으로 3d 모델의 위치를 공간으로 설정 합니다.
 
 ```csharp
 // Create a session configuration
@@ -97,7 +97,7 @@ ship.Position = new SCNVector3(2f, -2f, -9f);
 
 ### <a name="5-pause-the-augmented-reality-session"></a>5. 확대 된 현실 세션 일시 중지
 
-뷰 컨트롤러가 표시 되지 않는 경우 (`ViewWillDisappear` 메서드에서 ARKit 세션을 일시 중지 하는 것이 좋습니다.
+뷰 컨트롤러를 표시 하지 않는 경우 ARKit 세션을 일시 중지 하는 것이 좋습니다 ( `ViewWillDisappear` 메서드:
 
 ```csharp
 SceneView.Session.Pause();
@@ -105,7 +105,7 @@ SceneView.Session.Pause();
 
 ## <a name="summary"></a>요약
 
-위의 코드는 간단한 ARKit 응용 프로그램을 생성 합니다. 더 복잡 한 예제에서는 확대 된 현실 세션을 호스팅하는 뷰 컨트롤러에서 `IARSCNViewDelegate`를 구현 하 고 추가 메서드를 구현할 것으로 간주 합니다.
+위의 코드는 간단한 ARKit 응용 프로그램을 생성 합니다. 더 복잡 한 예제에서는 확대 된 현실 세션을 호스팅하는 뷰 컨트롤러에서를 구현 하 고 추가 메서드를 구현할 것으로 간주 `IARSCNViewDelegate` 합니다.
 
 ARKit는 surface 추적 및 사용자 상호 작용과 같은 다양 한 고급 기능을 제공 합니다. UrhoSharp와 ARKit 추적을 결합 하는 예제는 [urhosharp 데모](urhosharp.md) 를 참조 하세요.
 

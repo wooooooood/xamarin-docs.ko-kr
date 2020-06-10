@@ -7,24 +7,24 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 05/25/2017
-ms.openlocfilehash: 347fb1021a290fa849ae354468bc66b0cdd8b684
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 05bb9a5552022ea1eb5cd92df90659f7ebacb7cc
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73017590"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571651"
 ---
 # <a name="how-xamarinmac-works"></a>Xamarin.Mac 작동 방법
 
-대부분의 경우 개발자는 Xamarin.ios의 내부 "매직"에 대해 걱정 하지 않아도 되지만, 내부적으로 작동 하는 방식을 대략적으로 이해 하는 것은 기존 설명서를 사용 하 여 C# 렌즈 및 디버깅 하는 데 도움이 됩니다. 문제가 발생할 때 발생 합니다.
+대부분의 경우 개발자는 Xamarin.ios의 내부 "매직"에 대해 걱정 하지 않아도 되지만, 내부적으로 작동 하는 방식을 대략적으로 이해 하는 것은 c # 렌즈를 사용 하 여 기존 설명서를 해석 하 고 발생 하는 문제를 디버깅 하는 데 도움이 됩니다.
 
-Xamarin.ios에서 응용 프로그램은 두 가지를 연결 합니다. 네이티브 클래스의 인스턴스를 포함 하는 목표 C 기반 런타임 (`NSString`, `NSApplication`등)이 있고 관리 되는 클래스 C# 의 인스턴스를 포함 하는 런타임 (`System.String`,`HttpClient`등)이 있습니다. . 이러한 두 가지 환경 사이에서 Xamarin.ios는 두 가지 방식으로 연결 되므로 앱은 목표-C (예: `NSApplication.Init`)에서 메서드 (선택기)를 호출 하 고, 목표 C는 앱의 C# 메서드 (예: 앱 대리자의 메서드)를 호출할 수 있습니다. 일반적으로 목표 C에 대 한 호출은 **P/invoke** 를 통해 투명 하 게 처리 되 고 일부 런타임 코드는 Xamarin에서 제공 합니다.
+Xamarin.ios에서 응용 프로그램은 두 가지를 연결 합니다. 즉, 네이티브 클래스의 인스턴스를 포함 하는 목표 C 기반 런타임 (, 등 `NSString` `NSApplication` )이 있고 관리 되는 클래스 ( `System.String` , 등)의 인스턴스를 포함 하는 c # 런타임이 있습니다. `HttpClient` 이러한 두 가지 환경에서 Xamarin.ios는 두 가지 방식으로 연결 되므로 앱에서 목표-C (예:)의 메서드 (선택기)를 호출 `NSApplication.Init` 하 고, 목표-c는 앱의 c # 메서드 (예: 앱 대리자의 메서드)를 호출할 수 있습니다. 일반적으로 목표 C에 대 한 호출은 **P/invoke** 를 통해 투명 하 게 처리 되 고 일부 런타임 코드는 Xamarin에서 제공 합니다.
 
-<a name="exposing-classes" />
+<a name="exposing-classes"></a>
 
-## <a name="exposing-c-classes--methods-to-objective-c"></a>클래스 C# /메서드를 목표에 노출-C
+## <a name="exposing-c-classes--methods-to-objective-c"></a>C # 클래스/메서드를 목표로 노출-C
 
-그러나 목표 C가 앱의 C# 개체로 다시 호출 되 게 하려면 목표에서 이해할 수 있는 방식으로 노출 해야 합니다. `Register` 및 `Export` 특성을 통해 수행 됩니다. 다음 예제를 참조하세요.
+그러나 목표 c가 앱의 c # 개체로 다시 호출 하는 것은 목표-C에서 이해할 수 있는 방식으로 노출 되어야 합니다. 이 작업은 및 특성을 통해 수행 됩니다 `Register` `Export` . 다음 예제를 참조하세요.
 
 ```csharp
 [Register ("MyClass")]
@@ -42,13 +42,13 @@ public class MyClass : NSObject
 }
 ```
 
-이 예제에서 목표 C 런타임은 `init` 및 `run`라는 선택기를 사용 하 여 `MyClass` 라는 클래스에 대해 알 수 있게 됩니다.
+이 예제에서 목표-C 런타임은 이제 `MyClass` 및 라는 선택기를 사용 하 여 호출 된 클래스에 대해 알 수 `init` `run` 있습니다.
 
-대부분의 경우, 앱이 수신 하는 대부분의 콜백은 `base` 클래스 (예: `AppDelegate`, `Delegates`, `DataSources`) 또는 Api에 전달 된 **작업** 에 대해 재정의 된 메서드를 통해 수신 되므로 개발자가 무시할 수 있는 구현 세부 정보입니다. 이러한 모든 경우에는 C# 코드에 `Export` 특성이 필요 하지 않습니다.
+대부분의 경우, 앱이 수신 하는 대부분의 콜백은 `base` 클래스 (예: `AppDelegate` , `Delegates` , `DataSources` ) 또는 api에 전달 된 **작업** 에 대해 재정의 된 메서드를 통해 수신 되므로 개발자는 무시할 수 있는 구현 세부 정보입니다. 이러한 모든 경우에 `Export` c # 코드에는 특성이 필요 하지 않습니다.
 
 ## <a name="constructor-runthrough"></a>실행 생성자
 
-대부분의 경우 개발자는 응용 프로그램의 C# 클래스 생성 API를 목표-C 런타임에 노출 하 여 STORYBOARD 또는 XIB 파일에서 호출 되는 경우와 같은 위치에서 인스턴스화할 수 있도록 해야 합니다. 다음은 Xamarin.ios 앱에서 사용 되는 가장 일반적인 5 개의 생성자입니다.
+대부분의 경우 개발자는 응용 프로그램의 c # 클래스 생성 API를 목표-C 런타임에 노출 하 여 Storyboard 또는 XIB 파일에서 호출 되는 경우와 같은 위치에서 인스턴스화할 수 있도록 해야 합니다. 다음은 Xamarin.ios 앱에서 사용 되는 가장 일반적인 5 개의 생성자입니다.
 
 ```csharp
 // Called when created from unmanaged code
@@ -81,7 +81,7 @@ public CustomView () : base (NSObjectFlag.Empty)
 }
 ```
 
-일반적으로 개발자는 사용자 지정 `NSViews`와 같은 일부 형식을 만들 때 생성 되는 `IntPtr` 및 `NSCoder` 생성자를 그대로 두어야 합니다. Xamarin.ios가 목표-C 런타임 요청에 대 한 응답으로 이러한 생성자 중 하나를 호출 해야 하 고 제거 하면 앱이 네이티브 코드 내에서 충돌 하 고 문제를 정확 하 게 파악 하기가 어려울 수 있습니다.
+일반적으로 개발자는 `IntPtr` `NSCoder` 사용자 지정만 같은 일부 형식을 만들 때 생성 되는 및 생성자를 그대로 두어야 합니다 `NSViews` . Xamarin.ios가 목표-C 런타임 요청에 대 한 응답으로 이러한 생성자 중 하나를 호출 해야 하 고 제거 하면 앱이 네이티브 코드 내에서 충돌 하 고 문제를 정확 하 게 파악 하기가 어려울 수 있습니다.
 
 ## <a name="memory-management-and-cycles"></a>메모리 관리 및 주기
 
@@ -95,16 +95,16 @@ Xamarin.ios의 메모리 관리는 Xamarin.ios와 매우 비슷한 여러 가지
 
 IOS에서 Apple에 의해 적용 되는 제한 사항으로 인해 Xamarin.ios에서는 IL 코드의 JIT 컴파일을 사용할 수 없습니다. 결과적으로 모든 Xamarin.ios 앱은 빌드 주기 중에 기계어 코드로 컴파일된 AOT (전체 _시간_ )입니다.
 
-Xamarin.ios를 처음 접하는 경우 Xamarin.ios와 마찬가지로 앱 빌드 주기 중에 IL 코드를 AOT 수 있습니다. Xamarin.ios는 필요한 대부분의 기계어 코드를 컴파일하는 _하이브리드_ AOT 접근 방식을 사용 하지만, 런타임이 필요한 trampolines를 컴파일할 수 있도록 하 고, 현재 작업 중인 다른 사용 사례를 계속 지원 합니다. Xamarin.ios).
+Xamarin.ios를 처음 접하는 경우 Xamarin.ios와 마찬가지로 앱 빌드 주기 중에 IL 코드를 AOT 수 있습니다. Xamarin.ios는 필요한 대부분의 기계어 코드를 컴파일하는 _하이브리드_ AOT 접근 방식을 사용 하지만, 런타임이 필요한 trampolines를 컴파일할 수 있도록 하 고, 현재 xamarin.ios에서 작업 하는 다른 사용 사례를 계속 지원 합니다.
 
 AOT에서 Xamarin.ios 앱을 지원할 수 있는 두 가지 주요 영역은 다음과 같습니다.
 
-- **"네이티브" 크래시 로그 개선** -xamarin.ios 응용 프로그램이 네이티브 코드에서 충돌 하는 경우 (예: `null`을 수락 하지 않는 메서드로 전송 하는 경우와 같이 Cocoa api에 대 한 잘못 된 호출을 수행 하는 경우 일반적으로 발생) JIT 프레임을 사용 하는 네이티브 크래시 로그는 분석 하기 어렵습니다. JIT 프레임은 디버그 정보를 포함 하지 않으므로 16 진수 오프셋을 포함 하는 여러 줄이 있고 무슨 일이 발생 했는지 알 수 없습니다. AOT은 "실제" 이름의 프레임을 생성 하 고 추적을 훨씬 더 쉽게 읽을 수 있습니다. 즉, Xamarin.ios 앱은 **lldb** 및 **기기와**같은 네이티브 도구를 사용 하 여 더 효율적으로 상호 작용 합니다.
+- **"네이티브" 크래시 로그 개선** -xamarin.ios 응용 프로그램이 네이티브 코드에서 충돌 하는 경우 (예:를 수락 하지 않는 메서드로 전송 하는 등) Cocoa api에 대 한 잘못 된 호출을 수행할 때 일반적으로 발생 하는 경우 `null` JIT 프레임을 사용 하는 네이티브 크래시 로그를 분석 하기가 어렵습니다. JIT 프레임은 디버그 정보를 포함 하지 않으므로 16 진수 오프셋을 포함 하는 여러 줄이 있고 무슨 일이 발생 했는지 알 수 없습니다. AOT은 "실제" 이름의 프레임을 생성 하 고 추적을 훨씬 더 쉽게 읽을 수 있습니다. 즉, Xamarin.ios 앱은 **lldb** 및 **기기와**같은 네이티브 도구를 사용 하 여 더 효율적으로 상호 작용 합니다.
 - **더 나은 시작 시간 성능** -큰 xamarin.ios 응용 프로그램의 경우 두 번째 시작 시간을 사용 하면 모든 코드를 JIT 컴파일하는 데 상당한 시간이 걸릴 수 있습니다. AOT는이 작업을 앞으로 진행 합니다.
 
 ### <a name="enabling-aot-compilation"></a>AOT 컴파일 사용
 
-AOT는 **솔루션 탐색기**에서 **프로젝트 이름을** 두 번 클릭 하 고 **Mac 빌드** 로 이동한 다음 **추가 mmp 인수:** 필드에 `--aot:[options]` 추가 하 여 xamarin.ios에서 사용 하도록 설정 됩니다. 여기서 `[options]`는 하나 이상의 옵션입니다. AOT 형식을 제어 하 고 아래 참조). 예를 들면,
+AOT는 **솔루션 탐색기**에서 **프로젝트 이름을** 두 번 클릭 하 고, **mac 빌드** 로 이동 하 고, 추가 mmp arguments: 필드에 추가 하 여 xamarin.ios에서 사용 하도록 설정 됩니다. `--aot:[options]` 여기서 **Additional mmp arguments:** `[options]` 는 AOT 형식을 제어 하는 하나 이상의 옵션입니다. 여기서는 아래 항목을 참조 하세요. 예를 들면 다음과 같습니다.
 
 ![추가 mmp 인수에 AOT 추가](how-it-works-images/aot01.png "추가 mmp 인수에 AOT 추가")
 
@@ -115,15 +115,15 @@ AOT는 **솔루션 탐색기**에서 **프로젝트 이름을** 두 번 클릭 �
 
 Xamarin.ios 앱에서 AOT 컴파일을 사용 하도록 설정할 때 조정할 수 있는 몇 가지 옵션이 있습니다.
 
-- `none`-AOT 컴파일이 없습니다. 이것이 기본 설정입니다.
-- AOT는 MonoBundle의 모든 어셈블리를 컴파일합니다. `all`
-- `core` AOT `Xamarin.Mac`, `System` 및 `mscorlib` 어셈블리를 컴파일합니다.
-- `sdk` AOT는 `Xamarin.Mac` 및 BCL (기본 클래스 라이브러리) 어셈블리를 컴파일합니다.
-- `|hybrid`-위 옵션 중 하나에이 항목을 추가 하면 IL 제거를 허용 하지만 컴파일 시간이 길어질 수 있는 하이브리드 AOT 활성화 됩니다.
+- `none`-AOT 컴파일이 없습니다. 이 값은 기본 설정입니다.
+- `all`-AOT는 MonoBundle의 모든 어셈블리를 컴파일합니다.
+- `core`-AOT는 `Xamarin.Mac` , 및 어셈블리를 컴파일합니다 `System` `mscorlib` .
+- `sdk`-AOT는 `Xamarin.Mac` 및 BCL (기본 클래스 라이브러리) 어셈블리를 컴파일합니다.
+- `|hybrid`-위의 옵션 중 하나에이를 추가 하면 IL 제거를 허용 하지만 컴파일 시간이 길어질 수 있는 하이브리드 AOT 활성화 됩니다.
 - `+`-AOT 컴파일을 위한 단일 파일을 포함 합니다.
 - `-`-AOT 컴파일에서 단일 파일을 제거 합니다.
 
-예를 들어 `--aot:all,-MyAssembly.dll` `MyAssembly.dll`를 _제외_ 하 고 `--aot:core|hybrid,+MyOtherAssembly.dll,-mscorlib.dll`의 모든 어셈블리에 대해 AOT 컴파일을 사용 하도록 설정 하 고, 하이브리드을 사용 하도록 설정 하면 코드 AOT는 `MyOtherAssembly.dll`를 포함 하 고 `mscorlib.dll`를 제외 합니다.
+예를 들어,는 `--aot:all,-MyAssembly.dll` MonoBundle의 모든 어셈블리에 대해 AOT 컴파일을 사용 하도록 설정 하 고, 하이브리드을 사용 하도록 설정 _하 고,_ `MyAssembly.dll` 코드 AOT는를 `--aot:core|hybrid,+MyOtherAssembly.dll,-mscorlib.dll` 포함 `MyOtherAssembly.dll` 하 고를 제외 합니다 `mscorlib.dll` .
 
 ## <a name="partial-static-registrar"></a>부분 정적 등록자
 
@@ -133,30 +133,30 @@ Xamarin.ios 앱을 개발할 때 변경 완료와 테스트 간의 시간을 최
 
 ### <a name="about-the-registrar"></a>등록자 정보
 
-Xamarin.ios 응용 프로그램은 Apple의 공동 Coa 프레임 워크 및 목표-C 런타임의 공동 coa 프레임 워크입니다. 이 "기본 세계"와의 C# "관리 세계" 사이에 브리지를 구축 하는 것은 xamarin.ios의 주요 책임입니다. 이 작업의 일부는 `NSApplication.Init ()` 메서드 내부에서 실행 되는 등록자에 의해 처리 됩니다. 이는 Xamarin.ios에서 Cocoa Api를 사용 하려면 먼저 `NSApplication.Init`를 호출 해야 하는 한 가지 이유입니다.
+Xamarin.ios 응용 프로그램은 Apple의 공동 Coa 프레임 워크 및 목표-C 런타임의 공동 coa 프레임 워크입니다. 이 "기본 세계"와 c #의 "관리 세계" 간의 브리지를 구축 하는 것은 Xamarin.ios의 주된 책임입니다. 이 작업의 일부는 메서드 내에서 실행 되는 등록자에 의해 처리 됩니다 `NSApplication.Init ()` . 이는 Xamarin.ios에서 Cocoa Api를 먼저 호출 해야 하는 한 가지 이유입니다 `NSApplication.Init` .
 
-등록자의 작업은`NSApplicationDelegate`,`NSView`,`NSWindow`,`NSObject`등의 클래스에서 파생 되는 앱 C# 클래스의 존재를 목표 C 런타임에 알려 주는 것입니다. 이렇게 하려면 앱에서 모든 형식을 검색 하 여 등록 해야 하는 항목 및 보고할 각 형식의 요소를 확인 해야 합니다.
+등록자의 작업은,, 및과 같은 클래스에서 파생 되는 앱의 c # 클래스의 존재를 목표 c 런타임에 알려 주는 것입니다 `NSApplicationDelegate` `NSView` `NSWindow` `NSObject` . 이렇게 하려면 앱에서 모든 형식을 검색 하 여 등록 해야 하는 항목 및 보고할 각 형식의 요소를 확인 해야 합니다.
 
 이 검색은 리플렉션을 사용 하 여 응용 프로그램을 시작할 때 **동적**으로 수행 하거나 빌드 시간 단계로 **정적**으로 수행할 수 있습니다. 등록 유형을 선택 하는 경우 개발자는 다음 사항을 알고 있어야 합니다.
 
 - 정적 등록은 시작 시간을 크게 줄일 수 있지만 빌드 시간을 상당히 느리게 할 수 있습니다 (일반적으로 이중 디버그 빌드 시간 이상). 이는 **릴리스** 구성 빌드에 대 한 기본값입니다.
 - 동적 등록은 응용 프로그램이 시작 되 고 코드 생성을 건너뛸 때까지이 작업을 지연 하지만, 이러한 추가 작업은 응용 프로그램 시작 시 눈에 띄는 일시 중지 (2 초 이상)를 만들 수 있습니다. 이는 기본적으로 동적 등록으로 설정 되 고 리플렉션의 속도가 느린 디버그 구성 빌드에서 특히 그렇습니다.
 
-Xamarin.ios 8.13에 처음 도입 된 부분 정적 등록은 개발자에 게 두 옵션 중에서 가장 적합 한 기능을 제공 합니다. `Xamarin.Mac.dll`의 모든 요소에 대 한 등록 정보를 미리 계산 하 여이 정보를 정적 라이브러리의 Xamarin.ios로 전달 하면 (빌드 시에만 연결 해야 함), Microsoft는 동적 등록자의 리플렉션 시간을 대부분 제거 했습니다. 빌드 시간에 영향을 주지 않습니다.
+Xamarin.ios 8.13에 처음 도입 된 부분 정적 등록은 개발자에 게 두 옵션 중에서 가장 적합 한 기능을 제공 합니다. 의 모든 요소에 대 한 등록 정보를 미리 계산 하 `Xamarin.Mac.dll` 고, 정적 라이브러리의 xamarin.ios로이 정보를 전달 하면 (빌드 시에만 연결 해야 함), Microsoft는 빌드 시간에 영향을 주지 않는 동안 동적 등록 기관의 리플렉션 시간을 대부분 제거 했습니다.
 
 ### <a name="enabling-the-partial-static-registrar"></a>부분 정적 등록자 사용
 
-부분 정적 등록자는 **솔루션 탐색기**에서 **프로젝트 이름을** 두 번 클릭 하 고 **Mac 빌드** 로 이동한 다음 **추가 mmp arguments:** 필드에 `--registrar:static` 추가 하 여 xamarin.ios에서 사용 하도록 설정 됩니다. 예를 들면,
+부분 정적 등록자는 **솔루션 탐색기**에서 **프로젝트 이름을** 두 번 클릭 하 고 **Mac 빌드** 로 이동한 다음 `--registrar:static` **추가 Mmp arguments:** 필드에 추가 하 여 xamarin.ios에서 사용 하도록 설정 됩니다. 예를 들면 다음과 같습니다.
 
 ![추가 mmp 인수에 부분 정적 등록자 추가](how-it-works-images/psr01.png "추가 mmp 인수에 부분 정적 등록자 추가")
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 다음은 내부적으로 작업을 수행 하는 방법에 대 한 자세한 설명입니다.
 
 - [목표-C 선택기](~/ios/internals/objective-c-selectors.md)
-- [Registrar](~/ios/internals/registrar.md)
+- [등록자](~/ios/internals/registrar.md)
 - [IOS 및 OS X 용 Xamarin Unified API](~/cross-platform/macios/unified/index.md)
 - [Theading 기본 사항](~/ios/app-fundamentals/threading.md)
 - [대리자, 프로토콜 및 이벤트](~/ios/app-fundamentals/delegates-protocols-and-events.md)
-- [`newrefcount`정보](~/ios/internals/newrefcount.md)
+- [에 대 한`newrefcount`](~/ios/internals/newrefcount.md)

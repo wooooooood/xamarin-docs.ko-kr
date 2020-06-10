@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 35a8d3aeb00ac73f944712cb31f913f98bd3b6e8
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 5aa3baa6aba76483866911d905687be6c3a5ae4e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306058"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569831"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Xamarin Designer for iOS 자동 레이아웃
 
@@ -30,7 +30,7 @@ Xamarin Designer for iOS은 Mac용 Visual Studio Visual Studio 2017 이상에서
 
 제약 조건은 화면에 있는 두 요소 간의 관계를 수학적으로 표현한 것입니다. UI 요소의 위치를 수학적 관계로 표현 하면 UI 요소의 위치를 하드 코딩 하는 것과 관련 된 몇 가지 문제를 해결 합니다. 예를 들어 화면 아래쪽의 세로 모드에서 단추 20px를 배치 하는 경우 단추의 위치는 가로 모드에서 화면을 벗어날 것입니다. 이를 방지 하기 위해 20px 단추의 아래쪽 가장자리를 뷰의 아래쪽 가장자리에 배치 하는 제약 조건을 설정할 수 있습니다. 그러면 단추 가장자리의 위치가 button으로 계산 됩니다 *. bottom = 20px*.이 단추를 클릭 하면 뷰 맨 아래에서 세로 및 가로 모드로 단추 20px 배치 됩니다. 수학적 관계를 기준으로 배치를 계산 하는 기능은 UI 디자인에서 제약 조건을 유용 하 게 만드는 것입니다.
 
-제약 조건을 설정할 때 제약 조건이 적용 되는 개체와 제약 조건이 적용 되는 속성 또는 *특성*을 인수로 사용 하는 `NSLayoutConstraint` 개체를 만듭니다. IOS 디자이너에서 특성에는 요소의 *왼쪽*, *오른쪽*, *위쪽*및 *아래쪽* 과 같은 가장자리가 포함 됩니다. 여기에는 *높이* 및 *너비*와 같은 크기 특성, 중심점 위치 ( *system.windows.media.rotatetransform.centerx* 및 *system.windows.media.rotatetransform.centery*)도 포함 됩니다. 예를 들어 두 단추의 왼쪽 경계 위치에 제약 조건을 추가 하는 경우 디자이너는 내부적으로 다음 코드를 생성 합니다.
+제약 조건을 설정할 때 제약 조건이 적용 되는 개체 `NSLayoutConstraint` 와 제약 조건이 적용 되는 속성 또는 *특성*을 인수로 사용 하는 개체를 만듭니다. IOS 디자이너에서 특성에는 요소의 *왼쪽*, *오른쪽*, *위쪽*및 *아래쪽* 과 같은 가장자리가 포함 됩니다. 여기에는 *높이* 및 *너비*와 같은 크기 특성, 중심점 위치 ( *system.windows.media.rotatetransform.centerx* 및 *system.windows.media.rotatetransform.centery*)도 포함 됩니다. 예를 들어 두 단추의 왼쪽 경계 위치에 제약 조건을 추가 하는 경우 디자이너는 내부적으로 다음 코드를 생성 합니다.
 
 ```csharp
 View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, NSLayoutRelation.Equal, Button2, NSLayoutAttribute.Left, 1, 10));
@@ -67,7 +67,7 @@ View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, 
 
 제약 조건 편집기 팝업을 사용 하면 선택 뷰에 대해 여러 제약 조건을 한 번에 추가 하 고 업데이트할 수 있습니다. 여러 개의 간격, 가로 세로 비율 및 맞춤 제약 조건을 만들 수 있습니다. 예를 들어 뷰를 두 보기의 왼쪽 가장자리에 맞춥니다.
 
-선택한 보기에서 제약 조건을 편집 하려면 줄임표를 클릭 하 여 팝 오버: ![제약 조건 편집 팝 오버를 표시](designer-auto-layout-images/constraints-popup.png)
+선택한 뷰에서 제약 조건을 편집 하려면 줄임표를 클릭 하 여 팝 오버: ![ constraints 편집 팝 오버를 표시 합니다.](designer-auto-layout-images/constraints-popup.png)
 
 제약 조건을 열 팝 오버 뷰에서 미리 설정 된 제약 조건을 표시 합니다. 모든 간격 제약 조건을 설정 하려면 오른쪽 위 모서리의 combobox에서 모든 **면** 을 선택 하 고 **모두 지우기** 를 선택 하 여 제거 합니다.
 
@@ -170,7 +170,7 @@ IOS Designer 도구는 디자인 화면에서 요소를 조작 하기 위한 두
 
 그러면 컨트롤에 정의 된 위치와 일치 하도록 요소 프레임이 자동으로 조정 됩니다.
 
-<a name="modifying-in-code" />
+<a name="modifying-in-code"></a>
 
 ## <a name="modifying-constraints-in-code"></a>코드의 제약 조건 수정
 
@@ -201,16 +201,16 @@ IOS 디자이너에서 제약 조건에 대해 다음과 같은 설정이 제공
 
 제약 조건 변경에 대 한 응답으로 연결 된 보기를 즉시 업데이트 하는 대신 자동 레이아웃 엔진은 가까운 장래에 _지연 된 레이아웃 패스_ 를 예약 합니다. 이 지연 된 단계 중에는 지정 된 뷰의 제약 조건이 업데이트 되는 것 뿐만 아니라 계층의 모든 뷰에 대 한 제약 조건이 다시 계산 되어 새 레이아웃에 맞게 조정 됩니다.
 
-어느 시점에서 든 부모 뷰의 `SetNeedsLayout` 또는 `SetNeedsUpdateConstraints` 메서드를 호출 하 여 사용자 고유의 지연 된 레이아웃 패스를 예약할 수 있습니다.
+언제 든 지 `SetNeedsLayout` 부모 뷰의 또는 메서드를 호출 하 여 사용자 고유의 지연 된 레이아웃 패스를 예약할 수 있습니다 `SetNeedsUpdateConstraints` .
 
 지연 된 레이아웃 패스는 뷰 계층 구조를 통과 하는 두 개의 고유한 패스로 구성 됩니다.
 
-- **업데이트 통과** -이 패스에서 자동 레이아웃 엔진은 뷰 계층 구조를 트래버스하 고 모든 뷰 컨트롤러 및 모든 뷰의 `UpdateConstraints` 메서드에서 `UpdateViewConstraints` 메서드를 호출 합니다.
-- **레이아웃이 다시 전달** 됩니다. 자동 레이아웃 엔진은 뷰 계층 구조를 순회 하지만 이번에는 모든 뷰 컨트롤러에서 `ViewWillLayoutSubviews` 메서드를 호출 하 고 모든 뷰의 `LayoutSubviews` 메서드를 호출 합니다. `LayoutSubviews` 메서드는 자동 레이아웃 엔진에서 계산 되는 사각형을 사용 하 여 각 하위 뷰의 `Frame` 속성을 업데이트 합니다.
+- **업데이트 통과** -이 패스에서 자동 레이아웃 엔진은 뷰 계층 구조를 트래버스하 고 모든 뷰 `UpdateViewConstraints` 컨트롤러 및 모든 뷰의 메서드에서 메서드를 호출 합니다 `UpdateConstraints` .
+- **레이아웃이 다시 전달** 됩니다. 자동 레이아웃 엔진은 뷰 계층 구조를 순회 하지만 이번에는 모든 뷰 `ViewWillLayoutSubviews` 컨트롤러에서 메서드를 호출 하 고 `LayoutSubviews` 모든 뷰의 메서드를 호출 합니다. `LayoutSubviews`메서드는 `Frame` 자동 레이아웃 엔진에서 계산 되는 사각형을 사용 하 여 각 하위 뷰의 속성을 업데이트 합니다.
 
 ### <a name="animating-constraint-changes"></a>제약 조건 변경 내용 적용
 
-제약 조건 속성을 수정 하는 것 외에도 핵심 애니메이션을 사용 하 여 뷰의 제약 조건에 대 한 변경 내용을 적용할 수 있습니다. 다음은 그 예입니다.
+제약 조건 속성을 수정 하는 것 외에도 핵심 애니메이션을 사용 하 여 뷰의 제약 조건에 대 한 변경 내용을 적용할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 UIView.BeginAnimations("OpenInfo");
@@ -222,7 +222,7 @@ View.LayoutIfNeeded();
 UIView.CommitAnimations();
 ```
 
-여기서 키는 애니메이션 블록 내에서 부모 뷰의 `LayoutIfNeeded` 메서드를 호출 하는 것입니다. 이렇게 하면 애니메이션 된 위치나 크기 변화에 대 한 각 "프레임"을 그리도록 뷰에 알려 줍니다. 이 줄이 없으면 뷰가 애니메이션 효과 없이 최종 버전에만 맞춰집니다.
+여기서 키는 `LayoutIfNeeded` 애니메이션 블록 내에서 부모 뷰의 메서드를 호출 하는 것입니다. 이렇게 하면 애니메이션 된 위치나 크기 변화에 대 한 각 "프레임"을 그리도록 뷰에 알려 줍니다. 이 줄이 없으면 뷰가 애니메이션 효과 없이 최종 버전에만 맞춰집니다.
 
 ## <a name="summary"></a>요약
 

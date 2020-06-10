@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 531e04c3dbc9bd695087204ceae88d2f0f5df012
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: de4b6e8b95eed33e7fb38baf51a0da73cef313c0
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488948"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574134"
 ---
 # <a name="introduction-to-ios-9"></a>iOS 9 소개
 
@@ -42,7 +42,7 @@ ATS는 iOS 9 및 OS X 10.11 (El Capitan) 용으로 빌드된 앱에서 기본적
 
 ATS에 대해 자세히 알아보려면 [앱 전송 보안](~/ios/app-fundamentals/ats.md) 가이드를 참조 하세요.
 
-<a name="multitasking" />
+<a name="multitasking"></a>
 
 ## <a name="multitasking-for-ipad"></a>iPad용 멀티태스킹
 
@@ -109,7 +109,7 @@ IOS 9에서 Apple은 더 쉽게 설정 하 고, 지원 되는 액세서리 유�
 
 ## <a name="handoff-framework-changes"></a>핸드 프레임 워크 변경
 
-사용자가 장치 (iOS 또는 Mac) 중 하나에서 활동을 시작 하 고 사용자의 iClou로 식별 된 다른 장치에서 동일한 활동을 계속 진행 하는 방식으로 iOS 8 및 OS X Yosemite (10.10)에서 Apple에 의해 전달 (연속성이 라고도 함)이 도입 되었습니다. d 계정).
+사용자가 장치 (iOS 또는 Mac) 중 하나에서 작업을 시작 하 고 해당 장치 (사용자의 iCloud 계정으로 식별 됨)에서 동일한 작업을 계속 진행 하는 방법으로, 연속성 (연속성이 라고도 함)은 iOS 8 및 OS X Yosemite (10.10)의 Apple에서 도입 되었습니다.
 
 핸드 오프는 새로운 향상 된 검색 기능을 지원 하기 위해 iOS 9에서 확장 되었습니다. 자세한 내용은 [향상 된 검색 기능](~/ios/platform/search/index.md) 설명서를 참조 하세요. 핸드 오프를 사용 하는 방법에 대 한 자세한 내용은 전달 설명서 [소개](~/ios/platform/handoff.md) 를 참조 하세요.
 
@@ -137,9 +137,9 @@ IOS 9에서 Apple은 다음과 같이 Secure Enclave 및 기타 항목 보호 �
 
 - 지문 데이터베이스가 수정 될 때 키 집합 항목을 무효화 하는 새 Touch ID 제약 조건입니다.
 - Touch ID 또는 암호를 사용 하 여 Access Control 목록 항목을 만들 수 있도록 하는 새 제약 조건입니다.
-- `SecItem` 호출과 별개로 인증을 호출할 수 있도록 하는 새 인증 컨텍스트입니다.
+- 호출과 별도로 인증을 호출할 수 있도록 하는 새 인증 컨텍스트입니다 `SecItem` .
 - 앱에서 제공 하는 키 집합 항목 암호화에 대해 엔트로피 (응용 프로그램 암호 옵션 사용)를 Access Control 합니다.
-- 보안 enclave 내에서 키를 생성 하 고 사용할 수 있도록 지원 합니다 (`kSecAttrTokenIDSecureEnclave` 특성을 통해).
+- 특성을 통해 secure enclave 내에서 키를 생성 하 고 사용할 수 있도록 지원 `kSecAttrTokenIDSecureEnclave` 합니다.
 
 자세한 내용은 [xamarin.ios에서 TOUCH id 및 FACE id](~/ios/platform/touch-id-face-id.md)를 참조 하세요.
 
@@ -159,7 +159,7 @@ IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 �
 
 - AV 기반 프레임 워크
 - AVKit 프레임 워크
-- CloudKit Framework
+- CloudKit 프레임 워크
 - Foundation Framework
 - 핸드 오프 프레임 워크
 - HealthKit 프레임 워크
@@ -168,7 +168,7 @@ IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 �
 - MapKit 프레임 워크
 - PassKit 프레임 워크
 - Safari 서비스 프레임 워크
-- UIKit Framework
+- UIKit 프레임 워크
 
 자세한 내용은 [추가 iOS 9 프레임 워크 변경](~/ios/platform/introduction-to-ios9/additional-framework-changes.md) 설명서를 참조 하세요.
 
@@ -177,8 +177,8 @@ IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 �
 Apple은 iOS 9에서 다음 Api 및 함수를 사용 하지 않습니다.
 
 - 주소록 **& 주소록 ui** -이러한 Api는 연락처 및 연락처 UI 프레임 워크로 대체 되었습니다. 자세한 내용은 [연락처 및 연락처 UI](~/ios/platform/contacts.md) 설명서를 참조 하세요.
-- **CBCentralManager** -iOS 9에서 `CBCentralManager` 클래스의 `RetrievePeripherals` 및 `RetrieveConnectedPeripherals` 메서드가 제거 되었습니다. 이러한 메서드를 호출 하면 액세서리를 페어링 하거나 앱을 시작할 때 앱이 충돌 합니다.
-- **FetchAllChanges** -`CKFetchRecordChangesOperation` 클래스의 `FetchAllChanges` 사용 되었으며 iOS 9에서 제거 될 예정입니다.
+- **CBCentralManager** - `RetrievePeripherals` `RetrieveConnectedPeripherals` 클래스의 및 메서드는 `CBCentralManager` iOS 9에서 제거 되었습니다. 이러한 메서드를 호출 하면 액세서리를 페어링 하거나 앱을 시작할 때 앱이 충돌 합니다.
+- **FetchAllChanges** - `FetchAllChanges` 클래스의는 `CKFetchRecordChangesOperation` 사용 되었으며 iOS 9에서 제거 될 예정입니다.
 - **Media Player** -Media Player Framework는 iOS 9에서 더 이상 사용 되지 않습니다. 대신 AVKit 또는 AV 기반 Api를 사용 합니다.
 
 특정 API 결함의 전체 목록은 Apple의 [iOS 9.0 API 차이](https://developer.apple.com/library/prerelease/ios/releasenotes/General/iOS90APIDiffs/index.html#//apple_ref/doc/uid/TP40016222) 설명서를 참조 하세요.
@@ -191,9 +191,9 @@ Apple은 iOS 9에서 다음 Api 및 함수를 사용 하지 않습니다.
 - [CollectionView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/CollectionView)
 - [MetalPerformanceShadersHelloWorld](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-metalperformanceshadershelloworld)
 - [MusicMotion](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-musicmotion)
-- [PhotoProgress](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-photoprogress)
+- [사진 진행](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-photoprogress)
 - [SegueCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-seguecatalog)
-- [StackView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StackView)
+- [System.windows.forms.toolstrip.stackview](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StackView)
 - [StickyCorners](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StickyCorners)
 
 또한 이러한 샘플의 iOS 부분을 확인 하세요 (부록 Mac OS X 버전).
@@ -214,7 +214,7 @@ Apple은 iOS 9에서 다음 Api 및 함수를 사용 하지 않습니다.
 - [게임 향상](~/ios/platform/gaming/index.md)
 - [HomeKit 소개](~/ios/platform/homekit.md)
 - [핸드 오프 소개](~/ios/platform/handoff.md)
-- [추가 iOS 9 프레임워크 추가 변경 내용](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
+- [iOS 9 프레임워크 추가 변경 내용](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
 - [문제 해결](~/ios/platform/introduction-to-ios9/troubleshooting.md)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [IOS 9.0의 새로운 기능](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

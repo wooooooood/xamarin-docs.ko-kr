@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms장치 클래스
-description: 이 문서에서는 Xamarin.Forms 플랫폼 단위로 기능과 레이아웃을 세밀 하 게 제어 하기 위해 장치 클래스를 사용 하는 방법을 설명 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7ee7b2f1bb9d34b0c0e8bdc4ae606d98423c64a9
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138595"
+제목: " Xamarin.Forms 장치 클래스" 설명: "이 문서에서는 장치 클래스를 사용 하 여 플랫폼 별로 기능과 레이아웃을 세밀 하 게 제어 하는 방법을 설명 Xamarin.Forms 합니다."
+assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF: xamarin-forms author: davidbritch: dabritch:: 04/17/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-device-class"></a>Xamarin.Forms장치 클래스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
@@ -68,7 +54,7 @@ layout.Margin = new Thickness(5, top, 5, 0);
 > [!IMPORTANT]
 > `Platform`클래스에 잘못 된 특성 값을 제공 `On` 하면 오류가 발생 하지 않습니다. 대신, 플랫폼별 값을 적용 하지 않고 코드가 실행 됩니다.
 
-또는 `OnPlatform` 태그 확장을 XAML에서 사용 하 여 플랫폼 별로 UI 모양을 사용자 지정할 수 있습니다. 자세한 내용은 [Onplatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform)을 참조 하세요.
+또는 `OnPlatform` 태그 확장을 XAML에서 사용 하 여 플랫폼 별로 UI 모양을 사용자 지정할 수 있습니다. 자세한 내용은 [Onplatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension)을 참조 하세요.
 
 ## <a name="deviceidiom"></a>장치.
 
@@ -110,7 +96,7 @@ if (Device.Idiom == TargetIdiom.Phone) {
 
 [`OnIdiom`](xref:Xamarin.Forms.OnPlatform`1)클래스는 `x:TypeArguments` 대상 형식과 일치 하는 특성을 사용 하 여 인스턴스화해야 하는 제네릭 클래스입니다.
 
-또는 `OnIdiom` 태그 확장을 XAML에서 사용 하 여 응용 프로그램이 실행 되는 장치의 지정에 따라 UI 모양을 사용자 지정할 수 있습니다. 자세한 내용은 [Onidiom 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom)을 참조 하세요.
+또는 `OnIdiom` 태그 확장을 XAML에서 사용 하 여 응용 프로그램이 실행 되는 장치의 지정에 따라 UI 모양을 사용자 지정할 수 있습니다. 자세한 내용은 [Onidiom 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom-markup-extension)을 참조 하세요.
 
 ## <a name="deviceflowdirection"></a>장치. FlowDirection
 
@@ -228,7 +214,7 @@ IOS, Android 및 유니버설 Windows 플랫폼를 비롯 한 대부분의 운�
 
 `Device`클래스는 `static` 배경 스레드에서 사용자 인터페이스 요소와 상호 작용 하는 데 사용할 수 있는 다음 메서드를 포함 합니다.
 
-| 메서드 | 인수 | 반환 | 목적 |
+| 메서드 | 인수 | 반환 값 | 용도 |
 |---|---|---|---|
 | `BeginInvokeOnMainThread` | `Action` | `void` | 주 스레드에서를 호출 하 `Action` 고 완료 될 때까지 기다리지 않습니다. |
 | `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | 주 스레드에서 `Func<T>`를 호출하고 완료될 때까지 기다립니다. |

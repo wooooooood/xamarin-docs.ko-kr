@@ -7,20 +7,20 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 2b8fede37354fd8a899a14c0710bf46e5a82b86a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 007d835b71c16a51cf5f6aca3c9fe1edd5be0034
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026199"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572392"
 ---
 # <a name="storyboards-in-xamarinmac-quick-start"></a>Xamarin.ios의 storyboard – 빠른 시작
 
-Storyboard를 사용 하 여 Xamarin.ios 앱의 사용자 인터페이스를 정의 하는 방법에 대 한 간략 한 소개로, 새 Xamarin.ios 프로젝트를 시작 하겠습니다. **Mac** > **앱** > **Cocoa 앱**을 선택하고 **다음** 단추를 클릭합니다.
+Storyboard를 사용 하 여 Xamarin.ios 앱의 사용자 인터페이스를 정의 하는 방법에 대 한 간략 한 소개로, 새 Xamarin.ios 프로젝트를 시작 하겠습니다. **Mac**  >  **앱**  >  **cocoa 앱** 을 선택 하 고 **다음** 단추를 클릭 합니다.
 
 [![](quickstart-images/qs01.png "Adding a new Cocoa App")](quickstart-images/qs01.png#lightbox)
 
-`MacStoryboard`의 **앱 이름을** 사용 하 고 **다음** 단추를 클릭 합니다.
+**앱 이름을** 사용 `MacStoryboard` 하 고 **다음** 단추를 클릭 합니다.
 
 [![](quickstart-images/qs02.png "Setting the App Name")](quickstart-images/qs02.png#lightbox)
 
@@ -28,7 +28,7 @@ Storyboard를 사용 하 여 Xamarin.ios 앱의 사용자 인터페이스를 정
 
 [![](quickstart-images/qs03.png "The project and solution names")](quickstart-images/qs03.png#lightbox)
 
-**솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 Xcode의 Interface Builder에서 편집할 수 있도록 엽니다.
+**솔루션 탐색기**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 Xcode의 Interface Builder에서 편집할 수 있도록 엽니다.
 
 [![](quickstart-images/qs04.png "Editing the storyboard in Xcode")](quickstart-images/qs04.png#lightbox)
 
@@ -38,7 +38,7 @@ Storyboard를 사용 하 여 Xamarin.ios 앱의 사용자 인터페이스를 정
 
 [![](quickstart-images/qs05.png "Removing the default view controller")](quickstart-images/qs05.png#lightbox)
 
-그런 다음 **필터** 영역에 `split`를 입력 하 고, 수직 분할 뷰 컨트롤러를 선택 하 여 _Design Surface_으로 끌어 옵니다.
+그런 다음 `split` **필터** 영역에를 입력 하 고, 수직 분할 뷰 컨트롤러를 선택 하 여 _Design Surface_로 끕니다.
 
 [![](quickstart-images/qs06.png "Searching for the split view controller")](quickstart-images/qs06.png#lightbox)
 
@@ -60,7 +60,7 @@ Mac용 Visual Studio로 돌아가서 프로젝트를 실행 하는 경우 창 �
 
 [![](quickstart-images/qs10.png "An example of the app running")](quickstart-images/qs10.png#lightbox)
 
-분할 보기의 오른쪽을 Inspector 영역으로 사용 하기 때문에 크기가 작고 축소 되도록 하는 것이 좋습니다. Xcode로 돌아가서 Design Surface에서 선택한 다음 **크기 검사기**를 클릭 하 여 오른쪽에 대 한 보기를 편집 합니다. 여기에서 `250`**너비** 를 입력 합니다.
+분할 보기의 오른쪽을 Inspector 영역으로 사용 하기 때문에 크기가 작고 축소 되도록 하는 것이 좋습니다. Xcode로 돌아가서 Design Surface에서 선택한 다음 **크기 검사기**를 클릭 하 여 오른쪽에 대 한 보기를 편집 합니다. 여기에서 **너비** 를 입력 합니다 `250` .
 
 [![](quickstart-images/qs11.png "Setting the width")](quickstart-images/qs11.png#lightbox)
 
@@ -72,13 +72,13 @@ Mac용 Visual Studio로 돌아가서 지금 프로젝트를 실행 하는 경우
 
 [![](quickstart-images/qs13.png "An example of the app running")](quickstart-images/qs13.png#lightbox)
 
-<a name="Defining-a-Presentation-Segue" />
+<a name="Defining-a-Presentation-Segue"></a>
 
 ## <a name="defining-a-presentation-segue"></a>프레젠테이션 Segue 정의
 
 분할 뷰의 오른쪽을 레이아웃 하 여 선택한 텍스트의 속성에 대 한 검사기 역할을 수행 합니다. Inspector의 UI를 레이아웃 하기 위해 일부 컨트롤을 아래쪽 보기로 끌어 옵니다. 마지막 컨트롤의 경우 사용자가 기본 설정 문자 스타일 4 개를 선택할 수 있는 팝 오버를 표시 하려고 합니다.
 
-검사기에 단추를 추가 하 고 Design Surface에 뷰 컨트롤러를 추가 합니다. 보기 컨트롤러의 크기를 팝 오버 원하는 크기로 조정 하 고 4 개의 단추를 추가 합니다. 다음으로, 검사기 보기에서 단추를 클릭 하 고 팝 오버를 나타내는 뷰 컨트롤러로 끕니다.
+검사기에 단추를 추가 하 고 Design Surface에 뷰 컨트롤러를 추가 합니다. 보기 컨트롤러의 크기를 팝 오버 원하는 크기로 조정 하 고 4 개의 단추를 추가 합니다. 다음으로, **Control** 검사기 보기에서 단추를 클릭 하 고 팝 오버를 나타내는 뷰 컨트롤러로 끕니다.
 
 [![](quickstart-images/qs14.png "Dragging to create a new segue")](quickstart-images/qs14.png#lightbox)
 
@@ -94,7 +94,7 @@ Mac용 Visual Studio으로 돌아가면 앱을 실행 하 고 검사기에서 **
 
 [![](quickstart-images/qs17.png "An example of the segue running")](quickstart-images/qs17.png#lightbox)
 
-<a name="Creating-App-Preferences" />
+<a name="Creating-App-Preferences"></a>
 
 ## <a name="creating-app-preferences"></a>앱 기본 설정 만들기
 
@@ -120,7 +120,7 @@ Mac용 Visual Studio으로 돌아가면 앱을 실행 하 고 검사기에서 **
 
 [![](quickstart-images/qs22.png "An example of the segue running")](quickstart-images/qs22.png#lightbox)
 
-표준 macOS 앱 기본 설정 대화 상자 창이 표시 되지 않는 것을 알 수 있습니다. 이 문제를 해결 하려면 **솔루션 탐색기** 에서 xamarin.ios 앱의 `Resources` 폴더에 두 개의 이미지 파일을 포함 하 고 Xcode의 Interface Builder으로 돌아옵니다.
+표준 macOS 앱 기본 설정 대화 상자 창이 표시 되지 않는 것을 알 수 있습니다. 이 문제를 해결 하려면 솔루션 탐색기의 Xamarin.ios 앱 폴더에 두 개의 이미지 파일을 포함 하 `Resources` 고 Xcode의 Interface Builder으로 돌아옵니다. **Solution Explorer**
 
 탭 뷰 컨트롤러를 선택 하 고 **스타일** 을 **도구 모음**으로 전환 합니다. 
 

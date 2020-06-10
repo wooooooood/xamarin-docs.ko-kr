@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 943148a642a1dec7e84f74ae96983c21f30319ab
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139271"
+제목: "구성 관리" 설명: "이 장은 eShopOnContainers 모바일 앱이 구성 관리를 구현 하 여 앱 설정 및 사용자 설정을 제공 하는 방법을 설명 합니다."
+assetid: 50d6e780-e768-47f8-9361-3af11e56b87b 밀리초. 기술: xamarin-forms author: davidbritch ms. author: dabritch. date: 08/07/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="configuration-management"></a>구성 관리
 
 설정을 사용 하면 응용 프로그램의 동작을 구성 하는 데이터를 분리 하 여 앱을 다시 빌드하지 않고도 동작을 변경할 수 있습니다. 설정에는 앱 설정 및 사용자 설정의 두 가지 유형이 있습니다.
@@ -25,7 +11,7 @@ ms.locfileid: "84139271"
 
 사용자 설정은 앱의 동작에 영향을 주는 앱의 사용자 지정 가능한 설정 이며 자주 다시 조정할 필요가 없습니다. 예를 들어 앱을 사용 하면 사용자가 데이터를 검색할 위치와 화면에 표시 하는 방법을 지정할 수 있습니다.
 
-Xamarin.Forms에는 설정 데이터를 저장 하는 데 사용할 수 있는 영구 사전이 포함 되어 있습니다. 이 사전은 속성을 사용 하 여 액세스할 수 [`Application.Current.Properties`](xref:Xamarin.Forms.Application.Properties) 있으며, 응용 프로그램에 배치 된 모든 데이터는 앱이 절전 모드로 전환 될 때 저장 되 고 앱이 다시 시작 되거나 다시 시작 될 때 복원 됩니다. 또한 클래스에는 [`Application`](xref:Xamarin.Forms.Application) [`SavePropertiesAsync`](xref:Xamarin.Forms.Application.SavePropertiesAsync) 필요할 때 앱에서 해당 설정을 저장할 수 있도록 하는 메서드도 있습니다. 이 사전에 대 한 자세한 내용은 [속성 사전](~/xamarin-forms/app-fundamentals/application-class.md#Properties_Dictionary)을 참조 하세요.
+Xamarin.Forms에는 설정 데이터를 저장 하는 데 사용할 수 있는 영구 사전이 포함 되어 있습니다. 이 사전은 속성을 사용 하 여 액세스할 수 [`Application.Current.Properties`](xref:Xamarin.Forms.Application.Properties) 있으며, 응용 프로그램에 배치 된 모든 데이터는 앱이 절전 모드로 전환 될 때 저장 되 고 앱이 다시 시작 되거나 다시 시작 될 때 복원 됩니다. 또한 클래스에는 [`Application`](xref:Xamarin.Forms.Application) [`SavePropertiesAsync`](xref:Xamarin.Forms.Application.SavePropertiesAsync) 필요할 때 앱에서 해당 설정을 저장할 수 있도록 하는 메서드도 있습니다. 이 사전에 대 한 자세한 내용은 [속성 사전](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary)을 참조 하세요.
 
 영구적 사전을 사용 하 여 데이터를 저장 하는 경우 Xamarin.Forms 에는 데이터를 쉽게 바인딩할 수 없다는 단점이 있습니다. 따라서 eShopOnContainers 모바일 앱은 [NuGet](https://www.nuget.org/packages/Xam.Plugins.Settings/)에서 사용할 수 있는 xam. s a s. 설정 라이브러리를 사용 합니다. 이 라이브러리는 각 플랫폼에서 제공 하는 네이티브 설정 관리를 사용 하는 동시에 앱 및 사용자 설정을 유지 하 고 검색 하기 위한 일관 되 고 형식이 안전한 플랫폼 간 방법을 제공 합니다. 또한 데이터 바인딩을 사용 하 여 라이브러리에서 제공 하는 설정 데이터에 액세스 하는 것도 간단 합니다.
 
@@ -128,7 +114,7 @@ EShopOnContainers 모바일 앱에서은 `SettingsView` 두 가지 사용자 설
 
 **그림 7-1**: eShopOnContainers 모바일 앱에서 노출 하는 사용자 설정
 
-데이터 바인딩을 사용 하 여 클래스에 의해 노출 되는 설정을 검색 하 고 설정할 수 있습니다 `Settings` . 이는 클래스의 속성에 액세스 하 `Settings` 고 설정 값이 변경 된 경우 속성 변경 알림을 발생 시키는 모델 속성을 보기 위해 뷰 바인딩의 컨트롤에 의해 이루어집니다. EShopOnContainers 모바일 앱에서 모델을 생성 하 고 보기에 연결 하는 방법에 대 한 자세한 내용은 [뷰 모델 로케이터를 사용 하 여 자동으로 뷰 모델 만들기](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator)를 참조 하세요.
+데이터 바인딩을 사용 하 여 클래스에 의해 노출 되는 설정을 검색 하 고 설정할 수 있습니다 `Settings` . 이는 클래스의 속성에 액세스 하 `Settings` 고 설정 값이 변경 된 경우 속성 변경 알림을 발생 시키는 모델 속성을 보기 위해 뷰 바인딩의 컨트롤에 의해 이루어집니다. EShopOnContainers 모바일 앱에서 모델을 생성 하 고 보기에 연결 하는 방법에 대 한 자세한 내용은 [뷰 모델 로케이터를 사용 하 여 자동으로 뷰 모델 만들기](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically-creating-a-view-model-with-a-view-model-locator)를 참조 하세요.
 
 다음 코드 예제에서는 [`Entry`](xref:Xamarin.Forms.Entry) `SettingsView` 사용자가 컨테이너 화 된 마이크로 서비스에 대 한 기본 끝점 URL을 입력할 수 있도록 하는의 컨트롤을 보여 줍니다.
 
@@ -178,7 +164,7 @@ public override Task InitializeAsync(object navigationData)
 }
 ```
 
-메서드는 속성을 `Endpoint` 클래스의 속성 값으로 설정 합니다 `UrlBase` `Settings` . 속성에 액세스 하는 경우 Xam. s a s. `UrlBase` 설정 라이브러리에서 플랫폼별 저장소의 설정 값을 검색 합니다. 메서드를 호출 하는 방법에 대 한 자세한 내용은 `InitializeAsync` [탐색 하는 동안 매개 변수 전달](~/xamarin-forms/enterprise-application-patterns/navigation.md#passing_parameters_during_navigation)을 참조 하세요.
+메서드는 속성을 `Endpoint` 클래스의 속성 값으로 설정 합니다 `UrlBase` `Settings` . 속성에 액세스 하는 경우 Xam. s a s. `UrlBase` 설정 라이브러리에서 플랫폼별 저장소의 설정 값을 검색 합니다. 메서드를 호출 하는 방법에 대 한 자세한 내용은 `InitializeAsync` [탐색 하는 동안 매개 변수 전달](~/xamarin-forms/enterprise-application-patterns/navigation.md#passing-parameters-during-navigation)을 참조 하세요.
 
 이 메커니즘을 사용 하면 사용자가 SettingsView로 이동할 때마다 사용자 설정이 플랫폼별 저장소에서 검색 되 고 데이터 바인딩을 통해 표시 됩니다. 그런 다음 사용자가 설정 값을 변경 하는 경우 데이터 바인딩은 플랫폼별 저장소에 즉시 다시 저장 되도록 합니다.
 

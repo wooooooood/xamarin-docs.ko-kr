@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 788df5f27066d0d8d1f672d82e94a06ddf5e0916
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139817"
+제목: "2 부. 필수 XAML 구문 "설명:"이 문서에서는 속성 요소와 연결 된 속성의 필수 XAML 구문 기능을 설명 합니다.
+assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A. 기술: xamarin 양식 작성자: davidbritch: dabritch: ms. 날짜: 10/25/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="part-2-essential-xaml-syntax"></a>2부. 필수 XAML 구문
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
@@ -526,7 +512,7 @@ Android 및 UWP는의 기본값으로 설정 되므로 `Padding` 해당 태그�
 ```
 
 > [!NOTE]
-> `OnPlatform`태그 확장을 XAML에서 사용 하 여 플랫폼 별로 UI 모양을 사용자 지정할 수도 있습니다. 이 클래스는 및 클래스와 같은 기능을 제공 `OnPlatform` `On` 하지만 좀 더 간결 하 게 표현 합니다. 자세한 내용은 [Onplatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform)을 참조 하세요.
+> `OnPlatform`태그 확장을 XAML에서 사용 하 여 플랫폼 별로 UI 모양을 사용자 지정할 수도 있습니다. 이 클래스는 및 클래스와 같은 기능을 제공 `OnPlatform` `On` 하지만 좀 더 간결 하 게 표현 합니다. 자세한 내용은 [Onplatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension)을 참조 하세요.
 
 ## <a name="summary"></a>요약
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: a3d0962eb8253ca72b6afce77036e02a7aa59b94
-ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
+ms.openlocfilehash: dd453ab5397e409cc9a7ccef9b4b845d47f32a8b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75607895"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573731"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Apple TV App Store에 게시
 
@@ -21,13 +21,13 @@ Apple은 모든 Apple TV 장치에 응용 프로그램을 배포 하기 위해 a
 Apple TV 앱 스토어에 응용 프로그램을 제출 하는 프로세스는 다음을 포함 합니다.
 
 1. *앱 ID* 만들고 *자격*을 선택합니다.
-2. *배포 프로비전 프로필*을 만듭니다.
+2. 배포 프로 *비전 프로필* 을 만드는 중입니다.
 3. 이 프로필을 사용 하 여 앱을 빌드합니다.
 4. *ITunes Connect*를 통해 앱을 제출 합니다.
 
 이 문서에서는 Apple TV 앱 스토어 배포용 앱을 프로 비전, 빌드 및 제출 하는 데 필요한 모든 단계를 다룹니다.
 
-<a name="Before_you_Submit" />
+<a name="Before_you_Submit"></a>
 
 ## <a name="before-you-submit-an-application"></a>애플리케이션을 제출하기 전에
 
@@ -41,7 +41,7 @@ Apple TV 앱 스토어에 게시 하기 위해 앱을 제출한 후 apple에서 
 
 Apple은 Apple TV 앱 스토어 제출 팁의 목록도 유지 관리 합니다. 이러한 목록은 [앱 스토어에서 배포](https://developer.apple.com/appstore/resources/submission/tips.html)에서 참조할 수 있습니다.
 
-<a name="Configuring_your_Application_in_iTunes_Connect" />
+<a name="Configuring_your_Application_in_iTunes_Connect"></a>
 
 ## <a name="configuring-your-application-in-itunes-connect"></a>iTunes Connect에서 애플리케이션 구성
 
@@ -55,19 +55,19 @@ Apple은 Apple TV 앱 스토어 제출 팁의 목록도 유지 관리 합니다.
 4. 지원 되는 Apple TV 장치에서 작동 중인 응용 프로그램의 **앱 스토어 아이콘** (큼 아이콘) 및 스크린샷을 제공 합니다. 자세한 내용은 [아이콘 및 이미지 작업](~/ios/tvos/app-fundamentals/icons-images.md) 가이드를 참조 하세요.
 5. 최종 사용자에 게 기능 및 혜택을 포함 하 여 앱에 대 한 명확 하 고 간결한 **설명을** 제공 합니다.
 6. 사용자가 Apple TV 앱 스토어에서 앱을 찾는 데 도움이 되는 **범주**, **하위 범주**및 **키워드** 를 제공 합니다.
-7. Apple에서 요구하는 웹 사이트에 대한 **연락처** 및 **지원** URL을 제공합니다.
+7. Apple에서 요구 하는 웹 사이트에 대 한 **연락처** 및 **지원** url을 제공 합니다.
 8. Apple TV 앱 스토어에서 자녀 보호에 사용 되는 응용 프로그램의 **등급**을 설정 합니다.
-9. **Game Center** 및 **인앱 구매**와 같은 선택적인 앱 스토어 기술을 구성합니다.
+9. **Game Center** 및 **앱 내 구매**와 같은 선택적인 앱 스토어 기술을 구성 합니다.
 
 자세한 내용은 [ITunes Connect에서 TvOS 앱 구성](~/ios/tvos/deploy-test/app-distribution/itunes-connect.md) 설명서를 참조 하세요.
 
-<a name="Preparing_for_App_Store_Distribution" />
+<a name="Preparing_for_App_Store_Distribution"></a>
 
 ## <a name="preparing-for-app-store-distribution"></a>앱 스토어 배포 준비
 
 Apple TV 앱 스토어에 앱을 게시 하려면 먼저 배포를 위해 빌드해야 합니다. 여기에는 여러 단계가 포함 됩니다. 다음 섹션에서는 게시를 위해 tvOS 앱을 준비 하 고 검토 및 릴리스할 수 있도록 Apple TV 앱 스토어에 제출할 수 있도록 준비 하는 데 필요한 모든 것을 설명 합니다.
 
-<a name="Provisioning_for_Application_Services" />
+<a name="Provisioning_for_Application_Services"></a>
 
 ### <a name="provisioning-for-application-services"></a>애플리케이션 서비스 프로비전
 
@@ -75,12 +75,12 @@ Apple은 고유 ID를 만들 때 tvOS 앱에 대해 활성화할 수 있는 특�
 
 앱 ID를 만들고 필요에 따라 자격을 선택하려면 Apple의 웹 기반 iOS 프로비전 포털을 사용하여 다음 단계를 수행합니다.
 
-1. **프로 비전** > **개발**을 선택 합니다.
-2. **+** 단추를 클릭하고 새 애플리케이션에 대한 **이름** 및 **번들 ID**를 제공합니다.
+1. **프로 비전**  >  **개발**을 선택 합니다.
+2. 단추를 클릭 **+** 하 고 새 응용 프로그램의 **이름** 및 **번들 ID** 를 제공 합니다.
 3. 화면 아래쪽으로 스크롤하고 tvOS 앱에 필요한 모든 **App Services** 를 선택 합니다.
 4. **계속** 단추를 클릭하고 화면의 지시에 따라 새 앱 ID를 만듭니다.
 
-앱 ID를 정의할 때 필요한 애플리케이션 서비스를 선택 하 고 구성 하는 것 외에도 `Info.plist` 및 `Entitlements.plist` 파일을 모두 편집 하 여 tvOS 프로젝트에서 앱 ID 및 자격을 구성 해야 합니다.
+앱 ID를 정의할 때 필요한 애플리케이션 서비스를 선택 하 고 구성 하는 것 외에도, 및 파일을 모두 편집 하 여 tvOS 프로젝트에서 앱 ID 및 자격을 구성 해야 합니다 `Info.plist` `Entitlements.plist` .
 
 Mac용 Visual Studio에서 다음을 수행 합니다.
 
@@ -93,15 +93,15 @@ Mac용 Visual Studio에서 다음을 수행 합니다.
 
 자세한 지침은 [애플리케이션 서비스 프로비전](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services) 설명서를 참조하세요. 이 문서를 iOS 용으로 작성 하는 동안에는 동일한 단계를 사용 하 여 tvOS 앱을 프로 비전 합니다.
 
-<a name="Setting_the_Apps_Icons_and_Launch_Screens" />
+<a name="Setting_the_Apps_Icons_and_Launch_Screens"></a>
 
 ### <a name="setting-the-apps-icons-launch-image-and-top-shelf-image"></a>앱 아이콘 설정, 이미지 및 상위 선반 이미지 시작
 
-Apple TV 앱 스토어에 포함 하기 위해 Apple에서 tvOS 앱을 수락 하려면 해당 앱이 실행 되는 모든 Apple TV 장치에 대 한 적절 한 아이콘, 시작 및 인기 이미지가 필요 합니다. `Assets.car` 파일로 컴파일되고 iTunes Connect에 업로드 되기 전에 tvOS 앱의 번들에 포함 되는 필수 이미지 자산을 추가 해야 합니다.
+Apple TV 앱 스토어에 포함 하기 위해 Apple에서 tvOS 앱을 수락 하려면 해당 앱이 실행 되는 모든 Apple TV 장치에 대 한 적절 한 아이콘, 시작 및 인기 이미지가 필요 합니다. `Assets.car`ITunes Connect에 업로드 되기 전에 파일에 컴파일되고 tvOS 앱의 번들에 포함 되는 필수 이미지 자산을 추가 해야 합니다.
 
 자세한 지침은 [아이콘 및 이미지 작업](~/ios/tvos/app-fundamentals/icons-images.md) 설명서를 참조 하세요.
 
-<a name="Creating_and_Installing_a_Distribution_Profile" />
+<a name="Creating_and_Installing_a_Distribution_Profile"></a>
 
 ### <a name="creating-and-installing-a-distribution-profile"></a>배포 프로필 만들기 및 설치
 
@@ -109,8 +109,8 @@ tvOS는 *프로 비전 프로필* 을 사용 하 여 특정 응용 프로그램 
 
 프로비전에는 Apple의 웹 기반 iOS 프로비전 포털을 사용하는 다음 단계가 포함됩니다.
 
-1. **프로비전** > **배포**를 차례로 선택합니다.
-2. **+** 단추를 클릭 하 고 **Apple TV 앱 스토어로**만들 배포 프로필의 유형을 선택 합니다.
+1. **프로 비전**  >  **배포**를 선택 합니다.
+2. 단추를 클릭 **+** 하 고 **Apple TV 앱 스토어로**만들 배포 프로필의 유형을 선택 합니다.
 3. 드롭다운 목록에서 배포 프로필을 만들려는 **앱 ID**를 선택합니다.
 4. 응용 프로그램에 서명 하는 데 필요한 인증서를 선택 합니다.
 5. 새 **배포 프로필**에 대한 **이름**을 입력하고 해당 프로필을 생성합니다.
@@ -119,7 +119,7 @@ tvOS는 *프로 비전 프로필* 을 사용 하 여 특정 응용 프로그램 
 
 자세한 지침은 [배포 프로필 만들기](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#creatingprofile) 및 [Xamarin.iOS 프로젝트에서 배포 프로필 선택](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#selectprofile)을 참조하세요. 이 두 문서는 모두 iOS에만 적용 되지만 동일한 기술이 tvOS apps에 사용 됩니다.
 
-<a name="Setting_the_Build_Configuration_for_your_Application" />
+<a name="Setting_the_Build_Configuration_for_your_Application"></a>
 
 ### <a name="setting-the-build-configuration-for-your-application"></a>애플리케이션에 대한 빌드 구성 설정
 
@@ -128,14 +128,14 @@ tvOS는 *프로 비전 프로필* 을 사용 하 여 특정 응용 프로그램 
 다음을 수행합니다.
 
 1. **솔루션 탐색기** 및 선택 **옵션** 에서 **프로젝트 이름을** 마우스 오른쪽 단추로 클릭 하 여 편집용으로 엽니다.
-2. 특정 버전의 tvOS를 대상으로 하는 경우 **TvOS 빌드** > **iOS SDK 버전**에서 선택 합니다. TvOS 지원의 미리 보기 릴리스에서는이 값을 **기본값으로**설정 해 두십시오.
+2. 특정 버전의 tvOS를 대상으로 하는 경우 **tvOS 빌드**  >  **iOS SDK 버전**에서 선택 합니다. TvOS 지원의 미리 보기 릴리스에서는이 값을 **기본값으로**설정 해 두십시오.
 3. 링크를 사용 하면 사용 되지 않는 메서드, 속성, 클래스 등을 제거 하 여 앱의 배포 전 전체 크기를 줄일 수 있습니다. 대부분의 경우에는 대부분의 경우에는 **연결 프레임 워크 SDK**의 기본값을 그대로 두어야 합니다. 특정 타사 라이브러리를 사용 하는 경우와 같은 일부 경우에는 필요한 요소가 제거 되지 않도록이 값을 **연결 안 함** 으로 설정 해야 할 수 있습니다.
 4. TvOS 앱을 배송 하려면 LLVM 최적화 컴파일러를 사용 해야 합니다. **릴리스** 구성에서 **LLVM 최적화 컴파일러 사용** 확인란이 선택 되어 있는지 확인 합니다.
-5. 또한 tvOS apps에서 bitcode를 사용 해야 합니다. **릴리스** 구성에서 **추가 mtouch 인수** 상자에 `--bitcode=asmonly`을 추가 합니다.
+5. 또한 tvOS apps에서 bitcode를 사용 해야 합니다. **릴리스** 구성 아래에서 `--bitcode=asmonly` **추가 mtouch 인수** 상자에를 추가 합니다.
 6. **IOS에 대 한 PNG 이미지 파일 최적화** 확인란을 선택 하면 앱의 결과물 크기를 더 줄일 수 있습니다.
 7. 빌드를 불필요 하 게 더 크게 만들기 때문에 디버깅을 사용 하도록 *설정 하면 안* 됩니다.
 
-<a name="Building_and_Submitting_the_Distributable" />
+<a name="Building_and_Submitting_the_Distributable"></a>
 
 ## <a name="building-and-submitting-the-distributable"></a>배포 가능한 파일 빌드 및 제출
 
@@ -164,7 +164,7 @@ TvOS 앱이 올바르게 구성 되 면 이제 검토 및 릴리스를 위해 Ap
 1. 아래 그림과 같이 **서명 및 배포 ...** 를 선택 합니다.
 
     [![](app-store-publishing-images/buildxs04new.png ", Select theSign and Distribute...")](app-store-publishing-images/buildxs04new.png#lightbox)
-2. 그러면 게시 마법사가 열립니다. **앱 스토어** 배포 채널을 선택하여 패키지를 만들고 애플리케이션 로더를 엽니다.
+2. 그러면 게시 마법사가 열립니다. **앱 스토어** 배포 채널을 선택 하 여 패키지를 만들고 응용 프로그램 로더를 엽니다.
 
     [![](app-store-publishing-images/distribute01.png "Select the App Store distribution channel")](app-store-publishing-images/distribute01.png#lightbox)
 3. 프로 비전 프로필 화면에서 서명 id 및 해당 프로 비전 프로필을 선택 하거나 다른 id로 다시 서명 합니다.
@@ -179,13 +179,13 @@ TvOS 앱이 올바르게 구성 되 면 이제 검토 및 릴리스를 위해 Ap
 
 배포 빌드를 만들고 보관했으므로 이제 iTunes Connect에 애플리케이션을 제출할 준비가 되었습니다.
 
-<a name="Submitting_Your_App_to_Apple" />
+<a name="Submitting_Your_App_to_Apple"></a>
 
 ## <a name="submitting-your-app-to-apple"></a>Apple에 앱 제출
 
 배포 빌드가 완료되면 iOS 애플리케이션을 Apple에 제출하여 앱 스토어에서 검토하고 릴리스할 준비가 됩니다.
 
-`.ipa`을 저장 하면 Mac용 Visual Studio의 보관 워크플로가 자동으로 응용 프로그램 로더를 엽니다.
+Mac용 Visual Studio의 보관 워크플로는 다음을 저장 하면 응용 프로그램 로더가 자동으로 열립니다 `.ipa` .
 
 1. *앱 배달*을 선택하고 *선택* 단추를 클릭합니다.
 
@@ -201,7 +201,7 @@ TvOS 앱이 올바르게 구성 되 면 이제 검토 및 릴리스를 위해 Ap
 5. **보내기** 단추를 클릭하여 검토를 위해 애플리케이션을 Apple에 보냅니다.
 6. 파일이 성공적으로 업로드되면 애플리케이션 로더에서 알려줍니다.
 
-<a name="iTunes_Connect_Status" />
+<a name="iTunes_Connect_Status"></a>
 
 ### <a name="itunes-connect-status"></a>iTunes Connect 상태
 
@@ -209,13 +209,13 @@ ITunes Connect에 다시 로그인 하 고 사용 가능한 앱 목록에서 앱
 
 [![](app-store-publishing-images/image21.png "The status in iTunes Connect showing Waiting for Review")](app-store-publishing-images/image21.png#lightbox)
 
-<a name="Troubleshooting" />
+<a name="Troubleshooting"></a>
 
 ## <a name="troubleshooting"></a>문제 해결
 
 Apple TV 앱 스토어에 tvOS 앱을 제출 하는 데 문제가 있는 경우 [문제 해결](~/ios/tvos/troubleshooting.md) 가이드를 참조 하세요. 여기에는 발생할 수 있는 몇 가지 알려진 문제 및 tvOS에서 문제를 해결 하는 방법이 포함 되어 있습니다.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 

@@ -6,12 +6,12 @@ ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: 19c4a15fb2490c7bace4798b0cb8e062b1379a04
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 39e7a6c86a2d4ab4231a29c0e1014de702af01ac
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306304"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573419"
 ---
 # <a name="inspector-installation-and-requirements"></a>검사기 설치 및 요구 사항
 
@@ -33,7 +33,7 @@ ms.locfileid: "79306304"
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="supported-operating-systems"></a>지원되는 운영 체제
+### <a name="supported-operating-systems"></a>Supported Operating Systems
 
 - **Mac** -OS X 10.11 이상
 - **Windows** -windows 7 이상 (Internet Explorer 11 이상 및 .net 4.6.1 이상)
@@ -45,7 +45,7 @@ ms.locfileid: "79306304"
 
 라이브 앱 검사는 기업 고객에 게 제공 됩니다.
 
-<a name="supported-platforms" />
+<a name="supported-platforms"></a>
 
 ### <a name="supported-app-platforms"></a>지원 되는 앱 플랫폼
 
@@ -53,10 +53,10 @@ ms.locfileid: "79306304"
 |--- |--- |--- |
 |Mac|에서만 지원 Mac용 Visual Studio|
 |iOS|Visual Studio 2017 및 Mac용 Visual Studio에서 지원 됨| 링커 동작을 **연결 안 함** 으로 설정 해야 합니다 ( **iOS 빌드** 프로젝트 옵션 아래). |
-|Android|Visual Studio 2017 및 Mac용 Visual Studio에서 지원 됨|**Fastdev** 를 사용 하도록 설정한 상태에서 Android > = 4.0.3를 대상으로 해야 합니다.<br />Google, Visual Studio 또는 Xamarin Android 에뮬레이터를 사용 해야 합니다. Android 7 에뮬레이터는 현재 검사를 허용 하지 않을 수 있습니다.|
+|Android|Visual Studio 2017 및 Mac용 Visual Studio에서 지원 됨|**Fastdev** 를 사용 하도록 설정한 상태에서 Android >= 4.0.3를 대상으로 해야 합니다.<br />Google, Visual Studio 또는 Xamarin Android 에뮬레이터를 사용 해야 합니다. Android 7 에뮬레이터는 현재 검사를 허용 하지 않을 수 있습니다.|
 |WPF|Visual Studio 2017 에서만 지원 됨|
 
-<a name="reporting-bugs" />
+<a name="reporting-bugs"></a>
 
 ## <a name="reporting-bugs"></a>버그 보고
 

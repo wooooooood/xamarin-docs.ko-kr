@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsBoxView
-description: 이 문서에서는 응용 프로그램에서 장식, 그래픽 및 상호 작용에 색이 지정 된 사각형을 사용 하는 방법을 설명 합니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5f915955bff969ef38cdb7a89bf9cecf05401131
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136359"
+제목: " Xamarin.Forms boxview" 설명: "이 문서에서는 응용 프로그램에서 장식, 그래픽 및 상호 작용을 위해 색이 지정 된 사각형을 사용 하는 방법을 설명 Xamarin.Forms 합니다."
+assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A: xamarin-forms author: davidbritch: dabritch:: 07/26/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-boxview"></a>Xamarin.FormsBoxView
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)
@@ -26,17 +12,6 @@ ms.locfileid: "84136359"
 에는 Xamarin.Forms 기본 제공 벡터 그래픽 시스템이 없으므로에서 보정할 수 있습니다 `BoxView` . 이 문서에서 설명 하는 일부 샘플 프로그램은를 사용 하 여 `BoxView` 그래픽을 렌더링 합니다. 는 `BoxView` 특정 너비 및 두께의 줄과 비슷하게 크기를 지정한 다음 속성을 사용 하 여 임의의 각도로 회전 합니다 `Rotation` .
 
 `BoxView`는 간단한 그래픽을 모방 하지만 보다 정교한 그래픽 요구 사항에 대해 [SkiaSharp Xamarin.Forms 의 사용](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) 을 조사 하는 것이 좋습니다.
-
-이 문서는 다음 항목을 설명합니다.
-
-- **[BoxView 색 및 크기 설정](#colorandsize)** &ndash; 속성을 설정 `BoxView` 합니다.
-- **[텍스트 장식 렌더링](#textdecorations)** &ndash; 선을 렌더링 하려면를 사용 `BoxView` 합니다.
-- BoxView를 사용 **[하 여 색 나열](#listingcolors)** &ndash; 에 모든 시스템 색을 표시 `ListView` 합니다.
-- BoxView를 서브클래싱 **[하 여 게임의 생명 재생](#subclassing)** &ndash; 유명한 셀룰러 automaton을 구현 합니다.
-- **[디지털 시계 만들기](#digitalclock)** &ndash; 점 행렬 디스플레이를 시뮬레이션 합니다.
-- **[아날로그 클록 만들기](#analogclock)** &ndash; 요소를 변환 하 고 애니메이션 효과를 적용 `BoxView` 합니다.
-
-<a name="colorandsize" />
 
 ## <a name="setting-boxview-color-and-size"></a>BoxView 색 및 크기 설정
 
@@ -55,7 +30,7 @@ ms.locfileid: "84136359"
 
 `WidthRequest` `HeightRequest` 가 레이아웃으로 제한 되는 경우 및 속성은 무시 됩니다 `BoxView` .이 경우 레이아웃 컨테이너는에 자체 크기 *constrained* 를 `BoxView` 적용 합니다.
 
-은 `BoxView` 한 차원에서 제약을 받을 수 있으며 다른 차원에서는 제한 되지 않습니다. 예를 들어 `BoxView` 가 세로의 자식인 경우 `StackLayout` 의 세로 차원은 `BoxView` 제한 되지 않으며 가로 차원은 일반적으로 제한 됩니다. 그러나이 가로 차원에 대 한 예외가 있습니다 .의 `BoxView` `HorizontalOptions` 속성이 이외의 다른로 설정 된 경우에는 `LayoutOptions.Fill` 가로 차원만 제한 되지 않습니다. 또한 `StackLayout` 자체에 제한 되지 않은 가로 차원이 있을 수 있으며,이 경우에는 행이 `BoxView` 제한 되지 않습니다.
+`BoxView`는 하나의 차원에서는 제한되고 다른 차원에서는 제한되지 않을 수 있습니다. 예를 들어 `BoxView` 가 세로의 자식인 경우 `StackLayout` 의 세로 차원은 `BoxView` 제한 되지 않으며 가로 차원은 일반적으로 제한 됩니다. 그러나이 가로 차원에 대 한 예외가 있습니다 .의 `BoxView` `HorizontalOptions` 속성이 이외의 다른로 설정 된 경우에는 `LayoutOptions.Fill` 가로 차원만 제한 되지 않습니다. 또한 `StackLayout` 자체에 제한 되지 않은 가로 차원이 있을 수 있으며,이 경우에는 행이 `BoxView` 제한 되지 않습니다.
 
 [**Basicboxview**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview) 샘플은 `BoxView` 해당 페이지의 가운데에서 1 인치의 제한 없는 1 인치의 사각형을 표시 합니다.
 
@@ -75,7 +50,7 @@ ms.locfileid: "84136359"
 </ContentPage>
 ```
 
-결과:
+결과는 다음과 같습니다.
 
 [![기본 BoxView](boxview-images/basicboxview-small.png "기본 BoxView")](boxview-images/basicboxview-large.png#lightbox "BasicBoxView")
 
@@ -84,8 +59,6 @@ ms.locfileid: "84136359"
 는 `BoxView` 의 자식일 수도 있습니다 `AbsoluteLayout` . 이 경우의 위치와 크기는 모두 `BoxView` 연결 된 바인딩 가능 속성을 사용 하 여 설정 됩니다 `LayoutBounds` . 는 `AbsoluteLayout` [**AbsoluteLayout**](~/xamarin-forms/user-interface/layouts/absolute-layout.md)문서에서 설명 합니다.
 
 다음 샘플 프로그램에서 이러한 모든 사례에 대 한 예제를 확인할 수 있습니다.
-
-<a name="textdecorations" />
 
 ## <a name="rendering-text-decorations"></a>텍스트 장식 렌더링
 
@@ -171,8 +144,6 @@ XAML 파일에서에는를 `AbsoluteLayout` `Label` 설명 하는 형식이 지�
     </Label>
 </StackLayout>
 ```
-
-<a name="listingcolors" />
 
 ## <a name="listing-colors-with-boxview"></a>BoxView를 사용 하 여 색 나열
 
@@ -305,8 +276,6 @@ public class NamedColor
 
 `NamedColor`개체의 형식은 `ViewCell` 의 데이터 템플릿으로 설정 된 개체로 지정 됩니다 `ListView` . 이 템플릿에는 `BoxView` `Color` 속성이 `Color` 개체의 속성에 바인딩된가 포함 됩니다 `NamedColor` .
 
-<a name="subclassing" />
-
 ## <a name="playing-the-game-of-life-by-subclassing-boxview"></a>BoxView를 서브클래싱 하 여 게임의 생명 재생
 
 생활의 게임은 *1970 년대의 mvvm* 페이지에서 Mathematician John conway가 만든 셀룰러 automaton입니다. 가장 좋은 소개는 위키백과 문서와 생활의 [생활](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)에서 제공 됩니다.
@@ -361,8 +330,6 @@ class LifeCell : BoxView
 **GameOfLife** 프로그램에는 `LifeGrid` 게임의 많은 논리를 캡슐화 하는 클래스와 `MainPage` 프로그램의 시각적 개체를 처리 하는 클래스가 포함 되어 있습니다. 여기에는 게임의 규칙을 설명 하는 오버레이가 포함 됩니다. 페이지에 수백 개의 개체를 표시 하는 작업의 프로그램은 `LifeCell` 다음과 같습니다.
 
 [![생명 게임](boxview-images/gameoflife-small.png "생명 게임")](boxview-images/gameoflife-large.png#lightbox "생명 게임")
-
-<a name="digitalclock" />
 
 ## <a name="creating-a-digital-clock"></a>디지털 시계 만들기
 
@@ -599,8 +566,6 @@ public partial class MainPage : ContentPage
 }
 ```
 
-<a name="analogclock" />
-
 ## <a name="creating-an-analog-clock"></a>아날로그 클록 만들기
 
 점 행렬 clock은의 명확한 응용 프로그램으로 보일 수 `BoxView` 있지만 `BoxView` 요소는 아날로그 클록을 인식 하는 데에도 사용할 수 있습니다.
@@ -782,10 +747,6 @@ public partial class MainPage : ContentPage
 ```
 
 두 번째 손은 약간 다르게 처리 됩니다. 애니메이션 감속/가속 함수를 적용 하 여 움직임이 부드러운이 지 않고 기계적으로 보이도록 합니다. 각 틱에서 두 번째 손은 약간 뒤로 초과 다음 해당 대상을 다시 가져옵니다. 이 약간 약간의 코드는 이동의 현실감에 많은을 추가 합니다.
-
-## <a name="conclusion"></a>결론
-
-는 `BoxView` 처음에는 간단 하 게 보일 수 있지만 앞서 살펴본 것 처럼 매우 다양 하 고, 일반적으로 벡터 그래픽 에서만 가능한 시각적 개체를 거의 재현할 수 있습니다. 보다 정교한 그래픽은 [ Xamarin.Forms 에서 SkiaSharp 사용 ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)을 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 

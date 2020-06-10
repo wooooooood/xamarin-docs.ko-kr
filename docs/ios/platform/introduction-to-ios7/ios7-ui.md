@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 4731be58c1fadae0bba6768570ecfd181b071dd2
-ms.sourcegitcommit: ce4670de51e24116a944c778ee64585bd0aae0e1
+ms.openlocfilehash: 49ea0cf7bd45a7fc261f6be3dc3becd2c847ad0c
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79088960"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84564903"
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 사용자 인터페이스 개요
 
@@ -30,27 +30,27 @@ UIKit의 모든 보기는 iOS 7의 새로운 모양과 느낌을 준수 합니�
 
 ### <a name="uibutton"></a>UIButton
 
-`UIButton` 클래스에서 만든 단추는 이제 아래와 같이 기본적으로 배경 없이 테두리가 표시 됩니다.
+`UIButton`아래와 같이 클래스에서 만든 단추는 이제 기본적으로 배경 없이 테두리가 표시 됩니다.
 
  ![](ios7-ui-images/button.png "Sample UIButton")
 
-`UIButtonType.RoundedRect` 스타일은 더 이상 사용 되지 않습니다. IOS 7에서 사용 하는 경우 `UIButtonType.RoundedRect`은 `UIButtonType.System` 사용 됩니다 .이 경우 위에 나와 있는 것 처럼 배경이 나 가장자리가 표시 되지 않는 기본 단추 스타일을 생성 합니다.
+`UIButtonType.RoundedRect`스타일은 더 이상 사용 되지 않습니다. IOS 7에서 사용 하는 경우 `UIButtonType.RoundedRect` `UIButtonType.System` 위에 표시 된 것 처럼 배경 또는 보이는 가장자리가 없는 기본 단추 스타일을 생성 하는이 사용 됩니다.
 
 ### <a name="uibarbuttonitem"></a>Ui바 Buttonitem
 
-`UIButton`와 마찬가지로 가로 막대형 단추도 여백 하지 않으며 아래에 표시 된 새 `UIBarButtonItemStyle.Plain` 스타일을 기본값으로 합니다.
+와 유사 하 게 `UIButton` , 가로 막대형 단추도 여백 하지 않으며 기본적으로 `UIBarButtonItemStyle.Plain` 아래와 같은 새 스타일로 표시 됩니다.
 
  ![](ios7-ui-images/barbuttonplain.png "Sample UIBarButtonItem")
 
-또한 `UIBarButtonItemStyle.Bordered` 스타일은 더 이상 사용 되지 않습니다. IOS 7에서 `UIBarButtonItemStyle.Bordered`를 설정 하면 `UIBarButtonItemStyle.Plain` 스타일이 사용 됩니다.
+또한 스타일은 `UIBarButtonItemStyle.Bordered` 더 이상 사용 되지 않습니다. `UIBarButtonItemStyle.Bordered`IOS 7에서를 설정 하면 `UIBarButtonItemStyle.Plain` 스타일이 사용 됩니다.
 
-`UIBarButtonItemStyle.Done` 스타일이 사용 되지 않습니다. 그러나 다음과 같이 굵게 표시 된 텍스트 스타일을 사용 하는 경우에만 테두리 없는 단추가 만들어집니다.
+`UIBarButtonItemStyle.Done`이 스타일은 더 이상 사용 되지 않습니다. 그러나 다음과 같이 굵게 표시 된 텍스트 스타일을 사용 하는 경우에만 테두리 없는 단추가 만들어집니다.
 
  ![](ios7-ui-images/barbuttondone.png "Sample UIBarButtonItem in the Done style")
 
 ### <a name="uialertview"></a>UIAlertView
 
-새 iOS 7 모양과 느낌에 대 한 스타일 변경 외에도, 경고 보기는 하위 뷰를 통한 사용자 지정을 더 이상 지원 하지 않습니다. `UIAlertView` `UIView`에서 상속 되더라도 `UIAlertView`에서 `AddSubview`를 호출 해도 아무런 효과가 없습니다. 예를 들어, 다음 코드를 고려하세요.
+새 iOS 7 모양과 느낌에 대 한 스타일 변경 외에도, 경고 보기는 하위 뷰를 통한 사용자 지정을 더 이상 지원 하지 않습니다. 가 `UIAlertView` 에서 상속 되더라도에 `UIView` 대해를 호출 해도 아무런 `AddSubview` `UIAlertView` 효과가 없습니다. 예를 들어, 다음 코드를 고려하세요.
 
 ```csharp
 UIBarButtonItem button = new UIBarButtonItem ("Bar Button", UIBarButtonItemStyle.Plain, (s,e) =>
@@ -78,7 +78,7 @@ IOS 7의 분할 된 컨트롤은 투명 하 고 색조 색을 지원 합니다. 
 
  ![](ios7-ui-images/segmentedcontrol.png "Sample UISegmentedControl")
 
-또한 `UISegmentedControlStyle`은 iOS 7에서 더 이상 사용 되지 않습니다.
+또한은 `UISegmentedControlStyle` iOS 7에서 더 이상 사용 되지 않습니다.
 
 ### <a name="picker-views"></a>선택 보기
 
@@ -88,15 +88,15 @@ IOS 7의 분할 된 컨트롤은 투명 하 고 색조 색을 지원 합니다. 
 
 ### <a name="uisearchdisplaycontroller"></a>UISearchDisplayController
 
-이제 `UISearchDisplayController.DisplaysSearchBarInNavigationBar` 속성이 true로 설정 된 경우 검색 표시줄이 탐색 모음 내에 표시 됩니다. False로 설정 하면 (기본값) 검색 컨트롤러가 표시 될 때 탐색 모음이 숨겨집니다.
+이제 속성이 true로 설정 된 경우 검색 표시줄이 탐색 모음에 표시 됩니다 `UISearchDisplayController.DisplaysSearchBarInNavigationBar` . False로 설정 하면 (기본값) 검색 컨트롤러가 표시 될 때 탐색 모음이 숨겨집니다.
 
-다음 스크린샷은 `UISearchDisplayController`내의 검색 창을 보여 줍니다.
+다음 스크린샷은 내의 검색 창을 보여 줍니다 `UISearchDisplayController` .
 
  ![](ios7-ui-images/searchbar.png "Sample UISearchDisplayController")
 
 ### <a name="uitableview"></a>UITableView
 
-`UITableView` 관련 된 Api는 주로 변경 되지 않습니다. 그러나 스타일은 새로운 사용자 인터페이스 디자인을 따르도록 크게 변경 되었습니다. 내부 뷰 계층 구조도 약간 다릅니다. 이러한 변경 내용은 대부분의 앱에 영향을 주지 않지만 알아야 할 사항이 있습니다.
+에 대 한 Api는 주로 변경 되지 `UITableView` 않지만 새로운 사용자 인터페이스 디자인을 따르기 위해 스타일이 크게 변경 되었습니다. 내부 뷰 계층 구조도 약간 다릅니다. 이러한 변경 내용은 대부분의 앱에 영향을 주지 않지만 알아야 할 사항이 있습니다.
 
 #### <a name="grouped-table-style"></a>그룹화 된 테이블 스타일
 
@@ -106,7 +106,7 @@ IOS 7의 분할 된 컨트롤은 투명 하 고 색조 색을 지원 합니다. 
 
 #### <a name="separatorinset"></a>SeparatorInset
 
-이제 `UITableVIewCell.SeparatorInset` 속성을 설정 하 여 행 구분 기호를 들여쓸 수 있습니다. 예를 들어, 다음 코드를 사용 하 여 왼쪽 가장자리에서 셀을 들여씁니다.
+이제 속성을 설정 하 여 행 구분 기호를 들여쓸 수 있습니다 `UITableVIewCell.SeparatorInset` . 예를 들어, 다음 코드를 사용 하 여 왼쪽 가장자리에서 셀을 들여씁니다.
 
 ```csharp
 cell.SeparatorInset = new UIEdgeInsets (0, 50, 0, 0);
@@ -134,7 +134,7 @@ UIKit의 변경 내용 외에도 iOS 7은 다음을 비롯 하 여 UI에 대 한
 - 막대 모양
 - 색조 색
 
-<a name="fullscreen" />
+<a name="fullscreen"></a>
 
 ### <a name="full-screen-content"></a>전체 화면 콘텐츠
 
@@ -144,7 +144,7 @@ IOS 7 용 응용 프로그램을 준비할 때 *Interface Builder* 또는 *Xamar
 
 #### <a name="toplayoutguide-and-bottomlayoutguide"></a>TopLayoutGuide 및 BottomLayoutGuide
 
- `TopLayoutGuide` 및 `BottomLayoutGuide`는 뷰가 시작 또는 종료 되는 위치에 대 한 참조로 사용 되므로 다음 예제와 같이 콘텐츠가 반투명 `UIKit` 막대로 겹치지 않습니다.
+ `TopLayoutGuide`및은 `BottomLayoutGuide` `UIKit` 다음 예제와 같이 뷰가 시작 또는 종료 되어야 하는 위치에 대 한 참조로 제공 되므로 콘텐츠가 투명 한 막대로 겹치지 않습니다.
 
  [![](ios7-ui-images/clipped.png "Sample content not overlapped by a translucent UIKit bar")](ios7-ui-images/clipped.png#lightbox)
 
@@ -164,20 +164,20 @@ public override void ViewDidLayoutSubviews ()
 }
 ```
 
-위에 계산 된 값을 사용 하 여 화면 위쪽에서 `ImageView`의 변위를 설정할 수 있으므로 전체 이미지가 표시 됩니다.
+위에 계산 된 값을 사용 하 여 `ImageView` 화면 맨 위에서의 변위를 설정할 수 있으므로 전체 이미지가 표시 됩니다.
 
  [![](ios7-ui-images/good2.png "Example ImageViews displacement from the top of the screen")](ios7-ui-images/good2.png#lightbox)
 
 작업 샘플은 [Imageviewer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) 를 참조 하세요.
 
-변위 값은 뷰가 계층에 추가 된 후 동적으로 생성 되므로 `ViewDidLoad`에서 `TopLayoutGuide` 및 `BottomLayoutGuide` 값을 읽으려고 시도 하면 0이 반환 됩니다. 뷰가 로드 된 후의 값을 계산 합니다 (예: `ViewDidLayoutSubviews`).
+변위 값은 뷰가 계층에 추가 된 후 동적으로 생성 되므로 `TopLayoutGuide` 에서 및 값을 읽으려고 시도 `BottomLayoutGuide` `ViewDidLoad` 하면 0이 반환 됩니다. 뷰가 로드 된 후의 값을 계산 합니다 (예:) `ViewDidLayoutSubviews` .
 
 > [!IMPORTANT]
-> `TopLayoutGuide` 및 `BottomLayoutGuide`은 새로운 안전 영역 레이아웃을 위해 iOS 11에서 더 이상 사용 되지 않습니다. Apple은 safe 영역 사용이 iOS 11 이전의 iOS 버전과 호환 된다는 것을 언급 했습니다. 자세한 내용은 [iOS 11 용 응용 프로그램 업데이트](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) 가이드를 참조 하세요.
+> `TopLayoutGuide`및 `BottomLayoutGuide` 은 새로운 안전 영역 레이아웃을 위해 iOS 11에서 더 이상 사용 되지 않습니다. Apple은 safe 영역 사용이 iOS 11 이전의 iOS 버전과 호환 된다는 것을 언급 했습니다. 자세한 내용은 [iOS 11 용 응용 프로그램 업데이트](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) 가이드를 참조 하세요.
 
 #### <a name="edgesforextendedlayout"></a>EdgesForExtendedLayout
 
-이 API는 가로 막대형 반투명도 관계 없이 전체 화면으로 확장 되어야 하는 뷰의 가장자리를 지정 합니다. IOS 7에서 탐색 모음과 도구 모음은 컨트롤러의 뷰 위에 계층화 된 상태로 표시 됩니다. 이전 iOS 버전과 달리 동일한 공간을 차지 하지 않습니다. IOS 7 사진 응용 프로그램은 기본 `UIViewController.EdgesForExtendedLayout` 값 `UIRectEdge.All`를 보여 줍니다. 이 설정은 보기의 네 가장자리를 모두 콘텐츠로 채우고 겹치는 효과 및 전체 화면 효과를 만듭니다.
+이 API는 가로 막대형 반투명도 관계 없이 전체 화면으로 확장 되어야 하는 뷰의 가장자리를 지정 합니다. IOS 7에서 탐색 모음과 도구 모음은 컨트롤러의 뷰 위에 계층화 된 상태로 표시 됩니다. 이전 iOS 버전과 달리 동일한 공간을 차지 하지 않습니다. IOS 7 사진 응용 프로그램은 기본값 `UIViewController.EdgesForExtendedLayout` 을 보여 줍니다 `UIRectEdge.All` . 이 설정은 보기의 네 가장자리를 모두 콘텐츠로 채우고 겹치는 효과 및 전체 화면 효과를 만듭니다.
 
  [![](ios7-ui-images/photos.png "Sample EdgesForExtendedLayout")](ios7-ui-images/photos.png#lightbox)
 
@@ -189,7 +189,7 @@ public override void ViewDidLayoutSubviews ()
 
  [![](ios7-ui-images/clipped.png "Apps configured for iOS 6 will have part of the view clipped, as in this screenshot")](ios7-ui-images/clipped.png#lightbox)
 
-이 동작에 대 한 `UIViewController.EdgesForExtendedLayout` 속성을 수정 합니다. 뷰가 모든 가장자리를 채우지 않도록 지정할 수 있으므로 보기는 탐색 또는 도구 모음이 차지 하는 공간 (모든 방향)에서 콘텐츠를 표시 하지 않도록 합니다.
+`UIViewController.EdgesForExtendedLayout`이 동작에 대 한 속성을 수정 합니다. 뷰가 모든 가장자리를 채우지 않도록 지정할 수 있으므로 보기는 탐색 또는 도구 모음이 차지 하는 공간 (모든 방향)에서 콘텐츠를 표시 하지 않도록 합니다.
 
 ```csharp
 if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) { 
@@ -201,7 +201,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) {
 
  [![](ios7-ui-images/good.png "Example with whole image visible")](ios7-ui-images/good.png#lightbox)
 
-`TopLayoutGuide/BottomLayoutGuide` 및 `EdgesForExtendedLayout` Api가 비슷한 효과는 있지만 서로 다른 목표를 채우는 것을 의미 합니다. `EdgesForExtendedLayout` 설정을 기본값에서 변경 하면 iOS 6 용으로 설계 된 응용 프로그램의 잘린 보기가 수정 될 수 있지만, 좋은 iOS 7 디자인은 전체 화면을 미적 하 고, `TopLayoutGuide` 및 `BottomLayoutGuide`를 사용 하 여 사용자가 편안 하 게 조작할 수 있는 콘텐츠를 적절 하 게 배치 해야 합니다.
+및 api의 효과는 유사 하지만 `TopLayoutGuide/BottomLayoutGuide` `EdgesForExtendedLayout` 서로 다른 목표를 채우는 것을 의미 합니다. `EdgesForExtendedLayout`기본값에서 설정을 변경 하면 ios 6 용으로 설계 된 응용 프로그램의 잘린 보기가 수정 될 수 있지만, 좋은 iOS 7 디자인은 전체 화면 미적을 준수 하 고, `TopLayoutGuide` 사용자를 위한 편안 하 게 `BottomLayoutGuide` 조작할 수 있는 콘텐츠를 적절 하 게 배치 하기 위해 및에 의존 하는 전체 화면 보기 환경을 제공 해야 합니다.
 
 작업 샘플은 [Imageviewer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) 를 참조 하세요.
 
@@ -215,7 +215,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) {
 
 흐림 효과 및 투명도와 함께 상태 표시줄의 전경에는 밝은 색 또는 어두운 색 (기본값)이 있을 수 있습니다. 상태 표시줄 스타일은 보기 컨트롤러에서 설정할 수 있습니다. 뷰 컨트롤러는 상태 표시줄이 숨겨지거나 표시 되는지 여부를 설정할 수도 있습니다.
 
-예를 들어 다음 코드는 뷰 컨트롤러의 `PreferredStatusBarStyle` 메서드를 재정의 하 여 상태 표시줄이 밝은 전경으로 표시 되도록 합니다.
+예를 들어 다음 코드는 `PreferredStatusBarStyle` 뷰 컨트롤러의 메서드를 재정의 하 여 상태 표시줄이 밝은 전경으로 표시 되도록 합니다.
 
 ```csharp
 public override UIStatusBarStyle PreferredStatusBarStyle ()
@@ -228,7 +228,7 @@ public override UIStatusBarStyle PreferredStatusBarStyle ()
 
  ![](ios7-ui-images/light-status-bar.png "Sample Status Bar")
 
-뷰 컨트롤러의 코드에서 상태 표시줄을 숨기려면 아래와 같이 `PrefersStatusBarHidden`를 재정의 합니다.
+뷰 컨트롤러의 코드에서 상태 표시줄을 숨기려면 `PrefersStatusBarHidden` 아래와 같이을 재정의 합니다.
 
 ```csharp
 public override bool PrefersStatusBarHidden ()
@@ -243,20 +243,20 @@ public override bool PrefersStatusBarHidden ()
 
 ### <a name="tint-color"></a>색조 색
 
-이제 단추가 chrome 없는 텍스트로 표시 됩니다. 텍스트 색은 `UIView`의 새 `TintColor` 속성을 사용 하 여 제어할 수 있습니다. `TintColor` 설정 하면 해당 색을 설정 하는 뷰의 전체 뷰 계층 구조에 색이 적용 됩니다. 앱 전체에 `TintColor`를 적용 하려면 `Window`에 설정 합니다. `UIView.TintColorDidChange` 메서드를 통해 색조 색이 변경 되는 경우를 감지할 수도 있습니다.
+이제 단추가 chrome 없는 텍스트로 표시 됩니다. 텍스트 색은의 새 속성을 사용 하 여 제어할 수 있습니다 `TintColor` `UIView` . 를 설정 하면 `TintColor` 이 색을 설정 하는 뷰의 전체 뷰 계층 구조에 색이 적용 됩니다. 앱 전체에를 적용 하려면에서 `TintColor` 설정 `Window` 합니다. 또한 메서드를 통해 색조 색이 변경 되는 경우를 감지할 수 있습니다 `UIView.TintColorDidChange` .
 
 예를 들어 다음 스크린샷은 탐색 컨트롤러 보기의 색조 색을 자주색으로 변경 하는 경우의 효과를 보여 줍니다.
 
  ![](ios7-ui-images/tint-color.png "Purple tint color on a navigation controllers view")
 
-`RenderingMode` `UIImageRenderingMode.AlwaysTemplate`으로 설정 된 경우에도 색조 색을 이미지에 적용할 수 있습니다.
+가로 설정 된 경우에도 색조 색을 이미지에 적용할 수 있습니다 `RenderingMode` `UIImageRenderingMode.AlwaysTemplate` .
 
 > [!IMPORTANT]
-> `UIAppearance`를 사용 하 여 색조 색을 설정할 수 없습니다.
+> 색조 색은를 사용 하 여 설정할 수 없습니다 `UIAppearance` .
 
 ### <a name="dynamic-type"></a>동적 형식
 
-IOS 7에서 사용자는 시스템 설정에서 텍스트 크기를 지정할 수 있습니다. 동적 유형을 사용 하면 글꼴을 동적으로 조정 하 여 크기에 관계 없이 제대로 보이도록 합니다. 사용자가 제어 하는 크기에 맞게 최적화 된 글꼴을 가져오려면 `UIFont.PreferredFontForTextStyle`를 사용 해야 합니다.
+IOS 7에서 사용자는 시스템 설정에서 텍스트 크기를 지정할 수 있습니다. 동적 유형을 사용 하면 글꼴을 동적으로 조정 하 여 크기에 관계 없이 제대로 보이도록 합니다. `UIFont.PreferredFontForTextStyle`사용자가 제어 하는 크기에 맞게 최적화 된 글꼴을 가져오는 데 사용 해야 합니다.
 
 ## <a name="summary"></a>요약
 

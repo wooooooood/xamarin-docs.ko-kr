@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9b2ee9fb02a8fd18d69e93424dc76bfd54fafc86
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130899"
+제목: "엔터프라이즈 앱 탐색" 설명: "이 장은 eShopOnContainers 모바일 앱이 모델 보기에서 모델을 처음 탐색 하는 방법에 대해 설명 합니다."
+assetid: 4cad57b5-7fe4-4527-a988-d9b60c9620b4: xamarin-forms author: davidbritch: dabritch:: 08/07/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="enterprise-app-navigation"></a>엔터프라이즈 앱 탐색
 
 Xamarin.Forms에는 내부 논리 기반 상태 변경으로 인해 일반적으로 사용자가 UI와 상호 작용 하거나 앱 자체에서 발생 하는 페이지 탐색에 대 한 지원이 포함 됩니다. 그러나 다음 문제를 충족 해야 하므로 MVVM (모델-뷰-ViewModel) 패턴을 사용 하는 앱에서 탐색을 구현 하는 것이 복잡할 수 있습니다.
@@ -55,7 +41,7 @@ public interface INavigationService
 
 이 인터페이스는 구현 하는 클래스에서 다음 메서드를 제공 하도록 지정 합니다.
 
-|메서드|목적|
+|방법|목적|
 |--- |--- |
 |`InitializeAsync`|앱이 시작 될 때 두 페이지 중 하나를 탐색 합니다.|
 |`NavigateToAsync`|지정 된 페이지에 대 한 계층적 탐색을 수행 합니다.|
@@ -82,7 +68,7 @@ builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstanc
 NavigationService = ViewModelLocator.Resolve<INavigationService>();
 ```
 
-그러면 `NavigationService` 클래스의 메서드에서 만든 Autofac 종속성 주입 컨테이너에 저장 된 개체에 대 한 참조가 반환 됩니다 `InitNavigation` `App` . 자세한 내용은 [앱이 시작 될 때 탐색](#navigating_when_the_app_is_launched)을 참조 하세요.
+그러면 `NavigationService` 클래스의 메서드에서 만든 Autofac 종속성 주입 컨테이너에 저장 된 개체에 대 한 참조가 반환 됩니다 `InitNavigation` `App` . 자세한 내용은 [앱이 시작 될 때 탐색](#navigating-when-the-app-is-launched)을 참조 하세요.
 
 `ViewModelBase`클래스는 `NavigationService` 형식의 속성에 인스턴스를 저장 합니다 `NavigationService` `INavigationService` . 따라서 클래스에서 파생 되는 모든 뷰 모델 클래스는 `ViewModelBase` 속성을 사용 하 여 `NavigationService` 인터페이스에 지정 된 메서드에 액세스할 수 있습니다 `INavigationService` . 그러면 `NavigationService` Autofac 종속성 주입 컨테이너에서 각 뷰 모델 클래스로 개체를 삽입 하는 오버 헤드가 발생 하지 않습니다.
 
@@ -129,7 +115,7 @@ public Task NavigateToAsync<TViewModel>(object parameter) where TViewModel�
 }
 ```
 
-각 메서드는 클래스에서 파생 되는 모든 뷰 모델 클래스에서 `ViewModelBase` 메서드를 호출 하 여 계층적 탐색을 수행할 수 있도록 `InternalNavigateToAsync` 합니다. 또한 두 번째 방법에서는 `NavigateToAsync` 탐색 데이터를 탐색 중인 뷰 모델에 전달 되는 인수로 지정할 수 있습니다. 여기서는 일반적으로 초기화를 수행 하는 데 사용 됩니다. 자세한 내용은 [탐색 하는 동안 매개 변수 전달](#passing_parameters_during_navigation)을 참조 하세요.
+각 메서드는 클래스에서 파생 되는 모든 뷰 모델 클래스에서 `ViewModelBase` 메서드를 호출 하 여 계층적 탐색을 수행할 수 있도록 `InternalNavigateToAsync` 합니다. 또한 두 번째 방법에서는 `NavigateToAsync` 탐색 데이터를 탐색 중인 뷰 모델에 전달 되는 인수로 지정할 수 있습니다. 여기서는 일반적으로 초기화를 수행 하는 데 사용 됩니다. 자세한 내용은 [탐색 하는 동안 매개 변수 전달](#passing-parameters-during-navigation)을 참조 하세요.
 
 `InternalNavigateToAsync`메서드는 탐색 요청을 실행 하 고 다음 코드 예제에 표시 됩니다.
 
@@ -188,16 +174,14 @@ private Page CreatePage(Type viewModelType, object parameter)
 - 뷰 모델은에 있습니다. ViewModels 자식 네임 스페이스입니다.
 - 뷰 이름은 "모델"이 제거 된 모델 이름 보기에 해당 합니다.
 
-뷰가 인스턴스화된 경우 해당 뷰 모델에 연결 됩니다. 이를 수행 하는 방법에 대 한 자세한 내용은 [뷰 모델 로케이터를 사용 하 여 자동으로 뷰 모델 만들기](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator)를 참조 하세요.
+뷰가 인스턴스화된 경우 해당 뷰 모델에 연결 됩니다. 이를 수행 하는 방법에 대 한 자세한 내용은 [뷰 모델 로케이터를 사용 하 여 자동으로 뷰 모델 만들기](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically-creating-a-view-model-with-a-view-model-locator)를 참조 하세요.
 
 만드는 뷰가 인 경우 `LoginView` 클래스의 새 인스턴스 내에 래핑되어 `CustomNavigationView` 속성에 할당 됩니다 [`Application.Current.MainPage`](xref:Xamarin.Forms.Application.MainPage) . 그렇지 않으면 `CustomNavigationView` 인스턴스가 검색 되 고 null이 아닌 경우 [`PushAsync`](xref:Xamarin.Forms.NavigationPage) 메서드를 호출 하 여 생성 되는 뷰를 탐색 스택으로 푸시합니다. 그러나 검색 된 인스턴스가 인 경우에는 `CustomNavigationView` `null` 만들어지는 뷰가 클래스의 새 인스턴스 내에 래핑되어 `CustomNavigationView` 속성에 할당 됩니다 `Application.Current.MainPage` . 이 메커니즘을 사용 하면 탐색 하는 동안 페이지가 비어 있을 때와 데이터를 포함 하는 경우 탐색 스택에 올바르게 추가 됩니다.
 
 > [!TIP]
 > 페이지 캐싱을 고려 합니다. 페이지 캐싱은 현재 표시 되지 않은 뷰에 대해 메모리 소비가 발생 합니다. 그러나 페이지 캐싱이 없으면 페이지 및 해당 뷰 모델의 XAML 구문 분석과 생성이 새 페이지를 탐색할 때마다 발생 하며,이는 복잡 한 페이지의 성능에 영향을 줄 수 있습니다. 컨트롤을 많이 사용 하지 않는 잘 디자인 된 페이지의 경우 성능이 충분 해야 합니다. 그러나 페이지 캐싱은 저속 페이지 로드 시간이 발생 하는 경우에 유용할 수 있습니다.
 
-뷰가 생성 되 고 탐색 되 면 `InitializeAsync` 뷰의 연결 된 뷰 모델의 메서드가 실행 됩니다. 자세한 내용은 [탐색 하는 동안 매개 변수 전달](#passing_parameters_during_navigation)을 참조 하세요.
-
-<a name="navigating_when_the_app_is_launched" />
+뷰가 생성 되 고 탐색 되 면 `InitializeAsync` 뷰의 연결 된 뷰 모델의 메서드가 실행 됩니다. 자세한 내용은 [탐색 하는 동안 매개 변수 전달](#passing-parameters-during-navigation)을 참조 하세요.
 
 ### <a name="navigating-when-the-app-is-launched"></a>앱이 시작 될 때 탐색
 
@@ -230,9 +214,7 @@ public Task InitializeAsync()
 
 `MainView`앱에 인증에 사용 되는 캐시 된 액세스 토큰이 있는 경우를 탐색 합니다. 그렇지 않으면를 `LoginView` 탐색 합니다.
 
-Autofac 종속성 주입 컨테이너에 대 한 자세한 내용은 [종속성 주입 소개](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection)를 참조 하세요.
-
-<a name="passing_parameters_during_navigation" />
+Autofac 종속성 주입 컨테이너에 대 한 자세한 내용은 [종속성 주입 소개](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction-to-dependency-injection)를 참조 하세요.
 
 ### <a name="passing-parameters-during-navigation"></a>탐색 하는 동안 매개 변수 전달
 
@@ -265,8 +247,6 @@ public override async Task InitializeAsync(object navigationData)
 ```
 
 이 메서드는 `Order` 탐색 작업 중에 뷰 모델로 전달 된 인스턴스를 검색 하 고이 인스턴스를 사용 하 여 인스턴스에서 전체 주문 세부 정보를 검색 합니다 `OrderService` .
-
-<a name="invoking_navigation_using_behaviors" />
 
 ### <a name="invoking-navigation-using-behaviors"></a>동작을 사용 하 여 탐색 호출
 

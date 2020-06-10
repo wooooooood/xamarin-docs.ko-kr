@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 0e8014263d417cef39147b440ed3b38155f226bb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: bf023543d3159f5d5baf7f7036a576b8a746cf9e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021850"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572132"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Xamarin.ios의 테이블 파트 및 기능
 
@@ -21,7 +21,7 @@ UITableView는 ' 그룹화 ' 또는 ' 일반 ' 스타일을 포함할 수 있으
 - [섹션 헤더](#Section_Header)
 - [셀](#Cells) (또는 원하는 경우 행)
 - [섹션 바닥글](#Section_Footer)
-- [Index](#Index)
+- [인덱싱할](#Index)
 - [편집 모드](#Edit_Features) (' 살짝 밀기 to delete ' 및 끌어서 핸들을 행 순서 변경) 
 
 이러한 스크린샷에는 섹션 행, 머리글, 바닥글, 편집 컨트롤 및 인덱스가 표시 되는 방식이 나와 있습니다.
@@ -30,32 +30,32 @@ UITableView는 ' 그룹화 ' 또는 ' 일반 ' 스타일을 포함할 수 있으
 
 이러한 부분에 대해서는 아래에서 자세히 설명 합니다.
 
-<a name="Section_Header" />
+<a name="Section_Header"></a>
 
 ## <a name="section-header"></a>섹션 헤더
 
 필요에 따라 셀을 섹션으로 그룹화 하 고 사용자 지정 머리글을 사용 하 여 레이블을 지정 하거나 바닥글을 사용 하 여 레이블을 지정할 수 있습니다. 헤더는 문자열 값을 사용 하 여 설정 하거나 사용자 지정 보기를 제공 하 여 다른 레이아웃이 나 스타일을 허용할 수 있습니다.
 
-<a name="Cells" />
+<a name="Cells"></a>
 
 ## <a name="cells"></a>셀
 
 셀은 테이블의 기본 사용자 인터페이스 요소입니다. 올바르게 구현 된 경우 셀은 메모리 효율성을 위해 다시 사용 됩니다. 네 가지 기본 제공 셀 스타일이 있습니다. 코드에서 또는 스토리 보드를 사용할 때 디자이너에서 사용자 지정 셀을 직접 만들 수 있습니다.
 
-<a name="Section_Footer"/>
+<a name="Section_Footer"></a>
 
 ## <a name="section-footer"></a>섹션 바닥글
 
 선택적 섹션 바닥글은 문자열 값을 사용 하 여 설정 하거나 사용자 지정 보기를 제공 하 여 다른 레이아웃이 나 스타일을 허용할 수 있습니다. 섹션 머리글 및 바닥글은 독립적으로 설정할 수 있습니다.
 
-<a name="Index" />
+<a name="Index"></a>
 
-## <a name="index"></a>Index
+## <a name="index"></a>인덱스
 
 인덱스는 테이블의 오른쪽 가장자리 아래에 문자 구획으로 나타납니다.
 인덱스에 대 한 터치 또는 끌기는 테이블의 해당 부분으로 스크롤을 가속화 합니다. 인덱스는 선택 사항 이지만 긴 목록을 탐색 하는 데 도움이 되는 것이 좋습니다. 인덱스는 일반적으로 그룹화 된 스타일과 함께 사용 되지 않습니다.
 
-<a name="Edit_Features" />
+<a name="Edit_Features"></a>
 
 ## <a name="editing-mode"></a>편집 모드
 
@@ -77,7 +77,7 @@ UITableView는 ' 그룹화 ' 또는 ' 일반 ' 스타일을 포함할 수 있으
 각 클래스의 용도는 아래에 설명 되어 있습니다.
 
 - **Uitableview** – 스크롤 컨테이너 내의 셀 컬렉션을 포함 하는 뷰입니다. 일반적으로 테이블 뷰는 iPhone 앱에서 전체 화면을 사용 하지만 iPad에서 더 큰 보기의 일부로 존재 하거나 팝 오버 표시 될 수 있습니다. 
-- **Uitableviewcell** – 테이블 뷰의 단일 셀 또는 행을 나타내는 뷰입니다. 네 가지 기본 제공 셀 형식이 있으며, C# 또는 iOS 디자이너를 사용 하 여 사용자 지정 셀을 만들 수 있습니다. 
+- **Uitableviewcell** – 테이블 뷰의 단일 셀 또는 행을 나타내는 뷰입니다. 네 가지 기본 제공 셀 형식이 있으며, c # 또는 iOS 디자이너를 사용 하 여 사용자 지정 셀을 만들 수 있습니다. 
 - **Uitableviewsource** – xamarin.ios-배타적 추상 클래스로, 행 개수, 각 행에 대 한 셀 뷰 반환, 행 선택 처리 및 기타 여러 가지 선택적 기능을 포함 하 여 테이블을 표시 하는 데 필요한 모든 메서드를 제공 합니다. UITableView를 가져오려면이를 서브 클래스 *해야* 합니다. 
 - **Nsindexpath** – 테이블에서 셀의 위치를 고유 하 게 식별 하는 Row 및 Section 속성을 포함 합니다. 
 - **Uitableviewcontroller** – TableView 속성을 통해 해당 뷰로 하드 코딩 되 고 액세스 가능한 UITableView를 포함 하는 바로 사용할 수 있는 uiviewcontroller입니다. 

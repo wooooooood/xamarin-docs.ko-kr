@@ -1,22 +1,8 @@
 ---
-title: UrhoSharp 사용Xamarin.Forms
-description: 이 문서에서는 UrhoSharp를 사용 하 여 고급 시각화를 위해 3D 그래픽을 응용 프로그램에 추가 하는 방법을 설명 Xamarin.Forms 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8c0eed1a451d62025562ac5fff4f12be96f0bf53
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137659"
+title: "UrhoSharp in Xamarin.Forms " description: "이 문서에서는 UrhoSharp를 사용 하 여 고급 시각화를 위해 3d 그래픽을 응용 프로그램에 추가 하는 방법을 설명 Xamarin.Forms 합니다."
+assetid: 0646B98E-CC04-4537-9715-9F82338FD7FF: xamarin-forms author: davidbritch: dabritch:: 03/11/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="using-urhosharp-in-xamarinforms"></a>UrhoSharp 사용Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/urho-samples/tree/master/FormsSample)
@@ -50,15 +36,13 @@ UrhoSharp. Forms NuGet 패키지는 프로젝트에 추가 됩니다.
 
 다음 단계는 urhosharp 샘플의 코드를 설명 합니다 Xamarin.Forms .
 
-1. [Xamarin Forms 페이지 만들기](#1)
-2. [UrhoSurface 추가](#2)
-3. [Urho 응용 프로그램 빌드](#3)
-4. [UrhoSurface에 차트 클래스 추가](#4)
-5. [UrhoSharp와 상호 작용](#5)
+1. [Xamarin Forms 페이지 만들기](#1-create-a-xamarin-forms-page)
+2. [UrhoSurface 추가](#2-add-the-urhosurface)
+3. [Urho 응용 프로그램 빌드](#3-build-an-urho-application)
+4. [UrhoSurface에 차트 클래스 추가](#4-add-the-charts-class-to-the-urhosurface)
+5. [UrhoSharp와 상호 작용](#5-interacting-with-urhosharp)
 
 이 샘플에서는 c # 6 기능을 사용 하며 이전 버전의 Visual Studio에서 컴파일되지 않을 수 있습니다.
-
-<a name="1"/>
 
 ### <a name="1-create-a-xamarin-forms-page"></a>1. Xamarin Forms 페이지 만들기
 
@@ -89,8 +73,6 @@ public class UrhoPage : ContentPage
     };
   }
 ```
-
-<a name="2"/>
 
 ### <a name="2-add-the-urhosurface"></a>2. UrhoSurface 추가
 
@@ -123,9 +105,7 @@ public class UrhoPage : ContentPage
   };
 ```
 
-<a name="3"/>
-
-### <a name="3-build-a-urho-application"></a>3. Urho 응용 프로그램 빌드
+### <a name="3-build-an-urho-application"></a>3. Urho 응용 프로그램 빌드
 
 `Charts`이 샘플에서 사용 되는 Urho 3d 그래픽의 구현에 대 한 클래스를 참조 하세요. 기본 코드 개요는 아래와 같습니다. 클래스는 `Urho.Application` `Xamarin.Forms.Application` **App.cs**에서 구현 된 클래스와 다른을 구현 합니다.
 
@@ -152,8 +132,6 @@ namespace FormsSample
 
 [Urhosharp 설명서](~/graphics-games/urhosharp/index.md) 에는 3d 장면 및 작업을 빌드하는 방법에 대 한 자세한 내용이 포함 되어 있습니다.
 
-<a name="4"/>
-
 ### <a name="4-add-the-charts-class-to-the-urhosurface"></a>4. UrhoSurface에 차트 클래스를 추가 합니다.
 
 `UrhoSurface.Show<T>`제네릭 메서드를 사용 하 여 Urho 응용 프로그램을 페이지에 추가 Xamarin.Forms 합니다. 아래 코드 조각에서는 클래스를 만드는 데 필요한 추가 코드를 보여 줍니다 `Charts` .
@@ -171,8 +149,6 @@ public class UrhoPage : ContentPage
 ```
 
 참고: `Show<T>` 메서드는 비동기 이며 키워드를 사용 하 여 호출 해야 합니다 `await` .
-
-<a name="5"/>
 
 ### <a name="5-interacting-with-urhosharp"></a>5. UrhoSharp와 상호 작용
 

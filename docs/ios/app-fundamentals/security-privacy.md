@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: cdc59c4eb3863435482acf5eb0dcd1368beea693
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 9c2d00051d1e51db4523a484a0c187016ea9061f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73009657"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567829"
 ---
 # <a name="ios-security-and-privacy-features"></a>iOS 보안 및 개인 정보 기능
 
@@ -20,18 +20,18 @@ _이 문서에서는 iOS에서 보안 및 개인 정보를 사용 하는 방법�
 
 Apple에서는 개발자가 앱의 보안을 개선 하 고 최종 사용자의 개인 정보를 확인 하는 데 도움이 되는 iOS 10의 보안 및 개인 정보 모두에 대해 몇 가지 기능이 향상 되었습니다. 이 문서에서는 Xamarin.ios 앱에서 이러한 기능을 구현 하는 방법을 다룹니다.
 
-<a name="General-Enhancements" />
+<a name="General-Enhancements"></a>
 
 ## <a name="general-enhancements"></a>일반적인 향상 된 기능
 
 IOS 10의 보안 및 개인 정보에 대 한 다음과 같은 일반적인 변경 내용이 적용 되었습니다.
 
 - CDSA (Common Data Security Architecture) API는 더 이상 사용 되지 않으며, 비대칭 키를 생성 하려면 SecKey API로 바꾸어야 합니다.
-- 새 `NSAllowsArbitraryLoadsInWebContent` 키를 앱의 **info.plist** 파일에 추가할 수 있으며, ATS (Apple Transport Security) 보호가 응용 프로그램의 나머지 부분에 대해 사용 하도록 설정 되어 있는 동안에는 웹 페이지를 올바르게 로드할 수 있습니다. 자세한 내용은 [앱 전송 보안](~/ios/app-fundamentals/ats.md) 설명서를 참조 하세요.
+- 앱의 `NSAllowsArbitraryLoadsInWebContent` **info.plist** 파일에 새 키를 추가할 수 있으며, 응용 프로그램의 나머지 부분에 대해 ATS (Apple Transport Security) 보호를 사용 하는 동안 웹 페이지를 올바르게 로드할 수 있습니다. 자세한 내용은 [앱 전송 보안](~/ios/app-fundamentals/ats.md) 설명서를 참조 하세요.
 - IOS 10 및 macOS Sierra의 새 클립보드를 사용 하면 사용자가 장치 간에 복사 하 여 붙여 넣을 수 있기 때문에 클립보드를 특정 장치로 제한 하 고 지정 된 지점에서 자동으로 지울 타임 스탬프를 허용 하도록 API가 확장 되었습니다. 또한 이름이 지정 된 pasteboards는 더 이상 유지 되지 않으며 공유 된 대지의 컨테이너와 바꾸어야 합니다.
 - 모든 SSL/TLS 연결의 경우 이제 RC4 대칭 암호화가 기본적으로 사용 하지 않도록 설정 됩니다. 또한 보안 전송 API는 더 이상 SSLv3을 지원 하지 않으므로 개발자는 가능한 한 빨리 SHA-1 및 3DES 암호화를 사용 하지 않는 것이 좋습니다.
 
-<a name="Accessing-Private-User-Data" />
+<a name="Accessing-Private-User-Data"></a>
 
 ## <a name="accessing-private-user-data"></a>개인 사용자 데이터 액세스
 
@@ -42,37 +42,37 @@ IOS 10 이상에서 실행 되는 앱은 info.plist 파일에 하나 이상의 �
 
 다음 개인 정보 관련 키를 사용할 수 있습니다.
 
-- **개인 정보-Apple Music 사용 설명** (`NSAppleMusicUsageDescription`)-개발자는 앱이 사용자의 미디어 라이브러리에 액세스 하려는 이유를 설명할 수 있습니다.
-- **개인 정보-Bluetooth 주변 장치 사용 설명** (`NSBluetoothPeripheralUsageDescription`)-개발자가 앱이 사용자 장치에서 Bluetooth에 액세스 하려는 이유를 설명할 수 있습니다.
-- **개인 정보-일정 사용 설명** (`NSCalendarsUsageDescription`)-개발자가 앱이 사용자의 일정에 액세스 하려는 이유를 설명할 수 있습니다.
-- **개인 정보-카메라 사용 설명** (`NSCameraUsageDescription`)-개발자는 앱이 장치의 카메라에 액세스 하려는 이유를 설명할 수 있습니다.
-- **개인 정보-연락처 사용 설명** (`NSContactsUsageDescription`)-개발자가 앱이 사용자의 연락처에 액세스 하려는 이유를 설명할 수 있습니다.
-- **개인 정보-상태 공유 사용 설명** (`NSHealthShareUsageDescription`)-개발자가 앱이 사용자의 상태 데이터에 액세스 하려는 이유를 설명할 수 있습니다. 자세한 내용은 Apple의 [HKHealthStore 클래스 참조](https://developer.apple.com/reference/healthkit/hkhealthstore)를 참조 하세요.
-- **개인 정보-상태 업데이트 사용 설명** (`NSHealthUpdateUsageDescription`)-개발자가 앱이 사용자의 상태 데이터를 편집 하려는 이유를 설명할 수 있습니다. 자세한 내용은 Apple의 [HKHealthStore 클래스 참조](https://developer.apple.com/reference/healthkit/hkhealthstore)를 참조 하세요.
-- **HomeKit 사용 설명** (`NSHomeKitUsageDescription`)-개발자가 앱이 사용자의 HomeKit 구성 데이터에 액세스 하려는 이유를 설명할 수 있습니다.
-- **개인 정보-위치 항상 사용 설명** (`NSLocationAlwaysUsageDescription`)-개발자가 앱에서 항상 사용자의 위치에 액세스할 수 있는 이유를 설명할 수 있습니다.
-- Mapi **개인 정보-위치 사용 설명** (`NSLocationUsageDescription`)-개발자가 앱이 사용자 위치에 액세스 하려는 이유를 설명할 수 있습니다. *참고: 이 키는 iOS 8에서 더 이상 사용 되지 않습니다. 대신 `NSLocationAlwaysUsageDescription` 또는 `NSLocationWhenInUseUsageDescription`를 사용 해야 합니다.*
-- **개인 정보-위치 사용 시 사용 설명** (`NSLocationWhenInUseUsageDescription`)-개발자가 앱이 실행 되는 동안 사용자의 위치에 액세스 하려는 이유를 설명할 수 있습니다.
-- Mapi **개인 정보-미디어 라이브러리 사용 설명** -개발자가 앱이 사용자의 미디어 라이브러리에 액세스 하려는 이유를 설명할 수 있습니다. *참고: 이 키는 iOS 8에서 더 이상 사용 되지 않습니다. 대신 `NSAppleMusicUsageDescription`를 사용 해야 합니다.*
-- **개인 정보-마이크 사용 설명** (`NSMicrophoneUsageDescription`)-개발자가 앱에서 장치 마이크에 액세스 하려는 이유를 설명할 수 있습니다.
-- **개인 정보-동작 사용 설명** (`NSMotionUsageDescription`)-개발자는 앱이 장치의가 속도계에 액세스 하려는 이유를 설명할 수 있습니다.
-- **개인 정보-사진 라이브러리 사용 설명** (`NSPhotoLibraryUsageDescription`)-개발자가 앱이 사용자의 사진 라이브러리에 액세스 하려는 이유를 설명할 수 있습니다.
-- **개인 정보-미리 알림 사용 설명** (`NSRemindersUsageDescription`)-개발자가 앱이 사용자의 미리 알림 액세스를 원하는 이유를 설명할 수 있습니다.
-- **개인 정보-Siri 사용 설명** (`NSSiriUsageDescription`)-개발자가 앱에서 siri로 사용자 데이터를 전송 하려는 이유를 설명할 수 있습니다.
-- **개인 정보-음성 인식 사용 설명** (`NSSpeechRecognitionUsageDescription`)-개발자는 앱이 Apple의 음성 인식 서버에 사용자 데이터를 전송 하려는 이유를 설명할 수 있습니다.
-- **개인 정보-Tv 공급자 사용 설명** (`NSVideoSubscriberAccountUsageDescription`)-개발자가 앱이 사용자의 TV 공급자 계정에 액세스 하려는 이유를 설명할 수 있습니다.
+- **개인 정보-Apple Music 사용 설명** ( `NSAppleMusicUsageDescription` )-개발자가 앱이 사용자의 미디어 라이브러리에 액세스 하려는 이유를 설명할 수 있습니다.
+- **개인 정보-Bluetooth 주변 장치 사용 설명** ( `NSBluetoothPeripheralUsageDescription` )-개발자는 앱이 사용자 장치에서 Bluetooth에 액세스 하려는 이유를 설명할 수 있습니다.
+- **개인 정보-일정 사용 설명** ( `NSCalendarsUsageDescription` )-개발자가 앱이 사용자의 일정에 액세스 하려는 이유를 설명할 수 있습니다.
+- **개인 정보-카메라 사용 설명** ( `NSCameraUsageDescription` )-개발자는 앱이 장치의 카메라에 액세스 하려는 이유를 설명할 수 있습니다.
+- **개인 정보-연락처 사용 설명** ( `NSContactsUsageDescription` )-개발자가 앱이 사용자의 연락처에 액세스 하려는 이유를 설명할 수 있습니다.
+- **개인 정보-상태 공유 사용 설명** ( `NSHealthShareUsageDescription` )-개발자가 앱에서 사용자의 상태 데이터에 액세스 하는 이유를 설명할 수 있습니다. 자세한 내용은 Apple의 [HKHealthStore 클래스 참조](https://developer.apple.com/reference/healthkit/hkhealthstore)를 참조 하세요.
+- **개인 정보-상태 업데이트 사용 설명** ( `NSHealthUpdateUsageDescription` )-개발자가 앱에서 사용자의 상태 데이터를 편집 하려는 이유를 설명할 수 있습니다. 자세한 내용은 Apple의 [HKHealthStore 클래스 참조](https://developer.apple.com/reference/healthkit/hkhealthstore)를 참조 하세요.
+- **HomeKit 사용 설명** ( `NSHomeKitUsageDescription` )-개발자는 앱이 사용자의 HomeKit 구성 데이터에 액세스 하려는 이유를 설명할 수 있습니다.
+- **개인 정보-위치 항상 사용 설명** ( `NSLocationAlwaysUsageDescription` )-개발자가 앱에서 항상 사용자의 위치에 액세스할 수 있는 이유를 설명할 수 있습니다.
+- Mapi **개인 정보-위치 사용 설명** ( `NSLocationUsageDescription` )-개발자가 앱이 사용자 위치에 액세스 하려는 이유를 설명할 수 있습니다. *참고:이 키는 iOS 8에서 더 이상 사용 되지 않습니다. `NSLocationAlwaysUsageDescription`대신 또는를 사용 `NSLocationWhenInUseUsageDescription` 합니다.*
+- **개인 정보-위치 사용 시 사용 설명** ( `NSLocationWhenInUseUsageDescription` )-개발자는 앱이 실행 되는 동안 사용자의 위치에 액세스 하려는 이유를 설명할 수 있습니다.
+- Mapi **개인 정보-미디어 라이브러리 사용 설명** -개발자가 앱이 사용자의 미디어 라이브러리에 액세스 하려는 이유를 설명할 수 있습니다. *참고:이 키는 iOS 8에서 더 이상 사용 되지 않습니다. `NSAppleMusicUsageDescription`대신를 사용 합니다.*
+- **개인 정보-마이크 사용 설명** ( `NSMicrophoneUsageDescription` )-개발자는 앱이 장치 마이크에 액세스 하는 이유를 설명할 수 있습니다.
+- **개인 정보-동작 사용 설명** ( `NSMotionUsageDescription` )-개발자는 앱이 장치의가 속도계에 액세스 하려는 이유를 설명할 수 있습니다.
+- **개인 정보-사진 라이브러리 사용 설명** ( `NSPhotoLibraryUsageDescription` )-개발자가 앱에서 사용자의 사진 라이브러리에 액세스 하려는 이유를 설명할 수 있습니다.
+- **개인 정보-미리 알림 사용 설명** ( `NSRemindersUsageDescription` )-개발자가 앱에서 사용자의 미리 알림 액세스를 원하는 이유를 설명할 수 있습니다.
+- **개인 정보-Siri 사용 설명** ( `NSSiriUsageDescription` )-개발자는 앱에서 siri에 사용자 데이터를 전송 하려는 이유를 설명할 수 있습니다.
+- **개인 정보-음성 인식 사용 설명** ( `NSSpeechRecognitionUsageDescription` )-개발자는 앱이 Apple의 음성 인식 서버에 사용자 데이터를 전송 하려는 이유를 설명할 수 있습니다.
+- **개인 정보-Tv 공급자 사용 설명** ( `NSVideoSubscriberAccountUsageDescription` )-개발자가 앱이 사용자의 tv 공급자 계정에 액세스 하려는 이유를 설명할 수 있습니다.
 
 **Info.plist** 키를 사용 하는 방법에 대 한 자세한 내용은 Apple의 [정보 속성 목록 키 참조](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009248-SW1)를 참조 하세요.
 
-<a name="Setting-Privacy-Keys" />
+<a name="Setting-Privacy-Keys"></a>
 
 ## <a name="setting-privacy-keys"></a>개인 정보 키 설정
 
-IOS 10 이상에서 HomeKit에 액세스 하는 다음 예제를 사용 하 여 개발자는 앱의 **info.plist** 파일에 `NSHomeKitUsageDescription` 키를 추가 하 고 앱이 사용자의 HomeKit 데이터베이스에 액세스 하는 이유를 선언 하는 문자열을 제공 해야 합니다. 이 문자열은 앱을 처음 실행할 때 사용자에 게 표시 됩니다.
+IOS 10 (이상)에서 HomeKit에 액세스 하는 다음 예제를 사용 하 여 개발자는 `NSHomeKitUsageDescription` 앱의 **info.plist** 파일에 키를 추가 하 고 앱이 사용자의 HomeKit 데이터베이스에 액세스 하는 이유를 선언 하는 문자열을 제공 해야 합니다. 이 문자열은 앱을 처음 실행할 때 사용자에 게 표시 됩니다.
 
 ![예제 NSHomeKitUsageDescription 경고](security-privacy-images/info01.png "예제 NSHomeKitUsageDescription 경고")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Visual Studio 용 xamarin.ios는 현재 기본 iOS 매니페스트 편집기 내에서 **info.plist** 개인 정보 보호 키 편집을 지원 하지 않습니다. 대신 일반 Info.plist 편집기를 사용 해야 하므로 다음을 수행 해야 합니다.
 
@@ -80,7 +80,7 @@ Visual Studio 용 xamarin.ios는 현재 기본 iOS 매니페스트 편집기 내
 2. 프로그램 목록에서 **일반 Info.plist 편집기** 를 선택 하 여 파일을 연 다음 **확인**을 클릭 합니다.
 
     ![일반 Info.plist 편집기를 선택 합니다.](security-privacy-images/InfoEditorSelectionVs.png "일반 Info.plist 편집기를 선택 합니다.")
-3. 편집기에서 마지막 행의 **+** 단추를 클릭 하 여 목록에 새 항목을 추가 합니다. 이를 "사용자 지정 속성" 이라고 하며,이 형식은 `String`로 설정 되 고 빈 값으로 설정 됩니다.
+3. **+** 편집기의 마지막 행에 있는 단추를 클릭 하 여 목록에 새 항목을 추가 합니다. 이를 "사용자 지정 속성" 이라고 하며, 유형은로 설정 되 `String` 고 빈 값으로 설정 됩니다.
 4. 속성 이름을 클릭 하면 드롭다운이 표시 됩니다.
 5. 드롭다운 목록에서 개인 정보 보호 키 (예: **개인 정보-HomeKit 사용 설명**)를 선택 합니다. 
 
@@ -90,7 +90,7 @@ Visual Studio 용 xamarin.ios는 현재 기본 iOS 매니페스트 편집기 내
     ![설명 입력](security-privacy-images/InfoPListSetValue.png "설명 입력")
 7. 파일의 변경 내용을 저장합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 개인 정보 보호 키를 설정 하려면 다음을 수행 합니다.
 
@@ -108,9 +108,9 @@ Visual Studio 용 xamarin.ios는 현재 기본 iOS 매니페스트 편집기 내
 -----
 
 > [!IMPORTANT]
-> 위의 예제에서 **info.plist** 파일에 `NSHomeKitUsageDescription` 키를 설정 하지 않으면 iOS 10 이상에서 실행 될 때 오류 없이 앱이 _자동으로 실패_ 하 게 됩니다 (런타임에 시스템에서 닫힘).
+> 위의 예에서 info.plist 파일에 키를 설정 하지 않으면 `NSHomeKitUsageDescription` iOS 10 이상 **Info.plist** 에서 실행 될 때 오류 없이 앱이 _자동으로 실패_ 하 게 됩니다 (런타임에 시스템에서 닫힘).
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 

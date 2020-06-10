@@ -6,12 +6,12 @@ ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 7dabb420aa094e67fae689f47b3b64a8fe1a6ed4
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5e63e6470a7dac0f9148147a0303d35cf33adb1b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016703"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571163"
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>NuGet에 대 한 새 다중 플랫폼 라이브러리 만들기
 
@@ -58,7 +58,7 @@ NuGet 패키지는 ZIP 파일 이기도 하므로 생성 된 패키지의 내부
 
 ![](single-codebase-images/nuget-output.png "Files contained in the NuGet package")
 
-<a name="add-platforms" />
+<a name="add-platforms"></a>
 
 ## <a name="adding-platform-specific-code"></a>플랫폼별 코드 추가
 
@@ -72,9 +72,9 @@ PCL 기반 프로젝트 및 .NET Standard 기반 프로젝트는 플랫폼별 �
 
 [![](single-codebase-images/add-later-platforms-sml.png "Add platform options such as iOS, Android, and Shared Project")](single-codebase-images/add-later-platforms-sml.png#lightbox)
 
-공유 프로젝트로 변환한 후에는 **프로젝트 옵션 > Nuget 패키지 > 참조 어셈블리**
-[섹션](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) 을 방문 하 여 필요한 프로필이 선택 되었는지 확인 합니다. 그러면 nuget이 이전에 사용 했던 프로젝트와 계속 호환 됩니다.
+공유 프로젝트로 변환한 후 > 프로젝트 옵션을 방문 하 여 **nuget 패키지 > 참조 어셈블리** 
+ [섹션](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) 을 방문 하 고, nuget이 이전에 사용 했던 프로젝트와 계속 호환 되도록 필요한 프로필을 선택 했는지 확인 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [메타데이터 가이드](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)
+- [메타 데이터 가이드](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)

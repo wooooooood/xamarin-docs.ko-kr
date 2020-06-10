@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: a622684461bfe2e4a57b910288ee1f9afb54c694
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: f42c4a6dd2f4408d7b0ccf65e60851ebd29b76f6
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725124"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574546"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>앱 스토어에 watchOS Apps 배포
 
@@ -21,7 +21,7 @@ ms.locfileid: "76725124"
 
 - 다음이 있는지 확인 합니다.
   - 프로젝트에 대해 생성 되는 [**배포 프로 비전 프로필**](#provisioning) 입니다.
-  - IOS 부모 앱에 대 한 **배포 대상** (`MinimumOSVersion`)이 **8.2** 이전 (8.3은 지원 되지 않음)로 설정 되어 있습니다.
+  - **Deployment Target** `MinimumOSVersion` IOS 부모 앱에 대 한 배포 대상 ()이 **8.2** 또는 이전 버전 (8.3은 지원 되지 않음)으로 설정 되어 있습니다.
 
 - [**ITunes Connect**](#iTunes_Connect)에서:
 
@@ -43,7 +43,7 @@ ms.locfileid: "76725124"
 
 아래 항목과 관련 된 특정 팁을 읽으십시오. 문제가 있는 경우 [문제 해결](#troubleshooting) 섹션을 참조 하세요.
 
-<a name="provisioning" />
+<a name="provisioning"></a>
 
 ## <a name="distribution-provisioning-profiles"></a>배포 프로 비전 프로필
 
@@ -63,13 +63,13 @@ ms.locfileid: "76725124"
 
 ![](appstore-images/options-selectprofile-sml.png "The iOS Bundle Signing dialog")
 
-<a name="iTunes_Connect"/>
+<a name="iTunes_Connect"></a>
 
 ## <a name="itunes-connect"></a>iTunes Connect
 
 특히 다음과 같이 [앱 배포 개요](~/ios/deploy-test/app-distribution/index.md)를 따르세요.
 
-- [iTunes Connect에서 앱 구성](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
+- [ITunes Connect에서 앱 구성](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [앱 스토어에 게시](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
 
 ITunes Connect에서 앱을 구성 하는 경우 보기 아이콘과 스크린샷 추가를 잊지 마세요.
@@ -82,7 +82,7 @@ ITunes Connect에서 앱을 구성 하는 경우 보기 아이콘과 스크린�
 312x390 픽셀 이어야 하 고 작동 중인 시청 앱을 보여 줍니다.
 이 크기에서 스크린샷을 사용할 수 있습니다.
 
-<a name="xamarin_studio" />
+<a name="xamarin_studio"></a>
 
 ## <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
@@ -102,7 +102,7 @@ ITunes Connect에서 앱을 구성 하는 경우 보기 아이콘과 스크린�
 
   ![](appstore-images/xs-archives-sml.png "The Archives view")
 
-<a name="xcode" />
+<a name="xcode"></a>
 
 ## <a name="xcode"></a>Xcode
 
@@ -175,7 +175,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 최신 버전의 Mac용 Visual Studio 있는지 확인 하 고 **appicons.appiconset** 에 전체 이미지 집합이 포함 되어 있는지 확인 합니다. 이 오류가 계속 표시 되 면 콘텐츠의 원본을 확인 하 여 필요한 모든 이미지에 대 한 항목이 포함 되어 있는지 확인 **합니다.** 또는 최신 버전의 Xamarin을 사용 하 고 있는지 확인 한 후 **appicons.appiconset**을 삭제 하 고 다시 만듭니다.
 
 > [!IMPORTANT]
-> Mac용 Visual Studio의 조사식 아이콘 지원에는 알려진 버그가 있습니다. **29x29@3x** 이미지에는 88x88 픽셀 이미지 (픽셀 87x87)가 필요 합니다.
+> Mac용 Visual Studio의 조사식 아이콘 지원에 알려진 버그가 있습니다. 이미지에는 88x88 픽셀 이미지 **29x29@3x** (픽셀 87x87)가 필요 합니다.
 
 Mac용 Visual Studio에서이 문제를 해결할 수 없습니다. Xcode에서 이미지 자산을 편집 하거나 **콘텐츠. json** 파일을 수동으로 편집 합니다.
 

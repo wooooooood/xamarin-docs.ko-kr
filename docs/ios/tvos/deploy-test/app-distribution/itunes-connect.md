@@ -7,20 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 01ab48f68656dcabdf2a6cfc286dfcd8850454f8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 68c0fb9e034f432c619bc188553996bd7bacdee8
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030760"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573692"
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>iTunes Connect에서 tvOS 앱 구성
 
 _이 문서에서는 iOS에 대 한 추가 가이드를 제공 하 여 tvOS 특정 구성에 대해 iTunes Connect에서 앱을 구성 합니다._
 
-IOS [에서 앱 구성 앱 구성](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) 가이드에 따라 수행 해야 하는 구성 및 설정 외에도,이 문서에서는 Apple TV 앱에서 tvOS 앱을 릴리스 하는 데 필요한 특정 구성을 설명 합니다. 보관.
+IOS [에서 앱 구성 앱 구성](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) 가이드에 따라 수행 해야 하는 구성 및 설정 외에도,이 문서에서는 Apple TV 앱 스토어에서 tvOS 앱을 해제 하는 데 필요한 특정 구성을 다룹니다.
 
-<a name="Adding-a-tvOS-Release-Version" />
+<a name="Adding-a-tvOS-Release-Version"></a>
 
 ## <a name="adding-a-tvos-release-version"></a>TvOS 릴리스 버전 추가
 
@@ -44,7 +44,7 @@ Apple TV 앱 스토어에서 릴리스할 새 앱을 만들거나 기존 iOS 앱
 
 [![](itunes-connect-images/connect02.png "The tvOS specific information screen")](itunes-connect-images/connect02.png#lightbox)
 
-<a name="tvOS-Version-Information" />
+<a name="tvOS-Version-Information"></a>
 
 ## <a name="tvos-version-information"></a>tvOS 버전 정보
 
@@ -64,7 +64,7 @@ Apple TV 앱 스토어에서 릴리스할 새 앱을 만들거나 기존 iOS 앱
 
 [![](itunes-connect-images/connect04.png "tvOS Version Information ready for submission")](itunes-connect-images/connect04.png#lightbox)
 
-<a name="Submitting-for-Review" />
+<a name="Submitting-for-Review"></a>
 
 ## <a name="preparing-to-submit-for-review"></a>검토를 위해 제출 준비
 
@@ -72,7 +72,7 @@ TvOS 앱을 검토를 위해 Apple TV 앱 스토어에 제출할 준비가 되 �
 
 [![](itunes-connect-images/connect05.png "Submit for Review")](itunes-connect-images/connect05.png#lightbox)
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 

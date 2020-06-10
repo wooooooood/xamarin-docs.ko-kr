@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsAbsoluteLayout
-description: 이 문서에서는 AbsoluteLayout 클래스를 사용 하 여 픽셀에 맞는 Ui를 만드는 방법을 설명 합니다 Xamarin.Forms . 이 클래스는 자식 요소를 고유한 크기와 위치에 비례 하거나 절대 값에 비례하여 배치 및 크기를 지정 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d81a80e1f1190cbdffd578024cf9c6db1e7737e1
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139245"
+제목: " Xamarin.Forms AbsoluteLayout" 설명: "이 문서에서는 AbsoluteLayout 클래스를 사용 하 여 픽셀에 맞는 ui를 만드는 방법을 설명 합니다 Xamarin.Forms . 이 클래스는 자식 요소를 자체 크기와 위치 또는 절대 값에 비례하여 배치 하 고 크기를 지정 합니다. "
+assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38: xamarin-forms author: davidbritch: dabritch:: 11/25/2015-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-absolutelayout"></a>Xamarin.FormsAbsoluteLayout
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
@@ -27,14 +13,12 @@ ms.locfileid: "84139245"
 
 이 문서에서는 다음을 설명합니다.
 
-- **[목적](#Purpose)** &ndash; 의 일반적인 용도 `AbsoluteLayout` 입니다.
-- **[사용](#Usage)** &ndash; 를 사용 하 여 원하는 디자인을 구현 하는 방법 `AbsoluteLayout`
-  - **[비례 레이아웃](#Proportional_Layouts)** &ndash; 에서 비례 값이 작동 하는 방식을 이해 `AbsoluteLayout` 합니다.
-  - **[값 지정](#Specifying_Values)** &ndash; 비례 및 절대값을 지정 하는 방법을 이해 합니다.
-  - **[비례 값](#Proportional_Values)** &ndash; 비례 값의 작동 방식을 이해 합니다.
-    - **[절대값](#Absolute_Values)** &ndash; 절대값이 어떻게 작동 하는지 이해 합니다.
-
-<a name="Purpose" />
+- **[목적](#purpose)** &ndash; 의 일반적인 용도 `AbsoluteLayout` 입니다.
+- **[사용](#usage)** &ndash; 를 사용 하 여 원하는 디자인을 구현 하는 방법 `AbsoluteLayout`
+  - **[비례 레이아웃](#proportional-layouts)** &ndash; 에서 비례 값이 작동 하는 방식을 이해 `AbsoluteLayout` 합니다.
+  - **[값 지정](#specifying-values)** &ndash; 비례 및 절대값을 지정 하는 방법을 이해 합니다.
+  - **[비례 값](#proportional-values)** &ndash; 비례 값의 작동 방식을 이해 합니다.
+    - **[절대값](#absolute-values)** &ndash; 절대값이 어떻게 작동 하는지 이해 합니다.
 
 ## <a name="purpose"></a>목적
 
@@ -42,11 +26,7 @@ ms.locfileid: "84139245"
 
 `AbsoluteLayout`뷰 내에서 요소를 배치 해야 하는 모든 위치에서 사용할 수 있으며, 요소를 가장자리에 맞출 때 특히 유용 합니다.
 
-<a name="Usage" />
-
-## <a name="usage"></a>사용량
-
-<a name="Proportional_Layouts" />
+## <a name="usage"></a>사용
 
 ### <a name="proportional-layouts"></a>비례 레이아웃
 
@@ -63,8 +43,6 @@ ms.locfileid: "84139245"
 ![](absolute-layout-images/anchor-center.png "Anchor at Center")
 ![](absolute-layout-images/anchor-end.png "Anchor at End")
 
-<a name="Specifying_Values" />
-
 ### <a name="specifying-values"></a>값 지정
 
 내의 뷰는 `AbsoluteLayout` 다음 네 가지 값을 사용 하 여 배치 됩니다.
@@ -74,7 +52,7 @@ ms.locfileid: "84139245"
 - **너비** &ndash; 뷰의 너비입니다.
 - **높이** &ndash; 뷰의 높이입니다.
 
-이러한 각 값은 [비례](#Proportional_Values) 값 또는 [절대값](#Absolute_Values) 으로 설정할 수 있습니다.
+이러한 각 값은 [비례](#proportional-values) 값 또는 [절대값](#absolute-values) 으로 설정할 수 있습니다.
 
 값은 범위와 플래그의 조합으로 지정 됩니다. `LayoutBounds`는 [`Rectangle`](xref:Xamarin.Forms.Rectangle) 네 가지 값 `x` , 즉, `y` ,,로 구성 `width` 된입니다. `height`
 
@@ -91,7 +69,7 @@ ms.locfileid: "84139245"
 - **Positionproportional** &ndash; 는 `X` 및 `Y` 값을 비례적으로 해석 하는 반면 크기 값은 절대 값으로 해석 됩니다.
 - **Sizeproportional** &ndash; 는 `Width` 및 `Height` 값을 비례 하는 반면, 위치 값은 절대 값으로 해석 합니다.
 
-XAML에서 범위 및 플래그는 속성을 사용 하 여 레이아웃 내의 뷰 정의의 일부로 설정 됩니다 `AbsoluteLayout.LayoutBounds` . 범위는,, 및 값의 쉼표로 구분 된 목록으로 설정 됩니다 `X` `Y` `Width` `Height` . 속성을 사용 하 여 레이아웃의 뷰 선언에도 플래그를 지정 합니다 `AbsoluteLayout.LayoutFlags` . 플래그는 쉼표로 구분 된 목록을 사용 하 여 XAML에서 결합할 수 있습니다. 다음과 같은 예제를 참조하세요.
+XAML에서 범위 및 플래그는 속성을 사용 하 여 레이아웃 내의 뷰 정의의 일부로 설정 됩니다 `AbsoluteLayout.LayoutBounds` . 범위는,, 및 값의 쉼표로 구분 된 목록으로 설정 됩니다 `X` `Y` `Width` `Height` . 속성을 사용 하 여 레이아웃의 뷰 선언에도 플래그를 지정 합니다 `AbsoluteLayout.LayoutFlags` . 플래그는 쉼표로 구분 된 목록을 사용 하 여 XAML에서 결합할 수 있습니다. 다음 예제를 참조하세요.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -169,8 +147,6 @@ public class AbsoluteLayoutExplorationCode : ContentPage
 }
 ```
 
-<a name="Proportional_Values" />
-
 ### <a name="proportional-values"></a>비례 값
 
 비례 값은 레이아웃과 뷰 간의 관계를 정의 합니다. 이 관계는 자식 뷰의 위치 또는 배율 값을 부모 레이아웃의 해당 값에 대 한 비율로 정의 합니다. 이러한 값은 `double` 0에서 1 사이의 값으로 표현 됩니다.
@@ -193,8 +169,6 @@ var label = new Label {Text = "I'm bottom center on every device."};
 AbsoluteLayout.SetLayoutBounds(label, new Rectangle(.5,1,.5,.1));
 AbsoluteLayout.SetLayoutFlags(label, AbsoluteLayoutFlags.All);
 ```
-
-<a name="Absolute_Values" />
 
 ### <a name="absolute-values"></a>절대값
 

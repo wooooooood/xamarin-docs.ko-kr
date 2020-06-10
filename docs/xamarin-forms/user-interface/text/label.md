@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms레이블
-description: 이 문서에서는 Label 클래스를 사용 하 여 Xamarin.Forms 응용 프로그램에 단일 및 여러 줄 텍스트를 표시 하는 방법을 설명 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 46ea0afd3df0490837eb00b837158a26c1e4e479
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136166"
+제목: " Xamarin.Forms 레이블" 설명: "이 문서에서는 Label 클래스를 사용 하 여 Xamarin.Forms 응용 프로그램에 단일 및 여러 줄 텍스트를 표시 하는 방법을 설명 합니다."
+assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91: xamarin-forms author: davidbritch: dabritch:: 04/09/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-label"></a>Xamarin.Forms레이블
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
@@ -54,7 +40,7 @@ var bothLabel = new Label { Text = "This is underlined text with strikethrough."
 ![텍스트 장식이 있는 레이블](label-images/label-textdecorations.png)
 
 > [!NOTE]
-> 텍스트 장식을 인스턴스에 적용할 수도 있습니다 [`Span`](xref:Xamarin.Forms.Span) . 클래스에 대 한 자세한 내용은 `Span` 서식 있는 [텍스트](#Formatted_Text)를 참조 하세요.
+> 텍스트 장식을 인스턴스에 적용할 수도 있습니다 [`Span`](xref:Xamarin.Forms.Span) . 클래스에 대 한 자세한 내용은 `Span` 서식 있는 [텍스트](#formatted-text)를 참조 하세요.
 
 ## <a name="character-spacing"></a>문자 간격
 
@@ -147,8 +133,6 @@ public partial class LabelPage : ContentPage
 
 에 글꼴을 지정 하는 방법에 대 한 자세한 내용은 `Label` [글꼴](~/xamarin-forms/user-interface/text/fonts.md)을 참조 하십시오.
 
-<a name="Truncation_and_Wrapping" />
-
 ## <a name="truncation-and-wrapping"></a>잘림 및 래핑
 
 속성에 의해 노출 되는 여러 가지 방법 중 하나로 한 줄에 맞지 않는 텍스트를 처리 하도록 레이블을 설정할 수 있습니다 `LineBreakMode` . [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode)는 다음 값을 포함 하는 열거형입니다.
@@ -235,8 +219,6 @@ XAML에서 및 기호를 추가로 이스케이프 하면 HTML 문자열을 읽�
 
 > [!IMPORTANT]
 > 에 HTML을 표시 [`Label`](xref:Xamarin.Forms.Label) 하는 것은 기본 플랫폼에서 지원 되는 html 태그로 제한 됩니다.
-
-<a name="Formatted_Text" />
 
 ## <a name="formatted-text"></a>서식 있는 텍스트
 

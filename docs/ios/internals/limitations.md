@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/09/2018
-ms.openlocfilehash: 91513936a0223af0e4220154d0fe65ee0a599a4f
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 003ea31c765bd2610e93e0f85fe995606d55022f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305866"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567400"
 ---
 # <a name="limitations-of-xamarinios"></a>Xamarin.ios의 제한 사항
 
@@ -20,7 +20,7 @@ Xamarin.ios를 사용 하는 응용 프로그램은 정적 코드로 컴파일�
 
 다음은 데스크톱 Mono와 비교할 때 Xamarin.ios의 제한 사항입니다.
 
- <a name="Limited_Generics_Support" />
+ <a name="Limited_Generics_Support"></a>
 
 ## <a name="limited-generics-support"></a>제한 된 제네릭 지원
 
@@ -30,11 +30,11 @@ Mono의 [전체 AOT](https://www.mono-project.com/docs/advanced/aot/#full-aot) �
 
 개발자가 실행 하는 일반적인 문제 중 몇 가지는 다음과 같습니다.
 
- <a name="Generic_Subclasses_of_NSObjects_are_limited" />
+ <a name="Generic_Subclasses_of_NSObjects_are_limited"></a>
 
 ### <a name="generic-subclasses-of-nsobjects-are-limited"></a>NSObjects의 일반 서브 클래스가 제한 됩니다.
 
-현재 xamarin.ios는 제네릭 메서드를 지원 하지 않는 등 NSObject 클래스의 제네릭 서브 클래스를 만들 수 있도록 제한적으로 지원 합니다. 7\.2.1를 사용 하 여 다음과 같이 NSObjects의 제네릭 서브 클래스를 사용할 수 있습니다.
+현재 xamarin.ios는 제네릭 메서드를 지원 하지 않는 등 NSObject 클래스의 제네릭 서브 클래스를 만들 수 있도록 제한적으로 지원 합니다. 7.2.1를 사용 하 여 다음과 같이 NSObjects의 제네릭 서브 클래스를 사용할 수 있습니다.
 
 ```csharp
 class Foo<T> : UIView {
@@ -45,18 +45,18 @@ class Foo<T> : UIView {
 > [!NOTE]
 > NSObjects의 일반 서브 클래스가 가능 하지만 몇 가지 제한 사항이 있습니다. 자세한 내용은 [NSObject 문서의 일반 서브 클래스](~/ios/internals/api-design/nsobject-generics.md) 를 참조 하세요.
 
- <a name="No_Dynamic_Code_Generation" />
+ <a name="No_Dynamic_Code_Generation"></a>
 
 ## <a name="no-dynamic-code-generation"></a>동적 코드 생성 안 함
 
-IOS 커널은 응용 프로그램이 동적으로 코드를 생성 하는 것을 방지 하므로 Xamarin.ios는 동적 코드 생성의 형태를 지원 하지 않습니다. 이러한 개체는 다음과 같습니다.
+IOS 커널은 응용 프로그램이 동적으로 코드를 생성 하는 것을 방지 하므로 Xamarin.ios는 동적 코드 생성의 형태를 지원 하지 않습니다. 여기에는 다음이 포함됩니다.
 
 - System.object를 사용할 수 없습니다.
 - System.object를 지원 하지 않습니다.
 - 형식을 동적으로 만들 수 없습니다 (예: gettype ("MyType ' 1")). 예를 들어, 기존 형식 (예: GetType ("System.string"))을 조회 하는 것은 제대로 작동 합니다.
 - 역방향 콜백은 컴파일 시간에 런타임에 등록 해야 합니다.
 
- <a name="System.Reflection.Emit" />
+ <a name="System.Reflection.Emit"></a>
 
 ### <a name="systemreflectionemit"></a>System.Reflection.Emit
 
@@ -73,7 +73,7 @@ IOS 커널은 응용 프로그램이 동적으로 코드를 생성 하는 것을
 
 ### <a name="using-delegates-to-call-native-functions"></a>대리자를 사용 하 여 네이티브 함수 호출
 
-C# 대리자를 통해 네이티브 함수를 호출 하려면 대리자의 선언이 다음 특성 중 하나를 사용 하 여 데코 레이트 되어야 합니다.
+C # 대리자를 통해 네이티브 함수를 호출 하려면 대리자의 선언이 다음 특성 중 하나를 사용 하 여 데코 레이트 되어야 합니다.
 
 - [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (플랫폼 간 및 .NET Standard 1.1 +와 호환 되므로 선호 됨)
 - [MonoNativeFunctionWrapperAttribute](xref:ObjCRuntime.MonoNativeFunctionWrapperAttribute)
@@ -84,24 +84,24 @@ C# 대리자를 통해 네이티브 함수를 호출 하려면 대리자의 선�
 System.ExecutionEngineException: Attempting to JIT compile method '(wrapper managed-to-native) YourClass/YourDelegate:wrapper_aot_native(object,intptr,intptr)' while running in aot-only mode.
 ```
 
- <a name="Reverse_Callbacks" />
+ <a name="Reverse_Callbacks"></a>
 
 ### <a name="reverse-callbacks"></a>역방향 콜백
 
-표준 Mono에서는 함수 포인터 대신 대리자 인스턴스 C# 를 비관리 코드에 전달할 수 있습니다. 런타임은 일반적으로 이러한 함수 포인터를 관리 되지 않는 코드가 관리 코드로 다시 호출할 수 있도록 하는 작은 썽크로 변환 합니다.
+표준 Mono에서는 함수 포인터 대신 c # 대리자 인스턴스를 비관리 코드에 전달할 수 있습니다. 런타임은 일반적으로 이러한 함수 포인터를 관리 되지 않는 코드가 관리 코드로 다시 호출할 수 있도록 하는 작은 썽크로 변환 합니다.
 
 Mono에서 이러한 브리지는 Just-in-time 컴파일러에 의해 구현 됩니다. IPhone에 필요한 사전 컴파일러를 사용 하는 경우이 시점에는 두 가지 중요 한 제한이 있습니다.
 
 - 모든 콜백 메서드에 [MonoPInvokeCallbackAttribute](xref:ObjCRuntime.MonoPInvokeCallbackAttribute) 를 사용 하 여 플래그를 지정 해야 합니다.
 - 메서드는 정적 메서드 여야 하며 인스턴스 메서드를 지원 하지 않습니다.
 
-<a name="No_Remoting" />
+<a name="No_Remoting"></a>
 
 ## <a name="no-remoting"></a>원격이 없음
 
 Xamarin.ios에서 원격 스택을 사용할 수 없습니다.
 
- <a name="Runtime_Disabled_Features" />
+ <a name="Runtime_Disabled_Features"></a>
 
 ## <a name="runtime-disabled-features"></a>런타임 사용 안 함 기능
 
@@ -114,7 +114,7 @@ Mono의 iOS 런타임에서 다음 기능이 사용 하지 않도록 설정 되�
 - JIT 엔진
 - 메타 데이터 검증 도구 (JIT가 없기 때문)
 
- <a name=".NET_API_Limitations" />
+ <a name=".NET_API_Limitations"></a>
 
 ## <a name="net-api-limitations"></a>.NET API 제한 사항
 

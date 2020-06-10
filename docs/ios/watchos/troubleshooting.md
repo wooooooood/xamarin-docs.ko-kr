@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 06524163fadc4300d55ec90f35723fd1561bb8a0
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 17ccc67b2976b93fbb290a1d2425168cab50228e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305596"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84568791"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS 문제 해결
 
@@ -27,25 +27,25 @@ ms.locfileid: "79305596"
 
 - [명령줄에서 WatchApp를 시작](#command_line)합니다.
 
-<a name="knownissues" />
+<a name="knownissues"></a>
 
 ## <a name="known-issues"></a>알려진 문제
 
 ### <a name="general"></a>일반
 
-<a name="deploy" />
+<a name="deploy"></a>
 
 - 이전 버전의 Mac용 Visual Studio 잘못 된 **설정** 아이콘 중 하나를 88x88 픽셀로 잘못 표시 합니다. 그러면 앱 스토어에 제출 하려고 할 때 **아이콘 오류가** 표시 되지 않습니다.
-    이 아이콘은 87x87 픽셀 ( **@3x** 레 티 나 화면의 경우 29 단위) 이어야 합니다. Mac용 Visual Studio에서이 문제를 해결할 수 없습니다. Xcode에서 이미지 자산을 편집 하거나 **콘텐츠. json** 파일을 수동으로 편집 합니다.
+    이 아이콘은 87x87 픽셀 (레 티 나 화면의 경우 29 단위) 이어야 합니다 **@3x** . Mac용 Visual Studio에서이 문제를 해결할 수 없습니다. Xcode에서 이미지 자산을 편집 하거나 **콘텐츠. json** 파일을 수동으로 편집 합니다.
 
 - Watch 확장 프로젝트의 **info.plist > WKApp 번들** Id가 watch 앱의 **번들 id**와 일치 하도록 [올바르게 설정](~/ios/watchos/get-started/project-references.md) 되지 않은 경우 디버거는 연결에 실패 하 Mac용 Visual Studio 고 *"디버거가 연결 되기를 기다리는 중입니다." 라는*메시지와 함께 대기 합니다.
 
-- 디버깅은 **알림** 모드에서 지원 되지만 안정적이 지 않을 수 있습니다. 작업을 다시 시도 하는 경우도 있습니다. Watch 앱의 **info.plist** `WKCompanionAppBundleIdentifier`가 iOS 부모/컨테이너 앱의 번들 식별자와 일치 하도록 설정 되었는지 확인 합니다 (iPhone에서 실행 되는 것으로 확인 됨).
+- 디버깅은 **알림** 모드에서 지원 되지만 안정적이 지 않을 수 있습니다. 작업을 다시 시도 하는 경우도 있습니다. Watch 앱의 **info.plist** `WKCompanionAppBundleIdentifier` 가 iOS 부모/컨테이너 앱의 번들 식별자 (즉, iPhone에서 실행 되는 앱)와 일치 하도록 설정 되었는지 확인 합니다.
 
 - iOS 디자이너에는 개요 또는 알림 인터페이스 컨트롤러에 대 한 진입점 화살표가 표시 되지 않습니다.
 
-- 스토리 보드에 `WKNotificationControllers` 두 개를 추가할 수 없습니다.
-    해결 방법: 스토리 보드 XML의 `notificationCategory` 요소는 항상 동일한 `id`로 삽입 됩니다. 이 문제를 해결 하려면 둘 이상의 알림 컨트롤러를 추가 하 고, 텍스트 편집기에서 스토리 보드 파일을 열고, `id` 요소를 고유 하 게 변경할 수 있습니다.
+- Storyboard에는 두 개를 추가할 수 없습니다 `WKNotificationControllers` .
+    해결 방법: `notificationCategory` 스토리 보드 XML의 요소는 항상 같은로 삽입 됩니다 `id` . 이 문제를 해결 하려면 둘 이상의 알림 컨트롤러를 추가 하 고 텍스트 편집기에서 스토리 보드 파일을 연 다음 `id` 요소를 고유 하 게 변경할 수 있습니다.
 
     [![](troubleshooting-images/duplicate-id-sml.png "Opening the storyboard file in a text editor and manually change the id element to be unique")](troubleshooting-images/duplicate-id.png#lightbox)
 
@@ -56,7 +56,7 @@ ms.locfileid: "79305596"
 
 Watch Kit에 대 한 iOS Designer 지원에서는 솔루션을 올바르게 구성 *해야* 합니다. 프로젝트 참조를 설정 하지 않은 경우 ( [참조를 설정 하는 방법](~/ios/watchos/get-started/project-references.md)참조) 디자인 화면이 제대로 작동 하지 않습니다.
 
-<a name="noalpha" />
+<a name="noalpha"></a>
 
 ## <a name="removing-the-alpha-channel-from-icon-images"></a>아이콘 이미지에서 알파 채널 제거
 
@@ -80,20 +80,20 @@ with an alpha channel. Icons should not have an alpha channel.
 
 4. 이제 아이콘 이미지가 Apple의 유효성 검사를 통과 해야 합니다.
 
-<a name="add" />
+<a name="add"></a>
 
 ## <a name="manually-adding-interface-controller-files"></a>수동으로 인터페이스 컨트롤러 파일 추가
 
 > [!IMPORTANT]
-> Xamarin의 WatchKit 지원에는 iOS designer에서 조사식 storyboard 디자인 (Mac용 Visual Studio 및 Visual Studio 둘 다)이 포함 되며, 아래에 설명 된 단계는 필요 하지 않습니다. Mac용 Visual Studio 속성 패드에서 인터페이스 컨트롤러에 클래스 이름을 지정 하기만 하면 C# 코드 파일이 자동으로 생성 됩니다.
+> Xamarin의 WatchKit 지원에는 iOS designer에서 조사식 storyboard 디자인 (Mac용 Visual Studio 및 Visual Studio 둘 다)이 포함 되며, 아래에 설명 된 단계는 필요 하지 않습니다. Mac용 Visual Studio 속성 패드에서 인터페이스 컨트롤러에 클래스 이름을 지정 하기만 하면 c # 코드 파일이 자동으로 생성 됩니다.
 
-Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 앱에 대 한 새 인터페이스 컨트롤러를 만들고 Xcode와 동기화를 사용 하도록 설정 하 여에서 C#콘센트 및 작업을 사용할 수 있도록 합니다.
+Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 앱에 대 한 새 인터페이스 컨트롤러를 만들고 Xcode와 동기화를 사용 하도록 설정 하 여 c #에서 콘센트 및 작업을 사용할 수 있도록 합니다.
 
 1. **Xcode Interface Builder**에서 watch 앱의 **인터페이스. storyboard** 를 엽니다.
 
     ![](troubleshooting-images/add-6.png "Opening the storyboard in Xcode Interface Builder")
 
-2. 새 `InterfaceController`를 스토리 보드로 끌어 옵니다.
+2. 새를 `InterfaceController` 스토리 보드로 끌어 옵니다.
 
     ![](troubleshooting-images/add-1.png "A InterfaceController")
 
@@ -101,7 +101,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
     ![](troubleshooting-images/add-2.png "A button in the layout")
 
-4. 스토리 보드를 닫고 Mac용 Visual Studio로 돌아갑니다. **Watch** 앱 확장 C# 프로젝트에 새 파일 **MyInterfaceController.cs** (또는 원하는 이름을 원하는 대로)를 만듭니다 (storyboard가 있는 watch 앱 자체는 아님). 네임 스페이스, classname 및 생성자 이름을 업데이트 하는 다음 코드를 추가 합니다.
+4. 스토리 보드를 닫고 Mac용 Visual Studio로 돌아갑니다. **Watch 앱 확장** 프로젝트에서 새 c # 파일 **MyInterfaceController.cs** (또는 원하는 이름을 원하는 대로)를 만듭니다 (storyboard가 있는 WATCH 앱 자체는 아님). 네임 스페이스, classname 및 생성자 이름을 업데이트 하는 다음 코드를 추가 합니다.
 
     ```csharp
     using System;
@@ -137,7 +137,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
     }
     ```
 
-5. C# **Watch 앱 확장** 프로젝트에서 다른 새 파일 **MyInterfaceController.designer.cs** 를 만들고 아래 코드를 추가 합니다. 네임 스페이스, classname 및 `Register` 특성을 업데이트 해야 합니다.
+5. **Watch 앱 확장** 프로젝트에서 다른 새 c # 파일 **MyInterfaceController.designer.cs** 을 만들고 아래 코드를 추가 합니다. 네임 스페이스, classname 및 특성을 업데이트 해야 합니다 `Register` .
 
     ```csharp
     using Foundation;
@@ -156,17 +156,17 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
     ```
 
     > [!TIP]
-    > (선택 사항)이 파일을 Mac용 Visual Studio Solution Pad의 다른 C# 파일로 끌어서이 파일을 첫 번째 파일의 자식 노드로 만들 수 있습니다. 그러면 다음과 같이 표시 됩니다.
+    > (선택 사항)이 파일을 Mac용 Visual Studio Solution Pad의 다른 c # 파일로 끌어서이 파일을 첫 번째 파일의 자식 노드로 만들 수 있습니다. 그러면 다음과 같이 표시 됩니다.
 
     ![](troubleshooting-images/add-5.png "The Solution pad")
 
-6. Xcode 동기화가 사용 된 `Register` 특성을 통해 새 클래스를 인식할 수 있도록 **빌드 > 모두 빌드** 를 선택 합니다.
+6. Xcode 동기화가 사용 된 새 클래스 (특성을 통해)를 인식할 수 있도록 **빌드 > 모두 빌드** 를 선택 `Register` 합니다.
 
 7. Watch 앱 스토리 보드 파일을 마우스 오른쪽 단추로 클릭 하 고 **> Xcode Interface Builder를 사용**하 여 열기를 선택 하 여 스토리 보드를 다시 엽니다.
 
     ![](troubleshooting-images/add-6.png "Opening the storyboard in Interface Builder")
 
-8. 새 인터페이스 컨트롤러를 선택 하 고 위에서 정의한 클래스 이름 (예:)을 제공 합니다. `MyInterfaceController`입니다.
+8. 새 인터페이스 컨트롤러를 선택 하 고 위에서 정의한 클래스 이름 (예:)을 제공 합니다. `MyInterfaceController`.
     모든 항목이 제대로 작동 하는 경우 **클래스:** 드롭다운 목록에 자동으로 표시 되며 여기에서 선택할 수 있습니다.
 
     ![](troubleshooting-images/add-4.png "Setting a custom class")
@@ -206,9 +206,9 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
     }
     ```
 
-이제!에서 C#컨트롤을 참조 하거나 작업을 구현할 수 있습니다.
+이제 c #에서 컨트롤을 참조 하거나 작업을 구현할 수 있습니다.
 
-<a name="command_line" />
+<a name="command_line"></a>
 
 ## <a name="launching-the-watch-app-from-the-command-line"></a>명령줄에서 Watch 앱 시작
 
@@ -224,9 +224,9 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 --launchsimwatch=/path/to/watchkitproject/watchsample/bin/iPhoneSimulator/Debug/watchsample.app
 ```
 
-앱을 반영 하기 위해 업데이트 해야 하는 매개 변수는 `launchsimwatch`.
+앱을 반영 하기 위해 업데이트 해야 하는 매개 변수는 `launchsimwatch` 다음과 같습니다.
 
-### <a name="--launchsimwatch"></a>--launchsimwatch
+### <a name="--launchsimwatch"></a>--launcha watch
 
 *Watch 앱 및 확장을 포함 하는 iOS 앱에 대 한*기본 앱 번들의 전체 경로입니다.
 
@@ -241,7 +241,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 ## <a name="notification-mode"></a>알림 모드
 
-앱의 [ **알림** 모드](~/ios/watchos/platform/notifications.md)를 테스트 하려면 `watchlaunchmode` 매개 변수를 `Notification`로 설정 하 고 테스트 알림 페이로드가 포함 된 JSON 파일에 대 한 경로를 제공 합니다.
+앱의 [ **알림** 모드](~/ios/watchos/platform/notifications.md)를 테스트 하려면 `watchlaunchmode` 매개 변수를로 설정 하 `Notification` 고 테스트 알림 페이로드가 포함 된 JSON 파일에 대 한 경로를 제공 합니다.
 
 알림 모드에는 페이로드 매개 변수가 *필요* 합니다.
 
@@ -257,7 +257,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 ### <a name="--sdkroot"></a>--sdkroot
 
-필수 사항입니다. Xcode에 대 한 경로를 지정 합니다 (6.2 이상).
+필수 요소. Xcode에 대 한 경로를 지정 합니다 (6.2 이상).
 
 예제:
 
@@ -265,7 +265,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
  --sdkroot /Applications/Xcode.app/Contents/Developer/
 ```
 
-### <a name="--device"></a>--device
+### <a name="--device"></a>--장치
 
 실행할 시뮬레이터 장치입니다. 이는 특정 장치의 udid를 사용 하거나 런타임 및 장치 유형의 조합을 사용 하 여 두 가지 방법으로 지정할 수 있습니다.
 

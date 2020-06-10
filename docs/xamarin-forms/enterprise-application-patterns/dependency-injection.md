@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 32beda28cb4db961abcbe74c26d38c70c8188a45
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139232"
+제목: "종속성 주입" 설명: "이 장은 eShopOnContainers mobile 앱에서 종속성 주입을 사용 하 여 이러한 형식에 종속 된 코드에서 구체적인 형식을 분리 하는 방법에 대해 설명 합니다."
+assetid: a150f2d1-06f8-4aed-ab4e-7a847d69f103: xamarin-forms author: davidbritch: dabritch:: 11/04/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="dependency-injection"></a>종속성 주입
 
 일반적으로 클래스 생성자는 개체를 인스턴스화할 때 호출 되며, 개체가 필요로 하는 모든 값은 생성자에 인수로 전달 됩니다. 이는 종속성 주입의 한 예제 이며 특히 *생성자 주입*이라고 합니다. 개체에 필요한 종속성이 생성자에 삽입 됩니다.
@@ -24,8 +10,6 @@ ms.locfileid: "84139232"
 종속성을 인터페이스 형식으로 지정 하 여 종속성 주입을 통해 이러한 형식에 종속 된 코드에서 구체적인 형식을 분리할 수 있습니다. 일반적으로 인터페이스와 추상 형식 간의 등록 및 매핑 목록과 이러한 형식을 구현 하거나 확장 하는 구체적인 형식을 포함 하는 컨테이너를 사용 합니다.
 
 *속성 setter 삽입*및 *메서드 호출 삽입*과 같은 다른 유형의 종속성 주입도 있지만 일반적으로는 표시 되지 않습니다. 따라서이 챕터는 종속성 주입 컨테이너를 사용 하 여 생성자 삽입을 수행 하는 경우에만 중점을 둡니다.
-
-<a name="introduction_to_dependency_injection" />
 
 ## <a name="introduction-to-dependency-injection"></a>종속성 주입 소개
 
@@ -118,8 +102,6 @@ _container.Register<ProfileViewModel>();
 
 기본적으로 각 구체적 클래스 등록은 모든 종속 개체가 새 인스턴스를 받도록 다중 인스턴스로 구성 됩니다. 따라서 `ProfileViewModel` 이 확인 되 면 새 인스턴스가 만들어지고 컨테이너에서 필요한 종속성이 삽입 됩니다.
 
-<a name="resolution" />
-
 ## <a name="resolution"></a>해결 방법
 
 형식을 등록 한 후에는 종속성으로 확인 하거나 삽입할 수 있습니다. 형식을 확인 하 고 컨테이너가 새 인스턴스를 만들어야 하는 경우 모든 종속성을 인스턴스에 삽입 합니다.
@@ -136,7 +118,7 @@ _container.Register<ProfileViewModel>();
 var requestProvider = _container.Resolve<IRequestProvider>();
 ```
 
-이 예제에서는 TinyIoC에 `IRequestProvider` 종속성과 함께 형식에 대 한 구체적인 형식을 확인 하 라는 메시지가 표시 됩니다. 일반적으로 `Resolve` 메서드는 특정 형식의 인스턴스가 필요할 때 호출 됩니다. 확인 된 개체의 수명을 제어 하는 방법에 대 한 자세한 내용은 [확인 된 개체의 수명 관리](#managing_the_lifetime_of_resolved_objects)를 참조 하세요.
+이 예제에서는 TinyIoC에 `IRequestProvider` 종속성과 함께 형식에 대 한 구체적인 형식을 확인 하 라는 메시지가 표시 됩니다. 일반적으로 `Resolve` 메서드는 특정 형식의 인스턴스가 필요할 때 호출 됩니다. 확인 된 개체의 수명을 제어 하는 방법에 대 한 자세한 내용은 [확인 된 개체의 수명 관리](#managing-the-lifetime-of-resolved-objects)를 참조 하세요.
 
 다음 코드 예제에서는 eShopOnContainers 모바일 앱이 뷰 모델 유형 및 해당 종속성을 인스턴스화하는 방법을 보여 줍니다.
 
@@ -144,12 +126,10 @@ var requestProvider = _container.Resolve<IRequestProvider>();
 var viewModel = _container.Resolve(viewModelType);
 ```
 
-이 예에서는 요청 된 뷰 모델에 대 한 뷰 모델 유형을 확인 하도록 TinyIoC를 요청 하 고, 컨테이너는 종속성도 확인 합니다. 형식을 확인할 때 `ProfileViewModel` 확인할 종속성은 `ISettingsService` 개체와 `IOrderService` 개체입니다. 및 클래스를 등록할 때 인터페이스 등록이 사용 `SettingsService` 되었으므로 `OrderService` TinyIoC는 및 클래스에 대 한 singleton 인스턴스를 반환한 `SettingsService` `OrderService` 다음 클래스의 생성자에 전달 `ProfileViewModel` 합니다. EShopOnContainers 모바일 앱에서 모델을 생성 하 고 보기에 연결 하는 방법에 대 한 자세한 내용은 [뷰 모델 로케이터를 사용 하 여 자동으로 뷰 모델 만들기](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator)를 참조 하세요.
+이 예에서는 요청 된 뷰 모델에 대 한 뷰 모델 유형을 확인 하도록 TinyIoC를 요청 하 고, 컨테이너는 종속성도 확인 합니다. 형식을 확인할 때 `ProfileViewModel` 확인할 종속성은 `ISettingsService` 개체와 `IOrderService` 개체입니다. 및 클래스를 등록할 때 인터페이스 등록이 사용 `SettingsService` 되었으므로 `OrderService` TinyIoC는 및 클래스에 대 한 singleton 인스턴스를 반환한 `SettingsService` `OrderService` 다음 클래스의 생성자에 전달 `ProfileViewModel` 합니다. EShopOnContainers 모바일 앱에서 모델을 생성 하 고 보기에 연결 하는 방법에 대 한 자세한 내용은 [뷰 모델 로케이터를 사용 하 여 자동으로 뷰 모델 만들기](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically-creating-a-view-model-with-a-view-model-locator)를 참조 하세요.
 
 > [!NOTE]
 > 컨테이너를 사용하여 형식을 등록하고 확인하는 경우, 특히 앱의 각 페이지 탐색에 대한 종속성을 다시 생성하는 경우 컨테이너의 리플렉션 사용으로 인해 성능비용이 발생합니다. 종속성이 많거나 깊은 경우에는 생성 비용이 많이 증가할 수 있습니다.
-
-<a name="managing_the_lifetime_of_resolved_objects" />
 
 ## <a name="managing-the-lifetime-of-resolved-objects"></a>확인 된 개체의 수명 관리
 

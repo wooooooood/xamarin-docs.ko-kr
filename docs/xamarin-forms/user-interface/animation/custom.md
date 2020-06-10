@@ -1,29 +1,15 @@
 ---
-title: 사용자 지정 애니메이션Xamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4fb9c94c39823e4ce6d60be6b9dbef1294321a63
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137230"
+제목: "설명:"의 사용자 지정 애니메이션 Xamarin.Forms :이 문서에서는 Xamarin.ios 애니메이션 클래스를 사용 하 여 애니메이션을 만들고 취소 하 고, 여러 애니메이션을 동기화 하 고, 기존 애니메이션 메서드에서 애니메이션을 적용 하지 않는 속성에 애니메이션을 적용 하는 사용자 지정 애니메이션을 만드는 방법을 보여 줍니다. "
+assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907: xamarin-forms author: davidbritch: dabritch:: 02/10/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="custom-animations-in-xamarinforms"></a>사용자 지정 애니메이션Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
 
 _애니메이션 클래스는 Xamarin.Forms ViewExtensions 클래스의 확장 메서드를 사용 하 여 하나 이상의 애니메이션 개체를 만드는 모든 애니메이션의 빌딩 블록입니다. 이 문서에서는 Animation 클래스를 사용 하 여 애니메이션을 만들고 취소 하 고, 여러 애니메이션을 동기화 하 고, 기존 애니메이션 메서드에서 애니메이션을 적용 하지 않는 속성에 애니메이션을 적용 하는 사용자 지정 애니메이션을 만드는 방법을 보여 줍니다._
 
-`Animation`애니메이션 효과가 적용 되는 속성의 시작 값과 끝 값을 비롯 하 여 개체를 만들 때 여러 매개 변수를 지정 해야 하며, 속성의 값을 변경 하는 콜백입니다. `Animation`개체는 실행 및 동기화 할 수 있는 자식 애니메이션의 컬렉션을 유지할 수도 있습니다. 자세한 내용은 [자식 애니메이션](#child)(영문)을 참조 하세요.
+`Animation`애니메이션 효과가 적용 되는 속성의 시작 값과 끝 값을 비롯 하 여 개체를 만들 때 여러 매개 변수를 지정 해야 하며, 속성의 값을 변경 하는 콜백입니다. `Animation`개체는 실행 및 동기화 할 수 있는 자식 애니메이션의 컬렉션을 유지할 수도 있습니다. 자세한 내용은 [자식 애니메이션](#child-animations)(영문)을 참조 하세요.
 
 자식 애니메이션이 있을 수도 있고 포함 하지 않을 수 있는 클래스를 사용 하 여 만든 애니메이션을 실행 하는 [`Animation`](xref:Xamarin.Forms.Animation) 것은 [ `Commit` ] (f: Xamarin.Forms . animation. 커밋 ()을 호출 하 여 수행 됩니다 Xamarin.Forms . System.windows.media.animation.ianimatable>, System.string, 시스템. uint32, Xamarin.Forms . 감속/가속, system.string, system.string}, system.xml {system.string}) 메서드를 실행 합니다. 이 메서드는 애니메이션의 기간 및 다른 항목 중에서 애니메이션을 반복할지 여부를 제어 하는 콜백을 지정 합니다.
 
@@ -61,8 +47,6 @@ animation.Commit (this, "SimpleAnimation", 16, 2000, Easing.Linear, (v, c) => im
 
 > [!NOTE]
 > 서로 독립적으로 실행 되는 동시 애니메이션은 각 `Animation` 애니메이션에 대 한 개체를 만든 다음 `Commit` 각 애니메이션에서 메서드를 호출 하 여 생성할 수 있습니다.
-
-<a name="child" />
 
 ### <a name="child-animations"></a>자식 애니메이션
 

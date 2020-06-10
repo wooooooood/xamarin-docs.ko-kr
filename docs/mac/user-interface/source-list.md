@@ -1,58 +1,58 @@
 ---
 title: Xamarin.ios의 원본 목록
-description: 이 문서에서는 Xamarin.ios 응용 프로그램의 원본 목록 작업에 대해 설명 합니다. Xcode에서 소스 목록을 만들고 유지 관리 하는 방법과 Interface Builder 하 고 코드에서 C# 상호 작용 하는 방법을 설명 합니다.
+description: '이 문서에서는 Xamarin.ios 응용 프로그램의 원본 목록 작업에 대해 설명 합니다. Xcode에서 소스 목록을 만들고 유지 관리 하는 방법을 설명 하 고 c # 코드에서 Interface Builder 하 고 상호 작용 하는 방법을 설명 합니다.'
 ms.prod: xamarin
 ms.assetid: 651A3649-5AA8-4133-94D6-4873D99F7FCC
 ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 33c94e933a2e69ca6896ef2adba44c4681be9741
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: aed11ff8794f79ff7e16fbb8401a95a5697d2d4b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030019"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572067"
 ---
 # <a name="source-lists-in-xamarinmac"></a>Xamarin.ios의 원본 목록
 
-_이 문서에서는 Xamarin.ios 응용 프로그램의 원본 목록 작업에 대해 설명 합니다. Xcode에서 소스 목록을 만들고 유지 관리 하는 방법과 Interface Builder 하 고 코드에서 C# 상호 작용 하는 방법을 설명 합니다._
+_이 문서에서는 Xamarin.ios 응용 프로그램의 원본 목록 작업에 대해 설명 합니다. Xcode에서 소스 목록을 만들고 유지 관리 하는 방법을 설명 하 고 c # 코드에서 Interface Builder 하 고 상호 작용 하는 방법을 설명 합니다._
 
-Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목표-C* 및 *Xcode* 에서 작업 하는 개발자가 동일한 소스 목록에 액세스할 수 있습니다. Xamarin.ios는 Xcode와 직접 통합 되므로 Xcode의 _Interface Builder_ 를 사용 하 여 소스 목록을 만들고 유지 관리 하거나 (필요에 따라 코드에서 C# 직접 만들 수 있습니다.)
+Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 *목표-C* 및 *Xcode* 에서 작업 하는 개발자가 동일한 소스 목록에 액세스할 수 있습니다. Xamarin.ios는 Xcode와 직접 통합 되므로 Xcode의 _Interface Builder_ 를 사용 하 여 소스 목록을 만들고 유지 관리 하거나 (필요에 따라 c # 코드에서 직접 만들 수 있습니다.)
 
 원본 목록은 Finder 또는 iTunes의 사이드 표시줄과 같은 동작의 원본을 표시 하는 데 사용 되는 특별 한 유형의 개요 뷰입니다.
 
 [![](source-list-images/source05.png "An example source list")](source-list-images/source05.png#lightbox)
 
-이 문서에서는 Xamarin.ios 응용 프로그램의 원본 목록 작업에 대 한 기본 사항을 다룹니다. [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 사용 하는 것이 가장 좋습니다. 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하 고,에서 사용할 주요 개념 및 기술을 설명 하 고 있습니다. 이 문서를 참조 하세요.
+이 문서에서는 Xamarin.ios 응용 프로그램의 원본 목록 작업에 대 한 기본 사항을 다룹니다. 이 문서에서 사용할 주요 개념 및 기술에 대해 설명 하는 대로 [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 소개 하 고 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하는 것이 좋습니다.
 
-[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [목적에 따라 클래스/메서드 노출 C# ](~/mac/internals/how-it-works.md) 섹션을 살펴볼 수 있습니다. 여기에서는 C# 클래스를 목표에 연결 하는 데 사용 되는`Register`및`Export`명령을 설명 합니다. 개체 및 UI 요소
+[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서에서 c [# 클래스/메서드를 목표로](~/mac/internals/how-it-works.md) 표시 하는 방법에 대해 살펴볼 수 있습니다 `Register` . c `Export` # 클래스를 객관적인 개체 및 UI 요소에 연결 하는 데 사용 되는 및 명령에 대해서도 설명 합니다.
 
-<a name="Introduction_to_Outline_Views" />
+<a name="Introduction_to_Outline_Views"></a>
 
 ## <a name="introduction-to-source-lists"></a>원본 목록 소개
 
 위에서 설명한 것 처럼 원본 목록은 Finder 또는 iTunes의 사이드 표시줄과 같은 동작의 원본을 표시 하는 데 사용 되는 특별 한 유형의 개요 뷰입니다. 원본 목록은 사용자가 계층적 데이터의 행을 확장 하거나 축소할 수 있도록 하는 테이블 유형입니다. 테이블 뷰와 달리 원본 목록의 항목은 단순 목록에 있지 않으며 하드 드라이브의 파일 및 폴더와 같은 계층 구조로 구성 됩니다. 소스 목록의 항목에 다른 항목이 포함 되어 있으면 사용자가 확장 하거나 축소할 수 있습니다.
 
-원본 목록은 테이블 뷰 (`NSTableView`)의 서브 클래스 이며, 부모 클래스에서 대부분의 동작을 상속 하는`NSOutlineView`(스타일 지정 된 개요 뷰)입니다. 따라서 개요 보기에서 지원 되는 많은 작업은 원본 목록 에서도 지원 됩니다. Xamarin.ios 응용 프로그램은 이러한 기능을 제어할 수 있으며, 코드 또는 Interface Builder에서 소스 목록의 매개 변수를 구성 하 여 특정 작업을 허용 하거나 허용 하지 않을 수 있습니다.
+원본 목록은 특별히 스타일을 지정 하는 개요 보기 ()로 서, `NSOutlineView` 자체는 테이블 뷰 ()의 서브 클래스 이며 `NSTableView` , 그에 따라 부모 클래스에서 대부분의 동작을 상속 합니다. 따라서 개요 보기에서 지원 되는 많은 작업은 원본 목록 에서도 지원 됩니다. Xamarin.ios 응용 프로그램은 이러한 기능을 제어할 수 있으며, 코드 또는 Interface Builder에서 소스 목록의 매개 변수를 구성 하 여 특정 작업을 허용 하거나 허용 하지 않을 수 있습니다.
 
-원본 목록은 자체 데이터를 저장 하지 않으며, 대신 데이터 원본 (`NSOutlineViewDataSource`)을 사용 하 여 필요한 경우 필요한 행과 열을 모두 제공 합니다.
+원본 목록은 자체 데이터를 저장 하지 않으며, 대신 데이터 원본 ()을 사용 하 여 필요한 경우 `NSOutlineViewDataSource` 필요한 행과 열을 모두 제공 합니다.
 
-개요 형식을 지원 하 여 기능, 항목 선택 및 편집, 사용자 지정 추적, 개별 항목에 대 한 사용자 지정 보기를 선택할 수 있도록`NSOutlineViewDelegate`(개요 뷰 대리자)의 서브 클래스를 제공 하 여 원본 목록의 동작을 사용자 지정할 수 있습니다.
+개요 `NSOutlineViewDelegate` 유형 ()을 지원 하 여 기능, 항목 선택 및 편집, 사용자 지정 추적, 개별 항목에 대 한 사용자 지정 보기를 선택할 수 있도록 개요 뷰 대리자 ()의 하위 클래스를 제공 하 여 원본 목록의 동작을 사용자 지정할 수 있습니다.
 
 원본 목록에서는 대부분의 동작 및 기능을 테이블 뷰와 개요 보기와 공유 하므로이 문서를 계속 하기 전에 [테이블 보기](~/mac/user-interface/table-view.md) 및 [개요 보기](~/mac/user-interface/outline-view.md) 문서를 진행 하는 것이 좋습니다.
 
-<a name="Working_with_Source_Lists" />
+<a name="Working_with_Source_Lists"></a>
 
 ## <a name="working-with-source-lists"></a>원본 목록 작업
 
 원본 목록은 Finder 또는 iTunes의 사이드 표시줄과 같은 동작의 원본을 표시 하는 데 사용 되는 특별 한 유형의 개요 뷰입니다. 개요 뷰와 달리 Interface Builder에서 원본 목록을 정의 하기 전에 Xamarin.ios에서 지원 클래스를 만들어 보겠습니다.
 
-먼저 원본 목록에 대 한 데이터를 저장할 새 `SourceListItem` 클래스를 만들어 보겠습니다. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 파일** ...을 선택 합니다. **일반** > **빈 클래스**를 선택 하 고 **이름** 에 `SourceListItem`를 입력 한 다음 **새로 만들기** 단추를 클릭 합니다.
+먼저 `SourceListItem` 원본 목록에 대 한 데이터를 보유할 새 클래스를 만들어 보겠습니다. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 파일** 추가 ...를 선택 합니다. **일반**  >  **빈 클래스**를 선택 하 고 이름으로를 입력 한 다음 `SourceListItem` **새로 만들기** 단추를 클릭 합니다. **Name**
 
 [![](source-list-images/source01.png "Adding an empty class")](source-list-images/source01.png#lightbox)
 
-`SourceListItem.cs` 파일을 다음과 같이 만듭니다. 
+`SourceListItem.cs`파일이 다음과 같이 표시 되도록 합니다. 
 
 ```csharp
 using System;
@@ -270,7 +270,7 @@ namespace MacOutlines
 }
 ```
 
-**솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 파일** ...을 선택 합니다. **일반** > **빈 클래스**를 선택 하 고 **이름** 에 `SourceListDataSource`를 입력 한 다음 **새로 만들기** 단추를 클릭 합니다. `SourceListDataSource.cs` 파일을 다음과 같이 만듭니다.
+**솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 파일** 추가 ...를 선택 합니다. **일반**  >  **빈 클래스**를 선택 하 고 이름으로를 입력 한 `SourceListDataSource` 다음 **새로 만들기** 단추를 클릭 합니다. **Name** `SourceListDataSource.cs`파일이 다음과 같이 표시 되도록 합니다.
 
 ```csharp
 using System;
@@ -354,7 +354,7 @@ namespace MacOutlines
 
 그러면 원본 목록에 대 한 데이터가 제공 됩니다.
 
-**솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 파일** ...을 선택 합니다. **일반** > **빈 클래스**를 선택 하 고 **이름** 에 `SourceListDelegate`를 입력 한 다음 **새로 만들기** 단추를 클릭 합니다. `SourceListDelegate.cs` 파일을 다음과 같이 만듭니다.
+**솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 파일** 추가 ...를 선택 합니다. **일반**  >  **빈 클래스**를 선택 하 고 이름으로를 입력 한 `SourceListDelegate` 다음 **새로 만들기** 단추를 클릭 합니다. **Name** `SourceListDelegate.cs`파일이 다음과 같이 표시 되도록 합니다.
 
 ```csharp
 using System;
@@ -446,7 +446,7 @@ namespace MacOutlines
 
 그러면 원본 목록의 동작이 제공 됩니다.
 
-마지막으로 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 파일** ...을 선택 합니다. **일반** > **빈 클래스**를 선택 하 고 **이름** 에 `SourceListView`를 입력 한 다음 **새로 만들기** 단추를 클릭 합니다. `SourceListView.cs` 파일을 다음과 같이 만듭니다.
+마지막으로 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 파일** 추가 ...를 선택 합니다. **일반**  >  **빈 클래스**를 선택 하 고 이름으로를 입력 한 `SourceListView` 다음 **새로 만들기** 단추를 클릭 합니다. **Name** `SourceListView.cs`파일이 다음과 같이 표시 되도록 합니다.
 
 ```csharp
 using System;
@@ -524,13 +524,13 @@ namespace MacOutlines
 }
 ```
 
-이렇게 하면 사용자가 만든 모든 Xamarin.ios 응용 프로그램에서 원본 목록을 구동 하는 데 사용할 수 있는 재사용 가능한 사용자 지정 `NSOutlineView` (`SourceListView`) 하위 클래스가 만들어집니다.
+그러면 사용자가 만든 `NSOutlineView` `SourceListView` 모든 xamarin.ios 응용 프로그램에서 원본 목록을 구동 하는 데 사용할 수 있는 ()의 재사용 가능한 사용자 지정 하위 클래스가 만들어집니다.
 
-<a name="Creating_and_Maintaining_Source_Lists_in_Xcode" />
+<a name="Creating_and_Maintaining_Source_Lists_in_Xcode"></a>
 
 ## <a name="creating-and-maintaining-source-lists-in-xcode"></a>Xcode에서 원본 목록 만들기 및 유지 관리
 
-이제 Interface Builder에서 소스 목록을 디자인 하겠습니다. `Main.storyboard` 파일을 두 번 클릭 하 여 Interface Builder 편집 하기 위해 열고, **라이브러리 검사기**에서 분할 보기를 끌어서 뷰 컨트롤러에 추가 하 고, **제약 조건 편집기**에서 뷰를 사용 하 여 크기를 조정 하도록 설정 합니다.
+이제 Interface Builder에서 소스 목록을 디자인 하겠습니다. 파일을 두 번 클릭 `Main.storyboard` 하 여 열고 Interface Builder 편집을 위해 열고, **라이브러리 검사기**에서 분할 보기를 끌어서 뷰 컨트롤러에 추가 하 고, **제약 조건 편집기**에서 뷰를 사용 하 여 크기를 조정 하도록 설정 합니다.
 
 [![](source-list-images/source00.png "Editing constraints")](source-list-images/source00.png#lightbox)
 
@@ -538,21 +538,21 @@ namespace MacOutlines
 
 [![](source-list-images/source02.png "Editing constraints")](source-list-images/source02.png#lightbox)
 
-그런 다음 **Id 뷰로**전환 하 고, 원본 목록을 선택 하 고, `SourceListView`**클래스** 를 변경 합니다.
+그런 다음 **Id 뷰로**전환 하 고 원본 목록을 선택한 후 **클래스** 를로 변경 합니다 `SourceListView` .
 
 [![](source-list-images/source03.png "Setting the class name")](source-list-images/source03.png#lightbox)
 
-마지막으로 `ViewController.h` 파일에서 `SourceList` 라는 원본 목록에 대 한 **콘센트** 를 만듭니다.
+마지막으로, 파일에서 호출 되는 원본 목록의 **콘센트** 를 만듭니다 `SourceList` `ViewController.h` .
 
 [![](source-list-images/source04.png "Configuring an Outlet")](source-list-images/source04.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
-<a name="Populating the Source List" />
+<a name="Populating the Source List"></a>
 
 ## <a name="populating-the-source-list"></a>소스 목록 채우기
 
-Mac용 Visual Studio에서 `RotationWindow.cs` 파일을 편집 하 고 `AwakeFromNib` 메서드가 다음과 같이 표시 되도록 합니다.
+`RotationWindow.cs`Mac용 Visual Studio에서 파일을 편집 하 고 메서드를 다음과 같이 설정 해 보겠습니다 `AwakeFromNib` .
 
 ```csharp
 public override void AwakeFromNib ()
@@ -591,7 +591,7 @@ public override void AwakeFromNib ()
 }
 ```
 
-항목을 추가 _하기 전에_ 소스 목록의 **콘센트** 에 대해 `Initialize ()` 메서드를 호출 해야 합니다. 각 항목 그룹에 대해 부모 항목을 만든 다음 해당 그룹 항목에 하위 항목을 추가 합니다. 그런 다음 각 그룹은 `SourceList.AddItem (...)`원본 목록의 컬렉션에 추가 됩니다. 마지막 두 줄은 원본 목록에 대 한 데이터를 로드 하 고 모든 그룹을 확장 합니다.
+`Initialize ()`항목을 추가 _하기 전에_ 소스 목록의 **콘센트** 에 대해 메서드를 호출 해야 합니다. 각 항목 그룹에 대해 부모 항목을 만든 다음 해당 그룹 항목에 하위 항목을 추가 합니다. 그러면 각 그룹이 원본 목록의 컬렉션에 추가 됩니다 `SourceList.AddItem (...)` . 마지막 두 줄은 원본 목록에 대 한 데이터를 로드 하 고 모든 그룹을 확장 합니다.
 
 ```csharp
 // Display side list
@@ -599,7 +599,7 @@ SourceList.ReloadData ();
 SourceList.ExpandItem (null, true);
 ```
 
-마지막으로 `AppDelegate.cs` 파일을 편집 하 고 `DidFinishLaunching` 메서드를 다음과 같이 만듭니다.
+마지막으로 파일을 편집 `AppDelegate.cs` 하 고 `DidFinishLaunching` 메서드를 다음과 같이 만듭니다.
 
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
@@ -616,11 +616,11 @@ public override void DidFinishLaunching (NSNotification notification)
 
 [![](source-list-images/source05.png "An example app run")](source-list-images/source05.png#lightbox)
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.ios 응용 프로그램의 원본 목록 작업에 대해 자세히 살펴봅니다. Xcode의 Interface Builder에서 소스 목록을 만들고 유지 관리 하는 방법 및 코드에서 C# 소스 목록을 사용 하는 방법을 살펴보았습니다.
+이 문서에서는 Xamarin.ios 응용 프로그램의 원본 목록 작업에 대해 자세히 살펴봅니다. Xcode의 Interface Builder에서 소스 목록을 만들고 유지 관리 하는 방법 및 c # 코드에서 원본 목록을 사용 하는 방법을 살펴보았습니다.
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: e12bac1f65981776a7bd650cbc840cc0cdf72892
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 429b15b8e0f2b66b8a0edcdf386ef7778cf4a9ca
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725160"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574121"
 ---
 # <a name="ios-9-compatibility"></a>iOS 9 호환성
 
@@ -44,9 +44,9 @@ Visual Studio가 안정적인 최신 버전으로 업데이트 되었는지 여�
 위에서 설명한 두 가지 문제를 해결 하기 위해 사용 하는 구성 요소 또는 Nuget의 새 버전을 기다릴 필요가 **없습니다** .
 이러한 문제는 매우 안정적인 Xamarin.ios의 최신 릴리스로 앱을 다시 빌드하여 간단히 수정할 수 있습니다.
 
-마찬가지로, 구성 요소 공급 업체와 NuGet 작성자는 위에서 언급 한 두 가지 문제를 해결 하기 위해 새 빌드를 제출 하는 데 필요 **하지 않습니다** . 그러나 구성 요소나 NuGet이 **Xib** 파일의 `UICollectionView` 또는 로드 뷰를 사용 하는 경우 아래에 설명 된 iOS 9 호환성 문제를 해결 하기 위해 업데이트가 필요할 수 *있습니다* .
+마찬가지로, 구성 요소 공급 업체와 NuGet 작성자는 위에서 언급 한 두 가지 문제를 해결 하기 위해 새 빌드를 제출 하는 데 필요 **하지 않습니다** . 그러나 구성 요소나 NuGet `UICollectionView` 에서 **Xib** 파일의 뷰를 사용 하거나 로드 하는 경우 아래에 설명 된 iOS 9 호환성 문제를 해결 하기 위해 업데이트가 필요할 수 *있습니다* .
 
-<a name="compat" />
+<a name="compat"></a>
 
 ## <a name="improving-compatibility-in-your-code"></a>코드의 호환성 향상
 
@@ -54,9 +54,9 @@ IOS 9에서 이전 버전의 iOS에서 작업 하는 *데 사용* 되는 몇 가
 
 ### <a name="uicollectionviewcellcontentview-is-null-in-constructors"></a>UICollectionViewCell는 생성자에서 null입니다.
 
-**이유:** IOS 9에서는 [UICollectionView 설명서 상태로](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath)ios 9의 동작 변경으로 인해 `initWithFrame:` 생성자가 필요 합니다. 지정 된 식별자에 대 한 클래스를 등록 하 고 새 셀을 만들어야 하는 경우 이제 해당 `initWithFrame:` 메서드를 호출 하 여 셀을 초기화 합니다.
+**이유:** IOS 9에서는 `initWithFrame:` [UICollectionView 설명서 상태로](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath)ios 9의 동작 변경으로 인해 생성자가 필요 합니다. 지정 된 식별자에 대 한 클래스를 등록 하 고 새 셀을 만들어야 하는 경우 이제 해당 메서드를 호출 하 여 셀을 초기화 합니다 `initWithFrame:` .
 
-**해결 방법:** 다음과 같이 `initWithFrame:` 생성자를 추가 합니다.
+**해결 방법:** `initWithFrame:`다음과 같이 생성자를 추가 합니다.
 
 ```csharp
 [Export ("initWithFrame:")]
@@ -70,9 +70,9 @@ public YourCellClassName (CGRect frame) : base (frame)
 
 ### <a name="uiview-fails-to-init-with-coder-when-loading-a-view-from-a-xibnib"></a>Xib/Nib에서 뷰를 로드 하는 경우 UIView가 코드 작성자 있는지를 사용 하 여 초기화 되지 않습니다.
 
-**이유:** `initWithCoder:` 생성자는 Interface Builder Xib 파일에서 뷰를 로드할 때 호출 되는 생성자입니다. 이 생성자가 내보내지 않는 경우 관리 되지 않는 코드는 관리 되는 버전을 호출할 수 없습니다. 이전 (예: iOS 8) `IntPtr` 생성자를 호출 하 여 뷰를 초기화 합니다.
+**이유:** `initWithCoder:`생성자는 Interface Builder Xib 파일에서 뷰를 로드할 때 호출 되는 생성자입니다. 이 생성자가 내보내지 않는 경우 관리 되지 않는 코드는 관리 되는 버전을 호출할 수 없습니다. 이전 (예: iOS 8)에서 `IntPtr` 뷰를 초기화 하기 위해 생성자가 호출 되었습니다.
 
-**해결 방법:** 다음과 같이 `initWithCoder:` 생성자를 만들고 내보냅니다.
+**해결 방법:** `initWithCoder:`다음과 같이 생성자를 만들고 내보냅니다.
 
 ```csharp
 [Export ("initWithCoder:")]

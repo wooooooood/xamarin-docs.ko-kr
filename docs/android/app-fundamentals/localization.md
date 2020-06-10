@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: ae97297b81d33c4b9f814d4b3639984b05ce3d72
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b37f33e4f093c04e077529fbcb62567e4f702da4
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021650"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84568536"
 ---
 # <a name="android-localization"></a>Android 지역화
 
@@ -26,7 +26,7 @@ _이 문서에서는 Android SDK의 지역화 기능 및 Xamarin을 사용 하 �
 
 사용자는 **설정 > 언어 & 입력**에서 해당 언어를 선택 합니다. 이렇게 선택 하면 표시 되는 언어와 국가별 설정 (예: 날짜 및 숫자 서식 지정의 경우).
 
-현재 컨텍스트의 `Resources`를 통해 현재 로캘을 쿼리할 수 있습니다.
+현재 컨텍스트를 통해 현재 로캘을 쿼리할 수 있습니다 `Resources` .
 
 ```csharp
 var lang = Resources.Configuration.Locale; // eg. "es_ES"
@@ -34,28 +34,28 @@ var lang = Resources.Configuration.Locale; // eg. "es_ES"
 
 이 값은 밑줄로 구분 된 언어 코드와 로캘 코드를 모두 포함 하는 로캘 식별자입니다. 참조를 위해 StackOverflow를 통한 [Java 로캘](https://www.oracle.com/technetwork/java/javase/locales-137662.html) 및 [Android 지원 로캘](https://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android)목록은 다음과 같습니다.
 
-일반적인 예는 다음과 같습니다.
+일반적인 예제는 다음을 포함합니다.
 
-- 영어 (미국)에 대 한 `en_US`
-- 스페인어 (스페인)의 `es_ES`
-- 일본어 `ja_JP` (일본)
-- 중국어 `zh_CN` (중국)
-- 중국어 (대만)에 대 한 `zh_TW`
-- 포르투갈어 (포르투갈)의 `pt_PT`
-- 포르투갈어 (브라질)의 `pt_BR`
+- `en_US`영어 (미국)의 경우
+- `es_ES`스페인어 (스페인)의 경우
+- `ja_JP`일본어 (일본)
+- `zh_CN`중국어 (중국)
+- `zh_TW`중국어 (대만)의 경우
+- `pt_PT`포르투갈어 (포르투갈)
+- `pt_BR`포르투갈어 (브라질)
 
 ### <a name="locale_changed"></a>LOCALE_CHANGED
 
-사용자가 언어 선택을 변경 하면 Android에서 `android.intent.action.LOCALE_CHANGED`를 생성 합니다.
+`android.intent.action.LOCALE_CHANGED`사용자가 언어 선택을 변경 하면 Android에서 생성 됩니다.
 
-활동은 다음과 같이 활동에 `android:configChanges` 특성을 설정 하 여이를 처리 하도록 선택할 수 있습니다.
+활동 `android:configChanges` 은 다음과 같이 활동의 특성을 설정 하 여이를 처리 하도록 선택할 수 있습니다.
 
 ```csharp
 [Activity (Label = "@string/app_name", MainLauncher = true, Icon="@drawable/launcher",
     ConfigurationChanges = ConfigChanges.Locale | ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 ```
 
-<a name="basics" />
+<a name="basics"></a>
 
 ## <a name="internationalization-basics-in-android"></a>Android의 국제화 기본 사항
 
@@ -63,9 +63,9 @@ Android의 지역화 전략은 다음과 같은 주요 부분으로 구성 됩�
 
 - 지역화 된 문자열, 이미지 및 기타 리소스를 포함 하는 리소스 폴더
 
-- 코드에서 지역화 된 문자열을 검색 하는 데 사용 되는 `GetText` 메서드입니다.
+- `GetText`코드에서 지역화 된 문자열을 검색 하는 데 사용 되는 메서드
 
-- XML 파일에서 `@string/id` 하 여 지역화 된 문자열을 레이아웃에 자동으로 배치 합니다.
+- `@string/id`AXML 파일에서 지역화 된 문자열을 레이아웃에 자동으로 배치 합니다.
 
 ### <a name="resource-folders"></a>리소스 폴더
 
@@ -81,19 +81,19 @@ Android 응용 프로그램은 다음과 같은 리소스 폴더에서 대부분
 ![여러 문화권 식별자에 대 한 리소스/그릴 수가 있는 리소스/값 폴더의 스크린샷](localization-images/resources.png)
 
 > [!NOTE]
-> `es`와 같은 최상위 언어를 지정 하는 경우 두 문자만 필요 합니다. 그러나 전체 로캘을 지정할 때 디렉터리 이름 형식에는 두 부분 (예: **pt-rBR** 또는 **Zh-cn-rbr)** 을 구분 하기 위해 대시 및 소문자 **r** 이 필요 합니다. 밑줄이 있는 코드에서 반환 된 값 (예: `pt_BR`). 둘 다 .NET `CultureInfo` 클래스에서 사용 하는 값과 다릅니다. `pt-BR`). Xamarin 플랫폼에서 작업할 때 이러한 차이를 염두에 두어야 합니다.
+> 최상위 언어를 지정 하는 경우에는 `es` 두 자만 필요 합니다. 그러나 전체 로캘을 지정할 경우에는 디렉터리 이름 형식에 대시 및 소문자 **r** 을 사용 하 여 두 부분 (예: **pt-rbr** 또는 **zh-cn-rbr)** 을 구분 해야 합니다. 밑줄이 있는 코드에서 반환 된 값 (예: `pt_BR`). 이 둘은 .NET 클래스에서 사용 하는 값과 다릅니다. 여기에는 `CultureInfo` 대시가 있습니다 (예: `pt-BR`). Xamarin 플랫폼에서 작업할 때 이러한 차이를 염두에 두어야 합니다.
 
 #### <a name="stringsxml-file-format"></a>Strings .xml 파일 형식
 
 지역화 된 **값** 디렉터리 (예: **값-es** 또는 **values-Pt-rbr**)에는 해당 로캘에 대 한 번역 된 텍스트를 포함 하는 system.xml 이라는 파일이 포함 되어야 합니다 **.**
 
-변환 가능한 각 문자열은 `name` 특성으로 지정 된 리소스 ID와 번역 된 문자열이 값으로 지정 된 XML 요소입니다.
+각 변환 가능한 문자열은 리소스 ID가 특성으로 지정 되 `name` 고 번역 된 문자열이 값으로 지정 된 XML 요소입니다.
 
 ```xml
 <string name="app_name">TaskyL10n</string>
 ```
 
-일반적인 XML 규칙에 따라 이스케이프 해야 하며 `name`는 유효한 Android 리소스 ID (공백 또는 대시 없음) 여야 합니다. 예제에 대 한 기본 (영어) 문자열 파일의 예는 다음과 같습니다.
+일반적인 XML 규칙에 따라 이스케이프 해야 하며,은 `name` 유효한 Android 리소스 ID (공백 또는 대시 없음) 여야 합니다. 예제에 대 한 기본 (영어) 문자열 파일의 예는 다음과 같습니다.
 
 **values/Strings .xml**
 
@@ -130,7 +130,7 @@ Android 응용 프로그램은 다음과 같은 리소스 폴더에서 대부분
 
 ### <a name="axml-layout-files"></a>AXML 레이아웃 파일
 
-레이아웃 파일에서 지역화 된 문자열을 참조 하려면 `@string/id` 구문을 사용 합니다. 샘플의이 XML 코드 조각은 지역화 된 리소스 Id로 설정 되는 `text` 속성을 보여 줍니다. 일부 다른 특성은 생략 되었습니다.
+레이아웃 파일에서 지역화 된 문자열을 참조 하려면 `@string/id` 구문을 사용 합니다. 샘플의이 XML 코드 조각은 `text` 지역화 된 리소스 id로 설정 되는 속성을 보여 줍니다. 일부 다른 특성은 생략 되었습니다.
 
 ```xml
 <TextView
@@ -145,7 +145,7 @@ Android 응용 프로그램은 다음과 같은 리소스 폴더에서 대부분
 
 ### <a name="gettext-method"></a>GetText 메서드
 
-코드에서 번역 된 문자열을 검색 하려면 `GetText` 메서드를 사용 하 여 리소스 ID를 전달 합니다.
+코드에서 번역 된 문자열을 검색 하려면 메서드를 사용 하 여 `GetText` 리소스 ID를 전달 합니다.
 
 ```csharp
 var cancelText = Resources.GetText (Resource.String.taskcancel);
@@ -174,7 +174,7 @@ Android 문자열 리소스를 사용 하면 번역자가 다음과 같은 다�
  </plurals>
 ```
 
-전체 문자열을 렌더링 하려면 `GetQuantityString` 메서드를 사용 하 여 리소스 ID와 표시 될 값 (두 번 전달 됨)을 전달 합니다. 두 번째 매개 변수는 Android에서 *사용할 `quantity` 문자열을 결정* 하는 데 사용 되 고, 세 번째 매개 변수는 실제로 문자열을 대체 하는 값 (둘 다 필요)입니다.
+전체 문자열을 렌더링 하려면 메서드를 사용 하 여 `GetQuantityString` 리소스 ID와 표시 될 값 (두 번 전달 됨)을 전달 합니다. 두 번째 매개 변수는 Android에서 사용할 문자열 *을 결정 하* 는 데 사용 되 고 `quantity` , 세 번째 매개 변수는 실제로 문자열을 대체 하는 값 (둘 다 필요)입니다.
 
 ```csharp
 var translated = Resources.GetQuantityString (
@@ -185,12 +185,12 @@ var translated = Resources.GetQuantityString (
 
 - 0
 - one
-- 두
+- two
 - 몇
-- many
+- 다양함
 - 기타
 
-[Android 문서](https://developer.android.com/guide/topics/resources/string-resource.html#Plurals)에 자세히 설명 되어 있습니다. 지정 된 언어에 ' 특별 ' 처리가 필요 하지 않은 경우에는 해당 `quantity` 문자열이 무시 됩니다. 예를 들어 영어는 `one` 및 `other`만 사용 합니다. `zero` 문자열을 지정할 경우에는 적용 되지 않습니다.
+[Android 문서](https://developer.android.com/guide/topics/resources/string-resource.html#Plurals)에 자세히 설명 되어 있습니다. 지정 된 언어에 ' 특별 ' 처리가 필요 하지 않은 경우 해당 `quantity` 문자열은 무시 됩니다. 예를 들어 영어는 및만 사용 하 고 `one` `other` 문자열을 지정 하는 `zero` 것은 사용 되지 않습니다.
 
 ### <a name="images"></a>이미지
 
@@ -206,13 +206,13 @@ var translated = Resources.GetQuantityString (
 
 레이아웃, 애니메이션 및 원시 파일을 포함 하 여 다른 유형의 언어 관련 리소스를 제공할 수도 있습니다. 즉, 하나 이상의 대상 언어에 특정 화면 레이아웃을 제공할 수 있습니다. 예를 들어 매우 긴 텍스트 레이블을 허용 하는 독일어 전용 레이아웃을 만들 수 있습니다.
 
-Android 4.2는 응용 프로그램 설정을 `android:supportsRtl="true"`설정 하는 경우 [RTL (오른쪽에서 왼쪽) 언어](https://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) 를 지원 합니다. `"ldrtl"` 리소스 한정자는 RTL 표시를 위해 디자인 된 사용자 지정 레이아웃을 포함 하기 위해 디렉터리 이름에 포함 될 수 있습니다.
+Android 4.2는 응용 프로그램 설정을 설정 하는 경우 [RTL (오른쪽에서 왼쪽) 언어](https://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) 를 지원 `android:supportsRtl="true"` 합니다. 리소스 한정자는 `"ldrtl"` RTL 표시를 위해 디자인 된 사용자 지정 레이아웃을 포함 하기 위해 디렉터리 이름에 포함 될 수 있습니다.
 
 리소스 디렉터리 이름 지정 및 대체 방법에 대 한 자세한 내용은 [대체 리소스를 제공](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources)하는 Android 문서를 참조 하세요.
 
 ### <a name="app-name"></a>앱 이름
 
-응용 프로그램 이름은 `MainLauncher` 작업에 대 한 `@string/id`를 사용 하 여 쉽게 지역화할 수 있습니다.
+응용 프로그램 이름은 `@string/id` 에서 활동에 대 한의를 사용 하 여 쉽게 지역화할 수 `MainLauncher` 있습니다.
 
 ```csharp
 [Activity (Label = "@string/app_name", MainLauncher = true, Icon="@drawable/launcher",
@@ -223,15 +223,15 @@ Android 4.2는 응용 프로그램 설정을 `android:supportsRtl="true"`설정 
 
 Android 4.2 이상에서는 [기본 Rtl 지원 블로그에서](https://android-developers.blogspot.dk/2013/03/native-rtl-support-in-android-42.html)자세히 설명 된 rtl 레이아웃을 완벽 하 게 지원 합니다.
 
-Android 4.2 (API 수준 17) 이상 버전을 사용 하는 경우 맞춤 값은 `left` 및 `right` 대신 `start` 및 `end`를 사용 하 여 지정할 수 있습니다 (예: `android:paddingStart`). RTL 판독기에 맞게 조정 되는 화면을 작성 하는 데 도움이 되는 `LayoutDirection`, `TextDirection`및 `TextAlignment`와 같은 새로운 Api도 있습니다.
+Android 4.2 (API 수준 17) 이상 버전을 사용 하는 경우 및 대신 및를 사용 하 여 맞춤 값을 지정할 수 있습니다 `start` `end` `left` `right` (예: `android:paddingStart` ). , 및와 같은 새 Api `LayoutDirection` 를 `TextDirection` `TextAlignment` 통해 RTL 판독기에 맞게 조정 되는 화면을 빌드할 수 있습니다.
 
 다음 스크린샷에서는 아랍어의 [지역화 된 **tasky** 샘플](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) 을 보여 줍니다.
 
-[아랍어의 Tasky 앱![스크린샷](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
+[![아랍어의 Tasky 앱 스크린샷](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
 
 다음 스크린샷은 히브리어의 [지역화 된 **tasky** 샘플](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) 을 보여 줍니다.
 
-[히브리어로 된 Tasky 앱의![스크린샷](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png#lightbox)
+[![히브리어의 Tasky 앱 스크린샷](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png#lightbox)
 
 RTL 텍스트는 LTR 텍스트와 동일한 방식으로 **문자열 .xml** 파일을 사용 하 여 지역화 됩니다.
 
@@ -263,5 +263,5 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 - [Tasky (코드에서 지역화 됨) (샘플)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
 - [리소스를 사용 하 여 Android 지역화](https://developer.android.com/guide/topics/resources/localization.html)
 - [플랫폼 간 지역화 개요](~/cross-platform/app-fundamentals/localization.md)
-- [Xamarin Forms 지역화](~/xamarin-forms/app-fundamentals/localization/index.md)
+- [Xamarin.Forms 지역화](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [iOS 지역화](~/ios/app-fundamentals/localization/index.md)

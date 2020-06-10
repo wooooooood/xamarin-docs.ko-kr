@@ -1,5 +1,5 @@
 ---
-title: Hello, tvOS 빠른 시작 가이드
+title: tvOS 빠른 시작 가이드 시작
 description: 이 가이드에서는 첫 번째 tvOS 앱 및 해당 개발 도구 체인를 만드는 과정을 안내 합니다. 또한 코드에 UI 컨트롤을 노출 하는 Xamarin 디자이너를 소개 하 고 tvOS 응용 프로그램을 빌드, 실행 및 테스트 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 6E0AFE58-A13B-492F-861E-D5D73EB1C4A3
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: 35f0bc0668c6f80ee00b1253b16a8ac71770a9be
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7b254d3a7cfc04893b3b240d8d372f8df60c655c
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030810"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571764"
 ---
-# <a name="hello-tvos-quick-start-guide"></a>Hello, tvOS 빠른 시작 가이드
+# <a name="hello-tvos-quick-start-guide"></a>tvOS 빠른 시작 가이드 시작
 
 _이 가이드에서는 첫 번째 tvOS 앱 및 해당 개발 도구 체인를 만드는 과정을 안내 합니다. 또한 코드에 UI 컨트롤을 노출 하는 Xamarin 디자이너를 소개 하 고 tvOS 응용 프로그램을 빌드, 실행 및 테스트 하는 방법을 보여 줍니다._
 
@@ -28,9 +28,9 @@ Xamarin.ios 개발에 익숙한 경우 tvOS 매우 간단한 전환을 찾아야
 
 ## <a name="overview"></a>개요
 
-TvOS를 사용 하면 *Swift* (또는 *객관적인 C*) 및 *Xcode*에서 C# 개발할 때 사용 되는 것과 동일한 OS X 라이브러리 및 인터페이스 컨트롤을 사용 하 여 및 .net에서 완전 한 네이티브 Apple TV 앱을 개발할 수 있습니다.
+TvOS를 사용 하면 *Swift* (또는 *객관적인 c*) 및 *Xcode*에서 개발할 때 사용 되는 것과 동일한 OS X 라이브러리 및 인터페이스 컨트롤을 사용 하 여 c # 및 .NET에서 완전 한 네이티브 Apple TV 앱을 개발할 수 있습니다.
 
-또한 tvOS 앱은 C# 및 .net으로 작성 되므로 일반적으로 백 엔드 코드를 Xamarin.ios, xamarin Android 및 xamarin.ios 앱과 공유할 수 있습니다. 모든 플랫폼에서 기본 환경을 제공 하는 동시에
+또한 tvOS 앱은 c # 및 .NET으로 작성 되므로 일반적으로 백 엔드 코드를 Xamarin.ios, Xamarin Android 및 Xamarin.ios 앱과 공유할 수 있습니다. 모든 플랫폼에서 기본 환경을 제공 하는 동시에
 
 이 문서에서는 단추 클릭 횟수를 계산 하는 기본 **Hello, tvOS** 앱을 빌드하는 프로세스를 안내 하 여 TvOS 및 Visual Studio를 사용 하 여 Apple TV 앱을 만드는 데 필요한 주요 개념을 소개 합니다.
 
@@ -45,7 +45,7 @@ TvOS를 사용 하면 *Swift* (또는 *객관적인 C*) 및 *Xcode*에서 C# 개
 
 ## <a name="starting-a-new-xamarintvos-app-in-visual-studio-for-mac"></a>Mac용 Visual Studio에서 새 tvOS 앱을 시작 하는 중
 
-위에서 설명한 것 처럼 기본 화면에 단일 단추 및 레이블을 추가 하는 `Hello-tvOS` 이라는 Apple TV 앱을 만듭니다. 단추를 클릭하면 레이블에 단추 클릭 횟수가 표시됩니다.
+위에서 설명한 것 처럼 `Hello-tvOS` 기본 화면에 단일 단추 및 레이블을 추가 하는 APPLE TV 앱을 만듭니다. 단추를 클릭하면 레이블에 단추 클릭 횟수가 표시됩니다.
 
 시작 하려면 다음을 수행 합니다.
 
@@ -53,13 +53,13 @@ TvOS를 사용 하면 *Swift* (또는 *객관적인 C*) 및 *Xcode*에서 C# 개
 
     [![](hello-tvos-images/setup01.png "Visual Studio for Mac")](hello-tvos-images/setup01.png#lightbox)
 2. 화면의 왼쪽 위 모서리에 있는 **새 솔루션 ...** 링크를 클릭 하 여 **새 프로젝트** 대화 상자를 엽니다.
-3. **TvOS** > **App** > **단일 뷰 앱** 을 선택 하 고 **다음** 단추를 클릭 합니다.
+3. **TvOS**  >  **app**  >  **단일 뷰 앱** 을 선택 하 고 **다음** 단추를 클릭 합니다.
 
     [![](hello-tvos-images/setup02.png "Select Single View App")](hello-tvos-images/setup02.png#lightbox)
-4. **앱 이름**에 대 한 `Hello, tvOS`를 입력 하 고 **조직 식별자** 를 입력 한 후 **다음** 단추를 클릭 합니다.
+4. `Hello, tvOS` **앱 이름**으로를 입력 하 고 **조직 식별자** 를 입력 한 후 **다음** 단추를 클릭 합니다.
 
     [![](hello-tvos-images/setup04.png "Enter Hello, tvOS")](hello-tvos-images/setup04.png#lightbox)
-5. **프로젝트 이름** 에 `Hello_tvOS`를 입력 하 고 **만들기** 단추를 클릭 합니다.
+5. `Hello_tvOS` **프로젝트 이름** 으로를 입력 하 고 **만들기** 단추를 클릭 합니다.
 
     [![](hello-tvos-images/setup03.png "Enter HellotvOS")](hello-tvos-images/setup03.png#lightbox)
 
@@ -78,17 +78,17 @@ IOS 프로그래밍에 익숙한 경우 여기에서 많은 유사성을 확인�
 프로젝트의 파일을 살펴보겠습니다.
 
 - `Main.cs` - 앱의 진입점을 포함합니다. 앱이 실행되면 첫 번째 클래스와 실행되는 메서드를 포함합니다.
-- `AppDelegate.cs` –이 파일에는 운영 체제에서 이벤트를 수신 하는 기본 응용 프로그램 클래스가 포함 됩니다.
-- `Info.plist` –이 파일에는 응용 프로그램 이름, 아이콘 등의 응용 프로그램 속성이 포함 됩니다.
-- `ViewController.cs` – 주 창을 나타내며이 클래스의 수명 주기를 제어 하는 클래스입니다.
-- `ViewController.designer.cs` –이 파일은 주 화면의 사용자 인터페이스와 통합 하는 데 도움이 되는 배관 코드를 포함 합니다.
-- `Main.storyboard` – 주 창에 대 한 UI입니다. 이 파일은 Xamarin Designer for iOS에서 만들고 유지 관리할 수 있습니다.
+- `AppDelegate.cs`–이 파일에는 운영 체제의 이벤트를 수신 하는 기본 응용 프로그램 클래스가 포함 됩니다.
+- `Info.plist`–이 파일에는 응용 프로그램 이름, 아이콘 등의 응용 프로그램 속성이 포함 되어 있습니다.
+- `ViewController.cs`– 주 창을 나타내며이 클래스의 수명 주기를 제어 하는 클래스입니다.
+- `ViewController.designer.cs`–이 파일은 주 화면의 사용자 인터페이스와 통합 하는 데 도움이 되는 배관 코드를 포함 합니다.
+- `Main.storyboard`– 주 창에 대 한 UI입니다. 이 파일은 Xamarin Designer for iOS에서 만들고 유지 관리할 수 있습니다.
 
 다음 섹션에서는 이러한 파일 중 일부를 간략히 살펴보겠습니다. 나중에 더 자세히 살펴볼 것 이지만, 이제 기본 사항을 이해 하는 것이 좋습니다.
 
 ### <a name="maincs"></a>Main.cs
 
-`Main.cs` 파일에는 새 tvOS 앱 인스턴스를 만들고 OS 이벤트를 처리 하는 클래스의 이름 (이 경우에는 `AppDelegate` 클래스)을 전달 하는 정적 `Main` 메서드가 포함 되어 있습니다.
+파일에는 `Main.cs` `Main` 새 tvOS 앱 인스턴스를 만들고 OS 이벤트를 처리 하는 클래스의 이름을 전달 하는 정적 메서드가 포함 되어 있습니다 .이 경우에는 `AppDelegate` 클래스입니다.
 
 ```csharp
 using UIKit;
@@ -110,7 +110,7 @@ namespace Hello_tvOS
 
 ### <a name="appdelegatecs"></a>AppDelegate.cs
 
-`AppDelegate.cs` 파일에는 창을 만들고 OS 이벤트를 수신 하는 `AppDelegate` 클래스가 포함 되어 있습니다.
+`AppDelegate.cs`이 파일에는 `AppDelegate` 창을 만들고 OS 이벤트를 수신 하는 클래스가 포함 되어 있습니다.
 
 ```csharp
 using Foundation;
@@ -184,15 +184,15 @@ public override UIWindow Window {
 
 ```
 
-`Window` 속성은 주 창에 대 한 액세스를 제공 합니다. tvOS는 MVC ( *모델 뷰 컨트롤러* ) 패턴 이라고 하는 기능을 사용 합니다. 일반적으로 사용자가 만드는 모든 창 (그리고 windows 내의 다른 많은 항목)에 대해 창 수명 주기를 담당 하는 컨트롤러가 있습니다. 예를 들어, 창에 새 보기 (컨트롤)를 추가 하 여이를 표시 합니다.
+`Window`속성은 주 창에 대 한 액세스를 제공 합니다. tvOS는 MVC ( *모델 뷰 컨트롤러* ) 패턴 이라고 하는 기능을 사용 합니다. 일반적으로 사용자가 만드는 모든 창 (그리고 windows 내의 다른 많은 항목)에 대해 창 수명 주기를 담당 하는 컨트롤러가 있습니다. 예를 들어, 창에 새 보기 (컨트롤)를 추가 하 여이를 표시 합니다.
 
-다음으로 `FinishedLaunching` 메서드가 있습니다. 이 메서드는 응용 프로그램을 인스턴스화한 후에 실행 되며 실제로 응용 프로그램 창을 만들고 여기에 뷰를 표시 하는 프로세스를 시작 합니다. 앱에서 Storyboard를 사용 하 여 UI를 정의 하므로 여기에는 추가 코드가 필요 하지 않습니다.
+다음에는 `FinishedLaunching` 메서드가 있습니다. 이 메서드는 응용 프로그램을 인스턴스화한 후에 실행 되며 실제로 응용 프로그램 창을 만들고 여기에 뷰를 표시 하는 프로세스를 시작 합니다. 앱에서 Storyboard를 사용 하 여 UI를 정의 하므로 여기에는 추가 코드가 필요 하지 않습니다.
 
-템플릿에는 `DidEnterBackground` 및 `WillEnterForeground`와 같이 제공 되는 다른 여러 메서드가 있습니다. 응용 프로그램 이벤트를 앱에서 사용 하지 않는 경우 안전 하 게 제거할 수 있습니다.
+템플릿에는 및와 같은 다양 한 다른 메서드가 제공 됩니다 `DidEnterBackground` `WillEnterForeground` . 응용 프로그램 이벤트를 앱에서 사용 하지 않는 경우 안전 하 게 제거할 수 있습니다.
 
 ### <a name="viewcontrollercs"></a>ViewController.cs
 
-`ViewController` 클래스는 기본 창의 컨트롤러입니다. 즉, 주 창의 수명 주기를 담당 합니다. 이에 대해서는 나중에 자세히 살펴보겠습니다. 이제 간단히 살펴보겠습니다.
+`ViewController`클래스는 기본 창의 컨트롤러입니다. 즉, 주 창의 수명 주기를 담당 합니다. 이에 대해서는 나중에 자세히 살펴보겠습니다. 이제 간단히 살펴보겠습니다.
 
 ```csharp
 using System;
@@ -245,13 +245,13 @@ namespace HellotvOS
 
 TvOS 앱을 만들고 해당 구성 요소에 대 한 기본적인 이해를 했으므로 UI를 만드는 방법을 살펴보겠습니다.
 
-<a name="Creating-the-User-Interface" />
+<a name="Creating-the-User-Interface"></a>
 
 ## <a name="creating-the-user-interface"></a>사용자 인터페이스 만들기
 
-Xamarin Designer for iOS를 사용 하 여 tvOS 앱에 대 한 사용자 인터페이스를 만들 필요가 없습니다. 코드에서 C# 직접 UI를 만들 수 있지만이 문서에서는 다루지 않습니다. 간단히 하기 위해이 자습서의 나머지 부분 전체에서 iOS Designer를 사용 하 여 UI를 만듭니다.
+Xamarin Designer for iOS를 사용 하 여 tvOS 앱에 대 한 사용자 인터페이스를 만들 필요는 없으며, c # 코드에서 직접 UI를 만들 수 있지만이 문서에서는 다루지 않습니다. 간단히 하기 위해이 자습서의 나머지 부분 전체에서 iOS Designer를 사용 하 여 UI를 만듭니다.
 
-UI 만들기를 시작 하려면 **솔루션 탐색기** 에서 `Main.storyboard` 파일을 두 번 클릭 하 여 iOS 디자이너에서 편집할 수 있도록 엽니다.
+UI 만들기를 시작 하려면 솔루션 탐색기 파일을 두 번 클릭 `Main.storyboard` 하 여 IOS 디자이너 **Solution Explorer** 에서 편집할 수 있도록 엽니다.
 
 [![](hello-tvos-images/designer01.png "The Main.storyboard file in the Solution Explorer")](hello-tvos-images/designer01.png#lightbox)
 
@@ -273,7 +273,7 @@ IOS Designer 및 작동 방식에 대 한 자세한 내용은 [Xamarin Designer 
 2. **도구 상자** 에서 디자인 화면으로 **레이블을** 끌어 옵니다.
 
     [![](hello-tvos-images/designer04.png "Drag a Label from the Toolbox")](hello-tvos-images/designer04.png#lightbox)
-3. **속성 패드** 에서 **title** 속성을 클릭 하 고 단추 제목을 `Hello, tvOS`로 변경 하 고 **글꼴 크기** 를 128으로 설정 합니다.
+3. **속성 패드** 에서 **title** 속성을 클릭 하 고, 단추의 제목을로 변경 하 `Hello, tvOS` 고, **글꼴 크기** 를 128으로 설정 합니다.
 
     [![](hello-tvos-images/designer05.png "Set the title to Hello, tvOS and set the Font Size to 128")](hello-tvos-images/designer05.png#lightbox)
 4. 모든 단어가 표시 되도록 레이블의 크기를 조정 하 고 창 위쪽의 가운데에 배치 합니다.
@@ -299,7 +299,7 @@ IOS Designer 및 작동 방식에 대 한 자세한 내용은 [Xamarin Designer 
 
     [![](hello-tvos-images/designer11.png "Example Constraints")](hello-tvos-images/designer11.png#lightbox)
 10. **도구 상자** 에서 **단추** 를 끌어 레이블 아래에 놓습니다.
-11. **속성 패드** 에서 **title** 속성을 클릭 하 고 단추 제목을 `Click Me`로 변경 합니다.
+11. **속성 패드** 에서 **title** 속성을 클릭 하 고 단추의 제목을 `Click Me` 다음과 같이 변경 합니다.
 
     [![](hello-tvos-images/designer12.png "Change the buttons title to Click Me")](hello-tvos-images/designer12.png#lightbox)
 12. 위의 5 ~ 8 단계를 반복 하 여 tvOS 창에서 단추를 제한 합니다. 그러나 #7 단계에서와 같이 T 핸들을 창의 맨 위로 끄는 대신 레이블 맨 아래로 끌어 옵니다.
@@ -321,7 +321,7 @@ IOS Designer 및 작동 방식에 대 한 자세한 내용은 [Xamarin Designer 
 
 여기에서 필요에 따라 편집 하거나 끌 항목을 선택 하 여 UI 요소를 다시 정렬할 수 있습니다. 예를 들어 다른 요소에서 UI 요소를 검사 하는 경우이 요소를 목록의 맨 아래로 끌어 창에서 맨 위 항목으로 만들 수 있습니다.
 
-이제 사용자 인터페이스를 만들었으므로 tvOS에서 코드를 C# 사용 하 여 액세스 하 고 상호 작용할 수 있도록 UI 항목을 노출 해야 합니다.
+이제 사용자 인터페이스를 만들었으므로 tvOS에서 c # 코드를 사용 하 여 액세스 하 고 상호 작용할 수 있도록 UI 항목을 노출 해야 합니다.
 
 ### <a name="accessing-the-controls-in-the-code-behind"></a>코드 숨김으로 컨트롤에 액세스
 
@@ -330,7 +330,7 @@ IOS 디자이너에서 코드를 통해 추가 된 컨트롤에 액세스 하는
 - 컨트롤에 이벤트 처리기를 만듭니다.
 - 나중에 참조할 수 있도록 컨트롤의 이름을 지정 합니다.
 
-둘 중 하나가 추가 되 면 변경 내용을 반영 하도록 `ViewController.designer.cs` 내의 partial 클래스가 업데이트 됩니다. 이를 통해 뷰 컨트롤러의 컨트롤에 액세스할 수 있습니다.
+둘 중 하나가 추가 되 면 내의 partial 클래스가 `ViewController.designer.cs` 변경 내용을 반영 하도록 업데이트 됩니다. 이를 통해 뷰 컨트롤러의 컨트롤에 액세스할 수 있습니다.
 
 ### <a name="creating-an-event-handler"></a>이벤트 처리기 만들기
 
@@ -340,7 +340,7 @@ IOS 디자이너에서 코드를 통해 추가 된 컨트롤에 액세스 하는
 2. 속성 패드에서 **이벤트** 탭을 선택 합니다.
 
     [![](hello-tvos-images/event1.png "The Events tab")](hello-tvos-images/event1.png#lightbox)
-3. TouchUpInside 이벤트를 찾아 `Clicked`이라는 이벤트 처리기를 제공 합니다.
+3. TouchUpInside 이벤트를 찾아 이라는 이벤트 처리기를 제공 합니다 `Clicked` .
 
     [![](hello-tvos-images/event2.png "The TouchUpInside event")](hello-tvos-images/event2.png#lightbox)
 4. **Enter**키를 누르면 코드에서 이벤트 처리기에 대 한 위치를 제안 하는 **viewcontroller**.cs 파일이 열립니다. 키보드의 화살표 키를 사용 하 여 위치를 설정 합니다.
@@ -360,7 +360,7 @@ IOS 디자이너에서 코드를 통해 추가 된 컨트롤에 액세스 하는
 2. 속성 패드에서 **위젯** 탭을 선택 합니다.
 
     [![](hello-tvos-images/name1.png "Select the Widget tab")](hello-tvos-images/name1.png#lightbox)
-3. **Id > 이름**아래에서 `ClickedLabel`를 추가 합니다.
+3. **Id > 이름**아래에서 다음을 추가 합니다 `ClickedLabel` .
 
     [![](hello-tvos-images/name2.png "Set ClickedLabel")](hello-tvos-images/name2.png#lightbox)
 
@@ -368,27 +368,27 @@ IOS 디자이너에서 코드를 통해 추가 된 컨트롤에 액세스 하는
 
 ### <a name="how-controls-are-accessed"></a>컨트롤에 액세스 하는 방법
 
-**솔루션 탐색기** 에서 `ViewController.designer.cs`를 선택 하는 경우 `ClickedLabel` 레이블 및 `Clicked` 이벤트 처리기가의 C# **콘센트** 및 **동작** 에 매핑되는 방법을 확인할 수 있습니다.
+`ViewController.designer.cs` **솔루션 탐색기** 에서를 선택 하면 `ClickedLabel` 레이블 및 `Clicked` 이벤트 처리기가 c #의 **콘센트** 및 **작업** 에 매핑되는 방법을 확인할 수 있습니다.
 
 [![](hello-tvos-images/accesscontrol.png "Outlets and Actions")](hello-tvos-images/accesscontrol.png#lightbox)
 
-`ViewController.designer.cs` partial 클래스 이므로 Mac용 Visual Studio는 클래스에 대 한 모든 변경 내용을 덮어쓰는 `ViewController.cs`를 수정할 필요가 없습니다.
+는 `ViewController.designer.cs` partial 클래스 이므로 Mac용 Visual Studio는 `ViewController.cs` 클래스에 대 한 변경 내용을 덮어쓸 수 있는 수정이 필요 하지 않습니다.
 
 이러한 방식으로 UI 요소를 노출 하면 뷰 컨트롤러에서 UI 요소에 액세스할 수 있습니다.
 
-일반적으로 `ViewController.designer.cs`를 직접 열 필요가 없습니다. 여기에는 교육용 으로만 제공 됩니다.
+일반적으로 사용자가 직접 열 필요가 없습니다 `ViewController.designer.cs` . 여기에는 교육용 으로만 제공 됩니다.
 
-<a name="Writing-the-Code" />
+<a name="Writing-the-Code"></a>
 
 ## <a name="writing-the-code"></a>코드 작성
 
 사용자 인터페이스를 만들고, 해당 UI 요소가 **콘센트** 및 **작업**을 통해 코드에 노출 되 면 프로그램 기능을 제공 하는 코드를 작성할 준비가 된 것입니다.
 
-응용 프로그램에서 첫 번째 단추를 클릭할 때마다 단추를 클릭 한 횟수를 표시 하는 레이블을 업데이트할 예정입니다. 이렇게 하려면 **Solution Pad**에서 `ViewController.cs` 파일을 두 번 클릭 하 여 편집 해야 합니다.
+응용 프로그램에서 첫 번째 단추를 클릭할 때마다 단추를 클릭 한 횟수를 표시 하는 레이블을 업데이트할 예정입니다. 이렇게 하려면 `ViewController.cs` **Solution Pad**에서 파일을 두 번 클릭 하 여 편집을 위해 파일을 열어야 합니다.
 
 [![](hello-tvos-images/code01.png "The Solution Pad")](hello-tvos-images/code01.png#lightbox)
 
-먼저, `ViewController` 클래스에서 클래스 수준 변수를 만들어 발생 한 클릭 수를 추적 해야 합니다. 클래스 정의를 편집하고 다음과 비슷하게 만듭니다.
+첫째, `ViewController` 발생 한 클릭 수를 추적 하기 위해 클래스에서 클래스 수준 변수를 만들어야 합니다. 클래스 정의를 편집하고 다음과 비슷하게 만듭니다.
 
 ```csharp
 using System;
@@ -403,7 +403,7 @@ namespace Hello_tvOS
         ...
 ```
 
-그런 다음 동일한 클래스 (`ViewController`)에서 **ViewDidLoad** 메서드를 재정의 하 고 레이블에 대 한 초기 메시지를 설정 하는 코드를 추가 해야 합니다.
+그런 다음 동일한 클래스 ()에서 `ViewController` **ViewDidLoad** 메서드를 재정의 하 고 레이블에 대 한 초기 메시지를 설정 하는 코드를 추가 해야 합니다.
 
 ```csharp
 public override void ViewDidLoad ()
@@ -415,7 +415,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-OS가 `.storyboard` 파일에서 사용자 인터페이스를 로드 하 고 인스턴스화한 *후* `ViewDidLoad`가 호출 되기 때문에 `Initialize`같은 다른 방법 대신 `ViewDidLoad`를 사용 해야 합니다. `.storyboard` 파일이 완전히 로드 되어 인스턴스화되기 전에 레이블 컨트롤에 액세스 하려고 하면 레이블 컨트롤이 아직 만들어지지 않았기 때문에 `NullReferenceException` 오류가 발생 합니다.
+`ViewDidLoad` `Initialize` `ViewDidLoad` 는 OS가 파일에서 사용자 인터페이스를 로드 하 고 인스턴스화한 *후* 에 호출 되기 때문에와 같은 다른 메서드 대신를 사용 해야 `.storyboard` 합니다. 파일이 완전히 로드 되어 인스턴스화되기 전에 레이블 컨트롤에 액세스 하려고 하면 `.storyboard` `NullReferenceException` 레이블 컨트롤이 아직 만들어지지 않았기 때문에 오류가 발생 합니다.
 
 다음으로 단추를 클릭 하 여 사용자에 게 응답 하는 코드를 추가 해야 합니다. 만든 partial 클래스에 다음을 추가 합니다.
 
@@ -452,13 +452,13 @@ Mac용 Visual Studio 화면의 왼쪽 위 모서리에 있는 **구성 선택기
 
 응용 프로그램을 실행 하려면 다음 세 가지 옵션을 사용할 수 있습니다.
 
-- **⌘ + Enter**를 누릅니다.
+- **⌘ + Enter**키를 누릅니다.
 - **실행** 메뉴에서 **디버그**를 선택합니다.
 - Mac용 Visual Studio 도구 모음에서 **재생** 단추를 클릭합니다(**솔루션 탐색기** 바로 위에 있음).
 
 응용 프로그램이 빌드되고 (아직 빌드되지 않은 경우), 디버그 모드에서 시작 되 면 tvOS 시뮬레이터가 시작 되 고 앱이 시작 되 고 기본 인터페이스 창이 표시 됩니다.
 
-[샘플 앱 홈 화면![](hello-tvos-images/run03.png)](hello-tvos-images/run03.png#lightbox)
+[![샘플 앱 홈 화면](hello-tvos-images/run03.png)](hello-tvos-images/run03.png#lightbox)
 
 **하드웨어** 메뉴에서 시뮬레이터를 제어할 수 있도록 **Apple TV 원격 표시** 를 선택 합니다.
 
@@ -468,7 +468,7 @@ Mac용 Visual Studio 화면의 왼쪽 위 모서리에 있는 **구성 선택기
 
 [![](hello-tvos-images/run05.png "The label with updated count")](hello-tvos-images/run05.png#lightbox)
 
-지금까지 여기에서는 많은 사항을 설명 했지만이 자습서를 처음부터 끝까지 수행한 경우 tvOS 앱의 구성 요소와 이러한 구성 요소를 만드는 데 사용 되는 도구에 대해 확실 하 게 이해 해야 합니다.
+축하합니다! 여기에서는 많은 사항을 설명 했지만이 자습서를 처음부터 끝까지 수행한 경우 tvOS 앱의 구성 요소와 이러한 구성 요소를 만드는 데 사용 되는 도구에 대해 확실 하 게 이해 해야 합니다.
 
 ## <a name="where-to-next"></a>다음 위치
 

@@ -1,22 +1,8 @@
 ---
-title: 에서 사용자 지정 레이아웃 만들기Xamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 2beb00e0587a0e47a29d6f5628a5d6623514eade
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137334"
+제목: "" 설명: "에서 사용자 지정 레이아웃을 만듭니다. Xamarin.Forms 이 문서에서는 사용자 지정 레이아웃 클래스를 작성 하는 방법을 설명 하 고 페이지 전체에서 자식을 가로로 정렬 한 다음 후속 자식의 표시를 추가 행으로 래핑하는 방향에 민감한 WrapLayout 클래스를 보여 줍니다.
+assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31: xamarin-forms author: davidbritch: dabritch:: 03/29/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="create-a-custom-layout-in-xamarinforms"></a>에서 사용자 지정 레이아웃 만들기Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
@@ -66,29 +52,27 @@ Xamarin.Forms또는 속성이 있는 모든 클래스 `Content` 에는 `Children
 
 [`Layout`](xref:Xamarin.Forms.Layout)또한 클래스는 [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) 메서드와 비슷한 용도의 메서드를 정의 합니다 [`InvalidateMeasure`](xref:Xamarin.Forms.VisualElement.InvalidateMeasure) . `InvalidateLayout`레이아웃의 위치 및 크기를 조정 하는 방법에 영향을 주는 변경 내용이 있을 때마다 메서드를 호출 해야 합니다. 예를 들어, `Layout` 클래스는 `InvalidateLayout` 자식이 레이아웃에서 추가 되거나 제거 될 때마다 메서드를 호출 합니다.
 
-[`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout)[ `Measure` ] (F:)의 반복적인 호출을 최소화 하기 위해 캐시를 구현 하도록를 재정의할 수 있습니다 Xamarin.Forms . VisualElement. Measure (system.string, System.web, Xamarin.Forms . MeasureFlags))을 (를)에 배치 합니다. 메서드를 재정의 하면 `InvalidateLayout` 자식 항목이 레이아웃에 추가 되거나 레이아웃에서 제거 되는 경우에 대 한 알림을 제공 합니다. 마찬가지로 [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) 레이아웃의 자식 중 하나가 크기를 변경 하는 경우 알림을 제공 하도록 메서드를 재정의할 수 있습니다. 두 메서드를 재정의 하는 경우 캐시를 지워 사용자 지정 레이아웃에 응답 해야 합니다. 자세한 내용은 [데이터 계산 및 캐싱](#caching)을 참조 하세요.
+[`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout)[ `Measure` ] (F:)의 반복적인 호출을 최소화 하기 위해 캐시를 구현 하도록를 재정의할 수 있습니다 Xamarin.Forms . VisualElement. Measure (system.string, System.web, Xamarin.Forms . MeasureFlags))을 (를)에 배치 합니다. 메서드를 재정의 하면 `InvalidateLayout` 자식 항목이 레이아웃에 추가 되거나 레이아웃에서 제거 되는 경우에 대 한 알림을 제공 합니다. 마찬가지로 [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) 레이아웃의 자식 중 하나가 크기를 변경 하는 경우 알림을 제공 하도록 메서드를 재정의할 수 있습니다. 두 메서드를 재정의 하는 경우 캐시를 지워 사용자 지정 레이아웃에 응답 해야 합니다. 자세한 내용은 [레이아웃 데이터 계산 및 캐시](#calculate-and-cache-layout-data)를 참조 하세요.
 
 ## <a name="create-a-custom-layout"></a>사용자 지정 레이아웃 만들기
 
 사용자 지정 레이아웃을 만드는 프로세스는 다음과 같습니다.
 
-1. `Layout<View>` 클래스에서 파생되는 클래스를 만듭니다. 자세한 내용은 [WrapLayout 만들기](#creating)를 참조 하세요.
-1. [*선택 사항*] Layout 클래스에 설정 해야 하는 매개 변수에 대해 바인딩 가능한 속성에 의해 지원 되는 속성을 추가 합니다. 자세한 내용은 [바인딩 가능한 속성에 의해 지원 되는 속성 추가](#adding_properties)를 참조 하세요.
-1. 메서드를 재정의 [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) 하 여 [ `Measure` ] (f:)를 호출 합니다 Xamarin.Forms . VisualElement. Measure (system.string, System.web, Xamarin.Forms . MeasureFlags))를 반환 하 고 레이아웃에 대해 요청 된 크기를 반환 합니다. 자세한 내용은 [OnMeasure 메서드 재정의](#onmeasure)를 참조 하세요.
-1. 메서드를 재정의 [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) 하 여 [ `Layout` ] (f:)를 호출 합니다 Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . Rectangle)의 모든 자식에 대 한 메서드를 설정 합니다. [ `Layout` ] (F:)를 호출 하지 못했습니다 Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . Rectangle)의 경우 레이아웃의 각 자식에 대해 자식이 올바른 크기나 위치를 수신 하지 않기 때문에 자식이 페이지에 표시 되지 않습니다. 자세한 내용은 [LayoutChildren 메서드 재정의](#layoutchildren)를 참조 하세요.
+1. `Layout<View>` 클래스에서 파생되는 클래스를 만듭니다. 자세한 내용은 [Create a WrapLayout](#create-a-wraplayout)을 참조 하세요.
+1. [*선택 사항*] Layout 클래스에 설정 해야 하는 매개 변수에 대해 바인딩 가능한 속성에 의해 지원 되는 속성을 추가 합니다. 자세한 내용은 [바인딩 가능한 속성에 의해 지원 되는 속성 추가](#add-properties-backed-by-bindable-properties)를 참조 하세요.
+1. 메서드를 재정의 [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) 하 여 [ `Measure` ] (f:)를 호출 합니다 Xamarin.Forms . VisualElement. Measure (system.string, System.web, Xamarin.Forms . MeasureFlags))를 반환 하 고 레이아웃에 대해 요청 된 크기를 반환 합니다. 자세한 내용은 [OnMeasure 메서드 재정의](#override-the-onmeasure-method)를 참조 하세요.
+1. 메서드를 재정의 [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) 하 여 [ `Layout` ] (f:)를 호출 합니다 Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . Rectangle)의 모든 자식에 대 한 메서드를 설정 합니다. [ `Layout` ] (F:)를 호출 하지 못했습니다 Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . Rectangle)의 경우 레이아웃의 각 자식에 대해 자식이 올바른 크기나 위치를 수신 하지 않기 때문에 자식이 페이지에 표시 되지 않습니다. 자세한 내용은 [LayoutChildren 메서드 재정의](#override-the-layoutchildren-method)를 참조 하세요.
 
     > [!NOTE]
     > 및 재정의에서 자식을 열거 하는 경우 [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) 속성이로 설정 된 모든 자식을 건너뜁니다 `false` . 이렇게 하면 사용자 지정 레이아웃에서 보이지 않는 자식을 위한 공간이 확보 되지 않습니다.
 
-1. [*선택 사항*] [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout)자식이 레이아웃에서 추가 되거나 제거 될 때 알리도록 메서드를 재정의 합니다. 자세한 내용은 [InvalidateLayout 메서드 재정의](#invalidatelayout)를 참조 하세요.
-1. [*선택 사항*] [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated)레이아웃의 자식 중 하나가 크기를 변경할 때 알림이 표시 되도록 메서드를 재정의 합니다. 자세한 내용은 [OnChildMeasureInvalidated 메서드 재정의](#onchildmeasureinvalidated)를 참조 하세요.
+1. [*선택 사항*] [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout)자식이 레이아웃에서 추가 되거나 제거 될 때 알리도록 메서드를 재정의 합니다. 자세한 내용은 [Override The InvalidateLayout Method](#override-the-invalidatelayout-method)을 참조 하세요.
+1. [*선택 사항*] [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated)레이아웃의 자식 중 하나가 크기를 변경할 때 알림이 표시 되도록 메서드를 재정의 합니다. 자세한 내용은 [Override The OnChildMeasureInvalidated Method](#override-the-onchildmeasureinvalidated-method)을 참조 하세요.
 
 > [!NOTE]
-> [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double))레이아웃의 크기가 자식 노드가 아닌 부모에 의해 관리 되는 경우 재정의는 호출 되지 않습니다. 그러나 제약 조건 중 하나 또는 둘 모두가 무한 이거나 layout 클래스에 기본값이 아닌 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 값 또는 속성 값이 있는 경우 재정의가 호출 됩니다 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) . 이러한 이유로 [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) 재정의는 메서드를 호출 하는 동안 가져온 자식 크기를 사용할 수 없습니다 [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) . 대신 `LayoutChildren` 는 [ `Measure` ] (f:)를 호출 해야 합니다 Xamarin.Forms . VisualElement. Measure (system.string, System.web, Xamarin.Forms . MeasureFlags))를 호출 하기 전에 레이아웃의 자식에 대 한 메서드를 호출 합니다 `Layout` Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . 사각형) 메서드. 또는 재정의에서 얻은 자식의 크기를 `OnMeasure` 캐시 하 여 나중에 재정의에 대 한 호출을 방지할 수 있습니다 `Measure` `LayoutChildren` . 하지만 레이아웃 클래스는 크기를 다시 가져와야 하는 경우에도 알고 있어야 합니다. 자세한 내용은 [레이아웃 데이터 계산 및 캐싱](#caching)을 참조 하세요.
+> [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double))레이아웃의 크기가 자식 노드가 아닌 부모에 의해 관리 되는 경우 재정의는 호출 되지 않습니다. 그러나 제약 조건 중 하나 또는 둘 모두가 무한 이거나 layout 클래스에 기본값이 아닌 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 값 또는 속성 값이 있는 경우 재정의가 호출 됩니다 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) . 이러한 이유로 [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) 재정의는 메서드를 호출 하는 동안 가져온 자식 크기를 사용할 수 없습니다 [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) . 대신 `LayoutChildren` 는 [ `Measure` ] (f:)를 호출 해야 합니다 Xamarin.Forms . VisualElement. Measure (system.string, System.web, Xamarin.Forms . MeasureFlags))를 호출 하기 전에 레이아웃의 자식에 대 한 메서드를 호출 합니다 `Layout` Xamarin.Forms . VisualElement. Layout ( Xamarin.Forms . 사각형) 메서드. 또는 재정의에서 얻은 자식의 크기를 `OnMeasure` 캐시 하 여 나중에 재정의에 대 한 호출을 방지할 수 있습니다 `Measure` `LayoutChildren` . 하지만 레이아웃 클래스는 크기를 다시 가져와야 하는 경우에도 알고 있어야 합니다. 자세한 내용은 [레이아웃 데이터 계산 및 캐시](#calculate-and-cache-layout-data)를 참조 하세요.
 
-그러면 레이아웃 클래스를에 추가 하 [`Page`](xref:Xamarin.Forms.Page) 고 레이아웃에 자식을 추가 하 여 사용할 수 있습니다. 자세한 내용은 [WrapLayout](#consuming)사용을 참조 하세요.
-
-<a name="creating" />
+그러면 레이아웃 클래스를에 추가 하 [`Page`](xref:Xamarin.Forms.Page) 고 레이아웃에 자식을 추가 하 여 사용할 수 있습니다. 자세한 내용은 [WrapLayout 사용](#consume-the-wraplayout)을 참조 하세요.
 
 ### <a name="create-a-wraplayout"></a>WrapLayout 만들기
 
@@ -105,8 +89,6 @@ public class WrapLayout : Layout<View>
   ...
 }
 ```
-
-<a name="caching" />
 
 #### <a name="calculate-and-cache-layout-data"></a>레이아웃 데이터 계산 및 캐시
 
@@ -199,8 +181,6 @@ LayoutData GetLayoutData(double width, double height)
 - 표시 되는 자식이 하나 이상 있는 경우 필요한 행과 열의 수를 계산 하 고의 크기를 기준으로 자식의 셀 크기를 계산 합니다 `WrapLayout` . 셀 크기는 일반적으로 최대 자식 크기 보다 약간 더 크기는 반면,가 가장 넓은 자식에 비해 너비가 가장 넓은 자식 항목에 비해 충분 하지 않은 경우에는 크기가 작을 수도 있습니다 `WrapLayout` .
 - `LayoutData`캐시에 새 값을 저장 합니다.
 
-<a name="adding_properties" />
-
 #### <a name="add-properties-backed-by-bindable-properties"></a>바인딩 가능한 속성에 의해 지원 되는 속성 추가
 
 `WrapLayout`클래스는 `ColumnSpacing` 및 속성을 정의 합니다 `RowSpacing` . 값은 레이아웃의 행과 열을 구분 하는 데 사용 되 고, 바인딩 가능한 속성으로 지원 됩니다. 바인딩 가능한 속성은 다음 코드 예제에 나와 있습니다.
@@ -227,9 +207,7 @@ public static readonly BindableProperty RowSpacingProperty = BindableProperty.Cr
   });
 ```
 
-각 바인딩 가능 속성의 속성 변경 처리기는 `InvalidateLayout` 메서드 재정의를 호출 하 여에서 새 레이아웃 패스를 트리거합니다 `WrapLayout` . 자세한 내용은 [InvalidateLayout 메서드 재정의](#invalidatelayout) 및 [OnChildMeasureInvalidated 메서드 재정의](#onchildmeasureinvalidated)를 참조 하세요.
-
-<a name="onmeasure" />
+각 바인딩 가능 속성의 속성 변경 처리기는 `InvalidateLayout` 메서드 재정의를 호출 하 여에서 새 레이아웃 패스를 트리거합니다 `WrapLayout` . 자세한 내용은 [InvalidateLayout 메서드 재정의](#override-the-invalidatelayout-method) 및 [OnChildMeasureInvalidated 메서드 재정의](#override-the-onchildmeasureinvalidated-method)를 참조 하세요.
 
 #### <a name="override-the-onmeasure-method"></a>OnMeasure 메서드 재정의
 
@@ -250,12 +228,10 @@ protected override SizeRequest OnMeasure(double widthConstraint, double heightCo
 }
 ```
 
-재정의는 메서드를 호출 하 `GetLayoutData` 고 `SizeRequest` , `RowSpacing` 및 속성 값을 고려 하 여 반환 된 데이터에서 개체를 생성 합니다 `ColumnSpacing` . 메서드에 대 한 자세한 내용은 `GetLayoutData` [데이터 계산 및 캐싱](#caching)을 참조 하세요.
+재정의는 메서드를 호출 하 `GetLayoutData` 고 `SizeRequest` , `RowSpacing` 및 속성 값을 고려 하 여 반환 된 데이터에서 개체를 생성 합니다 `ColumnSpacing` . 메서드에 대 한 자세한 내용은 `GetLayoutData` [레이아웃 데이터 계산 및 캐시](#calculate-and-cache-layout-data)를 참조 하세요.
 
 > [!IMPORTANT]
 > [ `Measure` ] (F: Xamarin.Forms 입니다. VisualElement. Measure (system.string, System.web, Xamarin.Forms . MeasureFlags)) 및 [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) 메서드는 [`SizeRequest`](xref:Xamarin.Forms.SizeRequest) 속성이로 설정 된 값을 반환 하 여 무한 차원을 요청 해서는 안 됩니다 `Double.PositiveInfinity` . 그러나에 대 한 제약 조건 인수 중 적어도 하나는 `OnMeasure` 일 수 있습니다 `Double.PositiveInfinity` .
-
-<a name="layoutchildren" />
 
 #### <a name="override-the-layoutchildren-method"></a>LayoutChildren 메서드 재정의
 
@@ -304,11 +280,9 @@ protected override void LayoutChildren(double x, double y, double width, double 
 > [!NOTE]
 > 메서드에 전달 되는 사각형에는 `LayoutChildIntoBoundingRegion` 자식이 상주할 수 있는 전체 영역이 포함 됩니다.
 
-메서드에 대 한 자세한 내용은 `GetLayoutData` [데이터 계산 및 캐싱](#caching)을 참조 하세요.
+메서드에 대 한 자세한 내용은 `GetLayoutData` [레이아웃 데이터 계산 및 캐시](#calculate-and-cache-layout-data)를 참조 하세요.
 
-<a name="invalidatelayout" />
-
-#### <a name="overridethe-invalidatelayout-method"></a>Overridethe 메서드
+#### <a name="override-the-invalidatelayout-method"></a>InvalidateLayout 메서드 재정의
 
 [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout)재정의는 `WrapLayout` 다음 코드 예제와 같이 자식 항목이 레이아웃에 추가 되거나 레이아웃에서 제거 되거나 속성 중 하나가 값을 변경 하는 경우 호출 됩니다.
 
@@ -325,8 +299,6 @@ protected override void InvalidateLayout()
 > [!NOTE]
 > [`Layout`](xref:Xamarin.Forms.Layout) [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) 자식이 레이아웃에 추가 되거나 레이아웃에서 제거 될 때마다 메서드를 호출 하는 클래스를 중지 하려면 [ `ShouldInvalidateOnChildAdded` ] (f:를 재정의 합니다 Xamarin.Forms . 레이아웃. ShouldInvalidateOnChildAdded ( Xamarin.Forms . View)) 및 [ `ShouldInvalidateOnChildRemoved` ] (f: Xamarin.Forms . 레이아웃. ShouldInvalidateOnChildRemoved ( Xamarin.Forms . ) 메서드를 반환 `false` 합니다. 그러면 레이아웃 클래스는 자식이 추가 되거나 제거 될 때 사용자 지정 프로세스를 구현할 수 있습니다.
 
-<a name="onchildmeasureinvalidated" />
-
 #### <a name="override-the-onchildmeasureinvalidated-method"></a>OnChildMeasureInvalidated 메서드 재정의
 
 [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated)재정의는 레이아웃의 자식 중 하나가 크기를 변경 하 고 다음 코드 예제에 표시 되는 경우 호출 됩니다.
@@ -340,8 +312,6 @@ protected override void OnChildMeasureInvalidated()
 ```
 
 재정의는 자식 레이아웃을 무효화 하 고 캐시 된 레이아웃 정보를 모두 삭제 합니다.
-
-<a name="consuming" />
 
 ### <a name="consume-the-wraplayout"></a>WrapLayout 사용
 

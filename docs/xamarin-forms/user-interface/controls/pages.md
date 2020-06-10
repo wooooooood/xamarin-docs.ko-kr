@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms Pages
-description: Xamarin.Forms페이지는 플랫폼 간 모바일 응용 프로그램 화면을 나타냅니다. 이 문서에서는에 포함 된 페이지를 나열 합니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c576186dcfd598cb4fcfecd6d36edf04f73eee64
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132823"
+제목: " Xamarin.Forms 페이지" 설명: " Xamarin.Forms 페이지는 플랫폼 간 모바일 응용 프로그램 화면을 나타냅니다. 이 문서에서는에 포함 된 페이지를 나열 Xamarin.Forms 합니다.
+assetid: 9C8C710F-E312-420B-9324-A7A20CEDB7EC: xamarin-forms author: davidbritch: dabritch: ms. date: 01/12/2016 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-pages"></a>Xamarin.Forms Pages
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
@@ -31,13 +17,11 @@ _Xamarin Forms 페이지는 플랫폼 간 모바일 응용 프로그램 화면�
 
 Xamarin.Forms에서는 다음 페이지 형식을 지원 합니다.
 
-<a name="contentPage" />
-
 ### <a name="contentpage"></a>ContentPage
 
 |     |     |
 | --- | --- |
-| [`ContentPage`](xref:Xamarin.Forms.ContentPage)는 가장 간단 하 고 가장 일반적인 페이지 유형입니다. 속성을 [`Content`](xref:Xamarin.Forms.ContentPage.Content) 단일 개체로 설정 합니다 [`View`](views.md) .이 개체는 일반적으로 [`Layout`](layouts.md) , 또는와 같은입니다 [`StackLayout`](layouts.md#stackLayout) [`Grid`](layouts.md#grid) [`ScrollView`](layouts.md#scrollView) .<br /><br />[API 설명서](xref:Xamarin.Forms.ContentPage) | [![ContentPage 예제](pages-images/ContentPage.png "ContentPage 예제")](pages-images/ContentPage-Large.png#lightbox "ContentPage 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentPageDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentPageDemoPage.xaml) |
+| [`ContentPage`](xref:Xamarin.Forms.ContentPage)는 가장 간단 하 고 가장 일반적인 페이지 유형입니다. 속성을 [`Content`](xref:Xamarin.Forms.ContentPage.Content) 단일 개체로 설정 합니다 [`View`](views.md) .이 개체는 일반적으로 [`Layout`](layouts.md) , 또는와 같은입니다 [`StackLayout`](layouts.md#stacklayout) [`Grid`](layouts.md#grid) [`ScrollView`](layouts.md#scrollview) .<br /><br />[API 문서](xref:Xamarin.Forms.ContentPage) | [![ContentPage 예제](pages-images/ContentPage.png "ContentPage 예제")](pages-images/ContentPage-Large.png#lightbox "ContentPage 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentPageDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentPageDemoPage.xaml) |
 |     |     |
 
 ### <a name="masterdetailpage"></a>MasterDetailPage
@@ -65,18 +49,18 @@ Xamarin.Forms에서는 다음 페이지 형식을 지원 합니다.
 
 |     |     |
 | --- | --- |
-| [`CarouselPage`](xref:Xamarin.Forms.CarouselPage)추상 클래스에서 파생 [`MultiPage`](xref:Xamarin.Forms.MultiPage`1) 되며 손가락 살짝 밀기를 통해 자식 페이지 간을 탐색할 수 있습니다. 속성을 [`Children`](xref:Xamarin.Forms.MultiPage`1.Children) 개체의 컬렉션으로 설정 [`ContentPage`](#contentPage) 하거나, 속성을 데이터 개체 컬렉션으로 설정 하 고, 속성을로 설정 하 여 [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 각 개체를 시각적으로 표시 하는 방법을 설명 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.CarouselPage)  /  [가이드](~/xamarin-forms/app-fundamentals/navigation/carousel-page.md)  /  [샘플 1](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage) 및 [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpagetemplate) | [![CarouselPage 예제](pages-images/CarouselPage.png "CarouselPage 예제")](pages-images/CarouselPage-Large.png#lightbox "CarouselPage 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CarouselPageDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CarouselPageDemoPage.xaml) |
+| [`CarouselPage`](xref:Xamarin.Forms.CarouselPage)추상 클래스에서 파생 [`MultiPage`](xref:Xamarin.Forms.MultiPage`1) 되며 손가락 살짝 밀기를 통해 자식 페이지 간을 탐색할 수 있습니다. 속성을 [`Children`](xref:Xamarin.Forms.MultiPage`1.Children) 개체의 컬렉션으로 설정 [`ContentPage`](#contentpage) 하거나, 속성을 데이터 개체 컬렉션으로 설정 하 고, 속성을로 설정 하 여 [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 각 개체를 시각적으로 표시 하는 방법을 설명 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.CarouselPage)  /  [가이드](~/xamarin-forms/app-fundamentals/navigation/carousel-page.md)  /  [샘플 1](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage) 및 [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpagetemplate) | [![CarouselPage 예제](pages-images/CarouselPage.png "CarouselPage 예제")](pages-images/CarouselPage-Large.png#lightbox "CarouselPage 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CarouselPageDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CarouselPageDemoPage.xaml) |
 |     |     |
 
 ### <a name="templatedpage"></a>TemplatedPage
 
 |     |     |
 | --- | --- |
-| [`TemplatedPage`](xref:Xamarin.Forms.TemplatedPage)컨트롤 템플릿이 있는 전체 화면 콘텐츠를 표시 하 고,의 기본 클래스입니다 [`ContentPage`](#contentPage) .<br /><br />[API 설명서](xref:Xamarin.Forms.TemplatedPage)  /  [가이드](~/xamarin-forms/app-fundamentals/templates/control-template.md) | [![TemplatedPage 예제](pages-images/TemplatedPage.png "TemplatedPage 예제")](pages-images/TemplatedPage.png "TemplatedPage 예제") |
+| [`TemplatedPage`](xref:Xamarin.Forms.TemplatedPage)컨트롤 템플릿이 있는 전체 화면 콘텐츠를 표시 하 고,의 기본 클래스입니다 [`ContentPage`](#contentpage) .<br /><br />[API 설명서](xref:Xamarin.Forms.TemplatedPage)  /  [가이드](~/xamarin-forms/app-fundamentals/templates/control-template.md) | [![TemplatedPage 예제](pages-images/TemplatedPage.png "TemplatedPage 예제")](pages-images/TemplatedPage.png "TemplatedPage 예제") |
 |     |     |
 
 ## <a name="related-links"></a>관련 링크
 
 - [Xamarin.Forms양식 갤러리 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
-- [Xamarin.Forms표본의](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Xamarin.Forms 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Xamarin.FormsAPI 설명서](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 7cf18934c70acf59213a697ab57b6c5e308e7b2a
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: d7491af1ced4e8e0309bb3e22298d33ee5a042be
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725223"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571547"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>iOS 6의 StoreKit 변경 내용
 
@@ -42,27 +42,27 @@ IOS의 새로운 앱 내 구매 기능을 통해 사용자는 제품 정보를 �
 - **앱 교차 수준 올리기** – 사용자에 게 게시 하는 다른 앱을 볼 수 있으며, 즉시 구입/다운로드 하는 기능을 제공 합니다.
 - **사용자가 콘텐츠를 찾고 다운로드 하도록 지원** – 사용자가 앱에서 검색, 관리 또는 집계 하는 콘텐츠 (예: 음악 관련 앱은 곡의 재생 목록을 제공 하 고 앱 내에서 각 노래를 구입할 수 있습니다.
 
-`SKStoreProductViewController` 표시 된 후에는 사용자가 iTunes, App Store 또는 iBookstore 점에서와 같이 제품 정보를 조작할 수 있습니다. 사용자는 다음을 수행할 수 있습니다.
+`SKStoreProductViewController`가 표시 되 면 사용자는 iTunes, App Store 또는 ibookstore 점에서와 같이 제품 정보를 조작할 수 있습니다. 사용자는 다음을 수행할 수 있습니다.
 
 - 스크린샷 보기 (앱),
 - 샘플 노래 또는 비디오 (음악, TV 쇼 및 동영상의 경우)
 - 읽기 (및 쓰기) 검토,
 - 보기 컨트롤러 및 스토어 키트 내에서 완전히 발생 하는 & 다운로드를 구매 합니다.
 
-`SKStoreProductViewController` 내의 일부 옵션은 계속 해 서 사용자가 앱을 종료 하 고 **관련 된 제품** 또는 앱의 **지원** 링크를 클릭 하는 등의 관련 스토어 앱을 열도록 합니다.
+내에서 일부 옵션은 `SKStoreProductViewController` 사용자가 앱을 그대로 유지 하 고 **관련 된 제품** 또는 앱의 **지원** 링크를 클릭 하는 등의 관련 스토어 앱을 열도록 강제로 지정 합니다.
 
-### <a name="skstoreproductviewcontroller"></a>SKStoreProductViewController
+### <a name="skstoreproductviewcontroller"></a>C # 제품 Viewcontroller
 
-앱 내에 제품을 표시 하는 API는 간단 합니다. `SKStoreProductViewController`을 만들고 표시 하기만 하면 됩니다. 제품을 만들고 표시 하려면 다음 단계를 따르세요.
+앱 내에서 제품을 표시 하는 API는 간단 합니다 .를 만들고 표시 하기만 하면 `SKStoreProductViewController` 됩니다. 제품을 만들고 표시 하려면 다음 단계를 따르세요.
 
-1. 생성자의 `productId`를 포함 하 여 매개 변수를 뷰 컨트롤러에 전달 하는 `StoreProductParameters` 개체를 만듭니다.
+1. `StoreProductParameters`생성자에를 포함 하 여 매개 변수를 뷰 컨트롤러에 전달 하는 개체를 만듭니다 `productId` .
 1. `SKProductViewController`를 인스턴스화합니다. 클래스 수준 필드에 할당 합니다.
-1. 뷰 컨트롤러의 `Finished` 이벤트에 처리기를 할당 합니다 .이 이벤트는 뷰 컨트롤러를 해제 해야 합니다. 이 이벤트는 사용자가 취소를 누를 때 호출 됩니다. 또는 뷰 컨트롤러 내에서 트랜잭션을 마무리 합니다.
-1. `StoreProductParameters` 및 완료 처리기를 전달 하는 `LoadProduct` 메서드를 호출 합니다. 완료 처리기는 제품 요청이 성공적으로 완료 되었는지 확인 하 고, 있는 경우 `SKProductViewController`를 모달 형식으로 표시 합니다. 제품을 검색할 수 없는 경우 적절 한 오류 처리를 추가 해야 합니다.
+1. 뷰 컨트롤러의 이벤트에 처리기를 할당 합니다 `Finished` .이 경우 뷰 컨트롤러를 해제 해야 합니다. 이 이벤트는 사용자가 취소를 누를 때 호출 됩니다. 또는 뷰 컨트롤러 내에서 트랜잭션을 마무리 합니다.
+1. `LoadProduct`및 완료 처리기를 전달 하는 메서드를 호출 합니다 `StoreProductParameters` . 완료 처리기는 제품 요청이 성공적으로 완료 되었는지 확인 하 고, 있는 경우 모달을 표시 합니다 `SKProductViewController` . 제품을 검색할 수 없는 경우 적절 한 오류 처리를 추가 해야 합니다.
 
 ### <a name="example"></a>예제
 
-이 문서의 지 항목 *키트* 샘플 코드에 있는 제품 *뷰* 프로젝트는 모든 제품의 Apple ID를 수락 하 고 `SKStoreProductViewController`를 표시 하는 `Buy` 메서드를 구현 합니다. 다음 코드는 지정 된 Apple ID에 대 한 제품 정보를 표시 합니다.
+이 문서에 대 한 제품 *뷰* *프로젝트는* `Buy` 제품의 Apple ID를 수락 하 고을 표시 하는 메서드를 구현 합니다 `SKStoreProductViewController` . 다음 코드는 지정 된 Apple ID에 대 한 제품 정보를 표시 합니다.
 
 ```csharp
 void Buy (int productId)
@@ -86,13 +86,13 @@ void Buy (int productId)
 }
 ```
 
-앱이 실행 될 때 아래의 스크린샷 처럼 보입니다. 다운로드 또는 구매는 전적으로 `SKStoreProductViewController`내에서 발생 합니다.
+앱은를 실행 하는 경우 아래 스크린샷 처럼 보입니다. 다운로드 또는 구매는 전적으로 내에서 발생 합니다 `SKStoreProductViewController` .
 
 [![](changes-to-storekit-images/image2.png "The app looks like this when running")](changes-to-storekit-images/image2.png#lightbox)
 
 ### <a name="supporting-older-operating-systems"></a>이전 운영 체제 지원
 
-샘플 응용 프로그램에는 이전 버전의 iOS에서 앱 스토어, iTunes 또는 iBookstore 서를 여는 방법을 보여 주는 코드가 포함 되어 있습니다. `OpenUrl` 메서드를 사용 하 여 올바르게 제작 된 **Itunes.com** URL을 엽니다.
+샘플 응용 프로그램에는 이전 버전의 iOS에서 앱 스토어, iTunes 또는 iBookstore 서를 여는 방법을 보여 주는 코드가 포함 되어 있습니다. 메서드를 사용 `OpenUrl` 하 여 제대로 제작 된 **itunes.com** URL을 엽니다.
 
 다음과 같이 버전 검사를 구현 하 여 실행할 코드를 결정할 수 있습니다.
 
@@ -115,11 +115,11 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
 
 ### <a name="reading-objective-c-documentation"></a>목표 읽기-C 설명서
 
-Apple의 개발자 포털에서 스토어 키트에 대 한 정보를 읽고 있는 개발자 [SKStoreProductViewControllerDelegate](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html) 는이 새로운 기능과 관련 하 여 설명 하는 프로토콜을 볼 수 있습니다. 대리자 프로토콜에는 Xamarin.ios의 `SKStoreProductViewController`에서 `Finished` 이벤트로 노출 된 productViewControllerDidFinish – 메서드가 하나만 있습니다.
+Apple의 개발자 포털에서 스토어 키트에 대 한 정보를 읽고 있는 개발자 [SKStoreProductViewControllerDelegate](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html) 는이 새로운 기능과 관련 하 여 설명 하는 프로토콜을 볼 수 있습니다. 대리자 프로토콜에 `Finished` 는 xamarin.ios의에 이벤트로 노출 된 productViewControllerDidFinish – 메서드가 하나만 있습니다 `SKStoreProductViewController` .
 
 ## <a name="determining-apple-ids"></a>Apple Id 확인
 
-`SKStoreProductViewController`에 필요한 Apple ID는 *숫자* 입니다 ("mwc2012"와 같은 번들 id와 혼동 하지 않음). 아래에 나열 된 제품에 대 한 Apple ID를 확인할 수 있는 몇 가지 방법이 있습니다.
+에 필요한 Apple ID는 `SKStoreProductViewController` *숫자* 입니다 ("mwc2012"와 같은 번들 id와 혼동 하지 않아야 함). 아래에 나열 된 제품에 대 한 Apple ID를 확인할 수 있는 몇 가지 방법이 있습니다.
 
 ### <a name="itunesconnect"></a>iTunesConnect
 
@@ -127,18 +127,18 @@ Apple의 개발자 포털에서 스토어 키트에 대 한 정보를 읽고 있
 
 [![](changes-to-storekit-images/image3.png "Finding the Apple ID in iTunes Connect")](changes-to-storekit-images/image3.png#lightbox)
 
- <a name="Search_API" />
+ <a name="Search_API"></a>
 
-### <a name="search-api"></a>검색 API
+### <a name="search-api"></a>API 검색
 
-Apple은 앱 스토어, iTunes 및 iBookstore 점에서 모든 제품을 쿼리 하는 동적 검색 API를 제공 합니다. 검색 API에 액세스 하는 방법에 대 한 정보는 Apple의 관련 리소스에서 찾을 수 있습니다. 단, API는 등록 된 계열사가 아니라 누구나 노출 됩니다. 결과 JSON을 구문 분석 하 여 `SKStoreProductViewController`에 사용할 Apple ID 인 `trackId` 검색할 수 있습니다.
+Apple은 앱 스토어, iTunes 및 iBookstore 점에서 모든 제품을 쿼리 하는 동적 검색 API를 제공 합니다. 검색 API에 액세스 하는 방법에 대 한 정보는 Apple의 관련 리소스에서 찾을 수 있습니다. 단, API는 등록 된 계열사가 아니라 누구나 노출 됩니다. 결과 JSON을 구문 분석 하 여에 `trackId` 사용할 APPLE ID 인를 검색할 수 있습니다 `SKStoreProductViewController` .
 
 결과에는 앱에서 제품을 렌더링 하는 데 사용할 수 있는 표시 정보 및 아트 워크 Url을 포함 하는 다른 메타 데이터도 포함 됩니다.
 
-예를 들어 다음과 같은 노래를 선택할 수 있다.
+몇 가지 예제는 다음과 같습니다.
 
-- **Ibooks app** – [https://itunes.apple.com/search?term=ibooks&amp; entity = software&amp;country = us](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
-- **Dot 및 Kangaroo iBook** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp; entity = 전자책&amp;country = us](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
+- **ibooks 앱** – [ https://itunes.apple.com/search?term=ibooks&amp ; 엔터티 = 소프트웨어 &amp; 국가 = us](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
+- **Dot 및 Kangaroo ibook** – [ https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp ; entity = 전자책 &amp; country = us](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
 
 ### <a name="enterprise-partner-feed"></a>엔터프라이즈 파트너 피드
 
@@ -149,7 +149,7 @@ Apple은 다운로드 가능한 데이터베이스 지원 플랫 파일 형식�
 ### <a name="direct-product-links"></a>직접 제품 링크
 
 제품의 Apple ID는 iTunes Preview URL 링크에서 유추할 수 있습니다.
-응용 프로그램, 음악 또는 책의 경우 모든 iTunes 제품 링크에서 `id` 시작 하 여 URL의 일부를 찾아 다음의 숫자를 사용 합니다.
+모든 iTunes 제품 링크 (앱, 음악 또는 책 용)에서 URL에서로 시작 하는 부분을 찾아 `id` 다음의 숫자를 사용 합니다.
 
 예를 들어 iBooks에 대 한 직접 링크는
 
@@ -167,7 +167,7 @@ http://itunes.apple.com/us/app/mwc-2012-unofficial/id496963922?mt=8
 
 ## <a name="in-app-purchase-hosted-content"></a>앱에서 호스팅된 콘텐츠
 
-앱에서 바로 구매를 다운로드할 수 있는 콘텐츠 (예: 서적 또는 기타 미디어, 게임 수준 아트 및 구성 또는 기타 많은 파일)로 구성 된 경우 이러한 파일은 웹 서버에서 호스트 되는 데 사용 되며 앱은 다음에 안전 하 게 다운로드 하기 위해 코드를 통합 해야 했습니다. 구입처나. IOS 6부터 Apple은 서버에서 파일을 호스팅하고 별도의 서버에 대 한 필요성을 제거 합니다. 이 기능은 사용할 수 없는 제품 (사용할 수 없음 또는 구독)에 대해서만 사용할 수 있습니다. Apple의 호스팅 서비스를 사용 하는 이점은 다음과 같습니다.
+앱 내 구매가 다운로드 가능한 콘텐츠 (예: 서적 또는 기타 미디어, 게임 수준 아트 및 구성 또는 기타 많은 파일)로 구성 된 경우 이러한 파일은 웹 서버에서 호스트 되는 데 사용 되며, 앱이 구매 후 안전 하 게 다운로드 하는 코드를 통합 해야 했습니다. IOS 6부터 Apple은 서버에서 파일을 호스팅하고 별도의 서버에 대 한 필요성을 제거 합니다. 이 기능은 사용할 수 없는 제품 (사용할 수 없음 또는 구독)에 대해서만 사용할 수 있습니다. Apple의 호스팅 서비스를 사용 하는 이점은 다음과 같습니다.
 
 - 호스팅 & 대역폭 비용을 절감 합니다.
 - 현재 사용 중인 모든 서버 호스트 보다 확장성이 더 높습니다.
@@ -192,7 +192,7 @@ IOS 6 Apple에서는 서버에서 제공 하는 콘텐츠 파일을 호스트 �
 - **ITunes Connect** – 사용자를 대신 하 여 수집 된 자금을 다시 만들 수 있도록 Apple에 은행 및 세금 정보를 제공 *해야* 합니다. 그런 다음 제품을 판매 하도록 구성 하 고 샌드박스 사용자 계정을 설정 하 여 구매를 테스트할 수 있습니다.  _또한 Apple에서 호스트 하려는 사용 불가능 제품에 대해 호스트 된 콘텐츠를 구성 해야 합니다_.
 - **IOS 프로 비전 포털** – 앱 내 구매를 지 원하는 응용 프로그램에서와 마찬가지로 번들 식별자를 만들고 앱에 대 한 앱 스토어 액세스를 사용 하도록 설정 합니다.
 - **매장 키트** – 제품을 표시 하 고, 제품을 구매 하 고, 트랜잭션을 복원 하기 위해 앱에 코드를 추가 합니다.  _IOS 6 스토어 키트는 백그라운드에서 진행 중인 업데이트를 포함 하 여 제품 콘텐츠의 다운로드도 관리 합니다._
-- **사용자 지정 코드** – 고객이 구매한 구매를 추적 하 고 구매한 제품이 나 서비스를 제공 합니다. `SKDownload`와 같은 새 iOS 6 스토어 키트 클래스를 활용 하 여 Apple에서 호스트 되는 콘텐츠를 검색 합니다.
+- **사용자 지정 코드** – 고객이 구매한 구매를 추적 하 고 구매한 제품이 나 서비스를 제공 합니다. `SKDownload`Apple에서 호스트 하는 콘텐츠를 검색 하는 등의 새로운 iOS 6 스토어 키트 클래스를 활용 합니다.
 
 다음 섹션에서는이 문서의 샘플 코드를 사용 하 여 패키지를 만들고 업로드 하 여 구매 및 다운로드 프로세스를 관리 하는 방법을 설명 합니다.
 
@@ -236,7 +236,7 @@ Apple에 업로드 하는 콘텐츠 파일은 다음 제한 사항을 충족 해
 
 이러한 제한을 충족 하는 한 여러 파일 및 파일 유형을 추가할 수 있습니다. 콘텐츠는 응용 프로그램에 배달 하기 전에 압축 되며 코드에서 액세스 하기 전에 스토어 키트에 의해 압축이 풀립니다.
 
-콘텐츠 패키지를 업로드 한 후에는 최신 콘텐츠로 바뀔 수 있습니다. 일반 프로세스를 통해 검토/승인을 위해 새 콘텐츠를 업로드 하 고 제출 해야 합니다. 업데이트 된 콘텐츠 패키지의 `ContentVersion` 필드를 증분 하 여 최신으로 표시 합니다.
+콘텐츠 패키지를 업로드 한 후에는 최신 콘텐츠로 바뀔 수 있습니다. 일반 프로세스를 통해 검토/승인을 위해 새 콘텐츠를 업로드 하 고 제출 해야 합니다. 업데이트 된 `ContentVersion` 콘텐츠 패키지의 필드를 증분 하 여 최신으로 표시 합니다.
 
 ### <a name="xcode-in-app-purchase-content-projects"></a>Xcode 앱 내 구매 콘텐츠 프로젝트
 
@@ -322,7 +322,7 @@ Xcode 및 Archive 도구를 사용 하 여 호스트 된 콘텐츠 패키지를 
 
 [![](changes-to-storekit-images/image24.png "The plist file in the root and the product files in a Contents subdirectory")](changes-to-storekit-images/image24.png#lightbox)
 
-장치의 패키지에서 파일을 추출 하는 데이 정보를 이해 해야 하므로 패키지의 디렉터리 구조 (특히 `Contents` 하위 디렉터리에 있는 파일의 위치)를 확인 합니다.
+`Contents`장치의 패키지에서 파일을 추출 하는 데이 정보를 이해 해야 하므로 패키지의 디렉터리 구조 (특히 하위 디렉터리에 있는 파일의 위치)를 확인 합니다.
 
 ### <a name="updating-package-content"></a>패키지 콘텐츠 업데이트
 
@@ -361,17 +361,17 @@ Xcode 및 Archive 도구를 사용 하 여 호스트 된 콘텐츠 패키지를 
 다음 클래스는 iOS 6에서 호스트 된 콘텐츠를 지원 하도록 추가 또는 변경 되었습니다.
 
 - 이상 **다운로드** – 진행 중인 다운로드를 나타내는 새 클래스입니다. API는 제품별을 하나 이상 허용 하지만 처음에는 하나만 구현 되었습니다.
-- 이상 **제품** – 새 속성 추가 됨: `Downloadable`, `ContentVersion`, `ContentLengths` 배열.
-- **SKPaymentTransaction** – 새 속성 추가 됨:이 제품에 다운로드할 수 있는 호스트 된 콘텐츠가 있는 경우 `SKDownload` 개체의 컬렉션이 포함 된 `Downloads`.
-- **SKPaymentQueue** – 새 메서드가 추가 됨: `StartDownloads`. `SKDownload` 개체를 사용 하 여이 메서드를 호출 하 여 호스팅된 콘텐츠를 페치합니다. 다운로드는 백그라운드에서 수행 될 수 있습니다.
-- **SKPaymentTransactionObserver** – New 메서드: `UpdateDownloads`. 스토어 키트는 현재 다운로드 작업에 대 한 진행률 정보를 사용 하 여이 메서드를 호출 합니다.
+- 이상 **제품** – 새 속성이 추가 되었습니다. `Downloadable` , `ContentVersion` , `ContentLengths` array.
+- **SKPaymentTransaction** – 새 속성 추가 됨: `Downloads` `SKDownload` 이 제품에 다운로드할 수 있는 호스트 된 콘텐츠가 있는 경우 개체의 컬렉션이 포함 됩니다.
+- **SKPaymentQueue** – 새 메서드가 추가 되었습니다 `StartDownloads` . 개체를 사용 하 여이 메서드 `SKDownload` 를 호출 하 여 호스팅된 콘텐츠를 페치합니다. 다운로드는 백그라운드에서 수행 될 수 있습니다.
+- **SKPaymentTransactionObserver** – 새 `UpdateDownloads` 메서드: 스토어 키트는 현재 다운로드 작업에 대 한 진행률 정보를 사용 하 여이 메서드를 호출 합니다.
 
-새 `SKDownload` 클래스의 세부 정보:
+새 클래스의 세부 정보 `SKDownload` :
 
 - **진행률** – 사용자에 게 완료율 표시기를 표시 하는 데 사용할 수 있는 0-1 사이의 값입니다. Progress = = 1을 사용 하 여 다운로드가 완료 되었는지 여부를 검색 하지 말고 상태 = = 완료를 확인 합니다.
 - **TimeRemaining** – 남은 다운로드 시간 (초)입니다. -1은 여전히 예상 값을 계산 하 고 있음을 의미 합니다.
 - **상태** – 활성, 대기 중, 완료, 실패, 일시 중지 됨, 취소 됨
-- **Contenturl** – 콘텐츠가 디스크에 저장 된 파일 위치 `Cache` 디렉터리입니다. 다운로드가 완료 된 후에만 채워집니다.
+- **Contenturl** – 디렉터리에서 콘텐츠가 디스크에 저장 된 파일 위치 `Cache` 입니다. 다운로드가 완료 된 후에만 채워집니다.
 - **Error** – 상태가 실패 인 경우이 속성을 확인 합니다.
 
 샘플 코드의 클래스 간 상호 작용은이 다이어그램에 표시 됩니다 (호스팅된 콘텐츠 구매 관련 코드는 녹색으로 표시 됨).
@@ -382,7 +382,7 @@ Xcode 및 Archive 도구를 사용 하 여 호스트 된 콘텐츠 패키지를 
 
 ### <a name="custompaymentobserver-skpaymenttransactionobserver"></a>CustomPaymentObserver (SKPaymentTransactionObserver)
 
-기존 `UpdatedTransactions` 재정의를 변경 하 여 다운로드 가능한 콘텐츠를 확인 하 고 필요한 경우 `StartDownloads`를 호출 합니다.
+기존 재정의를 변경 `UpdatedTransactions` 하 여 다운로드 가능한 콘텐츠를 확인 하 고 필요한 경우를 호출 합니다 `StartDownloads` .
 
 ```csharp
 public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransaction[] transactions)
@@ -415,7 +415,7 @@ public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransac
 }
 ```
 
-새 재정의 된 메서드 `UpdatedDownloads`는 다음과 같습니다. 스토어 키트는 `UpdatedTransactions`에서 `StartDownloads` 트리거된 후이 메서드를 호출 합니다. 이 메서드는 다운로드 진행률을 제공 하 고 다운로드가 완료 되 면 다시 제공 하기 위해 확정 되지 않은 간격으로 *여러 번* 호출 됩니다. 메서드는 `SKDownload` 개체의 배열을 허용 하므로 각 메서드 호출은 큐의 여러 다운로드 상태를 제공할 수 있습니다. 아래 구현에서 볼 수 있듯이 다운로드 상태는 매번 확인 되며 적절 한 조치를 취할 수 있습니다.
+새 재정의 `UpdatedDownloads` 된 메서드는 다음과 같습니다. Store Kit `StartDownloads` 은에서가 트리거된 후이 메서드를 호출 `UpdatedTransactions` 합니다. 이 메서드는 다운로드 진행률을 제공 하 고 다운로드가 완료 되 면 다시 제공 하기 위해 확정 되지 않은 간격으로 *여러 번* 호출 됩니다. 메서드는 개체의 배열을 허용 `SKDownload` 하므로 각 메서드 호출은 큐의 여러 다운로드 상태를 제공할 수 있습니다. 아래 구현에서 볼 수 있듯이 다운로드 상태는 매번 확인 되며 적절 한 조치를 취할 수 있습니다.
 
 ```csharp
 // ENTIRELY NEW METHOD IN iOS6
@@ -455,11 +455,11 @@ public override void PaymentQueueUpdatedDownloads (SKPaymentQueue queue, SKDownl
 
 ### <a name="inapppurchasemanager-skproductsrequestdelegate"></a>InAppPurchaseManager (SKProductsRequestDelegate)
 
-이 클래스에는 각 다운로드가 성공적으로 완료 된 후 호출 되는 `SaveDownload` 새 메서드가 포함 되어 있습니다.
+이 클래스는 `SaveDownload` 각 다운로드가 성공적으로 완료 된 후 호출 되는 새 메서드를 포함 합니다.
 
-호스트 된 콘텐츠가 성공적으로 다운로드 되 고 `Cache` 디렉터리로 압축을 풀었습니다. 의 구조입니다. PKG 파일은 모든 파일을 `Contents` 하위 디렉터리에 저장 해야 하므로 아래 코드는 `Contents` 하위 디렉터리 내에서 파일을 추출 합니다.
+호스트 된 콘텐츠를 다운로드 하 여 디렉터리로 압축을 풀었습니다 `Cache` . 의 구조입니다. PKG 파일은 모든 파일을 하위 디렉터리에 저장 해야 `Contents` 하므로 아래 코드는 하위 디렉터리 내에서 파일을 추출 합니다 `Contents` .
 
-이 코드는 콘텐츠 패키지의 모든 파일을 반복 하 여 `ProductIdentifier`에 대해 이름이 지정 된 하위 폴더에 `Documents` 디렉터리로 복사 합니다. 마지막으로 `CompleteTransaction`를 호출 합니다 .이 메서드는 `FinishTransaction`를 호출 하 여 지불 큐에서 트랜잭션을 제거 합니다.
+이 코드는 콘텐츠 패키지의 모든 파일을 반복 하 여에 `Documents` 대 한 라는 하위 폴더에 디렉터리에 복사 합니다 `ProductIdentifier` . 마지막으로를 호출 하 `CompleteTransaction` `FinishTransaction` 여 지불 큐에서 트랜잭션을 제거 합니다.
 
 ```csharp
 // ENTIRELY NEW METHOD IN iOS 6
@@ -483,7 +483,7 @@ public void SaveDownload (SKDownload download)
 }
 ```
 
-`FinishTransaction`를 호출 하면 다운로드 한 파일이 더 이상 `Cache` 디렉터리에 있지 않을 수 있습니다. `FinishTransaction`를 호출 하기 전에 모든 파일을 복사 해야 합니다.
+`FinishTransaction`가 호출 되 면 다운로드 한 파일이 더 이상 디렉터리에 있는 것으로 보장 되지 않습니다 `Cache` . 모든 파일은를 호출 하기 전에 복사 해야 합니다 `FinishTransaction` .
 
 ## <a name="other-considerations"></a>기타 고려 사항
 
@@ -491,13 +491,13 @@ public void SaveDownload (SKDownload download)
 
 ### <a name="detecting-updated-content"></a>업데이트 된 콘텐츠 검색
 
-호스트 된 콘텐츠 패키지를 업데이트할 수는 있지만 스토어 키트는 제품을 이미 다운로드 하 고 구매한 사용자에 게 이러한 업데이트를 푸시할 수 있는 메커니즘을 제공 하지 않습니다. 이 기능을 구현 하기 위해 코드는 새 `SKProduct.ContentVersion` 속성 (`SKProduct` `Downloadable`)을 정기적으로 확인 하 고 값이 증가 하는지 여부를 검색할 수 있습니다. 또는 푸시 알림 시스템을 빌드할 수 있습니다.
+호스트 된 콘텐츠 패키지를 업데이트할 수는 있지만 스토어 키트는 제품을 이미 다운로드 하 고 구매한 사용자에 게 이러한 업데이트를 푸시할 수 있는 메커니즘을 제공 하지 않습니다. 이 기능을 구현 하기 위해 코드는 새 `SKProduct.ContentVersion` 속성 ( `SKProduct` 가 인 경우)을 `Downloadable` 정기적으로 검사 하 고 값이 증가 하는지 여부를 검색할 수 있습니다. 또는 푸시 알림 시스템을 빌드할 수 있습니다.
 
 ### <a name="installing-updated-content-versions"></a>업데이트 된 콘텐츠 버전 설치
 
 위의 샘플 코드는 파일이 이미 있는 경우 파일 복사를 건너뜁니다. 다운로드 되는 콘텐츠의 최신 버전을 지원 하려는 경우에는이 방법이 적합 하지 않습니다.
 
-또는 버전에 대 한 폴더에 콘텐츠를 복사 하 고 현재 버전을 추적 하는 방법 (예: `NSUserDefaults` 또는 완료 된 구매 레코드를 저장 하는 모든 위치).
+또는 버전에 대 한 폴더에 콘텐츠를 복사 하 고 현재 버전을 추적 하는 방법 (예: `NSUserDefaults`또는에서 완료 된 구매 레코드를 저장 하는 모든 위치
 
 ### <a name="restoring-transactions"></a>트랜잭션 복원
 
@@ -507,9 +507,9 @@ public void SaveDownload (SKDownload download)
 
 ### <a name="pausing-restarting-and-canceling-downloads"></a>다운로드 일시 중지, 다시 시작 및 취소
 
-샘플 코드에서는이 기능을 보여 주지 않지만 호스팅된 콘텐츠 다운로드를 일시 중지 하 고 다시 시작할 수 있습니다. `SKPaymentQueue.DefaultQueue`에 `PauseDownloads`, `ResumeDownloads` 및 `CancelDownloads`에 대 한 메서드가 있습니다.
+샘플 코드에서는이 기능을 보여 주지 않지만 호스팅된 콘텐츠 다운로드를 일시 중지 하 고 다시 시작할 수 있습니다. 에는 `SKPaymentQueue.DefaultQueue` , 및에 대 한 메서드가 있습니다 `PauseDownloads` `ResumeDownloads` `CancelDownloads` .
 
-`Finished` 다운로드 하기 전에 코드에서 지불 큐에 대 한 `FinishTransaction`를 호출 하면 다운로드가 자동으로 취소 됩니다.
+코드가 `FinishTransaction` 다운로드 되기 전에 지불 큐에서를 호출 하면 `Finished` 다운로드가 자동으로 취소 됩니다.
 
 ### <a name="setting-the-skip-backup-flag-on-the-downloaded-content"></a>다운로드 한 콘텐츠에 대 한 백업 건너뛰기 플래그 설정
 

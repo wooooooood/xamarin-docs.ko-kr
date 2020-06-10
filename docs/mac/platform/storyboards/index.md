@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: b27a8d65ebaca6009d8310931b9dac3a4d7e12f3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 395ac62cd4db62c02863e352ed5643958348dcff
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026143"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574392"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Xamarin.ios의 스토리 보드 소개
 
@@ -24,13 +24,13 @@ _이 문서에서는 Xamarin.ios 앱에서 Storyboard를 사용 하는 방법을
 
 이 문서에서는 Storyboard를 사용 하 여 Xamarin.ios 앱의 사용자 인터페이스를 정의 하는 방법을 소개 합니다.
 
-<a name="What-are-Storyboards" />
+<a name="What-are-Storyboards"></a>
 
 ## <a name="what-are-storyboards"></a>스토리 보드 란?
 
 Storyboard를 사용 하 여 모든 Xamarin.ios 앱의 UI는 개별 요소와 사용자 인터페이스 간의 모든 탐색을 사용 하 여 단일 위치에 정의할 수 있습니다. Xamarin.ios 용 storyboard는 Xamarin.ios 용 Storyboard와 매우 유사한 방식으로 작동 합니다. 그러나 다른 인터페이스 관용구 때문에 다른 _Segue 형식_ 집합을 포함 합니다.
 
-<a name="Working-with-Scenes" />
+<a name="Working-with-Scenes"></a>
 
 ### <a name="working-with-scenes"></a>장면 작업
 
@@ -44,7 +44,7 @@ Storyboard를 사용 하 여 모든 Xamarin.ios 앱의 UI는 개별 요소와 �
 
 가장 중요 한 점은 각 Segue는 응용 프로그램 UI의 지정 된 요소 간에 일부 형식의 데이터 흐름을 나타내는 것입니다.
 
-<a name="Working-with-View-Controllers" />
+<a name="Working-with-View-Controllers"></a>
 
 ### <a name="working-with-view-controllers"></a>뷰 컨트롤러 작업
 
@@ -54,13 +54,13 @@ Storyboard를 사용 하 여 모든 Xamarin.ios 앱의 UI는 개별 요소와 �
 
 이러한 방식으로 각 뷰 컨트롤러는 정보의 시각적 표시 (보기)와 해당 정보를 표시 하 고 제어 하는 논리에 대 한 자체 포함 된 재사용 가능한 쌍입니다.
 
-지정 된 장면 내에서 일반적으로 개별 `.xib` 파일에 의해 처리 되는 모든 작업을 수행할 수 있습니다. 
+지정 된 장면 내에서 일반적으로 개별 파일을 통해 처리 되는 모든 작업을 수행할 수 있습니다 `.xib` . 
 
 - 하위 뷰 및 컨트롤 (예: 단추 및 텍스트 상자)을 입력 합니다.
 - 요소 위치 및 자동 레이아웃 제약 조건을 정의 합니다.
 - UI 요소를 코드에 노출 하는 작업 및 콘센트를 연결 합니다.
 
-<a name="Working-with-Segues" />
+<a name="Working-with-Segues"></a>
 
 ### <a name="working-with-segues"></a>Segue 사용
 
@@ -70,9 +70,9 @@ MacOS에서 대부분의 앱은 분할 뷰 및 탭과 같은 UI 요소를 사용
 
 포함에 대 한 macOS 성향을 지정 된 경우 모달 창, 시트 보기 및 Popovers와 같은 _프레젠테이션 segue_ 이 사용 되는 경우가 있습니다.
 
-프레젠테이션 Segue를 사용 하는 경우 표시 되는 부모 뷰 컨트롤러의 `PrepareForSegue` 메서드를 재정의 하 고, 변수를 초기화 하 고 표시 되는 뷰 컨트롤러에 데이터를 제공할 수 있습니다.
+Presentation Segue를 사용 하는 경우 `PrepareForSegue` 프레젠테이션 용 부모 뷰 컨트롤러의 메서드를 재정의 하 여 및 변수를 초기화 하 고 표시 되는 뷰 컨트롤러에 데이터를 제공할 수 있습니다.
 
-<a name="Design-and-Run-Times" />
+<a name="Design-and-Run-Times"></a>
 
 ### <a name="design-and-run-times"></a>디자인 및 실행 시간
 
@@ -86,19 +86,19 @@ MacOS에서 대부분의 앱은 분할 뷰 및 탭과 같은 UI 요소를 사용
 
 이러한 방식으로 각 요소를 정의 하 여 런타임 중에 필요할 때만 각 요소를 지연 로드할 수 있습니다. MacOS에서 전체 프로세스는 개발자가 작업을 수행 하기 위해 최소한의 지원 코드를 필요로 하는 복잡 하 고 유연한 사용자 인터페이스를 만들 수 있도록 설계 되었습니다 .이는 모두 시스템 리소스를 최대한 효율적으로 사용 합니다.
 
-<a name="Storyboard-Quick-Start" />
+<a name="Storyboard-Quick-Start"></a>
 
 ## <a name="storyboard-quick-start"></a>스토리 보드 빠른 시작
 
 [스토리 보드 빠른 시작](~/mac/platform/storyboards/quickstart.md) 가이드에서는 사용자 인터페이스를 만들기 위해 storyboard 작업의 주요 개념을 소개 하는 간단한 xamarin.ios 앱을 만듭니다. 샘플 앱은 _콘텐츠 영역_ 및 _검사기 영역이_ 포함 된 Spilt 뷰로 구성 되며 간단한 기본 설정 대화 상자 창을 제공 합니다. Segue를 사용 하 여 모든 사용자 인터페이스 요소를 함께 연결 합니다.
 
-<a name="Working-with-Storyboards" />
+<a name="Working-with-Storyboards"></a>
 
 ## <a name="working-with-storyboards"></a>Storyboards 작업
 
 이 섹션에서는 Xamarin.ios 앱에서 [스토리 보드로 작업](~/mac/platform/storyboards/indepth.md) 하는 방법에 대 한 자세한 내용을 다룹니다. 이에 대 한 자세한 설명 및 보기 컨트롤러와 뷰로 구성 된 방법에 대해 자세히 살펴보겠습니다. 그런 다음 Segue와의 상호 연결 방식을 살펴보겠습니다. 마지막으로, 사용자 지정 Segue 형식으로 작업 하는 방법을 살펴보겠습니다. 
 
-<a name="Complex-Storyboard-Example" />
+<a name="Complex-Storyboard-Example"></a>
 
 ## <a name="complex-storyboard-example"></a>복잡 한 Storyboard 예
 
@@ -106,7 +106,7 @@ Xamarin.ios 앱에서 Storyboard를 사용 하는 복잡 한 예제에 대 한 �
 
 SourceWriter 코드는 완벽하게 주석 처리되어 있으며, 가능한 경우 Xamarin.Mac 지침 설명서에 핵심 기술 또는 메서드부터 관련 정보까지 다양한 링크가 제공됩니다.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 

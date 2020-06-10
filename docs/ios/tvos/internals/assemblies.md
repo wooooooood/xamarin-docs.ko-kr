@@ -7,32 +7,32 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: 371440f2e1ab28e802bf2d184b3e17d073a0c774
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2fde84441eeb9342d1a86e4dc565faf51d08c57b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030681"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573562"
 ---
 # <a name="assemblies-supported-by-xamarin-for-tvos"></a>Xamarin for tvOS에서 지 원하는 어셈블리
 
 ## <a name="supported-assemblies"></a>지원 되는 어셈블리
 
-Xamarin에서 tvOS 앱에 대해 지 원하는 어셈블리의 목록입니다. 이에 대 한 자세한 목록은 아래에 나열 되어 있습니다.  몇 가지 주목할 만한 생략에는 `System.EnterpriseServices`ASP.NET stack 및 Windows가 포함 됩니다.
+Xamarin에서 tvOS 앱에 대해 지 원하는 어셈블리의 목록입니다. 이에 대 한 자세한 목록은 아래에 나열 되어 있습니다.  몇 가지 주목할 만한 누락 `System.EnterpriseServices` 으로는 ASP.NET stack 및 Windows Forms가 있습니다.
 
-|Assembly|강화|API 호환성|
+|어셈블리|추가됨|API 호환성|
 |---|---|---|
 |Mono.CompilerServices.SymbolWriter.dll|1.0|컴파일러 작성자.|
 |Mono.Data.Sqlite.dll|1.2|SQLite 용 ADO.NET 공급자 [제한 사항](~/ios/data-cloud/system.data.md)을 참조 하세요.|
 |Mono.Data.Tds.dll|1.2|TDS 프로토콜 지원 [system.object](~/ios/data-cloud/system.data.md)내의 [system.object](xref:System.Data.SqlClient) 지원에 사용 됩니다.|
 |Mono.Security.dll|1.0|암호화 Api.|
-|monotouch.dll|1.0|이 어셈블리에는 [ C# CocoaTouch API에 대 한 바인딩이](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8)포함 되어 있습니다.|
+|monotouch.dll|1.0|이 어셈블리에는 [COCOATOUCH API에 대 한 c # 바인딩이](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8)포함 되어 있습니다.|
 |mscorlib.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |OpenTK.dll|1.0|[IPhone 장치 지원을 제공 하도록 확장](xref:OpenGLES)된 OpenGL/openal 개체 지향 api입니다.|
 |System.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)및 다음 네임 스페이스의 형식: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.componentmodel</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>시스템 .Net 캐시</li> <li>System.Net.Mail</li> <li>시스템 .Net Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>시스템 타이머</li></ul>|
 |System.Core.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |System.Data.dll|1.2|[.Net 3.5](https://msdn.microsoft.com/library/ms229335.aspx). [일부 기능이 제거](~/ios/data-cloud/system.data.md)되었습니다.|
-|System.object.|에서처럼|전체 oData 클라이언트.|
+|System.object..|3.x|전체 oData 클라이언트.|
 |System.Drawing|1.0|System.object-Classic API 그리기<br />_System.object는 Xamarin.ios .NET 4.5 또는 모바일 프레임 워크에 대 한 Unified API에서 지원 되지 않습니다._|
 |System.Json.dll|1.1|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
 |System.Runtime.Serialization.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
@@ -43,7 +43,7 @@ Xamarin에서 tvOS 앱에 대해 지 원하는 어셈블리의 목록입니다. 
 |System.Xml.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
 |System.Xml.Linq.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="portable-class-libraries"></a>이식 가능한 클래스 라이브러리
 

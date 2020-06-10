@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 Xamarin.Forms 휴대폰과 달리 태블릿 용 응용 프로그램 레이아웃을 최적화 하는 방법을 설명 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8ce5ba09f89c2bc84b7f6ba722f724ae39c0222e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137937"
+제목: "태블릿 및 데스크톱 앱의 레이아웃" 설명: "이 문서에서는 Xamarin.Forms 휴대폰과 달리 태블릿 용 응용 프로그램 레이아웃을 최적화 하는 방법을 설명 합니다."
+assetid: D62F472B-4345-4983-8403-659A538B591F: xamarin-forms author: davidbritch: dabritch:: 02/01/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="layout-for-tablet-and-desktop-apps"></a>태블릿 및 데스크톱 앱의 레이아웃
 
 Xamarin.Forms는 지원 되는 플랫폼에서 사용할 수 있는 모든 장치 유형을 지원 하므로 휴대폰 외에도 앱을 다음에서 실행할 수 있습니다.
@@ -27,10 +13,8 @@ Xamarin.Forms는 지원 되는 플랫폼에서 사용할 수 있는 모든 장�
 
 이 페이지에 대 한 간략 한 설명:
 
-- 지원 되는 [장치 유형](#Device_Types)및
-- 태블릿 및 휴대폰의 레이아웃을 [최적화](#optimize) 하는 방법입니다.
-
-<a name="Device_Types" />
+- 지원 되는 [장치 유형](#device-types)및
+- 태블릿 및 휴대폰의 레이아웃을 [최적화](#optimize-for-tablet-and-desktop) 하는 방법입니다.
 
 ## <a name="device-types"></a>장치 유형
 
@@ -64,9 +48,7 @@ Windows 태블릿 및 데스크톱에서 실행 되는 앱은 전체 화면 실�
 
 [![](tablet-images/splitscreen-sml.png "Windows Split Screen Example")](tablet-images/splitscreen.png#lightbox "Windows Split Screen Example")
 
-<a name="optimize" />
-
-## <a name="optimizing-for-tablet-and-desktop"></a>태블릿 및 데스크톱을 위한 최적화
+## <a name="optimize-for-tablet-and-desktop"></a>태블릿 및 데스크톱을 위한 최적화
 
 Xamarin.Forms휴대폰 또는 태블릿/데스크톱 장치를 사용 중인지 여부에 따라 사용자 인터페이스를 조정할 수 있습니다. 즉, 태블릿 및 데스크톱 컴퓨터와 같은 대량 화면 장치에 대 한 사용자 환경을 최적화할 수 있습니다.
 
@@ -85,7 +67,7 @@ if (Device.Idiom == TargetIdiom.Phone)
 
 이 접근 방식을 확장 하 여 개별 페이지 레이아웃을 중요 하 게 변경 하거나 큰 화면에서 완전히 다른 페이지를 렌더링할 수도 있습니다.
 
-### <a name="leveraging-masterdetailpage"></a>MasterDetailPage 활용
+### <a name="leverage-masterdetailpage"></a>MasterDetailPage 활용
 
 는 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) 특히를 사용 하 여 [`UISplitViewController`](xref:UIKit.UISplitViewController) 네이티브 iOS 환경을 제공 하는 iPad에서 대규모 화면에 적합 합니다.
 

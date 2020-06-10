@@ -7,28 +7,28 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: dd710f13d9324ce31e08641f214241e0433fe809
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: be867aa38b3e5ecda869784b31732cc4fb5e9503
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73004338"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84565523"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Xamarin.ios의 개요 보기
 
 _이 문서에서는 Xamarin.ios 응용 프로그램에서 개요 보기를 사용 하는 방법을 설명 합니다. Xcode에서 개요 보기를 만들고 유지 관리 하는 방법 및 Interface Builder 하 고 프로그래밍 방식으로 작업 하는 방법을 설명 합니다._
 
-Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목표-C* 및 *Xcode* 에서 작업 하는 개발자가 같은 개요 보기에 액세스할 수 있습니다. Xamarin.ios는 Xcode와 직접 통합 되므로 Xcode의 _Interface Builder_ 를 사용 하 여 개요 보기를 만들고 유지 관리 하거나 (필요에 따라 코드에서 C# 직접 만들 수 있습니다.)
+Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 *목표-C* 및 *Xcode* 에서 작업 하는 개발자와 동일한 개요 보기에 액세스할 수 있습니다. Xamarin.ios는 Xcode와 직접 통합 되므로 Xcode의 _Interface Builder_ 를 사용 하 여 개요 보기를 만들고 유지 관리 하거나 (필요에 따라 c # 코드에서 직접 만들 수 있습니다.)
 
 개요 뷰는 사용자가 계층적 데이터의 행을 확장 하거나 축소할 수 있도록 하는 테이블 유형입니다. 테이블 뷰와 마찬가지로 개요 보기에는 관련 항목 집합에 대 한 데이터와 해당 항목의 특성을 나타내는 개별 항목 및 열을 나타내는 행이 표시 됩니다. 테이블 뷰와 달리 개요 보기의 항목은 단순 목록에 있지 않으며 하드 드라이브의 파일 및 폴더와 같은 계층 구조로 구성 됩니다.
 
 [![](outline-view-images/populate03.png "An example app run")](outline-view-images/populate03.png#lightbox)
 
-이 문서에서는 Xamarin.ios 응용 프로그램에서 개요 보기를 사용 하는 기본 사항을 설명 합니다. [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 사용 하는 것이 가장 좋습니다. 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하 고,에서 사용할 주요 개념 및 기술을 설명 하 고 있습니다. 이 문서를 참조 하세요.
+이 문서에서는 Xamarin.ios 응용 프로그램에서 개요 보기를 사용 하는 기본 사항을 설명 합니다. 이 문서에서 사용할 주요 개념 및 기술에 대해 설명 하는 대로 [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 소개 하 고 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하는 것이 좋습니다.
 
-[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [목적에 따라 클래스/메서드 노출 C# ](~/mac/internals/how-it-works.md) 섹션을 살펴볼 수 있습니다. 여기에서는 C# 클래스를 목표에 연결 하는 데 사용 되는`Register`및`Export`명령을 설명 합니다. 개체 및 UI 요소
+[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서에서 c [# 클래스/메서드를 목표로](~/mac/internals/how-it-works.md) 표시 하는 방법에 대해 살펴볼 수 있습니다 `Register` . c `Export` # 클래스를 객관적인 개체 및 UI 요소에 연결 하는 데 사용 되는 및 명령에 대해서도 설명 합니다.
 
-<a name="Introduction_to_Outline_Views" />
+<a name="Introduction_to_Outline_Views"></a>
 
 ## <a name="introduction-to-outline-views"></a>개요 보기 소개
 
@@ -36,19 +36,19 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목�
 
 개요 보기의 항목에 다른 항목이 포함 되어 있으면 사용자가 확장 하거나 축소할 수 있습니다. 확장 가능한 항목은 항목이 축소 될 때 오른쪽을 가리키고 항목이 확장 될 때 아래로 이동 하는 공개 삼각형을 표시 합니다. 노출 삼각형을 클릭 하면 항목이 확장 또는 축소 됩니다.
 
-개요 뷰 (`NSOutlineView`)는 테이블 뷰 (`NSTableView`)의 하위 클래스 이므로 부모 클래스에서 대부분의 동작을 상속 합니다. 따라서 행 또는 열 선택, 열 머리글을 끌어서 열 위치 조정 등 테이블 뷰에서 지원 되는 많은 작업은 개요 보기 에서도 지원 됩니다. Xamarin.ios 응용 프로그램은 이러한 기능을 제어할 수 있으며 코드 또는 Interface Builder에서 개요 뷰의 매개 변수를 구성 하 여 특정 작업을 허용 하거나 허용 하지 않을 수 있습니다.
+개요 뷰 ()는 `NSOutlineView` 테이블 뷰 ()의 하위 클래스 이므로 `NSTableView` 부모 클래스에서 대부분의 동작을 상속 합니다. 따라서 행 또는 열 선택, 열 머리글을 끌어서 열 위치 조정 등 테이블 뷰에서 지원 되는 많은 작업은 개요 보기 에서도 지원 됩니다. Xamarin.ios 응용 프로그램은 이러한 기능을 제어할 수 있으며 코드 또는 Interface Builder에서 개요 뷰의 매개 변수를 구성 하 여 특정 작업을 허용 하거나 허용 하지 않을 수 있습니다.
 
-개요 보기는 자체 데이터를 저장 하지 않으며, 대신 데이터 원본 (`NSOutlineViewDataSource`)을 사용 하 여 필요에 따라 필요한 행과 열을 모두 제공 합니다.
+개요 뷰에서는 자체 데이터를 저장 하지 않고 데이터 원본 ()을 사용 하 여 필요한 `NSOutlineViewDataSource` 행과 열을 모두 필요에 따라 제공 합니다.
 
-개요 열 관리를 지원 하 고, 기능을 선택 하 고, 열을 선택 하 고, 편집 하 고, 사용자 지정 추적 및 개별 열에 대 한 사용자 지정 보기를 지원 하기 위해`NSOutlineViewDelegate`(개요 뷰 대리자)의 하위 클래스를 제공 하 여 개요 뷰의 동작을 사용자 지정할 및 행.
+개요 `NSOutlineViewDelegate` 열 관리를 지원 하 고, 옵션을 선택 하 고, 기능을 선택 하 고, 행을 선택 하 고 편집 하 고, 사용자 지정 추적을 지원 하 고, 개별 열 및 행에 대해 사용자 지정 보기를 제공 하 여 개요 뷰의 동작을 사용자 지정할 수 있습니다.
 
 개요 보기는 대부분의 동작 및 기능을 테이블 뷰와 공유 하므로이 문서를 계속 하기 전에 [표 뷰](~/mac/user-interface/table-view.md) 문서를 진행 하는 것이 좋습니다.
 
-<a name="Creating_and_Maintaining_Outline_Views_in_Xcode" />
+<a name="Creating_and_Maintaining_Outline_Views_in_Xcode"></a>
 
 ## <a name="creating-and-maintaining-outline-views-in-xcode"></a>Xcode에서 개요 보기 만들기 및 유지 관리
 
-새 Xamarin.ios Cocoa 응용 프로그램을 만들면 기본적으로 표준 빈 창이 표시 됩니다. 이 창은 프로젝트에 자동으로 포함 되는 `.storyboard` 파일에 정의 됩니다. Windows 디자인을 편집 하려면 **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 합니다.
+새 Xamarin.ios Cocoa 응용 프로그램을 만들면 기본적으로 표준 빈 창이 표시 됩니다. 이 창은 `.storyboard` 프로젝트에 자동으로 포함 되는 파일에 정의 됩니다. Windows 디자인을 편집 하려면 **솔루션 탐색기**에서 파일을 두 번 클릭 합니다 `Main.storyboard` .
 
 [![](outline-view-images/edit01.png "Selecting the main storyboard")](outline-view-images/edit01.png#lightbox)
 
@@ -56,7 +56,7 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목�
 
 [![](outline-view-images/edit02.png "Editing the UI in Xcode")](outline-view-images/edit02.png#lightbox)
 
-**라이브러리 검사기의** 검색 상자에 `outline`를 입력 하 여 개요 보기 컨트롤을 보다 쉽게 찾을 수 있습니다.
+`outline` **라이브러리 검사기의** 검색 상자에를 입력 하 여 개요 보기 컨트롤을 보다 쉽게 찾을 수 있습니다.
 
 [![](outline-view-images/edit03.png "Selecting an Outline View from the Library")](outline-view-images/edit03.png#lightbox)
 
@@ -69,35 +69,35 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목�
 [![](outline-view-images/edit05.png "The Attribute Inspector")](outline-view-images/edit05.png#lightbox)
 
 - **윤곽 열** -계층적 데이터가 표시 되는 테이블 열입니다.
-- **자동 저장 개요 열** -`true`경우에는 개요 열이 자동으로 저장 되 고 응용 프로그램 실행 간에 복원 됩니다.
+- **자동 저장 개요 열** -이면 `true` 개요 열이 자동으로 저장 되 고 응용 프로그램 실행 사이에 복원 됩니다.
 - **들여쓰기** -확장 된 항목에서 열을 들여쓸 크기입니다.
-- **들여쓰기는 셀 뒤** 에 표시 됩니다. `true`이면 들여쓰기 표시가 셀과 함께 들여쓰기 됩니다.
-- **확장 된 항목 자동 저장** -`true`경우 항목의 확장/축소 상태가 자동으로 저장 되 고 응용 프로그램 실행 간에 복원 됩니다.
-- **내용 모드** -뷰 (`NSView`) 또는 셀 (`NSCell`)을 사용 하 여 행과 열에 데이터를 표시할 수 있습니다. MacOS 10.7부터 보기를 사용 해야 합니다.
-- **Float 그룹 행** -`true`경우 테이블 뷰에서는 그룹화 된 셀이 부동 된 것 처럼 그려집니다.
+- **들여쓰기는 셀 뒤** 에 `true` 표시 됩니다. 이면 들여쓰기 표시가 셀과 함께 들여쓰기 됩니다.
+- **확장 된 항목 자동 저장** -인 경우 `true` 항목의 확장/축소 상태가 자동으로 저장 되 고 응용 프로그램 실행 간에 복원 됩니다.
+- **내용 모드** -뷰 ( `NSView` ) 또는 셀 () 중 하나를 사용 하 여 `NSCell` 행과 열에 데이터를 표시할 수 있습니다. MacOS 10.7부터 보기를 사용 해야 합니다.
+- **Float 그룹 행** -인 경우 `true` 테이블 뷰에서 그룹화 된 셀이 부동 된 것 처럼 그려집니다.
 - **Columns** -표시 되는 열 수를 정의 합니다.
-- **Headers** -`true`경우 열에 헤더가 포함 됩니다.
-- 다시 **정렬** -`true`하는 경우 사용자가 테이블의 열 순서를 끌 수 있습니다.
-- **크기 조정** -`true`하면 사용자가 열 머리글을 끌어 열 크기를 조정할 수 있습니다.
+- **Headers** -이면 `true` 열에 머리글이 포함 됩니다.
+- 다시 **정렬** -이면 `true` 사용자가 테이블의 열 순서를 끌 수 있습니다.
+- **크기 조정** -이면 `true` 사용자가 열 머리글을 끌어 열 크기를 조정할 수 있습니다.
 - **열 크기 조정** -테이블에서 열 크기를 자동으로 조정 하는 방법을 제어 합니다.
 - **강조 표시** -셀이 선택 될 때 테이블에서 사용 하는 강조 표시 유형을 제어 합니다.
-- **대체 행** -`true`하는 경우 다른 행의 배경색이 달라 집니다.
+- **교대로** 반복 되는 행- `true` 다른 행의 배경색이 달라 집니다.
 - **가로 그리드** -셀 사이에 그려진 테두리의 형식을 선택 합니다.
 - **세로 그리드** -셀 사이에 그려진 테두리의 형식을 선택 합니다.
 - **Grid color** -셀 테두리 색을 설정 합니다.
 - **배경** -셀 배경색을 설정 합니다.
 - **선택** -사용자가 테이블의 셀을 선택 하는 방법을 제어할 수 있습니다.
-  - **Multiple** -`true`사용자는 여러 행과 열을 선택할 수 있습니다.
-  - **열** -`true`경우 사용자가 열을 선택할 수 있습니다.
-  - **Select** -`true`를 입력 하 고, 사용자는 문자를 입력 하 여 행을 선택할 수 있습니다.
-  - **Empty** -`true`사용자가 행 또는 열을 선택할 필요가 없으면 테이블에서 선택할 수 없습니다.
+  - **Multiple** -이면 `true` 사용자가 여러 행과 열을 선택할 수 있습니다.
+  - **열** -이면 `true` 사용자가 열을 선택할 수 있습니다.
+  - **Select** -If `true` 를 입력 하 고 사용자가 문자를 입력 하 여 행을 선택할 수 있습니다.
+  - **Empty** -인 경우 `true` 사용자가 행 또는 열을 선택할 필요가 없으면 테이블에서 선택할 수 없습니다.
 - **자동 저장-테이블** 형식이 자동으로 저장 되는 이름입니다.
-- **열 정보** -`true`경우 열의 순서와 너비가 자동으로 저장 됩니다.
+- **열 정보** -이면 `true` 열의 순서와 너비가 자동으로 저장 됩니다.
 - **줄 바꿈** -셀에서 줄 바꿈을 처리 하는 방법을 선택 합니다.
-- **마지막으로 표시 되는 줄을 자릅니다** .-`true`하면 데이터가 데이터에서 잘릴 수 있습니다.
+- **마지막으로 표시 되는 줄을 자릅니다** .-인 경우 `true` 데이터에서 잘린 셀은 해당 범위 내에 맞지 않을 수 있습니다.
 
 > [!IMPORTANT]
-> 레거시 Xamarin.ios 응용 프로그램을 유지 관리 하지 않는 경우 `NSView` 기반 개요 보기를 `NSCell` 기반 테이블 뷰에서 사용 해야 합니다. `NSCell`은 레거시로 간주 되며 앞으로 지원 되지 않을 수 있습니다.
+> 레거시 Xamarin.ios 응용 프로그램을 유지 관리 하지 않는 경우 기반 `NSView` 개요 보기를 기반으로 하는 테이블 뷰를 사용 해야 합니다 `NSCell` . `NSCell`는 레거시로 간주 되며 향후 지원 되지 않을 수 있습니다.
 
 **인터페이스 계층 구조** 에서 테이블 열을 선택 하면 **특성 검사자**에서 다음 속성을 사용할 수 있습니다.
 
@@ -110,78 +110,78 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목�
 - **Selector** -정렬을 수행 하는 데 사용 되는 **동작** 입니다. 사용자가이 열을 정렬할 수 없으면 비워 둡니다.
 - **Order** -열 데이터의 정렬 순서입니다.
 - **크기 조정** -열의 크기 조정 유형을 선택 합니다.
-- **편집 가능** -`true`사용자는 셀 기반 테이블의 셀을 편집할 수 있습니다.
-- **Hidden** -`true`열은 숨겨집니다.
+- **편집 가능** -이면 `true` 사용자가 셀 기반 테이블의 셀을 편집할 수 있습니다.
+- **Hidden** -이면 `true` 열이 숨겨집니다.
 
 왼쪽 또는 오른쪽의 핸들 (열 오른쪽 가운데 세로 방향)을 끌어서 열 크기를 조정할 수도 있습니다.
 
-테이블 뷰에서 각 열을 선택 하 고 첫 번째 열에 `Product`의 **제목** 및 `Details`를 지정 합니다.
+테이블 뷰에서 각 열을 선택 하 고 첫 번째 열에의 **제목** 및 두 번째 열을 지정 해 보겠습니다 `Product` `Details` .
 
-**인터페이스 계층 구조** 에서 테이블 셀 뷰 (`NSTableViewCell`)를 선택 하면 **특성 검사자**에서 다음 속성을 사용할 수 있습니다.
+`NSTableViewCell` **인터페이스 계층 구조** 에서 테이블 셀 뷰 ()를 선택 하면 **특성 검사자**에서 다음 속성을 사용할 수 있습니다.
 
 [![](outline-view-images/edit07.png "The Attribute Inspector")](outline-view-images/edit07.png#lightbox)
 
 이러한 속성은 모두 표준 보기의 속성입니다. 이 열에 대 한 행의 크기를 조정 하는 옵션도 있습니다.
 
-**인터페이스 계층 구조** 에서 테이블 뷰 셀 (기본적으로 `NSTextField`)을 선택 하면 **특성 검사자**에서 다음 속성을 사용할 수 있습니다.
+인터페이스 계층 구조에서 테이블 뷰 셀 (기본적으로는)을 선택 하면 `NSTextField` **특성 검사자**에서 다음 속성을 사용할 수 있습니다. **Interface Hierarchy**
 
 [![](outline-view-images/edit08.png "The Attribute Inspector")](outline-view-images/edit08.png#lightbox)
 
 여기에서 설정할 표준 텍스트 필드의 모든 속성을 갖게 됩니다. 기본적으로 표준 텍스트 필드는 열에 있는 셀에 대 한 데이터를 표시 하는 데 사용 됩니다.
 
-**인터페이스 계층 구조** 에서 테이블 셀 뷰 (`NSTableFieldCell`)를 선택 하면 **특성 검사자**에서 다음 속성을 사용할 수 있습니다.
+`NSTableFieldCell` **인터페이스 계층 구조** 에서 테이블 셀 뷰 ()를 선택 하면 **특성 검사자**에서 다음 속성을 사용할 수 있습니다.
 
 [![](outline-view-images/edit09.png "The Attribute Inspector")](outline-view-images/edit09.png#lightbox)
 
 가장 중요 한 설정은 다음과 같습니다.
 
 - **레이아웃** -이 열에 있는 셀의 레이아웃을 선택 하는 방법을 선택 합니다.
-- **단일 줄 모드를 사용** 합니다. `true`하는 경우 셀은 한 줄로 제한 됩니다.
-- **첫 번째 런타임 레이아웃 너비** -`true`경우 응용 프로그램을 처음 실행할 때 셀에 표시 되는 너비 (수동 또는 자동)를 설정 하는 것이 좋습니다.
+- **단일 줄 모드를 사용** `true` 합니다. 인 경우 셀이 한 줄로 제한 됩니다.
+- **첫 번째 런타임 레이아웃 너비** -인 경우 `true` 셀은 응용 프로그램을 처음 실행할 때 표시 되는 너비 (수동 또는 자동)를 선호 합니다.
 - **Action** -셀에 대 한 편집 **작업** 을 보내는 시기를 제어 합니다.
 - **동작** -셀을 선택할 수 있는지 또는 편집할 수 있는지를 정의 합니다.
-- **서식 있는 텍스트** -`true`경우 셀에 서식 지정 된 텍스트와 스타일이 지정 된 텍스트가 표시 될 수 있습니다.
-- **Undo** -`true`경우 셀이 실행 취소 동작을 담당 하는 것으로 가정 합니다.
+- **서식 있는 텍스트** -인 경우 `true` 셀에 서식 지정 및 스타일 지정 된 텍스트가 표시 될 수 있습니다.
+- **Undo** -이면 `true` 셀에서 실행 취소 동작을 담당 하는 것으로 가정 합니다.
 
-**인터페이스 계층 구조**에서 테이블 열의 맨 아래에 있는 테이블 셀 뷰 (`NSTableFieldCell`)를 선택 합니다.
+`NSTableFieldCell` **인터페이스 계층 구조**에서 테이블 열의 맨 아래에 있는 테이블 셀 뷰 ()를 선택 합니다.
 
 [![](outline-view-images/edit11.png "Selecting the table cell view")](outline-view-images/edit10.png#lightbox)
 
 이렇게 하면 지정 된 열에 대해 생성 된 모든 셀의 기본 _패턴_ 으로 사용 되는 테이블 셀 뷰를 편집할 수 있습니다.
 
-<a name="Adding_Actions_and_Outlets" />
+<a name="Adding_Actions_and_Outlets"></a>
 
 ### <a name="adding-actions-and-outlets"></a>작업 및 콘센트 추가
 
-다른 Cocoa UI 컨트롤과 마찬가지로 개요 뷰를 표시 하 고, 필요한 기능에 따라 **작업** 및 **콘센트** 를 사용 하 C# 여 코드에 열과 셀을 표시 해야 합니다.
+다른 Cocoa UI 컨트롤과 마찬가지로, **작업** 및 **콘센트** 를 사용 하 여 개요 뷰 및 열과 셀을 c # 코드에 노출 해야 합니다 (필요한 기능 기반).
 
 이 프로세스는 표시 하려는 모든 개요 뷰 요소에 대해 동일 합니다.
 
-1. **길잡이 편집기** 로 전환 하 고 `ViewController.h` 파일이 선택 되었는지 확인 합니다.
+1. **길잡이 편집기** 로 전환 하 여 파일이 선택 되었는지 확인 합니다 `ViewController.h` .
 
     [![](outline-view-images/edit11.png "Selecting the correct .h file")](outline-view-images/edit11.png#lightbox)
 2. **인터페이스 계층 구조**에서 개요 뷰를 선택 하 고, 컨트롤을 클릭 한 다음 `ViewController.h` 파일을 끕니다.
-3. `ProductOutline`이라는 개요 보기의 **콘센트** 를 만듭니다.
+3. 다음 이라는 개요 보기의 **콘센트** 를 만듭니다 `ProductOutline` .
 
     [![](outline-view-images/edit13.png "Configuring an Outlet")](outline-view-images/edit13.png#lightbox)
-4. 테이블 열에 대해 다음과 같은 `ProductColumn` 및 `DetailsColumn`에 대 한 **콘센트가** 생성 됩니다.
+4. 및 라는 테이블 열에 대 한 **콘센트** 를 `ProductColumn` 만듭니다 `DetailsColumn` .
 
     [![](outline-view-images/edit14.png "Configuring an Outlet")](outline-view-images/edit14.png#lightbox)
 5. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
 다음으로, 응용 프로그램이 실행 될 때 개요에 대 한 일부 데이터를 표시 하는 코드를 작성 합니다.
 
-<a name="Populating_the_Table_View" />
+<a name="Populating_the_Table_View"></a>
 
 ## <a name="populating-the-outline-view"></a>개요 보기 채우기
 
-Interface Builder에서 설계 되 고 **콘센트**를 통해 노출 되는 개요 보기를 사용 하 여 다음 C# 코드를 작성 해야 합니다.
+Interface Builder에서 설계 되 고 **유출**를 통해 노출 되는 개요 보기를 사용 하 여 다음에는 c # 코드를 만들어 채워야 합니다.
 
-먼저 개별 행과 하위 제품 그룹에 대 한 정보를 저장 하는 새 `Product` 클래스를 만들어 보겠습니다. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 파일** ...을 선택 합니다. **일반** > **빈 클래스**를 선택 하 고 **이름** 에 `Product`를 입력 한 다음 **새로 만들기** 단추를 클릭 합니다.
+먼저 `Product` 개별 행 및 하위 제품 그룹에 대 한 정보를 보유할 새 클래스를 만들어 보겠습니다. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 파일** 추가 ...를 선택 합니다. **일반**  >  **빈 클래스**를 선택 하 고 이름으로를 입력 한 다음 `Product` **새로 만들기** 단추를 클릭 합니다. **Name**
 
 [![](outline-view-images/populate01.png "Creating an empty class")](outline-view-images/populate01.png#lightbox)
 
-`Product.cs` 파일을 다음과 같이 만듭니다.
+`Product.cs`파일이 다음과 같이 표시 되도록 합니다.
 
 ```csharp
 using System;
@@ -219,9 +219,9 @@ namespace MacOutlines
 }
 ```
 
-다음으로 요청 될 때 개요에 대 한 데이터를 제공 하는 `NSOutlineDataSource`의 서브 클래스를 만들어야 합니다. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 파일** ...을 선택 합니다. **일반** > **빈 클래스**를 선택 하 고 **이름** 에 `ProductOutlineDataSource`를 입력 한 다음 **새로 만들기** 단추를 클릭 합니다.
+다음으로 `NSOutlineDataSource` 요청 될 때 개요에 대 한 데이터를 제공 하는의 하위 클래스를 만들어야 합니다. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 파일** 추가 ...를 선택 합니다. **일반**  >  **빈 클래스**를 선택 하 고 이름으로를 입력 한 `ProductOutlineDataSource` 다음 **새로 만들기** 단추를 클릭 합니다. **Name**
 
-`ProductTableDataSource.cs` 파일을 편집 하 여 다음과 같이 만듭니다.
+파일을 편집 `ProductTableDataSource.cs` 하 여 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -280,11 +280,11 @@ namespace MacOutlines
 }
 ```
 
-이 클래스는 개요 보기의 항목에 대 한 저장소를 포함 하 고 `GetChildrenCount`를 재정의 하 여 테이블의 행 수를 반환 합니다. `GetChild`는 개요 뷰에서 요청한 대로 특정 부모 또는 자식 항목을 반환 하 고 `ItemExpandable`는 지정 된 항목을 부모 또는 자식 중 하나로 정의 합니다.
+이 클래스는 개요 보기의 항목에 대 한 저장소를 포함 하 고를 재정의 `GetChildrenCount` 하 여 테이블의 행 수를 반환 합니다. 는 `GetChild` 개요 뷰에서 요청한 대로 특정 부모 또는 자식 항목을 반환 하 고는 `ItemExpandable` 지정 된 항목을 부모 또는 자식으로 정의 합니다.
 
-마지막으로 개요의 동작을 제공 하는 `NSOutlineDelegate`의 서브 클래스를 만들어야 합니다. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 파일** ...을 선택 합니다. **일반** > **빈 클래스**를 선택 하 고 **이름** 에 `ProductOutlineDelegate`를 입력 한 다음 **새로 만들기** 단추를 클릭 합니다.
+마지막으로의 하위 클래스를 만들어 개요의 `NSOutlineDelegate` 동작을 제공 해야 합니다. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 파일** 추가 ...를 선택 합니다. **일반**  >  **빈 클래스**를 선택 하 고 이름으로를 입력 한 `ProductOutlineDelegate` 다음 **새로 만들기** 단추를 클릭 합니다. **Name**
 
-`ProductOutlineDelegate.cs` 파일을 편집 하 여 다음과 같이 만듭니다.
+파일을 편집 `ProductOutlineDelegate.cs` 하 여 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -349,9 +349,9 @@ namespace MacOutlines
 }
 ```
 
-`ProductOutlineDelegate`인스턴스를 만들 때 개요에 대 한 데이터를 제공 하는 `ProductOutlineDataSource` 인스턴스도 전달 합니다. `GetView` 메서드는 열 및 행 제공에 대 한 셀을 표시 하기 위해 뷰 (데이터)를 반환 합니다. 가능 하면 새 보기를 만들어야 하는 경우 기존 뷰를 다시 사용 하 여 셀을 표시 합니다.
+인스턴스를 만들 때 `ProductOutlineDelegate` `ProductOutlineDataSource` 개요에 대 한 데이터를 제공 하는의 인스턴스도 전달 합니다. `GetView`메서드는 열 및 행에 대 한 셀을 표시 하기 위해 뷰 (데이터)를 반환 합니다. 가능 하면 새 보기를 만들어야 하는 경우 기존 뷰를 다시 사용 하 여 셀을 표시 합니다.
 
-개요를 채우려면 `MainWindow.cs` 파일을 편집 하 고 `AwakeFromNib` 메서드를 다음과 같이 만듭니다.
+개요를 채우기 위해 파일을 편집 하 `MainWindow.cs` 고 `AwakeFromNib` 메서드를 다음과 같이 만듭니다.
 
 ```csharp
 public override void AwakeFromNib ()
@@ -396,17 +396,17 @@ public override void AwakeFromNib ()
 
 [![](outline-view-images/populate03.png "The expanded view")](outline-view-images/populate03.png#lightbox)
 
-<a name="Sorting_by_Column" />
+<a name="Sorting_by_Column"></a>
 
 ## <a name="sorting-by-column"></a>열별로 정렬
 
-사용자가 열 머리글을 클릭 하 여 윤곽선의 데이터를 정렬할 수 있습니다. 먼저 `Main.storyboard` 파일을 두 번 클릭 하 여 Interface Builder에서 편집할 수 있도록 엽니다. `Product` 열을 선택 하 고, **정렬 키**에 `Title`를 입력 하 고, **선택기** 에 `compare:` 하 고, **순서**에 대해 `Ascending`를 선택 합니다.
+사용자가 열 머리글을 클릭 하 여 윤곽선의 데이터를 정렬할 수 있습니다. 먼저 파일을 두 번 클릭 `Main.storyboard` 하 여 Interface Builder에서 편집할 수 있도록 엽니다. 열을 선택 하 `Product` `Title` 고, **정렬 키**로를 입력 하 고, 선택기에 대해를 입력 `compare:` 하 고, 순서를 선택 합니다 **Selector** `Ascending` . **Order**
 
 [![](outline-view-images/sort01.png "Setting the sort key order")](outline-view-images/sort01.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
-이제 `ProductOutlineDataSource.cs` 파일을 편집 하 고 다음 메서드를 추가 하겠습니다.
+이제 파일을 편집 `ProductOutlineDataSource.cs` 하 고 다음 메서드를 추가 해 보겠습니다.
 
 ```csharp
 public void Sort(string key, bool ascending) {
@@ -431,23 +431,23 @@ public override void SortDescriptorsChanged (NSOutlineView outlineView, NSSortDe
 }
 ```
 
-`Sort` 메서드를 사용 하면 지정 된 `Product` 클래스 필드를 기준으로 데이터 원본의 데이터를 오름차순 또는 내림차순으로 정렬할 수 있습니다. 재정의 된 `SortDescriptorsChanged` 메서드는에서 열 머리글을 클릭할 때마다 호출 됩니다. Interface Builder에 설정 된 **키** 값과 해당 열에 대 한 정렬 순서를 전달 합니다.
+`Sort`메서드를 사용 하면 지정 된 클래스 필드를 기반으로 하 여 데이터 소스의 데이터를 `Product` 오름차순 또는 내림차순으로 정렬할 수 있습니다. 재정의 된 `SortDescriptorsChanged` 메서드는가 열 머리글을 클릭할 때마다 호출 됩니다. Interface Builder에 설정 된 **키** 값과 해당 열에 대 한 정렬 순서를 전달 합니다.
 
 응용 프로그램을 실행 하 고 열 머리글을 클릭 하면 해당 열을 기준으로 행이 정렬 됩니다.
 
 [![](outline-view-images/sort02.png "Example of sorted output")](outline-view-images/sort02.png#lightbox)
 
-<a name="Row_Selection" />
+<a name="Row_Selection"></a>
 
 ## <a name="row-selection"></a>행 선택
 
-사용자가 단일 행을 선택할 수 있도록 하려면 `Main.storyboard` 파일을 두 번 클릭 하 여 Interface Builder에서 편집할 수 있도록 엽니다. **인터페이스 계층 구조** 에서 개요 보기를 선택 하 고 **특성 검사자**에서 **여러** 확인란의 선택을 취소 합니다.
+사용자가 단일 행을 선택할 수 있도록 하려면 파일을 두 번 클릭 `Main.storyboard` 하 여 Interface Builder에서 편집할 수 있도록 엽니다. **인터페이스 계층 구조** 에서 개요 보기를 선택 하 고 **특성 검사자**에서 **여러** 확인란의 선택을 취소 합니다.
 
 [![](outline-view-images/select01.png "The Attribute Inspector")](outline-view-images/select01.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
-그런 다음 `ProductOutlineDelegate.cs` 파일을 편집 하 고 다음 메서드를 추가 합니다.
+그런 다음 파일을 편집 `ProductOutlineDelegate.cs` 하 고 다음 메서드를 추가 합니다.
 
 ```csharp
 public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
@@ -457,19 +457,19 @@ public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
 }
 ```
 
-이렇게 하면 사용자가 개요 보기에서 단일 행을 선택할 수 있습니다. 사용자가 항목을 선택할 수 없도록 하려면 모든 항목에 대해 사용자가 선택 하거나 `false` 하지 않으려는 모든 항목에 대 한 `ShouldSelectItem` `false`을 반환 합니다.
+이렇게 하면 사용자가 개요 보기에서 단일 행을 선택할 수 있습니다. 사용자가 항목을 선택할 수 없도록 하려는 `false` `ShouldSelectItem` 경우 사용자가 선택할 수 없도록 하거나 모든 항목에 대해를 반환 합니다 `false` .
 
-<a name="Multiple_Row_Selection" />
+<a name="Multiple_Row_Selection"></a>
 
 ## <a name="multiple-row-selection"></a>여러 행 선택
 
-사용자가 여러 행을 선택할 수 있도록 하려면 `Main.storyboard` 파일을 두 번 클릭 하 여 Interface Builder에서 편집할 수 있도록 엽니다. **인터페이스 계층 구조** 에서 개요 보기를 선택 하 고 **특성 검사자**에서 **여러** 확인란을 선택 합니다.
+사용자가 여러 행을 선택할 수 있도록 하려면 파일을 두 번 클릭 `Main.storyboard` 하 여 Interface Builder에서 편집할 수 있도록 엽니다. **인터페이스 계층 구조** 에서 개요 보기를 선택 하 고 **특성 검사자**에서 **여러** 확인란을 선택 합니다.
 
 [![](outline-view-images/select02.png "The Attribute Inspector")](outline-view-images/select02.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
-그런 다음 `ProductOutlineDelegate.cs` 파일을 편집 하 고 다음 메서드를 추가 합니다.
+그런 다음 파일을 편집 `ProductOutlineDelegate.cs` 하 고 다음 메서드를 추가 합니다.
 
 ```csharp
 public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
@@ -479,19 +479,19 @@ public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
 }
 ```
 
-이렇게 하면 사용자가 개요 보기에서 단일 행을 선택할 수 있습니다. 사용자가 항목을 선택할 수 없도록 하려면 모든 항목에 대해 사용자가 선택 하거나 `false` 하지 않으려는 모든 항목에 대 한 `ShouldSelectRow` `false`을 반환 합니다.
+이렇게 하면 사용자가 개요 보기에서 단일 행을 선택할 수 있습니다. 사용자가 항목을 선택할 수 없도록 하려는 `false` `ShouldSelectRow` 경우 사용자가 선택할 수 없도록 하거나 모든 항목에 대해를 반환 합니다 `false` .
 
-<a name="Type_to_Select_Row" />
+<a name="Type_to_Select_Row"></a>
 
 ## <a name="type-to-select-row"></a>입력 하 여 행 선택
 
-사용자가 개요 보기가 선택 된 문자를 입력 하 고 해당 문자가 포함 된 첫 번째 행을 선택할 수 있게 하려면 `Main.storyboard` 파일을 두 번 클릭 하 여 Interface Builder에서 편집할 수 있도록 엽니다. **인터페이스 계층 구조** 에서 개요 보기를 선택 하 고 **특성 검사자**에서 **유형 선택** 확인란을 선택 합니다.
+사용자가 개요 보기가 선택 된 문자를 입력 하 고 해당 문자가 포함 된 첫 번째 행을 선택 하려면 파일을 두 번 클릭 `Main.storyboard` 하 여 Interface Builder에서 편집할 수 있도록 엽니다. **인터페이스 계층 구조** 에서 개요 보기를 선택 하 고 **특성 검사자**에서 **유형 선택** 확인란을 선택 합니다.
 
 [![](outline-view-images/type01.png "Editing the row type")](outline-view-images/type01.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
-이제 `ProductOutlineDelegate.cs` 파일을 편집 하 고 다음 메서드를 추가 하겠습니다.
+이제 파일을 편집 `ProductOutlineDelegate.cs` 하 고 다음 메서드를 추가 해 보겠습니다.
 
 ```csharp
 public override NSObject GetNextTypeSelectMatch (NSOutlineView outlineView, NSObject startItem, NSObject endItem, string searchString)
@@ -507,13 +507,13 @@ public override NSObject GetNextTypeSelectMatch (NSOutlineView outlineView, NSOb
 }
 ```
 
-`GetNextTypeSelectMatch` 메서드는 지정 된 `searchString`를 사용 하 여 `Title`의 해당 문자열이 포함 된 첫 번째 `Product`의 항목을 반환 합니다.
+`GetNextTypeSelectMatch`메서드는 지정 된를 가져와서 해당 `searchString` 문자열이 있는 첫 번째의 항목을 반환 합니다 `Product` `Title` .
 
-<a name="Reordering_Columns" />
+<a name="Reordering_Columns"></a>
 
 ## <a name="reordering-columns"></a>열 다시 정렬
 
-사용자가 개요 보기에서 열 순서를 끌 수 있도록 하려면 `Main.storyboard` 파일을 두 번 클릭 하 여 Interface Builder에서 편집할 수 있도록 엽니다. **인터페이스 계층 구조** 에서 개요 뷰를 선택 하 고 **특성 검사자**에서 다시 **정렬** 확인란을 선택 합니다.
+사용자가 개요 보기에서 열 순서를 끌 수 있도록 하려면 파일을 두 번 클릭 `Main.storyboard` 하 여 Interface Builder에서 편집할 수 있도록 엽니다. **인터페이스 계층 구조** 에서 개요 뷰를 선택 하 고 **특성 검사자**에서 다시 **정렬** 확인란을 선택 합니다.
 
 [![](outline-view-images/reorder01.png "The Attribute Inspector")](outline-view-images/reorder01.png#lightbox)
 
@@ -521,7 +521,7 @@ public override NSObject GetNextTypeSelectMatch (NSOutlineView outlineView, NSOb
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
-이제 `ProductOutlineDelegate.cs` 파일을 편집 하 고 다음 메서드를 추가 하겠습니다.
+이제 파일을 편집 `ProductOutlineDelegate.cs` 하 고 다음 메서드를 추가 해 보겠습니다.
 
 ```csharp
 public override bool ShouldReorder (NSOutlineView outlineView, nint columnIndex, nint newColumnIndex)
@@ -530,17 +530,17 @@ public override bool ShouldReorder (NSOutlineView outlineView, nint columnIndex,
 }
 ```
 
-`ShouldReorder` 메서드는 `newColumnIndex`으로 다시 정렬 되도록 허용할 모든 열에 대해 `true`을 반환 해야 합니다. 그렇지 않으면 `false`을 반환 합니다.
+메서드는로 다시 `ShouldReorder` `true` 정렬 되도록 허용할 모든 열에 대해를 반환 해야 하며 `newColumnIndex` , 그렇지 않으면를 반환 합니다 `false` .
 
 응용 프로그램을 실행 하는 경우 열 머리글을 끌어 열의 순서를 바꿀 수 있습니다.
 
 [![](outline-view-images/reorder02.png "Example of reordering columns")](outline-view-images/reorder02.png#lightbox)
 
-<a name="Editing_Cells" />
+<a name="Editing_Cells"></a>
 
 ## <a name="editing-cells"></a>셀 편집
 
-사용자가 지정 된 셀에 대 한 값을 편집할 수 있도록 하려면 `ProductOutlineDelegate.cs` 파일을 편집 하 고 `GetViewForItem` 메서드를 다음과 같이 변경 합니다.
+사용자가 지정 된 셀에 대 한 값을 편집할 수 있게 하려면 파일을 편집 하 `ProductOutlineDelegate.cs` 고 메서드를 다음과 같이 변경 합니다 `GetViewForItem` .
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
@@ -598,11 +598,11 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 
 [![](outline-view-images/editing01.png "An example of editing cells")](outline-view-images/editing01.png#lightbox)
 
-<a name="Using_Images_in_Outline_Views" />
+<a name="Using_Images_in_Outline_Views"></a>
 
 ## <a name="using-images-in-outline-views"></a>개요 뷰에서 이미지 사용
 
-`NSOutlineView`에 있는 셀의 일부로 이미지를 포함 하려면 개요 뷰의 `NSTableViewDelegate's` `GetView` 메서드에서 데이터가 반환 되는 방법을 변경 하 여 일반적인 `NSTextField`대신 `NSTableCellView`를 사용 해야 합니다. 예를 들면,
+에서 셀의 일부로 이미지를 포함 하려면 `NSOutlineView` 개요 뷰의 메서드에서 데이터를 반환 하는 방법을 변경 하 여 `NSTableViewDelegate's` `GetView` 일반적인 대신를 사용 해야 `NSTableCellView` `NSTextField` 합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
@@ -668,21 +668,21 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 
 자세한 내용은 [이미지 작업](~/mac/app-fundamentals/image.md) 설명서의 [개요 뷰에서 이미지 사용](~/mac/app-fundamentals/image.md) 섹션을 참조 하세요.
 
-<a name="Data_Binding_Outline_Views" />
+<a name="Data_Binding_Outline_Views"></a>
 
 ## <a name="data-binding-outline-views"></a>데이터 바인딩 개요 뷰
 
 Xamarin.ios 응용 프로그램에서 키-값 코딩 및 데이터 바인딩 기술을 사용 하 여 UI 요소를 채우고 사용 하기 위해 작성 하 고 유지 관리 해야 하는 코드의 양을 크게 줄일 수 있습니다. 또한 프런트 엔드 사용자 인터페이스 (_모델-뷰-컨트롤러_)에서 지원 데이터 (_데이터 모델_)를 추가로 분리 하 여 더 쉽게 유지 관리 하 고 더욱 유연한 응용 프로그램을 디자인할 수 있는 이점을 누릴 수 있습니다.
 
-KVC (키-값 코딩)는 키 (특별히 서식이 지정 된 문자열)를 사용 하 여 개체의 속성에 간접적으로 액세스 하 고 인스턴스 변수 또는 접근자 메서드 (`get/set`)를 통해 액세스 하는 대신 속성을 식별 하는 메커니즘입니다. Xamarin.ios 응용 프로그램에서 키-값 코딩 규격 접근자를 구현 하 여 키-값 관찰 (KVO), 데이터 바인딩, 코어 데이터, Cocoa 바인딩, scriptability 등의 다른 macOS 기능에 액세스할 수 있습니다.
+KVC (키-값 코딩)는 키 (특수 형식의 문자열)를 사용 하 여 개체의 속성에 간접적으로 액세스 하 고 인스턴스 변수 또는 접근자 메서드 ()를 통해 액세스 하는 대신 속성을 식별 하는 메커니즘입니다 `get/set` . Xamarin.ios 응용 프로그램에서 키-값 코딩 규격 접근자를 구현 하 여 키-값 관찰 (KVO), 데이터 바인딩, 코어 데이터, Cocoa 바인딩, scriptability 등의 다른 macOS 기능에 액세스할 수 있습니다.
 
 자세한 내용은 [데이터 바인딩 및 키-값 코딩](~/mac/app-fundamentals/databinding.md) 설명서의 [개요 뷰 데이터 바인딩](~/mac/app-fundamentals/databinding.md#Outline_View_Data_Binding) 섹션을 참조 하세요.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.ios 응용 프로그램에서 개요 보기를 사용 하는 방법을 자세히 살펴봅니다. Xcode의 Interface Builder에서 개요 보기를 만들고 유지 관리 하는 방법 및 코드에서 C# 개요 보기를 사용 하는 방법에 대 한 다양 한 유형 및 사용 방법을 살펴보았습니다.
+이 문서에서는 Xamarin.ios 응용 프로그램에서 개요 보기를 사용 하는 방법을 자세히 살펴봅니다. Xcode의 Interface Builder에서 개요 보기를 만들고 유지 관리 하는 방법 및 c # 코드에서 개요 보기를 사용 하는 방법에 대 한 다양 한 유형 및 사용 방법을 살펴보았습니다.
 
 ## <a name="related-links"></a>관련 링크
 

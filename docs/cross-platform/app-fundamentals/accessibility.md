@@ -6,18 +6,18 @@ ms.assetid: E587F0CF-7C1D-41F8-B5A8-DA3E738EDA81
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 23ef499005994c33586e1918ac3b2a9d28640d04
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: df042521d4e9852d6e23c2bbdf24484f9068250d
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030286"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571261"
 ---
 # <a name="accessibility-in-xamarin-apps"></a>Xamarin 앱의 접근성
 
 _최대한 광범위 한 대상 그룹이 앱을 사용할 수 있는지 확인_
 
-접근성은 큰 형식, 고대비, 확대, 화면 읽기 (텍스트 음성 변환), 시각적 또는 햅 피드백 큐와 같은 잘 운영 체제 표시 및 입력 지원 기능을 수행 하는 응용 프로그램 사용자 인터페이스를 디자인 하는 개념을 나타냅니다. 대체 입력 방법
+접근성은 큰 형식, 고대비, 확대, 화면 읽기 (텍스트 음성 변환), 시각적 또는 햅 피드백 큐 및 대체 입력 방법과 같이 잘 작동 하는 운영 체제 표시 및 입력 지원 기능을 제공 하는 응용 프로그램 사용자 인터페이스를 디자인 하는 개념을 나타냅니다.
 
 IOS, Android, Windows 등의 데스크톱 및 모바일 플랫폼은 개발자가 [Google TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) 및 [Apple의 VoiceOver](https://www.apple.com/accessibility/ios/voiceover/)와 같은 액세스 가능한 앱을 빌드하는 데 도움이 되는 기본 제공 api를 제공 합니다.
 
@@ -28,9 +28,9 @@ IOS, Android, Windows 등의 데스크톱 및 모바일 플랫폼은 개발자�
 - [**Android 접근성**](~/android/app-fundamentals/accessibility.md)
 - [**iOS 접근성**](~/ios/app-fundamentals/accessibility.md)
 - [**OS X 접근성**](~/mac/app-fundamentals/accessibility.md)
-- [**Xamarin.ios**](~/xamarin-forms/app-fundamentals/accessibility/index.md)
+- [**Xamarin.Forms**](~/xamarin-forms/app-fundamentals/accessibility/index.md)
 
-<a name="checklist" />
+<a name="checklist"></a>
 
 ## <a name="accessibility-checklist"></a>내게 필요한 옵션 검사 목록
 
@@ -74,4 +74,4 @@ IOS, Android, Windows 등의 데스크톱 및 모바일 플랫폼은 개발자�
 - [Android 접근성](~/android/app-fundamentals/accessibility.md)
 - [iOS 접근성](~/ios/app-fundamentals/accessibility.md)
 - [OS X 접근성](~/mac/app-fundamentals/accessibility.md)
-- [Xamarin 양식 접근성](~/xamarin-forms/app-fundamentals/accessibility/index.md)
+- [Xamarin.Forms 접근성](~/xamarin-forms/app-fundamentals/accessibility/index.md)

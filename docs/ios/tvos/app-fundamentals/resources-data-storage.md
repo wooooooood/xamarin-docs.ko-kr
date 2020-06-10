@@ -7,26 +7,26 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: d84752afd5579216272895f750522a8f38ece34a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8619fa73a4dbaabe1e161c634b6a794b701d5135
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030799"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570863"
 ---
 # <a name="tvos-resources-and-data-storage-in-xamarin"></a>Xamarin에서 리소스 및 데이터 저장소 tvOS
 
 _이 문서에서는 tvOS 앱에서 리소스 및 영구 데이터 저장소를 사용 하는 방법을 설명 합니다._
 
-<a name="tvOS-Resource-Limitations" />
+<a name="tvOS-Resource-Limitations"></a>
 
 ## <a name="tvos-resource-limitations"></a>tvOS 리소스 제한
 
-IOS 장치와 달리 새로운 Apple TV는 tvOS apps 또는 데이터에 대해 매우 제한 된 영구적 로컬 저장소를 제공 합니다. 매우 작은 항목 (예: 사용자 기본 설정)의 경우 tvOS 앱은 [500 KB의 데이터를 제한](https://forums.developer.apple.com/message/50696#50696)하 여 `NSUserDefaults`에 계속 액세스할 수 있습니다. 그러나 tvOS 앱이 더 많은 양의 정보를 유지 해야 하는 경우에는 [iCloud](#iCloud-Data-Storage)에서 해당 데이터를 저장 하 고 검색 해야 합니다.
+IOS 장치와 달리 새로운 Apple TV는 tvOS apps 또는 데이터에 대해 매우 제한 된 영구적 로컬 저장소를 제공 합니다. 매우 작은 항목 (예: 사용자 기본 설정)의 경우 tvOS 앱은 여전히 500의 `NSUserDefaults` 데이터를 [제한](https://forums.developer.apple.com/message/50696#50696)하 여에 액세스할 수 있습니다. 그러나 tvOS 앱이 더 많은 양의 정보를 유지 해야 하는 경우에는 [iCloud](#iCloud-Data-Storage)에서 해당 데이터를 저장 하 고 검색 해야 합니다.
 
 또한 tvOS는 Apple TV 앱의 크기를 200MB로 제한 합니다. 앱이이 크기를 초과 하는 리소스를 필요로 하는 경우 [요청 시 리소스](#On-Demand-Resources) 를 사용 하 여 패키지 하 고 로드 해야 합니다 (최대 추가 2gb). 이러한 제한 사항이 있을 경우 앱의 사용자에 게 최상의 환경을 제공 하기 위해 추가 자산의 다운로드 시간을 올바르게 지정 하는 것이 중요 합니다. 자세한 내용은 Apple의 [주문형 리소스 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/index.html#//apple_ref/doc/uid/TP40015083)를 참조 하세요.
 
-<a name="Non-Persistent-Downloads" />
+<a name="Non-Persistent-Downloads"></a>
 
 ## <a name="non-persistent-downloads"></a>영구적이 지 않은 다운로드
 
@@ -37,13 +37,13 @@ IOS 장치와 달리 새로운 Apple TV는 tvOS apps 또는 데이터에 대해 
 > [!IMPORTANT]
 > 필요에 따라 다른 자산 및 리소스를 다운로드 하는 기능을 사용 하는 경우 Apple은 예기치 않은 결과를 일으킬 수 있으므로 앱 캐시의 모든 공간을 사용 하지 않도록 경고 합니다.
 
-<a name="Managing-Resources" />
+<a name="Managing-Resources"></a>
 
 ## <a name="managing-resources"></a>리소스 관리
 
 위에서 설명한 것 처럼 tvOS apps에 사용할 수 있는 정보를 영구적으로 저장 하는 것이 제한 되어 있으므로 tvOS 앱에 대 한 뛰어난 사용자 환경을 만들기 위해 이러한 제한 사항을 신중히 계획 해야 합니다.
 
-<a name="iCloud-Data-Storage" />
+<a name="iCloud-Data-Storage"></a>
 
 ### <a name="icloud-data-storage"></a>iCloud 데이터 저장소
 
@@ -57,7 +57,7 @@ Apple TV의 저장소는 제한 되어 있기 때문에 영구적이 고 영구�
 > [!IMPORTANT]
 > Apple에서는 개발자가 유럽 연합의 GDPR(일반 데이터 보호 규정)을 제대로 처리하는 데 도움이 되는 [도구를 제공합니다](https://developer.apple.com/support/allowing-users-to-manage-data/).
 
-<a name="On-Demand-Resources" />
+<a name="On-Demand-Resources"></a>
 
 ### <a name="on-demand-resources"></a>주문형 리소스
 
@@ -72,7 +72,7 @@ Xcode를 사용 하 여 리소스 태그 부여와 관련 된 관련 콘텐츠 (
 > [!IMPORTANT]
 > 앱이 요청 시 리소스를 다운로드 해야 하는 횟수와 개별 다운로드의 크기 간에 적절 한 균형을 맞추도록 주의 해야 합니다. 게임 플레이를 지속적으로 중단 하 여 새 콘텐츠를 다운로드 하거나 단일 다운로드에 너무 많은 시간이 소요 되는 경우 사용자가 앱을 사용 하지 못할 수 있습니다.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 

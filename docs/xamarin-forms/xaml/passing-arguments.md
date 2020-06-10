@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f314f3145b3573184cb8cdf7370394c975c66859
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127079"
+제목: "XAML로 인수 전달" 설명: "이 문서에서는 기본이 아닌 생성자에 인수를 전달 하 고, 팩터리 메서드를 호출 하 고, 제네릭 인수의 형식을 지정 하는 데 사용할 수 있는 XAML 특성을 사용 하는 방법을 보여 줍니다."
+assetid: 8F3B267F-499E-4D79-9193-FCA99F199519: xamarin-forms author: davidbritch: dabritch:: 10/25/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="passing-arguments-in-xaml"></a>XAML에서 인수 전달
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
@@ -27,12 +13,10 @@ _이 문서에서는 기본이 아닌 생성자에 인수를 전달 하 고, 팩
 
 인수가 필요한 생성자가 포함 된 개체를 인스턴스화하거나 정적 생성 메서드를 호출 해야 하는 경우가 종종 있습니다. 이러한 작업은 및 특성을 사용 하 여 XAML에서 수행할 수 있습니다 `x:Arguments` `x:FactoryMethod` .
 
-- `x:Arguments`특성은 기본이 아닌 생성자에 대 한 생성자 인수를 지정 하는 데 사용 되거나 팩터리 메서드 개체 선언에 사용 됩니다. 자세한 내용은 [생성자 인수 전달](#constructor_arguments)을 참조 하세요.
-- `x:FactoryMethod`특성은 개체를 초기화 하는 데 사용할 수 있는 팩터리 메서드를 지정 하는 데 사용 됩니다. 자세한 내용은 [팩터리 메서드 호출](#factory_methods)을 참조 하세요.
+- `x:Arguments`특성은 기본이 아닌 생성자에 대 한 생성자 인수를 지정 하는 데 사용 되거나 팩터리 메서드 개체 선언에 사용 됩니다. 자세한 내용은 [생성자 인수 전달](#passing-constructor-arguments)을 참조 하세요.
+- `x:FactoryMethod`특성은 개체를 초기화 하는 데 사용할 수 있는 팩터리 메서드를 지정 하는 데 사용 됩니다. 자세한 내용은 [팩터리 메서드 호출](#calling-factory-methods)을 참조 하세요.
 
-또한 특성을 사용 하 여 제네릭 형식의 `x:TypeArguments` 생성자에 대 한 제네릭 형식 인수를 지정할 수 있습니다. 자세한 내용은 [제네릭 형식 인수 지정](#generic_type_arguments)을 참조 하세요.
-
-<a name="constructor_arguments" />
+또한 특성을 사용 하 여 제네릭 형식의 `x:TypeArguments` 생성자에 대 한 제네릭 형식 인수를 지정할 수 있습니다. 자세한 내용은 [제네릭 형식 인수 지정](#specifying-a-generic-type-argument)을 참조 하세요.
 
 ## <a name="passing-constructor-arguments"></a>생성자 인수 전달
 
@@ -96,8 +80,6 @@ _이 문서에서는 기본이 아닌 생성자에 인수를 전달 하 고, 팩
 
 ![BoxView. x:Arguments로 지정 된 색](passing-arguments-images/passing-arguments.png)
 
-<a name="factory_methods" />
-
 ## <a name="calling-factory-methods"></a>팩터리 메서드 호출
 
 특성을 사용 하 여 메서드 이름을 지정 하 `x:FactoryMethod` 고 특성을 사용 하 여 해당 인수를 지정 하 여 XAML에서 팩터리 메서드를 호출할 수 있습니다 `x:Arguments` . 팩터리 메서드는 메서드를 `public static` 정의 하는 클래스 또는 구조체와 동일한 형식의 개체 또는 값을 반환 하는 메서드입니다.
@@ -145,8 +127,6 @@ _이 문서에서는 기본이 아닌 생성자에 인수를 전달 하 고, 팩
 다음 스크린샷에는 [`Color`](xref:Xamarin.Forms.Color) 지정 된 인수 값을 사용 하 여 각 팩터리 메서드를 호출한 결과가 나와 있습니다.
 
 ![BoxView. x:FactoryMethod 및 x:Arguments로 지정 된 색](passing-arguments-images/factory-methods.png)
-
-<a name="generic_type_arguments" />
 
 ## <a name="specifying-a-generic-type-argument"></a>제네릭 형식 인수 지정
 

@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: da4884e7f1e3ec1ae8653ea8ec4247fce54a6565
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 3204180ed28e98e52c4f0772ecb37a5353736acb
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940754"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570349"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Xamarin Android의 사용 권한
 
 ## <a name="overview"></a>개요
 
-Android 응용 프로그램은 자체 샌드박스에서 실행 되며, 보안상의 이유로 장치의 특정 시스템 리소스 또는 하드웨어에 액세스할 수 없습니다. 사용자는 이러한 리소스를 사용 하기 전에 앱에 대 한 권한을 명시적으로 부여 해야 합니다. 예를 들어 응용 프로그램은 사용자가 명시적으로 사용 하지 않고 장치에서 GPS에 액세스할 수 없습니다. 앱이 권한 없이 보호 된 리소스에 액세스 하려고 하면 Android에서 `Java.Lang.SecurityException`을 throw 합니다.
+Android 응용 프로그램은 자체 샌드박스에서 실행 되며, 보안상의 이유로 장치의 특정 시스템 리소스 또는 하드웨어에 액세스할 수 없습니다. 사용자는 이러한 리소스를 사용 하기 전에 앱에 대 한 권한을 명시적으로 부여 해야 합니다. 예를 들어 응용 프로그램은 사용자가 명시적으로 사용 하지 않고 장치에서 GPS에 액세스할 수 없습니다. `Java.Lang.SecurityException`앱이 권한 없이 보호 된 리소스에 액세스 하려고 하면 Android에서을 throw 합니다.
 
 앱을 개발할 때 응용 프로그램 개발자가 사용 권한을 **Androidmanifest** 에서 선언 합니다. Android에는 해당 권한에 대 한 사용자의 동의를 얻기 위한 두 가지 워크플로가 있습니다.
 
@@ -28,13 +28,13 @@ Android 응용 프로그램은 자체 샌드박스에서 실행 되며, 보안�
 
 Android 앱은 런타임에 확인 하 여 보호 된 리소스에 액세스할 수 있는 권한이 있는지 확인 해야 합니다. 앱에 권한이 없는 경우 사용자에 게 사용 권한을 부여 하기 위해 Android SDK에서 제공 하는 새 Api를 사용 하 여 요청 해야 합니다. 사용 권한은 다음과 같은 두 가지 범주로 구분 됩니다.
 
-- **일반 사용** 권한 &ndash; 사용자의 보안 또는 개인 정보에 대 한 보안 위험이 거의 없는 사용 권한입니다. Android 6.0는 설치 시 일반 권한을 자동으로 부여 합니다. [일반 사용 권한의 전체 목록은](https://developer.android.com/guide/topics/permissions/normal-permissions.html)Android 설명서를 참조 하세요.
-- **위험한 권한은** 일반 사용 권한과 달리 &ndash; 사용자의 보안 또는 개인 정보를 보호 하는 사용 권한입니다. 사용자가 명시적으로 부여 해야 합니다. SMS 메시지를 보내거나 받는 작업은 위험한 권한이 필요한 작업의 예입니다.
+- **일반 권한** &ndash; 사용자의 보안 또는 개인 정보에 대 한 보안 위험을 최소화 하는 사용 권한입니다. Android 6.0는 설치 시 일반 권한을 자동으로 부여 합니다. [일반 사용 권한의 전체 목록은](https://developer.android.com/guide/topics/permissions/normal-permissions.html)Android 설명서를 참조 하세요.
+- **위험한 권한** &ndash; 일반적인 사용 권한과는 달리 사용자의 보안 또는 개인 정보를 보호 하는 사용 권한이 위험한 사용 권한입니다. 사용자가 명시적으로 부여 해야 합니다. SMS 메시지를 보내거나 받는 작업은 위험한 권한이 필요한 작업의 예입니다.
 
 > [!IMPORTANT]
 > 사용 권한이 속하는 범주가 시간이 지남에 따라 변경 될 수 있습니다.  "일반" 권한으로 분류 된 사용 권한은 이후 API 수준에서 위험한 권한으로 승격 될 수 있습니다.
 
-위험한 권한은 추가 [_권한 그룹_](https://developer.android.com/guide/topics/permissions/requesting.html#perm-groups)으로 추가 됩니다. 권한 그룹은 논리적으로 관련 된 사용 권한을 보유 합니다. 사용자가 권한 그룹의 한 멤버에 게 권한을 부여 하면 Android에서 해당 그룹의 모든 구성원에 게 권한을 자동으로 부여 합니다. 예를 들어 [`STORAGE`](https://developer.android.com/reference/android/Manifest.permission_group.html#STORAGE) 권한 그룹에는 `WRITE_EXTERNAL_STORAGE` 및 `READ_EXTERNAL_STORAGE` 권한이 모두 포함 됩니다. 사용자가 `READ_EXTERNAL_STORAGE`에 대 한 사용 권한을 부여 하면 `WRITE_EXTERNAL_STORAGE` 사용 권한이 자동으로 부여 됩니다.
+위험한 권한은 추가 [_권한 그룹_](https://developer.android.com/guide/topics/permissions/requesting.html#perm-groups)으로 추가 됩니다. 권한 그룹은 논리적으로 관련 된 사용 권한을 보유 합니다. 사용자가 권한 그룹의 한 멤버에 게 권한을 부여 하면 Android에서 해당 그룹의 모든 구성원에 게 권한을 자동으로 부여 합니다. 예를 들어 [`STORAGE`](https://developer.android.com/reference/android/Manifest.permission_group.html#STORAGE) 사용 권한 그룹에는 `WRITE_EXTERNAL_STORAGE` 및 사용 권한이 모두 포함 `READ_EXTERNAL_STORAGE` 됩니다. 사용자가에 권한을 부여 하는 경우에는 `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` 사용 권한이 자동으로 부여 됩니다.
 
 하나 이상의 권한을 요청 하기 전에 사용 권한을 요청 하기 전에 앱에 권한이 필요한 이유를 설명 하는 것이 가장 좋습니다. 사용자가 이론적으로 이해 하면 앱에서 사용자의 권한을 요청할 수 있습니다. 이론적 이해를 이해 하면 사용자가 권한을 부여 하 고 그렇지 않은 경우 영향을 이해 하려는 경우 적절 한 결정을 내릴 수 있습니다. 
 
@@ -49,7 +49,7 @@ Android 지원 라이브러리 백에서 이전 버전의 Android에 대 한 사
 > [!NOTE]
 > 하드웨어에 대 한 권한이 Google Play으로 앱을 필터링 하는 방법에 영향을 줄 수 있습니다. 예를 들어 앱에 카메라에 대 한 권한이 필요한 경우 Google Play는 카메라를 설치 하지 않은 장치에서 Google Play 스토어 앱을 표시 하지 않습니다.
 
-<a name="requirements" />
+<a name="requirements"></a>
 
 ## <a name="requirements"></a>요구 사항
 
@@ -66,7 +66,7 @@ Android 6.0 이상을 대상으로 하는 앱은 사용자에 게 과거의 특�
 
 ### <a name="declaring-permissions-in-the-manifest"></a>매니페스트에서 권한 선언
 
-사용 권한은 `uses-permission` 요소를 사용 하 여 **Androidmanifest** 에 추가 됩니다. 예를 들어, 응용 프로그램에서 장치의 위치를 찾으려면 적절 한 강좌 위치 권한이 필요 합니다. 다음 두 요소가 매니페스트에 추가 됩니다. 
+사용 권한은 요소를 사용 하 여 **Androidmanifest** 에 추가 됩니다. `uses-permission` 예를 들어, 응용 프로그램에서 장치의 위치를 찾으려면 적절 한 강좌 위치 권한이 필요 합니다. 다음 두 요소가 매니페스트에 추가 됩니다. 
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -75,23 +75,23 @@ Android 6.0 이상을 대상으로 하는 앱은 사용자에 게 과거의 특�
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Visual Studio에 기본 제공 되는 도구 지원을 사용 하 여 권한을 선언할 수 있습니다.
 
 1. **솔루션 탐색기** 에서 **속성** 을 두 번 클릭 하 고 속성 창 **Android 매니페스트** 탭을 선택 합니다.
 
-    [Android 매니페스트 탭의 ![필요한 권한](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png#lightbox)
+    [![Android 매니페스트 탭에서 필요한 권한](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png#lightbox)
 
 2. 응용 프로그램에 AndroidManifest이 아직 없는 경우에는 없음을 클릭 **합니다. 아래와 같이 클릭 하 여 추가 합니다** .
 
-    [![없습니다.](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png#lightbox)
+    [![AndroidManifest 메시지 없음](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png#lightbox)
 
 3. **필요한 사용 권한** 목록에서 응용 프로그램에 필요한 사용 권한을 선택 하 고 저장 합니다.
 
-    [![예제 카메라 사용 권한 선택](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
+    [![카메라 사용 권한 선택](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 Mac용 Visual Studio에 기본 제공 되는 도구 지원을 사용 하 여 사용 권한을 선언할 수 있습니다.
 
@@ -101,24 +101,24 @@ Mac용 Visual Studio에 기본 제공 되는 도구 지원을 사용 하 여 사
 
 2. 프로젝트에 **Androidmanifest**이 아직 없는 경우 **Android 매니페스트 추가** 단추를 클릭 합니다.
 
-    [프로젝트의 Android 매니페스트가 누락 ![](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png#lightbox)
+    [![프로젝트의 Android 매니페스트가 없습니다.](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png#lightbox)
 
 3. **필요한 사용 권한** 목록에서 응용 프로그램에 필요한 사용 권한을 선택 하 고 **확인을**클릭 합니다.
 
-    [![예제 카메라 사용 권한 선택](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png#lightbox)
+    [![카메라 사용 권한 선택](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png#lightbox)
     
 -----
 
-Xamarin.ios는 빌드 시 빌드를 디버그 하는 데 일부 권한을 자동으로 추가 합니다. 이렇게 하면 응용 프로그램을 더 쉽게 디버그할 수 있습니다. 특히, 두 가지 주목할 만한 권한을 `INTERNET` 하 고 `READ_EXTERNAL_STORAGE`합니다. 이러한 자동 설정 권한은 **필요한 사용 권한** 목록에서 사용 하도록 설정 된 것으로 표시 되지 않습니다. 그러나 릴리스 빌드는 **필요한 사용 권한** 목록에 명시적으로 설정 된 권한만 사용 합니다. 
+Xamarin.ios는 빌드 시 빌드를 디버그 하는 데 일부 권한을 자동으로 추가 합니다. 이렇게 하면 응용 프로그램을 더 쉽게 디버그할 수 있습니다. 특히, 두 가지 주목할 만한 권한은 `INTERNET` 및 `READ_EXTERNAL_STORAGE` 입니다. 이러한 자동 설정 권한은 **필요한 사용 권한** 목록에서 사용 하도록 설정 된 것으로 표시 되지 않습니다. 그러나 릴리스 빌드는 **필요한 사용 권한** 목록에 명시적으로 설정 된 권한만 사용 합니다. 
 
 Android 5.1 (API 수준 22)이 하를 대상으로 하는 앱의 경우 수행 해야 할 작업이 없습니다. Android 6.0 (API 23 수준 23) 이상에서 실행 되는 앱은 런타임 권한 검사를 수행 하는 방법에 대 한 다음 섹션을 진행 해야 합니다. 
 
 ### <a name="runtime-permission-checks-in-android-60"></a>Android 6.0의 런타임 권한 검사
 
-`ContextCompat.CheckSelfPermission` 메서드 (Android 지원 라이브러리에서 사용 가능)는 특정 권한이 부여 되었는지 확인 하는 데 사용 됩니다. 이 메서드는 다음 두 값 중 하나가 포함 된 [`Android.Content.PM.Permission`](xref:Android.Content.PM.Permission) 열거형을 반환 합니다.
+`ContextCompat.CheckSelfPermission`(Android 지원 라이브러리에서 사용 가능) 메서드는 특정 권한이 부여 되었는지 확인 하는 데 사용 됩니다. 이 메서드는 [`Android.Content.PM.Permission`](xref:Android.Content.PM.Permission) 두 값 중 하나를 포함 하는 열거형을 반환 합니다.
 
-- 지정 된 사용 권한이 부여 된 &ndash;를 **`Permission.Granted`** 합니다.
-- **`Permission.Denied`** &ndash; 지정 된 사용 권한이 부여 되지 않았습니다.
+- **`Permission.Granted`**&ndash;지정 된 사용 권한이 부여 되었습니다.
+- **`Permission.Denied`**&ndash;지정 된 사용 권한이 부여 되지 않았습니다.
 
 이 코드 조각은 활동에서 카메라 사용 권한을 확인 하는 방법의 예입니다. 
 
@@ -135,15 +135,15 @@ else
 
 응용 프로그램에 대 한 사용 권한이 필요한 이유를 사용자에 게 알리는 것이 가장 좋습니다. 따라서 사용 권한을 부여 하는 것에 대 한 의사 결정을 내릴 수 있습니다. 이에 대 한 예로 사진 및 지역 태그를 사용 하는 앱이 있습니다. 사용자가 카메라 사용 권한이 필요 하다는 것을 분명 하 게 알 수 있지만, 앱에도 장치의 위치가 필요한 이유는 명확 하지 않을 수 있습니다. 사용자가 위치 권한이 바람직한 이유와 카메라 권한이 필요한 이유를 이해 하는 데 도움이 되는 메시지를 설명 해야 합니다.
 
-`ActivityCompat.ShouldShowRequestPermissionRationale` 메서드는 사용자에 게 근거를 표시할지 여부를 결정 하는 데 사용 됩니다. 이 메서드는 지정 된 사용 권한에 대 한 근거를 표시 해야 하는 경우 `true`를 반환 합니다. 이 스크린샷에서는 응용 프로그램에서 장치 위치를 알아야 하는 이유를 설명 하는 Snackbar의 예를 보여 줍니다.
+`ActivityCompat.ShouldShowRequestPermissionRationale`메서드는 사용자에 게 근거를 표시할지 여부를 결정 하는 데 사용 됩니다. 이 메서드는 `true` 지정 된 사용 권한에 대 한 근거를 표시 해야 하는 경우를 반환 합니다. 이 스크린샷에서는 응용 프로그램에서 장치 위치를 알아야 하는 이유를 설명 하는 Snackbar의 예를 보여 줍니다.
 
 ![위치에 대 한 설명](permissions-images/07-rationale-snackbar.png) 
 
 사용자가 권한을 부여 하는 경우 `ActivityCompat.RequestPermissions(Activity activity, string[] permissions, int requestCode)` 메서드를 호출 해야 합니다. 이 메서드에는 다음과 같은 매개 변수가 필요 합니다.
 
-- **활동** &ndash; 사용 권한을 요청 하는 작업이 며 Android에서 결과를 받을 수 있습니다.
-- **권한** &ndash; 요청 중인 사용 권한 목록입니다.
-- **Requestcode** &ndash; `RequestPermissions` 호출에 대 한 권한 요청 결과를 일치 시키는 데 사용 되는 정수 값입니다. 이 값은 0보다 커야 합니다.
+- **활동** &ndash; 이는 사용 권한을 요청 하는 작업이 며 Android에서 결과를 받습니다.
+- **권한** &ndash; 요청 되는 사용 권한의 목록입니다.
+- **Requestcode** &ndash; 호출에 대 한 권한 요청 결과를 일치 시키는 데 사용 되는 정수 값입니다 `RequestPermissions` . 이 값은 0보다 커야 합니다.
 
 이 코드 조각은 설명 된 두 메서드의 예입니다. 먼저 권한 근거를 표시할지 여부를 확인 하는 검사가 수행 됩니다. 이론적으로 표시 되는 경우 Snackbar가 설명으로 표시 됩니다. 사용자가 Snackbar에서 **확인** 을 클릭 하면 앱이 사용 권한을 요청 합니다. 사용자가 설명에 동의 하지 않으면 앱에서 권한 요청을 진행 하지 않아야 합니다. 설명 된 내용이 표시 되지 않으면 활동에서 다음과 같은 사용 권한을 요청 합니다.
 
@@ -172,11 +172,11 @@ else
 }
 ```
 
-사용자에 게 이미 권한이 부여 된 경우에도 `RequestPermission`을 호출할 수 있습니다. 후속 호출은 필요 하지 않지만 사용자에 게 권한을 확인 하거나 취소할 수 있는 기회를 제공 합니다. `RequestPermission`를 호출 하면 컨트롤은 사용 권한을 허용 하는 UI를 표시 하는 운영 체제에 전달 됩니다.  
+`RequestPermission`사용자에 게 이미 권한이 부여 된 경우에도을 호출할 수 있습니다. 후속 호출은 필요 하지 않지만 사용자에 게 권한을 확인 하거나 취소할 수 있는 기회를 제공 합니다. `RequestPermission`가 호출 되 면 컨트롤은 사용 권한을 허용 하는 UI를 표시 하는 운영 체제로 전달 됩니다.  
 
 ![Permssion 대화 상자](permissions-images/08-location-permission-dialog.png)
 
-사용자가 완료 된 후에는 Android가 `OnRequestPermissionResult`콜백 메서드를 통해 결과를 활동에 반환 합니다. 이 메서드는 활동에 의해 구현 되어야 하는 `ActivityCompat.IOnRequestPermissionsResultCallback` 인터페이스의 일부입니다. 이 인터페이스에는 사용자가 선택한 작업을 알리기 위해 Android에서 호출 하는 단일 메서드인 `OnRequestPermissionsResult`이 있습니다. 사용자에 게 권한이 부여 되 면 앱이 계속 진행 되어 보호 된 리소스를 사용할 수 있습니다. `OnRequestPermissionResult`를 구현 하는 방법에 대 한 예제는 다음과 같습니다. 
+사용자가 완료 된 후에는 Android에서 콜백 메서드를 통해 결과를 활동에 반환 합니다 `OnRequestPermissionResult` . 이 메서드는 활동에 의해 구현 되어야 하는 인터페이스의 일부입니다 `ActivityCompat.IOnRequestPermissionsResultCallback` . 이 인터페이스에는 `OnRequestPermissionsResult` 사용자가 선택한 작업을 알리기 위해 Android에서 호출 하는 단일 메서드인가 있습니다. 사용자에 게 권한이 부여 되 면 앱이 계속 진행 되어 보호 된 리소스를 사용할 수 있습니다. 을 구현 하는 방법의 예는 `OnRequestPermissionResult` 다음과 같습니다. 
 
 ```csharp
 public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)

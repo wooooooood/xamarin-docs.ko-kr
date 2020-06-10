@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 786afa6967731fb1bd508fa3c835b980639eb282
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 45b7c1081571b52bb8760b4207e3a05a4ffa77ae
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032376"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572314"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>앱 내 구매 기본 사항 및 Xamarin.ios의 구성
 
@@ -43,7 +43,7 @@ Apple은 판매 되기 전에 모든 제품을 승인 해야 합니다.-이름, 
 
 제품에 대 한 가격을 선택할 수 없습니다. Apple에서 지 원하는 각 국가/통화에 특정 값이 있는 ' 가격 책정 계층 '만 선택할 수 있습니다. 다른 시장에서 다른 가격 책정 계층을 사용할 수 없습니다.
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>구성
 
 앱 내 구매 코드를 작성 하기 전에 iTunes Connect ( [itunesconnect.apple.com](https://itunesconnect.apple.com)) 및 IOS 프로 비전 포털 ( [developer.apple.com/iOS](https://developer.apple.com/iOS))에서 일부 설정 작업을 수행 해야 합니다.
 
@@ -79,7 +79,7 @@ Apple은 판매 되기 전에 모든 제품을 승인 해야 합니다.-이름, 
 
 #### <a name="bundle-identifierapp-id-suffix-format"></a>번들 식별자/앱 ID 접미사 형식
 
-사용자의 계정에서 고유 하기만 하면 **번들 식별자** 에 대해 원하는 모든 문자열을 사용할 수 있지만 Apple에서는 임의의 문자열을 사용 하는 대신 역방향 DNS 형식을 따르는 것이 좋습니다. 이 문서와 함께 제공 되는 샘플 응용 프로그램은 my_store_example를 사용 합니다. 번들 식별자에 대 한 테스트를 사용 하는 것이 좋습니다. 그러나 Apple에서 권장 하지 않는 경우에도 동일한 식별자를 사용할 수 있습니다.
+사용자의 계정에서 고유 하기만 하면 **번들 식별자** 에 대해 원하는 모든 문자열을 사용할 수 있지만 Apple에서는 임의의 문자열을 사용 하는 대신 역방향 DNS 형식을 따르는 것이 좋습니다. 이 문서와 함께 제공 되는 샘플 응용 프로그램은 .com을 사용 합니다. 번들 식별자에 대 한 테스트를 사용 하는 것이 좋습니다. 그러나 Apple에서 권장 하지 않는 경우에도 my_store_example 같은 식별자를 사용할 수 있습니다.
 
 > [!IMPORTANT]
 > 또한 Apple에서는 단일 앱 ID를 여러 응용 프로그램에 사용할 수 있도록 **번들 식별자** 의 끝에 와일드 카드 별표가 추가 될 수 있지만, _와일드 카드 앱 Id는 apppurchase에 사용할 수 없습니다_. 와일드 카드 번들 식별자의 예는 com. xamarin. * 일 수 있습니다.
@@ -130,7 +130,7 @@ com.xamarin.storekit.testing.sepia
 com.xamarin.storekit.testing.greyscale
 ```
 
-이 명명 규칙은 적용 되지 않고 제품을 관리 하는 데 도움이 되는 권장 사항입니다. 또한 동일한 역방향 DNS 규칙에도 불구 하 고, 제품 식별자는 번들 식별자와 *관련이* 없으며 동일한 문자열로 시작 하는 데 필요 하지 않습니다. Photo_product_greyscale와 같은 식별자를 사용할 수 있습니다 (Apple에서 권장 하지 않는 경우에도).
+이 명명 규칙은 적용 되지 않고 제품을 관리 하는 데 도움이 되는 권장 사항입니다. 또한 동일한 역방향 DNS 규칙에도 불구 하 고, 제품 식별자는 번들 식별자와 *관련이* 없으며 동일한 문자열로 시작 하는 데 필요 하지 않습니다. 그래도 photo_product_greyscale와 같은 식별자를 사용할 수 있습니다 (Apple에서 권장 하지 않는 경우에도).
 
 제품 ID는 사용자에 게 표시 되지 않지만 응용 프로그램 코드에서 제품을 참조 하는 데 사용 됩니다.
 
@@ -146,7 +146,7 @@ com.xamarin.storekit.testing.greyscale
 
  *이 문서에는 현재 처음 두 가지 제품 유형 (사용할 때 사용할 경우)만 포함 되어 있습니다.*
 
- <a name="Price_Tiers" />
+ <a name="Price_Tiers"></a>
 
 ### <a name="price-tiers"></a>가격 책정 계층
 
@@ -156,7 +156,7 @@ Apple은 원하는 통화/가격에 대 한 올바른 계층을 선택 하는 �
 
  [![](in-app-purchase-basics-and-configuration-images/image10.png "An excerpt of the price matrix August 2012")](in-app-purchase-basics-and-configuration-images/image10.png#lightbox)
 
-(6 월 2013) 작성 시점에 USD 0.99에서 USD 999.99 까지의 87 계층이 있습니다. 가격 책정 매트릭스는 고객이 지불 하는 가격 및 Apple에서 받게 되는 금액을 보여 줍니다 .이 비용은 30% 요금이 적고 수집 하는 데 필요한 모든 지역 세금이 있습니다 (미국 및 캐나다 판매자가 99 c p에 대해 70c를 수신 함). roduct는 반면 오스트레일리아 판매자는 ' 상품 &amp; 서비스 세율 '이 판매 가격에 levied 되어 63c만 받습니다.
+(6 월 2013) 작성 시점에 USD 0.99에서 USD 999.99 까지의 87 계층이 있습니다. 가격 책정 매트릭스는 고객이 지불 하는 가격 및 Apple에서 제공 하는 금액을 보여 줍니다 .이 비용은 30% 요금이 적고 수집 해야 하는 현지 세금 이기도 합니다. 예를 들어 미국 및 캐나다 판매자는 99c 제품에 대해 70c를 수신 하는 반면, 오스트레일리아 판매자는 &amp; 판매 가격의 ' 상품 서비스 세금 ' levied 인해 63c만 받습니다.
 
 향후 날짜에 적용 되는 예정 된 가격 변경을 포함 하 여 언제 든 지 제품의 가격을 업데이트할 수 있습니다. 이 스크린샷에서는 이후 날짜의 가격 변화가 추가 되는 방식을 보여 줍니다. 가격은 9 월에 대 한 계층 1에서 계층 3으로 일시적으로 변경 됩니다.
 

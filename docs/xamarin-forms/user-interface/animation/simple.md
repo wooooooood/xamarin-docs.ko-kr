@@ -1,22 +1,8 @@
 ---
-title: 단순 애니메이션Xamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a4644094de9c0fcad8f38b7014426a30263dc66f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137451"
+제목: "설명:"의 단순 애니메이션 Xamarin.Forms ViewExtensions 클래스는 간단한 애니메이션을 생성 하는 데 사용할 수 있는 확장 메서드를 제공 합니다. 이 문서에서는 ViewExtensions 클래스를 사용 하 여 애니메이션을 만들고 취소 하는 방법을 보여 줍니다.
+assetid: 4A6FAE5A-848F-4CE0-BFA1-22A6309B5225: xamarin-forms author: davidbritch: dabritch:: 11/05/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="simple-animations-in-xamarinforms"></a>단순 애니메이션Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
@@ -43,9 +29,9 @@ _ViewExtensions 클래스는 간단한 애니메이션을 생성 하는 데 사�
 > [!NOTE]
 > [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions)클래스는 [ `LayoutTo` ] (f:를 제공 합니다 Xamarin.Forms . ViewExtensions. LayoutTo ( Xamarin.Forms . VisualElement, Xamarin.Forms . 사각형, 시스템. UInt32, Xamarin.Forms . 감속))를 확장 합니다. 그러나이 메서드는 레이아웃에서 크기 및 위치 변경 내용이 포함 된 레이아웃 상태 간의 전환에 애니메이션 효과를 주기 위해 사용 됩니다. 따라서 서브 클래스 에서만 사용 해야 합니다 [`Layout`](xref:Xamarin.Forms.Layout) .
 
-클래스의 애니메이션 확장 메서드는 [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) 모두 비동기 이며 개체를 반환 `Task<bool>` 합니다. 애니메이션이 완료 되 면 반환 값은이 `false` 고 `true` 애니메이션은 취소 되 면입니다. 따라서 애니메이션 메서드는 일반적으로 연산자와 함께 사용 해야 `await` 애니메이션이 완료 된 시기를 쉽게 확인할 수 있습니다. 또한 이전 메서드가 완료 된 후 실행 되는 후속 애니메이션 메서드를 사용 하 여 순차적 애니메이션을 만들 수 있습니다. 자세한 내용은 [복합 애니메이션](#compound)(영문)을 참조 하세요.
+클래스의 애니메이션 확장 메서드는 [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) 모두 비동기 이며 개체를 반환 `Task<bool>` 합니다. 애니메이션이 완료 되 면 반환 값은이 `false` 고 `true` 애니메이션은 취소 되 면입니다. 따라서 애니메이션 메서드는 일반적으로 연산자와 함께 사용 해야 `await` 애니메이션이 완료 된 시기를 쉽게 확인할 수 있습니다. 또한 이전 메서드가 완료 된 후 실행 되는 후속 애니메이션 메서드를 사용 하 여 순차적 애니메이션을 만들 수 있습니다. 자세한 내용은 [복합 애니메이션](#compound-animations)(영문)을 참조 하세요.
 
-배경에서 애니메이션을 완료 해야 하는 요구 사항이 있는 경우 `await` 연산자를 생략할 수 있습니다. 이 시나리오에서 애니메이션 확장 메서드는 애니메이션을 시작한 후 백그라운드에서 발생 하는 애니메이션을 통해 빠르게 반환 됩니다. 복합 애니메이션을 만들 때이 작업을 활용할 수 있습니다. 자세한 내용은 [복합 애니메이션](#composite)(영문)을 참조 하세요.
+배경에서 애니메이션을 완료 해야 하는 요구 사항이 있는 경우 `await` 연산자를 생략할 수 있습니다. 이 시나리오에서 애니메이션 확장 메서드는 애니메이션을 시작한 후 백그라운드에서 발생 하는 애니메이션을 통해 빠르게 반환 됩니다. 복합 애니메이션을 만들 때이 작업을 활용할 수 있습니다. 자세한 내용은 [복합 애니메이션](#composite-animations)(영문)을 참조 하세요.
 
 연산자에 대 한 자세한 내용은 `await` [비동기 지원 개요](~/cross-platform/platform/async.md)를 참조 하세요.
 
@@ -160,8 +146,6 @@ await image.FadeTo (1, 4000);
 
 ![](simple-images/fadeto.png "Fading Animation")
 
-<a name="compound" />
-
 ## <a name="compound-animations"></a>복합 애니메이션
 
 복합 애니메이션은 애니메이션의 순차적 조합으로, `await` 다음 코드 예제에서 보여 주는 것 처럼 연산자를 사용 하 여 만들 수 있습니다.
@@ -175,8 +159,6 @@ await image.TranslateTo (0, 0, 1000);       // Move image up
 ```
 
 이 예제에서는 [`Image`](xref:Xamarin.Forms.Image) 6 초 (6000 밀리초) 이상으로 변환 됩니다. 의 변환은 `Image` 5 개의 애니메이션을 사용 하며, `await` 연산자는 각 애니메이션이 순차적으로 실행 됨을 나타냅니다. 따라서 이전 메서드가 완료 된 후 후속 애니메이션 메서드가 실행 됩니다.
-
-<a name="composite" />
 
 ## <a name="composite-animations"></a>복합 애니메이션
 

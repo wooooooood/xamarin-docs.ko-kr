@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/31/2018
-ms.openlocfilehash: 4cf32bae208efa67acbb08f2e4525e4571b14b16
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: acb0e9ea23d4043a72b9d2688501c576a3d43358
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76723783"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570232"
 ---
 # <a name="firebase-cloud-messaging"></a>Firebase Cloud 메시징
 
@@ -28,30 +28,30 @@ FCM (Firebase Cloud Messaging)은 서버 응용 프로그램과 모바일 클라
 
 다음 다이어그램에 나와 있는 것 처럼 FCM은 메시지 발신자와 클라이언트 간의 중개자 역할을 합니다. *클라이언트 앱* 은 장치에서 실행 되는 FCM 사용 앱입니다. 사용자 또는 회사에서 제공 하는 *앱 서버* 는 클라이언트 앱이 FCM를 통해 통신 하는 FCM 사용 서버입니다. GCM과 달리 FCM를 사용 하면 Firebase Console Notification GUI를 통해 직접 클라이언트 앱에 메시지를 보낼 수 있습니다.
 
-[클라이언트 앱과 앱 서버 간에 ![FCM](firebase-cloud-messaging-images/01-server-fcm-app-sml.png)](firebase-cloud-messaging-images/01-server-fcm-app.png#lightbox)
+[![클라이언트 앱과 앱 서버 사이에 FCM](firebase-cloud-messaging-images/01-server-fcm-app-sml.png)](firebase-cloud-messaging-images/01-server-fcm-app.png#lightbox)
 
 FCM를 사용 하 여 앱 서버는 단일 장치, 장치 그룹 또는 토픽에 구독 된 여러 장치에 메시지를 보낼 수 있습니다. 클라이언트 앱은 FCM를 사용 하 여 앱 서버에서 다운스트림 메시지를 구독할 수 있습니다 (예: 원격 알림 수신). 여러 유형의 Firebase 메시지에 대 한 자세한 내용은 [FCM 메시지 정보](https://firebase.google.com/docs/cloud-messaging/concept-options)를 참조 하세요.
 
-## <a name="fcm-in-action"></a>Firebase 클라우드 메시징 작동
+## <a name="firebase-cloud-messaging-in-action"></a><a name="fcm-in-action"></a>Firebase 클라우드 메시징 작동
 
 다운스트림 메시지가 앱 서버에서 클라이언트 앱으로 전송 되 면 앱 서버는 Google에서 제공 하는 *FCM 연결 서버* 에 메시지를 보냅니다. 그러면 FCM 연결 서버가 클라이언트 앱을 실행 하는 장치에 메시지를 전달 합니다. HTTP 또는 [Xmpp](https://firebase.google.com/docs/cloud-messaging/xmpp-server-ref) (확장할 수 있는 메시징 및 현재 상태 프로토콜)를 통해 메시지를 보낼 수 있습니다. 클라이언트 앱은 항상 연결 되어 있거나 실행 되지 않기 때문에 FCM 연결 서버는 메시지를 큐 하 고 저장 하 여 다시 연결 하 여 사용할 수 있게 되 면 클라이언트 앱에 보냅니다. 마찬가지로, FCM는 앱 서버를 사용할 수 없는 경우 클라이언트 앱에서 앱 서버로 업스트림 메시지를 큐에 삽입 합니다. FCM 연결 서버에 대 한 자세한 내용은 [Firebase 클라우드 메시징 서버 정보](https://firebase.google.com/docs/cloud-messaging/server)를 참조 하세요.
 
 FCM는 다음 자격 증명을 사용 하 여 앱 서버 및 클라이언트 앱을 식별 하 고, 이러한 자격 증명을 사용 하 여 FCM를 통해 메시지 트랜잭션에 권한을 부여 합니다.
 
-- <a name="fcm-in-action-sender-id"></a>보낸 **사람 id** &ndash; *발신자 id* 는 Firebase 프로젝트를 만들 때 할당 되는 고유 숫자 값입니다. 보낸 사람 ID는 클라이언트 앱에 메시지를 보낼 수 있는 각 앱 서버를 식별 하는 데 사용 됩니다. 보낸 사람 ID는 프로젝트 번호 이기도 합니다. 프로젝트를 등록할 때 Firebase 콘솔에서 발신자 ID를 가져옵니다. 보낸 사람 ID의 예는 `496915549731`입니다.
+- <a name="fcm-in-action-sender-id"></a>**보낸 사람 ID** &ndash; *보낸 사람 ID* 는 Firebase 프로젝트를 만들 때 할당 되는 고유 숫자 값입니다. 보낸 사람 ID는 클라이언트 앱에 메시지를 보낼 수 있는 각 앱 서버를 식별 하는 데 사용 됩니다. 보낸 사람 ID는 프로젝트 번호 이기도 합니다. 프로젝트를 등록할 때 Firebase 콘솔에서 발신자 ID를 가져옵니다. 보낸 사람 ID의 예는 `496915549731` 입니다.
 
-- <a name="fcm-in-action-api-key"></a>**Api 키 &ndash; api** 키는 Firebase services에 대 한 앱 서버 액세스 *를 제공 합니다* . FCM는이 키를 사용 하 여 앱 서버를 인증 합니다. 이 자격 증명은 *서버 키* 또는 *Web API 키*라고도 합니다. API 키의 예는 `AJzbSyCTcpfRT1YRqbz-jIwp1h06YdauvewGDzk`합니다.
+- <a name="fcm-in-action-api-key"></a>**API 키** &ndash; *API 키는* Firebase services에 대 한 앱 서버 액세스를 제공 합니다. FCM는이 키를 사용 하 여 앱 서버를 인증 합니다. 이 자격 증명은 *서버 키* 또는 *Web API 키*라고도 합니다. API 키의 예는 `AJzbSyCTcpfRT1YRqbz-jIwp1h06YdauvewGDzk` 입니다.
 
-- <a name="fcm-in-action-app-id"></a>**앱 id** &ndash; FCM에서 메시지를 수신 하도록 등록 하는 클라이언트 앱의 id (지정 된 장치와 무관)입니다. 앱 ID의 예는 `1:415712510732:android:0e1eb7a661af2460`합니다.
+- <a name="fcm-in-action-app-id"></a>**앱 ID** &ndash; FCM에서 메시지를 수신 하도록 등록 하는 클라이언트 앱 (지정 된 장치와 무관)의 id입니다. 앱 ID의 예는 `1:415712510732:android:0e1eb7a661af2460` 입니다.
 
-- <a name="fcm-in-action-registration-token"></a>**등록 토큰 &ndash; 등록** 토큰 ( *인스턴스 ID*라고도 함 *)은 지정* 된 장치에서 클라이언트 앱의 FCM id입니다. 등록 토큰은 &ndash; 런타임에 생성 됩니다. 앱은 장치에서 실행 되는 동안 FCM에 처음 등록할 때 등록 토큰을 받습니다. 등록 토큰은 특정 장치에서 실행 되는 클라이언트 앱의 인스턴스가 FCM에서 메시지를 받을 수 있도록 권한을 부여 합니다.
-    등록 토큰의 예는 `fkBQTHxKKhs:AP91bHuEedxM4xFAUn0z ... JKZS` (매우 긴 문자열)입니다.
+- <a name="fcm-in-action-registration-token"></a>**등록 토큰** &ndash; *등록 토큰* ( *인스턴스 ID*라고도 함)은 지정 된 장치에서 클라이언트 앱의 FCM id입니다. 등록 토큰은 런타임에 생성 됩니다 &ndash; . 앱은 장치에서 실행 되는 동안 FCM에 처음 등록할 때 등록 토큰을 받습니다. 등록 토큰은 특정 장치에서 실행 되는 클라이언트 앱의 인스턴스가 FCM에서 메시지를 받을 수 있도록 권한을 부여 합니다.
+    등록 토큰의 예로는 `fkBQTHxKKhs:AP91bHuEedxM4xFAUn0z ... JKZS` 매우 긴 문자열이 있습니다.
 
-[Firebase 클라우드 메시징 설정](#setup_fcm) (이 가이드의 뒷부분)에서는 프로젝트를 만들고 이러한 자격 증명을 생성 하는 방법에 대 한 자세한 지침을 제공 합니다. [Firebase 콘솔](https://console.firebase.google.com/)에서 새 프로젝트를 만들 때 [FCM를 사용 하 여 원격 알림](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md)에 설명 된 대로 xamarin.ios 프로젝트에이 파일을 추가 하 &ndash; **google-service. json** 이라는 자격 증명 파일이 만들어집니다.
+[Firebase 클라우드 메시징 설정](#setup_fcm) (이 가이드의 뒷부분)에서는 프로젝트를 만들고 이러한 자격 증명을 생성 하는 방법에 대 한 자세한 지침을 제공 합니다. [Firebase 콘솔](https://console.firebase.google.com/)에서 새 프로젝트를 만들 때 **google-services.json** &ndash; [FCM를 사용 하 여 원격 알림](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md)에 설명 된 대로 google 프로젝트에이 파일을 추가 합니다.
 
 다음 섹션에서는 클라이언트 앱이 FCM를 통해 앱 서버와 통신할 때 이러한 자격 증명을 사용 하는 방법을 설명 합니다.
 
-<a name="registration" />
+<a name="registration"></a>
 
 ### <a name="registration-with-fcm"></a>FCM를 사용 하 여 등록
 
@@ -73,7 +73,7 @@ FCM는 다음 자격 증명을 사용 하 여 앱 서버 및 클라이언트 앱
 
 다음 다이어그램에서는 Firebase 클라우드 메시징에서 다운스트림 메시지를 저장 하 고 전달 하는 방법을 보여 줍니다.
 
-[![FCM에서 다운스트림 메시징의 저장 및 전달 사용](firebase-cloud-messaging-images/03-downstream-sml.png)](firebase-cloud-messaging-images/03-downstream.png#lightbox)
+[![FCM는 다운스트림 메시징에 대해 저장 및 전달 사용](firebase-cloud-messaging-images/03-downstream-sml.png)](firebase-cloud-messaging-images/03-downstream.png#lightbox)
 
 앱 서버는 클라이언트 앱에 다운스트림 메시지를 보낼 때 위 다이어그램에 열거 된 것과 같은 단계를 사용 합니다.
 
@@ -105,7 +105,7 @@ Android에서 다운스트림 FCM 메시지를 수신 하는 방법에 대 한 �
 
 Firebase 토픽 메시징에 대 한 자세한 내용은 Google 's [Android의 토픽 메시지](https://firebase.google.com/docs/cloud-messaging/android/topic-messaging)를 참조 하세요.
 
-<a name="setup_fcm" />
+<a name="setup_fcm"></a>
 
 ## <a name="setting-up-firebase-cloud-messaging"></a>Firebase 클라우드 메시징 설정
 
@@ -113,28 +113,28 @@ Firebase 토픽 메시징에 대 한 자세한 내용은 Google 's [Android의 �
 
 1. Google 계정 (예: Gmail 주소)으로 [Firebase 콘솔](https://console.firebase.google.com/) 에 로그인 하 고 **새 프로젝트 만들기**를 클릭 합니다.
 
-    [새 프로젝트 만들기 단추 ![](firebase-cloud-messaging-images/05-firebase-console-sml.png)](firebase-cloud-messaging-images/05-firebase-console.png#lightbox)
+    [![새 프로젝트 만들기 단추](firebase-cloud-messaging-images/05-firebase-console-sml.png)](firebase-cloud-messaging-images/05-firebase-console.png#lightbox)
 
     기존 프로젝트가 있는 경우 **Google 프로젝트 가져오기**를 클릭 합니다.
 
 2. **프로젝트 만들기** 대화 상자에서 프로젝트의 이름을 입력 하 고 **프로젝트 만들기**를 클릭 합니다. 다음 예제에서는 **XamarinFCM** 이라는 새 프로젝트를 만듭니다.
 
-    [프로젝트 만들기 대화 상자 ![](firebase-cloud-messaging-images/06-create-a-project-sml.png)](firebase-cloud-messaging-images/06-create-a-project.png#lightbox)
+    [![프로젝트 만들기 대화 상자](firebase-cloud-messaging-images/06-create-a-project-sml.png)](firebase-cloud-messaging-images/06-create-a-project.png#lightbox)
 
 3. Firebase 콘솔 **개요**에서 **Android 앱에 Firebase 추가**를 클릭 합니다.
 
-    [Android 앱에 Firebase 추가 ![](firebase-cloud-messaging-images/07-add-firebase-sml.png)](firebase-cloud-messaging-images/07-add-firebase.png#lightbox)
+    [![Android 앱에 Firebase 추가](firebase-cloud-messaging-images/07-add-firebase-sml.png)](firebase-cloud-messaging-images/07-add-firebase.png#lightbox)
 
 4. 다음 화면에서 앱의 패키지 이름을 입력 합니다. 이 예에서는 패키지 이름이 **com .cfcmfcmexample**입니다. 이 값은 Android 앱의 패키지 이름과 일치 해야 합니다. 앱 애칭은 **앱 애칭** 필드에도 입력할 수 있습니다.
 
-    [FCM 예제를 앱 애칭으로 입력 ![](firebase-cloud-messaging-images/08-package-name-sml.png)](firebase-cloud-messaging-images/08-package-name.png#lightbox)
+    [![FCM 예제를 앱 애칭으로 입력](firebase-cloud-messaging-images/08-package-name-sml.png)](firebase-cloud-messaging-images/08-package-name.png#lightbox)
 
 5. 앱에서 동적 링크, 초대 또는 Google 인증을 사용 하는 경우 디버그 서명 인증서도 입력 해야 합니다. 서명 인증서를 찾는 방법에 대 한 자세한 내용은 [키 저장소의 MD5 또는 SHA1 서명 찾기](~/android/deploy-test/signing/keystore-signature.md)를 참조 하세요.
     이 예제에서는 서명 인증서를 비워 둡니다.
 
 6. **앱 추가**를 클릭 합니다.
 
-    [앱 추가 단추를 클릭 ![](firebase-cloud-messaging-images/09-add-app-sml.png)](firebase-cloud-messaging-images/09-add-app.png#lightbox)
+    [![앱 추가 단추 클릭](firebase-cloud-messaging-images/09-add-app-sml.png)](firebase-cloud-messaging-images/09-add-app.png#lightbox)
 
     앱에 대 한 서버 API 키와 클라이언트 ID가 자동으로 생성 됩니다. 이 정보는 **앱 추가**를 클릭 하면 자동으로 다운로드 되는 **google 서비스의 json** 파일에 패키지 됩니다.
     이 파일은 안전한 위치에 저장 해야 합니다.
@@ -157,4 +157,4 @@ Android에서 FCM 푸시 알림 메시지를 수신 하기 위해 **google 서�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/)
+- [Firebase Cloud 메시징](https://firebase.google.com/docs/cloud-messaging/)

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8d5bf1d7821187924adc58582a5139f81235e6a0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139102"
+제목: "인증 및 권한 부여" 설명: "이 장은 eShopOnContainers mobile 앱이 컨테이너 화 된 마이크로 서비스에 대 한 인증 및 권한 부여를 수행 하는 방법을 설명 합니다."
+assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e: xamarin-forms author: davidbritch: dabritch:: 08/08/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="authentication-and-authorization"></a>인증 및 권한 부여
 
 인증은 사용자의 이름 및 암호와 같은 id 자격 증명을 가져오고 기관에 대해 해당 자격 증명의 유효성을 검사 하는 프로세스입니다. 자격 증명이 유효 하면 자격 증명을 제출한 엔터티가 인증 된 id로 간주 됩니다. Id가 인증 되 면 권한 부여 프로세스에서 해당 id에 지정 된 리소스에 대 한 액세스 권한이 있는지 여부를 확인 합니다.
@@ -40,7 +26,7 @@ Openid connect Connect는 OAuth 2.0 프로토콜을 기반으로 하는 인증 �
 
 Openid connect Connect와 OAuth 2.0의 조합은 인증 및 API 액세스의 두 가지 기본적인 보안 문제를 결합 하 고, IdentityServer 4는 이러한 프로토콜의 구현입니다.
 
-EShopOnContainers reference 응용 프로그램과 같은 직접 클라이언트-마이크로 서비스 통신을 사용 하는 응용 프로그램에서 STS (보안 토큰 서비스)로 작동 하는 전용 인증 마이크로 서비스는 그림 9-1에 표시 된 것 처럼 사용자를 인증 하는 데 사용할 수 있습니다. 클라이언트-마이크로 서비스 간 직접 통신에 대 한 자세한 내용은 [클라이언트와 마이크로 서비스 간 통신](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md#communication_between_client_and_microservices)을 참조 하세요.
+EShopOnContainers reference 응용 프로그램과 같은 직접 클라이언트-마이크로 서비스 통신을 사용 하는 응용 프로그램에서 STS (보안 토큰 서비스)로 작동 하는 전용 인증 마이크로 서비스는 그림 9-1에 표시 된 것 처럼 사용자를 인증 하는 데 사용할 수 있습니다. 클라이언트-마이크로 서비스 간 직접 통신에 대 한 자세한 내용은 [클라이언트와 마이크로 서비스 간 통신](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md#communication-between-client-and-microservices)을 참조 하세요.
 
 ![](authentication-and-authorization-images/authentication.png "Authentication by a dedicated authentication microservice")
 
@@ -195,7 +181,7 @@ public static IEnumerable<Client> GetClients(Dictionary<string,string> clien
 
 - `ClientId`: 클라이언트에 대 한 고유 ID입니다.
 - `ClientName`: 로깅 및 동의 화면에 사용 되는 클라이언트 표시 이름입니다.
-- `AllowedGrantTypes`: 클라이언트가 IdentityServer와 상호 작용 하는 방법을 지정 합니다. 자세한 내용은 [인증 흐름 구성](#configuring_the_authentication_flow)을 참조 하세요.
+- `AllowedGrantTypes`: 클라이언트가 IdentityServer와 상호 작용 하는 방법을 지정 합니다. 자세한 내용은 [인증 흐름 구성](#configuring-the-authentication-flow)을 참조 하세요.
 - `ClientSecrets`: 토큰 끝점에서 토큰을 요청할 때 사용 되는 클라이언트 암호 자격 증명을 지정 합니다.
 - `RedirectUris`: 토큰 또는 권한 부여 코드를 반환할 허용 되는 Uri를 지정 합니다.
 - `RequireConsent`: 동의 화면이 필요한 지 여부를 지정 합니다.
@@ -204,8 +190,6 @@ public static IEnumerable<Client> GetClients(Dictionary<string,string> clien
 - `AllowedCorsOrigins`: IdentityServer 원본에서 크로스-원본 호출을 허용할 수 있도록 클라이언트의 원본을 지정 합니다.
 - `AllowedScopes`: 클라이언트에서 액세스할 수 있는 리소스를 지정 합니다. 기본적으로 클라이언트에는 모든 리소스에 대 한 액세스 권한이 없습니다.
 - `AllowOfflineAccess`: 클라이언트에서 새로 고침 토큰을 요청할 수 있는지 여부를 지정 합니다.
-
-<a name="configuring_the_authentication_flow" />
 
 #### <a name="configuring-the-authentication-flow"></a>인증 흐름 구성
 
@@ -326,14 +310,14 @@ private async Task NavigateAsync(string url)
 
 토큰 끝점이 유효한 인증 코드 및 PKCE 비밀 검증 도구를 수신 하면 액세스 토큰, id 토큰 및 새로 고침 토큰을 사용 하 여 응답 합니다. 그러면 API 리소스에 대 한 액세스를 허용 하는 액세스 토큰 및 id 토큰이 응용 프로그램 설정으로 저장 되 고 페이지 탐색이 수행 됩니다. 따라서 eShopOnContainers 모바일 앱의 전반적인 효과는 다음과 같습니다. 사용자가 IdentityServer를 사용 하 여 성공적으로 인증할 수 있는 경우를 `MainView` [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 선택 된 탭으로 표시 하는 인 페이지를 탐색 `CatalogView` 합니다.
 
-페이지 탐색에 대 한 자세한 내용은 [탐색](~/xamarin-forms/enterprise-application-patterns/navigation.md)을 참조 하세요. 탐색에서 뷰 모델 메서드를 실행 하는 방법에 대 한 자세한 내용은 [`WebView`](xref:Xamarin.Forms.WebView) [동작을 사용 하 여 탐색 호출](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors)을 참조 하세요. 응용 프로그램 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요.
+페이지 탐색에 대 한 자세한 내용은 [탐색](~/xamarin-forms/enterprise-application-patterns/navigation.md)을 참조 하세요. 탐색에서 뷰 모델 메서드를 실행 하는 방법에 대 한 자세한 내용은 [`WebView`](xref:Xamarin.Forms.WebView) [동작을 사용 하 여 탐색 호출](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking-navigation-using-behaviors)을 참조 하세요. 응용 프로그램 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요.
 
 > [!NOTE]
 > EShopOnContainers는 앱이에서 모의 서비스를 사용 하도록 구성 된 경우에도 모의 로그인을 허용 합니다 `SettingsView` . 이 모드에서 앱은 IdentityServer와 통신 하지 않고 대신 사용자가 자격 증명을 사용 하 여 로그인 할 수 있도록 허용 합니다.
 
 #### <a name="signing-out"></a>로그 아웃
 
-사용자가에서 **로그 아웃** 단추를 누르면 `ProfileView` `LogoutCommand` 클래스의가 `ProfileViewModel` 실행 되어 메서드가 실행 됩니다 `LogoutAsync` . 이 메서드는 페이지로의 페이지 탐색 `LoginView` 을 수행 하 여 `LogoutParameter` 로 설정 된 인스턴스를 `true` 매개 변수로 전달 합니다. 페이지를 탐색 하는 동안 매개 변수를 전달 하는 방법에 대 한 자세한 내용은 [탐색 하는 동안 매개 변수 전달](~/xamarin-forms/enterprise-application-patterns/navigation.md#passing_parameters_during_navigation)
+사용자가에서 **로그 아웃** 단추를 누르면 `ProfileView` `LogoutCommand` 클래스의가 `ProfileViewModel` 실행 되어 메서드가 실행 됩니다 `LogoutAsync` . 이 메서드는 페이지로의 페이지 탐색 `LoginView` 을 수행 하 여 `LogoutParameter` 로 설정 된 인스턴스를 `true` 매개 변수로 전달 합니다. 페이지를 탐색 하는 동안 매개 변수를 전달 하는 방법에 대 한 자세한 내용은 [탐색 하는 동안 매개 변수 전달](~/xamarin-forms/enterprise-application-patterns/navigation.md#passing-parameters-during-navigation)
 
 뷰가 생성 되 고 탐색 되 면 `InitializeAsync` 뷰의 연결 된 뷰 모델의 메서드가 실행 되며,이 메서드는 `Logout` `LoginViewModel` 다음 코드 예제에 표시 된 클래스의 메서드를 실행 합니다.
 
@@ -385,12 +369,10 @@ private async Task NavigateAsync(string url)
 
 이 메서드는 응용 프로그램 설정에서 id 토큰과 액세스 토큰을 모두 지우고 속성을로 설정 하 여 `IsLogin` `false` 페이지의이 [`WebView`](xref:Xamarin.Forms.WebView) `LoginView` 보이지 않게 합니다. 마지막으로 `LoginUrl` 속성은 다음에 사용자가 로그인을 시작할 때 준비 하는 데 필요한 매개 변수를 사용 하 여 IdentityServer의 [AUTHORIZATION 끝점](https://identityserver4.readthedocs.io/en/latest/endpoints/authorize.html)URI로 설정 됩니다.
 
-페이지 탐색에 대 한 자세한 내용은 [탐색](~/xamarin-forms/enterprise-application-patterns/navigation.md)을 참조 하세요. 탐색에서 뷰 모델 메서드를 실행 하는 방법에 대 한 자세한 내용은 [`WebView`](xref:Xamarin.Forms.WebView) [동작을 사용 하 여 탐색 호출](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors)을 참조 하세요. 응용 프로그램 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요.
+페이지 탐색에 대 한 자세한 내용은 [탐색](~/xamarin-forms/enterprise-application-patterns/navigation.md)을 참조 하세요. 탐색에서 뷰 모델 메서드를 실행 하는 방법에 대 한 자세한 내용은 [`WebView`](xref:Xamarin.Forms.WebView) [동작을 사용 하 여 탐색 호출](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking-navigation-using-behaviors)을 참조 하세요. 응용 프로그램 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요.
 
 > [!NOTE]
 > 또한 eShopOnContainers를 사용 하면 앱이 SettingsView에서 모의 서비스를 사용 하도록 구성 된 경우 모의 로그 아웃을 사용할 수 있습니다. 이 모드에서 앱은 IdentityServer와 통신 하지 않고 응용 프로그램 설정에서 저장 된 토큰을 모두 지웁니다.
-
-<a name="authorization" />
 
 ## <a name="authorization"></a>권한 부여
 

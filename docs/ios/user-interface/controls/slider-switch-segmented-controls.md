@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 763165f1e09f847745b820987f8dbbae8f834fd7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f7b27c9f1010be313810b4b0f289ef792efd47a3
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021958"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84568648"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Xamarin.ios의 슬라이더, 스위치 및 분할 컨트롤
 
-<a name="Sliders" />
+<a name="Sliders"></a>
 
 ## <a name="sliders"></a>슬라이더
 
@@ -28,7 +28,7 @@ ms.locfileid: "73021958"
 
  [![](slider-switch-segmented-controls-images/image26a.png "Slider Properties")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
-`UILabel` 컨트롤에서 현재 선택 된 값을 표시 하는 처리기를 연결 하는 것을 포함 하 여 아래와 같이 코드에서 이러한 값을 설정할 수 있습니다.
+컨트롤에서 현재 선택 된 값을 표시 하는 처리기를 연결 하는 것을 포함 하 여 아래와 같이 코드에서 이러한 값을 설정할 수 있습니다 `UILabel` .
 
 ```csharp
 slider1.MinValue = -1;
@@ -50,17 +50,17 @@ slider1.MaximumTrackTintColor = UIColor.Green;
  [![](slider-switch-segmented-controls-images/image27a.png "Custom Slider")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
-> 현재 `ThumbTint`가 런타임에 예상 대로 렌더링 되지 않도록 하는 [버그가](https://stackoverflow.com/a/19496179) 있습니다. 위의 **코드 줄에 다음 코드 줄** 을 추가 하 여 해결 방법을 사용할 수 있습니다. [[원본](https://stackoverflow.com/a/21396794)]:
+> 현재가 [bug](https://stackoverflow.com/a/19496179) `ThumbTint` 런타임에 예상 대로 렌더링 되지 않도록 하는 버그가 있습니다. 위의 **코드 줄에 다음 코드 줄** 을 추가 하 여 해결 방법을 사용할 수 있습니다. [[원본](https://stackoverflow.com/a/21396794)]:
 >
 > `slider1.SetThumbImage(UIImage.FromBundle("thumb.png"),UIControlState.Normal);`
 > 
 > 모든 이미지는 재정의 되므로 사용할 수 있지만, 리소스 디렉터리 _에_ 배치 되 고 코드에서 호출 되는지 확인 합니다.
 
-<a name="Switch" />
+<a name="Switch"></a>
 
-## <a name="switch"></a>전환
+## <a name="switch"></a>스위치
 
-iOS는 다른 플랫폼에서 라디오 단추로 표현할 수 있는 부울 입력으로 `UISwitch`를 사용 합니다. 사용자는 **설정/해제** 위치 사이의 *엄지 단추* 를 이동 하 여 컨트롤을 조작할 수 있습니다.
+iOS는를 `UISwitch` 다른 플랫폼의 라디오 단추로 표현할 수 있는 부울 입력으로 사용 합니다. 사용자는 **설정/해제** 위치 사이의 *엄지 단추* 를 이동 하 여 컨트롤을 조작할 수 있습니다.
 
  [![](slider-switch-segmented-controls-images/image28a.png "Switch")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
@@ -68,13 +68,13 @@ iOS는 다른 플랫폼에서 라디오 단추로 표현할 수 있는 부울 �
 
  [![](slider-switch-segmented-controls-images/image29a.png "Switch Properties")](slider-switch-segmented-controls-images/image29a.png#lightbox)
 
-코드에서 스위치의 속성을 설정할 수도 있습니다. 예를 들어 아래 코드는 `On`의 기본값을 사용 하는 스위치를 표시 합니다.
+코드에서 스위치의 속성을 설정할 수도 있습니다. 예를 들어 아래 코드는의 기본값을 사용 하는 스위치를 표시 합니다 `On` .
 
 ```csharp
 switch1.On = true;
 ```
 
- <a name="Segmented_Controls" />
+ <a name="Segmented_Controls"></a>
 
 ## <a name="segmented-controls"></a>분할된 컨트롤
 

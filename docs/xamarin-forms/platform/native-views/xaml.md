@@ -1,39 +1,13 @@
 ---
-title: ''
-description: IOS, Android 및 유니버설 Windows 플랫폼의 기본 뷰는 XAML 파일에서 직접 참조할 수 있습니다 Xamarin.Forms . 속성 및 이벤트 처리기는 네이티브 뷰에서 설정할 수 있으며 뷰와 상호 작용할 수 있습니다 Xamarin.Forms . 이 문서에서는 XAML 파일에서 네이티브 뷰를 사용 하는 방법을 보여 줍니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 67994371d3042100503eb3a7c3bc7d117b1c590c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139583"
+제목: "XAML의 네이티브 뷰" 설명: "iOS, Android 및 유니버설 Windows 플랫폼의 기본 뷰는 xaml 파일에서 직접 참조할 수 있습니다 Xamarin.Forms . 속성 및 이벤트 처리기는 네이티브 뷰에서 설정할 수 있으며 뷰와 상호 작용할 수 있습니다 Xamarin.Forms . 이 문서에서는 XAML 파일에서 네이티브 뷰를 사용 하는 방법을 보여 줍니다 Xamarin.Forms . "
+assetid: 7A856D31-B300-409E-9AEB-F8A4DB99B37E: xamarin-forms author: davidbritch: dabritch:: 03/23/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="native-views-in-xaml"></a>XAML의 네이티브 뷰
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
 
 _IOS, Android 및 유니버설 Windows 플랫폼의 기본 뷰는 XAML 파일에서 직접 참조할 수 있습니다 Xamarin.Forms . 속성 및 이벤트 처리기는 네이티브 뷰에서 설정할 수 있으며 뷰와 상호 작용할 수 있습니다 Xamarin.Forms . 이 문서에서는 XAML 파일에서 네이티브 뷰를 사용 하는 방법을 보여 줍니다 Xamarin.Forms ._
-
-이 문서는 다음 항목을 설명합니다.
-
-- [네이티브 뷰](#consuming) 사용-XAML에서 네이티브 뷰를 사용 하는 프로세스입니다.
-- 네이티브 [바인딩 사용](#native_bindings) – 네이티브 뷰의 속성에 대 한 데이터 바인딩입니다.
-- 네이티브 뷰에 인수 [전달](#passing_arguments) – 네이티브 뷰 생성자에 인수 전달 및 네이티브 뷰 팩터리 메서드 호출
-- 코드 [에서 네이티브 뷰를 참조](#native_view_code) 합니다. 코드에서 XAML 파일에 선언 된 네이티브 뷰 인스턴스를 검색 합니다.
-- [네이티브 뷰 서브클래싱](#subclassing) – XAML 친화적인 API를 정의 하기 위해 네이티브 뷰를 서브클래싱 합니다.  
-
-<a name="overview" />
-
-## <a name="overview"></a>개요
 
 네이티브 뷰를 XAML 파일에 포함 하려면 Xamarin.Forms 다음을 수행 합니다.
 
@@ -43,11 +17,9 @@ _IOS, Android 및 유니버설 Windows 플랫폼의 기본 뷰는 XAML 파일에
 > [!IMPORTANT]
 > 컴파일된 XAML은 네이티브 뷰를 사용 하는 모든 XAML 페이지에서 사용 하지 않도록 설정 해야 합니다. 이렇게 하려면 XAML 페이지에 대 한 코드 숨겨진 클래스를 특성으로 데코레이팅 하면 됩니다 `[XamlCompilation(XamlCompilationOptions.Skip)]` . XAML 컴파일에 대 한 자세한 내용은 [ Xamarin.Forms 의 xaml 컴파일 ](~/xamarin-forms/xaml/xamlc.md)을 참조 하세요.
 
-코드 기반 파일에서 네이티브 뷰를 참조 하려면 SAP (공유 자산 프로젝트)를 사용 하 여 조건부 컴파일 지시문을 사용 하 여 플랫폼별 코드를 래핑해야 합니다. 자세한 내용은 [코드에서 네이티브 뷰 참조를](#native_view_code)참조 하세요.
+코드 기반 파일에서 네이티브 뷰를 참조 하려면 SAP (공유 자산 프로젝트)를 사용 하 여 조건부 컴파일 지시문을 사용 하 여 플랫폼별 코드를 래핑해야 합니다. 자세한 내용은 [코드에서 네이티브 뷰 참조를](#refer-to-native-views-from-code)참조 하세요.
 
-<a name="consuming" />
-
-## <a name="consuming-native-views"></a>네이티브 뷰 사용
+## <a name="consume-native-views"></a>네이티브 뷰 사용
 
 다음 코드 예제에서는 각 플랫폼에 대 한 네이티브 뷰를에 사용 하는 방법을 보여 줍니다 Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) .
 
@@ -77,12 +49,10 @@ _IOS, Android 및 유니버설 Windows 플랫폼의 기본 뷰는 XAML 파일에
 > [!NOTE]
 > 스타일은 개체에 의해 지원 되는 속성만 대상으로 할 수 있으므로 네이티브 뷰에서 사용할 수 없습니다 `BindableProperty` .
 
-Android widget 생성자에는 일반적으로 Android `Context` 개체가 인수로 필요 하며,이는 클래스의 정적 속성을 통해 사용할 수 있습니다 `MainActivity` . 따라서 XAML에서 Android 위젯을 만들 때 `Context` 개체는 일반적으로 `x:Arguments` 태그 확장을 포함 하는 특성을 사용 하 여 위젯의 생성자에 전달 되어야 합니다 `x:Static` . 자세한 내용은 [네이티브 뷰에 인수 전달](#passing_arguments)을 참조 하세요.
+Android widget 생성자에는 일반적으로 Android `Context` 개체가 인수로 필요 하며,이는 클래스의 정적 속성을 통해 사용할 수 있습니다 `MainActivity` . 따라서 XAML에서 Android 위젯을 만들 때 `Context` 개체는 일반적으로 `x:Arguments` 태그 확장을 포함 하는 특성을 사용 하 여 위젯의 생성자에 전달 되어야 합니다 `x:Static` . 자세한 내용은 [인수를 네이티브 뷰에 전달](#pass-arguments-to-native-views)을 참조 하세요.
 
 > [!NOTE]
-> `x:Name`.NET Standard 라이브러리 프로젝트 또는 SAP (공유 자산 프로젝트)에서는를 사용 하 여 네이티브 뷰 이름을 지정할 수 없습니다. 이렇게 하면 네이티브 형식의 변수가 생성 되어 컴파일 오류가 발생 합니다. 그러나 SAP를 사용 하는 경우 네이티브 뷰를 `ContentView` 인스턴스에 래핑하여 코드 숨김으로 가져올 수 있습니다. 자세한 내용은 [코드에서 네이티브 뷰](#native_view_code)참조를 참조 하세요.
-
-<a name="native_bindings" />
+> `x:Name`.NET Standard 라이브러리 프로젝트 또는 SAP (공유 자산 프로젝트)에서는를 사용 하 여 네이티브 뷰 이름을 지정할 수 없습니다. 이렇게 하면 네이티브 형식의 변수가 생성 되어 컴파일 오류가 발생 합니다. 그러나 SAP를 사용 하는 경우 네이티브 뷰를 `ContentView` 인스턴스에 래핑하여 코드 숨김으로 가져올 수 있습니다. 자세한 내용은 [코드에서 네이티브 뷰 참조](#refer-to-native-views-from-code)를 참조 하세요.
 
 ## <a name="native-bindings"></a>기본 바인딩
 
@@ -127,9 +97,7 @@ Android widget 생성자에는 일반적으로 Android `Context` 개체가 인�
 
 Native 속성이 `INotifyPropertyChanged` iOS의 키-값 관찰 (KVO)을 구현 하거나 지원 하거나 UWP의 인 경우 양방향 바인딩이 자동으로 지원 됩니다 `DependencyProperty` . 그러나 많은 네이티브 뷰에서는 속성 변경 알림을 지원 하지 않습니다. 이러한 보기의 경우 [`UpdateSourceEventName`](xref:Xamarin.Forms.Binding.UpdateSourceEventName) 바인딩 식의 일부로 속성 값을 지정할 수 있습니다. 이 속성은 대상 속성이 변경 될 때 신호를 전달 하는 네이티브 뷰의 이벤트 이름으로 설정 해야 합니다. 그런 다음 네이티브 스위치의 값이 변경 되 면 사용자가 `Binding` 스위치 값을 변경 하 고 `NativeSwitchPageViewModel.IsSwitchOn` 속성 값이 업데이트 되었다는 알림이 클래스에 표시 됩니다.
 
-<a name="passing_arguments" />
-
-## <a name="passing-arguments-to-native-views"></a>네이티브 뷰에 인수 전달
+## <a name="pass-arguments-to-native-views"></a>네이티브 뷰에 인수 전달
 
 태그 확장을 포함 하는 특성을 사용 하 여 생성자 인수를 네이티브 뷰로 전달할 수 있습니다 `x:Arguments` `x:Static` . 또한 특성을 사용 하 여 `public static` 메서드 이름을 지정 하 고 특성을 사용 하 여 인수를 지정 하 여 네이티브 뷰 팩터리 메서드 (메서드를 정의 하는 클래스 또는 구조체와 동일한 형식의 개체 또는 값을 반환 하는 메서드)를 호출할 수 있습니다 `x:FactoryMethod` `x:Arguments` .
 
@@ -200,9 +168,7 @@ Native 속성이 `INotifyPropertyChanged` iOS의 키-값 관찰 (KVO)을 구현 
 
 XAML로 인수를 전달 하는 방법에 대 한 자세한 내용은 [xaml로 인수 전달](~/xamarin-forms/xaml/passing-arguments.md)을 참조 하세요.
 
-<a name="native_view_code" />
-
-## <a name="referring-to-native-views-from-code"></a>코드에서 네이티브 뷰 참조
+## <a name="refer-to-native-views-from-code"></a>코드에서 네이티브 뷰 참조
 
 특성을 사용 하 여 네이티브 뷰의 이름을 지정할 수는 없지만 `x:Name` 네이티브 뷰가 [`ContentView`](xref:Xamarin.Forms.ContentView) 특성 값을 지정 하는의 자식인 경우에는 공유 액세스 프로젝트의 코드 숨겨진 파일에서 XAML 파일에 선언 된 네이티브 뷰 인스턴스를 검색할 수 있습니다 `x:Name` . 그런 다음 코드 숨김이 있는 파일의 조건부 컴파일 지시문 내에서 다음을 수행 해야 합니다.
 
@@ -287,9 +253,7 @@ public partial class NativeViewInsideContentViewPage : ContentPage
 
 ![](xaml-images/contentview.png "ContentView Containing a Native Control")
 
-<a name="subclassing" />
-
-## <a name="subclassing-native-views"></a>네이티브 뷰 서브클래싱
+## <a name="subclass-native-views"></a>서브 클래스 네이티브 뷰
 
 대부분의 iOS 및 Android 네이티브 뷰는 속성이 아닌 메서드를 사용 하 여 컨트롤을 설정 하므로 XAML에서 인스턴스화하는 데 적합 하지 않습니다. 이 문제에 대 한 해결 방법은 컨트롤을 설정 하기 위해 속성을 사용 하 고 플랫폼 독립적 이벤트를 사용 하는 XAML 친화적인 API를 정의 하는 래퍼에서 네이티브 뷰를 하위 클래스 하는 것입니다. 그러면 래핑된 네이티브 뷰를 SAP (공유 자산 프로젝트)에 배치 하 여 조건부 컴파일 지시문으로 묶을 수 있으며, 플랫폼별 프로젝트에 배치 하 고 .NET Standard 라이브러리 프로젝트의 XAML에서 참조할 수 있습니다.
 
@@ -485,10 +449,6 @@ class MySpinner : Spinner
 ```
 
 `MySpinner`클래스는 `ItemsSource` 및 속성과 이벤트를 노출 `SelectedObject` `ItemSelected` 합니다. 클래스에 의해 표시 되는 항목은 `MySpinner` 뷰와 연결 된에서 제공 [`Adapter`](xref:Android.Widget.Adapter) 하며, `Adapter` 속성이 처음 설정 될 때 항목은로 채워집니다 `ItemsSource` . 클래스에서 선택한 항목이 변경 될 때마다 `MySpinner` `OnBindableSpinnerItemSelected` 이벤트 처리기는 속성을 업데이트 합니다 `SelectedObject` .
-
-## <a name="summary"></a>요약
-
-이 문서에서는 XAML 파일에서 네이티브 뷰를 사용 하는 방법을 보여 주었습니다 Xamarin.Forms . 속성 및 이벤트 처리기는 네이티브 뷰에서 설정할 수 있으며 뷰와 상호 작용할 수 있습니다 Xamarin.Forms .
 
 ## <a name="related-links"></a>관련 링크
 

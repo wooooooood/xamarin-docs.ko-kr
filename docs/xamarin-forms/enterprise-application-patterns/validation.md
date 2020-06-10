@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4a9af91e2d48ba7ef7fdcdb4f8472e0aaafb7854
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138712"
+제목: "엔터프라이즈 앱에서 유효성 검사" 설명: "이 장은 eShopOnContainers 모바일 앱에서 사용자 입력의 유효성 검사를 수행 하는 방법을 설명 합니다. 여기에는 유효성 검사 규칙 지정, 유효성 검사 트리거 및 유효성 검사 오류 표시가 포함 됩니다.
+assetid: 56e4f0fc-48d9-4033-91ec-173bb46a5e4d: xamarin-forms author: davidbritch: dabritch:: 08/07/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="validation-in-enterprise-apps"></a>엔터프라이즈 앱의 유효성 검사
 
 사용자의 입력을 허용 하는 모든 앱은 입력이 올바른지 확인 해야 합니다. 예를 들어 앱은 특정 범위의 문자만 포함 하는 입력을 확인 하거나 특정 길이 이거나 특정 형식과 일치 시킬 수 있습니다. 유효성 검사를 수행 하지 않으면 사용자가 응용 프로그램 실패를 유발 하는 데이터를 제공할 수 있습니다. 유효성 검사는 비즈니스 규칙을 적용 하 고 공격자가 악성 데이터를 삽입 하는 것을 방지 합니다.
@@ -209,9 +195,7 @@ public bool Validate()
 
 [`Entry`](xref:Xamarin.Forms.Entry)컨트롤이 인스턴스의 속성에 바인딩되고 `UserName.Value` `ValidatableObject<T>` 컨트롤의 `Behaviors` 컬렉션에 `EventToCommandBehavior` 인스턴스가 추가 됩니다. 이 동작은에서 `ValidateUserNameCommand` 발생 하는 [] 이벤트에 대 한 응답으로를 실행 합니다 .이 이벤트는의 `TextChanged` `Entry` 텍스트가 변경 될 때 발생 합니다 `Entry` . 그러면 `ValidateUserNameCommand` 대리자는 `ValidateUserName` 인스턴스에서 메서드를 실행 하는 메서드를 실행 합니다 `Validate` `ValidatableObject<T>` . 따라서 사용자가 컨트롤의 사용자 이름에 대해 문자를 입력할 때마다 `Entry` 입력 한 데이터의 유효성 검사가 수행 됩니다.
 
-동작에 대 한 자세한 내용은 [동작 구현](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors)을 참조 하세요.
-
-<a name="displaying_validation_errors" />
+동작에 대 한 자세한 내용은 [동작 구현](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing-behaviors)을 참조 하세요.
 
 ## <a name="displaying-validation-errors"></a>유효성 검사 오류 표시
 
@@ -286,7 +270,7 @@ public static class LineColorBehavior
 }
 ```
 
-이 메서드의 매개 변수는 동작이 연결 된 컨트롤의 인스턴스와 연결 된 속성의 이전 값과 새 값을 제공 합니다 `ApplyLineColor` . `EntryLineColorEffect`클래스는 연결 된 속성이 인 경우 컨트롤의 컬렉션에 추가 되 고 [`Effects`](xref:Xamarin.Forms.Element.Effects) `ApplyLineColor` `true` , 그렇지 않으면 컨트롤의 컬렉션에서 제거 됩니다 `Effects` . 동작에 대 한 자세한 내용은 [동작 구현](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors)을 참조 하세요.
+이 메서드의 매개 변수는 동작이 연결 된 컨트롤의 인스턴스와 연결 된 속성의 이전 값과 새 값을 제공 합니다 `ApplyLineColor` . `EntryLineColorEffect`클래스는 연결 된 속성이 인 경우 컨트롤의 컬렉션에 추가 되 고 [`Effects`](xref:Xamarin.Forms.Element.Effects) `ApplyLineColor` `true` , 그렇지 않으면 컨트롤의 컬렉션에서 제거 됩니다 `Effects` . 동작에 대 한 자세한 내용은 [동작 구현](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing-behaviors)을 참조 하세요.
 
 `EntryLineColorEffect` [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) 클래스는 클래스를, 다음 코드 예제에서 볼 수 있습니다.
 

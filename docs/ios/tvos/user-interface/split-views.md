@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: e42912add9dd94b9cce16d725a456b1b4da30e35
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 98cedb1cf02f9688581946fa21a2cb40379f606f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022205"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84566177"
 ---
 # <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Xamarin에서 tvOS 분할 뷰 컨트롤러 작업
 
@@ -20,7 +20,7 @@ ms.locfileid: "73022205"
 
 [![](split-views-images/intro01.png "Sample Split View")](split-views-images/intro01.png#lightbox)
 
-<a name="About-Split-View-Controllers" />
+<a name="About-Split-View-Controllers"></a>
 
 ## <a name="about-split-view-controllers"></a>분할 뷰 컨트롤러 정보
 
@@ -40,15 +40,15 @@ Apple에서는 분할 뷰 컨트롤러를 사용할 때 다음과 같은 방법�
 - **주 선택 영역 유지** -자세히 보기의 내용이 마스터 뷰의 사용자 선택에 대 한 응답 인 반면 마스터 뷰 콘텐츠는 고정 되어야 합니다. 또한 마스터 뷰에서 현재 선택 된 항목을 명확 하 게 표시 해야 합니다.
 - **단일 통합 제목 사용** -일반적으로 세부 정보 보기에서 가운데 맞춤 단일 제목을 사용 하 고 세부 정보 및 마스터 보기 모두에 제목 대신 사용 하는 것이 좋습니다.
 
-<a name="Split-View-Controllers-and-Storyboards" />
+<a name="Split-View-Controllers-and-Storyboards"></a>
 
 ## <a name="split-view-controllers-and-storyboards"></a>분할 뷰 컨트롤러 및 스토리 보드
 
 TvOS 앱에서 분할 뷰 컨트롤러를 사용 하는 가장 쉬운 방법은 iOS Designer를 사용 하 여 앱의 UI에 추가 하는 것입니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-1. **Solution Pad**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+1. **Solution Pad**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **분할 뷰 컨트롤러** 를 끌어서 뷰에 놓습니다. 
 
     [![](split-views-images/activity01.png "A Split View Controller")](split-views-images/activity01.png#lightbox)
@@ -63,12 +63,12 @@ TvOS 앱에서 분할 뷰 컨트롤러를 사용 하는 가장 쉬운 방법은 
 1. 마스터 및 세부 정보 보기의 내용 디자인: 
 
     [![](split-views-images/activity04.png "Example layout")](split-views-images/activity04.png#lightbox)
-1. 코드 C# 에서 UI 컨트롤을 사용 하려면 **Properties Pad** 의 **위젯 탭** 에서 **이름을** 할당 합니다.
+1. C # 코드에서 UI 컨트롤을 사용할 수 있도록 **Properties Pad** 의 **위젯 탭** 에서 **이름을** 할당 합니다.
 1. 변경 내용을 저장 하 고 Mac용 Visual Studio로 돌아갑니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+1. **솔루션 탐색기**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **분할 뷰 컨트롤러** 를 끌어서 뷰에 놓습니다. 
 
     [![](split-views-images/activity01-vs.png "A Split View Controller")](split-views-images/activity01-vs.png#lightbox)
@@ -83,24 +83,24 @@ TvOS 앱에서 분할 뷰 컨트롤러를 사용 하는 가장 쉬운 방법은 
 1. 마스터 및 세부 정보 보기의 내용 디자인: 
 
     [![](split-views-images/activity04.png "Content layout")](split-views-images/activity04.png#lightbox)
-1. 코드에서 C# UI 컨트롤을 사용 하려면 **속성 탐색기** 의 **위젯 탭** 에서 **이름을** 할당 합니다.
+1. C # 코드에서 UI 컨트롤을 사용할 수 있도록 **속성 탐색기** 의 **위젯 탭** 에서 **이름을** 할당 합니다.
 1. 변경 내용을 저장합니다.
 
 -----
 
 스토리 보드 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)를 참조 하세요.
 
-<a name="Working-with-Split-View-Controllers" />
+<a name="Working-with-Split-View-Controllers"></a>
 
 ## <a name="working-with-split-view-controllers"></a>분할 뷰 컨트롤러 작업
 
 위에서 설명한 것 처럼 분할 뷰 컨트롤러는 사용자에 게 필터링 된 콘텐츠를 표시 하는 경우에 자주 사용 됩니다. 주 범주는 마스터 뷰의 왼쪽에 표시 되 고, 필터링 된 결과는 사용자의 선택에 따라 자세히 보기에서 오른쪽에 표시 됩니다.
 
-<a name="Accessing-Master-and-Detail" />
+<a name="Accessing-Master-and-Detail"></a>
 
 ### <a name="accessing-master-and-detail"></a>마스터 및 세부 정보 액세스
 
-마스터 및 세부 정보 보기 컨트롤러에 프로그래밍 방식으로 액세스 해야 하는 경우 분할 뷰 컨트롤러의 `ViewControllers` 속성을 사용 합니다. 예를 들면,
+마스터 및 세부 뷰 컨트롤러에 프로그래밍 방식으로 액세스 해야 하는 경우 `ViewControllers` 분할 뷰 컨트롤러의 속성을 사용 합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 // Gain access to master and detail view controllers
@@ -110,7 +110,7 @@ var detailController = ViewControllers [1] as DetailViewController;
 
 이는 배열로 표시 됩니다. 여기서 마스터 뷰 컨트롤러의 첫 번째 요소 (0)와 두 번째 요소 (1)는 세부 정보입니다.
 
-<a name="Accessing-Detail-from-Master" />
+<a name="Accessing-Detail-from-Master"></a>
 
 ### <a name="accessing-detail-from-master"></a>마스터에서 세부 정보 액세스
 
@@ -122,7 +122,7 @@ var detailController = ViewControllers [1] as DetailViewController;
 public DetailViewController DetailController { get; set;}
 ```
 
-분할 뷰 컨트롤러에서 `ViewDidLoad` 메서드를 재정의 하 고 두 뷰를 함께 연결 합니다. 예를 들면,
+분할 뷰 컨트롤러에서 메서드를 재정의 `ViewDidLoad` 하 고 두 뷰를 함께 연결 합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 public override void ViewDidLoad ()
@@ -142,11 +142,11 @@ public override void ViewDidLoad ()
 
 마스터에서 필요에 따라 새 데이터를 표시 하는 데 사용할 수 있는 세부 정보 보기 컨트롤러에 속성 및 메서드를 노출할 수 있습니다.
 
-<a name="Showing-and-Hiding-Master" />
+<a name="Showing-and-Hiding-Master"></a>
 
 ### <a name="showing-and-hiding-master"></a>마스터 표시 및 숨기기
 
-필요에 따라 분할 뷰 컨트롤러의 `PreferredDisplayMode` 속성을 사용 하 여 마스터 뷰 컨트롤러를 표시 하거나 숨길 수 있습니다. 예를 들면,
+필요에 따라 `PreferredDisplayMode` 분할 뷰 컨트롤러의 속성을 사용 하 여 마스터 뷰 컨트롤러를 표시 하거나 숨길 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 // Show hide split view
@@ -157,16 +157,16 @@ if (SplitViewController.DisplayMode == UISplitViewControllerDisplayMode.PrimaryH
 }
 ```
 
-`UISplitViewControllerDisplayMode` 열거형은 마스터 뷰 컨트롤러가 다음 중 하나로 표시 되는 방법을 정의 합니다.
+`UISplitViewControllerDisplayMode`열거형은 다음 중 하나로 마스터 뷰 컨트롤러를 표시 하는 방법을 정의 합니다.
 
 - **자동** TvOS는 마스터 및 세부 정보 보기의 표시를 제어 합니다.
 - **Primaryhidden** -마스터 뷰 컨트롤러를 숨깁니다.
 - **Allvisible** -마스터 및 세부 정보 보기 컨트롤러를 나란히 표시 합니다. 이는 일반적인 기본 표현입니다.
 - **Primaryoverlay** -세부 정보 보기 컨트롤러는 아래에서 확장 되며 마스터에서 적용 됩니다.
 
-현재 프레젠테이션 상태를 가져오려면 분할 뷰 컨트롤러의 `DisplayMode` 속성을 사용 합니다.
+현재 프레젠테이션 상태를 가져오려면 `DisplayMode` 분할 뷰 컨트롤러의 속성을 사용 합니다.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 

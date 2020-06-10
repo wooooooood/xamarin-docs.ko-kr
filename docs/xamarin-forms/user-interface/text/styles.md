@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms텍스트 스타일
-description: 이 문서에서는 응용 프로그램에서 텍스트의 스타일을 지정 하는 방법을 설명 합니다 Xamarin.Forms . 스타일은 한 번 정의 하 여 여러 뷰에서 사용할 수 있지만 스타일은 한 형식의 뷰에서만 사용할 수 있습니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 79a86fd7a2c0f5b82ca4b3e22b3ecedf42c5a0ba
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136151"
+제목: " Xamarin.Forms 텍스트 스타일" 설명: "이 문서에서는 응용 프로그램에서 텍스트의 스타일을 지정 하는 방법을 설명 Xamarin.Forms 합니다. 스타일은 한 번 정의 하 여 여러 뷰에서 사용할 수 있지만 스타일은 한 형식의 뷰에서만 사용할 수 있습니다. "
+assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF: xamarin-forms author: davidbritch: dabritch:: 05/22/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-text-styles"></a>Xamarin.Forms텍스트 스타일
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
@@ -25,8 +11,6 @@ _Xamarin.ios에서 텍스트 스타일 지정_
 
 스타일을 사용 하 여 레이블, 항목 및 편집기의 모양을 조정할 수 있습니다. 스타일은 한 번 정의 하 여 여러 뷰에서 사용할 수 있지만 스타일은 한 형식의 뷰에서만 사용할 수 있습니다.
 스타일에는를 지정 하 `Key` 고 특정 컨트롤의 속성을 사용 하 여 선택적으로 적용할 수 있습니다 `Style` .
-
-<a name="Built-In_Styles" />
 
 ## <a name="built-in-styles"></a>기본 제공 스타일
 
@@ -52,8 +36,6 @@ label.Style = Device.Styles.TitleStyle;
 ```
 
 ![장치 스타일 예제](styles-images/builtinstyles.png)
-
-<a name="Custom_Styles" />
 
 ## <a name="custom-styles"></a>사용자 지정 스타일
 
@@ -95,8 +77,6 @@ XAML에서:
 
 ![사용자 지정 스타일 예제](styles-images/customstyle.png)
 
-<a name="Applying_Styles" />
-
 ## <a name="applying-styles"></a>스타일 적용
 
 스타일을 만든 후에는와 일치 하는 모든 뷰에 적용할 수 있습니다 `TargetType` .
@@ -132,7 +112,7 @@ C #에서 기본 제공 스타일은 다음에서 선택 됩니다 `Device.Style
 label.Style = Device.Styles.TitleStyle;
 ```
 
-## <a name="accessibility"></a>접근성
+## <a name="accessibility"></a>액세스 가능성
 
 기본 제공 스타일은 접근성 기본 설정을 보다 쉽게 적용할 수 있도록 하기 위해 존재 합니다. 기본 제공 스타일을 사용 하는 경우 사용자가 접근성 기본 설정을 적절 하 게 설정 하면 글꼴 크기가 자동으로 증가 합니다.
 
@@ -153,4 +133,4 @@ label.Style = Device.Styles.TitleStyle;
 - [을 사용 하 여 Mobile Apps 만들기 Xamarin.Forms , 12 장](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
 - [스타일](~/xamarin-forms/user-interface/styles/index.md)
 - [텍스트 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
-- [스타일](xref:Xamarin.Forms.Style)
+- [Style](xref:Xamarin.Forms.Style)

@@ -1,24 +1,24 @@
 ---
 title: Xamarin.ios의 경고
-description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 경고를 사용 하는 방법을 설명 합니다. 코드에서 C# 경고를 만들고 표시 하 고 사용자 상호 작용에 응답 하는 방법을 설명 합니다.
+description: '이 문서에서는 Xamarin.ios 응용 프로그램에서 경고를 사용 하는 방법을 설명 합니다. C # 코드에서 경고를 만들고 표시 하 고 사용자 상호 작용에 응답 하는 방법을 설명 합니다.'
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2ef8e81390b5d64971aa3883a05da9fb8795a416
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 044792f37fbba13699a5ab31d815b4f2c5dafe17
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73001526"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84565488"
 ---
 # <a name="alerts-in-xamarinmac"></a>Xamarin.ios의 경고
 
-_이 문서에서는 Xamarin.ios 응용 프로그램에서 경고를 사용 하는 방법을 설명 합니다. 코드에서 C# 경고를 만들고 표시 하 고 사용자 상호 작용에 응답 하는 방법을 설명 합니다._
+_이 문서에서는 Xamarin.ios 응용 프로그램에서 경고를 사용 하는 방법을 설명 합니다. C # 코드에서 경고를 만들고 표시 하 고 사용자 상호 작용에 응답 하는 방법을 설명 합니다._
 
-Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목표-C* 및 *Xcode* 에서 작업 하는 개발자와 동일한 경고에 액세스할 수 있습니다. 
+Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 *목표-C* 및 *Xcode* 에서 작업 하는 개발자와 동일한 경고에 액세스할 수 있습니다. 
 
 경고는 심각한 문제 (예: 오류) 나 경고 (예: 파일 삭제 준비)가 발생 한 경우 표시 되는 특별 한 유형의 대화 상자입니다. 경고는 대화 상자 이므로 닫아야 하기 전에 사용자 응답이 필요 합니다.
 
@@ -26,7 +26,7 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목�
 
 이 문서에서는 Xamarin.ios 응용 프로그램에서 경고로 작업 하는 기본 사항을 설명 합니다. 
 
-<a name="Introduction_to_Alerts" />
+<a name="Introduction_to_Alerts"></a>
 
 ## <a name="introduction-to-alerts"></a>경고 소개
 
@@ -43,11 +43,11 @@ Apple에서 다음 지침을 제안 합니다.
 
 자세한 내용은 Apple [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) 의 [경고](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowAlerts.html#//apple_ref/doc/uid/20000957-CH44-SW1) 섹션을 참조 하세요.
 
-<a name="Anatomy_of_an_Alert" />
+<a name="Anatomy_of_an_Alert"></a>
 
 ## <a name="anatomy-of-an-alert"></a>경고 분석
 
-위에서 설명한 것 처럼 심각한 문제가 발생 하거나 데이터 손실 (예: 저장 되지 않은 파일 닫기)에 대 한 경고로 인해 응용 프로그램 사용자에 게 경고를 표시 해야 합니다. Xamarin.ios에서 코드에 C# 경고가 생성 됩니다. 예를 들면 다음과 같습니다.
+위에서 설명한 것 처럼 심각한 문제가 발생 하거나 데이터 손실 (예: 저장 되지 않은 파일 닫기)에 대 한 경고로 인해 응용 프로그램 사용자에 게 경고를 표시 해야 합니다. Xamarin.ios에서는 c # 코드에서 경고가 생성 됩니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 var alert = new NSAlert () {
@@ -65,18 +65,18 @@ alert.RunModal ();
 Apple은 경고를 사용자 지정 하는 데 사용할 수 있는 몇 가지 속성을 제공 합니다.
 
 - **Alertstyle** 은 경고의 유형을 다음 중 하나로 정의 합니다.
-  - **경고** -중요 하지 않은 현재 또는 임박 이벤트를 사용자에 게 경고 하는 데 사용 됩니다. 이는 기본 스타일입니다.
+  - **경고** -중요 하지 않은 현재 또는 임박 이벤트를 사용자에 게 경고 하는 데 사용 됩니다. 기본 스타일입니다.
   - **정보** -현재 또는 임박 이벤트에 대해 사용자에 게 경고 하는 데 사용 됩니다. 현재 **경고** 와 **정보** 간에 표시 되는 차이가 없습니다.
   - **중요** -발생 한 이벤트의 심각한 결과 (예: 파일 삭제)에 대해 사용자에 게 경고 하는 데 사용 됩니다. 이 유형의 경고는 자주 사용 해야 합니다.
 - **MessageText** -경고의 기본 메시지 또는 제목 이며 사용자에 게 상황을 신속 하 게 정의 해야 합니다.
 - **InformativeText** -상황을 명확 하 게 정의 하 고 사용자에 게 작동 가능한 옵션을 제공 해야 하는 경고의 본문입니다.
 - **아이콘** -사용자 지정 아이콘을 사용자에 게 표시할 수 있습니다.
-- **ShowsHelp** **/**  & -경고를 응용 프로그램 helpbook에 연결 하 고 경고에 대 한 도움말을 표시할 수 있습니다.
+- **또는**  &  **ShowsHelp** -경고를 응용 프로그램 helpbook에 연결 하 고 경고에 대 한 도움말을 표시할 수 있습니다.
 - **단추** -기본적으로 경고에는 **확인** 단추만 있지만 **Buttons** 컬렉션을 사용 하면 필요에 따라 선택 항목을 더 추가할 수 있습니다.
-- **ShowsSuppressionButton** -`true` 이면 사용자가 경고를 트리거한 이벤트의 후속 발생에 대 한 경고를 표시 하지 않는 데 사용할 수 있는 확인란을 표시 합니다.
-- **AccessoryView** -다른 하위 뷰를 경고에 연결 하 여 데이터 입력에 대 한 **텍스트 필드** 를 추가 하는 등의 추가 정보를 제공할 수 있습니다. 새 **AccessoryView** 를 설정 하거나 기존 항목을 수정 하는 경우에는 `Layout()` 메서드를 호출 하 여 경고의 표시 레이아웃을 조정 해야 합니다.
+- **ShowsSuppressionButton** - `true` 사용자가 경고를 트리거한 이벤트의 후속 발생에 대 한 경고를 표시 하지 않는 데 사용할 수 있는 확인란을 표시 합니다.
+- **AccessoryView** -다른 하위 뷰를 경고에 연결 하 여 데이터 입력에 대 한 **텍스트 필드** 를 추가 하는 등의 추가 정보를 제공할 수 있습니다. 새 **AccessoryView** 를 설정 하거나 기존 항목을 수정 하는 경우 메서드를 호출 하 여 `Layout()` 경고의 표시 레이아웃을 조정 해야 합니다.
 
-<a name="Displaying_an_Alert" />
+<a name="Displaying_an_Alert"></a>
 
 ## <a name="displaying-an-alert"></a>경고 표시
 
@@ -110,7 +110,7 @@ alert.BeginSheet (this);
 
 [![](alert-images/alert03.png "An alert displayed as a sheet")](alert-images/alert03.png#lightbox)
 
-<a name="Working_with_Alert_Buttons" />
+<a name="Working_with_Alert_Buttons"></a>
 
 ## <a name="working-with-alert-buttons"></a>경고 단추 사용
 
@@ -161,11 +161,11 @@ alert.BeginSheetForResponse (this, (result) => {
 > [!IMPORTANT]
 > 세 개 이상의 단추를 경고에 추가 하면 안 됩니다.
 
-<a name="Showing_the_Suppress_Button" />
+<a name="Showing_the_Suppress_Button"></a>
 
 ## <a name="showing-the-suppress-button"></a>표시 안 함 단추 표시
 
-경고의 `ShowSuppressButton` 속성이 `true`되는 경우 경고는 사용자가 해당 경고를 트리거한 이벤트의 후속 발생에 대 한 경고를 표시 하지 않는 데 사용할 수 있는 확인란을 표시 합니다. 다음 코드는 표시 안 함 단추가 있는 자유 부동 경고를 표시 합니다.
+경고 `ShowSuppressButton` 속성이 인 경우 `true` 경고는 사용자가 경고를 트리거한 이벤트의 후속 발생에 대 한 경고를 표시 하지 않는 데 사용할 수 있는 확인란을 표시 합니다. 다음 코드는 표시 안 함 단추가 있는 자유 부동 경고를 표시 합니다.
 
 ```csharp
 var alert = new NSAlert () {
@@ -181,7 +181,7 @@ var result = alert.RunModal ();
 Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 ```
 
-`alert.SuppressionButton.State` 값이 `NSCellStateValue.On`경우 사용자가 표시 안 함 확인란을 선택 하지 않은 것입니다.
+의 값 `alert.SuppressionButton.State` 이 이면 `NSCellStateValue.On` 사용자는 표시 안 함 확인란을 선택 하 고 그렇지 않은 경우에는 그렇지 않습니다.
 
 코드가 실행 되 면 다음이 표시 됩니다.
 
@@ -208,11 +208,11 @@ alert.BeginSheetForResponse (this, (result) => {
 
 [![](alert-images/alert07.png "An alert with a suppress button display as a sheet")](alert-images/alert07.png#lightbox)
 
-<a name="Adding_a_Custom_SubView" />
+<a name="Adding_a_Custom_SubView"></a>
 
 ## <a name="adding-a-custom-subview"></a>사용자 지정 하위 뷰 추가
 
-경고에는 경고를 추가로 사용자 지정 하 고 사용자 입력에 대 한 **텍스트 필드** 와 같은 항목을 추가 하는 데 사용할 수 있는 `AccessoryView` 속성이 있습니다. 다음 코드는 추가 된 텍스트 입력 필드를 사용 하 여 자유 부동 경고를 만듭니다.
+경고에는 `AccessoryView` 경고를 추가로 사용자 지정 하 고 사용자 입력에 대 한 **텍스트 필드** 와 같은 항목을 추가 하는 데 사용할 수 있는 속성이 있습니다. 다음 코드는 추가 된 텍스트 입력 필드를 사용 하 여 자유 부동 경고를 만듭니다.
 
 ```csharp
 var input = new NSTextField (new CGRect (0, 0, 300, 20));
@@ -232,7 +232,7 @@ var result = alert.RunModal ();
 Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 ```
 
-여기에 있는 키 줄은 경고를 추가할 새 **텍스트 필드** 를 만드는 `var input = new NSTextField (new CGRect (0, 0, 300, 20));`입니다. **텍스트 필드** 를 경고에 연결 하 고 `Layout()` 메서드에 대 한 호출을 `alert.AccessoryView = input;` 하 여 새 하위 뷰의 크기를 조정 하는 데 필요 합니다.
+여기에서 키 줄은 `var input = new NSTextField (new CGRect (0, 0, 300, 20));` 경고를 추가할 새 **텍스트 필드** 를 만듭니다. `alert.AccessoryView = input;`이는 **텍스트 필드** 를 경고에 연결 하 고 메서드를 호출 하 여 `Layout()` 새 하위 뷰의 크기를 조정 하는 데 필요 합니다.
 
 코드를 실행 하는 경우 다음이 표시 됩니다.
 
@@ -263,11 +263,11 @@ alert.BeginSheetForResponse (this, (result) => {
 
 [![](alert-images/alert09.png "An alert with a custom view")](alert-images/alert09.png#lightbox)
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.ios 응용 프로그램에서 경고를 사용 하는 방법을 자세히 살펴봅니다. 경고의 다양 한 유형 및 사용, 경고를 만들고 사용자 지정 하는 방법 및 코드에서 C# 경고를 사용 하는 방법을 살펴보았습니다.
+이 문서에서는 Xamarin.ios 응용 프로그램에서 경고를 사용 하는 방법을 자세히 살펴봅니다. 경고의 다양 한 유형 및 사용, 경고를 만들고 사용자 지정 하는 방법 및 c # 코드에서 경고를 사용 하는 방법을 살펴보았습니다.
 
 ## <a name="related-links"></a>관련 링크
 

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 datapages NuGet 패키지에서 사용할 수 있는 컨트롤을 소개 합니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 093ef4b9b3ae7bde25da276330894bcf4e399145
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134448"
+제목: "DataPages 컨트롤 참조" 설명: "이 문서에서는 datapages NuGet 패키지에서 사용할 수 있는 컨트롤을 소개 Xamarin.Forms 합니다."
+assetid: 891615D0-E8BD-4ACC-A7F0-4C3725FBCC31: xamarin-forms author: davidbritch: dabritch:: 12/01/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="datapages-controls-reference"></a>DataPages 컨트롤 참조
 
 ![](~/media/shared/preview.png "This API is currently in preview")
@@ -36,14 +22,12 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스가 포함
     x:Class="DataPagesDemo.Detail">
 ```
 
-아래 예제에는 `DynamicResource` 작업을 수행 하기 위해 프로젝트의 리소스 사전에 있어야 하는 참조가 포함 되어 있습니다. [사용자 지정 컨트롤](#custom) 을 작성 하는 방법에 대 한 예제도 있습니다.
+아래 예제에는 `DynamicResource` 작업을 수행 하기 위해 프로젝트의 리소스 사전에 있어야 하는 참조가 포함 되어 있습니다. [사용자 지정 컨트롤](#custom-control-example)을 빌드하는 방법에 대 한 예제도 있습니다.
 
 ## <a name="built-in-controls"></a>기본 제공 컨트롤
 
 * [HeroImage](#heroimage)
 * [ListItem](#listitem)
-
-<a name="heroimage" />
 
 ### <a name="heroimage"></a>HeroImage
 
@@ -62,15 +46,13 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스가 포함
 />
 ```
 
-**Android**
+**OWA(Outlook Web Access)**
 
 ![](controls-images/heroimage-light-android.png "Android의 HeroImage 컨트롤") ![](controls-images/heroimage-dark-android.png "Android의 HeroImage 컨트롤")
 
 **iOS**
 
 ![](controls-images/heroimage-light-ios.png "IOS의 HeroImage 컨트롤") ![](controls-images/heroimage-dark-ios.png "IOS의 HeroImage 컨트롤")
-
-<a name="listitem" />
 
 ### <a name="listitem"></a>ListItem
 
@@ -96,7 +78,7 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스가 포함
 
 이러한 스크린샷은 `ListItem` 밝은 테마와 어두운 테마를 모두 사용 하 여 iOS 및 Android 플랫폼에 대 한을 보여 줍니다.
 
-**Android**
+**OWA(Outlook Web Access)**
 
 ![](controls-images/listitem-light-android.png "Android의 ListItem 컨트롤") ![](controls-images/listitem-dark-android.png "Android의 ListItem 컨트롤")
 
@@ -126,7 +108,7 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스가 포함
 
 기본 제공 되는 밝은 테마와 어두운 테마에 해당 하는 색을 사용 하 여 아래의 스크린샷 처럼 표시 됩니다.
 
-**Android**
+**OWA(Outlook Web Access)**
 
 ![](controls-images/cardview-light-android.png "Android의 CardView 사용자 지정 컨트롤") ![](controls-images/cardview-dark-android.png "Android의 CardView 사용자 지정 컨트롤")
 
@@ -134,19 +116,15 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스가 포함
 
 ![](controls-images/cardview-light-ios.png "IOS의 CardView 사용자 지정 컨트롤") ![](controls-images/cardview-dark-ios.png "IOS의 CardView 사용자 지정 컨트롤")
 
-<a name="custom" />
-
 ### <a name="building-the-custom-cardview"></a>사용자 지정 CardView 빌드
 
-1. [DataView 하위 클래스](#1)
-2. [글꼴, 레이아웃 및 여백 정의](#2)
-3. [컨트롤의 자식에 대 한 스타일 만들기](#3)
-4. [컨트롤 레이아웃 템플릿 만들기](#4)
-5. [테마별 리소스 추가](#5)
-6. [CardView 클래스에 대 한 ControlTemplate 설정](#6)
-7. [페이지에 컨트롤 추가](#7)
-
-<a name="1" />
+1. [DataView 하위 클래스](#1-dataview-subclass)
+2. [글꼴, 레이아웃 및 여백 정의](#2-define-font-layout-and-margins)
+3. [컨트롤의 자식에 대 한 스타일 만들기](#3-create-styles-for-the-controls-children)
+4. [컨트롤 레이아웃 템플릿 만들기](#4-create-the-control-layout-template)
+5. [테마별 리소스 추가](#5-add-the-theme-specific-resources)
+6. [CardView 클래스에 대 한 ControlTemplate 설정](#6-set-the-controltemplate-for-the-cardview-class)
+7. [페이지에 컨트롤 추가](#7-add-the-control-to-a-page)
 
 #### <a name="1-dataview-subclass"></a>1. DataView 하위 클래스
 
@@ -188,13 +166,11 @@ public class CardView : DataView
 }
 ```
 
-<a name="2" />
-
 #### <a name="2-define-font-layout-and-margins"></a>2. 글꼴, 레이아웃 및 여백 정의
 
 컨트롤 디자이너는 사용자 지정 컨트롤에 대 한 사용자 인터페이스 디자인의 일부로 이러한 값을 파악 합니다. 플랫폼별 사양이 필요한 경우 `OnPlatform` 요소가 사용 됩니다.
 
-일부 값은 s를 참조 `StaticResource` 합니다. 이러한 값은 [5 단계](#5)에서 정의 됩니다.
+일부 값은 s를 참조 `StaticResource` 합니다. 이러한 값은 [5 단계](#5-add-the-theme-specific-resources)에서 정의 됩니다.
 
 ```xml
 <!-- CARDVIEW FONT SIZES -->
@@ -246,8 +222,6 @@ public class CardView : DataView
 </OnPlatform>
 ```
 
-<a name="3" />
-
 #### <a name="3-create-styles-for-the-controls-children"></a>3. 컨트롤의 자식에 대 한 스타일 만들기
 
 에 대해 정의 된 모든 요소를 참조 하 여 사용자 지정 컨트롤에 사용 될 자식을 만듭니다.
@@ -277,8 +251,6 @@ public class CardView : DataView
     <Setter Property="HeightRequest" Value="165"/>
 </Style>
 ```
-
-<a name="4" />
 
 #### <a name="4-create-the-control-layout-template"></a>4. 컨트롤 레이아웃 템플릿 만들기
 
@@ -321,8 +293,6 @@ public class CardView : DataView
 </ControlTemplate>
 ```
 
-<a name="5" />
-
 #### <a name="5-add-the-theme-specific-resources"></a>5. 테마별 리소스 추가
 
 사용자 지정 컨트롤 이므로 리소스 사전을 사용 하는 테마와 일치 하는 리소스를 추가 합니다.
@@ -354,11 +324,9 @@ public class CardView : DataView
             <Color x:Key="iOSCardViewDetailTextColor">#B5B4B9</Color>
 ```
 
-<a name="6" />
-
 #### <a name="6-set-the-controltemplate-for-the-cardview-class"></a>6. CardView 클래스에 대 한 ControlTemplate 설정
 
-마지막으로 [1 단계](#1) 에서 만든 c # 클래스가 요소를 사용 하 여 [4 단계](#4) 에서 정의 된 컨트롤 템플릿을 사용 하는지 확인 합니다. `Style` `Setter`
+마지막으로 [1 단계](#1-dataview-subclass) 에서 만든 c # 클래스가 요소를 사용 하 여 [4 단계](#4-create-the-control-layout-template) 에서 정의 된 컨트롤 템플릿을 사용 하는지 확인 합니다. `Style` `Setter`
 
 ```xml
 <Style TargetType="local:CardView">
@@ -367,8 +335,6 @@ public class CardView : DataView
   <Setter Property="BackgroundColor" Value="{ StaticResource CardViewBackgroundColor }" />
 </Style>
 ```
-
-<a name="7" />
 
 #### <a name="7-add-the-control-to-a-page"></a>7. 페이지에 컨트롤을 추가 합니다.
 

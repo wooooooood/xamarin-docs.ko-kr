@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: c049fb0bd05749db30d99603fb9179e710f815f7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: cbbf8194505e9caa09587471020026d495f9f99b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028361"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569706"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Apple Watch 장치에서 테스트
 
@@ -22,11 +22,11 @@ ms.locfileid: "73028361"
 - [개발 프로 비전 프로필을 만든](#profiles)다음
 - Apple Watch를 [배포 하 고 테스트](#testing) 합니다.
 
-<a name="devices" />
+<a name="devices"></a>
 
-## <a name="devices"></a>장치
+## <a name="devices"></a>디바이스
 
-실제 iPhone 또는 iPad에서 iOS 앱을 테스트 하려면 장치를 개발자 센터에 등록 해야 합니다. 장치 목록은 다음과 같이 표시 됩니다 (새 장치를 추가 하려면 더하기 기호 **+** 클릭).
+실제 iPhone 또는 iPad에서 iOS 앱을 테스트 하려면 장치를 개발자 센터에 등록 해야 합니다. 장치 목록은 다음과 같습니다 **+** . 새 장치를 추가 하려면 더하기 기호를 클릭 합니다.
 
 ![](device-images/devices-sml.png "The device list looks like this")
 
@@ -44,7 +44,7 @@ Watch의 UDID를 알고 있으면 개발자 센터의 장치 목록에 추가 �
 
 다운로드 하 여 다시 설치 하기 위해 기존 프로 비전 프로필을 편집 하는 경우 잊지 마세요.
 
-<a name="profiles" />
+<a name="profiles"></a>
 
 ## <a name="development-provisioning-profiles"></a>개발 프로 비전 프로필
 
@@ -64,7 +64,7 @@ Watch의 UDID를 알고 있으면 개발자 센터의 장치 목록에 추가 �
 
 ![](device-images/options-selectprofile.png "The Provisioning Profile list")
 
-<a name="testing" />
+<a name="testing"></a>
 
 ## <a name="testing-on-a-watch-device"></a>시청 장치에서 테스트
 
@@ -120,7 +120,7 @@ Invalid executable/Application Verification Failed
 
 - 테스트에 사용 되는 개발 프로 비전 프로필에 감시 장치가 포함 되어 있지 않습니다. 또는 프로 비전 프로필에 조사식이 추가 된 후에 다시 다운로드 하 여 다시 설치 하지 않은 것입니다. 지침에 따라 [프로 비전 프로필을 올바르게 구성](#profiles)합니다.
 
-- **IOS 장치 로그** 에 `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3` 포함 된 경우 Watch 앱의 info.plist에 잘못 된 값 **osversion** 값이 있습니다 **.**
+- **IOS 장치 로그** 에이 포함 되어 있으면 `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3` Watch 앱의 **info.plist** 에 잘못 된 값 **osversion** 값이 있습니다.
   **8.2** 이어야 합니다. Xcode 6.3를 설치한 경우에는 해당 소스를 수동으로 편집 하 여 8.2로 설정 해야 할 수 있습니다.
 
 - Watch 앱의 **info.plist** 에는 포함 되지 않은 권한 (예: 앱 그룹)이 잘못 포함 되어 있습니다.

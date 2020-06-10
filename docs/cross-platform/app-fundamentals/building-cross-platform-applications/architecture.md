@@ -6,12 +6,12 @@ ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
 author: davidortinau
 ms.author: daortin
 ms.date: 03/27/2017
-ms.openlocfilehash: 84a06e23ec7125892701762ab5bad7b86a8faf90
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 315defe5017e3744013d1babd35f06deed255946
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030272"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84566333"
 ---
 # <a name="part-2---architecture"></a>2부 - 아키텍처
 
@@ -23,7 +23,7 @@ ms.locfileid: "73030272"
 
 자연 스러운 결과는 실제 또는 별도의 논리적 계층이 있는 추상 엔터티를 사용 하 여 모델링 된 응용 프로그램입니다. 코드를 레이어로 분리 하면 응용 프로그램을 보다 쉽게 이해 하 고 테스트 하 고 유지 관리할 수 있습니다. 각 계층의 코드를 물리적으로 분리 하는 것이 좋습니다 (디렉터리 또는 매우 큰 응용 프로그램을 위한 별도의 프로젝트에 포함). 네임 스페이스를 사용 하 여 논리적으로 분리 하는 것이 좋습니다.
 
- <a name="Typical_Application_Layers" />
+ <a name="Typical_Application_Layers"></a>
 
 ## <a name="typical-application-layers"></a>일반적인 응용 프로그램 계층
 
@@ -38,17 +38,17 @@ ms.locfileid: "73030272"
 
 응용 프로그램에 모든 계층이 반드시 포함 되는 것은 아닙니다. 예를 들어 서비스 액세스 계층이 네트워크 리소스에 액세스 하지 않는 응용 프로그램에 존재 하지 않을 수 있습니다. 매우 간단한 응용 프로그램은 매우 기본적인 작업 이므로 데이터 계층 및 데이터 액세스 계층을 병합할 수 있습니다.
 
- <a name="Common_Mobile_Software_Patterns" />
+ <a name="Common_Mobile_Software_Patterns"></a>
 
 ## <a name="common-mobile-software-patterns"></a>일반적인 모바일 소프트웨어 패턴
 
 패턴은 일반적인 문제에 대 한 되풀이 솔루션을 캡처하기 위한 설정 된 방법입니다. 유지 관리 가능/이해 하기 쉬운 모바일 응용 프로그램을 빌드하는 데 도움이 되는 몇 가지 주요 패턴이 있습니다.
 
 - **Model, View, viewmodel (MVVM)** -모델-뷰-viewmodel 패턴은 xamarin.ios와 같은 데이터 바인딩을 지 원하는 프레임 워크에서 널리 사용 됩니다. Windows Presentation Foundation (WPF) 및 Silverlight와 같은 XAML 사용 Sdk로 mvvm 되었습니다. 여기서 ViewModel은 데이터 바인딩 및 명령을 통해 데이터 (모델)와 사용자 인터페이스 (뷰) 간에 이동 하는 역할을 합니다.
-- **Mvc (모델, 뷰, 컨트롤러)** – 일반적이 고 일반적으로 잘못 해석 되는 패턴입니다. Mvc는 사용자 인터페이스를 빌드할 때 가장 일반적으로 사용 되는 패턴으로, 상호 작용을 처리 하는 (뷰)의 실제 정의를 제공 합니다. Controller)와이를 채우는 데이터 (모델)가 있습니다. 모델은 실제로는 완전히 선택적인 부분 이므로이 패턴을 이해 하는 핵심은 뷰와 컨트롤러에 있습니다. MVC는 iOS 응용 프로그램에 널리 사용 되는 방법입니다.
-- **비즈니스 외관** – 즉, Manager 패턴은 복잡 한 작업에 대 한 단순화 된 진입점을 제공 합니다. 예를 들어 작업 추적 응용 프로그램에 `GetAllTasks()`, `GetTask(taskID)`, `SaveTask (task)` 등의 메서드가 있는 `TaskManager` 클래스가 있을 수 있습니다. `TaskManager` 클래스는 실제로 작업 개체를 저장/검색 하는 내부 작업에 대 한 외관을 제공 합니다.
+- **Mvc (모델, 뷰, 컨트롤러)** – 일반적이 고 일반적으로 잘못 해석 되는 패턴입니다. Mvc는 사용자 인터페이스를 빌드할 때 가장 자주 사용 되 고 UI 화면 (보기)의 실제 정의와 상호 작용 (컨트롤러)을 처리 하는 엔진의 엔진 및이를 채우는 데이터 (모델)를 구분 하기 위해 제공 됩니다. 모델은 실제로는 완전히 선택적인 부분 이므로이 패턴을 이해 하는 핵심은 뷰와 컨트롤러에 있습니다. MVC는 iOS 응용 프로그램에 널리 사용 되는 방법입니다.
+- **비즈니스 외관** – 즉, Manager 패턴은 복잡 한 작업에 대 한 단순화 된 진입점을 제공 합니다. 예를 들어 작업 추적 응용 프로그램에서는,, 등의 `TaskManager` 메서드가 있는 클래스가 있을 수 있습니다 `GetAllTasks()` `GetTask(taskID)` `SaveTask (task)` . `TaskManager`클래스는 실제로 작업 개체를 저장/검색 하는 내부 작업에 대 한 외관을 제공 합니다.
 - **Singleton** – singleton 패턴은 특정 개체의 단일 인스턴스만 존재할 수 있는 방법을 제공 합니다. 예를 들어 모바일 응용 프로그램에서 SQLite를 사용 하는 경우 데이터베이스의 인스턴스를 하나만 사용할 수 있습니다. Singleton 패턴을 사용 하면이를 쉽게 확인할 수 있습니다.
 - **공급자** – Microsoft에서 연결 설명은 하는 패턴으로, SILVERLIGHT, WPF 및 WinForms 응용 프로그램에서 코드를 다시 사용 하는 것을 권장 합니다. 인터페이스 또는 추상 클래스에 대해 공유 코드를 작성할 수 있으며, 코드를 사용할 때 플랫폼별 구체적 구현이 작성 및 전달 됩니다.
-- **Async** – async 키워드와 혼동 하지 않도록 비동기 패턴은 UI 또는 현재 처리를 유지 하지 않고 장기 실행 작업을 실행 해야 하는 경우에 사용 됩니다. 가장 간단한 형태의 비동기 패턴은 현재 스레드가 백그라운드 프로세스의 응답을 계속 처리 하 고 수신 대기 하는 동안 다른 스레드 (또는 작업과 같은 유사한 스레드 추상화)에서 시작 해야 하는 장기 실행 작업을 설명 합니다. 로 이동한 다음 데이터 및 또는 상태가 반환 될 때 UI를 업데이트 합니다.
+- **Async** – async 키워드와 혼동 하지 않도록 비동기 패턴은 UI 또는 현재 처리를 유지 하지 않고 장기 실행 작업을 실행 해야 하는 경우에 사용 됩니다. 가장 간단한 형태의 비동기 패턴은 다른 스레드 (또는 작업과 같은 스레드 추상화)에서 장기 실행 작업을 시작 해야 하는 경우를 설명 하 고, 현재 스레드는 백그라운드 프로세스에서 응답을 처리 하 고 수신 하 고 나 서 데이터 및 또는 상태가 반환 될 때 UI를 업데이트 합니다.
 
 각 패턴은 사례 연구에서 실제 사용을 보여 주는 것 처럼 자세히 검사 됩니다. 위키백과에는 [MVVM](https://en.wikipedia.org/wiki/Model–view–viewmodel), [MVC](https://en.wikipedia.org/wiki/Model–view–controller), [외관](https://en.wikipedia.org/wiki/Facade_pattern), [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern), [전략](https://en.wikipedia.org/wiki/Strategy_pattern) 및 [공급자](https://en.wikipedia.org/wiki/Provider_model) 패턴 (일반적으로 [디자인 패턴](https://en.wikipedia.org/wiki/Design_Patterns) )에 대 한 자세한 설명이 있습니다.

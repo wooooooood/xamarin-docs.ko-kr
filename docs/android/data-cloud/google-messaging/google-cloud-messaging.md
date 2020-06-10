@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2019
-ms.openlocfilehash: e9b0337c9cdcfbd8f738a11c5dffff427df620bc
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: d5231d57e84d57788f318c8ae04e592da57a0f5d
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76723663"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84566739"
 ---
 # <a name="google-cloud-messaging"></a>Google Cloud Messaging
 
@@ -41,15 +41,15 @@ GCM을 사용 하 여 앱 서버는 단일 장치, 장치 그룹 또는 토픽�
 
 GCM은 다음 자격 증명을 사용 하 여 앱 서버와 클라이언트 앱을 식별 하 고 이러한 자격 증명을 사용 하 여 GCM을 통해 메시지 트랜잭션에 권한을 부여 합니다.
 
-- **Api 키 &ndash;** api *키를 사용 하면* 앱 서버에서 Google 서비스에 액세스할 수 있습니다. GCM은이 키를 사용 하 여 앱 서버를 인증 합니다.
+- **API 키** &ndash; *API 키* 를 사용 하면 앱 서버에서 Google 서비스에 액세스할 수 있습니다. GCM은이 키를 사용 하 여 앱 서버를 인증 합니다.
     GCM 서비스를 사용 하려면 먼저 *프로젝트*를 만들어 [Google 개발자 콘솔](https://console.developers.google.com/) 에서 API 키를 가져와야 합니다. API 키를 안전 하 게 유지 해야 합니다. API 키를 보호 하는 방법에 대 한 자세한 내용은 [api 키를 안전 하 게 사용 하기 위한 모범 사례](https://support.google.com/cloud/answer/6310037?hl=en)를 참조 하세요.
 
-- 보낸 **사람 id** &ndash; *발신자 id* 는 클라이언트 앱에 대 한 앱 서버 권한을 부여 하 &ndash; 클라이언트 앱에 메시지를 보낼 수 있는 앱 서버를 식별 하는 고유 번호입니다.
+- **보낸 사람 ID** &ndash; *보낸 사람 ID* 는 클라이언트 앱에 대 한 앱 서버 권한을 부여 합니다 &ndash; . 클라이언트 앱에 메시지를 보낼 수 있는 앱 서버를 식별 하는 고유 번호입니다.
     보낸 사람 ID는 프로젝트 번호 이기도 합니다. 프로젝트를 등록할 때 Google 개발자 콘솔에서 보낸 사람 ID를 가져옵니다.
 
-- **등록 토큰 &ndash;** 등록 *토큰* 은 지정 된 장치에서 클라이언트 앱의 GCM id입니다. 등록 토큰은 &ndash; 런타임에 생성 됩니다. 앱은 장치에서 실행 되는 동안 GCM에 처음 등록할 때 등록 토큰을 받습니다. 등록 토큰은 해당 특정 장치에서 실행 되는 클라이언트 앱의 인스턴스에 게 GCM에서 메시지를 수신 하는 권한을 부여 합니다.
+- **등록 토큰** &ndash; *등록 토큰* 은 지정 된 장치에서 클라이언트 앱의 GCM id입니다. 등록 토큰은 런타임에 생성 됩니다 &ndash; . 앱은 장치에서 실행 되는 동안 GCM에 처음 등록할 때 등록 토큰을 받습니다. 등록 토큰은 해당 특정 장치에서 실행 되는 클라이언트 앱의 인스턴스에 게 GCM에서 메시지를 수신 하는 권한을 부여 합니다.
 
-- **응용 프로그램 id** &ndash; GCM에서 메시지를 수신 하도록 등록 하는 클라이언트 앱 (지정 된 장치와 무관)의 id입니다. Android에서 응용 프로그램 ID는 `com.xamarin.gcmexample`와 같은 **Androidmanifest**에 기록 된 패키지 이름입니다.
+- **응용 프로그램 ID** &ndash; GCM에서 메시지를 수신 하도록 등록 하는 클라이언트 앱 (지정 된 장치와 무관)의 id입니다. Android에서 응용 프로그램 ID는와 같이 **Androidmanifest**에 기록 된 패키지 `com.xamarin.gcmexample` 이름입니다.
 
 [Google Cloud Messaging 설정](#settingup) (이 가이드의 뒷부분)에서는 프로젝트를 만들고 이러한 자격 증명을 생성 하는 방법에 대 한 자세한 지침을 제공 합니다.
 
@@ -76,7 +76,7 @@ GCM은 다음 자격 증명을 사용 하 여 앱 서버와 클라이언트 앱�
 
 앱 서버는 클라이언트 앱에 다운스트림 메시지를 보낼 때 다음 다이어그램에 설명 된 단계를 따릅니다.
 
-[다운스트림 메시징 저장소 및 전달 다이어그램 ![](google-cloud-messaging-images/03-downstream-sml.png)](google-cloud-messaging-images/03-downstream.png#lightbox)
+[![다운스트림 메시징 저장소 및 전달 다이어그램](google-cloud-messaging-images/03-downstream-sml.png)](google-cloud-messaging-images/03-downstream.png#lightbox)
 
 1. 앱 서버는 GCM로 메시지를 보냅니다.
 
@@ -116,7 +116,7 @@ Android에서 다운스트림 GCM 메시지를 수신 하는 방법에 대 한 �
 
 Google의 [업스트림 메시지](https://firebase.google.com/docs/cloud-messaging/xmpp-server-ref#upstream) 는 JSON으로 인코딩된 메시지를 구조화 하 고 GOOGLE의 Xmpp 기반 클라우드 연결 서버를 실행 하는 앱 서버에 보내는 방법을 설명 합니다.
 
-<a name="settingup" />
+<a name="settingup"></a>
 
 ## <a name="setting-up-google-cloud-messaging"></a>Google Cloud Messaging 설정
 
@@ -126,38 +126,38 @@ Google의 [업스트림 메시지](https://firebase.google.com/docs/cloud-messag
 
 1. Google 계정 (예: gmail 주소)으로 [Google 개발자 콘솔](https://developers.google.com/mobile/add?platform=android) 에 로그인 하 고 새 프로젝트를 만듭니다. 기존 프로젝트가 있는 경우 GCM을 사용 하도록 설정할 프로젝트를 선택 합니다. 다음 예제에서는 **XamarinGCM** 이라는 새 프로젝트를 만듭니다.
 
-    [XamarinGCM 프로젝트를 만드는 ![](google-cloud-messaging-images/05-create-gcm-app-sml.png)](google-cloud-messaging-images/05-create-gcm-app.png#lightbox)
+    [![XamarinGCM 프로젝트 만들기](google-cloud-messaging-images/05-create-gcm-app-sml.png)](google-cloud-messaging-images/05-create-gcm-app.png#lightbox)
 
 2. 다음으로 앱에 대 한 패키지 이름 (이 예제에서는 패키지 이름은 **.com. xamarin.ios**)을 입력 하 고 **계속을 클릭 하 여 서비스를 선택 하 고 구성**합니다.
 
-    [패키지 이름을 입력 ![](google-cloud-messaging-images/06-package-name-sml.png)](google-cloud-messaging-images/06-package-name.png#lightbox)
+    [![패키지 이름 입력](google-cloud-messaging-images/06-package-name-sml.png)](google-cloud-messaging-images/06-package-name.png#lightbox)
 
     이 패키지 이름은 앱에 대 한 응용 프로그램 ID 이기도 합니다.
 
 3. **서비스 선택 및 구성** 섹션에는 앱에 추가할 수 있는 Google 서비스가 나열 됩니다. **클라우드 메시징**을 클릭 합니다.
 
-    [클라우드 메시징 ![선택](google-cloud-messaging-images/07-choose-gcm-service-sml.png)](google-cloud-messaging-images/07-choose-gcm-service.png#lightbox)
+    [![클라우드 메시징 선택](google-cloud-messaging-images/07-choose-gcm-service-sml.png)](google-cloud-messaging-images/07-choose-gcm-service.png#lightbox)
 
 4. 다음으로 **GOOGLE CLOUD MESSAGING 사용**을 클릭 합니다.
 
-    [Google Cloud Messaging 사용 ![](google-cloud-messaging-images/08-enable-gcm-sml.png)](google-cloud-messaging-images/08-enable-gcm.png#lightbox)
+    [![Google Cloud Messaging 사용](google-cloud-messaging-images/08-enable-gcm-sml.png)](google-cloud-messaging-images/08-enable-gcm.png#lightbox)
 
 5. 앱에 대 한 **서버 API 키** 및 **보낸 사람 ID** 가 생성 됩니다. 이러한 값을 기록 하 고 **닫기**를 클릭 합니다.
 
-    [표시 된 ![서버 API 키 및 보낸 사람 ID](google-cloud-messaging-images/09-get-api-key-and-id-sml.png)](google-cloud-messaging-images/09-get-api-key-and-id.png#lightbox)
+    [![표시 된 서버 API 키 및 보낸 사람 ID](google-cloud-messaging-images/09-get-api-key-and-id-sml.png)](google-cloud-messaging-images/09-get-api-key-and-id.png#lightbox)
 
-    API 키를 보호 하는 것은 공개적으로 사용 하기에 적합 하지 &ndash;. API 키가 손상 되 면 권한이 없는 서버에서 클라이언트 응용 프로그램에 메시지를 게시할 수 있습니다.
+    &ndash;공용으로 사용 되지 않는 API 키를 보호 합니다. API 키가 손상 되 면 권한이 없는 서버에서 클라이언트 응용 프로그램에 메시지를 게시할 수 있습니다.
     [Api 키를 안전 하 게 사용 하](https://support.google.com/cloud/answer/6310037?hl=en) 는 모범 사례는 api 키를 보호 하는 데 유용한 지침을 제공 합니다.
 
 ### <a name="view-your-project-settings"></a>프로젝트 설정 보기
 
 언제 든 지 [Google Cloud Console](https://console.cloud.google.com/) 에 로그인 하 고 프로젝트를 선택 하 여 프로젝트 설정을 볼 수 있습니다. 예를 들어 페이지 맨 위에 있는 풀 다운 메뉴에서 프로젝트를 선택 하 여 **보낸 사람 ID** 를 볼 수 있습니다 (이 예제에서는 프로젝트를 **XamarinGCM**라고 함). 보낸 사람 ID는 다음 스크린샷에 표시 된 것과 같은 프로젝트 번호입니다. 발신자 ID는 **9349932736**입니다.
 
-[보낸 사람 ID를 볼 ![](google-cloud-messaging-images/10-view-server-id-sml.png)](google-cloud-messaging-images/10-view-server-id.png#lightbox)
+[![보낸 사람 ID 보기](google-cloud-messaging-images/10-view-server-id-sml.png)](google-cloud-messaging-images/10-view-server-id.png#lightbox)
 
 **Api 키**를 보려면 **api 관리자** 를 클릭 한 다음 **자격 증명**을 클릭 합니다.
 
-[API 키 ![보기](google-cloud-messaging-images/11-view-credentials-sml.png)](google-cloud-messaging-images/11-view-credentials.png#lightbox)
+[![API 키 보기](google-cloud-messaging-images/11-view-credentials-sml.png)](google-cloud-messaging-images/11-view-credentials.png#lightbox)
 
 ## <a name="for-further-reading"></a>추가 정보
 

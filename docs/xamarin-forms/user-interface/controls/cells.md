@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms셀
-description: Xamarin.Forms셀은 Listview 및 TableViews에 추가할 수 있습니다. 이 문서에서는에 포함 된 셀을 나열 합니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: bd1a2398787fe39c0b4cbd08ccd5c5793775d5cf
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137282"
+title: " Xamarin.Forms 셀" 설명: " Xamarin.Forms 셀은 Listview 및 tableviews에 추가할 수 있습니다. 이 문서에는에 포함 된 셀이 나열 되어 Xamarin.Forms 있습니다.
+assetid: 77DA0C89-35D6-4C09-A072-3ADE53FD56CF: xamarin-forms author: davidbritch: dabritch:: 01/12/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-cells"></a>Xamarin.Forms셀
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
@@ -31,8 +17,6 @@ _Listview 및 TableViews에 Xamarin 형식의 셀을 추가할 수 있습니다.
 
 Xamarin.Forms에서는 다음 셀 형식을 지원 합니다.
 
-<a name="textCell" />
-
 ### <a name="textcell"></a>TextCell
 
 |     |     |
@@ -44,7 +28,7 @@ Xamarin.Forms에서는 다음 셀 형식을 지원 합니다.
 
 |     |     |
 | --- | --- |
-| 는 [`ImageCell`](xref:Xamarin.Forms.ImageCell) 와 동일한 정보를 표시 [`TextCell`](#textCell) 하지만 속성으로 설정 하는 비트맵을 포함 합니다 [`Source`](xref:Xamarin.Forms.Image.Source) .<br /><br />[API 설명서](xref:Xamarin.Forms.ImageCell)  /  [가이드](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell) | [![ImageCell 예제](cells-images/ImageCell.png "ImageCell 예제")](cells-images/ImageCell-Large.png#lightbox "ImageCell 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageCellDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageCellDemoPage.xaml) |
+| 는 [`ImageCell`](xref:Xamarin.Forms.ImageCell) 와 동일한 정보를 표시 [`TextCell`](#textcell) 하지만 속성으로 설정 하는 비트맵을 포함 합니다 [`Source`](xref:Xamarin.Forms.Image.Source) .<br /><br />[API 설명서](xref:Xamarin.Forms.ImageCell)  /  [가이드](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell) | [![ImageCell 예제](cells-images/ImageCell.png "ImageCell 예제")](cells-images/ImageCell-Large.png#lightbox "ImageCell 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageCellDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageCellDemoPage.xaml) |
 |     |     |
 
 ### <a name="switchcell"></a>SwitchCell
@@ -64,5 +48,5 @@ Xamarin.Forms에서는 다음 셀 형식을 지원 합니다.
 ## <a name="related-links"></a>관련 링크
 
 - [Xamarin.Forms양식 갤러리 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
-- [Xamarin.Forms표본의](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Xamarin.Forms 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Xamarin.FormsAPI 설명서](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

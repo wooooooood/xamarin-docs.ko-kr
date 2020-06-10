@@ -1,29 +1,13 @@
 ---
-title: 글꼴Xamarin.Forms
-description: 이 문서에서는 응용 프로그램에 텍스트를 표시 하는 컨트롤에 대 한 글꼴 정보를 지정 하는 방법을 설명 합니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3201340c8056fb1a7e36240eb329df14bd960ca3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136216"
+제목: "의 글꼴 Xamarin.Forms " 설명: "이 문서에서는 응용 프로그램에 텍스트를 표시 하는 컨트롤에 대 한 글꼴 정보를 지정 하는 방법을 설명 Xamarin.Forms 합니다."
+assetid: 49DD2249-C575-41AE-AE06-08F890FD6031: xamarin-forms author: davidbritch: dabritch:: 04/01/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="fonts-in-xamarinforms"></a>글꼴Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
 
-이 문서에서는 Xamarin.Forms 를 사용 하 여 텍스트를 표시 하는 컨트롤의 글꼴 특성 (두께 및 크기 포함)을 지정 하는 방법을 설명 합니다. 글꼴 정보는 [코드에서 지정](#Setting_Font_in_Code) 하거나 [XAML에](#Setting_Font_in_Xaml)지정할 수 있습니다. ' [사용자 지정 글꼴](#use-a-custom-font)을 사용 하 고 [글꼴 아이콘을 표시할](#display-font-icons)수도 있습니다.
-
-<a name="Setting_Font_in_Code" />
+이 문서에서는 Xamarin.Forms 를 사용 하 여 텍스트를 표시 하는 컨트롤의 글꼴 특성 (두께 및 크기 포함)을 지정 하는 방법을 설명 합니다. 글꼴 정보는 [코드에서 지정](#set-the-font-in-code) 하거나 [XAML에](#set-the-font-in-xaml)지정할 수 있습니다. ' [사용자 지정 글꼴](#use-a-custom-font)을 사용 하 고 [글꼴 아이콘을 표시할](#display-font-icons)수도 있습니다.
 
 ## <a name="set-the-font-in-code"></a>코드에 글꼴을 설정 합니다.
 
@@ -44,8 +28,6 @@ var about = new Label
 };
 ```
 
-<a name="FontSize" />
-
 ### <a name="font-size"></a>글꼴 크기
 
 `FontSize`예를 들어 속성을 double 값으로 설정할 수 있습니다.
@@ -57,8 +39,6 @@ label.FontSize = 24;
 크기 값은 장치 독립적 단위로 측정 됩니다. 자세한 내용은 [측정 단위](~/xamarin-forms/user-interface/controls/common-properties.md#units-of-measurement)를 참조 하세요.
 
 Xamarin.Forms는 [`NamedSize`](xref:Xamarin.Forms.NamedSize) 특정 글꼴 크기를 나타내는 열거형의 필드도 정의 합니다. 명명 된 글꼴 크기에 대 한 자세한 내용은 [명명 된 글꼴 크기](#named-font-sizes)를 참조 하십시오.
-
-<a name="FontAttributes" />
 
 ### <a name="font-attributes"></a>글꼴 특성
 
@@ -86,8 +66,6 @@ label.FontSize = Device.RuntimePlatform == Device.iOS ? 24 :
 ```
 
 IOS에 대 한 올바른 글꼴 정보는 [iosfonts.com](http://iosfonts.com)입니다.
-
-<a name="Setting_Font_in_Xaml" />
 
 ## <a name="set-the-font-in-xaml"></a>XAML에서 글꼴 설정
 
