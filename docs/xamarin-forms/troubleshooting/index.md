@@ -1,23 +1,7 @@
 ---
-title: ''
-description: ''
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 237dfd637d5456636afd19ea0175cb388773d273
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135917"
+제목: "문제 해결" 설명: "일반적인 오류 조건 및 해결 방법" ms. 항목: 문제 해결: assetid: 63291951-7375-4CBF-BCC3-2E4AD157A2C8: xamarin-forms author: davidbritch ms. author: dabritch. 날짜: 04/25/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="troubleshooting"></a>문제 해결
 
 _일반적인 오류 조건 및 해결 방법_

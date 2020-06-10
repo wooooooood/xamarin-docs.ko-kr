@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c1939c30cbefdbf8d6546761a8c6ac7199bfff62
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139687"
+제목: "분리 가능한 혼합 모드" 설명: "빨강, 녹색 및 파랑 색을 변경 하려면 분리 가능한 blend 모드를 사용 합니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 66D1A537-A247-484E-B5B9-FBCB7838FBE9 author: davidbritch: dabritch: 08/23/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="the-separable-blend-modes"></a>분리 가능 블렌드 모드
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -150,46 +136,21 @@ public partial class LightenAndDarkenPage : ContentPage
 
 다음 표에서는 모든 분리 가능한 blend 모드를 보여 줍니다. 두 번째 열은 변경 내용을 생성 하지 않는 원본 색을 표시 합니다.
 
-| Blend 모드   | 변경 내용 없음 | 작업(Operation) |
-| ---
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------- | ---제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | ---제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | | `Plus`       | 검정 | 색 추가: Sc + Dc | | `Modulate`   | 흰색 | 색을 곱하여 어둡게: Sc · Dc | | `Screen`     | 검정 | 보색의 제품 보완: Sc + Dc &ndash; Sc · Dc | | `Overlay`    | 회색 | 역 `HardLight` | | `Darken`     | 흰색 | 최소 색: min (Sc, Dc) | | `Lighten`    | 검정 | 최대 색: 최대 (Sc, Dc) | | `ColorDodge` | 검정 | 소스를 기반으로 하는 대상 밝게 설정 | | `ColorBurn`  | 흰색 | 소스를 기반으로 하는 어둡게 대상 | | `HardLight`  | 회색 | 강한 스포트라이트 효과와 유사 | | `SoftLight`  | 회색 | 소프트 스포트라이트 효과와 유사 | | `Difference` | 검정 | 더 가늘게: Abs (Dc &ndash; Sc) | | `Exclusion`  | 검정 | 와 비슷하지만 `Difference` 대비가 낮은 | | `Multiply`   | 흰색 | 색을 곱하여 어둡게: Sc · Dc |
+| Blend 모드   | 변경 내용 없음 | 연산 |
+| ------------ | --------- | --------- |
+| `Plus`       | 검정     | 색 추가: Sc + Dc |
+| `Modulate`   | 흰색     | 색을 곱하여 어둡게: Sc · Dc | 
+| `Screen`     | 검정     | 보색의 제품 보완: Sc + Dc &ndash; Sc · Dc |
+| `Overlay`    | 회색      | 역`HardLight` |
+| `Darken`     | 흰색     | 최소 색: min (Sc, Dc) |
+| `Lighten`    | 검정     | 최대 색: 최대 (Sc, Dc) |
+| `ColorDodge` | 검정     | 소스를 기반으로 하는 대상 밝게 설정 |
+| `ColorBurn`  | 흰색     | 소스를 기반으로 하는 어둡게 대상 | 
+| `HardLight`  | 회색      | 강한 스포트라이트의 효과와 비슷합니다. |
+| `SoftLight`  | 회색      | 소프트 스포트라이트의 효과와 비슷합니다. | 
+| `Difference` | 검정     | 더 가늘게: Abs (Dc Sc)에서 더 가늘게 빼기 &ndash; | 
+| `Exclusion`  | 검정     | 와 비슷하지만 `Difference` 대비가 낮습니다. |
+| `Multiply`   | 흰색     | 색을 곱하여 어둡게: Sc · Dc |
 
 이러한 두 소스의 표기법이 동일 하지는 않지만 W3C [**합성 및 혼합 수준 1**](https://www.w3.org/TR/compositing-1/) 사양과 지 수 ia [**Skblendmode 참조**](https://skia.org/user/api/SkBlendMode_Reference)에서 더 자세한 알고리즘을 찾을 수 있습니다. `Plus`일반적으로 Porter-Duff blend 모드로 간주 되며 `Modulate` W3C 사양의 일부가 아닙니다.
 

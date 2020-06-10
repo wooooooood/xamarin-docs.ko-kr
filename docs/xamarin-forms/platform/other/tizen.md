@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 873e243be3b90023ac8f58c2a29df89806b22658
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139518"
+제목: "Tizen .NET" 설명: "Tizen .NET을 사용 하면 Tv, 착용 식 장치용, 모바일 장치 및 기타 IoT 장치를 포함 하 여 Samsung 장치에서 실행 되는 Tizen 운영 체제용 응용 프로그램을 개발할 수 있습니다."
+assetid: 5A22A354-A4DD-480D-A1BB-6D0C38592E55: xamarin-forms author: davidbritch: dabritch:: 09/26/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="tizen-net"></a>Tizen .NET
 
 _Tizen .NET을 사용 하면 Tizen 응용 프로그램을 개발 하 여 Tv, 착용 식 장치용, 모바일 장치 및 기타 IoT 장치를 비롯 한 Samsung 장치에서 실행할 수 있습니다._
@@ -29,7 +15,7 @@ Tizen .NET 응용 프로그램 개발을 시작 하려면 먼저 개발 환경�
 
 Tizen .NET 프로젝트를 기존 솔루션에 추가 하는 방법에 대 한 자세한 내용은 Xamarin.Forms [첫 번째 Tizen .Net 응용 프로그램 만들기](https://developer.tizen.org/development/training/.net-application/creating-your-first-tizen-.net-application)를 참조 하세요.
 
-## <a name="documentation"></a>문서
+## <a name="documentation"></a>설명서
 
 - [ Xamarin.Forms ](~/xamarin-forms/index.yml) &ndash; c # 및를 사용 하 여 플랫폼 간 응용 프로그램을 빌드하는 방법에 대 한 설명서 Xamarin.Forms 입니다.
 - [**developer.tizen.org**](https://developer.tizen.org/development) &ndash; tizen 응용 프로그램을 빌드 및 배포 하는 데 도움이 되는 설명서와 비디오를 developer.tizen.org.

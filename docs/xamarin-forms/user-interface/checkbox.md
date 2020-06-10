@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms상자
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8399dde2e4e2c9fb53b38fca2923eb0e3bfc6ce3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136476"
+제목: " Xamarin.Forms checkbox" description: " Xamarin.Forms 확인란은 선택 하거나 비워 둘 수 있는 단추의 유형입니다. 확인란을 선택 하면 설정 된 것으로 간주 됩니다. 확인란이 비어 있으면 해제 된 것으로 간주 됩니다. "
+assetid: B8B9268B-BCB8-42B9-B08C-C0F22C137238: xamarin-forms author: davidbritch: dabritch:: 06/11/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-checkbox"></a>Xamarin.Forms상자
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
@@ -161,10 +147,10 @@ checkBox.CheckedChanged += (sender, e) =>
 
 이 예제에서는를 `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) 선택 하면 해당 `CheckBox` `Color` 속성이 녹색으로 설정 되도록 지정 합니다. 는 `Normal` `VisualState` `CheckBox` 가 정상 상태 이면 해당 `Color` 속성은 red로 설정 되도록 지정 합니다. 따라서가 비어 있는 경우에는 `CheckBox` 빨간색이 고 확인 되 면 녹색이 면 전체 효과가 있습니다.
 
-시각적 상태에 대 한 자세한 내용은 [ Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)를 참조 하세요.
+시각적 개체 상태에 대한 자세한 내용은 [Xamarin.Forms 시각적 개체 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)를 참조하세요.
 
 ## <a name="related-links"></a>관련 링크
 
 - [확인란 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
-- [Xamarin.FormsInstead](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Xamarin.Forms시각적 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

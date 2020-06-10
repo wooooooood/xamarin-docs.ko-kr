@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Xamarin.Forms경고, 작업 시트 및 프롬프트와 같은 세 가지 팝업 사용자 인터페이스 요소를 제공 합니다. 이 문서에서는 경고, 작업 시트 및 프롬프트 Api를 사용 하 여 사용자에 게 간단한 질문을 하 고, 작업을 안내 하 고, 프롬프트를 표시 하는 대화 상자를 표시 하는 방법을 보여줍니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a7ddd9134b7214b84a883e171d7b0cadaba3390b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136320"
+제목: "팝업 표시" 설명: "은 Xamarin.Forms 경고, 작업 시트 및 프롬프트와 같은 세 가지 팝업 사용자 인터페이스 요소를 제공 합니다. 이 문서에서는 경고, 작업 시트 및 프롬프트 Api를 사용 하 여 사용자에 게 간단한 질문을 하 고, 작업을 안내 하 고, 프롬프트를 표시 하는 대화 상자를 표시 하는 방법을 보여 줍니다.
+assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E: xamarin-forms author: davidbritch: dabritch:: 03/10/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="display-pop-ups"></a>팝업 표시
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)

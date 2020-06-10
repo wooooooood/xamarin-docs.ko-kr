@@ -1,9 +1,6 @@
 ---
-제목: ' ' 설명: '의 xaml 핫 다시 로드는 Xamarin.Forms 실행 중인 응용 프로그램에서 즉시 xaml 파일에 대 한 변경 내용을 다시 로드 하므로 Xamarin.Forms 모든 xaml 변경 후에 프로젝트를 빌드할 필요가 없습니다. '
-ms. prod: assetid: ms. 기술: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+제목: "xaml 핫 다시 로드 Xamarin.Forms " 설명: "실행 중인 응용 프로그램에서 xaml 파일에 대 한 변경 내용을 즉시 다시 로드 하므로 Xamarin.Forms 모든 xaml 변경 후 프로젝트를 빌드할 필요가 없습니다."
+assetid: E220F054-32EE-424C-A7E5-6156BE271519: xamarin-forms author: maddyleger1: maleger:: 03/14/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
 
 # <a name="xaml-hot-reload-for-xamarinforms"></a>XAML 핫 재 로드Xamarin.Forms
@@ -18,54 +15,10 @@ XAML 핫 다시 로드는 기존 워크플로에 연결 하 여 생산성을 높
 ## <a name="system-requirements"></a>시스템 요구 사항
 
 | IDE/프레임 워크 | 버전 필요 |
-|---
-제목: ' ' 설명: '의 xaml 핫 다시 로드는 Xamarin.Forms 실행 중인 응용 프로그램에서 즉시 xaml 파일에 대 한 변경 내용을 다시 로드 하므로 Xamarin.Forms 모든 xaml 변경 후에 프로젝트를 빌드할 필요가 없습니다. '
-ms. prod: assetid: ms. 기술: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
----|---제목: ' ' 설명: '에 대 한 XAML 핫 다시 로드를 Xamarin.Forms 실행 중인 응용 프로그램에서 즉시 xaml 파일에 대 한 변경 내용을 다시 로드 하므로 Xamarin.Forms 모든 xaml 변경 후 프로젝트를 빌드할 필요가 없습니다. '
-ms. prod: assetid: ms. 기술: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: ' ' 설명: '의 xaml 핫 다시 로드는 Xamarin.Forms 실행 중인 응용 프로그램에서 즉시 xaml 파일에 대 한 변경 내용을 다시 로드 하므로 Xamarin.Forms 모든 xaml 변경 후에 프로젝트를 빌드할 필요가 없습니다. '
-ms. prod: assetid: ms. 기술: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: ' ' 설명: '의 xaml 핫 다시 로드는 Xamarin.Forms 실행 중인 응용 프로그램에서 즉시 xaml 파일에 대 한 변경 내용을 다시 로드 하므로 Xamarin.Forms 모든 xaml 변경 후에 프로젝트를 빌드할 필요가 없습니다. '
-ms. prod: assetid: ms. 기술: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: ' ' 설명: '의 xaml 핫 다시 로드는 Xamarin.Forms 실행 중인 응용 프로그램에서 즉시 xaml 파일에 대 한 변경 내용을 다시 로드 하므로 Xamarin.Forms 모든 xaml 변경 후에 프로젝트를 빌드할 필요가 없습니다. '
-ms. prod: assetid: ms. 기술: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: ' ' 설명: '의 xaml 핫 다시 로드는 Xamarin.Forms 실행 중인 응용 프로그램에서 즉시 xaml 파일에 대 한 변경 내용을 다시 로드 하므로 Xamarin.Forms 모든 xaml 변경 후에 프로젝트를 빌드할 필요가 없습니다. '
-ms. prod: assetid: ms. 기술: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: ' ' 설명: '의 xaml 핫 다시 로드는 Xamarin.Forms 실행 중인 응용 프로그램에서 즉시 xaml 파일에 대 한 변경 내용을 다시 로드 하므로 Xamarin.Forms 모든 xaml 변경 후에 프로젝트를 빌드할 필요가 없습니다. '
-ms. prod: assetid: ms. 기술: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: ' ' 설명: '의 xaml 핫 다시 로드는 Xamarin.Forms 실행 중인 응용 프로그램에서 즉시 xaml 파일에 대 한 변경 내용을 다시 로드 하므로 Xamarin.Forms 모든 xaml 변경 후에 프로젝트를 빌드할 필요가 없습니다. '
-ms. prod: assetid: ms. 기술: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
----------| | Visual Studio 2019 | Mac 용 Visual Studio 2019 16.4 이상 | 8.4 이상 Xamarin.Forms | 4.1 이상
+|------|------------------|
+|Visual Studio 2019 | 16.4 이상
+Mac용 Visual Studio 2019 | 8.4 이상
+Xamarin.Forms | 4.1 이상
 
 ## <a name="enable-xaml-hot-reload-for-xamarinforms"></a>XAML 핫 다시 로드 사용Xamarin.Forms
 

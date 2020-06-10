@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCarouselView 스크롤
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 462948905f40679e2b931d4aa0039308c64a0a8f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136500"
+제목: " Xamarin.Forms CarouselView 스크롤" 설명: "사용자가 스크롤을 시작 하려면 항목이 완전히 표시 되도록 스크롤의 끝 위치를 제어할 수 있습니다. 또한 CarouselView는 프로그래밍 방식으로 항목을 뷰로 스크롤 하는 두 개의 ScrollTo 메서드를 정의 합니다. "
+assetid: 92D7B618-07FA-4343-9D0F-212525E92C39: xamarin-forms author: davidbritch: dabritch:: 01/28/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-carouselview-scrolling"></a>Xamarin.FormsCarouselView 스크롤
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

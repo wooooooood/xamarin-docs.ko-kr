@@ -1,23 +1,7 @@
 ---
-title: ''
-description: Xamarin.Forms이제 WPF 플랫폼에 대 한 미리 보기를 지원 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: bbb9ea950c9f1daa1b5ee4762527d689f3cdd483
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139531"
+제목: "WPF Platform Setup" description: "에는 Xamarin.Forms 이제 wpf 플랫폼" ms. prod: assetid: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E에 대 한 미리 보기 지원이 있습니다. 기술: xamarin-forms m. custom: xamu-video author: davidbritch: dabritch: ms. 날짜: 04/09/2020: Xamarin.Forms Xamarin.Essentials
 ---
+
 # <a name="wpf-platform-setup"></a>WPF 플랫폼 설정
 
 ![미리 보기](~/media/shared/preview.png)
@@ -151,7 +135,7 @@ WPF **mainwindow.xaml** 파일에서 창의 초기 크기를 조정할 수 있�
 Title="BoxViewClock" Height="450" Width="800"
 ```
 
-## <a name="issues"></a>Issues
+## <a name="issues"></a>문제
 
 이는 미리 보기 이므로 프로덕션이 준비 되지 않은 것으로 간주 됩니다. 에 대 한 일부 NuGet 패키지 Xamarin.Forms 는 WPF에 대해 준비 되지 않으며 일부 기능은 완전히 작동 하지 않을 수 있습니다.
 

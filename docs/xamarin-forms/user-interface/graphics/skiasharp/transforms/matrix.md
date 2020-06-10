@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e8d11add988828fa4e26d3f6728dd0b4319b3630
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133304"
+제목: "SkiaSharp의 매트릭스 변환" 설명: "이 문서에서는 다양 한 변환 매트릭스를 사용 하 여 SkiaSharp 변환에 대해 심층적으로 다이브 샘플 코드를 사용 하 여이를 보여 줍니다."
+ms. prod: xamarin ms. 기술: skiasharp assetid: 9EEE6A0-F0BF-4471-A9EF-E0D6C5954AE4 author: davidbritch: dabritch:: 04/12/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="matrix-transforms-in-skiasharp"></a>SkiaSharp의 매트릭스 변환
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

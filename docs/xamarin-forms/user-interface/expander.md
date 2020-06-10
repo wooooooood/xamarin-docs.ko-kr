@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms기호
-description: Xamarin.Forms확장기 컨트롤은 모든 콘텐츠를 호스트 하는 확장 가능한 컨테이너를 제공 합니다. 확장 헤더를 누르면 콘텐츠가 표시 되거나 숨겨집니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5e9afa0f6d27003891963af5715d5721e3129306
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129573"
+제목: " Xamarin.Forms 확장기" 설명: " Xamarin.Forms 확장기 컨트롤은 콘텐츠를 호스트 하는 확장 가능한 컨테이너를 제공 합니다. 확장 헤더를 누르면 콘텐츠가 표시 되거나 숨겨집니다. "
+assetid: 381DCB55-522D-4414-B45B-E8DD70AA9985: xamarin-forms author: davidbritch: dabritch: ms. date: 04/15/2020 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-expander"></a>Xamarin.Forms기호
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
@@ -376,5 +362,5 @@ void OnLabelTapped(object sender, EventArgs e)
 
 - [확장기 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
 - [Xamarin.Forms감속/가속 함수](~/xamarin-forms/user-interface/animation/easing.md)
-- [Xamarin.FormsInstead](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.Forms바인딩 가능한 레이아웃](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

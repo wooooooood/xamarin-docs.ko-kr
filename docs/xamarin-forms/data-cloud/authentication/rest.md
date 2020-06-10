@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d62e533d127294c77c0779c20fd9c78ef2231200
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135722"
+제목: "RESTful 웹 서비스 인증" 설명: "기본 인증은 올바른 자격 증명이 있는 클라이언트에만 리소스에 대 한 액세스를 제공 합니다. 이 문서에서는 기본 인증을 사용 하 여 RESTful 웹 서비스 리소스에 대 한 액세스를 보호 하는 방법을 설명 합니다. "
+assetid: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1: xamarin-forms author: davidbritch: dabritch:: 01/22/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="authenticate-a-restful-web-service"></a>RESTful 웹 서비스 인증
 
 _HTTP에서는 여러 인증 메커니즘을 사용 하 여 리소스에 대 한 액세스를 제어할 수 있습니다. 기본 인증은 올바른 자격 증명이 있는 클라이언트에만 리소스에 대 한 액세스를 제공 합니다. 이 문서에서는 기본 인증을 사용 하 여 RESTful 웹 서비스 리소스에 대 한 액세스를 보호 하는 방법을 보여 줍니다._
@@ -80,7 +66,7 @@ public class RestService : IRestService
 
 ## <a name="processing-the-authorization-header-server-side"></a>권한 부여 헤더 서버 쪽 처리
 
-REST 서비스는 각 작업을 특성으로 데코레이팅 해야 합니다 `[BasicAuthentication]` . 이 특성은 헤더를 구문 분석 하 고 base64 인코딩 자격 증명이 유효한 지를 확인 하는 데 사용 되며,이를 web.config `Authorization` 에 저장 된 값과 비교 하 여 확인 *합니다*. 이 접근 방식은 샘플 서비스에 적합 하지만 공용 웹 서비스를 위해 확장 해야 합니다.
+REST 서비스는 각 작업을 특성으로 데코레이팅 해야 합니다 `[BasicAuthentication]` . 이 특성은 헤더를 구문 분석 하 고 b a s e `Authorization` 64로 인코딩된 자격 증명이 *Web.config*에 저장 된 값과 비교 하 여 유효한 지 확인 하는 데 사용 됩니다. 이 접근 방식은 샘플 서비스에 적합 하지만 공용 웹 서비스를 위해 확장 해야 합니다.
 
 IIS에서 사용 하는 기본 인증 모듈에서 사용자는 Windows 자격 증명을 사용 하 여 인증 됩니다. 따라서 사용자에 게는 서버 도메인에 대 한 계정이 있어야 합니다. 그러나 사용자 지정 인증을 허용 하도록 기본 인증 모델을 구성할 수 있습니다 .이 경우 사용자 계정은 데이터베이스와 같은 외부 원본에 대해 인증 됩니다. 자세한 내용은 ASP.NET 웹 사이트에서 [ASP.NET Web API의 기본 인증](https://www.asp.net/web-api/overview/security/basic-authentication) 을 참조 하세요.
 

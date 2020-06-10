@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7269b0617be7199c365f350fc26ecd42256e28f3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84128455"
+제목: "Android의 웹 보기 혼합 콘텐츠" 설명: "플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 API 21 이상을 대상으로 하는 응용 프로그램의 웹 보기에 혼합 콘텐츠를 표시 하는 Android 플랫폼 관련 기능을 사용 하는 방법을 설명 합니다. "
+assetid: 68F908F3-04C5-4B91-B6E5-B7E8357B4154: xamarin-forms author: davidbritch: dabritch:: 07/10/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="webview-mixed-content-on-android"></a>Android의 웹 보기 혼합 콘텐츠
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

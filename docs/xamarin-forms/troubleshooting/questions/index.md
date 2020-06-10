@@ -1,22 +1,7 @@
 ---
-title: Xamarin.Forms질문과 대답
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: edd6cfefe18ff3d5cc97ec58f3bce867f11df7c8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135878"
+제목: "질문과 Xamarin.Forms 대답" ms. 토픽: 문제 해결: assetid: 89364175-53BA-4A09-B3E2-44AC67DD971C: xamarin: davidbritch author:. author: dabritch: 04/25/2017:: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-frequently-asked-questions"></a>Xamarin.Forms질문과 대답
 
 ## <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-packageupdate-forms-templatemd"></a>[Xamarin.Forms기본 템플릿을 최신 NuGet 패키지로 업데이트할 수 있나요?](update-forms-template.md)

@@ -1,22 +1,8 @@
 ---
-title: iOS 플랫폼 기능Xamarin.Forms
-description: 응용 프로그램에 iOS 관련 기능을 추가 Xamarin.Forms 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1008eab6e56be7a235498e01ffd3ea1b27d2bbae
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130171"
+제목: "ios 플랫폼 기능" Xamarin.Forms 설명: "응용 프로그램에 ios 특정 기능 추가 Xamarin.Forms "
+assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC: xamarin-forms author: davidbritch: dabritch:: 03/05/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="ios-platform-features-in-xamarinforms"></a>iOS 플랫폼 기능Xamarin.Forms
 
 Xamarin.FormsIOS 용 응용 프로그램을 개발 하려면 Visual Studio가 필요 합니다. [지원 되는 플랫폼 페이지](~/get-started/supported-platforms.md) 에는 필수 구성 요소에 대 한 자세한 정보가 포함 되어 있습니다.

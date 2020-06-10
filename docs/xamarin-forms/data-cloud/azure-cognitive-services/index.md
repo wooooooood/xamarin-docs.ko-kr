@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsAzure Cognitive Services
-description: Xamarin.Forms음성 인식, 맞춤법 검사, 텍스트 번역, emotion 인식 등 Azure Cognitive Services를 사용 하 여 응용 프로그램에 인텔리전스를 추가 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 64f5dce9337444a1e910a11a69426964a09ac05a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136021"
+제목: " Xamarin.Forms 및 azure Cognitive Services" 설명: " Xamarin.Forms 음성 인식, 맞춤법 검사, 텍스트 번역, emotion 인식 등 azure Cognitive Services를 사용 하 여 응용 프로그램에 인텔리전스를 추가 합니다."
+assetid: 64386A65-FD31-4A1B-A769-91495E57345A: xamarin-forms author: davidbritch: dabritch:: 06/27/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-and-azure-cognitive-services"></a>Xamarin.FormsAzure Cognitive Services
 
 ## <a name="introduction"></a>[소개](introduction.md)

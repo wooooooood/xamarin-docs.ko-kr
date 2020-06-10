@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 사용자 지정 XAML 태그 확장을 정의 하는 방법을 설명 Xamarin.Forms 합니다. XAML 태그 확장은 IMarkupExtension 또는 IMarkupExtension 인터페이스를 구현 하는 클래스입니다 <T> .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 878ebcaa5249261afac2776a9e7cf47c0c047135
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130535"
+제목: "XAML 태그 확장 만들기" 설명: "이 문서에서는 사용자 지정 xaml 태그 확장을 정의 하는 방법을 설명 Xamarin.Forms 합니다. XAML 태그 확장은 IMarkupExtension 또는 IMarkupExtension 인터페이스를 구현 하는 클래스입니다 <T> . "
+assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46: xamarin-forms author: davidbritch: dabritch:: 01/05/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="creating-xaml-markup-extensions"></a>XAML 태그 확장 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
@@ -25,11 +11,11 @@ ms.locfileid: "84130535"
 
 또는에서 파생 하 여 사용자 고유의 사용자 지정 XAML 태그 확장을 정의할 수도 `IMarkupExtension` 있습니다 `IMarkupExtension<T>` . 태그 확장이 특정 형식의 값을 가져오는 경우 일반 폼을 사용 합니다. 다음은 몇 가지 태그 확장을 사용 하는 경우입니다 Xamarin.Forms .
 
-- `TypeExtension`에서 파생 됩니다.`IMarkupExtension<Type>`
-- `ArrayExtension`에서 파생 됩니다.`IMarkupExtension<Array>`
-- `DynamicResourceExtension`에서 파생 됩니다.`IMarkupExtension<DynamicResource>`
-- `BindingExtension`에서 파생 됩니다.`IMarkupExtension<BindingBase>`
-- `ConstraintExpression`에서 파생 됩니다.`IMarkupExtension<Constraint>`
+- `TypeExtension`는 `IMarkupExtension<Type>`에서 파생됩니다.
+- `ArrayExtension`는 `IMarkupExtension<Array>`에서 파생됩니다.
+- `DynamicResourceExtension`는 `IMarkupExtension<DynamicResource>`에서 파생됩니다.
+- `BindingExtension`는 `IMarkupExtension<BindingBase>`에서 파생됩니다.
+- `ConstraintExpression`는 `IMarkupExtension<Constraint>`에서 파생됩니다.
 
 두 `IMarkupExtension` 인터페이스는 각각 하나의 메서드만 정의 합니다 `ProvideValue` .
 

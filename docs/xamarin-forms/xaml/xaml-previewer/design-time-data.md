@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 182256fd572a370a7b322898b1e24ade12e971fd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127373"
+제목: "XAML 미리 보기에서 디자인 타임 데이터 사용" 설명: "이 문서에서는 디자인 타임 데이터를 사용 하 여 응용 프로그램을 실행 하지 않고 XAML 미리 보기에서 데이터를 많이 사용 하는 레이아웃을 표시 하는 방법을 설명 합니다."
+assetid: 0F608019-5951-4BE6-80E0-9EEE1733D642: xamarin-forms author: maddyleger1: maleger:: 03/27/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>XAML 미리 보기에서 디자인 타임 데이터 사용
 
 _일부 레이아웃은 데이터 없이 시각화 하기가 어렵습니다. 이러한 팁을 사용 하 여 XAML 미리 보기에서 데이터를 많이 사용 하는 페이지의 미리 보기를 최대한 활용할 수 있습니다._

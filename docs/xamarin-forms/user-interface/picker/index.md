@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms선택
-description: 선택은 Xamarin.Forms 사용자가 항목을 선택할 수 있는 간단한 항목 목록을 표시 합니다. 이 문서에서는 선택 클래스를 사용 하 여 데이터 목록에서 텍스트 항목을 선택 하는 방법을 설명 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 50f605f4ad9839521fd4169531ad46d197f20dbf
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139666"
+제목: " Xamarin.Forms 선택" 설명: "선택 항목은 Xamarin.Forms 사용자가 항목을 선택할 수 있는 항목의 짧은 목록을 표시 합니다. 이 문서에서는 선택 클래스를 사용 하 여 데이터 목록에서 텍스트 항목을 선택 하는 방법을 설명 합니다. "
+assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86: xamarin-forms author: davidbritch: dabritch:: 02/26/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-picker"></a>Xamarin.Forms선택
 
 _선택 뷰는 데이터 목록에서 텍스트 항목을 선택 하는 컨트롤입니다._

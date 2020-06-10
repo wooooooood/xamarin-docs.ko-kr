@@ -1,22 +1,8 @@
 ---
-title: XAML 네임 스페이스Xamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7f35342134767ccdadfab086bfa14f6b610b325d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130379"
+제목: "" description: "의 XAML 네임 스페이스 Xamarin.Forms 는 네임 스페이스 선언에 XMLNS XML 특성을 사용 합니다. 이 문서에서는 XAML 네임 스페이스 구문을 소개 하 고 형식에 액세스 하는 XAML 네임 스페이스를 선언 하는 방법을 보여 줍니다. "
+assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F: xamarin-forms author: davidbritch: dabritch:: 08/21/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xaml-namespaces-in-xamarinforms"></a>XAML 네임 스페이스Xamarin.Forms
 
 _XAML은 네임 스페이스 선언에 xmlns XML 특성을 사용 합니다. 이 문서에서는 XAML 네임 스페이스 구문을 소개 하 고 형식에 액세스 하는 XAML 네임 스페이스를 선언 하는 방법을 보여 줍니다._

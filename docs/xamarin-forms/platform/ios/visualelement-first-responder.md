@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d8bd539c2bb0e8963afae3392b6f8e99d79af9af
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136971"
+제목: "VisualElement first 응답자의 iOS" 설명: "플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 VisualElement 개체가 터치 이벤트의 첫 번째 응답자가 될 수 있도록 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다. "
+assetid: 3A77BA02-B87A-44EC-AC51-9D3130EF314CMS. 기술: xamarin-forms author: davidbritch: dabritch: ms. date: 01/15/2020 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="visualelement-first-responder-on-ios"></a>IOS에서 VisualElement first 응답자
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

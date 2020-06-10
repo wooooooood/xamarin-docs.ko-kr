@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 'IOS, Android 및 UWP의 기본 뷰는 Xamarin.Forms c #을 사용 하 여 만든 페이지에서 직접 참조할 수 있습니다. 이 문서에서는 Xamarin.Forms c #을 사용 하 여 만든 레이아웃에 네이티브 뷰를 추가 하는 방법과 사용자 지정 뷰의 레이아웃을 재정의 하 여 해당 측정 API 사용법을 수정 하는 방법을 보여 줍니다.'
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 18cdeccbdff86a6b20aab4b33db259f1f06ee096
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139596"
+제목: "c #의 네이티브 뷰" 설명: "iOS, Android 및 UWP의 기본 뷰는 Xamarin.Forms c #을 사용 하 여 만든 페이지에서 직접 참조할 수 있습니다. 이 문서에서는 Xamarin.Forms c #을 사용 하 여 만든 레이아웃에 네이티브 뷰를 추가 하는 방법과 사용자 지정 보기의 레이아웃을 재정의 하 여 해당 측정 API 사용법을 수정 하는 방법을 보여 줍니다. "
+assetid: 230F937C-F914-4B21-8EA1-1A2A9E644769: xamarin-forms author: davidbritch: dabritch:: 04/27/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="native-views-in-c"></a>C의 네이티브 뷰\#
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
@@ -38,9 +24,9 @@ _IOS, Android 및 UWP의 기본 뷰는 Xamarin.Forms c #을 사용 하 여 만�
 
 공유 프로젝트에서 이러한 메서드를 사용 Xamarin.Forms 하려면 적절 한 플랫폼별 네임 스페이스를 가져와야 합니다 Xamarin.Forms .
 
-- **iOS** – Xamarin.Forms . Platform.object
-- **Android** – Xamarin.Forms . 플랫폼 Android
-- **유니버설 Windows 플랫폼 (UWP)** – Xamarin.Forms . Platform UWP
+- **iOS** – Xamarin.Forms.Platform.iOS
+- **Android** – Xamarin.Forms.Platform.Android
+- **UWP(유니버설 Windows 플랫폼)** – Xamarin.Forms.Platform.UWP
 
 ## <a name="adding-platform-specific-views-on-each-platform"></a>플랫폼 특정 뷰를 각 플랫폼에 추가
 

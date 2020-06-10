@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f3a5a581ffb4ca2acf1d4209b8b7a744f0daa5eb
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84128055"
+제목: "SkiaSharp의 경로 효과" 설명: "이 문서에서는 패스를 스트로크 및 채우기에 사용할 수 있도록 하는 다양 한 SkiaSharp Path 효과를 설명 하 고 샘플 코드를 사용 하 여이를 보여 줍니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 95167D1F-A718-405A-AFCC-90E596D422F3 author: davidbritch: dabritch: 07/29/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="path-effects-in-skiasharp"></a>SkiaSharp의 경로 효과
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -273,7 +259,7 @@ canvas.DrawPath(newPath, newPaint);
 
 [`SKPathEffect.Create1DPath`](xref:SkiaSharp.SKPathEffect.Create1DPath(SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPath1DPathEffectStyle))메서드는 `SKPathEffect.CreateDash` 대시 및 간격 패턴 대신 경로를 지정 한다는 점을 제외 하 고는 개념적으로 유사 합니다. 이 경로는 선 또는 곡선을 스트로크 하기 위해 여러 번 복제 됩니다.
 
-구문은 다음과 같습니다.
+사용되는 구문은 다음과 같습니다.
 
 ```csharp
 public static SKPathEffect Create1DPath (SKPath path, Single advance,

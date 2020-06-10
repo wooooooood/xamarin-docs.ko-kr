@@ -1,9 +1,6 @@
 ---
-제목: ' xaml 파일에 대해 Visual Studio XAML 디자이너가 작동 하지 않는 이유 Xamarin.Forms '
-. 토픽: ms. prod: assetid: ms. 기술: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+제목: "xaml 파일에 대해 Visual Studio XAML 디자이너가 작동 하지 않는 이유는 무엇입니까 Xamarin.Forms ?"
+ms. 토픽: 문제 해결: assetid: cab2eefb-c52f-4d81-866e-8f1feabbdd64: xamarin-forms author: davidbritch: dabritch:: 04/25/2017-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="why-doesnt-the-visual-studio-xaml-designer-work-for-xamarinforms-xaml-files"></a>Visual Studio XAML 디자이너가 xaml 파일에 대해 작동 하지 않는 이유는 무엇 Xamarin.Forms 인가요?

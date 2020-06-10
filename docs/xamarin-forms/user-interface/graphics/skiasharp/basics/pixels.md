@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 SkiaSharp 좌표와 좌표 간의 차이점을 알아보고 Xamarin.Forms 샘플 코드를 사용 하 여이를 보여 줍니다.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 6d01018f4393ac5562220fa1f9524bc0d9872c67
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137672"
+제목: "픽셀과 장치 독립적 단위" 설명: "이 문서에서는 SkiaSharp 좌표와 좌표 간의 차이점을 알아보고 Xamarin.Forms 샘플 코드를 사용 하 여이를 보여 줍니다."
+ms. prod: xamarin ms. 기술: skiasharp assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890 author: davidbritch: dabritch: 02/09/2017:: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="pixels-and-device-independent-units"></a>픽셀 및 디바이스 독립적 단위
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

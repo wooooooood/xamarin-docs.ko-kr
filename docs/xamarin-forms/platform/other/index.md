@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms기타 플랫폼
-description: 이 가이드에서는에서 지 원하는 추가 플랫폼에 대해 설명 Xamarin.Forms 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a0ab248d3e23854e8027f515fbcf0fa6ca9521fd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139544"
+제목: " Xamarin.Forms 기타 플랫폼" 설명: "이 가이드는에서 지원 되는 추가 플랫폼을 설명 Xamarin.Forms 합니다."
+assetid: C713B905-0C98-4442-B5CB-91C384A384DA: xamarin-forms author: davidbritch: dabritch:: 10/04/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-other-platforms"></a>Xamarin.Forms기타 플랫폼
 
 Xamarin.FormsiOS, Android 및 Windows 외의 추가 플랫폼을 지원 합니다.

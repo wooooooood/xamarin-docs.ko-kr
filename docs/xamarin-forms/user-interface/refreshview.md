@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsRefreshView
-description: Xamarin.FormsRefreshview는 스크롤 가능한 콘텐츠의 기능을 새로 고치는 기능을 제공 하는 컨테이너 컨트롤입니다.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d84e6bb6ed41f2fbc213cd15051d071521f588cd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127597"
+제목: " Xamarin.Forms refreshview" 설명: " Xamarin.Forms refreshview는 스크롤 가능한 콘텐츠의 기능을 새로 고치기 위해 끌어오기를 제공 하는 컨테이너 컨트롤입니다."
+assetId: 58DBD23B-ADB9-40DA-B331-4DDB6E698990: xamarin-forms author: davidbritch: dabritch:: 09/19/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-refreshview"></a>Xamarin.FormsRefreshView
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)

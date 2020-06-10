@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsDataPages
-description: 이 문서에서는 Xamarin.Forms 데이터 원본을 미리 작성 된 뷰에 빠르고 쉽게 바인딩하는 API를 제공 하는 datapages를 소개 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7d99870dd975d0996ffcd05d4aef153f3515ec9e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134318"
+제목: " Xamarin.Forms datapages" 설명: "이 문서에서는 Xamarin.Forms 데이터 원본을 미리 작성 된 뷰에 빠르고 쉽게 바인딩하는 API를 제공 하는 datapages를 소개 합니다."
+assetid: DF16EAEE-DB78-42CA-9C59-51D9D6CB6B95: xamarin-forms author: davidbritch: dabritch:: 12/01/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-datapages"></a>Xamarin.FormsDataPages
 
 ![](~/media/shared/preview.png "This API is currently in preview")
@@ -38,7 +24,7 @@ DataPages는 미리 작성 된 뷰에 데이터 원본을 빠르고 쉽게 바�
 
 DataPages는 Xamarin.Forms 를 포함 하 여 응용 프로그램에 추가 됩니다 ** Xamarin.Forms . 페이지** NuGet 패키지.
 
-### <a name="data-sources"></a>데이터 원본
+### <a name="data-sources"></a>Data Sources
 
 미리 보기에는 몇 가지 미리 작성 된 데이터 원본을 사용할 수 있습니다.
 

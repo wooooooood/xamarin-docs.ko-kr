@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 10192e93d2e20f9aa58ca95dd81c07f560193905
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136411"
+제목: "SkiaSharp 마스크 필터" 설명: "마스크 필터를 사용 하 여 흐린 및 기타 알파 효과를 만드는 방법을 알아봅니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 940422A1-8BC0-4039-8AD7-26C61320F858 author: davidbritch: dabritch: 08/27/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="skiasharp-mask-filters"></a>SkiaSharp mask 필터
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

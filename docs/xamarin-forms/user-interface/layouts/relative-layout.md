@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsRelativeLayout
-description: 이 문서에서는 RelativeLayout 클래스를 사용 하 여 Xamarin.Forms 모든 화면 크기에 맞게 크기가 조정 되는 ui를 만드는 방법을 설명 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f250b109f759bcf6bb7fa4ac0573743ac12c4bc1
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127194"
+제목: " Xamarin.Forms RelativeLayout" 설명: "이 문서에서는 RelativeLayout 클래스를 사용 하 여 Xamarin.Forms 모든 화면 크기에 맞게 크기가 조정 되는 ui를 만드는 방법을 설명 합니다."
+assetid: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A: xamarin-forms author: davidbritch: dabritch:: 11/25/2015-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-relativelayout"></a>Xamarin.FormsRelativeLayout
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
@@ -31,7 +17,7 @@ ms.locfileid: "84127194"
 
 ![](relative-layout-images/flag.png "RelativeLayout Exploration")
 
-## <a name="usage"></a>사용량
+## <a name="usage"></a>사용
 
 ### <a name="understanding-constraints"></a>제약 조건 이해
 
@@ -43,7 +29,7 @@ ms.locfileid: "84127194"
 - **상수** &ndash; 값의 오프셋으로 사용할 값입니다.
 - **ElementName** &ndash; 제약 조건이 기준으로 하는 뷰의 이름입니다.
 
-XAML에서 제약 조건은 s로 표시 됩니다 `ConstraintExpression` . 다음과 같은 예제를 참조하세요.
+XAML에서 제약 조건은 s로 표시 됩니다 `ConstraintExpression` . 다음 예제를 참조하세요.
 
 ```xaml
 <BoxView Color="Green" WidthRequest="50" HeightRequest="50"

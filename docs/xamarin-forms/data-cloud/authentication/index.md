@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms웹 서비스 인증
-description: 이 가이드에서는 인증 서비스를 응용 프로그램에 통합 하 여 Xamarin.Forms 사용자가 자신의 데이터에만 액세스할 수 있도록 하는 동시에 백 엔드를 공유할 수 있도록 하는 방법을 설명 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 59130739617f38ce32e0d241f8e068cf077997ac
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136086"
+제목: " Xamarin.Forms 웹 서비스 인증" 설명: "이 가이드에서는 인증 서비스를 응용 프로그램에 통합 하 여 Xamarin.Forms 사용자가 자신의 데이터에만 액세스 하는 동시에 백 엔드를 공유할 수 있도록 하는 방법을 설명 합니다."
+assetid: E6FCFAE1-4F83-4F93-9190-EC5290360C54: xamarin-forms author: davidbritch: dabritch:: 06/27/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-web-service-authentication"></a>Xamarin.Forms웹 서비스 인증
 
 ## <a name="authenticate-a-restful-web-service"></a>[RESTful 웹 서비스 인증](rest.md)

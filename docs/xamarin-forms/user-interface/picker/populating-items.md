@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8872c6748ba778a2622d82803d580c781bd282cd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139635"
+제목: "선택 항목 컬렉션에 데이터 추가" 설명: "선택 보기는 데이터 목록에서 텍스트 항목을 선택 하는 컨트롤입니다. 이 문서에서는 항목 컬렉션에 데이터를 추가 하 여 데이터를 선택 하 고 사용자가 항목을 선택 하는 방법에 응답 하는 방법을 설명 합니다. "
+assetid: 3C840F64-A430-457D-A4B2-3D7AF46F9DBE: xamarin-forms author: davidbritch: dabritch:: 02/26/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="adding-data-to-a-pickers-items-collection"></a>선택기 항목 컬렉션에 데이터 추가
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)

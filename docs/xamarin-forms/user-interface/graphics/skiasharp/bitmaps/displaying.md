@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b0fecac02c44e3ba721dd4625e7bee264c6869d0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134760"
+제목: "SkiaSharp 비트맵 표시" 설명: "가로 세로 비율을 유지 하면서 SkiaSharp 비트맵을 픽셀 크기로 표시 하 고 사각형을 채우도록 확장 하는 방법을 알아봅니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9 author: davidbritch: dabritch: 07/17/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="displaying-skiasharp-bitmaps"></a>SkiaSharp 비트맵 표시
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -314,7 +300,7 @@ public class UniformScalingPage : ContentPage
 
 [![균일 한 크기 조정](displaying-images/UniformScaling-Landscape.png "균일 한 크기 조정")](displaying-images/UniformScaling-Landscape-Large.png#lightbox)
 
-이 요소를 사용 하는 이점은 `scale` 약간 다른 알고리즘을 구현 하려는 경우에 분명 하 게 드러납니다. 비트맵의 가로 세로 비율을 유지 하 고 대상 사각형을 채우도록 하려고 한다고 가정 합니다. 이렇게 하려면 이미지의 일부를 자르는 것이 가능 하지만 `Math.Min` 위의 코드에서을로 변경 하 여이 알고리즘을 간단히 구현할 수 있습니다 `Math.Max` . 결과: 
+이 요소를 사용 하는 이점은 `scale` 약간 다른 알고리즘을 구현 하려는 경우에 분명 하 게 드러납니다. 비트맵의 가로 세로 비율을 유지 하 고 대상 사각형을 채우도록 하려고 한다고 가정 합니다. 이렇게 하려면 이미지의 일부를 자르는 것이 가능 하지만 `Math.Min` 위의 코드에서을로 변경 하 여이 알고리즘을 간단히 구현할 수 있습니다 `Math.Max` . 결과는 다음과 같습니다. 
 
 [![균일 한 확장 대안](displaying-images/UniformScaling-Alternative.png "균일 한 확장 대안")](displaying-images/UniformScaling-Alternative-Large.png#lightbox)
 

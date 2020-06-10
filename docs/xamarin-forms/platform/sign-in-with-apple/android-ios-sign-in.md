@@ -1,22 +1,8 @@
 ---
-title: Apple에서 로그인 사용Xamarin.Forms
-description: 모바일 응용 프로그램에서 Apple에 로그인을 구현 하는 방법을 알아봅니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: fb37f8fb2d01154bf2e749e685c4e96c12d6bc5e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139492"
+제목: "Apple에서 로그인을 사용 하 여 Xamarin.Forms " 설명: "모바일 응용 프로그램에서 apple에 로그인을 구현 하는 방법을 알아봅니다 Xamarin.Forms ."
+assetid: 2E47E7F2-93D4-4CA3-9E66-247466D25E4D: xamarin-forms author: davidortinau: daortin:: 09/10/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="use-sign-in-with-apple-in-xamarinforms"></a>에서 Apple에 로그인 사용Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/signinwithapple/)

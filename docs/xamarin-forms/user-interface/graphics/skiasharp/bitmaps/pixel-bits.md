@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9018cbe6e41350b22a0f1f91858017531c75a0ac
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135583"
+제목: "SkiaSharp 비트맵 픽셀 비트 액세스" 설명: "SkiaSharp 비트맵의 픽셀 비트에 액세스 하 고 수정 하는 다양 한 기술을 알아봅니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6 author: davidbritch: dabritch: 07/11/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>SkiaSharp 비트맵 픽셀 비트 액세스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -490,30 +476,15 @@ public class GradientBitmapPage : ContentPage
 실행 시간 (밀리초)을 통합 하는 테이블은 다음과 같습니다.
 
 | API       | 데이터 형식 | iOS  | Android | UWP  |
-| ---
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | ---제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | ----|---제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
-----:| ----:| | SetPixel |           | 3.17 |   10.77 | 3.49 | | 픽셀 |           | 0.32 |    1.23 | 0.07 | | GetPixels | 바이트 | 0.09 |    0.24 | 0.10 | |           | uint | 0.06 |    0.26 | 0.05 | |           | 이상 색 0.29 |    0.99 | 0.07 | | SetPixels | 바이트 | 1.33 |    6.78 | 0.11 | |           | uint | 0.14 |    0.69 | 0.06 | |           | 이상 색 0.35 |    1.93 | 0.10 |
+| --------- | --------- | ----:| -------:| ----:|
+| SetPixel  |           | 3.17 |   10.77 | 3.49 |
+| 픽셀    |           | 0.32 |    1.23 | 0.07 |
+| GetPixels | byte      | 0.09 |    0.24 | 0.10 |
+|           | uint      | 0.06 |    0.26 | 0.05 |
+|           | 고 색   | 0.29 |    0.99 | 0.07 |
+| SetPixels | byte      | 1.33 |    6.78 | 0.11 |
+|           | uint      | 0.14 |    0.69 | 0.06 |
+|           | 고 색   | 0.35 |    1.93 | 0.10 |
 
 예상 대로 `SetPixel` 65536 시간을 호출 하는 것이 비트맵의 픽셀을 설정 하는 가장 effeicient 방법입니다. 배열을 채우거 `SKColor` 나 속성을 설정 하 `Pixels` 는 것이 훨씬 더 낫지만 잘와 일부 및 기법을 비교 하기도 `GetPixels` `SetPixels` 합니다. 픽셀 값을 사용 하 `uint` 는 것은 일반적으로 별도의 구성 요소를 설정 하는 것 보다 빠르지만 `byte` 값을 `SKColor` 부호 없는 정수로 변환 하면 프로세스에 약간의 오버 헤드가 추가 됩니다.
 

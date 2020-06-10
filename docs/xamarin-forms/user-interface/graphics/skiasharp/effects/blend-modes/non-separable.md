@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 52be7641ac3b2983f537e11bccd76f2a5b52574d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130184"
+제목: "분리 되지 않은 혼합 모드" 설명: "색상, 채도 또는 광도를 변경 하는 데 분리 되지 않은 혼합 모드를 사용 합니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF author: davidbritch: dabritch: 08/23/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="the-non-separable-blend-modes"></a>분리 되지 않은 혼합 모드
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -46,125 +32,11 @@ HSL 값 (0, 100, 50)은 순수 빨강의 RGB 값 (FF, 00, 00)입니다. HSL 값 
 다른 blend 모드와 마찬가지로 네 가지 분리 안 혼합 모드에는 대상 (종종 비트맵 이미지)과 원본 (종종 단일 색 또는 그라데이션)이 포함 됩니다. Blend 모드는 대상 및 원본에서 색상, 채도 및 명도 값을 결합 합니다.
 
 | Blend 모드   | 원본에서 구성 요소 | 대상의 구성 요소 |
-| ---
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------- | ---제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------------ | ---제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--------------- | | `Hue`        | 색상 | 채도 및 광도 | | `Saturation` | 포화 | 색상 및 광도 | | `Color`      | 색상 및 채도 | 명도 | | `Luminosity` | 광도 | 색상 및 채도 | 
+| ------------ | ---------------------- | --------------------------- |
+| `Hue`        | 색상                    | 채도 및 명도   |
+| `Saturation` | 채도             | 색상 및 광도          |
+| `Color`      | 색상 및 채도     | 밝기                  | 
+| `Luminosity` | 밝기             | 색상 및 채도          | 
 
 알고리즘에 대 한 W3C [**합성 및 혼합 수준 1**](https://www.w3.org/TR/compositing-1/) 지정을 참조 하세요.
 
@@ -325,11 +197,11 @@ public partial class NonSeparableBlendModesPage : ContentPage
 
 ## <a name="a-matte-for-a-separable-mode"></a>분리 가능 모드의 무광택
 
-[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 리소스로 포함 된 비트맵 중 하나는 다음과 같습니다. 파일 이름은 **바나나입니다.**
+[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 리소스로 포함 된 비트맵 중 하나는 다음과 같습니다. 파일 이름은 **Banana.jpg**입니다.
 
 ![바나나 원숭이](non-separable-images/Banana.jpg "바나나 원숭이")
 
-바나나만 포함 하는 매트를 만들 수 있습니다. [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 리소스 이기도 합니다. 파일 이름은 **BananaMatte입니다**.
+바나나만 포함 하는 매트를 만들 수 있습니다. [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 리소스 이기도 합니다. 파일 이름은 **BananaMatte.png**입니다.
 
 ![바나나 무광택](non-separable-images/BananaMatte.png "바나나 무광택")
 
@@ -337,7 +209,7 @@ Black 바나나 셰이프를 제외 하 고 나머지 비트맵은 투명 합니
 
 **파란색 바나나** 페이지는 해당 매트를 사용 하 여 원숭이가 보유 하 고 있는 바나나의 색조와 채도를 변경 하지만 이미지에서 다른 아무 것도 변경 하지 않습니다. 
 
-다음 클래스에서 `BlueBananaPage` **바나나** 비트맵은 필드로 로드 됩니다. 생성자는 **BananaMatte** 비트맵을 `matteBitmap` 개체로 로드 하지만 해당 개체를 생성자 밖으로 유지 하지는 않습니다. 대신 라는 세 번째 비트맵이 `blueBananaBitmap` 생성 됩니다. 는로 `matteBitmap` 설정 되 `blueBananaBitmap` `SKPaint` 고가 `Color` blue로 설정 되 고가 `BlendMode` 로 설정 된 `SKBlendMode.SrcIn` 이 그려집니다. 는 `blueBananaBitmap` 주로 투명 하 게 유지 되지만 바나나의 진한 순수한 파랑 이미지를 사용 합니다.
+다음 클래스에서는 `BlueBananaPage` **Banana.jpg** 비트맵이 필드로 로드 됩니다. 생성자는 **BananaMatte.png** 비트맵을 `matteBitmap` 개체로 로드 하지만 해당 개체를 생성자 밖으로 유지 하지는 않습니다. 대신 라는 세 번째 비트맵이 `blueBananaBitmap` 생성 됩니다. 는로 `matteBitmap` 설정 되 `blueBananaBitmap` `SKPaint` 고가 `Color` blue로 설정 되 고가 `BlendMode` 로 설정 된 `SKBlendMode.SrcIn` 이 그려집니다. 는 `blueBananaBitmap` 주로 투명 하 게 유지 되지만 바나나의 진한 순수한 파랑 이미지를 사용 합니다.
 
 ```csharp
 public class BlueBananaPage : ContentPage

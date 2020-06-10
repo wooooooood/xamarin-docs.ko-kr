@@ -1,22 +1,8 @@
 ---
-title: 활동 표시기Xamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a83885175a44f2174db343abf4591f8777041d39
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136515"
+제목: "설명:"의 활동 표시기: Xamarin.Forms activityindicator 컨트롤은 응용 프로그램이 진행 상황을 표시 하지 않고 시간이 오래 걸리는 작업을 사용자에 게 나타냅니다. 이 문서에서는 XAML 및 코드에서 ActivityIndicator를 사용 하는 방법을 설명 합니다. "
+assetid: 4CEED02D-5CA3-4C3A-B7D-3193FC272261 ms. 기술: xamarin forms author: profexorgeek m. author: jusjohns. 날짜: 07/10/2019 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-activityindicator"></a>Xamarin.FormsActivityIndicator
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 

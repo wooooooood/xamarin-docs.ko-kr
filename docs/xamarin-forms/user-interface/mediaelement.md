@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsMediaElement
-description: 이 문서에서는 MediaElement를 사용 하 여 응용 프로그램에서 비디오와 오디오를 재생 하는 방법을 설명 합니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1dfa51177bba3ebf1e3e29208cc926c77567a048
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134240"
+제목: " Xamarin.Forms mediaelement" 설명: "이 문서에서는 MediaElement를 사용 하 여 응용 프로그램에서 비디오와 오디오를 재생 하는 방법을 설명 Xamarin.Forms 합니다."
+assetid: e65f1e56-a80d-46c7-9ff4-7ae6650a3165: xamarin-forms author: davidbritch: dabritch:: 02/18/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-mediaelement"></a>Xamarin.FormsMediaElement
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -542,7 +528,7 @@ public class PositionSlider : Slider
 
 - [MediaElementDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
 - [URI 체계](/windows/uwp/app-resources/uri-schemes)
-- [Xamarin.FormsInstead](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.Forms슬라이드](~/xamarin-forms/user-interface/slider.md)
 - [Android: 지원 되는 미디어 형식](https://developer.android.com/guide/topics/media/media-formats)
 - [UWP: 지원 되는 코덱](/windows/uwp/audio-video-camera/supported-codecs)
