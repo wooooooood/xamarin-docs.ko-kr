@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a83e3ae4069657df06967b7157809c7dc86ad941
-ms.sourcegitcommit: 99aa05bd9b5e3f66d134066b860f41b54fa2d850
+ms.openlocfilehash: 58ed33adbc25e026431609370075c24c3b6ba690
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82109628"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574638"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -20,7 +20,7 @@ ms.locfileid: "82109628"
 
     이 코드는 이미지의 크기 조정 모드를 정의하는 [`Aspect`](xref:Xamarin.Forms.Image.Aspect) 속성을 [`Fill`](xref:Xamarin.Forms.Aspect.Fill)로 설정합니다. `Fill` 멤버는 [`Aspect`](xref:Xamarin.Forms.Aspect) 열거형에서 정의되고, 이미지를 왜곡하는지에 관계 없이 보기를 완전히 채우도록 이미지를 확장합니다. 이미지 크기 조정에 대한 자세한 내용은 [Xamarin.Forms의 이미지](~/xamarin-forms/user-interface/images.md) 가이드에서 [이미지 표시](~/xamarin-forms/user-interface/images.md#display-images)를 참조하세요.
 
-    `OnPlatform` 태그 확장을 사용하면 플랫폼별 기준으로 UI 모양을 사용자 지정할 수 있습니다. 이 예제에서는 태그 확장을 사용하여 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 및 [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 속성을 iOS에서 300개 디바이스 독립적 단위로 지정하고, Android에서 250개 디바이스 독립적 단위로 지정합니다. `OnPlatform` 태그 확장에 대한 자세한 내용은 [XAML 태그 확장 사용](~/xamarin-forms/xaml/markup-extensions/consuming.md) 가이드에서 [OnPlatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform)을 참조하세요.
+    `OnPlatform` 태그 확장을 사용하면 플랫폼별 기준으로 UI 모양을 사용자 지정할 수 있습니다. 이 예제에서는 태그 확장을 사용하여 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 및 [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 속성을 iOS에서 300개 디바이스 독립적 단위로 지정하고, Android에서 250개 디바이스 독립적 단위로 지정합니다. `OnPlatform` 태그 확장에 대한 자세한 내용은 [XAML 태그 확장 사용](~/xamarin-forms/xaml/markup-extensions/consuming.md) 가이드에서 [OnPlatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension)을 참조하세요.
 
     또한 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성은 이미지를 가로 방향으로 가운데에 맞추도록 지정합니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "82109628"
 
     이 코드는 이미지의 크기 조정 모드를 정의하는 [`Aspect`](xref:Xamarin.Forms.Image.Aspect) 속성을 [`Fill`](xref:Xamarin.Forms.Aspect.Fill)로 설정합니다. `Fill` 멤버는 [`Aspect`](xref:Xamarin.Forms.Aspect) 열거형에서 정의되고, 이미지를 왜곡하는지에 관계 없이 보기를 완전히 채우도록 이미지를 확장합니다. 이미지 크기 조정에 대한 자세한 내용은 [Xamarin.Forms의 이미지](~/xamarin-forms/user-interface/images.md) 가이드에서 [이미지 표시](~/xamarin-forms/user-interface/images.md#display-images)를 참조하세요.
 
-    `OnPlatform` 태그 확장을 사용하면 플랫폼별 기준으로 UI 모양을 사용자 지정할 수 있습니다. 이 예제에서는 태그 확장을 사용하여 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 및 [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 속성을 iOS에서 300으로 설정하고, Android에서 250으로 설정합니다. `OnPlatform` 태그 확장에 대한 자세한 내용은 [XAML 태그 확장 사용](~/xamarin-forms/xaml/markup-extensions/consuming.md) 가이드에서 [OnPlatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform)을 참조하세요.
+    `OnPlatform` 태그 확장을 사용하면 플랫폼별 기준으로 UI 모양을 사용자 지정할 수 있습니다. 이 예제에서는 태그 확장을 사용하여 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 및 [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 속성을 iOS에서 300으로 설정하고, Android에서 250으로 설정합니다. `OnPlatform` 태그 확장에 대한 자세한 내용은 [XAML 태그 확장 사용](~/xamarin-forms/xaml/markup-extensions/consuming.md) 가이드에서 [OnPlatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension)을 참조하세요.
 
     또한 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성은 이미지를 가로 방향으로 가운데에 맞추도록 지정합니다.
 
