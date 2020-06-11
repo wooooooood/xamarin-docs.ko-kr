@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5c3909271580d0568d7c603de0d434ff5b3f3bc4
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138673"
+제목: "SkiaSharp 비트맵의 분할 된 표시" 설명: "일부 영역이 늘어나고 일부 영역은 표시 되지 않도록 SkiaSharp 비트맵을 표시 합니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 79AE2033-C41C-4447-95A6-76D22E913D19 author: davidbritch: dabritch: 07/17/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>분할 된 SkiaSharp 비트맵 표시
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

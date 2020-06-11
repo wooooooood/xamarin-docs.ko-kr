@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a4bb6c30ada13691146d00d2094df8f13ca453b9
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140259"
+제목: "경로 및 영역으로 클리핑" 설명: "이 문서에서는 SkiaSharp 경로를 사용 하 여 그래픽을 특정 영역으로 자르는 방법과 영역을 만들고 샘플 코드를 사용 하 여이를 보여 주는 방법을 설명 합니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F author: davidbritch: dabritch: 06/16/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="clipping-with-paths-and-regions"></a>경로 및 지역 클리핑
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

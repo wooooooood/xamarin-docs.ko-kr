@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCarouselView 상호 작용
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 57c501c0f789ce448d8381cbbccb46666cf06305
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137412"
+제목: " Xamarin.Forms CarouselView 상호 작용" 설명: "currentitem 및 Position 속성을 통해 CarouselView에 현재 표시 된 항목에 액세스할 수 있습니다."
+assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992: xamarin-forms author: davidbritch: dabritch:: 02/11/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-carouselview-interaction"></a>Xamarin.FormsCarouselView 상호 작용
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
@@ -346,7 +332,7 @@ public class MonkeysViewModel : INotifyPropertyChanged
 
 [![IOS 및 Android의 시각적 상태를 사용 하는 CarouselView의 스크린샷](interaction-images/visual-states.png "CarouselView 시각적 상태")](interaction-images/visual-states-large.png#lightbox "CarouselView 시각적 상태")
 
-시각적 상태에 대 한 자세한 내용은 [ Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)를 참조 하세요.
+시각적 개체 상태에 대한 자세한 내용은 [Xamarin.Forms 시각적 개체 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)를 참조하세요.
 
 ## <a name="clear-the-current-item"></a>현재 항목 지우기
 
@@ -363,4 +349,4 @@ public class MonkeysViewModel : INotifyPropertyChanged
 ## <a name="related-links"></a>관련 링크
 
 - [CarouselView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
-- [Xamarin.Forms시각적 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.Forms 시각적 개체 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)

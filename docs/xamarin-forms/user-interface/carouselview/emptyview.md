@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCarouselView EmptyView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a9f952da75e68e9ad39e0a15f57fbd0379233d7e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137399"
+제목: " Xamarin.Forms CarouselView EmptyView" description: "CarouselView에서 표시할 수 있는 데이터가 없는 경우 사용자에 게 피드백을 제공 하는 빈 뷰를 지정할 수 있습니다. 빈 뷰는 문자열, 뷰 또는 여러 뷰가 될 수 있습니다. "
+assetid: C6DEE1A9-63FC-4889-BC77-F401D5D7DF32. 기술: xamarin 양식 작성자: davidbritch: dabritch: ms. 날짜: 10/03/2019 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-carouselview-emptyview"></a>Xamarin.FormsCarouselView EmptyView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -35,7 +21,7 @@ ms.locfileid: "84137399"
 > [!NOTE]
 > [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView)필요한 경우 대화형 콘텐츠를 포함 하는 뷰로 속성을 설정할 수 있습니다.
 
-데이터 템플릿에 대 한 자세한 내용은 [ Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조 하세요.
+데이터 템플릿에 대한 자세한 내용은 [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조하세요.
 
 ## <a name="display-a-string-when-data-is-unavailable"></a>데이터를 사용할 수 없을 때 문자열 표시
 
@@ -323,5 +309,5 @@ public class SearchTermDataTemplateSelector : DataTemplateSelector
 
 - [CarouselView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 - [Xamarin.Forms데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Xamarin.Forms리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Xamarin.Forms 리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [DataTemplateSelector 만들기 Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

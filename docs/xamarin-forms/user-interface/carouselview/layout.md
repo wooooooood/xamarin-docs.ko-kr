@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCarouselView 레이아웃
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 44df710df0272afe3c6f6911381af1a88c8cf923
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140285"
+제목: " Xamarin.Forms CarouselView Layout" description: "기본적으로 CarouselView는 항목을 가로로 표시 합니다. 그러나 세로 방향도 가능 합니다. "
+assetid: fede0382-c972-4023-a4ea-fe5cadec91a6: xamarin-forms author: davidbritch: dabritch:: 01/28/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-carouselview-layout"></a>Xamarin.FormsCarouselView 레이아웃
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

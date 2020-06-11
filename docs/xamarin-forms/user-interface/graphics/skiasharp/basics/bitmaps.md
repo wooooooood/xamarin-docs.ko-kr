@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 다양 한 소스에서 SkiaSharp 비트맵을 로드 하 여 응용 프로그램에 표시 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 주는 방법을 설명 합니다.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1e4c170f818dc62640b1cd72ec3b70f48d227d93
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137738"
+제목: "SkiaSharp의 비트맵 기본 사항" 설명: "이 문서에서는 다양 한 소스에서 SkiaSharp의 비트맵을 로드 하 여 응용 프로그램에 표시 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 주는 방법을 설명 합니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3 author: davidbritch: dabritch: 07/17/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="bitmap-basics-in-skiasharp"></a>SkiaSharp의 비트맵 기본 사항
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -104,9 +90,9 @@ Android 운영 체제는 `Stream` `GetStreamAsync` `SKBitmap.Decode` 주 스레�
 
 ## <a name="loading-a-bitmap-resource"></a>비트맵 리소스 로드
 
-코드를 기준으로 비트맵을 로드 하는 가장 쉬운 방법은 응용 프로그램에 직접 비트맵 리소스를 포함 하는 것입니다. **SkiaSharpFormsDemos** 프로그램에는 이름이 **원숭이**인 파일을 포함 하 여 여러 비트맵 파일을 포함 하는 **Media** 라는 폴더가 포함 됩니다. 프로그램 리소스로 저장 된 비트맵의 경우 **속성** 대화 상자를 사용 하 여 **포함 리소스**의 **빌드 작업** 을 파일에 지정 해야 합니다.
+코드를 기준으로 비트맵을 로드 하는 가장 쉬운 방법은 응용 프로그램에 직접 비트맵 리소스를 포함 하는 것입니다. **SkiaSharpFormsDemos** 프로그램에는 명명 된 **monkey.png**를 포함 하 여 여러 비트맵 파일을 포함 하는 **Media** 라는 폴더가 포함 됩니다. 프로그램 리소스로 저장 된 비트맵의 경우 **속성** 대화 상자를 사용 하 여 **포함 리소스**의 **빌드 작업** 을 파일에 지정 해야 합니다.
 
-포함 된 각 리소스에는 프로젝트 이름, 폴더 및 파일 이름으로 구성 된 *리소스 ID* 가 있으며, 모두 마침표로 연결 됩니다. **SkiaSharpFormsDemos**. 클래스의 메서드에 대 한 인수로 리소스 ID를 지정 하 여이 리소스에 대 한 액세스 권한을 얻을 수 있습니다 [`GetManifestResourceStream`](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) [`Assembly`](xref:System.Reflection.Assembly) .
+포함 된 각 리소스에는 프로젝트 이름, 폴더 및 파일 이름으로 구성 되는 *리소스 ID* 가 있습니다. 여기에는 모두 마침표로 연결 됨: **SkiaSharpFormsDemos.Media.monkey.png**. 클래스의 메서드에 대 한 인수로 리소스 ID를 지정 하 여이 리소스에 대 한 액세스 권한을 얻을 수 있습니다 [`GetManifestResourceStream`](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) [`Assembly`](xref:System.Reflection.Assembly) .
 
 ```csharp
 string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";

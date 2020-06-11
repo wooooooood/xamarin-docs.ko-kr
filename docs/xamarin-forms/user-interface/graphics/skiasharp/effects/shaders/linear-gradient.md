@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 43aa429046c1b0f72a1cbe6a5b921da9b8907a49
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132225"
+제목: "SkiaSharp 선형 그라데이션" 설명: "두 색의 점진적 혼합으로 구성 된 그라데이션을 사용 하 여 선 또는 채우기 영역을 스트로크 하는 방법을 알아봅니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 20A2A8C4-FEB7-478D-BF57-C92E26117B6A author: davidbritch: dabritch: 08/23/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="the-skiasharp-linear-gradient"></a>SkiaSharp 선형 그라데이션
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -103,7 +89,7 @@ public class CornerToCornerGradientPage : ContentPage
 
 `float`네 번째 인수로 지정 된 값 배열에는 색 배열과 일 대 일 대응 관계가 있습니다. 값은 이러한 색이 발생 하는 그라데이션 선을 따라 상대적인 위치를 표시 합니다. 여기서 0은 `Red` 그라데이션 선의 시작 부분에서 발생 함을 의미 하 고 1은 `Blue` 줄의 끝에서 발생 함을 의미 합니다. 숫자는 오름차순 이어야 하며 0에서 1 사이 여야 합니다. 해당 범위에 없으면 해당 범위에 맞게 조정 됩니다.
 
-배열의 두 값은 0과 1이 아닌 값으로 설정할 수 있습니다. 다음과 같이 해보세요.
+배열의 두 값은 0과 1이 아닌 값으로 설정할 수 있습니다. 다음을 실행해보세요.
 
 ```csharp
 new float[] { 0.25f, 0.75f }
@@ -620,7 +606,7 @@ public class RainbowGradientPage : ContentPage
 }
 ```
 
-메서드의 두 그라데이션 지점은 `CreateLinearGradient` 이 경로를 정의 하는 두 개의 점에 기반 합니다. 두 점이 모두 왼쪽 위 모퉁이에 가깝습니다. 첫 번째는 캔버스의 위쪽 가장자리에 있고, 두 번째는 캔버스의 왼쪽 가장자리에 있습니다. 결과:
+메서드의 두 그라데이션 지점은 `CreateLinearGradient` 이 경로를 정의 하는 두 개의 점에 기반 합니다. 두 점이 모두 왼쪽 위 모퉁이에 가깝습니다. 첫 번째는 캔버스의 위쪽 가장자리에 있고, 두 번째는 캔버스의 왼쪽 가장자리에 있습니다. 결과는 다음과 같습니다.
 
 [![무지개 오류가 잘못 되었습니다.](linear-gradient-images/RainbowGradientFaulty.png "무지개 오류가 잘못 되었습니다.")](linear-gradient-images/RainbowGradientFaulty-Large.png#lightbox)
 

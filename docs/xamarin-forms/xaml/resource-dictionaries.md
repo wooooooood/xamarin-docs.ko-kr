@@ -1,23 +1,8 @@
 ---
-title: Xamarin.Forms리소스 사전
-description: Xamarin.FormsXAML 리소스는 응용 프로그램 전체에서 공유 하 고 다시 사용할 수 있는 개체입니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.custom: ''
-ms.openlocfilehash: a1c7cfd4a0f3549b11ac51dc13b40da552f6b758
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139414"
+제목: " Xamarin.Forms 리소스 사전" 설명: " Xamarin.Forms XAML 리소스는 응용 프로그램 전체에서 공유 하 고 다시 사용할 수 있는 개체 Xamarin.Forms 입니다."
+assetid: DF103686-4A92-40FA-9CF1-A9376293B13C: xamarin-forms author: davidbritch: dabritch:: 04/01/2020 no loc: [ Xamarin.Forms , Xamarin.Essentials ] ms. custom: video
 ---
+
 # <a name="xamarinforms-resource-dictionaries"></a>Xamarin.Forms리소스 사전
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
@@ -238,7 +223,7 @@ Xamarin.Forms응용 프로그램에는에서 파생 된 클래스만 포함 [`Ap
 
 - [리소스 사전 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 - [XAML 태그 확장](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Xamarin.Forms유형이](~/xamarin-forms/user-interface/styles/index.md)
+- [Xamarin.Forms 스타일](~/xamarin-forms/user-interface/styles/index.md)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 
 ## <a name="related-video"></a>관련 동영상

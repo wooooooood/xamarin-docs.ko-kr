@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCollectionView 데이터
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e381184271d4a7bfa9872d2502d2281b1f3864bf
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134565"
+제목: " Xamarin.Forms CollectionView data" description: "system.windows.controls.itemscontrol.itemssource 속성을 IEnumerable을 구현 하는 컬렉션으로 설정 하 여 CollectionView를 데이터로 채웁니다."
+assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8: xamarin-forms author: davidbritch: dabritch:: 04/29/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-collectionview-data"></a>Xamarin.FormsCollectionView 데이터
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
@@ -104,7 +90,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 > [!NOTE]
 > 컴파일된 바인딩을 사용 하면 응용 프로그램에서 데이터 바인딩 성능을 향상 시킬 수 있습니다 Xamarin.Forms . 자세한 내용은 [컴파일된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)을 참조하세요.
 
-데이터 바인딩에 대 한 자세한 내용은 [ Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조 하세요.
+데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
 
 ## <a name="define-item-appearance"></a>항목 모양 정의
 
@@ -192,7 +178,7 @@ public class Monkey
 
 [![IOS 및 Android에서 각 항목이 템플릿 인 CollectionView의 스크린샷](populate-data-images/datatemplate.png "CollectionView의 템플릿 항목")](populate-data-images/datatemplate-large.png#lightbox "CollectionView의 템플릿 항목")
 
-데이터 템플릿에 대 한 자세한 내용은 [ Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조 하세요.
+데이터 템플릿에 대한 자세한 내용은 [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조하세요.
 
 ## <a name="choose-item-appearance-at-runtime"></a>런타임에 항목 모양 선택
 
@@ -427,6 +413,6 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 - [CollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Xamarin.FormsRefreshView](~/xamarin-forms/user-interface/refreshview.md)
 - [Xamarin.FormsSwipeView](~/xamarin-forms/user-interface/swipeview.md)
-- [Xamarin.Forms데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Xamarin.Forms데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [DataTemplateSelector 만들기 Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

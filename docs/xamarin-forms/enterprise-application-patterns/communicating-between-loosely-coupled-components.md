@@ -1,22 +1,7 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c35cd6e30e7843cda0431581025aa7440a21cc29
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140051"
+제목: "느슨하게 결합 된 구성 요소 간 통신" 설명: "이 장은 eShopOnContainers mobile 앱이 게시-구독 패턴을 구현 하는 방법을 설명 합니다. 개체 및 형식 참조로 연결 하기 불편 한 구성 요소 간에 메시지 기반 통신을 허용 하면" ms. prod: xamarin assetid: 1194af33-8a91-48d2-88b5-b84d77f2ce6ms. 기술: xamarin-forms author: davidbritch m. author: dabritch: 08/07/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="communicating-between-loosely-coupled-components"></a>느슨하게 결합된 구성 요소 간 통신
 
 게시-구독 패턴은 게시자가 구독자로 알려진 수신자를 몰라도 메시지를 보내는 메시징 패턴입니다. 마찬가지로 구독자는 게시자를 전혀 알지 못해도 특정 메시지를 수신 대기합니다.
@@ -25,17 +10,17 @@ ms.locfileid: "84140051"
 
 ## <a name="introduction-to-messagingcenter"></a>MessagingCenter 소개
 
-Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스는 게시-구독 패턴을 구현 하 여 개체 및 형식 참조로 연결 하기 불편 한 구성 요소 간에 메시지 기반 통신을 허용 합니다. 이 메커니즘을 통해 게시자와 구독자는 서로에 대 한 참조 없이 통신할 수 있으며, 구성 요소 간의 종속성을 줄이고 구성 요소를 독립적으로 개발 하 고 테스트할 수 있습니다.
+Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스는 게시-구독 패턴을 구현하여 개체 및 형식 참조로 연결하기 불편한 구성 요소 사이의 메시지 기반 통신을 허용합니다. 이 메커니즘을 통해 게시자와 구독자는 서로에 대 한 참조 없이 통신할 수 있으며, 구성 요소 간의 종속성을 줄이고 구성 요소를 독립적으로 개발 하 고 테스트할 수 있습니다.
 
-[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter)클래스는 멀티 캐스트 게시-구독 기능을 제공 합니다. 즉, 단일 메시지를 게시 하는 여러 게시자가 있을 수 있으며 동일한 메시지를 수신 대기 하는 여러 구독자가 있을 수 있습니다. 그림 4-1에서는이 관계를 보여 줍니다.
+[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스에서는 멀티캐스트 게시-구독 기능을 제공합니다. 즉, 단일 메시지를 게시 하는 여러 게시자가 있을 수 있으며 동일한 메시지를 수신 대기 하는 여러 구독자가 있을 수 있습니다. 그림 4-1에서는이 관계를 보여 줍니다.
 
 ![](communicating-between-loosely-coupled-components-images/messagingcenter.png "Multicast publish-subscribe functionality")
 
 **그림 4-1:** 멀티 캐스트 게시-구독 기능
 
-게시자는 메서드를 사용 하 여 메시지 [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) 를 보내며, 구독자는 메서드를 사용 하 여 메시지를 수신 대기 [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) 합니다. 또한 구독자는 필요한 경우 메서드를 사용 하 여 메시지 구독에서 구독을 취소할 수 있습니다 [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) .
+게시자는 [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) 메서드를 사용하여 메시지를 보내는 한편, 구독자는 [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) 메서드를 사용하여 메시지를 수신 대기합니다. 또한 구독자는 필요한 경우 [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) 메서드를 사용하여 메시지 구독을 구독 취소할 수도 있습니다.
 
-내부적으로 [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스는 약한 참조를 사용 합니다. 즉, 개체가 활성 상태로 유지되지 않으며 가비지 수집될 수 있습니다. 따라서 클래스가 더 이상 메시지를 받지 않으려는 경우에만 메시지의 구독을 취소해야 합니다.
+내부적으로 [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스에서는 약한 참조를 사용합니다. 즉, 개체가 활성 상태로 유지되지 않으며 가비지 수집될 수 있습니다. 따라서 클래스가 더 이상 메시지를 받지 않으려는 경우에만 메시지의 구독을 취소해야 합니다.
 
 EShopOnContainers 모바일 앱은 클래스를 사용 하 여 [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 느슨하게 결합 된 구성 요소 간에 통신 합니다. 앱은 세 개의 메시지를 정의 합니다.
 
@@ -75,7 +60,7 @@ public class MessengerKeys
 
 ## <a name="publishing-a-message"></a>메시지 게시
 
-게시자는 오버 로드 중 하나를 사용 하 여 구독자에 게 메시지를 알립니다 [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) . 다음 코드 예제에서는 메시지를 게시 하는 방법을 보여 줍니다 `AddProduct` .
+게시자는 [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) 오버로드 중 하나로 구독자에게 메시지를 알립니다. 다음 코드 예제에서는 메시지를 게시 하는 방법을 보여 줍니다 `AddProduct` .
 
 ```csharp
 MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
@@ -94,7 +79,7 @@ MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
 
 ## <a name="subscribing-to-a-message"></a>메시지 구독
 
-구독자는 오버 로드 중 하나를 사용 하 여 메시지를 받도록 등록할 수 있습니다 [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) . 다음 코드 예제에서는 eShopOnContainers mobile 앱이 메시지를 구독 하 고 처리 하는 방법을 보여 줍니다 `AddProduct` .
+구독자는 [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) 오버로드 중 하나를 사용하여 메시지를 받도록 등록할 수 있습니다. 다음 코드 예제에서는 eShopOnContainers mobile 앱이 메시지를 구독 하 고 처리 하는 방법을 보여 줍니다 `AddProduct` .
 
 ```csharp
 MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
@@ -111,7 +96,7 @@ MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(
 > [!TIP]
 > 변경할 수 없는 페이로드 데이터를 사용 하는 것이 좋습니다. 여러 스레드가 받은 데이터에 동시에 액세스할 수 있으므로 콜백 대리자 내에서 페이로드 데이터를 수정 하지 마세요. 이 시나리오에서는 동시성 오류가 발생 하지 않도록 페이로드 데이터를 변경할 수 없습니다.
 
-구독자는 게시 된 메시지의 모든 인스턴스를 처리할 필요가 없으며이는 메서드에 지정 된 제네릭 형식 인수에 의해 제어 될 수 있습니다 [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) . 이 예에서 구독자는 `AddProduct` `CatalogViewModel` 페이로드 데이터가 인스턴스인 클래스에서 전송 된 메시지만 받습니다 `CatalogItem` .
+구독자는 게시된 메시지의 모든 인스턴스를 처리할 필요가 없으며 이는 [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) 메서드에 지정된 제네릭 형식 인수를 통해 제어할 수 있습니다. 이 예에서 구독자는 `AddProduct` `CatalogViewModel` 페이로드 데이터가 인스턴스인 클래스에서 전송 된 메시지만 받습니다 `CatalogItem` .
 
 ## <a name="unsubscribing-from-a-message"></a>메시지에서 구독 취소
 
@@ -125,7 +110,7 @@ MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys
 
 ## <a name="summary"></a>요약
 
-Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스는 게시-구독 패턴을 구현 하 여 개체 및 형식 참조로 연결 하기 불편 한 구성 요소 간에 메시지 기반 통신을 허용 합니다. 이 메커니즘을 통해 게시자와 구독자는 서로에 대 한 참조 없이 통신할 수 있으며, 구성 요소 간의 종속성을 줄이고 구성 요소를 독립적으로 개발 하 고 테스트할 수 있습니다.
+Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스는 게시-구독 패턴을 구현하여 개체 및 형식 참조로 연결하기 불편한 구성 요소 사이의 메시지 기반 통신을 허용합니다. 이 메커니즘을 통해 게시자와 구독자는 서로에 대 한 참조 없이 통신할 수 있으며, 구성 요소 간의 종속성을 줄이고 구성 요소를 독립적으로 개발 하 고 테스트할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

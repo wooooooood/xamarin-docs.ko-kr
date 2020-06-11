@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d9fa710f5dfc61c2892b8fc409a39b37cf449018
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136307"
+제목: "SkiaSharp 효과" 설명: "그라데이션을 사용 하 여 그래픽의 일반적인 표시를 변경 하는 방법, 비트맵 바둑판식 배열, blend 모드, 흐림 효과 및 기타 효과를 알아봅니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: B3E06572-8E2A-49FA-90D1-444C394CD516 author: davidbritch: dabritch: 08/22/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="skiasharp-effects"></a>SkiaSharp 효과
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

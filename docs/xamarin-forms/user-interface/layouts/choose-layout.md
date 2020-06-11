@@ -1,22 +1,8 @@
 ---
-title: 레이아웃 선택 Xamarin.Forms
-description: Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 UI 컨트롤을 정렬 하 고 그룹화 할 수 있습니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 16a48423d05ce1cede75c0020bf18f4f398f5adc
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138504"
+제목: "레이아웃 선택 Xamarin.Forms " 설명: " Xamarin.Forms 레이아웃 클래스를 사용 하 여 응용 프로그램에서 UI 컨트롤을 정렬 하 고 그룹화 할 수 있습니다."
+assetid: 05A39752-A174-447E-A30D-3CC9EF98CB96: xamarin-forms author: davidbritch: dabritch:: 08/21/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="choose-a-xamarinforms-layout"></a>레이아웃 선택 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
@@ -78,7 +64,7 @@ Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 U
 
 자세한 내용은 [ Xamarin.Forms stacklayout](stacklayout.md)을 참조 하세요.
 
-## <a name="grid"></a>그리드
+## <a name="grid"></a>표
 
 는 [`Grid`](xref:Xamarin.Forms.Grid) 비례 또는 절대 크기를 가질 수 있는 행 및 열에 요소를 표시 하는 데 사용 됩니다. 표의 행과 열은 및 속성을 사용 하 여 지정 됩니다 [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) .
 
@@ -203,7 +189,7 @@ Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 U
 는 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) 자식에 크기를 적용할 수 있거나 요소의 크기가 다른 자식의 위치 지정에 영향을 주지 않는 경우에만 사용 되는 특수 한 용도의 레이아웃으로 간주 되어야 합니다. 이 레이아웃의 표준 사용은 다른 컨트롤과 페이지를 포함 하는 오버레이를 만들어 사용자가 페이지의 일반 컨트롤과 상호 작용 하지 못하도록 하는 것입니다.
 
 > [!IMPORTANT]
-> `HorizontalOptions`및 `VerticalOptions` 속성은의 자식에는 영향을 주지 않습니다 `AbsoluteLayout` .
+> `HorizontalOptions` 및 `VerticalOptions` 속성은 `AbsoluteLayout`의 자식에 영향을 주지 않습니다.
 
 내에서 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) 연결 된 [`AbsoluteLayout.LayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) 속성은 요소의 가로 위치, 세로 위치, 너비 및 높이를 지정 하는 데 사용 됩니다. 또한 [`AbsoluteLayout.LayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty) 연결 된 속성은 레이아웃 경계가 해석 되는 방법을 지정 합니다.
 

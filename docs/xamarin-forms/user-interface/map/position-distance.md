@@ -1,9 +1,6 @@
 ---
-제목: ' Xamarin.Forms Map Position And Distance ' description: ' Xamarin.Forms . Maps 네임 스페이스는 지도와 해당 핀의 위치를 지정할 때 일반적으로 사용 되는 위치 구조체와 지도를 배치할 때 선택적으로 사용할 수 있는 거리 구조체를 포함 합니다.
-ms. prod: assetid: ms. 기술: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+제목: " Xamarin.Forms 지도 위치 및 거리" 설명: " Xamarin.Forms . Maps 네임 스페이스는 지도와 해당 핀의 위치를 지정할 때 일반적으로 사용 되는 위치 구조체와 지도를 배치할 때 선택적으로 사용할 수 있는 거리 구조체를 포함 합니다. "
+assetid: 2F4EA3D2-1351-40AD-A71D-CF7F1F18F1E8: xamarin-forms author: davidbritch: dabritch:: 03/10/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
 
 # <a name="xamarinforms-map-position-and-distance"></a>Xamarin.Forms지도 위치 및 거리

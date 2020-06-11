@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 transform transform을 사용 하 여 응용 프로그램에서 SkiaSharp 그래픽을 이동 하는 방법을 살펴보고 Xamarin.Forms 샘플 코드를 사용 하 여이를 보여 줍니다.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 0eb3b4a6b37d59363984c9248cc39de91a6819e0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138257"
+제목: "변환 변환" 설명: "이 문서에서는 transform transform을 사용 하 여 응용 프로그램에서 SkiaSharp 그래픽을 이동 하는 방법을 살펴보고 Xamarin.Forms 샘플 코드를 사용 하 여이를 보여 줍니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: BD28ADA1-49F9-44E2-A548-46024A29882F author: davidbritch: dabritch: 03/10/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="the-translate-transform"></a>좌표 이동 변환
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -215,7 +201,7 @@ public class HendecagramArrayPage : ContentPage
 
 ```
 
-결과:
+결과는 다음과 같습니다.
 
 [![](translate-images/hendecagramarray-small.png "Triple screenshot of the Hendecagram Array page")](translate-images/hendecagramarray-large.png#lightbox "Triple screenshot of the Hendecagram Array page")
 

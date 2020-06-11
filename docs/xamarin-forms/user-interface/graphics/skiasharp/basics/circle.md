@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 응용 프로그램에서 캔버스 및 그리기 개체를 비롯 한 SkiaSharp drawing의 기본 사항을 설명 Xamarin.Forms 하 고 샘플 코드를 사용 하 여이를 보여 줍니다.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: fb873102bfb8568b8298a39ea2429fb6c27af175
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137724"
+제목: "SkiaSharp에서 간단한 원 그리기" 설명: "이 문서에서는 캔버스 및 그리기 개체를 비롯 한 SkiaSharp Drawing의 기본 사항을 Xamarin.Forms 응용 프로그램에 설명 하 고 샘플 코드를 사용 하 여이를 보여 줍니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8 author: davidbritch: dabritch: 03/10/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>SkiaSharp에서 간단한 원 그리기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -63,8 +49,8 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [`SKPaintSurfaceEventArgs`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs)이벤트와 함께 제공 되는 개체에는 두 가지 속성이 있습니다.
 
-- [`Info`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Info)유형[`SKImageInfo`](xref:SkiaSharp.SKImageInfo)
-- [`Surface`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Surface)유형[`SKSurface`](xref:SkiaSharp.SKSurface)
+- [`Info`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Info)([`SKImageInfo`](xref:SkiaSharp.SKImageInfo) 형식)
+- [`Surface`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Surface)([`SKSurface`](xref:SkiaSharp.SKSurface) 형식)
 
 구조에는 `SKImageInfo` 그리기 화면에 대 한 정보 (가장 중요 한 것은 너비 및 높이 픽셀)가 포함 됩니다. `SKSurface`개체는 그리기 화면 자체를 나타냅니다. 이 프로그램에서 그리기 화면은 비디오 표시 이지만 다른 프로그램에서 `SKSurface` 개체는 SkiaSharp을 사용 하 여 그릴 때 사용 하는 비트맵을 나타낼 수도 있습니다.
 

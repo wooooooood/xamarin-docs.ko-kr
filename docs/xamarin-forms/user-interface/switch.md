@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms바꿀
-description: Xamarin.Forms스위치는 사용자가 설정 및 해제 상태를 전환 하기 위해 조작할 수 있는 단추 유형입니다. 이 문서에서는 Switch 클래스를 사용 하 여 토글 UI 요소를 표시 하는 방법을 설명 합니다.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a5c2583b7632acdfa7d8439dc96b3964fa3cfcab
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136242"
+제목: " Xamarin.Forms switch" description: " Xamarin.Forms 스위치는 사용자가 설정 및 해제 상태를 전환 하기 위해 조작할 수 있는 단추의 유형입니다. 이 문서에서는 Switch 클래스를 사용 하 여 토글 UI 요소를 표시 하는 방법을 설명 합니다.
+assetId: B2F9CC65-481B-4323-8E77-C6BE29C90DE9: xamarin-forms author: profexorgeek: jusjohns:: 07/18/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-switch"></a>Xamarin.Forms바꿀
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
@@ -130,4 +116,4 @@ switchControl.Toggled += (sender, e) =>
 ## <a name="related-links"></a>관련 링크
 
 * [데모 전환](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
-* [Xamarin.FormsInstead](~/xamarin-forms/app-fundamentals/triggers.md)
+* [Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)

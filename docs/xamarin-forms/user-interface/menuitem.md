@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsMenuItem
-description: ''
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: de8c6bff2c9dc72821692708f5852cd874c31ede
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139206"
+제목: " Xamarin.Forms menuitem" description: "menuitem 클래스는 ListView 항목 상황에 맞는 메뉴 및 셸 응용 프로그램 플라이 아웃 메뉴와 같은 메뉴에 대 한 메뉴 항목을 만드는 데 사용 됩니다."
+assetId: 2655C21-6053-466D-A7F4-DE2BE36538F5 밀리초. 기술: xamarin forms author: profexorgeek m. author: jusjohns. 날짜: 08/01/2019 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-menuitem"></a>Xamarin.FormsMenuItem
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)

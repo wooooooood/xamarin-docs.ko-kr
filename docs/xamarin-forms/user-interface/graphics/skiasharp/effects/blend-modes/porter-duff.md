@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a1e6290c0f85b54c3fd8958bc43667714bdece20
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131055"
+제목: "Porter-Duff blend 모드" 설명: "Porter-Duff blend 모드를 사용 하 여 원본 및 대상 이미지에 따라 장면을 작성 합니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5 author: davidbritch: dabritch: 08/23/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="porter-duff-blend-modes"></a>Porter-Duff blend 모드
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -72,59 +58,21 @@ _디지털 이미지 합성_ (256 페이지), Porter 및 duff를 사용 하 여 
 SkiaSharp에 정의 된 14 Porter-Duff 모드는 다음과 같습니다. 다음 표에서는 위의 다이어그램에서 비어 있지 않은 세 영역 각각의 색을 표시 하는 방법을 보여 줍니다.
 
 | 모드       | 대상 | 교집합 | 원본 |
-| ---
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------|:---제목: 설명: ms. prod: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
-------:---| 제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
-------:---| 제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
----:| | `Clear`    |             |              |        | | `Src`      |             | 원본 | X | | `Dst`      | X | 대상 |        | | `SrcOver`  | X | 원본 | X | | `DstOver`  | X | 대상 | X | | `SrcIn`    |             | 원본 |        | | `DstIn`    |             | 대상 |        | | `SrcOut`   |             |              | X | | `DstOut`   | X |              |        | | `SrcATop`  | X | 원본 |        | | `DstATop`  |             | 대상 | X | | `Xor`      | X |              | X | | `Plus`     | X | 합계 | X | | `Modulate` |             | 제품 |        | 
+| ---------- |:-----------:|:------------:|:------:|
+| `Clear`    |             |              |        |
+| `Src`      |             | 원본       | X      |
+| `Dst`      | X           | 대상  |        |
+| `SrcOver`  | X           | 원본       | X      |
+| `DstOver`  | X           | 대상  | X      |
+| `SrcIn`    |             | 원본       |        |
+| `DstIn`    |             | 대상  |        |
+| `SrcOut`   |             |              | X      |
+| `DstOut`   | X           |              |        |
+| `SrcATop`  | X           | 원본       |        |
+| `DstATop`  |             | 대상  | X      |
+| `Xor`      | X           |              | X      |
+| `Plus`     | X           | 합계          | X      |
+| `Modulate` |             | 제품      |        | 
 
 이러한 혼합 모드는 대칭입니다. 원본 및 대상을 교환할 수 있으며 모든 모드를 계속 사용할 수 있습니다.
 
@@ -298,7 +246,7 @@ public class PorterDuffGridPage : ContentPage
 }
 ```
 
-결과:
+결과는 다음과 같습니다.
 
 [![Porter-Duff 그리드](porter-duff-images/PorterDuffGrid.png "Porter-Duff 그리드")](porter-duff-images/PorterDuffGrid-Large.png#lightbox)
 
@@ -320,11 +268,11 @@ canvas.Clear(SKColors.White);
 
 ## <a name="using-mattes-with-porter-duff"></a>Porter와 함께 매트 사용-Duff
 
-**Brick 합성** 페이지는 클래식 합성 작업의 예를 보여 줍니다. 제거 해야 하는 배경의 비트맵을 포함 하 여 여러 부분에서 그림을 조합 해야 합니다. 문제가 있는 배경의 **Seatedmonkey jpg** 비트맵은 다음과 같습니다.
+**Brick 합성** 페이지는 클래식 합성 작업의 예를 보여 줍니다. 제거 해야 하는 배경의 비트맵을 포함 하 여 여러 부분에서 그림을 조합 해야 합니다. 다음은 문제가 있는 배경의 **SeatedMonkey.jpg** 비트맵입니다.
 
 ![꽂혀 있는 원숭이](porter-duff-images/SeatedMonkey.jpg "꽂혀 있는 원숭이")
 
-합성을 준비 하는 경우 이미지를 표시 하 고 그렇지 않은 경우 검정색 인 또 다른 비트맵 인 해당 _매트가_ 생성 됩니다. 이 파일의 이름은 **Seatedmonkeymatte .png** 이 고 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **미디어** 폴더에 있는 리소스 중 하나입니다.
+합성을 준비 하는 경우 이미지를 표시 하 고 그렇지 않은 경우 검정색 인 또 다른 비트맵 인 해당 _매트가_ 생성 됩니다. 이 파일은 **SeatedMonkeyMatte.png** 으로 이름이 지정 되며 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **Media** 폴더에 있는 리소스 중 하나입니다.
 
 ![꽂혀 있는 원숭이 무광택](porter-duff-images/SeatedMonkeyMatte.png "꽂혀 있는 원숭이 무광택")
 
@@ -406,7 +354,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 [![Brick-벽 합성 0 단계](porter-duff-images/BrickWallCompositing0.png "Brick-벽 합성 0 단계")](porter-duff-images/BrickWallCompositing0-Large.png#lightbox)
 
-를 `Button` 한 번 누르면 `step` 1 씩 증가 하 고 처리기는 `PaintSurface` 이제 **seatedmonkey jpg**를 표시 합니다.
+를 `Button` 한 번 누르면 `step` 1 씩 증가 하 고 처리기는 `PaintSurface` 이제 **SeatedMonkey.jpg**를 표시 합니다.
 
 ```csharp
 public partial class BrickWallCompositingPage : ContentPage
@@ -432,7 +380,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 [![Brick-벽 합성 1 단계](porter-duff-images/BrickWallCompositing1.png "Brick-벽 합성 1 단계")](porter-duff-images/BrickWallCompositing1-Large.png#lightbox)
 
-를 `Button` 다시 누르고 `step` 2로 증가 합니다. 이는 **Seatedmonkeymatte .png** 파일을 표시 하는 중요 한 단계입니다.
+를 `Button` 다시 누르고 `step` 2로 증가 합니다. 이는 **SeatedMonkeyMatte.png** 파일을 표시 하는 중요 한 단계입니다.
 
 ```csharp
 public partial class BrickWallCompositingPage : ContentPage
@@ -550,32 +498,22 @@ RGB 색에는 알파 값이 미리 곱해집니다. 예를 들어 **Sc** 가 순
 
 결과는 대괄호 안에 알파 채널과 함께 표시 되 고 RGB 색은 쉼표 ( **[alpha, color])** 로 구분 됩니다. 색의 경우 빨간색, 녹색 및 파랑 구성 요소에 대해 별도로 계산이 수행 됩니다.
 
-| 모드       | 작업(Operation) |
-| ---
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | ---제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | | `Clear`    | [0, 0] | | `Src`      | [Sa, Sc] | | `Dst`      | [Da, Dc] | | `SrcOver`  | [Sa + Da · (1-Sa), Sc + Dc · (1-Sa) | | `DstOver`  | [Da + Sa · (1 – Da), Dc + Sc · (1 – Da) | | `SrcIn`    | Sa Da, Sc · Da] | | `DstIn`    | Da Sa, Dc · Sa] | | `SrcOut`   | Sa (1 – Da), Sc · (1 – Da)] | | `DstOut`   | Da (1-Sa), Dc · (1 – Sa)] | | `SrcATop`  | [Da, Sc · Da + Dc · (1 – Sa)] | | `DstATop`  | [Sa, Dc · Sa + Sc · (1 – Da)] | | `Xor`      | [Sa + Da – 2 · Sa Da, Sc · (1-Da) + Dc · (1 – Sa)] | | `Plus`     | [Sa + Da, Sc + Dc] | | `Modulate` | Sa Da, Sc · Dc] | 
+| 모드       | 연산 |
+| ---------- | --------- |
+| `Clear`    | [0, 0]    |
+| `Src`      | [Sa, Sc]  |
+| `Dst`      | [Da, Dc]  |
+| `SrcOver`  | [Sa + Da · (1-Sa), Sc + Dc · (1-Sa) | 
+| `DstOver`  | [Da + Sa · (1 – Da), Dc + Sc · (1 – Da) |
+| `SrcIn`    | Sa Da, Sc · Da |
+| `DstIn`    | Da Sa, Dc · Sa |
+| `SrcOut`   | Sa (1 – Da), Sc · (1 – Da)] |
+| `DstOut`   | Da (1-Sa), Dc · (1 – Sa)] |
+| `SrcATop`  | [Da, Sc · Da + Dc · (1 – Sa)] |
+| `DstATop`  | [Sa, Dc · Sa + Sc · (1 – Da)] |
+| `Xor`      | [Sa + Da – 2 · Sa Da, Sc · (1-Da) + Dc · (1 – Sa)] |
+| `Plus`     | [Sa + Da, Sc + Dc] |
+| `Modulate` | Sa Da, Sc · Dc | 
 
 이러한 작업은 **Da** 와 **Sa** 가 0 또는 1 일 때 분석 하기가 더 쉽습니다. 예를 들어 기본 모드의 `SrcOver` 경우 **Sa** 가 0 이면 **Sc** 도 0이 고 결과는 **[Da, Dc]**, 대상 알파 및 색입니다. **Sa** 가 1 이면 결과는 **[Sa, sc]**, 원본 알파 및 색 또는 **[1, sc]** 입니다.
 

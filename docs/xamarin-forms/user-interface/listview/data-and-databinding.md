@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 데이터를 사용 하 여 listview를 채우는 방법과 Xamarin.Forms listview에서 데이터 바인딩을 사용 하는 방법을 설명 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 38a895c9064fc012aec35b37eac78bb16ff009a9
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131510"
+제목: "ListView 데이터 원본" 설명: "이 문서에서는 listview를 데이터로 채우는 방법 Xamarin.Forms 및 listview에서 데이터 바인딩을 사용 하는 방법을 설명 합니다."
+assetid: B5571660-1E82-4379-95C3-0725288CF5D9: xamarin-forms author: davidbritch: dabritch:: 03/23/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="listview-data-sources"></a>ListView 데이터 원본
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)

@@ -1,23 +1,9 @@
 ---
-title: 전자책를 사용 하는 엔터프라이즈 응용 프로그램 패턴 Xamarin.Forms
-description: 이 전자책는 조정 가능 하 고, 유지 관리 가능 하 고, 테스트 가능한 Xamarin.Forms 엔터프라이즈 응용 프로그램을 개발 하기 위한 아키텍처 지침
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: cc0f98d94c76ff63e7a002dfb92b51eae153d7b4
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139401"
+제목: "전자책를 사용 하는 엔터프라이즈 응용 프로그램 패턴 Xamarin.Forms " 설명: "이 전자책는 융통성 있고, 유지 관리 가능 하며, 테스트 가능한 엔터프라이즈 응용 프로그램을 개발 하기 위한 아키텍처 지침을 제공 Xamarin.Forms 합니다
+assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832: xamarin-forms author: davidbritch: dabritch: ms. date: 08/07/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>전자책를 사용 하는 엔터프라이즈 응용 프로그램 패턴 Xamarin.Forms
+
+# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Xamarin.Forms 전자책을 사용한 엔터프라이즈 애플리케이션 패턴
 
 _조정 가능 하 고, 유지 관리 가능 하며, 테스트 가능한 Xamarin.Forms 엔터프라이즈 응용 프로그램을 개발 하기 위한 아키텍처 지침_
 
@@ -45,7 +31,7 @@ MVVM (모델-뷰-ViewModel) 패턴은 응용 프로그램의 비즈니스 및 �
 
 ## <a name="communicating-between-loosely-coupled-components"></a>[느슨하게 결합된 구성 요소 간 통신](communicating-between-loosely-coupled-components.md)
 
-Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스는 게시-구독 패턴을 구현 하 여 개체 및 형식 참조로 연결 하기 불편 한 구성 요소 간에 메시지 기반 통신을 허용 합니다. 이 메커니즘을 통해 게시자와 구독자는 서로에 대 한 참조 없이 통신할 수 있으며, 구성 요소 간의 종속성을 줄이고 구성 요소를 독립적으로 개발 하 고 테스트할 수 있습니다.
+Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스는 게시-구독 패턴을 구현하여 개체 및 형식 참조로 연결하기 불편한 구성 요소 사이의 메시지 기반 통신을 허용합니다. 이 메커니즘을 통해 게시자와 구독자는 서로에 대 한 참조 없이 통신할 수 있으며, 구성 요소 간의 종속성을 줄이고 구성 요소를 독립적으로 개발 하 고 테스트할 수 있습니다.
 
 ## <a name="navigation"></a>[탐색](navigation.md)
 
@@ -79,7 +65,7 @@ Xamarin.FormsASP.NET MVC 웹 응용 프로그램과 통신 하는 앱에 인증 
 
 MVVM 응용 프로그램에서 모델을 테스트 하 고 모델을 확인 하는 것은 다른 클래스를 테스트 하는 것과 동일 하며, 동일한 도구와 기법을 사용할 수 있습니다. 그러나 모델 클래스를 모델링 하 고 보는 데 일반적으로 사용할 수 있는 몇 가지 패턴이 있습니다. 이러한 패턴은 특정 유닛 테스트 기법을 활용 합니다.
 
-## <a name="feedback"></a>사용자 의견
+## <a name="feedback"></a>피드백
 
 이 프로젝트에는 질문을 게시 하 고 피드백을 제공할 수 있는 커뮤니티 사이트가 있습니다. 커뮤니티 사이트는 [GitHub](https://github.com/dotnet-architecture/eShopOnContainers)에 있습니다. 또는 전자책에 대 한 피드백을에 전자 메일로 보낼 수 있습니다 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com) .
 

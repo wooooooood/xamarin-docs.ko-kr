@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsProgressBar
-description: Xamarin.FormsProgressBar는 유동 속성을 기반으로 채워진 가로 막대로 진행률을 시각적으로 나타내는 컨트롤입니다.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b4ac6231c0483c0c44755c2ac9539f237dd64251
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136281"
+제목: " Xamarin.Forms progressbar" 설명: " Xamarin.Forms progressbar는 유동 속성을 기반으로 채워지는 가로 막대로 진행률을 시각적으로 나타내는 컨트롤입니다."
+assetId: C2F85FED-797C-466B-A0FD-E73CFB79B267: xamarin-forms author: profexorgeek: jusjohns:: 07/09/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-progressbar"></a>Xamarin.FormsProgressBar
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/)
 

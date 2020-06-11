@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms실험적 플래그
-description: Xamarin.Forms실험 플래그를 사용 하면 엔지니어링 팀에서 사용자에 게 새 기능을 보다 신속 하 게 제공할 수 있으며, 기능 Api를 안정적인 릴리스로 전환 하기 전에 변경할 수 있습니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b548323330ccdce6fb01e83c7e8ab7c2d5307125
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139063"
+제목: " Xamarin.Forms 실험적 플래그" 설명: " Xamarin.Forms 실험적 플래그를 사용 하면 엔지니어링 팀에서 사용자에 게 새로운 기능을 제공 하는 동시에 기능 api를 안정적인 릴리스로 전환 하기 전에 변경할 수 있습니다."
+assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2: xamarin-forms author: davidbritch: dabritch:: 04/14/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-experimental-flags"></a>Xamarin.Forms실험적 플래그
 
 새 Xamarin.Forms 기능이 구현 되 면 종종 실험적 플래그 뒤에 배치 됩니다. 이를 통해 엔지니어링 팀은 새로운 기능을 보다 신속 하 게 제공할 수 있으며, 기능 Api를 안정적인 릴리스로 전환 하기 전에 계속 해 서 변경할 수 있습니다. 그러면 기능이 안정적인 릴리스로 이동 되 면 실험적 플래그가 제거 됩니다.

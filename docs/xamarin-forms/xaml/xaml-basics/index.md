@@ -1,23 +1,8 @@
 ---
-title: Xamarin.FormsXAML 기본 사항
-description: 이 가이드에서는 모바일 장치용 플랫폼 간 XAML을 시작 하는 방법을 설명 합니다. 개발자는 XAML을 Xamarin.Forms 사용 하 여 코드 대신 태그를 사용 하 여 응용 프로그램에서 사용자 인터페이스를 정의할 수 있습니다.
-ms.prod: ''
-ms.custom: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8f5f69038f7d5cfe7ad46f013acb1519c4e9569f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138621"
+제목: " Xamarin.Forms XAML 기본 사항" 설명: "이 가이드에서는 모바일 장치에 대 한 플랫폼 간 XAML을 시작 하는 방법을 설명 합니다. 개발자는 XAML을 Xamarin.Forms 사용 하 여 코드 대신 태그를 사용 하 여 응용 프로그램에서 사용자 인터페이스를 정의할 수 있습니다. "
+ms. prod: xamarin ms. custom: video assetid: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF: xamarin-forms author: davidbritch: dabritch:: 10/25/2017-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.FormsXAML 기본 사항
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
@@ -62,7 +47,7 @@ XAML은 기본적으로 XML 이지만 XAML에는 몇 가지 고유한 구문 기
 
 - [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Mobile Apps 책 만들기](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
-- [Xamarin.Forms표본의](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Xamarin.Forms 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 
 ## <a name="related-video"></a>관련 동영상
 

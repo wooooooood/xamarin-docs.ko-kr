@@ -1,22 +1,8 @@
 ---
-title: 의 스타일 상속Xamarin.Forms
-description: 스타일은 다른 스타일에서 상속 하 여 중복을 줄이고 재사용을 가능 하 게 합니다. 이 문서에서는 응용 프로그램에서 스타일 상속을 수행 하는 방법을 설명 합니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 80cc419ae098f4a0cbbd782785c0ec5ba03fa703
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138959"
+제목: "설명:" 스타일 상속 Xamarin.Forms 은 다른 스타일에서 상속 하 여 중복을 줄이고 재사용을 가능 하 게 합니다. 이 문서에서는 응용 프로그램에서 스타일 상속을 수행 하는 방법을 설명 Xamarin.Forms 합니다. "
+assetid: 67A3A39C-8CC0-446D-8162-FFA73582D3B8 ms. 기술: xamarin-forms author: davidbritch: dabritch: ms. date: 02/17/2016 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="style-inheritance-in-xamarinforms"></a>의 스타일 상속Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
@@ -164,5 +150,5 @@ public class StyleInheritancePageCS : ContentPage
 - [기본 스타일 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 - [스타일 작업 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
-- [스타일](xref:Xamarin.Forms.Style)
+- [Style](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

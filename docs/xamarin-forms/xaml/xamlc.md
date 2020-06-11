@@ -1,22 +1,8 @@
 ---
-title: XAML 컴파일Xamarin.Forms
-description: 이 문서에서는 xaml을 Xamarin.Forms xaml 컴파일러 (XAMLC)를 사용 하 여 선택적으로 IL (중간 언어)로 직접 컴파일하는 방법을 설명 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: eebbb3040175118320639bcb4482ec77b5c16ac7
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137295"
+제목: "" 설명: "의 XAML 컴파일 Xamarin.Forms :이 문서는 xaml 컴파일러 (XAMLC)를 사용 하 여 xaml을 IL (중간 언어)로 직접 컴파일하는 방법을 설명 Xamarin.Forms 합니다.
+assetid: 9A2D10A6-5DFC-485F-A75A-2F7B98314025: xamarin-forms author: davidbritch: dabritch:: 08/22/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xaml-compilation-in-xamarinforms"></a>XAML 컴파일Xamarin.Forms
 
 _필요한 경우 XAML 컴파일러(XAMLC)를 사용하여 XAML을 중간 언어(IL)로 바로 컴파일할 수 있습니다._

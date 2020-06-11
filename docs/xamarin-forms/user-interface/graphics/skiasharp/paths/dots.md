@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8698bacd7257df431b12166c749f5826e8d6fd3c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138453"
+제목: "SkiaSharp의 점 및 대시" 설명: "이 문서에서는 SkiaSharp에서 점선 및 파선 그리기의 복잡 한 부분을 마스터 하는 방법을 알아보고 샘플 코드를 사용 하 여이를 보여 줍니다."
+assetid: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078: xamarin-skiasharp author: davidbritch: dabritch:: 03/10/2017:: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="dots-and-dashes-in-skiasharp"></a>SkiaSharp의 점 및 대시
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,22 +1,8 @@
 ---
-title: 응용 프로그램의 시스템 테마 변경 내용에 응답 Xamarin.Forms
-description: Xamarin.Forms응용 프로그램은 OnAppTheme 유형과 DynamicResource 태그 확장을 사용 하 여 운영 체제 테마 변경 내용에 응답할 수 있습니다.
-ms.assetid: ''
-ms.prod: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 2bb83f4ad5c30adccfc961938df64dda9cef1f6b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140064"
+제목: "응용 프로그램에서 시스템 테마 변경 내용에 대응 Xamarin.Forms " 설명: " Xamarin.Forms 응용 프로그램이 onapptheme 유형 및 DynamicResource 태그 확장을 사용 하 여 운영 체제 테마 변경 내용에 응답할 수 있습니다."
+assetid: D10506DD-BAA0-437F-A4AD-882D16E7B60D: xamarin: xamarin. 기술: xamarin 양식 작성자: davidbritch: dabritch. 날짜: 04/22/2020 안 함: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="respond-to-system-theme-changes-in-xamarinforms-applications"></a>응용 프로그램의 시스템 테마 변경 내용에 응답 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
@@ -195,4 +181,4 @@ Application.Current.RequestedThemeChanged += (s, a) =>
 - [OnAppTheme 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onapptheme-markup-extension)
 - [리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [의 동적 스타일Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
-- [Xamarin.FormsXAML 스타일을 사용 하 여 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)
+- [XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)

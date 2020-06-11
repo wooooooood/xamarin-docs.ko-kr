@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsIndicatorView
-description: ''
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a6bf11fd80dd5226ae26dd392e80f784a9b296bf
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131991"
+제목: " Xamarin.Forms IndicatorView" description: "IndicatorView은 CarouselView에 있는 항목의 수 및 현재 위치를 나타내는 표시기를 표시 하는 컨트롤입니다."
+assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2: xamarin-forms author: davidbritch: dabritch:: 02/27/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-indicatorview"></a>Xamarin.FormsIndicatorView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

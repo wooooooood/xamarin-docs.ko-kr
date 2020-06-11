@@ -1,27 +1,13 @@
 ---
-title: Xamarin.FormsCollectionView 소개
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d6a09ead9c3def2f58ad2755de4574f6d6e331e8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136437"
+제목: " Xamarin.Forms CollectionView 소개" 설명: "CollectionView는 서로 다른 레이아웃 사양을 사용 하 여 데이터 목록을 표시 하기 위한 유연 하 고 성능이 뛰어난 뷰입니다."
+assetid: 5C08F687-B9E6-4CE4-8726-F287F6D0B6A7 ms. 기술: xamarin forms author: davidbritch: dabritch: ms. date: 12/11/2019 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-collectionview-introduction"></a>Xamarin.FormsCollectionView 소개
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)는 다른 레이아웃 사양을 사용 하 여 데이터 목록을 표시 하는 뷰입니다. 보다 유연 하 고 성능이 뛰어난 대안을 제공 하는 것을 목표로 [`ListView`](xref:Xamarin.Forms.ListView) 합니다. 예를 들어 다음 스크린샷은 `CollectionView` 두 열 세로 그리드를 사용 하 고 여러 항목을 선택할 수 있는을 보여 줍니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)는 다른 레이아웃 사양을 사용하여 데이터 목록을 표시하는 뷰입니다. 보다 유연 하 고 성능이 뛰어난 대안을 제공 하는 것을 목표로 [`ListView`](xref:Xamarin.Forms.ListView) 합니다. 예를 들어 다음 스크린샷은 `CollectionView` 두 열 세로 그리드를 사용 하 고 여러 항목을 선택할 수 있는을 보여 줍니다.
 
 [![IOS 및 Android에서 CollectionView 세로 격자 레이아웃의 스크린샷](introduction-images/verticalgrid-multipleselection.png "여러 항목을 선택 하 여 세로 모눈 레이아웃 CollectionView")](introduction-images/verticalgrid-multipleselection-large.png#lightbox "여러 항목을 선택 하 여 세로 모눈 레이아웃 CollectionView")
 
@@ -52,7 +38,7 @@ ms.locfileid: "84136437"
 | 항목 모양 | `ItemTemplate` | 에서 각 항목의 모양은 속성을 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 로 설정 하 여 정의할 수 있습니다 `ItemTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) . 자세한 내용은 [항목 모양 정의](populate-data.md#define-item-appearance)를 참조 하세요. |
 | 셀 | `TextCell`, `ImageCell`, `ViewCell` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)에는 셀 개념이 없으므로 공개 표시기의 개념이 없습니다. 대신 데이터 템플릿을 사용 하 여 목록에 있는 각 데이터 항목의 모양을 정의 합니다. |
 | 행 구분 기호 | `SeparatorColor`, `SeparatorVisibility` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)에는 기본 제공 구분 기호가 포함 되어 있지 않습니다. 이러한 항목은 원하는 경우 항목 템플릿에서 제공 될 수 있습니다. |
-| 선택 영역 | `SelectionMode`, `SelectedItem` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)단일 및 다중 선택을 지원 합니다. 자세한 내용은 [ Xamarin.Forms CollectionView Selection](selection.md)을 참조 하세요. |
+| 선택 | `SelectionMode`, `SelectedItem` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)단일 및 다중 선택을 지원 합니다. 자세한 내용은 [ Xamarin.Forms CollectionView Selection](selection.md)을 참조 하세요. |
 | 행 높이 | `HasUnevenRows`, `RowHeight` | 에서 `CollectionView` 각 항목의 행 높이는 속성에 의해 결정 됩니다 `ItemSizingStrategy` . 자세한 내용은 [항목 크기 조정](layout.md#item-sizing)을 참조 하세요.|
 | 캐싱 | `CachingStrategy` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)기본 네이티브 컨트롤에서 제공 하는 가상화를 자동으로 사용 합니다. |
 | 머리글 및 바닥글 | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)는 `Header` ,, `Footer` `HeaderTemplate` 및 속성을 통해 목록의 항목으로 스크롤 하는 머리글 및 바닥글을 제공할 수 있습니다 `FooterTemplate` . 자세한 내용은 [머리글 및 바닥글](layout.md#headers-and-footers)을 참조 하세요. |

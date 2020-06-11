@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 SkiaSharp 그래픽과 텍스트를 응용 프로그램에 통합 하기 위해 렌더링 된 텍스트 문자열의 크기를 결정 하는 방법을 설명 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 줍니다.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: ee97ee2aae11e4e54a0d25e80ffd7bce301fa2f3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137685"
+제목: "텍스트 및 그래픽 통합" 설명: "이 문서에서는 SkiaSharp 그래픽과 텍스트를 응용 프로그램에 통합 하기 위해 렌더링 된 텍스트 문자열의 크기를 결정 하는 방법을 설명 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 줍니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C author: davidbritch: dabritch: 03/10/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="integrating-text-and-graphics"></a>텍스트와 그래픽 통합
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4eea7d500876793357113453493fa2fe2ede6cc4
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140020"
+제목: "호를 그리는 세 가지 방법" 설명: "이 문서에서는 SkiaSharp를 사용 하 여 세 가지 다른 방법으로 원호를 정의 하 고 샘플 코드를 사용 하 여이를 보여 주는 방법을 설명 합니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: F1DA55E4-0182-4388-863C-5C340213BF3C author: davidbritch: dabritch: 05/10/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="three-ways-to-draw-an-arc"></a>원호를 그리는 3가지 방법
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

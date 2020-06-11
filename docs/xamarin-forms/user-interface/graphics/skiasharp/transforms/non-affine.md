@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 91a639b2d3c2f6a8437a09a70808dc6d793ba76b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131757"
+제목: "비 상관 변환" 설명: "이 문서에서는 transform 행렬의 세 번째 열을 사용 하 여 원근 및 테이퍼 효과를 만드는 방법에 대해 설명 하 고 샘플 코드를 사용 하 여이를 보여 줍니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1 author: davidbritch: dabritch: 04/14/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="non-affine-transforms"></a>비아핀(Non-Affine) 변환
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -395,7 +381,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-예를 들어 다음과 같은 노래를 선택할 수 있다.
+몇 가지 예제는 다음과 같습니다.
 
 [![](non-affine-images/tapertransform-small.png "Triple screenshot of the Taper Transform page")](non-affine-images/tapertransform-large.png#lightbox "Triple screenshot of the Taper Transform page")
 

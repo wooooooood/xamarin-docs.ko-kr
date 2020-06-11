@@ -1,22 +1,8 @@
 ---
-title: 바인딩 가능한 레이아웃Xamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9d0497c0c0593b54f69bac84307976c4050e9c95
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138244"
+제목: "설명:" 바인딩 가능한 레이아웃을 Xamarin.Forms 사용 하면 각 항목의 모양을 설정 하는 옵션을 사용 하 여 항목 컬렉션에 바인딩하여 레이아웃 클래스에서 콘텐츠를 생성할 수 있습니다. "라는 DataTemplate.
+assetid: 824C3319-20A0-42D0-8632-CDECD98349C3: xamarin-forms author: davidbritch: dabritch:: 03/09/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="bindable-layouts-in-xamarinforms"></a>바인딩 가능한 레이아웃Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
@@ -98,7 +84,7 @@ BindableLayout.SetItemTemplate(stackLayout, circleImageTemplate);
 
 ![DataTemplate를 사용 하 여 바인딩 가능한 레이아웃](bindable-layouts-images/top-followers.png "데이터 템플릿을 사용 하 여 바인딩 가능한 레이아웃")
 
-데이터 템플릿에 대 한 자세한 내용은 [ Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조 하세요.
+데이터 템플릿에 대한 자세한 내용은 [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조하세요.
 
 ## <a name="choose-item-appearance-at-runtime"></a>런타임에 항목 모양 선택
 

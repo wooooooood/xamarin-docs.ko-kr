@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 01f4fcf1953658af44d2a8996913860a3b605abf
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138660"
+제목: "SkiaSharp 비트맵을 파일에 저장" 설명: "SkiaSharp에서 지 원하는 다양 한 파일 형식에서 사용자의 사진 라이브러리에 비트맵을 저장 하는 방법을 알아봅니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C author: davidbritch: dabritch: 07/10/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="saving-skiasharp-bitmaps-to-files"></a>SkiaSharp 비트맵을 파일에 저장
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -176,7 +162,7 @@ public class PhotoLibrary : IPhotoLibrary
 
 에 대 한 호출은 반드시 `MediaScannerConnection.ScanFile` 필요한 것은 아니지만, 사진 라이브러리를 즉시 확인 하 여 프로그램을 테스트 하는 경우 라이브러리 갤러리 보기를 업데이트 하면 많은 도움이 됩니다.
 
-**Androidmanifest .xml** 파일에는 다음 사용 권한 태그가 필요 합니다.
+**AndroidManifest.xml** 파일에는 다음 사용 권한 태그가 필요 합니다.
 
 ```xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -456,17 +442,15 @@ public partial class SaveFileFormatsPage : ContentPage
 
 **파일 형식 저장** 페이지에서 저장 하는 비트맵은 600 픽셀 사각형입니다. 픽셀당 4 바이트를 사용 하 여 메모리에서 총 144만 바이트입니다. 다음 표에서는 다양 한 파일 형식 및 품질 조합의 파일 크기를 보여 줍니다.
 
-|서식|품질|Size|
-|---
-제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
----|---제목: 설명: ms. prod: assetid: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
----:|---:| | PNG | 해당 없음 | 492K | | JPEG | 0 | 2.95 k | |      | 50 | 22.1 k | |      | 100 | 206K | | WebP | 0 | 2.71 k | |      | 50 | 11.9 k | |      | 100 | 101K |
+|서식|품질|크기|
+|------|------:|---:|
+| PNG | 해당 없음 | 492K |
+| JPEG | 0 | 2.95 k |
+|      | 50 | 22.1 k |
+|      | 100 | 206K |
+| WebP | 0 | 2.71 k |
+|      | 50 | 11.9 k |
+|      | 100 | 101K |
 
 다양 한 품질 설정으로 실험 하 고 결과를 검토할 수 있습니다.
 

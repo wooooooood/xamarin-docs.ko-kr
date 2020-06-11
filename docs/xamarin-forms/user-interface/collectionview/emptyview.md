@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCollectionView EmptyView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d35e39e55d66452e47c7a3e3faf86a7a7d6adaca
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136495"
+제목: " Xamarin.Forms CollectionView EmptyView" description: "CollectionView에서 표시할 수 있는 데이터가 없는 경우 사용자에 게 피드백을 제공 하는 빈 뷰를 지정할 수 있습니다. 빈 뷰는 문자열, 뷰 또는 여러 뷰가 될 수 있습니다. "
+assetid: 6CEBCFE6-5577-4F68-9709-431062609153: xamarin-forms author: davidbritch: dabritch:: 05/06/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-collectionview-emptyview"></a>Xamarin.FormsCollectionView EmptyView
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
@@ -33,7 +19,7 @@ ms.locfileid: "84136495"
 > [!NOTE]
 > [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView)필요한 경우 대화형 콘텐츠를 포함 하는 뷰로 속성을 설정할 수 있습니다.
 
-데이터 템플릿에 대 한 자세한 내용은 [ Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조 하세요.
+데이터 템플릿에 대한 자세한 내용은 [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조하세요.
 
 ## <a name="display-a-string-when-data-is-unavailable"></a>데이터를 사용할 수 없을 때 문자열 표시
 
@@ -332,5 +318,5 @@ public class SearchTermDataTemplateSelector : DataTemplateSelector
 
 - [CollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Xamarin.Forms데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Xamarin.Forms리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Xamarin.Forms 리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [DataTemplateSelector 만들기 Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

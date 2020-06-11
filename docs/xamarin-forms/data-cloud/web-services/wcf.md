@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 응용 프로그램에서 WCF SOAP (Simple Object Access Protocol) 서비스를 사용 하는 방법을 보여 줍니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: cf95427807e0179a608b428bc7e02499c9616fe7
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139154"
+제목: "Windows Communication Foundation (WCF) 웹 서비스 사용" 설명: "이 문서에서는 응용 프로그램에서 WCF SOAP (Simple Object Access Protocol) 서비스를 사용 하는 방법을 보여 줍니다 Xamarin.Forms ."
+assetid: 5696FF04-EF21-4B7A-8C8B-26DE28B5C0AD ms. 기술: xamarin-forms author: davidbritch: dabritch m. date: 03/28/2019 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>WCF (Windows Communication Foundation) 웹 서비스 사용
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
@@ -61,7 +47,7 @@ WCF 서비스는 다음과 같은 작업을 제공 합니다.
 
 응용 프로그램에서 사용 되는 데이터 모델에 대 한 자세한 내용은 [데이터 모델링](~/xamarin-forms/data-cloud/web-services/introduction.md)을 참조 하세요.
 
-응용 프로그램에서 서비스에 연결할 수 있도록 하는 WCF 서비스를 사용 하려면 *프록시가* 생성 되어야 합니다. 프록시는 메서드 및 관련 서비스 구성을 정의 하는 서비스 메타 데이터를 사용 하 여 생성 됩니다. 이 메타 데이터는 웹 서비스에 의해 생성 된 WSDL (웹 서비스 기술 언어) 문서의 형식으로 노출 됩니다. Visual Studio 2017의 Microsoft WCF Web Service Reference Provider를 사용 하 여 프록시를 빌드하여 웹 서비스에 대 한 서비스 참조를 .NET Standard 라이브러리에 추가할 수 있습니다. Visual Studio 2017에서 Microsoft WCF Web Service Reference Provider를 사용 하 여 프록시를 만드는 대안은 ServiceModel Metadata 유틸리티 도구 (svcutil.exe)를 사용 하는 것입니다. 자세한 내용은 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/)를 참조 하세요.
+응용 프로그램에서 서비스에 연결할 수 있도록 하는 WCF 서비스를 사용 하려면 *프록시가* 생성 되어야 합니다. 프록시는 메서드 및 관련 서비스 구성을 정의 하는 서비스 메타 데이터를 사용 하 여 생성 됩니다. 이 메타 데이터는 웹 서비스에 의해 생성 된 WSDL (웹 서비스 기술 언어) 문서의 형식으로 노출 됩니다. Visual Studio 2017의 Microsoft WCF Web Service Reference Provider를 사용 하 여 프록시를 빌드하여 웹 서비스에 대 한 서비스 참조를 .NET Standard 라이브러리에 추가할 수 있습니다. Visual Studio 2017에서 Microsoft WCF Web Service Reference Provider를 사용 하 여 프록시를 만드는 대안은 ServiceModel Metadata 유틸리티 도구 (svcutil.exe)를 사용 하는 것입니다. 자세한 내용은 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/)를 참조 하세요.
 
 생성 된 프록시 클래스는 APM (비동기 프로그래밍 모델) 디자인 패턴을 사용 하는 웹 서비스를 사용 하는 메서드를 제공 합니다. 이 패턴에서 비동기 작업은 비동기 작업을 시작 하 고 종료 하는 *Beginoperationname* 및 *EndOperationName*라는 두 개의 메서드로 구현 됩니다.
 
@@ -240,7 +226,7 @@ Visual Studio 2017 또는 Visual Studio 2019에서는 추가 구성 없이 PC에
     netsh advfirewall firewall add rule name="TodoWCFService" dir=in protocol=tcp localport=49393 profile=private remoteip=localsubnet action=allow
     ```
 
-1. **원격 연결을 허용 하도록 IIS Express를 구성**합니다. **[솔루션 디렉터리] \. vs\config\applicationhost.config**에서 IIS Express에 대 한 구성 파일을 편집 하 여 IIS Express를 구성할 수 있습니다. `site`이름을 가진 요소를 찾습니다 `TodoWCFService` . 다음 XML과 유사 하 게 표시 됩니다.
+1. **원격 연결을 허용 하도록 IIS Express를 구성**합니다. **[솔루션 디렉터리] \.vs\config\applicationhost.config**IIS Express에 대 한 구성 파일을 편집 하 여 IIS Express를 구성할 수 있습니다. `site`이름을 가진 요소를 찾습니다 `TodoWCFService` . 다음 XML과 유사 하 게 표시 됩니다.
 
     ```xml
     <site name="TodoWCFService" id="2">

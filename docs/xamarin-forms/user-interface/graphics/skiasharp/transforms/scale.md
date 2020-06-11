@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: bdf33f499bf43d99436cef815c03d35b27866b80
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140181"
+제목: "크기 변환" 설명: "이 문서에서는 개체를 다양 한 크기로 크기 조정 하기 위한 SkiaSharp 크기 조정 변환을 알아보고 샘플 코드를 사용 하 여이를 보여 줍니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B author: davidbritch: dabritch: 03/23/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="the-scale-transform"></a>크기 조정 변환
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

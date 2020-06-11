@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms바인딩 가능한 속성
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 33b3763075b64ea8af615465825313a527d20db2
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138179"
+제목: " Xamarin.Forms 바인딩 가능한 속성" 설명: "이 문서에서는 바인딩 가능한 속성에 대해 소개 하 고 이러한 속성을 만들고 사용 하는 방법을 보여 줍니다."
+assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7: xamarin-forms author: davidbritch: dabritch:: 01/16/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-bindable-properties"></a>Xamarin.Forms바인딩 가능한 속성
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)

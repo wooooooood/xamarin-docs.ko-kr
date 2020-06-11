@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms타사 컨트롤
-description: 개발을 위한 추가 컨트롤 Xamarin.Forms 은 Telerik, SyncFusion, DevExpress, Infragistics, ComponentOne 및 Steema와 같은 회사에서 사용할 수 있습니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e0881296664ec20eeefe02c9db57a2fd76cd999b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132420"
+제목: " Xamarin.Forms 타사 컨트롤" 설명: "개발용 추가 컨트롤 Xamarin.Forms 은 Telerik, Syncfusion, Devexpress, Infragistics, Componentone 및 Steema와 같은 회사에서 사용할 수 있습니다."
+assetid: C33A4848-3FC8-4A20-8275-387039F541AD: xamarin-forms author: davidbritch: dabritch:: 08/08/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-third-party-controls"></a>Xamarin.Forms타사 컨트롤
 
 에서 제공 하는 컨트롤 외에도 Xamarin.Forms 다음 회사에서 타사 컨트롤을 사용할 수 있습니다.

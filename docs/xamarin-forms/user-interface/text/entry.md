@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms엔트리의
-description: 이 문서에서는 Entry 클래스를 사용 하 여 Xamarin.Forms 응용 프로그램에서 한 줄 텍스트 또는 암호 입력을 허용 하는 방법을 설명 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5c17d6a106474c4c5b183bd41923533ffc95789b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136203"
+제목: " Xamarin.Forms 항목" 설명: "이 문서에서는 entry 클래스를 사용 하 여 Xamarin.Forms 응용 프로그램에서 한 줄 텍스트 또는 암호 입력을 허용 하는 방법을 설명 합니다."
+assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E: xamarin-forms author: davidbritch: dabritch:: 09/25/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-entry"></a>Xamarin.Forms엔트리의
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
@@ -200,14 +186,14 @@ var entry = new Entry { Text = "Xamarin.Forms", ClearButtonVisibility = ClearBut
 
 사용자가와 상호 작용할 때 표시 되는 키보드는 [`Entry`](xref:Xamarin.Forms.Entry) 속성을 통해 프로그래밍 방식으로 [`Keyboard`](xref:Xamarin.Forms.InputView.Keyboard) 클래스의 다음 속성 중 하나로 설정할 수 있습니다 [`Keyboard`](xref:Xamarin.Forms.Keyboard) .
 
-- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat)– texting 및 위치에 사용 되며, 여기서는가 유용 합니다.
-- [`Default`](xref:Xamarin.Forms.Keyboard.Default)– 기본 키보드.
-- [`Email`](xref:Xamarin.Forms.Keyboard.Email)– 전자 메일 주소를 입력할 때 사용 됩니다.
-- [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric)– 숫자를 입력할 때 사용 됩니다.
-- [`Plain`](xref:Xamarin.Forms.Keyboard.Plain)– 지정 하지 않고 텍스트를 입력할 때 사용 [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) 됩니다.
-- [`Telephone`](xref:Xamarin.Forms.Keyboard.Telephone)– 전화 번호를 입력할 때 사용 됩니다.
-- [`Text`](xref:Xamarin.Forms.Keyboard.Text)– 텍스트를 입력할 때 사용 됩니다.
-- [`Url`](xref:Xamarin.Forms.Keyboard.Url)– 웹 주소 & 파일 경로를 입력 하는 데 사용 됩니다.
+- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat) – 텍스트 작성 및 이모티콘이 유용한 경우에 사용합니다.
+- [`Default`](xref:Xamarin.Forms.Keyboard.Default) – 기본 키보드입니다.
+- [`Email`](xref:Xamarin.Forms.Keyboard.Email) – 전자 메일 주소를 입력할 때 사용합니다.
+- [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric) – 숫자를 입력할 때 사용합니다.
+- [`Plain`](xref:Xamarin.Forms.Keyboard.Plain) – 지정된 [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) 없이 텍스트를 입력할 때 사용합니다.
+- [`Telephone`](xref:Xamarin.Forms.Keyboard.Telephone) – 전화 번호를 입력할 때 사용합니다.
+- [`Text`](xref:Xamarin.Forms.Keyboard.Text) – 텍스트를 입력할 때 사용합니다.
+- [`Url`](xref:Xamarin.Forms.Keyboard.Url) – 파일 경로 및 웹 주소를 입력하는 데 사용합니다.
 
 이렇게 하면 다음과 같이 XAML로 수행할 수 있습니다.
 
@@ -223,18 +209,18 @@ var entry = new Entry { Keyboard = Keyboard.Chat };
 
 각 키보드의 예제는 [조리법](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/choose-keyboard-for-entry) 리포지토리에서 찾을 수 있습니다.
 
-클래스에는 [`Keyboard`](xref:Xamarin.Forms.Keyboard) 대문자 표시 [`Create`](xref:Xamarin.Forms.Keyboard.Create*) , spellcheck 및 제안 동작을 지정 하 여 키보드를 사용자 지정 하는 데 사용할 수 있는 팩터리 메서드도 있습니다. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags)열거형 값은 사용자 지정 된를 반환 하는 메서드에 대 한 인수로 지정 됩니다 `Keyboard` . `KeyboardFlags` 열거는 다음 값을 포함합니다.
+또한 [`Keyboard`](xref:Xamarin.Forms.Keyboard) 클래스에는 대소문자, 맞춤법 검사 및 제안 동작을 지정하여 키보드를 사용자 지정하는 데 사용할 수 있는 [`Create`](xref:Xamarin.Forms.Keyboard.Create*) 팩터리 메서드가 있습니다. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) 열거형 값은 사용자 지정된 `Keyboard`가 반환되는 메서드에 대한 인수로 지정됩니다. `KeyboardFlags` 열거는 다음 값을 포함합니다.
 
-- [`None`](xref:Xamarin.Forms.KeyboardFlags.None)– 키보드에 기능이 추가 되지 않습니다.
-- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence)– 입력 한 각 문장의 첫 번째 단어의 첫 문자가 자동으로 대문자로 표시 됩니다.
-- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck)– 입력 한 텍스트에 대해 spellcheck이 수행 됨을 나타냅니다.
-- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions)– 입력 한 텍스트에서 단어 완성이 제공 됨을 나타냅니다.
-- [`CapitalizeWord`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeWord)– 각 단어의 첫 글자가 자동으로 대문자로 표시 됩니다.
-- [`CapitalizeCharacter`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeCharacter)– 모든 문자가 자동으로 대문자로 표시 됨을 나타냅니다.
-- [`CapitalizeNone`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeNone)– 자동 대문자화가 발생 하지 않음을 나타냅니다.
-- [`All`](xref:Xamarin.Forms.KeyboardFlags.All)– 입력 한 텍스트에서 spellcheck, 단어 완성 및 문장 대문자화가 발생 함을 나타냅니다.
+- [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – 키보드에 추가되는 기능이 없습니다.
+- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) – 입력된 각 문장의 첫 번째 단어의 첫 문자가 자동으로 대문자로 시작함을 나타냅니다.
+- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck) - 입력한 텍스트에 대해 맞춤법 검사를 수행할지를 나타냅니다.
+- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions) - 입력한 텍스트에 대해 완성된 단어를 제안할지를 나타냅니다.
+- [`CapitalizeWord`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeWord) – 각 단어의 첫 문자가 자동으로 대문자로 시작함을 나타냅니다.
+- [`CapitalizeCharacter`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeCharacter) – 모든 문자가 자동으로 대문자로 시작함을 나타냅니다.
+- [`CapitalizeNone`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeNone) – 자동 대소문자 표시가 이루어지지 않음을 나타냅니다.
+- [`All`](xref:Xamarin.Forms.KeyboardFlags.All) – 입력한 텍스트에 대해 맞춤법 검사, 단어 완성 및 문장 첫 글자 대문자 입력이 이루어질 것임을 나타냅니다.
 
-다음 XAML 코드 예제에서는 [`Keyboard`](xref:Xamarin.Forms.Keyboard) 단어 완성을 제공 하 고 입력 된 모든 문자를 대문자로 표시 하도록 기본값을 사용자 지정 하는 방법을 보여 줍니다.
+다음 XAML 코드 예제에서는 완성 단어를 제안하고 입력한 모든 글자를 대문자로 시작하도록 기본 [`Keyboard`](xref:Xamarin.Forms.Keyboard)를 사용자 지정하는 방법을 보여 줍니다.
 
 ```xaml
 <Entry Placeholder="Enter text here">

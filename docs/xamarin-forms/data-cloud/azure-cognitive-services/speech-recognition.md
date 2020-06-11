@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 Azure Speech Service API를 사용 하 여 응용 프로그램에서 음성을 텍스트로 높여줄 하는 방법을 설명 합니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 171ecc02fda304135e5f535c3e798067595d7047
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139323"
+제목: "Speech Service API를 사용 하는 음성 인식" 설명: "이 문서는 Azure Speech Service API를 사용 하 여 응용 프로그램에서 음성으로 텍스트를 높여줄 하는 방법을 설명 Xamarin.Forms 합니다."
+assetid: B435FF6B-8785-48D9-B2D9-1893F5A87EA1: xamarin-forms author: profexorgeek: jusjohns:: 01/14/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="speech-recognition-using-azure-speech-service"></a>Azure 음성 서비스를 사용한 음성 인식
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)
@@ -347,7 +333,7 @@ public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompa
 
 `MainActivity`클래스는 `Instance` `AndroidMicrophoneService` 권한을 요청할 때 개체에 필요한 라는 정적 참조를 정의 합니다. `OnRequestPermissionsResult` `AndroidMicrophoneService` 사용자가 권한 요청을 승인 하거나 거부할 때 메서드를 재정의 하 여 개체를 업데이트 합니다.
 
-마지막으로, Android 응용 프로그램은 **Androidmanifest .xml** 파일에 오디오를 기록 하는 권한을 포함 해야 합니다.
+마지막으로 Android 응용 프로그램은 **AndroidManifest.xml** 파일에 오디오를 기록 하는 권한을 포함 해야 합니다.
 
 ```xml
 <manifest ...>

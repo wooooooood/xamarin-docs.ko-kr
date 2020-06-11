@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 SkiaSharp를 사용 하 여 응용 프로그램에서 입방, 정방형 및 원추형 베 지 어 곡선을 렌더링 하는 방법을 설명 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 줍니다.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1ad548846500ccbacc2a3d117919bfb4df1a1d79
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138686"
+제목: "세 가지 종류의 베 지 어 곡선" 설명: "이 문서에서는 SkiaSharp를 사용 하 여 응용 프로그램에서 입방, 정방형 및 원추형 베 지 어 곡선을 렌더링 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 줍니다."
+ms. prod: xamarin ms. 기술: skiasharp assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A author: davidbritch: dabritch: ms. date: 05/25/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="three-types-of-bzier-curves"></a>3가지 형식의 Bézier 곡선
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,23 +1,9 @@
 ---
-title: Xamarin.FormsXAML 스타일을 사용 하 여 앱 스타일 지정
-description: 이 가이드에서는 Xamarin.Forms XAML 스타일을 사용 하 여 응용 프로그램의 모양을 사용자 지정 하는 방법을 설명 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 72effe15d3456b5a48cbf5d09e889600134ac686
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138803"
+제목: " Xamarin.Forms Xaml 스타일을 사용 하 여 앱 스타일 지정" 설명: "이 가이드에서는 xaml 스타일을 사용 하 여 응용 프로그램의 모양을 사용자 지정 하는 방법을 설명 Xamarin.Forms 합니다."
+assetid: 344A34AA-4765-BC8A-875D9A6B5EA8 ms. 기술: xamarin 양식 작성자: davidbritch: dabritch: ms. 날짜: 01/30/2019 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="styling-xamarinforms-apps-using-xaml-styles"></a>Xamarin.FormsXAML 스타일을 사용 하 여 앱 스타일 지정
+
+# <a name="styling-xamarinforms-apps-using-xaml-styles"></a>XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정
 
 ## <a name="introduction"></a>[소개](introduction.md)
 
@@ -43,7 +29,7 @@ Xamarin.Forms응용 프로그램에는 동일한 모양의 여러 컨트롤이 �
 
 스타일은 속성 변경에 응답 하지 않으며 응용 프로그램 기간 동안 변경 되지 않은 상태로 유지 됩니다. 그러나 응용 프로그램은 동적 리소스를 사용 하 여 런타임에 동적으로 스타일 변경에 응답할 수 있습니다.
 
-## <a name="device-styles"></a>[디바이스 스타일](device.md)
+## <a name="device-styles"></a>[장치 스타일](device.md)
 
 Xamarin.Forms클래스에는 *장치* 스타일 이라고 하는 여섯 가지 *동적* 스타일을 포함 [`Devices.Styles`](xref:Xamarin.Forms.Device.Styles) 합니다. 6 가지 스타일은 모두 인스턴스에만 적용할 수 있습니다 [`Label`](xref:Xamarin.Forms.Label) .
 

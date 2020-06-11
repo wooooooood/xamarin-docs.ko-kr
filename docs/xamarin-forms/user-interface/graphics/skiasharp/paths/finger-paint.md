@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 손가락을 사용 하 여 응용 프로그램의 SkiaSharp 캔버스를 그리는 방법을 설명 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 줍니다.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 61ae651a2402204f69f642235d74d8d641b47988
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139024"
+제목: "SkiaSharp에서 손가락 그리기" 설명: "이 문서에서는 손가락을 사용 하 여 응용 프로그램의 SkiaSharp 캔버스를 그리는 방법을 설명 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 줍니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B author: davidbritch: dabritch: 04/05/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="finger-painting-in-skiasharp"></a>SkiaSharp에서 손가락 그리기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

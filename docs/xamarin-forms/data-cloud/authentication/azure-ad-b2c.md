@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 64529b81a375ee5a8cc8a96ec557c03401e60495
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130574"
+제목: "Azure Active Directory B2C를 사용 하 여 사용자 인증" 설명: "Azure Active Directory B2C 소비자 지향 웹 및 모바일 응용 프로그램을 위한 클라우드 id 관리 기능을 제공 합니다. 이 문서에서는 Azure Active Directory B2C를 사용 하 여 Microsoft 인증 라이브러리를 통해 id 관리를 모바일 응용 프로그램에 통합 하는 방법을 보여 줍니다. "
+assetid: B0A5DB65-0585-4A00-B908-22CCC286E6B6: xamarin-forms author: davidbritch: dabritch:: 12/04/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Azure Active Directory B2C로 사용자 인증
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
@@ -70,7 +56,7 @@ Microsoft 인증 라이브러리에서는 응용 프로그램에 대 한 **리�
 
 ![Azure 응용 프로그램 속성 보기의 사용자 지정 리디렉션 URI](azure-ad-b2c-images/azure-redirect-uri.png)
 
-이 URL은 나중에 Android **Applicationmanifest** Info.plist 및 iOS **정보**에서 사용 됩니다.
+이 URL은 Android **ApplicationManifest.xml** 및 iOS **info.plist**모두에서 나중에 사용 됩니다.
 
 샘플 프로젝트에서 **Constants.cs** 파일을 편집 하 여 `clientId` 필드를 **응용 프로그램 ID**로 설정 합니다. 다음 코드는 응용 프로그램 ID가 인 경우이 값을 설정 하는 방법을 보여 줍니다 `1234abcd` .
 
@@ -286,7 +272,7 @@ namespace TodoAzure.iOS
 
 ### <a name="android"></a>Android
 
-Android에서는 Azure Active Directory B2C에 등록 된 사용자 지정 URL 체계를 **Androidmanifest**에 등록 해야 합니다. MSAL은 이전에 [Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램 등록](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c)에서 설명한 특정 패턴을 준수 하는 URL 체계를 기대 합니다. 다음 예제에서는 **Androidmanifest**의 사용자 지정 URL 스키마를 보여 줍니다.
+Android에서 Azure Active Directory B2C에 등록 된 사용자 지정 URL 체계를 **AndroidManifest.xml**에 등록 해야 합니다. MSAL은 이전에 [Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램 등록](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c)에서 설명한 특정 패턴을 준수 하는 URL 체계를 기대 합니다. 다음 예에서는 **AndroidManifest.xml**의 사용자 지정 URL 스키마를 보여 줍니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -307,7 +293,7 @@ Android에서는 Azure Active Directory B2C에 등록 된 사용자 지정 URL �
 </manifest>
 ```
 
-`MainActivity`클래스를 수정 하 여 `UIParent` 호출 중에 응용 프로그램에 개체를 제공 해야 합니다 `OnCreate` . Azure Active Directory B2C 권한 부여 요청을 완료 하면 **Androidmanifest**에서 등록 된 URL 체계로 리디렉션됩니다. 등록 된 URI 체계를 사용 하면 Android에서 `OnActivityResult` URL을 사용 하 여 메서드를 시작 매개 변수로 호출 합니다. 여기서 메서드는 메서드를 통해 처리 `SetAuthenticationContinuationEventArgs` 됩니다.
+`MainActivity`클래스를 수정 하 여 `UIParent` 호출 중에 응용 프로그램에 개체를 제공 해야 합니다 `OnCreate` . Azure Active Directory B2C 권한 부여 요청이 완료 되 면 **AndroidManifest.xml**에서 등록 된 URL 체계로 리디렉션됩니다. 등록 된 URI 체계를 사용 하면 Android에서 `OnActivityResult` URL을 사용 하 여 메서드를 시작 매개 변수로 호출 합니다. 여기서 메서드는 메서드를 통해 처리 `SetAuthenticationContinuationEventArgs` 됩니다.
 
 ```csharp
 public class MainActivity : FormsAppCompatActivity

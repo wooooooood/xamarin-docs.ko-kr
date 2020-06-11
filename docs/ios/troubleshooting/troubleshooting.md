@@ -7,13 +7,13 @@ ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
-ms.date: 05/22/2018
-ms.openlocfilehash: 6368c3a4b128c06687b23b965b308ad6a788188b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.date: 06/10/2020
+ms.openlocfilehash: 1b3eb61bf08eb006890b8b879c560163bd131844
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574489"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84655089"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Xamarin.ios에 대 한 문제 해결 팁
 
@@ -48,7 +48,7 @@ IB에서 콘센트 및 작업을 사용 하는 방법에 대 한 자세한 내�
 - [`[Preserve]`](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute)멤버에 특성을 추가 합니다.  이렇게 하면 링커가 제거 되지 않습니다.
 - [**Mtouch**](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29)를 호출할 때 **-nolink** 또는 **-linksdkonly** 옵션을 사용 합니다.
   - **-nolink** 는 모든 링크를 사용 하지 않습니다.
-  - **-linksdkonly** 는 사용자가 만든 어셈블리의 모든 형식 (즉, 앱 프로젝트)을 유지 하면서 **Xamarin.ios와 같이 xamarin.ios에서 제공**하는 어셈블리만 연결 합니다.
+  - **-linksdkonly** 는 사용자가 만든 어셈블리의 모든 형식 (즉, 앱 프로젝트)을 유지 하면서 **xamarin.ios.dll**와 같은 xamarin.ios 제공 어셈블리만 연결 합니다.
 
 어셈블리가 연결 되어 결과 실행 파일의 크기가 작아집니다. 따라서 링크를 사용 하지 않도록 설정 하면 더 큰 실행 파일을 사용 하는 것이 바람직 할 수 있습니다.
 
@@ -130,7 +130,7 @@ public Bar (IntPtr handle) : base (handle) { }
 
 이러한 메서드에만이 경고를 표시 하지 않으려는 경우 0169, 전체 프로젝트에 대해 사용 하지 않도록 설정 하려는 경우 컴파일러 옵션의 "경고 무시" 필드에 "#pragma 경고 사용 안 함 0169" "#pragma 경고 사용 0169"을 사용할 수 있습니다 (권장 되지 않음).
 
-## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>mtouch이 실패 했습니다. '/path/to/yourproject.exe ' 어셈블리를 열 수 없습니다.
+## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>mtouch에서 '/path/to/yourproject.exe ' 어셈블리를 열 수 없습니다.
 
 이 오류 메시지가 표시 되는 경우 일반적으로이 문제는 프로젝트의 절대 경로에 공백이 포함 되어 있다는 것입니다. 이 문제는 Xamarin.ios의 이후 버전에서 수정 될 수 있지만 프로젝트를 공백 없이 폴더로 이동 하면 문제를 해결할 수 있습니다.
 
@@ -166,7 +166,7 @@ public Bar (IntPtr handle) : base (handle) { }
 
 ## <a name="visual-studio-for-mac-complains-about-mono-24-required"></a>Mac용 Visual Studio 불만에 대 한 Mono 2.4 필요
 
-최근 업데이트로 인해 Mac용 Visual Studio를 업데이트 했을 때이를 다시 시작 하려고 할 때 mono 2.4 설치를 불만 하는 것 [2.4](http://www.go-mono.com/mono-downloads/download.html)이 좋습니다.  
+최근 업데이트로 인해 Mac용 Visual Studio를 업데이트 했을 때이를 다시 시작 하려고 할 때 mono 2.4 설치를 불만 하는 것 [2.4](http://www.go-mono.com/mono-downloads/download.html)이 좋습니다.
 
 Mono 2.4.2.3 _6은 Mac용 Visual Studio를 안정적으로 실행 하지 못하게 하는 몇 가지 중요 한 문제를 해결 합니다. 때때로 시작 시 Mac용 Visual Studio 중단 되거나 코드 완성 데이터베이스를 생성할 수 없습니다.
 
@@ -186,7 +186,7 @@ Stacktrace:
 
 Thumb 코드를 사용 하 여 컴파일된 정적 라이브러리를 프로젝트에 연결 하는 것을 의미 합니다. IPhone SDK 릴리스 3.1 이상 (이 문서를 작성할 당시 이상)에는 엄지 코드 (정적 라이브러리)가 아닌 코드 (Xamarin.ios)를 연결 하는 경우 Apple에서 버그가 도입 되었습니다. 이 문제를 완화 하기 위해 정적 라이브러리의 Thumb이 아닌 버전에 연결 해야 합니다.
 
-## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1get_count-"></a>ExecutionEngineException: JIT 컴파일 메서드 (래퍼 관리-관리 되는) Foo [] get_Count: ()를 시도 하는 중입니다.
+## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1get_count-"></a>System.ExecutionEngineException: JIT 컴파일 메서드 (래퍼 관리-관리) Foo []: ()를 시도 하는 중 get_Count입니다.
 
 [] 접미사는 사용자 또는 클래스 라이브러리가 IEnumerable<>, ICollection<> 또는 IList<>와 같은 제네릭 컬렉션을 통해 배열에서 메서드를 호출 하 고 있음을 나타냅니다. 해결 방법으로, 직접 메서드를 호출 하 고 예외를 트리거한 호출 전에이 코드가 실행 되는지 확인 하 여 AOT 컴파일러에 이러한 메서드를 포함 하도록 명시적으로 강제할 수 있습니다. 이 경우 다음을 작성할 수 있습니다.
 
@@ -217,7 +217,7 @@ XS logs, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **andro
 
 디버깅을 지원 하기 위해 디버그 빌드는 추가 코드를 포함 합니다. 릴리스 모드에서 빌드된 프로젝트는 크기의 일부입니다.
 
-Xamarin.ios 1.3 기반 디버그 빌드에는 Mono의 모든 단일 구성 요소 (프레임 워크의 모든 클래스에 있는 모든 메서드)에 대 한 디버깅 지원이 포함 되었습니다.  
+Xamarin.ios 1.3 기반 디버그 빌드에는 Mono의 모든 단일 구성 요소 (프레임 워크의 모든 클래스에 있는 모든 메서드)에 대 한 디버깅 지원이 포함 되었습니다.
 
 Xamarin.ios 1.4를 사용 하 여 디버깅을 위한 보다 세분화 된 메서드를 도입할 수 있습니다. 기본값은 코드 및 라이브러리에 대 한 디버깅 계측만 제공 하는 것 이며, 모든 [Mono 어셈블리](~/cross-platform/internals/available-assemblies.md) 에 대해이 작업을 수행 하지는 않습니다 .이 작업은 가능 하지만 이러한 어셈블리를 디버깅 하려면 옵트인 해야 합니다.
 
@@ -226,33 +226,6 @@ Xamarin.ios 1.4를 사용 하 여 디버깅을 위한 보다 세분화 된 메�
 IPhone 시뮬레이터를 실행 하는 경우 Mono 및 Xamarin.ios 설치 관리자가 모두 중지 됩니다. 이 문제는 Mono 또는 Xamarin.ios로 국한 되지 않습니다 .이 문제는 설치 시 iPhone 시뮬레이터가 실행 되는 경우 MacOS에서 소프트웨어를 설치 하려고 하는 모든 소프트웨어에서 일관 된 문제입니다.
 
 IPhone 시뮬레이터를 종료 하 고 설치를 다시 시도 하세요.
-
-<a name="trampolines"></a>
-
-## <a name="ran-out-of-trampolines-of-type-0"></a>0 유형의 trampolines 중에서 실행 되었습니다.
-
-장치를 실행 하는 동안이 메시지가 표시 되는 경우 프로젝트 옵션인 "iPhone Build" 섹션을 수정 하 여 추가 유형 0 trampolines (유형 별)을 만들 수 있습니다.  장치 빌드 대상에 대 한 추가 인수를 추가 하려고 합니다.
-
- `-aot "ntrampolines=2048"`
-
-Trampolines의 기본 수는 1024입니다. 응용 프로그램에 충분 한 시간까지이 숫자를 늘립니다.
-
-## <a name="ran-out-of-trampolines-of-type-1"></a>유형 1의 trampolines 중에서 실행 되었습니다.
-
-재귀적 제네릭을 과도 하 게 사용 하는 경우 장치에서이 메시지가 표시 될 수 있습니다.  프로젝트 옵션인 "iPhone Build" 섹션을 수정 하 여 더 많은 type 1 trampolines (type RGCTX)를 만들 수 있습니다.  장치 빌드 대상에 대 한 추가 인수를 추가 하려고 합니다.
-
- `-aot "nrgctx-trampolines=2048"`
-
-Trampolines의 기본 수는 1024입니다. 제네릭을 사용 하기에 충분 한 시간까지이 숫자를 늘립니다.
-
-## <a name="ran-out-of-trampolines-of-type-2"></a>유형 2의 trampolines 중에서 실행 되었습니다.
-
-많은 인터페이스를 사용 하는 경우 장치에서이 메시지가 표시 될 수 있습니다.
-프로젝트 옵션인 "iPhone Build" 섹션을 수정 하 여 추가 유형 2 trampolines (IMT 썽크 유형)를 만들 수 있습니다.  장치 빌드 대상에 대 한 추가 인수를 추가 하려고 합니다.
-
- `-aot "nimt-trampolines=512"`
-
-IMT 썽크 trampolines의 기본 수는 128입니다. 인터페이스를 사용 하기에 충분 한 시간까지이 숫자를 늘립니다.
 
 ## <a name="debugger-is-unable-to-connect-with-the-device"></a>디버거가 장치에 연결할 수 없습니다.
 
@@ -384,7 +357,7 @@ Interface Builder를 사용 하려면 Apple 웹 사이트에서 사용할 수 �
   at (wrapper runtime-invoke) <Module>.runtime_invoke_void_object (object,intptr,intptr,intptr)
 ```
 
-... 그러면 시뮬레이터 응용 프로그램 디렉터리에 하나 이상의 부실 어셈블리가 있을 것입니다. Apple iOS 시뮬레이터는 파일을 추가 하 고 업데이트 하지만 삭제 하지 않으므로 이러한 어셈블리가 있을 수 있습니다. 이 경우 가장 쉬운 솔루션은 "다시 설정 및 콘텐츠 및 설정 ..."을 선택 하는 것입니다. 시뮬레이터 메뉴에서.   
+... 그러면 시뮬레이터 응용 프로그램 디렉터리에 하나 이상의 부실 어셈블리가 있을 것입니다. Apple iOS 시뮬레이터는 파일을 추가 하 고 업데이트 하지만 삭제 하지 않으므로 이러한 어셈블리가 있을 수 있습니다. 이 경우 가장 쉬운 솔루션은 "다시 설정 및 콘텐츠 및 설정 ..."을 선택 하는 것입니다. 시뮬레이터 메뉴에서.
 
 > [!WARNING]
 > 그러면 시뮬레이터에서 모든 파일, 응용 프로그램 및 데이터가 제거 됩니다.   다음 번에 응용 프로그램을 실행할 때 Mac용 Visual Studio는 시뮬레이터에 배포 하 고 크래시를 발생 시킬 오래 된 오래 된 어셈블리가 없게 됩니다.
@@ -413,3 +386,18 @@ Interface Builder를 사용 하려면 Apple 웹 사이트에서 사용할 수 �
 Xamarin.ios 앱에 타사 라이브러리를 포함 하는 경우 앱을 컴파일하고 실행 하려고 할 때 "NotSupportedException: encoding 437에 사용할 수 있는 데이터가 없습니다." 라는 형식의 오류가 발생할 수 있습니다. 예를 들어와 같은 라이브러리는 `Ionic.Zip.ZipFile` 작업 중에이 예외를 throw 할 수 있습니다.
 
 이는 ios 프로젝트에 대 한 옵션을 열고 **ios**국제화로 이동 하 여 국제화 된 국제화를 확인 하 여 해결할 수 있습니다  >  **Internationalization** . **West**
+
+## <a name="could-not-launch-xamarinlauncher-could-not-find-the-executable-mlaunchexe"></a>Xamarin을 시작할 수 없습니다. 시작 관리자가 ' mlaunch.exe ' 실행 파일을 찾을 수 없습니다.
+
+경우에 따라 바이러스 백신 소프트웨어가 Xamarin.ios SDK를 맬웨어로 잘못 플래그 지정 하 고 필수 파일을 제거 하 여 SDK를 손상 시킬 수 있습니다. 그러면 "Xamarin을 시작할 수 없습니다. 시작 관리자가 실행 파일 ' mlaunch.exe '을 찾을 수 없습니다."와 같은 오류가 발생 합니다.
+
+영향을 받은 경우 바이러스 백신 스캐너에서 mlaunch.exe를 제외 하 여 다시 발생 하지 않도록 합니다. 자세한 내용은 Symantec에 대해 [Symantex Endpoint Protection Manager에서 응용 프로그램 예외를 만드는 방법](https://knowledge.broadcom.com/external/article/180778/how-to-create-an-application-exception-i.html) 을 참조 하 고, Norton의 [자동 보호, Sonar.projectname) 및 다운로드 인텔리전스 검색에서 파일 및 폴더를 제외](https://support.norton.com/sp/en/uk/home/current/solutions/v3672136) 하는 방법을 참조 하세요. 또한 거짓 긍정을 [Symantec](https://symsubmit.symantec.com) 또는 [Norton](https://submit.norton.com/?type=FP)에 보고 하는 것이 좋습니다.
+
+mlaunch.exe에 대 한 제외를 추가한 후에는 누락 된 파일을 복원 하려면 다시 설치 해야 합니다. 이 작업을 수행 하는 가장 간단한 방법은 업데이트 프로그램에서 채널을 전환 하는 것입니다.
+
+- **Visual Studio** 메뉴 > **업데이트를 확인**합니다.
+- 드롭다운 목록에서 다른 업데이트 채널을 선택 하 고 **채널 전환** 단추를 누릅니다.
+- 업데이트가 다운로드 될 때까지 기다립니다.
+- 다시 원래 채널로 전환 하 고 업데이트를 설치 합니다.
+
+이러한 방법으로 문제가 해결 되지 않으면 다음 GitHub 문제에 대 한 설명을 추가 하세요. [8736](https://github.com/xamarin/xamarin-macios/issues/8736).

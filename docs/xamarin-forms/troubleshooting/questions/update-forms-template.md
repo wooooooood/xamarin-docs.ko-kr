@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms기본 템플릿을 최신 NuGet 패키지로 업데이트할 수 있나요?
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: bdead80671a1ae6539de6614441df7e86863a5a6
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137477"
+제목: " Xamarin.Forms 기본 템플릿을 최신 NuGet 패키지로 업데이트할 수 있습니까?"
+ms. 항목: 문제 해결: assetid: 160FBE13-4B4F-9248-A5CBE58FDD7F: davidbritch: dabritch:: ms. 날짜: 04/25/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>Xamarin.Forms기본 템플릿을 최신 NuGet 패키지로 업데이트할 수 있나요?
 
 이 가이드에서는 Xamarin.Forms .NET Standard 라이브러리 템플릿을 예로 사용 하지만 동일한 일반 메서드는 Xamarin.Forms 공유 프로젝트 템플릿에도 적용 됩니다. 이 가이드는 1.5.1.6471에서 2.1.0.6529로 업데이트 하는 예제를 사용 하 여 작성 Xamarin.Forms 되었지만 동일한 단계를 통해 다른 버전을 기본값으로 설정할 수 있습니다.

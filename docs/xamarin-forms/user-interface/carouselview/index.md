@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCarouselView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 891f1ff8ad8f254ff3a2805d08d0f7e115bb0fff
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137373"
+제목: " Xamarin.Forms CarouselView" description: "CarouselView은 사용자가 항목 컬렉션 간을 이동 하기 위해 살짝 밀기 할 수 있는 스크롤 가능한 레이아웃으로 데이터를 표시 하기 위한 뷰입니다."
+assetid: 5b673347-cdba-4532-820f-fb5f070c86bc: xamarin-forms author: davidbritch: dabritch:: 10/08/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-carouselview"></a>Xamarin.FormsCarouselView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -25,7 +11,7 @@ ms.locfileid: "84137373"
 
 는 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 스크롤 가능한 레이아웃으로 데이터를 표시 하기 위한 뷰입니다. 사용자는 항목 컬렉션을 통해 이동할 수 있습니다.
 
-## <a name="data"></a>[Data](populate-data.md)
+## <a name="data"></a>[데이터](populate-data.md)
 
 는 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 속성을를 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 구현 하는 컬렉션으로 설정 하 여 데이터로 채워집니다 `IEnumerable` . 속성을로 설정 하 여 각 항목의 모양을 정의할 수 있습니다 [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) .
 

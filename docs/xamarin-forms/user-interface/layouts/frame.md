@@ -1,21 +1,6 @@
 ---
-title: Xamarin.Forms프레임씩
-description: Xamarin.FormsFrame 클래스는 색, 그림자 및 기타 옵션으로 구성할 수 있는 테두리를 사용 하 여 보기 또는 레이아웃을 래핑하는 데 사용 되는 레이아웃입니다.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 42192111befbefda7e0f62b7691a8392c2828818
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137191"
+제목: " Xamarin.Forms 프레임" 설명: " Xamarin.Forms frame 클래스는 색, 그림자 및 기타 옵션으로 구성할 수 있는 테두리를 사용 하 여 보기 또는 레이아웃을 래핑하는 데 사용 되는 레이아웃입니다."
+assetId: 4E074714-0928-41C8-A468-B60E23236A8C: xamarin-forms author: profexorgeek: jusjohns:: 08/06/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
 # <a name="xamarinforms-frame"></a>Xamarin.Forms프레임씩
 
@@ -189,7 +174,7 @@ Frame circleImageFrame = new Frame
 };
 ```
 
-각 플랫폼 프로젝트에는 **실외 .jpg** 이미지가 추가 되어야 하며,이는 플랫폼에 따라 달라 집니다. 자세한 내용은 [의 Xamarin.Forms 이미지 ](~/xamarin-forms/user-interface/images.md)를 참조 하세요.
+각 플랫폼 프로젝트에 **outdoors.jpg** 이미지를 추가 하 고이를 구현 하는 방법은 플랫폼에 따라 달라 집니다. 자세한 내용은 [의 Xamarin.Forms 이미지 ](~/xamarin-forms/user-interface/images.md)를 참조 하세요.
 
 > [!NOTE]
 > 모퉁이가 둥근 모퉁이는 플랫폼에서 약간 다르게 동작 합니다. `Image`개체의 너비는 `Margin` 이미지 너비와 부모 프레임 너비의 1/2 사이 여야 하며 개체 내에서 이미지를 균등 하 게 맞추려면 음수 여야 합니다 `Frame` . 그러나 요청 된 너비와 높이는 보장 되지 않으므로 `Margin` `HeightRequest` 사용자의 `WidthRequest` 이미지 크기와 기타 레이아웃 선택 항목에 따라 및 속성을 변경 해야 할 수 있습니다.

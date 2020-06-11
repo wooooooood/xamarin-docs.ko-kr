@@ -23,7 +23,7 @@ Windows에서 Visual Studio 2019를 시작 하 고, 시작 창에서 **새 프�
 
 ![새 솔루션 창](get-started-with-xaml-images/win/new-solution-2019.png)
 
-**새 프로젝트 만들기** 창의 **프로젝트 형식** 드롭다운에서 **모바일** 을 선택 하 고 **모바일 앱 ( Xamarin.Forms )** 템플릿을 선택 하 고 **다음** 단추를 클릭 합니다.
+**새 프로젝트 만들기** 창에서 **프로젝트 형식** 드롭다운의 **모바일**을 선택한 다음 **모바일 앱(Xamarin.Forms)** 템플릿을 선택하고 **다음** 단추를 클릭합니다.
 
 ![새 프로젝트 창](get-started-with-xaml-images/win/new-project-2019.png)
 

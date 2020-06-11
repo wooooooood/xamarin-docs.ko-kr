@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 680c924280f8f3a6080b2fcc1968ecaf308f33a0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138062"
+제목: "SkiaSharp의 SVG 경로 데이터" 설명: "이 문서에서는 확장 가능한 벡터 그래픽 형식의 텍스트 문자열을 사용 하 여 SkiaSharp 경로를 정의 하는 방법을 설명 하 고 샘플 코드를 사용 하 여이를 보여 줍니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2 author: davidbritch: dabritch: 05/24/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="svg-path-data-in-skiasharp"></a>SkiaSharp의 SVG 경로 데이터
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

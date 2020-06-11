@@ -1,22 +1,8 @@
 ---
-title: AndroidX 마이그레이션Xamarin.Forms
-description: 이 문서에서는 AndroidX가 있는 이유와 앱에서 AndroidX로 마이그레이션하는 방법에 대해 설명 합니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c2df309a8a12a05a4b492bb66977aa2411142850
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138270"
+제목: "설명:"에서 "AndroidX 마이그레이션" Xamarin.Forms 이 문서에서는 androidx가 있는 이유와 앱에서 androidx로 마이그레이션하는 방법에 대해 설명 Xamarin.Forms 합니다. "
+assetid: 98884003-E65A-4EB4-842D-66CFE27344A4 밀리초. 기술: xamarin-forms author: profexorgeek: jusjohns: ms. date: 01/22/2020 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="androidx-migration-in-xamarinforms"></a>AndroidX 마이그레이션Xamarin.Forms
 
 AndroidX는 Android 지원 라이브러리를 대체 합니다. 이 문서에서는 AndroidX가 있는 이유와, 영향을 주는 방법 Xamarin.Forms 및 androidx 라이브러리를 사용 하도록 응용 프로그램을 마이그레이션하는 방법에 대해 설명 합니다.

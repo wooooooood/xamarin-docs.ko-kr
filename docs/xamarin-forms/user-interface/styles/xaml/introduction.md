@@ -1,22 +1,8 @@
 ---
-title: 스타일 소개 Xamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5766af7da3a0cf550a2ccb3a926dad25fd7962eb
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138825"
+제목: "스타일 소개 Xamarin.Forms " 설명: "스타일을 사용 하면 시각적 요소의 모양을 사용자 지정할 수 있습니다. 스타일은 특정 형식에 대해 정의 되며 해당 형식에 사용할 수 있는 속성에 대 한 값을 포함 합니다. "
+assetid: 3FF899C0-6CFB-4C1D-837D-9E9E10181967: xamarin-forms author: davidbritch: dabritch:: 04/27/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="introduction-to-xamarinforms-styles"></a>스타일 소개 Xamarin.Forms
 
 _스타일을 사용 하면 시각적 요소의 모양을 사용자 지정할 수 있습니다. 스타일은 특정 형식에 대해 정의 되며 해당 형식에 사용할 수 있는 속성에 대 한 값을 포함 합니다._
@@ -93,27 +79,27 @@ public class NoStylesPageCS : ContentPage
 
 ## <a name="create-a-style"></a>스타일 만들기
 
-[`Style`](xref:Xamarin.Forms.Style)클래스는 속성 값 컬렉션을 하나의 개체로 그룹화 한 다음 여러 시각적 요소 인스턴스에 적용할 수 있습니다. 이렇게 하면 반복적인 태그를 줄이고 응용 프로그램의 모양을 보다 쉽게 변경할 수 있습니다.
+[`Style`](xref:Xamarin.Forms.Style) 클래스는 속성 값 컬렉션을 하나의 개체로 그룹화한 다음 여러 시각적 요소 인스턴스에 적용할 수 있습니다. 이렇게 하면 반복적인 태그를 줄이고 응용 프로그램의 모양을 보다 쉽게 변경할 수 있습니다.
 
 스타일은 주로 XAML 기반 응용 프로그램용으로 설계 되었지만 c #에서 만들 수도 있습니다.
 
 - [`Style`](xref:Xamarin.Forms.Style)XAML로 생성 된 인스턴스는 일반적으로 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) 컨트롤, 페이지 또는 [`Resources`](xref:Xamarin.Forms.Application.Resources) 응용 프로그램의 컬렉션에 할당 된에 정의 됩니다.
 - [`Style`](xref:Xamarin.Forms.Style)c #에서 만든 인스턴스는 일반적으로 페이지의 클래스 또는 전역으로 액세스할 수 있는 클래스에서 정의 됩니다.
 
-사용할 수 있는 경우 영향을 정의 하는 위치 선택 [`Style`](xref:Xamarin.Forms.Style) :
+[`Style`](xref:Xamarin.Forms.Style)을 정의할 위치를 선택하면 사용할 수 있는 위치가 결정됩니다.
 
 - [`Style`](xref:Xamarin.Forms.Style)컨트롤 수준에서 정의 된 인스턴스는 컨트롤과 해당 자식에만 적용할 수 있습니다.
 - [`Style`](xref:Xamarin.Forms.Style)페이지 수준에서 정의 된 인스턴스는 페이지 및 해당 자식에만 적용할 수 있습니다.
-- [`Style`](xref:Xamarin.Forms.Style)응용 프로그램 수준에서 정의 된 인스턴스는 응용 프로그램 전체에 적용 될 수 있습니다.
+- 애플리케이션 수준에서 정의한 [`Style`](xref:Xamarin.Forms.Style) 인스턴스는 애플리케이션 전체에 적용할 수 있습니다.
 
-각 [`Style`](xref:Xamarin.Forms.Style) 인스턴스는 하나 이상의 개체 컬렉션을 포함 하며 [`Setter`](xref:Xamarin.Forms.Setter) 각 개체에 `Setter` 는 [`Property`](xref:Xamarin.Forms.Setter.Property) 및가 있습니다 [`Value`](xref:Xamarin.Forms.Setter.Value) . `Property`는 스타일이 적용된 요소의 바인딩 가능한 속성 이름이며 `Value`는 속성에 적용되는 값입니다.
+각 [`Style`](xref:Xamarin.Forms.Style) 인스턴스에는 하나 이상의 [`Setter`](xref:Xamarin.Forms.Setter) 개체의 컬렉션이 포함되며, 각 `Setter`는 [`Property`](xref:Xamarin.Forms.Setter.Property)과 [`Value`](xref:Xamarin.Forms.Setter.Value)를 가지고 있습니다. `Property`는 스타일이 적용된 요소의 바인딩 가능한 속성 이름이며 `Value`는 속성에 적용되는 값입니다.
 
 각 [`Style`](xref:Xamarin.Forms.Style) 인스턴스는 *명시적*이거나 *암시적*일 수 있습니다.
 
 - *명시적* [`Style`](xref:Xamarin.Forms.Style) 인스턴스는 [`TargetType`](xref:Xamarin.Forms.Style.TargetType) 및 `x:Key` 값을 지정 하 고 대상 요소의 [`Style`](xref:Xamarin.Forms.NavigableElement.Style) 속성을 참조로 설정 하 여 정의 됩니다 `x:Key` . *명시적* 스타일에 대 한 자세한 내용은 [명시적 스타일](~/xamarin-forms/user-interface/styles/explicit.md)을 참조 하세요.
 - *암시적* [`Style`](xref:Xamarin.Forms.Style) 인스턴스는만 지정 하 여 정의 됩니다 [`TargetType`](xref:Xamarin.Forms.Style.TargetType) . `Style`그러면 인스턴스가 해당 형식의 모든 요소에 자동으로 적용 됩니다. 의 서브 클래스에 `TargetType` 는가 자동으로 적용 되지 않습니다 `Style` . *암시적* 스타일에 대 한 자세한 내용은 [암시적 스타일](~/xamarin-forms/user-interface/styles/implicit.md)을 참조 하세요.
 
-를 만들 때 [`Style`](xref:Xamarin.Forms.Style) 속성은 [`TargetType`](xref:Xamarin.Forms.Style.TargetType) 항상 필요 합니다. 다음 코드 예제에서는 XAML로 생성 된 *명시적* 스타일 (참고)을 보여 줍니다 `x:Key` .
+[`Style`](xref:Xamarin.Forms.Style)을 만들 때 [`TargetType`](xref:Xamarin.Forms.Style.TargetType) 속성이 항상 필요합니다. 다음 코드 예제에서는 XAML로 생성 된 *명시적* 스타일 (참고)을 보여 줍니다 `x:Key` .
 
 ```xaml
 <Style x:Key="labelStyle" TargetType="Label">
@@ -141,5 +127,5 @@ public class NoStylesPageCS : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [스타일](xref:Xamarin.Forms.Style)
+- [Style](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

@@ -1,23 +1,8 @@
 ---
-title: ''
-description: 에서 정의 된 모든 뷰는 Xamarin.Forms XAML 파일에서 참조할 수 있습니다.
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 445ef85f661d945bda25203f35dea787e64dc9b0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138426"
+제목: "XAML 컨트롤" 설명: "XAML 파일에서에 정의 된 모든 뷰를 Xamarin.Forms 참조할 수 있습니다."
+ms. 토픽: article ms. prod: assetid: 639BD392-1496-41BB-BB09-7652273AC9D8: xamarin-forms author: davidbritch: dabritch. 날짜: 04/17/2020 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xaml-controls"></a>XAML 컨트롤
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
@@ -94,5 +79,5 @@ ms.locfileid: "84138426"
 ## <a name="related-links"></a>관련 링크
 
 - [Xamarin.Forms양식 갤러리 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
-- [Xamarin.Forms표본의](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Xamarin.Forms 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Xamarin.FormsAPI 설명서](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

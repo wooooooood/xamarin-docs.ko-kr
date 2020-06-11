@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 응용 프로그램을 생성 하는 데 사용 되는 모든 사용자 인터페이스 요소에 대 한 설명 Xamarin.Forms 입니다. 이 문서에서는 응용 프로그램의 사용자 인터페이스를 구성 하는 컨트롤 그룹을 나열 합니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e843f0e42f4f66a6ce4e60c2f5d8a233d19f1df6
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136398"
+title: "컨트롤 참조" 설명: "응용 프로그램을 생성 하는 데 사용 되는 모든 사용자 인터페이스 요소에 대 한 설명 Xamarin.Forms 입니다. 이 문서에서는 응용 프로그램의 사용자 인터페이스를 구성 하는 컨트롤 그룹을 나열 Xamarin.Forms 합니다. "
+assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F: xamarin-forms author: davidbritch: dabritch:: 08/08/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="controls-reference"></a>컨트롤 참조
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
@@ -43,4 +29,4 @@ Xamarin.Forms페이지는 일반적으로 전체 화면을 차지 합니다. 이
 
 - [Xamarin.Forms양식 갤러리 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 - [Xamarin.FormsControls 클래스 계층 구조](~/xamarin-forms/internals/class-hierarchy.md)
-- [API 설명서](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [API 문서](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

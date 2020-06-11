@@ -1,23 +1,8 @@
 ---
-title: XAML 미리 보기Xamarin.Forms
-description: 이 문서에서는 XAML 미리 보기를 사용 하 여 입력 시 렌더링 된 레이아웃을 확인 하는 방법을 설명 합니다 Xamarin.Forms . XAML 미리 보기는 Visual Studio 2019 및 Mac 용 Visual Studio 2019에서 사용할 수 있습니다.
-zone_pivot_groups: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 6916d5fde688c5b1162f12db0d36bc3ca27156d8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137321"
+제목: "XAML 미리 보기 Xamarin.Forms " 설명: "이 문서에서는 Xaml 미리 보기를 사용 하 여 입력 시 렌더링 된 레이아웃을 확인 하는 방법을 설명 합니다 Xamarin.Forms . XAML 미리 보기는 Visual Studio 2019 및 Mac 용 Visual Studio 2019에서 사용할 수 있습니다. "
+zone_pivot_groups: platform ms. prod: assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2: xamarin-forms author: maddyleger1: maleger:: 03/16/2020-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xaml-previewer-for-xamarinforms"></a>XAML 미리 보기Xamarin.Forms
 
 _Xamarin.Forms입력할 때 렌더링 된 레이아웃 보기_
@@ -26,7 +11,7 @@ _Xamarin.Forms입력할 때 렌더링 된 레이아웃 보기_
 
 XAML 미리 보기는 Xamarin.Forms iOS 및 Android에서 xaml 페이지를 표시 하는 방법을 보여 줍니다. XAML을 변경 하면 코드와 함께 즉시 미리 보기가 표시 됩니다. XAML 미리 보기는 Visual Studio 및 Mac용 Visual Studio에서 사용할 수 있습니다.
 
-## <a name="getting-started"></a>시작하기
+## <a name="getting-started"></a>시작
 
 ::: zone pivot="windows"
 

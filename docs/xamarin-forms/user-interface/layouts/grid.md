@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms그리드에
-description: Xamarin.Forms표는 자식 항목을 셀의 행과 열로 구성 하는 레이아웃입니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c4e63d6c1701d9eb247ecb7c52188e5dbc045934
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138075"
+제목: " Xamarin.Forms 그리드" 설명: " Xamarin.Forms 그리드는 자식을 셀의 행과 열로 구성 하는 레이아웃입니다."
+assetid: 762B1802-D185-494C-B643-74EED55882FE. 기술: xamarin-forms author: davidbritch: dabritch: ms. date: 05/15/2020 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-grid"></a>Xamarin.Forms그리드에
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms웹 서비스 소개
-description: 이 가이드에서는 Xamarin.Forms 다양 한 웹 서비스와 통신 하는 방법을 보여 주는 샘플 응용 프로그램의 연습을 제공 합니다. 각 웹 서비스는 별도의 샘플 응용 프로그램을 사용 하지만, 기능적으로 비슷하며 공통 클래스를 공유 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d714b4c9d598d8cca26ae992abf3f15df703d11b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139180"
+제목: " Xamarin.Forms 웹 서비스 소개" 설명: "이 가이드에서는 Xamarin.Forms 다양 한 웹 서비스와 통신 하는 방법을 보여 주는 샘플 응용 프로그램의 연습을 제공 합니다. 각 웹 서비스는 별도의 샘플 응용 프로그램을 사용 하지만 기능적으로 비슷하며 공통 클래스를 공유 합니다. "
+assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B: xamarin-forms author: davidbritch: dabritch:: 02/28/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-web-services-introduction"></a>Xamarin.Forms웹 서비스 소개
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCollectionView 선택
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 39f118d7073fc551923f891681c8c6cf6a4c5ddd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137386"
+제목: " Xamarin.Forms CollectionView selection" description: "기본적으로 CollectionView selection은 사용 하지 않도록 설정 되어 있습니다. 그러나 단일 및 다중 선택을 사용할 수 있습니다. "
+assetid: 423D91C7-1E58-4735-9E80-58F11CDFD953: xamarin-forms author: davidbritch: dabritch:: 05/06/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-collectionview-selection"></a>Xamarin.FormsCollectionView 선택
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
@@ -310,7 +296,7 @@ namespace CollectionViewDemos.ViewModels
 
 [![IOS 및 Android에서 사용자 지정 단일 선택 색이 있는 CollectionView 세로 목록의 스크린샷](selection-images/single-selection-color.png "사용자 지정 단일 선택 색이 있는 CollectionView 세로 목록")](selection-images/single-selection-color-large.png#lightbox "사용자 지정 단일 선택 색이 있는 CollectionView 세로 목록")
 
-시각적 상태에 대 한 자세한 내용은 [ Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)를 참조 하세요.
+시각적 개체 상태에 대한 자세한 내용은 [Xamarin.Forms 시각적 개체 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)를 참조하세요.
 
 ## <a name="disable-selection"></a>선택 사용 안 함
 
@@ -339,4 +325,4 @@ CollectionView collectionView = new CollectionView
 ## <a name="related-links"></a>관련 링크
 
 - [CollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
-- [Xamarin.Forms시각적 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.Forms 시각적 개체 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 응용 프로그램에 SkiaSharp 그래픽을 표시 하기 위한 변환을 알아보고 Xamarin.Forms 샘플 코드를 사용 하 여이를 보여 줍니다.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e20ea5d1d3f813b04a927601fbe1180ff39ed176
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140194"
+제목: "SkiaSharp 변환" 설명: "이 문서에서는 응용 프로그램에서 SkiaSharp 그래픽을 표시 하기 위한 변환을 알아보고 Xamarin.Forms 샘플 코드를 사용 하 여이를 보여 줍니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551 author: davidbritch: dabritch: 03/10/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="skiasharp-transforms"></a>SkiaSharp 변환
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -40,9 +26,9 @@ SkiaSharp는 표준 3 x 3 변환 매트릭스를 기반으로 하는 비 상관 
 
 Xamarin.Forms는 SkiaSharp의 변환과 유사한 변환도 지원 합니다. Xamarin.Forms [`VisualElement`](xref:Xamarin.Forms.VisualElement) 클래스는 다음과 같은 변환 속성을 정의 합니다.
 
-- [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX)하거나[`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY)
+- [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) 및 [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY)
 - [`Scale`](xref:Xamarin.Forms.VisualElement.Scale)
-- [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation), [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX) 및[`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY)
+- [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation), [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX) 및 [`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY)
 
 `RotationX`및 `RotationY` 속성은 준 3d 효과를 만드는 원근 변환입니다.
 
@@ -60,7 +46,7 @@ SkiaSharp 변환은의 왼쪽 위 모퉁이를 기준으로 하며, `SKCanvas` X
 
 변환 변환을 사용 하 여 SkiaSharp 그래픽을 이동 하는 방법을 알아봅니다.
 
-## <a name="the-scale-transform"></a>[크기 조정 변환](scale.md)
+## <a name="the-scale-transform"></a>[배율 변환](scale.md)
 
 개체를 다양 한 크기로 크기 조정 하기 위한 SkiaSharp 배율 변환을 검색 합니다.
 

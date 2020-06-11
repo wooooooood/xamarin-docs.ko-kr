@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b435e99180791b64e0a8ad975527fb3cb5316b7d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140220"
+제목: "폴리라인 및 패라메트릭 방정식" 설명: "이 문서에서는 SkiaSharp를 사용 하 여 패라메트릭 방정식으로 정의할 수 있는 선을 렌더링 하는 방법을 설명 하 고 샘플 코드를 사용 하 여이를 보여 줍니다."
+assetid: 85AEBB33-E954-4364-A6E1-808FAB197BEE: xamarin-skiasharp author: davidbritch: dabritch:: 03/10/2017:: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="polylines-and-parametric-equations"></a>폴리라인 및 파라메트릭 수식
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

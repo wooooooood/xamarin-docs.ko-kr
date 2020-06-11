@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 Xamarin.Forms AppCompat 및 재질 디자인을 사용 하도록 기존 Android 앱을 변환 하는 방법을 설명 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 24206f6d6764c73f13a4b06fb44fa746f9d353af
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135709"
+제목: "AppCompat 및 재질 디자인 추가" 설명: "이 문서에서는 기존 Xamarin.Forms Android 앱을 AppCompat 및 자재 디자인을 사용 하도록 변환 하는 방법을 설명 합니다."
+assetid: 045FBCDF-4D45-48BB-9911-BD3938C87D58. 기술: xamarin 양식 작성자: davidbritch: dabritch: ms. 날짜: 06/27/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="adding-appcompat-and-material-design"></a>AppCompat 및 재질 디자인 추가
 
 _이러한 단계에 따라 기존 Xamarin.Forms Android 앱에서 AppCompat 및 재질 디자인을 사용 하도록 변환 합니다._
@@ -43,7 +29,7 @@ Android 프로젝트의 대상 프레임 워크가 Android 6.0 (Marshmallow) 인
 
 Android 프로젝트에서 다음 세 개의 파일을 만들고 아래 내용을 붙여넣습니다. Google은 지정 된에 대 한 대체 색 구성표를 선택 하는 데 도움이 되는 [스타일 안내선](https://www.google.com/design/spec/style/color.html#color-color-palette) 및 [색상표 생성기](https://www.materialpalette.com/) 를 제공 합니다.
 
-**리소스/값/색 .xml**
+**리소스/값/colors.xml**
 
 ```xml
 <resources>
@@ -54,7 +40,7 @@ Android 프로젝트에서 다음 세 개의 파일을 만들고 아래 내용�
 </resources>
 ```
 
-**리소스/값/스타일 .xml**
+**리소스/값/style.xml**
 
 ```xml
 <resources>
@@ -72,7 +58,7 @@ Android 프로젝트에서 다음 세 개의 파일을 만들고 아래 내용�
 
 Android 롤리팝 이상에서 실행 될 때 특정 속성을 적용 하려면 **v21** 폴더에 추가 스타일을 포함 해야 합니다.
 
-**Resources/values-v21/style .xml**
+**리소스/값-v21/style.xml**
 
 ```xml
 <resources>
@@ -84,11 +70,11 @@ Android 롤리팝 이상에서 실행 될 때 특정 속성을 적용 하려면 
 </resources>
 ```
 
-### <a name="4-update-androidmanifestxml"></a>4. 업데이트 AndroidManifest .xml
+### <a name="4-update-androidmanifestxml"></a>4. 업데이트 AndroidManifest.xml
 
 이 새 테마 정보를 사용 하려면를 추가 하 여 **Androidmanifest** 파일에 테마를 설정 `android:theme="@style/MyTheme"` 합니다 (나머지 XML은 그대로 유지).
 
-**Properties/AndroidManifest .xml**
+**속성/AndroidManifest.xml**
 
 ```xml
 ...

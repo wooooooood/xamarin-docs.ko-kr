@@ -11,7 +11,7 @@ assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5: xamarin-forms author: davidbritch
 
 ![앱 브라우저에서](webview-images/in-app-browser.png)
 
-## <a name="content"></a>콘텐츠
+## <a name="content"></a>Content
 
 `WebView`는 다음과 같은 콘텐츠 형식을 지원 합니다.
 
@@ -103,7 +103,7 @@ browser.Source = htmlSource;
 
 ### <a name="local-html-content"></a>로컬 HTML 콘텐츠
 
-웹 보기는 앱 내에 포함 된 HTML, CSS 및 JavaScript의 콘텐츠를 표시할 수 있습니다. 예:
+웹 보기는 앱 내에 포함 된 HTML, CSS 및 JavaScript의 콘텐츠를 표시할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```html
 <html>
@@ -341,7 +341,7 @@ public partial class InAppBrowserXaml : ContentPage
 - `Source`– 탐색을 수행한 요소입니다.
 - `Url`– 탐색 대상입니다.
 
-로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 되는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) . 예:
+로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 되는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) . 예를 들면 다음과 같습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

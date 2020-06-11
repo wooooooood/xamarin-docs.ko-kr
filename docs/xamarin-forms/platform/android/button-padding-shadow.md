@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5554341493b52d20c946a4bcfe2d1230e4a02759
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135566"
+제목: "Android의 단추 패딩 및 그림자" 설명: "플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 Android 단추의 기본 패딩 및 그림자 값을 사용 하는 Android 플랫폼별를 사용 하는 방법을 설명 합니다. "
+assetid: BD2B60D1-DE6E-4691-A777-8EC5F560A4E9: xamarin-forms author: davidbritch: dabritch: ms. date: 07/10/2018 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="button-padding-and-shadows-on-android"></a>Android의 단추 패딩 및 그림자
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

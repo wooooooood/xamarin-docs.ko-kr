@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms라디오
-description: Xamarin.FormsRadioButton은 사용자가 집합에서 하나의 옵션을 선택할 수 있도록 하는 단추 유형입니다. 각 옵션은 하나의 라디오 단추로 표시 되 고 그룹에서 라디오 단추 하나를 선택할 수 있습니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f7cbd11f98127cb73514112dae785102ff9c51c0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127625"
+제목: " Xamarin.Forms radiobutton" description: " Xamarin.Forms radiobutton은 사용자가 집합에서 하나의 옵션을 선택할 수 있도록 하는 단추 유형입니다. 각 옵션은 하나의 라디오 단추로 표시 되며 하나의 라디오 단추만 그룹에서 선택할 수 있습니다. "
+assetid: E2AA40E0-69A5-41DF-BFC4-C151CA657451: xamarin-forms author: davidbritch: dabritch:: 03/13/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-radiobutton"></a>Xamarin.Forms라디오
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
@@ -203,7 +189,7 @@ radioButton.CheckedChanged += (sender, e) =>
 
 ![IOS 및 Android의 시각적 상태별로 설정 된 RadioButton 모양의 스크린샷](radiobutton-images/ischecked-visualstate.png "IOS 및 Android의 RadioButton 시각적 상태")
 
-시각적 상태에 대 한 자세한 내용은 [ Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)를 참조 하세요.
+시각적 개체 상태에 대한 자세한 내용은 [Xamarin.Forms 시각적 개체 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)를 참조하세요.
 
 ## <a name="disable-a-radiobutton"></a>라디오 단추 사용 안 함
 
@@ -212,5 +198,5 @@ radioButton.CheckedChanged += (sender, e) =>
 ## <a name="related-links"></a>관련 링크
 
 - [RadioButton 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
-- [Xamarin.Forms단추만](~/xamarin-forms/user-interface/button.md)
-- [Xamarin.Forms시각적 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.Forms 단추](~/xamarin-forms/user-interface/button.md)
+- [Xamarin.Forms 시각적 개체 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)

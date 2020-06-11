@@ -1,9 +1,6 @@
 ---
-제목: 설명: '이 문서에서는에서 사용할 수 있는 Windows 플랫폼 지원을 설명 Xamarin.Forms 합니다.
-ms. prod: assetid: ms. 기술: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+제목: "Windows 플랫폼 기능" 설명: "이 문서에서는에서 사용할 수 있는 Windows 플랫폼 지원을 설명 Xamarin.Forms 합니다."
+assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F: xamarin-forms author: davidbritch: dabritch:: 01/16/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
 
 # <a name="windows-platform-features"></a>Windows 플랫폼 기능
@@ -46,7 +43,7 @@ Xamarin.FormsVisual Studio에서 사용할 수 있는 템플릿에는 UWP (유�
 > [!NOTE]
 > Xamarin.Forms1.x와 2.x는 _Windows Phone 8 개의 Silverlight_, _Windows Phone 8.1_및 _Windows 8.1_ 응용 프로그램 개발을 지원 합니다. 그러나 이러한 프로젝트 형식은 더 이상 사용 되지 않습니다.
 
-## <a name="getting-started"></a>시작하기
+## <a name="getting-started"></a>시작
 
 Visual Studio에서 **파일 > 새 > 프로젝트** 로 이동 하 고, **플랫폼 간 > 빈 앱 ( Xamarin.Forms )** 템플릿 중 하나를 선택 하 여 시작 합니다.
 

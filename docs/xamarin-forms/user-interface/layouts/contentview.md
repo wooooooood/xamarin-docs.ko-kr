@@ -1,23 +1,9 @@
 ---
-title: Xamarin.FormsContentView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 46d2abf895ffe31bd1dc1c22caf36440c54b331c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130119"
+제목: " Xamarin.Forms contentview" 설명: "이 문서에서는 contentview 클래스를 사용 하 여 예제 CardView와 같은 사용자 지정 컨트롤을 만드는 방법을 설명 합니다.
+assetid: 638402E7-CA44-456B-863B-791F6B6B561D: xamarin-forms author: profexorgeek: jusjohns:: 08/14/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
-# <a name="xamarinforms-contentview"></a>Xamarin.FormsContentView
+
+# <a name="xamarinforms-contentview"></a>Xamarin.Forms ContentView
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 
@@ -121,7 +107,7 @@ public string CardTitle
 
 `ContentView`요소는 속성을로 설정 합니다 `x:Name` . **이**속성은 인스턴스에 바인딩된 개체에 액세스 하는 데 사용할 수 있습니다 `CardView` . 레이아웃의 요소는 해당 속성에 대 한 바인딩을 바인딩된 개체에 정의 된 값으로 설정 합니다.
 
-데이터 바인딩에 대 한 자세한 내용은 [ Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조 하세요.
+데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
 
 > [!NOTE]
 > `FallbackValue`바인딩이 인 경우 속성은 기본값을 제공 합니다 `null` . 이를 통해 Visual Studio에서 [XAML 미리 보기](~/xamarin-forms/xaml/xaml-previewer/index.md) 를 사용 하 여 컨트롤을 렌더링할 수도 있습니다 `CardView` .
@@ -207,11 +193,11 @@ CardView card = new CardView
 
 [![CardView ControlTemplate 스크린 샷](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
 
-컨트롤 템플릿에 대 한 자세한 내용은 [ Xamarin.Forms 컨트롤 템플릿](~/xamarin-forms/app-fundamentals/templates/control-template.md)을 참조 하세요.
+컨트롤 템플릿에 대한 자세한 내용은 [Xamarin.Forms 컨트롤 템플릿](~/xamarin-forms/app-fundamentals/templates/control-template.md)을 참조하세요.
 
 ## <a name="related-links"></a>관련 링크
 
 * [ContentView 샘플 응용 프로그램](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
-* [Xamarin.Forms데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+* [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [바인딩 가능한 속성](~/xamarin-forms/xaml/bindable-properties.md)입니다.
-* [Xamarin.Forms컨트롤 템플릿](~/xamarin-forms/app-fundamentals/templates/control-template.md)
+* [Xamarin.Forms 컨트롤 템플릿](~/xamarin-forms/app-fundamentals/templates/control-template.md)

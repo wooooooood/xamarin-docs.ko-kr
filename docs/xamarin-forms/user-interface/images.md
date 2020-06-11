@@ -73,7 +73,7 @@ image.Source = Device.RuntimePlatform == Device.Android
 ```
 
 > [!IMPORTANT]
-> 모든 플랫폼에서 동일한 이미지 파일 이름을 사용 하려면 모든 플랫폼에서 이름이 유효 해야 합니다. Android drawables에는 이름 지정 제한이 있습니다. 소문자, 숫자, 밑줄 및 마침표만 사용할 수 있으며 플랫폼 간 호환성을 위해 다른 모든 플랫폼 에서도이를 준수 해야 합니다. 예제 파일 이름 **해안** 는 규칙을 따르며, 잘못 된 파일 이름에 대 한 예로는 "물 front .png", "해안", "water-front" 및 "wåterfront"가 있습니다.
+> 모든 플랫폼에서 동일한 이미지 파일 이름을 사용 하려면 모든 플랫폼에서 이름이 유효 해야 합니다. Android drawables에는 이름 지정 제한이 있습니다. 소문자, 숫자, 밑줄 및 마침표만 사용할 수 있으며 플랫폼 간 호환성을 위해 다른 모든 플랫폼 에서도이를 준수 해야 합니다. 예제 파일 이름 **waterfront.png** 는 규칙을 따르며, 잘못 된 파일 이름에 대 한 예로는 "물 front.png", "WaterFront.png", "water-front.png" 및 "wåterfront.png"가 있습니다.
 
 ### <a name="native-resolutions-retina-and-high-dpi"></a>네이티브 해상도 (레 티 나 및 높은 DPI)
 
@@ -87,7 +87,7 @@ Android 대체 해상도 이미지는 다음 스크린샷에 표시 된 것 처�
 
 [![Android 다중 해상도 이미지 위치](images-images/xs-highdpisolution-sml.png)](images-images/xs-highdpisolution.png#lightbox)
 
-UWP 이미지 파일 이름 [앞에는 `.scale-xxx` 파일 확장명 앞](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast)에 접미사를 추가할 수 있습니다. 여기서 `xxx` 은 자산에 적용 되는 크기 조정의 백분율입니다 (예: **myimage**). 그런 다음 크기 조정 한정자 없이 코드 또는 XAML에서 이미지를 참조할 수 있습니다 (예: **myimage .png**). 이 플랫폼은 디스플레이의 현재 DPI를 기준으로 가장 가까운 적절 한 자산 크기를 선택 합니다.
+UWP 이미지 파일 이름은 [ `.scale-xxx` 파일 확장명 앞에 접미사를 추가할 수 있습니다](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast) `xxx` . 여기서은 자산에 적용 되는 크기 조정의 백분율입니다 (예: **myimage.scale-200.png**). 그런 다음 크기 조정 한정자 없이 코드 또는 XAML에서 이미지를 참조할 수 있습니다 (예: **myimage.png**). 이 플랫폼은 디스플레이의 현재 DPI를 기준으로 가장 가까운 적절 한 자산 크기를 선택 합니다.
 
 ### <a name="additional-controls-that-display-images"></a>이미지를 표시 하는 추가 컨트롤
 
@@ -116,7 +116,7 @@ UWP 이미지 파일 이름 [앞에는 `.scale-xxx` 파일 확장명 앞](https:
 
 파일에 대 한 **속성** 창에서 **빌드 작업** 을 보고 변경할 수 있습니다.
 
-이 예제에서 리소스 ID는 **WorkingWithImages**입니다.
+이 예제에서는 리소스 ID를 **WorkingWithImages.beach.jpg**합니다.
 IDE는 각 값 사이에 마침표 (.)를 사용 하 여이 프로젝트의 **기본 네임 스페이스** 를 파일 이름과 연결 하 여이 기본값을 생성 했습니다.
 <!-- https://msdn.microsoft.com/library/ms950960.aspx -->
 
@@ -125,15 +125,15 @@ IDE는 각 값 사이에 마침표 (.)를 사용 하 여이 프로젝트의 **�
 ![](images-images/xs-buildaction.png "Set Build Action: EmbeddedResource")
 
 파일에 대 한 **속성** 패드에서 **빌드 작업** 을 보고 변경할 수도 있습니다.
-이 패드는 코드에서 리소스를 참조 하는 데 사용 되는 **리소스 ID** 를 표시 합니다. 아래 스크린샷에서 **리소스 ID** 는 **WorkingWithImages**입니다.
+이 패드는 코드에서 리소스를 참조 하는 데 사용 되는 **리소스 ID** 를 표시 합니다. 아래 스크린샷에서 **리소스 ID** 가 **WorkingWithImages.beach.jpg**됩니다.
 IDE는 각 값 사이에 마침표 (.)를 사용 하 여이 프로젝트의 **기본 네임 스페이스** 를 파일 이름과 연결 하 여이 기본값을 생성 했습니다.
-이 ID는 **속성** 패드에서 편집할 수 있지만 이러한 예제에서는 **WorkingWithImages** 값이 사용 됩니다.
+이 ID는 **속성** 패드에서 편집할 수 있지만 이러한 예제에서는 **WorkingWithImages.beach.jpg** 값이 사용 됩니다.
 
 [![포함 리소스 속성 패드](images-images/xs-embeddedproperties-sml.png)](images-images/xs-embeddedproperties.png#lightbox)
 
 -----
 
-포함 된 이미지를 프로젝트 내에 있는 폴더에 저장 하면 리소스 ID에서 폴더 이름도 마침표 (.)로 구분 됩니다. **해변 .jpg** 이미지를 **myimages** 라는 폴더로 이동 하면 리소스 ID가 **WorkingWithImages** 로 생성 됩니다.
+포함 된 이미지를 프로젝트 내에 있는 폴더에 저장 하면 리소스 ID에서 폴더 이름도 마침표 (.)로 구분 됩니다. **beach.jpg** 이미지를 **myimages** 라는 폴더로 이동 하면의 리소스 ID가 **WorkingWithImages.MyImages.beach.jpg**
 
 포함 이미지를 로드 하는 코드는 아래와 같이 단순히 **리소스 ID** 를 메서드에 전달 합니다 [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) .
 

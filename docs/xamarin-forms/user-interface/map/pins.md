@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms지도 핀
-description: 이 문서에서는 맵에 핀을 만드는 방법을 설명 Xamarin.Forms 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5e22888291a430863b8e45ee21d359a5acec750f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138439"
+제목: " Xamarin.Forms 지도 핀" 설명: "이 문서에서는 맵에 핀을 만드는 방법을 설명 Xamarin.Forms 합니다."
+assetid: F8FC081B-A811-4FBB-B8F8-30D6FD36BD40: xamarin-forms author: davidbritch: dabritch:: 10/23/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-map-pins"></a>Xamarin.Forms지도 핀
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

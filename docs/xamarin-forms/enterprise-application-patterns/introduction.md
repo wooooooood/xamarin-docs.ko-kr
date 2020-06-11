@@ -23,12 +23,12 @@ assetid: cbce0659-fa03-447a-86ec-140438143230 ms. 기술: xamarin-forms author: 
 - 응용 프로그램의 가로 기능 (예: 인증 및 데이터 액세스), 앱 특정 비즈니스 기능 등의 세로 기능 간의 문제를 완전히 분리 하 고 재사용을 촉진 합니다. 이렇게 하면 응용 프로그램 구성 요소 간의 종속성 및 상호 작용을 보다 쉽게 관리할 수 있습니다.
 - 다른 개인 이나 팀이 자신의 전문 지식에 따라 특정 작업 또는 기능에 초점을 맞출 수 있도록 하 여 역할의 분리를 유지 하는 데 도움이 됩니다. 특히 사용자 인터페이스와 앱의 비즈니스 논리를 명확 하 게 구분 합니다.
 
-그러나 느슨하게 결합 된 불연속 구성 요소로 앱을 분할할 때 해결 해야 하는 많은 문제가 있습니다. 내용은 다음과 같습니다.
+그러나 느슨하게 결합 된 불연속 구성 요소로 앱을 분할할 때 해결 해야 하는 많은 문제가 있습니다. 여기에는 다음이 포함됩니다.
 
 - 사용자 인터페이스 컨트롤과 해당 논리 간의 문제를 명확 하 게 분리 하는 방법을 결정 합니다. 엔터프라이즈 앱을 만들 때 가장 중요 한 결정 사항 중 하나 Xamarin.Forms 는 코드 숨김으로 비즈니스 논리를 배치할지, 사용자 인터페이스 컨트롤과 논리 간의 문제를 명확 하 게 분리 하 여 앱을 유지 관리 하 고 테스트 가능 하 게 만드는 지 여부입니다. 자세한 내용은 [모델-뷰-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md)을 참조 하세요.
 - 종속성 주입 컨테이너를 사용할지 여부를 결정 합니다. 종속성 주입 컨테이너는 종속성이 주입 된 클래스의 인스턴스를 생성 하 고 컨테이너의 구성에 따라 수명 주기를 관리 하는 기능을 제공 하 여 개체 간의 종속성 결합을 줄입니다. 자세한 내용은 [종속성 주입](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)을 참조 하세요.
 - 플랫폼에서 제공 하는 이벤트와 개체 및 형식 참조로 연결 하기 불편 한 구성 요소 간 느슨하게 결합 된 메시지 기반 통신을 선택 합니다. 자세한 내용은 [느슨하게 결합 한 구성 요소 간의 통신](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)소개를 참조 하세요.
-- 탐색 호출 방법 및 탐색 논리가 상주해 야 하는 위치를 포함 하 여 페이지 간에 탐색 하는 방법을 결정 합니다. 자세한 내용은 [탐색](~/xamarin-forms/enterprise-application-patterns/navigation.md)를 참조하세요.
+- 탐색 호출 방법 및 탐색 논리가 상주해 야 하는 위치를 포함 하 여 페이지 간에 탐색 하는 방법을 결정 합니다. 자세한 내용은 [탐색](~/xamarin-forms/enterprise-application-patterns/navigation.md)을 참조하세요.
 - 사용자 입력의 유효성을 검사 하 여 정확성을 확인 하는 방법을 결정 합니다. 의사 결정은 사용자 입력의 유효성을 검사 하는 방법과 사용자에 게 유효성 검사 오류에 대해 알리는 방법을 포함 해야 합니다. 자세한 내용은 [유효성 검사](~/xamarin-forms/enterprise-application-patterns/validation.md)를 참조 하세요.
 - 인증을 수행 하는 방법 및 권한 부여를 사용 하 여 리소스를 보호 하는 방법을 결정 합니다. 자세한 내용은 [인증 및 권한 부여](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md)를 참조 하세요.
 - 데이터를 안정적으로 검색 하는 방법 및 데이터를 캐시 하는 방법을 비롯 하 여 웹 서비스에서 원격 데이터에 액세스 하는 방법을 결정 합니다. 자세한 내용은 [원격 데이터 액세스](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md)를 참조 하세요.
@@ -108,7 +108,7 @@ EShopOnContainers 모바일 앱은 다음 기능을 Xamarin.Forms 수행 합니�
 
 EShopOnContainers 모바일 앱 솔루션은 소스 코드 및 기타 리소스를 프로젝트로 구성 합니다. 모든 프로젝트는 폴더를 사용 하 여 소스 코드 및 기타 리소스를 범주로 구성 합니다. 다음 표에서는 eShopOnContainers 모바일 앱을 구성 하는 프로젝트를 간략히 설명 합니다.
 
-|Project|설명|
+|Project|Description|
 |--- |--- |
 |eShopOnContainers|이 프로젝트는 공유 코드와 공유 UI를 포함 하는 PCL (이식 가능한 클래스 라이브러리) 프로젝트입니다.|
 |eShopOnContainers|이 프로젝트는 android 관련 코드를 저장 하며 Android 앱의 진입점입니다.|
@@ -125,7 +125,7 @@ EShopOnContainers 모바일 앱의 클래스는 전혀 수정 하지 않고 모�
 
 EShopOnContainers PCL 프로젝트에는 다음 폴더가 포함 되어 있습니다.
 
-|폴더|설명|
+|폴더|Description|
 |--- |--- |
 |애니메이션|XAML에서 애니메이션을 사용 하도록 설정 하는 클래스를 포함 합니다.|
 |동작|뷰 클래스에 노출 되는 동작을 포함 합니다.|

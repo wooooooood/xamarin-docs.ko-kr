@@ -1,23 +1,9 @@
 ---
-title: Xamarin.Forms스타일 클래스
-description: Xamarin.Forms스타일 클래스를 사용 하면 스타일 상속을 사용 하지 않고 컨트롤에 여러 스타일을 적용할 수 있습니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 2afb06c2d97e6f15c2041b9c2e9cad092b13d90d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138764"
+제목: "스타일 Xamarin.Forms 클래스" 설명: "스타일 Xamarin.Forms 클래스를 사용 하면 스타일 상속을 사용 하지 않고 컨트롤에 여러 스타일을 적용할 수 있습니다."
+assetid: 4762401E-2B48-48F1-B6E4-61F7AF8AA46F: xamarin-forms author: davidbritch: dabritch:: 01/30/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
-# <a name="xamarinforms-style-classes"></a>Xamarin.Forms스타일 클래스
+
+# <a name="xamarinforms-style-classes"></a>Xamarin.Forms 스타일 클래스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 

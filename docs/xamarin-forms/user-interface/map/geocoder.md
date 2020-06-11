@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms지도 지 오 코딩
-description: 이 문서에서는를 사용 하 여 geocode 및 역방향 geocode 맵 데이터를 사용 하는 방법을 설명 합니다 Xamarin.Forms . Maps Geocoder 클래스입니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: fe099235857f6bd0531539e3aa84e41bf59b50ba
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139869"
+제목: " Xamarin.Forms Map 지 오 코딩" description: "이 문서에서는를 사용 하 여 geocode 및 역방향 geocode 맵 데이터를 사용 하는 방법을 설명 합니다 Xamarin.Forms . Maps Geocoder 클래스입니다. "
+assetid: DE7DB31A-8921-4614-8B49-DAEF1E7B03B3: xamarin-forms author: davidbritch: dabritch:: 10/22/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-map-geocoding"></a>Xamarin.Forms지도 지 오 코딩
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

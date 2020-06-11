@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms맵 컨트롤
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 32564b48b6d5e7acc619a966af30a086fb56d5e6
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129404"
+제목: " Xamarin.Forms 맵 컨트롤" 설명: "맵 컨트롤은 지도를 표시 하 고 주석을 추가 하는 플랫폼 간 뷰입니다. 각 플랫폼에 대해 기본 지도 컨트롤을 사용 하 여 사용자에 게 빠르고 친숙 한 지도 환경을 제공 합니다. "
+assetid: 22C99029-0B16-43A6-BF58-26B48C4AED38: xamarin-forms author: davidbritch: dabritch:: 10/29/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-map-control"></a>Xamarin.Forms맵 컨트롤
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

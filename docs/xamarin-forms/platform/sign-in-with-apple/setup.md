@@ -91,11 +91,19 @@ _Apple에 로그인_옆에 있는 **구성** 을 클릭 합니다.
 `.p8`키 파일이 다운로드 됩니다.  메모장 또는 VSCode에서이 파일을 열어 텍스트 내용을 볼 수 있습니다.  다음과 유사 하 게 표시 됩니다.
 
 ```
------BEGIN PRIVATE KEY-----
-MIGTAgEAMBMGBasGSM49AgGFCCqGSM49AwEHBHkwdwIBAQQg3MX8n6VnQ2WzgEy0
-Skoz9uOvatLMKTUIPyPCAejzzUCgCgYIKoZIzj0DAQehRANCAARZ0DoM6QPqpJxP
-JKSlWz0AohFhYre10EXPkjrih4jTm+b0AeG2BGuoIWd18i8FimGDgK6IzHHPsEqj
-DHF5Svq0
+---
+title: "Setup Steps - Sign In with Apple for Xamarin.Forms"
+description: Sign In with Apple setup differs depending on the different platforms your mobile application targets.
+ms.prod: xamarin
+ms.assetid: 8F712802-395B-469B-B5BE-C927AD1A8391
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 09/10/2019
+no-loc:
+- "Xamarin.Forms"
+- "Xamarin.Essentials"
+
 -----END PRIVATE KEY-----
 ```
 

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 931b8d0946f1af5e697e581a04c0feefb31ba2d3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131926"
+제목: "경로 정보 및 열거형" 설명: "이 문서에서는 SkiaSharp 경로에 대 한 정보를 가져오고 콘텐츠를 열거 하는 방법을 설명 하 고 샘플 코드를 사용 하 여이를 보여 줍니다."
+assetid: 8E8C5C6A-F324-4155-8652-7A77D231B3E5: xamarin-skiasharp author: davidbritch: dabritch:: 09/12/2017:: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="path-information-and-enumeration"></a>경로 정보 및 열거형
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

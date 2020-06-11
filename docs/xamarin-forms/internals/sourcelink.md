@@ -1,23 +1,8 @@
 ---
-title: 소스 링크Xamarin.Forms
-description: 이 문서에서는 소스 링크를 사용 하 여로 디버그 하는 방법을 설명 Xamarin.Forms 합니다.
-zone_pivot_groups: ''
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 57db314538c42ef9d58691ba16ab68371ff092b7
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138319"
+제목: "" 설명: "을 사용 하는 소스 링크 Xamarin.Forms :이 문서에서는 소스 링크를 사용 하 여로 디버그 하는 방법을 설명 Xamarin.Forms 합니다."
+zone_pivot_groups: "platform" ms. prod: assetId: 1E13FCD9-5607-46E8-80E4-87A58B389BEB: xamarin-forms author: profexorgeek, author: jusjohns: 09/26/2019: no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="source-link-with-xamarinforms"></a>소스 링크Xamarin.Forms
 
 Xamarin.FormsNuGet 패키지는 소스 링크 매핑을 포함 합니다. 소스 링크는 NuGet 패키지에 포함 된 컴파일된 라이브러리를 소스 코드 리포지토리에 매핑합니다. Visual Studio는 디버깅 하는 동안 소스 코드 파일을 다운로드 하 고 개발자가 소스에서 빌드하지 않고 패키지를 디버그할 수 있도록 하는 코드를 단계별로 실행할 수 있도록 합니다.

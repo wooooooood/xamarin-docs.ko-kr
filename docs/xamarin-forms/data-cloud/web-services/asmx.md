@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 응용 프로그램에서 ASMX SOAP 서비스를 사용 하는 방법을 보여 줍니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1f7a0d04d1e7b6abc9931c05c0e46ef49f8ba09c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138465"
+제목: "ASMX (ASP.NET Web Service) 사용" 설명: "이 문서에서는 응용 프로그램에서 ASMX SOAP 서비스를 사용 하는 방법을 보여 줍니다 Xamarin.Forms ."
+assetid: D5533964-5528-4D35-9C2B-FAFB632472AC: xamarin-forms author: davidbritch: dabritch:: 04/02/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="consume-an-aspnet-web-service-asmx"></a>ASMX(ASP.NET 웹 서비스) 사용
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)

@@ -52,7 +52,7 @@ MacOS 및 Linux 용 GTK #은 [Mono](https://www.mono-project.com/download/stable
 
     ![공유 프로젝트 참조](gtk-images/win/reference-shared-project.png "공유 프로젝트 참조")
 
-8. **참조 관리자** 대화 상자에서 **찾아보기** 단추를 누르고 **C:\Program files (x86) \GtkSharp\2.12\lib** 폴더로 이동한 다음 **atk-sharp**, **gdk-sharp**, **glade-sharp** **, glib-sharp**, **gtk-dotnet, gtk-sharp** **파일을** 선택 합니다.
+8. **참조 관리자** 대화 상자에서 **찾아보기** 단추를 누르고 **C:\Program files (x86) \GtkSharp\2.12\lib** 폴더로 이동한 다음 **atk-sharp.dll**, **gdk-sharp.dll**, **glade-sharp.dll**, **glib-sharp.dll**, **gtk-dotnet.dll**, **gtk-sharp.dll** 파일을 선택 합니다.
 
     ![GTK # 라이브러리 참조](gtk-images/win/reference-gtk-libraries.png "GTK # 라이브러리 참조")
 
@@ -211,6 +211,6 @@ vbox.PackEnd(settingsView, true, true, 0);
 
 네이티브 폼에 대 한 자세한 내용은 [Native forms](~/xamarin-forms/platform/native-forms.md)를 참조 하세요.
 
-## <a name="issues"></a>Issues
+## <a name="issues"></a>문제
 
 이는 미리 보기 이므로 프로덕션이 준비 되지 않은 것으로 간주 됩니다. 현재 구현 상태에 대해서는 [상태](https://github.com/jsuarezruiz/forms-gtk-progress/blob/master/Status.md)를 참조 하 고, 현재 알려진 문제는 [보류 중인 & 알려진 문제](https://github.com/jsuarezruiz/forms-gtk-progress/blob/master/Issues-Pending.md)를 참조 하세요.

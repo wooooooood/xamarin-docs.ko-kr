@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c8c54f3d3815e418d2f71960dc7733711cb40ae2
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139050"
+제목: "경로 채우기 유형" 설명: "이 문서에서는 SkiaSharp 경로 채우기 유형과 관련 된 다양 한 효과를 살펴보고 샘플 코드를 사용 하 여이를 보여 줍니다."
+assetid: 57103A7A-49A2-46AE-894C-7C2664682644: xamarin-skiasharp author: davidbritch: dabritch:: 03/10/2017:: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="the-path-fill-types"></a>경로 채우기 유형
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

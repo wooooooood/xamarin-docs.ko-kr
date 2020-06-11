@@ -1,22 +1,8 @@
 ---
-title: 장치 스타일Xamarin.Forms
-description: Xamarin.Forms에는 device. Styles 클래스에서 장치 스타일 이라고 하는 6 가지 동적 스타일이 포함 되어 있습니다. 이 문서에서는 응용 프로그램에서 장치 스타일을 사용 하는 방법을 설명 합니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b835847fea39e1c2f968e7b81fb9d22f68ea461c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140103"
+제목: "설명:"의 장치 스타일 Xamarin.Forms Xamarin.Forms 은 Device. styles 클래스에서 장치 스타일 이라고 하는 6 가지 동적 스타일을 포함 합니다. 이 문서에서는 응용 프로그램에서 장치 스타일을 사용 하는 방법을 설명 Xamarin.Forms 합니다. "
+assetid: 7FF19ED1-0822-4238-9435-AD970317A2F8: xamarin-forms author: davidbritch: dabritch:: 02/17/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="device-styles-in-xamarinforms"></a>장치 스타일Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
@@ -114,7 +100,7 @@ public class DeviceStylesPageCS : ContentPage
 
 [`Style`](xref:Xamarin.Forms.NavigableElement.Style)각 인스턴스의 속성은 [`Label`](xref:Xamarin.Forms.Label) 클래스의 적절 한 속성으로 설정 됩니다 [`Devices.Styles`](xref:Xamarin.Forms.Device.Styles) .
 
-## <a name="accessibility"></a>접근성
+## <a name="accessibility"></a>액세스 가능성
 
 *장치* 스타일은 내게 필요한 옵션 기본 설정을 준수 하므로 각 플랫폼에서 접근성 기본 설정이 변경 될 때 글꼴 크기가 변경 됩니다. 따라서 액세스 가능한 텍스트를 지원 하려면 *장치* 스타일이 응용 프로그램 내의 모든 텍스트 스타일에 대 한 기준으로 사용 되는지 확인 합니다.
 
@@ -134,5 +120,5 @@ public class DeviceStylesPageCS : ContentPage
 - [스타일 작업 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [장치 스타일](xref:Xamarin.Forms.Device.Styles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
-- [스타일](xref:Xamarin.Forms.Style)
+- [Style](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

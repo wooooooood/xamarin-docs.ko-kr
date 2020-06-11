@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 6a28dd20eb8978334365ac217df1241e5288fd28
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137426"
+제목: "SkiaSharp 비트맵 바둑판식 배열" 설명: "가로 및 세로로 반복 되는 비트맵을 사용 하 여 영역을 바둑판식으로 배열 합니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 9ED14E07-4DC8-4B03-8A33-772838BF51EA author: davidbritch: dabritch: 08/23/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="skiasharp-bitmap-tiling"></a>SkiaSharp 비트맵 바둑판식 배열
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -250,7 +236,7 @@ public class AlgorithmicBrickWallPage : ContentPage
 }
 ```
 
-결과:
+결과는 다음과 같습니다.
 
 [![알고리즘 Brick 벽](bitmap-tiling-images/AlgorithmicBrickWall.png "알고리즘 Brick 벽")](bitmap-tiling-images/AlgorithmicBrickWall-Large.png#lightbox)
 

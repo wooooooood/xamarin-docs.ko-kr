@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 763f44c26d653aa32429b2aa764989e18e8b8078
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139973"
+제목: "SkiaSharp 비트맵에 애니메이션 적용" 설명: "일련의 비트맵을 순차적으로 표시 하 고 애니메이션 GIF 파일을 렌더링 하 여 비트맵 애니메이션을 수행 하는 방법을 알아봅니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD author: davidbritch: dabritch: 07/12/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="animating-skiasharp-bitmaps"></a>SkiaSharp 비트맵에 애니메이션 적용
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -472,7 +458,7 @@ public partial class MainPage : ContentPage
 
 GIF (Graphics 교환 형식) 사양에는 단일 GIF 파일에 연속 해 서 반복적으로 표시 될 수 있는 장면의 여러 순차 프레임을 포함할 수 있도록 하는 기능이 포함 되어 있습니다. 이러한 파일을 _애니메이션 gif_라고 합니다. 웹 브라우저는 애니메이션 gif를 재생할 수 있으며, SkiaSharp를 사용 하면 응용 프로그램에서 애니메이션 GIF 파일의 프레임을 추출 하 여 순차적으로 표시할 수 있습니다.
 
-[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플에는 DemonDeLuxe에 의해 생성 되 고 위키백과의 [뉴턴의 크레들에 놓기](https://en.wikipedia.org/wiki/Newton%27s_cradle) 페이지에서 다운로드 한 **Newtons_cradle_animation_book_2** 라는 애니메이션 gif 리소스가 포함 되어 있습니다. **애니메이션 GIF** 페이지에는 해당 정보를 제공 하 고를 인스턴스화하는 XAML 파일이 포함 되어 있습니다 `SKCanvasView` .
+[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플에는 DemonDeLuxe에 의해 생성 되 고 위키백과의 [뉴턴의 크레들에 놓기](https://en.wikipedia.org/wiki/Newton%27s_cradle) 페이지에서 다운로드 한 **Newtons_cradle_animation_book_2.gif** 이라는 애니메이션 GIF 리소스가 포함 되어 있습니다. **애니메이션 GIF** 페이지에는 해당 정보를 제공 하 고를 인스턴스화하는 XAML 파일이 포함 되어 있습니다 `SKCanvasView` .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

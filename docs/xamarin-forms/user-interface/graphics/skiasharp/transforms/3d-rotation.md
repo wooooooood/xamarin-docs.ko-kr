@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3706139a2c15d01af67203c2bd09b281de80ed52
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140207"
+제목: "SkiaSharp의 3D 회전" 설명: "이 문서에서는 비 상관 변환을 사용 하 여 3D 공간에서 2D 개체를 회전 하 고 샘플 코드를 사용 하 여이를 보여 주는 방법을 설명 합니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9 author: davidbritch: dabritch: 04/14/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="3d-rotations-in-skiasharp"></a>SkiaSharp의 3D 회전
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

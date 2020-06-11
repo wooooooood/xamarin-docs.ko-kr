@@ -6,12 +6,12 @@ ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 4012b648bd451907bdb91221aba13df5ed3d34e3
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 06a3197cfcd3b49538cfa5fa97e40a9f50c7a244
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571027"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84655095"
 ---
 # <a name="introduction-to-web-services"></a>웹 서비스 소개
 
@@ -190,7 +190,7 @@ RESTful 웹 서비스는 일반적으로 JSON 메시지를 사용 하 여 클라
 
 <a name="Using_System.JSON"></a>
 
-### <a name="systemjson"></a>시스템 JSON
+### <a name="systemjson"></a>System.JS
 
 Xamarin 플랫폼은 기본 제공 되는 JSON에 대 한 지원을 제공 합니다. 을 사용 하 여 `JsonObject` 다음 코드 예제와 같이 결과를 검색할 수 있습니다.
 
@@ -301,7 +301,7 @@ file:///Users/myUserName/projects/MyProjectName/service.wsdl
 
 #### <a name="manually-adding-a-proxy-to-a-project"></a>수동으로 프록시를 프로젝트에 추가
 
-호환 되는 도구를 사용 하 여 생성 된 기존 프록시가 있는 경우이 출력은 프로젝트의 일부로 포함 될 때 사용 될 수 있습니다. Mac용 Visual Studio에서 **파일 추가** ...를 사용 하 여 프록시를 추가 하는 메뉴 옵션입니다. 또한이를 위해 **참조 추가 ...** *를 사용* 하 여 명시적으로 참조 해야 합니다. 대화 상자에서 추가합니다.
+호환 되는 도구를 사용 하 여 생성 된 기존 프록시가 있는 경우이 출력은 프로젝트의 일부로 포함 될 때 사용 될 수 있습니다. Mac용 Visual Studio에서 **파일 추가** ...를 사용 하 여 프록시를 추가 하는 메뉴 옵션입니다. 또한 **참조 추가** ...를 사용 하 여 명시적으로 참조 하는 *System.Web.Services.dll* 필요 합니다. 대화 상자에서 추가합니다.
 
 ### <a name="consuming-the-proxy"></a>프록시 사용
 
@@ -352,7 +352,7 @@ ASP.NET 웹 서비스 (ASMX)와 WCF 간에는 차이점이 있지만, WCF는 ASM
 
 응용 프로그램에서 서비스에 연결할 수 있도록 하는 WCF 서비스를 사용 하려면 *프록시가* 생성 되어야 합니다. 프록시는 메서드 및 관련 서비스 구성을 정의 하는 서비스 메타 데이터를 사용 하 여 생성 됩니다. 이 메타 데이터는 웹 서비스에 의해 생성 된 WSDL (웹 서비스 기술 언어) 문서의 형식으로 노출 됩니다. Visual Studio 2017의 Microsoft WCF Web Service Reference Provider를 사용 하 여 프록시를 빌드하여 웹 서비스에 대 한 서비스 참조를 .NET Standard 라이브러리에 추가할 수 있습니다.
 
-Visual Studio 2017에서 Microsoft WCF Web Service Reference Provider를 사용 하 여 프록시를 만드는 대안은 ServiceModel Metadata 유틸리티 도구 (svcutil.exe)를 사용 하는 것입니다. 자세한 내용은 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)를 참조 하세요.
+Visual Studio 2017에서 Microsoft WCF Web Service Reference Provider를 사용 하 여 프록시를 만드는 대안은 ServiceModel Metadata 유틸리티 도구 (svcutil.exe)를 사용 하는 것입니다. 자세한 내용은 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)를 참조 하세요.
 
 <a name="Calling_a_WCF_Service_with_Client_Credential_Security"></a>
 
@@ -437,8 +437,6 @@ basicHttpBinding.Security.Transport.ClientCredentialType = HttpClientCredentialT
 client.ClientCredentials.UserName.UserName = @"foo";
 client.ClientCredentials.UserName.Password = @"mrsnuggles";
 ```
-
-위의 예제에서 "trampolines가 0 형식으로 실행 되었습니다." 라는 메시지가 표시 되는 경우 빌드에 인수를 추가 하 여 0 trampolines 형식의 수를 늘릴 수 있습니다 `–aot “trampolines={number of trampolines}”` . 자세한 내용은 [문제 해결](~/ios/troubleshooting/troubleshooting.md#trampolines)을 참조하세요.
 
 REST 웹 서비스의 컨텍스트에서 HTTP 기본 인증에 대 한 자세한 내용은 [RESTful 웹 서비스 인증](~/xamarin-forms/data-cloud/authentication/rest.md)을 참조 하세요.
 

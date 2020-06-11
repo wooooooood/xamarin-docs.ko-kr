@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms내부 & 고급 개념
-description: 의 고급 개념 및 내부에 대해 알아봅니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 410aadcb885ed66283eb306cb9aa4c5e764fa8ec
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139037"
+제목: " Xamarin.Forms 고급 개념 & 내부" 설명: "고급 개념 및의 내부 정보에 대해 알아봅니다 Xamarin.Forms ."
+assetid: 2273a31c-4022-42ba-befe-0d23ce2ff3b5 ms. 기술: xamarin-forms author: davidbritch: dabritch: ms. date: 03/20/2020 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-advanced-concepts--internals"></a>Xamarin.Forms내부 & 고급 개념
 
 _의 고급 개념 및 내부에 대해 알아봅니다 Xamarin.Forms ._

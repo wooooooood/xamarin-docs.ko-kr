@@ -1,22 +1,8 @@
 ---
-title: 의 XAML 필드 한정자Xamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: db00f522b71a8993ef0f7f6cf5070813ce07396a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138127"
+제목: " Xamarin.Forms " description: "의 XAML 필드 한정자 x:FieldModifier namespace 특성은 명명 된 XAML 요소에 대해 생성 된 필드의 액세스 수준을 지정 합니다."
+assetid: 12357CE0-3C11-4B62-947F-72DB6DFC23A2: xamarin-forms author: davidbritch: dabritch:: 08/02/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xaml-field-modifiers-in-xamarinforms"></a>의 XAML 필드 한정자Xamarin.Forms
 
 `x:FieldModifier`Namespace 특성은 명명 된 XAML 요소에 대해 생성 된 필드의 액세스 수준을 지정 합니다. 특성의 유효한 값은 다음과 같습니다.

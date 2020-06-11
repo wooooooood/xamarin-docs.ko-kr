@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms다각형, 폴리라인 및 원 매핑
-description: 이 문서에서는 지도 인스턴스에서 다각형, 폴리라인 및 원을 만드는 방법을 설명 Xamarin.Forms 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: ca813f9f0f75aeaf4a2502faa7cb96d1fbead471
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138413"
+제목: " Xamarin.Forms 지도 다각형, 폴리라인 및 원" 설명: "이 문서에서는 맵 인스턴스에서 다각형, 폴리라인 및 원을 만드는 방법을 설명 Xamarin.Forms 합니다."
+assetid: CDAF0B02-1AA8-4AD6-94A7-ABFC18006A2D: xamarin-forms author: davidbritch: dabritch:: 03/10/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-map-polygons-and-polylines"></a>Xamarin.Forms다각형 및 다중선 매핑
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

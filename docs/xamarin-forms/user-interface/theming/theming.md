@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms응용 프로그램 테마
-description: Xamarin.Forms각 테마에 대해 ResourceDictionary를 만든 다음 DynamicResource 태그 확장을 사용 하 여 리소스를 로드 하 여 응용 프로그램에서 테마를 구현할 수 있습니다.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3341ada6c5605917eeec79aac96e38cb99b40fc4
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138205"
+제목: " Xamarin.Forms 응용 프로그램 테마" 설명: " Xamarin.Forms 각 테마에 대 한 ResourceDictionary를 만든 다음 DynamicResource 태그 확장을 사용 하 여 리소스를 로드 하 여 응용 프로그램에서 테마를 구현할 수 있습니다."
+assetId: B7B17F66-4E37-4B50-9A57-351B62BE4FED: xamarin-forms author: davidbritch: dabritch:: 08/07/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="theme-a-xamarinforms-application"></a>Xamarin.Forms응용 프로그램 테마
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
@@ -229,4 +215,4 @@ void OnPickerSelectionChanged(object sender, EventArgs e)
 - [시스템 테마 변경에 응답](system-theme-changes.md)
 - [리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [의 동적 스타일Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
-- [Xamarin.FormsXAML 스타일을 사용 하 여 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)
+- [XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCollectionView 그룹화
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 51661d6573d78386f4ca8bfea0063b752295c2d8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136463"
+제목: " Xamarin.Forms CollectionView Grouping" 설명: "CollectionView는 isgrouped 속성을 true로 설정 하 여 올바르게 그룹화 된 데이터를 표시할 수 있습니다."
+assetid: 7E494245-FDBD-49D6-B7FA-CEF976EB59BB: xamarin-forms author: davidbritch: dabritch:: 09/17/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-collectionview-grouping"></a>Xamarin.FormsCollectionView 그룹화
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
@@ -35,7 +21,7 @@ ms.locfileid: "84136463"
 
 [![IOS 및 Android에서 CollectionView의 그룹화 된 데이터 스크린샷](grouping-images/grouped-data.png "그룹화 된 데이터로 CollectionView")](grouping-images/grouped-data-large.png#lightbox "그룹화 된 데이터로 CollectionView")
 
-데이터 템플릿에 대 한 자세한 내용은 [ Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조 하세요.
+데이터 템플릿에 대한 자세한 내용은 [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조하세요.
 
 ## <a name="group-data"></a>데이터 그룹화
 
