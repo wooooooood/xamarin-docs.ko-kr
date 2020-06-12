@@ -6,18 +6,18 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: f99b64b67f4f1cabf3a5884fabb1301e5ee39eee
-ms.sourcegitcommit: 06043f6a5628a7326ac6690eb62ead8e4780f4a7
+ms.openlocfilehash: d21394b3c33b3f415cbe45ae13c84cabab1ec30b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82738790"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571040"
 ---
 # <a name="cross-platform-performance"></a>플랫폼 간 성능
 
 낮은 애플리케이션 성능은 여러가지 방법으로 나타납니다. 이 경우에 애플리케이션이 응답하지 않는 것처럼 보이고, 스크롤 속도가 느려지고, 배터리 수명이 줄어들 수 있습니다. 그러나 성능을 최적화하려면 효율적인 코드를 구현하는 것 이상이 필요합니다. 애플리케이션 성능에 대한 사용자 환경도 고려해야 합니다. 예를 들어 사용자가 다른 활동을 수행하지 못하도록 차단하지 않고 작업을 실행하면 사용자 환경을 향상시키는 데 도움이 될 수 있습니다.
 
-<a name="profiler" />
+<a name="profiler"></a>
 
 ## <a name="use-the-profiler"></a>프로파일러 사용
 
@@ -31,7 +31,7 @@ Xamarin Profiler는 애플리케이션에서 성능 관련 문제를 측정하�
 - 하나의 디바이스에서 성능 측정을 수행하더라도 다른 디바이스의 성능 특성을 표시하지 않기 때문에 이상적으로 다양한 디바이스에서 프로파일링을 수행할 수 있어야 합니다. 그러나 프로파일링은 최소한 가장 낮은 사양이 예상되는 디바이스에서 수행되어야 합니다.
 - 다른 애플리케이션이 아닌 프로파일링된 애플리케이션의 전체 영향을 측정할 수 있도록 다른 모든 애플리케이션을 닫습니다.
 
-<a name="idisposable" />
+<a name="idisposable"></a>
 
 ## <a name="release-idisposable-resources"></a>IDisposable 리소스 릴리스
 
@@ -89,7 +89,7 @@ public void ReadText (string filename)
 
 자세한 내용은 [IDisposable 인터페이스](xref:System.IDisposable)를 참조하세요.
 
-<a name="events" />
+<a name="events"></a>
 
 ## <a name="unsubscribe-from-events"></a>이벤트 구독 취소
 
@@ -160,14 +160,14 @@ public class Subscriber : IDisposable
 
 `handler` 필드는 무명 메서드에 대한 참조를 유지 관리하고 이벤트를 구독하고 구독을 취소하는 데 사용됩니다.
 
-<a name="weakreferences" />
+<a name="weakreferences"></a>
 
 ## <a name="use-weak-references-to-prevent-immortal-objects"></a>약한 참조를 사용하여 유한 개체 방지
 
 > [!NOTE]
 > iOS 개발자는 [iOS에서 순환 참조를 방지](~/ios/deploy-test/performance.md#avoid-strong-circular-references)하는 방법에 대한 설명서를 검토하여 해당 앱이 메모리를 효율적으로 사용하도록 해야 합니다.
 
-<a name="lazy" />
+<a name="lazy"></a>
 
 ## <a name="delay-the-cost-of-creating-objects"></a>개체를 만드는 비용 연기
 
@@ -209,7 +209,7 @@ double Compute(double x)
 
 초기화 지연에 대한 자세한 내용은 [초기화 지연](https://msdn.microsoft.com/library/dd997286(v=vs.110).aspx)을 참조하세요.
 
-<a name="async" />
+<a name="async"></a>
 
 ## <a name="implement-asynchronous-operations"></a>비동기 작업 구현
 
@@ -248,7 +248,7 @@ public class FaceDetection
 
 자세한 내용은 [동기 지원 개요](~/cross-platform/platform/async.md)를 참조하세요.
 
-<a name="sgen" />
+<a name="sgen"></a>
 
 ## <a name="use-the-sgen-garbage-collector"></a>SGen 가비지 수집기 사용
 
@@ -282,7 +282,7 @@ SGen이 가비지 수집을 시작하면 메모리를 회수하는 동안 애플
 - 스트림, 네트워크 연결, 큰 블록의 메모리 및 파일 등의 리소스가 더 이상 필요 없는 경우 명시적으로 릴리스합니다. 자세한 내용은 [IDisposable 리소스 릴리스](#idisposable)를 참조하세요.
 - 개체를 수집할 수 있도록 이벤트 처리기가 더 이상 필요 없는 경우 다시 등록합니다. 자세한 내용은 [이벤트 구독 취소](#events)를 참조하세요.
 
-<a name="linker" />
+<a name="linker"></a>
 
 ## <a name="reduce-the-size-of-the-application"></a>애플리케이션의 크기 축소
 
@@ -335,7 +335,7 @@ SGen이 가비지 수집을 시작하면 메모리를 회수하는 동안 애플
 Android 앱은 각 ABI의 별도 APK로 분할될 수도 있습니다("아키텍처").
 이 블로그 게시물에서 자세히 알아보기: [Android 앱 크기를 줄이는 방법](https://montemagno.com/how-to-keep-your-android-app-size-down/).
 
-<a name="optimizeimages" />
+<a name="optimizeimages"></a>
 
 ## <a name="optimize-image-resources"></a>이미지 리소스 최적화
 
@@ -343,7 +343,7 @@ Android 앱은 각 ABI의 별도 APK로 분할될 수도 있습니다("아키텍
 
 이미지 해상도와 관계 없이 이미지 리소스를 표시하면 앱의 메모리 사용 공간이 크게 증가할 수 있습니다. 따라서 필요한 경우에만 만들어야 하며, 애플리케이션에 더 이상 필요하지 않을 경우 즉시 해제되어야 합니다.
 
-<a name="activationperiod" />
+<a name="activationperiod"></a>
 
 ## <a name="reduce-the-application-activation-period"></a>애플리케이션 활성화 기간 축소
 
@@ -353,7 +353,7 @@ Android 앱은 각 ABI의 별도 APK로 분할될 수도 있습니다("아키텍
 
 정품 인증 기간 동안 애플리케이션은 정품 인증 논리를 실행합니다. 여기에는 리소스의 로드 및 처리가 포함됩니다. 필수 리소스를 원격으로 검색하는 대신 앱 내에서 패키지되도록 하여 정품 인증 기간을 줄일 수 있습니다. 예를 들어 어떤 경우에는 정품 인증 기간 동안 로컬로 저장된 자리 표시자 데이터를 로드하는 것이 적절할 수 있습니다. 그런 다음, 초기 UI가 표시되고 사용자가 해당 앱과 상호 작용할 수 있게 되면 원격 원본에서 자리 표시자 데이터를 점진적으로 바꿀 수 있습니다. 또한 앱의 활성화 논리는 사용자가 애플리케이션을 사용하기 시작하는 데 필요한 작업만을 수행해야 합니다. 어셈블리가 처음으로 사용될 때 로드되면 추가 어셈블리를 로드하는 작업이 지연되는 경우 도움이 될 수 있습니다.
 
-<a name="webservicecommunication" />
+<a name="webservicecommunication"></a>
 
 ## <a name="reduce-web-service-communication"></a>웹 서비스 통신 축소
 

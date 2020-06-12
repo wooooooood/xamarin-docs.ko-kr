@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2020
-ms.openlocfilehash: 04cb1b9303e571b2a10cdfa621dcd312162e2893
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 9333750432395d008a5454e293648f4e594ae112
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303752"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571690"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 수동 프로비전
 
@@ -51,13 +51,13 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 > [!WARNING]
 > 인증서 및 연결된 키가 손실되면 엄청난 혼란을 겪을 수 있습니다. 기존 인증서를 해지해야 하고 연결된 모든 디바이스(임시 배포용으로 등록된 디바이스 포함)를 다시 프로비저닝해야 하기 때문입니다. 개발 인증서 설정이 완료된 후에는 백업 복사본을 내보내서 안전한 곳에 보관하십시오. 이 작업을 수행하는 방법에 대한 자세한 내용은 Apple 설명서 [Maintaining Certificates](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html)(인증서 유지 관리) 가이드에서 Exporting and Importing Certificates and Profiles(인증서 및 프로필 내보내기 및 가져오기) 섹션을 참조하세요.
 
-<a name="provisioning" />
+<a name="provisioning"></a>
 
 ## <a name="provision-an-ios-device-for-development"></a>개발용 iOS 디바이스 프로비저닝
 
 Apple의 ID를 설정했고 개발 인증서가 준비되었으면 Apple 디바이스에 앱을 배포할 수 있도록 프로비저닝 프로필 및 필요한 엔터티를 설정해야 합니다. Xcode에서 지원하는 iOS 버전을 디바이스에서 실행해야 합니다. 디바이스, Xcode 또는 둘 다를 업데이트해야 할 수도 있습니다.
 
-<a name="adddevice" />
+<a name="adddevice"></a>
 
 ## <a name="add-a-device"></a>디바이스 추가
 
@@ -83,7 +83,7 @@ Apple의 ID를 설정했고 개발 인증서가 준비되었으면 Apple 디바�
 
 Xamarin.iOS 애플리케이션을 테스트하거나 디버그하는 데 사용할 iOS 디바이스에 위의 단계를 반복합니다.
 
-<a name="provisioningprofile" />
+<a name="provisioningprofile"></a>
 
 ## <a name="create-a-development-provisioning-profile"></a>개발 프로비저닝 프로필 만들기
 
@@ -122,7 +122,7 @@ Xamarin.iOS 애플리케이션을 테스트하거나 디버그하는 데 사용�
 
 7. 필요한 경우 다음 페이지에서 **다운로드**를 클릭하여 Mac에 프로비저닝 프로필을 다운로드할 수 있습니다.
 
-<a name="download" />
+<a name="download"></a>
 
 ## <a name="download-provisioning-profiles-in-visual-studio"></a>Visual Studio에서 프로비저닝 프로필 다운로드
 

@@ -179,7 +179,7 @@ catch (Exception ex)
 | iOS | ~0 |
 | UWP | <= 10 |
 
-<a name="calculate-distance" />
+<a name="calculate-distance"></a>
 
 ## <a name="detecting-mock-locations"></a>Mock 위치 검색
 일부 디바이스는 공급자에서 또는 모의 위치를 제공하는 애플리케이션에 의해 모의 위치를 반환할 수 있습니다. [`Location`](xref:Xamarin.Essentials.Location)에서 `IsFromMockProvider`를 사용하여 이를 탐지할 수 있습니다.

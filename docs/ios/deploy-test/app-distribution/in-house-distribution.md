@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 9b9db3e6ae081a02d2b2297e70c216015dceade6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 854fecd7945c1090b475b3571678388b8e1cf127
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73026540"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573237"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 사내 배포
 
@@ -31,13 +31,13 @@ Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 �
 
 모든 앱은 여전히 Apple에서 서명해야 합니다.
 
-<a name="testing" />
+<a name="testing"></a>
 
 ## <a name="testing-your-application"></a>애플리케이션 테스트
 
 애플리케이션 테스트는 임시 배포를 사용하여 수행됩니다. 테스트에 대한 자세한 내용은 [임시 배포](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md) 가이드의 단계를 따릅니다. 최대 100개의 디바이스에서만 테스트할 수 있습니다.
 
-<a name="setup" />
+<a name="setup"></a>
 
 ## <a name="getting-set-up-for-distribution"></a>배포 설정
 
@@ -47,7 +47,7 @@ Apple Developer Enterprise Program 인증서는 3년 동안 지속되며, 프로
 
 만료된 인증서는 갱신할 수 없으며, 대신 [아래](#certificate)에서 설명한 대로 만료된 인증서를 새 인증서로 교체해야 합니다.
 
-<a name="certificate" />
+<a name="certificate"></a>
 
 ## <a name="creating-a-distribution-certificate"></a>배포 인증서 만들기
 
@@ -84,11 +84,11 @@ Apple Developer Enterprise Program 인증서는 3년 동안 지속되며, 프로
 
    [![](in-house-distribution-images/selectcert.png "Select iOS App Store")](in-house-distribution-images/selectcert.png#lightbox)
 
-<a name="profile" />
+<a name="profile"></a>
 
 ## <a name="creating-a-distribution-provisioning-profile"></a>배포 프로비전 프로필 만들기
 
-<a name="appid" />
+<a name="appid"></a>
 
 ### <a name="creating-an-app-id"></a>앱 ID 만들기
 
@@ -134,7 +134,7 @@ Visual Studio에서 새 배포 프로필을 사용하려면, 먼저 Visual Studi
 
 -----
 
-<a name="inhouse" />
+<a name="inhouse"></a>
 
 ## <a name="distributing-your-app-in-house"></a>사내 앱 배포
 

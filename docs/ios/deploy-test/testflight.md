@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 2f5d04b49658abe9d366e264d8f1a659732a2c33
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 86b887b7aa913572d5fb6093fe682cd2933b282e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303596"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573185"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>TestFlight를 사용하여 Xamarin.iOS 앱 배포
 
@@ -165,7 +165,7 @@ TestFlight를 사용하여 시작하려면 앱의 **시험판** 탭으로 이동
 
 이 메타데이터는 내부 테스터에게 **필요하지 않지만**, 외부 테스터에게는 **필요합니다**.
 
-<a name="beta-testing" />
+<a name="beta-testing"></a>
 
 ### <a name="enable-beta-testing"></a>베타 테스트 사용
 

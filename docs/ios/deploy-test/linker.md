@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 284705973f9c0ec606572170f7e927ed4745ddd1
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 263c48c5006ba0060756e1050497c38dfb7c8eae
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73030230"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567777"
 ---
 # <a name="linking-xamarinios-apps"></a>Xamarin.iOS 앱 연결
 
@@ -22,7 +22,7 @@ ms.locfileid: "73030230"
 
 링커는 정적 도구이므로 리플렉션을 통해 호출되거나 동적으로 인스턴스화되는 포함 형식 및 메서드에 대해 표시할 수 없습니다. 이 제한을 해결하는 여러 가지 옵션이 있습니다.
 
-<a name="Linker_Behavior" />
+<a name="Linker_Behavior"></a>
 
 ## <a name="linker-behavior"></a>링커 동작
 
@@ -56,7 +56,7 @@ Visual Studio의 **프로젝트 속성**에서 찾을 수 있는 링커 동작 �
 
 명령줄 도구 mtouch를 사용하는 경우 이것은 *-nolink* 옵션에 해당합니다.
 
-<a name="Link_SDK_assemblies_only" />
+<a name="Link_SDK_assemblies_only"></a>
 
 ### <a name="link-sdk-assemblies-only"></a>SDK 어셈블리만 연결
 
@@ -66,7 +66,7 @@ Visual Studio의 **프로젝트 속성**에서 찾을 수 있는 링커 동작 �
 
 명령줄 도구 mtouch를 사용하는 경우 이것은 *-linksdk* 옵션에 해당합니다.
 
-<a name="Link_all_assemblies" />
+<a name="Link_all_assemblies"></a>
 
 ### <a name="link-all-assemblies"></a>모든 어셈블리 연결
 
@@ -74,13 +74,13 @@ Visual Studio의 **프로젝트 속성**에서 찾을 수 있는 링커 동작 �
 
 명령줄 도구 **mtouch**를 사용하는 경우 이것은 *-linkall* 옵션에 해당합니다.
 
-<a name="Controlling_the_Linker" />
+<a name="Controlling_the_Linker"></a>
 
 ## <a name="controlling-the-linker"></a>링커 제어
 
 링커를 사용하는 경우 동적으로 호출한, 심지어 간접적으로 호출한 코드까지 제거되는 경우가 가끔 있습니다. 이러한 상황을 해결하기 위해 링커는 동작을 세밀하게 제어할 수 있는 몇 가지 기능과 옵션을 제공합니다.
 
-<a name="Preserving_Code" />
+<a name="Preserving_Code"></a>
 
 ### <a name="preserving-code"></a>코드 유지
 
@@ -108,7 +108,7 @@ public sealed class PreserveAttribute : System.Attribute {
 
 링커는 이 특성을 형식 이름 기준으로 보기 때문에 어떤 네임스페이스에 정의되는지는 전혀 중요하지 않습니다.
 
- <a name="Skipping_Assemblies" />
+ <a name="Skipping_Assemblies"></a>
 
 ### <a name="skipping-assemblies"></a>어셈블리 건너뛰기
 
@@ -130,7 +130,7 @@ public sealed class PreserveAttribute : System.Attribute {
 
 이 옵션을 사용하는 사용자 인터페이스는 없지만 Mac용 Visual Studio 프로젝트 옵션 대화 상자 또는 Visual Studio 프로젝트 속성 창의 **추가 mtouch 인수** 텍스트 필드에서 제공할 수 있습니다. (예: *--linkskip=mscorlib*는 mscorlib.dll을 연결하지 않지만 솔루션의 다른 어셈블리를 연결합니다).
 
-<a name="Disabling_Link_Away" />
+<a name="Disabling_Link_Away"></a>
 
 ### <a name="disabling-link-away"></a>"연결 제거" 해제
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: f744f4ed5619e4e7f4a9d85897c4451bf7e5b9bc
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 314c94fc9208a63e2f9305511df262327df921a5
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73022356"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84565072"
 ---
 # <a name="nsstring-in-xamarinios-and-xamarinmac"></a>Xamarin.iOS 및 Xamarin.Mac의 NSString
 
@@ -38,7 +38,7 @@ class UILabel {
 
 `NSString`을 사용하지 않고 대신 C 문자열("*char*")을 사용하는 소수의 타사 Objective-C API가 있습니다. 이러한 경우 C# 문자열 데이터 형식을 계속 사용할 수 있지만 [[PlainString]](~/cross-platform/macios/binding/objective-c-libraries.md) 특성을 사용하여 이 문자열을 `NSString`으로 마샬링하지 말고 C 문자열로 마샬링해야 함을 바인딩 생성기에 알려야 합니다.
 
- <a name="Exceptions_to_the_Rule" />
+ <a name="Exceptions_to_the_Rule"></a>
 
 ## <a name="exceptions-to-the-rule"></a>규칙에 대한 예외
 

@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: be2f7f555b76d472f7a66d95e661bb2f5884c58f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ca83f6ced2e9c2f5380d3bf760e00d613cb0acb0
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76725343"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570975"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Objective-C 바인딩 개요
 
@@ -21,7 +21,7 @@ Xamarin과 함께 사용할 Objective-C 라이브러리를 바인딩하려면 3�
 
 1. 네이티브 API가 .NET에 노출되는 방식과 기본 Objective-C에 매핑되는 방식을 설명하는 C# "API 정의"를 작성합니다. 이 작업은 `interface` 같은 표준 C# 구문과 다양한 바인딩 **특성**을 사용하여 수행합니다(이 [간단한 예](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API) 참조).
 
-2. C#에서 "API 정의"를 작성한 후에는 이를 컴파일하여 "바인딩" 어셈블리를 생성합니다. 이 작업은 Mac용 Visual Studio 또는 Visual Studio에서 [**명령줄**](#commandline) 또는 [**바인딩 프로젝트**](#bindingproject)를 사용하여 수행할 수 있습니다.
+2. C#에서 "API 정의"를 작성한 후에는 이를 컴파일하여 "바인딩" 어셈블리를 생성합니다. 이 작업은 Mac용 Visual Studio 또는 Visual Studio에서 [**명령줄**](#command-line-bindings) 또는 [**바인딩 프로젝트**](#bindingproject)를 사용하여 수행할 수 있습니다.
 
 3. 그러면 사용자가 정의한 API를 사용하여 네이티브 기능에 액세스할 수 있도록 해당 "바인딩" 어셈블리가 Xamarin 애플리케이션 프로젝트에 추가됩니다.
    바인딩 프로젝트는 애플리케이션 프로젝트와 완전히 분리됩니다.
@@ -30,8 +30,6 @@ Xamarin과 함께 사용할 Objective-C 라이브러리를 바인딩하려면 3�
    > 1단계는 [**Objective Sharpie**](#objectivesharpie)의 지원을 받아 자동화할 수 있습니다. 이는 Objective-C API를 살펴보고 제안된 C# "API 정의"를 생성합니다. Objective Sharpie에서 만든 파일을 사용자 지정하고 바인딩 프로젝트(또는 명령줄)에서 이를 사용하여 바인딩 어셈블리를 만들 수 있습니다. Objective Sharpie는 자체적으로 바인딩을 만들지 않으며, 단순히 더 큰 프로세스의 선택적 부분입니다.
 
 또한 바인딩을 작성하는 데 도움이 되는 [작동 방법](#howitworks)에 대한 자세한 기술 정보를 읽을 수 있습니다.
-
-<a name="Command_Line_Bindings" /><a name="commandline" />
 
 ## <a name="command-line-bindings"></a>명령줄 바인딩
 
@@ -51,7 +49,7 @@ bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 
 위의 명령은 현재 디렉터리에 `cocos2d.dll` 파일을 생성하며, 프로젝트에서 사용할 수 있는 완전히 바인딩된 라이브러리를 포함합니다. 바인딩 프로젝트([아래](#bindingproject) 설명 참조)를 사용하는 경우 Mac용 Visual Studio에서 이 도구를 사용하여 바인딩을 만듭니다.
 
-<a name="bindingproject" />
+<a name="bindingproject"></a>
 
 ## <a name="binding-project"></a>바인딩 프로젝트
 
@@ -59,7 +57,7 @@ bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 
 바인딩 프로젝트를 만들고 사용하여 바인딩을 생성하는 방법을 보려면 이 [시작 가이드](~/cross-platform/macios/binding/objective-c-libraries.md#Getting_Started)를 따르세요.
 
-<a name="objectivesharpie" />
+<a name="objectivesharpie"></a>
 
 ## <a name="objective-sharpie"></a>Objective Sharpie
 
@@ -67,7 +65,7 @@ Objective Sharpie는 바인딩 생성 초기 단계에 도움이 되는 또 다�
 
 네이티브 라이브러리, 네이티브 프레임워크 및 CocoaPod를 바인딩으로 빌드할 수 있는 API 정의로 구문 분석하는 방법을 알아보려면 [Objective Sharpie 문서](~/cross-platform/macios/binding/objective-sharpie/index.md)를 읽어보세요.
 
-<a name="howitworks" />
+<a name="howitworks"></a>
 
 ## <a name="how-binding-works"></a>바인딩 작동 방법
 

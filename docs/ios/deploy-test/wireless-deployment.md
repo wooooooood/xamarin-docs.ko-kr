@@ -8,12 +8,12 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: b0eb471bd41bb38d62ced38ed66cfa0dfee37bbf
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 58a7b6af2b21d2ca2106f78b833ff846c9daa7ac
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73023416"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572613"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Xamarin.iOS 및 tvOS 앱에 대한 무선 배포
 
@@ -53,7 +53,7 @@ Mac 빌드 호스트에 다음 구성 요소를 설치해야 합니다.
 
 다음 페어링 프로세스는 디바이스마다 한 번만 수행하면 됩니다. Xcode가 연결 설정을 그대로 유지합니다.
 
-<a name="pair" />
+<a name="pair"></a>
 
 ### <a name="pairing-an-ios-device-with-xcode"></a>iOS 디바이스를 Xcode와 페어링
 

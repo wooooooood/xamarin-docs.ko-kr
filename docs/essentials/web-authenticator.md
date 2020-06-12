@@ -41,8 +41,8 @@ Android에서는 콜백 URI를 처리하기 위한 의도 필터 설정이 필�
 const string CALLBACK_SCHEME = "myapp";
 
 [Activity(NoHistory = true, LaunchMode = LaunchMode.SingleTop)]
-[IntentFilter(new[] { Intent.ActionView },
-    Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
+[IntentFilter(new[] { Android.Content.Intent.ActionView },
+    Categories = new[] { Android.Content.Intent.CategoryDefault, Android.Content.Intent.CategoryBrowsable },
     DataScheme = CALLBACK_SCHEME)]
 public class WebAuthenticationCallbackActivity : Xamarin.Essentials.WebAuthenticatorCallbackActivity
 {

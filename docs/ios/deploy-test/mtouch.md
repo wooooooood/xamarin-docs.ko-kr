@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 2a0f9d063b319c0f412f6e8f47a59f0f994678ae
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 154cb6004bad5a12c98a22fa7522a9cc7a7c757a
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73026280"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567478"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>mtouch를 사용하여 Xamarin.iOS 앱을 번들로 묶기
 
@@ -67,7 +67,7 @@ $ mtouch -dev -c "iPhone Developer: Miguel de Icaza" foo.exe
 
 이 특별한 경우에 "iPhone 개발자: Miguel de Icaza" 인증서를 사용하여 애플리케이션에 서명합니다. 이 단계는 매우 중요하며, 이 단계를 거치지 않으면 물리적 디바이스에서 애플리케이션 로드를 거부합니다.
 
- <a name="Running_your_Application" />
+ <a name="Running_your_Application"></a>
 
 ## <a name="running-your-application"></a>애플리케이션 실행
 

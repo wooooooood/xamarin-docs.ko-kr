@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 09/07/2018
-ms.openlocfilehash: adcfb1457742d343f87a602885566107cf327e2d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 2779019fff1354b18d285775daf224ffc1402fd4
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027147"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571365"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>애플리케이션에서 Google Maps API 사용
 
@@ -36,11 +36,11 @@ Maps API를 사용하려면 다음을 비롯한 몇 가지 단계를 수행해�
 - [필수 권한 지정](#declare-permissions)
 - [필요한 경우, Google API를 사용하여 에뮬레이터 만들기](#create-emulator-with-google-api)
 
-### <a name="obtain-a-google-maps-api-key"></a><a name="obtain-maps-key" />Google Maps API 키 가져오기
+### <a name="obtain-a-google-maps-api-key"></a><a name="obtain-maps-key"></a>Google Maps API 키 가져오기
 
 첫 번째 단계는 Google Maps API 키를 얻는 것입니다. (기존 Google Maps v1 API의 API 키를 재사용할 수는 없습니다.) Xamarin.Android를 사용하여 API 키를 얻고 사용하는 방법에 대한 자세한 내용은 [Google Maps API 키 가져오기](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)를 참조하세요.
 
-### <a name="install-the-google-play-services-sdk"></a><a name="install-gps-sdk" /> Google Play 서비스 SDK 설치
+### <a name="install-the-google-play-services-sdk"></a><a name="install-gps-sdk"></a> Google Play 서비스 SDK 설치
 
 Google Play 서비스는 Android 애플리케이션에서 Google+, 인앱 결제 및 Maps와 같은 다양한 Google 기능을 활용할 수 있도록 하는 Google의 기술입니다. 이러한 기능은 Android 디바이스에서 [Google Play 서비스 APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en)에 포함된 백그라운드 서비스로 액세스할 수 있습니다.
 
@@ -56,7 +56,7 @@ Xamarin.Android 애플리케이션에서 Maps API를 사용하려면 [Android SD
 > [!NOTE]
 > Google Play 서비스 APK는 라이선스 제품이기 때문에 일부 디바이스에는 없을 수도 있습니다. 설치되어 있지 않은 디바이스에서는 Google Maps가 작동하지 않습니다.
 
-### <a name="install-the-xamaringoogleplayservicesmaps-package-from-nuget"></a><a name="install-gpsmaps-nuget" /> NuGet에서 Xamarin.GooglePlayServices.Maps 패키지 설치
+### <a name="install-the-xamaringoogleplayservicesmaps-package-from-nuget"></a><a name="install-gpsmaps-nuget"></a> NuGet에서 Xamarin.GooglePlayServices.Maps 패키지 설치
 
 [Xamarin.GooglePlayServices.Maps 패키지](https://www.nuget.org/packages/Xamarin.GooglePlayServices.Maps)에는 Google Play 서비스 Maps API에 대한 Xamarin.Android 바인딩이 포함되어 있습니다.
 Google Play 서비스 맵 패키지를 추가하려면 솔루션 탐색기에서 프로젝트의 **참조** 폴더를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리...** 를 클릭합니다.
@@ -73,7 +73,7 @@ Google Play 서비스 맵 패키지를 추가하려면 솔루션 탐색기에서
 - **Xamarin.GooglePlayServices.Basement**
 - **Xamarin.GooglePlayServices.Tasks**
 
-### <a name="specify-the-required-permissions"></a><a name="declare-permissions" /> 필수 권한 지정
+### <a name="specify-the-required-permissions"></a><a name="declare-permissions"></a> 필수 권한 지정
 
 Google Maps API를 사용하려면 앱이 하드웨어 및 권한 요구 사항을 식별해야 합니다.  일부 권한은 Google Play 서비스 SDK에서 자동으로 부여되며 개발자가 **AndroidManfest.XML**에 명시적으로 추가할 필요가 없습니다.
 
@@ -142,7 +142,7 @@ Google Maps Android API의 **AndroidManifest.XML**에 다음 권한 및 기능�
 
 **AndroidManifest.XML** 권한을 요청하는 것 외에, 앱은 `ACCESS_COARSE_LOCATION`과 `ACCESS_FINE_LOCATION` 권한에 대한 런타임 권한 검사도 수행해야 합니다. 런타임 권한 검사 수행에 대한 자세한 내용은 [Xamarin.Android 권한](~/android/app-fundamentals/permissions.md) 가이드를 참조하세요.
 
-### <a name="create-an-emulator-with-google-apis"></a><a name="create-emulator-with-google-api" />Google API를 사용하여 에뮬레이터 만들기
+### <a name="create-an-emulator-with-google-apis"></a><a name="create-emulator-with-google-api"></a>Google API를 사용하여 에뮬레이터 만들기
 
 Google Play 서비스를 사용하는 물리적 Android 디바이스가 설치되지 않은 경우 개발용 에뮬레이터 이미지를 만드는 것이 가능합니다. 자세한 내용은 [디바이스 관리자](~/android/get-started/installation/android-emulator/device-manager.md)를 참조하세요.
 
@@ -250,7 +250,7 @@ public void OnMapReady(GoogleMap map)
 }
 ```
 
-### <a name="googlemap-properties"></a><a name="googlemap_object" />GoogleMap 속성
+### <a name="googlemap-properties"></a><a name="googlemap_object"></a>GoogleMap 속성
 
 `GoogleMap`은 맵의 기능과 모양을 제어할 수 있는 몇 가지 속성을 정의합니다. `GoogleMap`의 초기 상태를 구성하는 한 가지 방법은 `MapFragment`를 만들 때 [GoogleMapOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMapOptions) 개체를 전달하는 것입니다. 다음 코드 조각은 `MapFragment`를 만들 때 `GoogleMapOptions` 개체를 사용하는 예입니다.
 

@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: jondouglas
 ms.author: jodou
 ms.date: 02/13/2020
-ms.openlocfilehash: faab613d88a7f59d1095021d2b21faf9223ae33b
-ms.sourcegitcommit: 3fb407841dbe46b8b23573f08591228b7c0e2726
+ms.openlocfilehash: a776dbb2ecfaf0942d79c2b403c13f98cdc7c2e2
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488912"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571976"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>에뮬레이터 성능에 대한 하드웨어 가속(Hyper-V & HAXM)
 
@@ -53,7 +53,7 @@ Windows에서 최상의 경험을 위해서는 WHPX를 사용하여 Android 에�
 
 Android 에뮬레이터를 시작하고 디버깅하는 방법에 대한 자세한 내용은 [Android Emulator에서 디버깅](~/android/deploy-test/debugging/debug-on-emulator.md)을 참조하세요.
 
-<a name="hyper-v-win" />
+<a name="hyper-v-win"></a>
 
 ## <a name="accelerating-with-hyper-v"></a>Hyper-V를 사용하여 가속화
 
@@ -138,7 +138,7 @@ systeminfo
 
 컴퓨터에서 HAXM을 지원할 수 있지만 HAXM이 설치되지 않은 경우 다음 섹션의 단계에 따라 HAXM을 설치합니다.
 
-<a name="install-haxm-win" />
+<a name="install-haxm-win"></a>
 
 ### <a name="installing-haxm"></a>HAXM 설치
 
@@ -181,7 +181,7 @@ Windows용 HAXM 설치 패키지는 [Intel Hardware Accelerated Execution Manage
 
 Android 에뮬레이터를 시작하고 디버깅하는 방법에 대한 자세한 내용은 [Android Emulator에서 디버깅](~/android/deploy-test/debugging/debug-on-emulator.md)을 참조하세요.
 
-<a name="hypervisor" />
+<a name="hypervisor"></a>
 
 ## <a name="accelerating-with-the-hypervisor-framework"></a>하이퍼바이저 프레임워크를 통한 가속화
 
@@ -195,7 +195,7 @@ Mac이 이러한 조건을 충족하는 경우 Android 에뮬레이터는 가속
 
 하이퍼바이저 프레임워크가 Mac에서 지원되지 않는 경우 HAXM을 사용하여 Android 에뮬레이터를 가속화할 수 있습니다(다음 설명 참조).
 
-<a name="haxm-mac" />
+<a name="haxm-mac"></a>
 
 ## <a name="accelerating-with-haxm"></a>HAXM을 통한 가속화
 
@@ -229,7 +229,7 @@ HAXM과 함께 Android 에뮬레이터를 처음으로 사용하기 전에 HAXM�
 
 HAXM이 설치되지 않은 경우 다음 섹션의 단계에 따라 HAXM을 설치하세요.
 
-<a name="install-haxm-mac" />
+<a name="install-haxm-mac"></a>
 
 ### <a name="installing-haxm"></a>HAXM 설치
 

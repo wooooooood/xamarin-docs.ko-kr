@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: 1c8eddcf16c8513852c21babf34d81c9a3290406
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: b27608642ed04216b10767d37d26699a0aef7f3e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028433"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573770"
 ---
 # <a name="xamarinios-testing-and-deployment---troubleshooting"></a>Xamarin.iOS 테스트 및 배포 - 문제 해결
 
@@ -60,7 +60,7 @@ iOS를 통한 코드 서명 및 프로비전은 매우 어려울 수 있으므�
 
 - 검토를 위해 매일 두 개의 빌드만 제출할 수 있습니다. 버전이 변경되면 검토가 강제로 수행되므로 버전 번호는 하루에 두 번만 변경할 수 있습니다.
 
-<a name="Automatically_copy_app_bundles_back_to_Windows" />
+<a name="Automatically_copy_app_bundles_back_to_Windows"></a>
 
 ## <a name="automatically-copy-app-bundles-back-to-windows"></a>.app 번들을 Windows로 다시 자동 복사
 

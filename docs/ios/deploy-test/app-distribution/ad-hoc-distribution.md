@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 16ae440ec2fe3b5898c8f92d993279ef5e7e9794
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ae3c60699f7e31c66893723ac73248ced9a2d72a
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75607921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567972"
 ---
 # <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 임시 배포
 
@@ -30,7 +30,7 @@ Xamarin.iOS 애플리케이션은 Apple Developer Program 및 Apple Developer En
 
 이 가이드에서는 임시 배포를 위한 프로비전 정보 및 Xamarin.iOS 앱을 배포하는 방법에 대한 정보를 제공합니다.
 
-<a name="setup" />
+<a name="setup"></a>
 
 ## <a name="setting-up-for-distribution"></a>배포 설정
 
@@ -41,7 +41,7 @@ Xamarin.iOS 애플리케이션은 Apple Developer Program 및 Apple Developer En
 > [!NOTE]
 > 팀 에이전트 및 관리자만 배포 인증서 및 프로비저닝 프로필을 만들 수 있습니다.
 
-<a name="createcertificate" />
+<a name="createcertificate"></a>
 
 ## <a name="create-a-distribution-certificate"></a>배포 인증서 만들기
 
@@ -70,11 +70,11 @@ Xamarin.iOS 애플리케이션은 Apple Developer Program 및 Apple Developer En
 
 2. 다음으로, **더하기(+)** 단추를 클릭하고 **iOS 앱 스토어**를 선택합니다.  [![iOS App Store 선택](ad-hoc-distribution-images/selectcert.png)](ad-hoc-distribution-images/selectcert.png#lightbox)
 
-<a name="createprofile" />
+<a name="createprofile"></a>
 
 ## <a name="create-a-distribution-provisioning-profile"></a>배포 프로비전 프로필 만들기
 
-<a name="createappid" />
+<a name="createappid"></a>
 
 ### <a name="create-an-app-id"></a>앱 ID 만들기
 만든 다른 프로비전 프로필과 마찬가지로 앱 ID는 사용자의 디바이스에 배포되는 앱을 식별하는 데 필요합니다. 앱 ID를 아직 만들지 않았으면 다음 단계에 따라 만듭니다.
@@ -119,7 +119,7 @@ Visual Studio에서 새 배포 프로필을 사용하려면, 먼저 Visual Studi
 
 -----
 
-<a name="selectprofile" />
+<a name="selectprofile"></a>
 
 ## <a name="selecting-a-distribution-profile-in-a-xamarinios-project"></a>Xamarin.iOS 프로젝트에서 배포 프로필 선택
 
@@ -158,7 +158,7 @@ Xamarin.iOS 애플리케이션의 최종 빌드를 수행할 준비가 되면 �
 
 -----
 
-<a name="adhoc" />
+<a name="adhoc"></a>
 
 ## <a name="ad-hoc-distribution"></a>임시 배포
 
@@ -166,7 +166,7 @@ Xamarin.iOS 애플리케이션의 최종 빌드를 수행할 준비가 되면 �
 
 iTunes Connect가 옵션이 아닌 경우 임시 배포를 사용하면 개발자가 다양한 디바이스에서 앱에 대한 베타 테스트를 수행할 수 있습니다. 임시 배포는 사내 배포와 비슷한 방식으로 작동하며 IPA를 만들어야 합니다. 그러면 무선으로 배포하거나 iTunes를 통해 수동으로 배포할 수 있습니다.
 
-<a name="IPA_Creation" />
+<a name="IPA_Creation"></a>
 
 ### <a name="ipa-support-for-ad-hoc-deployment"></a>임시 배포를 위한 IPA 지원
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: 6250dfa24361601c2b9929d80fec3cc7a18cab2d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: bff3b2a7c1e273c7a03ae341dd663ebc722791eb
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028561"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571742"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Xamarin.iOS에서 기능 사용
 
@@ -113,7 +113,7 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
 -----
 
-<a name="devcenter" />
+<a name="devcenter"></a>
 
 ## <a name="using-the-developer-center"></a>개발자 센터 사용
 
@@ -146,7 +146,7 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
 9. **등록** 및 **완료**를 차례로 클릭합니다. 새로 생성된 앱 ID가 iOS 앱 ID 목록에 표시됩니다.
 
-<a name="provisioningprofile" />
+<a name="provisioningprofile"></a>
 
 ### <a name="creating-a-provisioning-profile"></a>프로비전 프로필 만들기
 
@@ -188,7 +188,7 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 > [!IMPORTANT]
 > Entitlement.plist 파일에 자격 키를 설정하고 Info.plist 파일에 개인 키를 설정해야 할 수도 있습니다. 자격에 대한 자세한 내용은 [자격 사용](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 참조하세요.
 
-<a name="nextsteps" />
+<a name="nextsteps"></a>
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -197,7 +197,7 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 - 앱에서 프레임워크 네임스페이스를 사용합니다.
 - 앱에 필요한 자격을 추가합니다. 필요한 자격에 및 추가 방법에 대한 자세한 내용은 [자격 소개](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 참조하세요.
 
-<a name="troubleshooting" />
+<a name="troubleshooting"></a>
 
 ## <a name="troubleshooting-capabilities"></a>기능 문제 해결
 
@@ -210,7 +210,7 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 - info.plist에 적절한 개인 키가 설정되어 있는지 확인합니다.
 - 앱의 **iOS 번들 서명**에서 **사용자 지정 자격**이 **Entitlements.plist**로 설정되어 있는지 확인합니다. 이 설정은 디버그 및 iOS 시뮬레이터 빌드에 대한 기본 설정이 _아닙니다_.
 
-<a name="summary" />
+<a name="summary"></a>
 
 ## <a name="summary"></a>요약
 

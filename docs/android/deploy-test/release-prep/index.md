@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
-ms.openlocfilehash: 5f0b72772a386aa71d4ceec25b88546930b06f4f
-ms.sourcegitcommit: 51006a4eed7bf99b563df6fc1cea9074d0218448
+ms.openlocfilehash: 2676565a62b4b9d4414e9a69737b287bcc992c0b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166341"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572015"
 ---
 # <a name="preparing-an-application-for-release"></a>릴리스용 애플리케이션 준비
 
@@ -35,7 +35,7 @@ ms.locfileid: "82166341"
 
 이러한 각 단계는 아래에서 자세히 설명합니다.
 
-<a name="Specify_the_Application_Icon" />
+<a name="Specify_the_Application_Icon"></a>
 
 ## <a name="specify-the-application-icon"></a>애플리케이션 아이콘 지정
 
@@ -65,7 +65,7 @@ Visual Studio for Mac에서도 다음 스크린 샷에서처럼 **프로젝트 �
 
 일반적으로 `using Android.App`은 **AssemblyInfo.cs**(`Application` 특성의 네임스페이스는 `Android.App`임)의 맨 위에 선언되지만, 아직 없는 경우 이 `using` 문을 추가해야 합니다.
 
-<a name="Versioning" />
+<a name="Versioning"></a>
 
 ## <a name="version-the-application"></a>애플리케이션 버전 지정
 
@@ -89,7 +89,7 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 -----
 
-<a name="shrink_apk" />
+<a name="shrink_apk"></a>
 
 ## <a name="shrink-the-apk"></a>APK 축소
 
@@ -142,7 +142,7 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 ProGuard는 Xamarin.Android 링커를 대체하지 않습니다. Xamarin.Android 링커는 *관리* 코드를 연결하고 ProGuard는 Java 바이트 코드를 연결합니다. 빌드 프로세스에서는 먼저 Xamarin.Android 링커를 사용하여 관리 코드(C#) 수준에서 앱을 최적화한 다음 ProGuard(사용하도록 설정된 경우)를 사용하여 Java 바이트 코드 수준에서 APK를 최적화합니다. 
 
-**ProGuard 사용**을 선택하면 Xamarin.Android이 나타나는 APK에서 ProGuard 도구를 실행합니다. ProGuard 구성 파일이 생성되며 빌드 시점에 ProGuard에서 사용됩니다. Xamarin.Android는 사용자 지정*ProguardConfiguration* 빌드 작업도 지원합니다. 사용자 지정 ProGuard 구성 파일을 프로젝트에 추가하고 아래 예제에서처럼 마우스 오른쪽 단추로 클릭하여 빌드 작업으로 선택할 수 있습니다.  
+**ProGuard 사용**을 선택하면 Xamarin.Android이 나타나는 APK에서 ProGuard 도구를 실행합니다. ProGuard 구성 파일이 생성되며 빌드 시점에 ProGuard에서 사용됩니다. Xamarin.Android는 사용자 지정*ProguardConfiguration* 빌드 작업도 지원합니다. 사용자 지정 ProGuard 구성 파일을 프로젝트에 추가하고 아래 예제에서처럼 마우스 오른쪽 단추로 클릭하여 빌드 작업으로 선택할 수 있습니다. 
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -158,15 +158,15 @@ ProGuard는 기본적으로 사용하지 않게 설정되어 있습니다. **Pro
 
 ProGuard 도구 사용에 대한 자세한 정보는 [ProGuard](~/android/deploy-test/release-prep/proguard.md)를 참조하세요.
 
-<a name="protect_app" />
+<a name="protect_app"></a>
 
 ## <a name="protect-the-application"></a>애플리케이션 보호
 
-<a name="Disable_Debugging" />
+<a name="Disable_Debugging"></a>
 
 ### <a name="disable-debugging"></a>디버깅 사용 안 함
 
-Android 애플리케이션 개발 중에는 *JDWP(Java Debug Wire Protocol)* 를 사용하여 디버그를 수행합니다. 이것은 **adb** 같은 도구가 디버그를 위해 JVM과 통신할 수 있게 하는 기술입니다. JDWP는 Xamarin.Android 애플리케이션의 디버그 빌드에 대해 기본적으로 켜져 있습니다.  JDWP는 개발 중에 중요하지만 릴리스된 애플리케이션에는 보안 문제를 야기할 수 있습니다. 
+Android 애플리케이션 개발 중에는 *JDWP(Java Debug Wire Protocol)* 를 사용하여 디버그를 수행합니다. 이것은 **adb** 같은 도구가 디버그를 위해 JVM과 통신할 수 있게 하는 기술입니다. JDWP는 Xamarin.Android 애플리케이션의 디버그 빌드에 대해 기본적으로 켜져 있습니다. JDWP는 개발 중에 중요하지만 릴리스된 애플리케이션에는 보안 문제를 야기할 수 있습니다. 
 
 > [!IMPORTANT]
 > 디버그 상태를 사용하지 않게 설정하지 않은 경우 Java 프로세스에 완전히 액세스할 수 있고 애플리케이션의 컨텍스트에서 임의 코드를 실행할 수 있으므로(JDWP를 통해 가능) 릴리스된 애플리케이션에서는 디버그 상태를 항상 사용하지 않게 설정합니다.
@@ -183,7 +183,7 @@ Android 매니페스트에는 애플리케이션의 디버그 가능 여부를 �
 
 더비그 빌드에서는 디버그 편의를 위해 자동으로 일부 권한을 설정합니다(예: **인터넷** 및 **ReadExternalStorage**). 하지만 릴리스 빌드는 명시적으로 구성된 권한만 사용합니다. 릴리스 빌드로 전환하면 앱이 디버그 빌드에서 사용 가능했던 권한을 잃게 되는 경우 **권한**에서 설명한 것처럼 [필수 권한](~/android/app-fundamentals/permissions.md)에서 이 권한을 명시적으로 사용하도록 설정했는지 확인합니다. 
 
-<a name="dotfuscator" id="dotfuscator" />
+<a name="dotfuscator" id="dotfuscator"></a>
 
 ### <a name="application-protection-with-dotfuscator"></a>Dotfuscator를 통한 애플리케이션 보호
 
@@ -208,7 +208,7 @@ Dotfuscator CE를 구성하려면 [Xamarin에서 Dotfuscator Community Edition �
 
 -----
 
-<a name="bundle" />
+<a name="bundle"></a>
 
 ### <a name="bundle-assemblies-into-native-code"></a>어셈블리를 네이티브 코드에 번들
 
@@ -218,7 +218,7 @@ Dotfuscator CE를 구성하려면 [Xamarin에서 Dotfuscator Community Edition �
 
 **네이티브 코드에 번들** 옵션은 어셈블리가 네이티브 코드로 컴파일 되는 것이 *아닙니다*. [**AOT 컴파일**](#aot)을 사용하여 어셈블리를 네이티브 코드로 컴파일할 수 없습니다.
 
-<a name="aot" />
+<a name="aot"></a>
 
 ### <a name="aot-compilation"></a>AOT 컴파일
 
@@ -233,7 +233,7 @@ _LLVM 최적화 컴파일러_는 더 작고 빠른 컴파일 코드를 만들며
 > [!NOTE]
 > **LLVM 최적화 컴파일러** 옵션에는 엔터프라이즈 라이선스가 필요합니다.  
 
-<a name="Set_Packaging_Properties" />
+<a name="Set_Packaging_Properties"></a>
 
 ## <a name="set-packaging-properties"></a>패키지 속성 설정
 
@@ -279,7 +279,7 @@ Android 앱 번들에 대한 지원을 사용하려면 Android 프로젝트 옵�
 
 Android 앱 번들에 대한 자세한 내용은 [Android 앱 번들](https://developer.android.com/guide/app-bundle/)을 참조하세요.
 
-<a name="Compile" />
+<a name="Compile"></a>
 
 ## <a name="compile"></a>Compile
 
@@ -295,7 +295,7 @@ Android 앱 번들에 대한 자세한 내용은 [Android 앱 번들](https://de
 
 -----
 
-<a name="archive" />
+<a name="archive"></a>
 
 ## <a name="archive-for-publishing"></a>게시를 위해 보관
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/05/2018
-ms.openlocfilehash: 51ebb8932f4b1ef8f10ba699e59ce53c98a38a50
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 85516800b2fcc410a9eba3abd0c12fd040cee3da
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73021481"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571950"
 ---
 # <a name="gdb"></a>GDB
 
@@ -30,7 +30,7 @@ Xamarin.Android 4.10은 `_Gdb` MSBuild 대상을 통해 `gdb`를 사용하는 �
 
 문제가 발생할 경우 [문제 해결](#Troubleshooting) 섹션을 참조하세요.
 
-<a name="Debug_Builds_with_Fast_Deployment" />
+<a name="Debug_Builds_with_Fast_Deployment"></a>
 
 ### <a name="debug-builds-with-fast-deployment"></a>빠른 배포를 사용하는 디버그 빌드
 
@@ -73,7 +73,7 @@ GNU gdb (GDB) 7.3.1-gg2
 (gdb) c
 ```
 
-<a name="Debug_Builds_without_Fast_Deployment" />
+<a name="Debug_Builds_without_Fast_Deployment"></a>
 
 ## <a name="debug-builds-without-fast-deployment"></a>빠른 배포를 사용하지 않는 디버그 빌드
 
@@ -132,7 +132,7 @@ GNU gdb (GDB) 7.3.1-gg2
 (gdb) c
 ```
 
-<a name="Release_Builds" />
+<a name="Release_Builds"></a>
 
 ## <a name="release-builds"></a>릴리스 빌드
 
@@ -154,7 +154,7 @@ GNU gdb (GDB) 7.3.1-gg2
 
 한 가지 정보: `_Gdb` MSBuild 대상은 이전에 실행 중이던 모든 앱 인스턴스를 종료합니다. Android v4.0 이전 대상에서는 이 기능이 작동하지 않습니다.
 
-<a name="Troubleshooting" />
+<a name="Troubleshooting"></a>
 
 ## <a name="troubleshooting"></a>문제 해결
 

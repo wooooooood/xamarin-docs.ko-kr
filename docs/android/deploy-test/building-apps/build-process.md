@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2020
-ms.openlocfilehash: bce2b6f29129894ed446100c87b5e92d3572ed2f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 202041614d6a5b632aba6e92a77869effc21bb4f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "78946266"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84568323"
 ---
 # <a name="build-process"></a>빌드 프로세스
 
@@ -35,7 +35,7 @@ Xamarin.Android 빌드 시스템이 생성할 수 있는 Android 애플리케이
 
 공유 런타임은 디버그 빌드에서 `$(AndroidUseSharedRuntime)` 속성을 `False`로 설정하여 비활성화할 수 있습니다.
 
-<a name="Fast_Deployment" />
+<a name="Fast_Deployment"></a>
 
 ### <a name="fast-deployment"></a>빠른 배포
 
@@ -53,7 +53,7 @@ Xamarin.Android 빌드 프로세스는 Mac용 Visual Studio 및 Visual Studio에
 고급 사용자가 IDE의 GUI에서 지원하지 않는 작업을 수행할 수도 있으므로, 프로젝트 파일을 직접 편집하여 빌드 프로세스를 사용자 지정할 수 있습니다.
 이 페이지에서는 Xamarin.Android 관련 기능과 사용자 지정만 설명하지만 일반적인 MSBuild 항목, 속성 및 대상을 사용하여 여러 가지 작업을 수행할 수 있습니다.
 
-<a name="Build_Targets" />
+<a name="Build_Targets"></a>
 
 ## <a name="build-targets"></a>빌드 대상
 
@@ -726,7 +726,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
   기본값은 `Resources`입니다. Java 프로젝트 구조체의 경우 이를 `res`로 변경합니다.
 
-<a name="Signing_Properties" />
+<a name="Signing_Properties"></a>
 
 ### <a name="signing-properties"></a>서명 속성
 
@@ -845,7 +845,7 @@ Enter key password for keystore.alias
 </PropertyGroup>
 ```
 
-<a name="Build_Actions" />
+<a name="Build_Actions"></a>
 
 ## <a name="build-actions"></a>빌드 작업
 
@@ -865,7 +865,7 @@ Enter key password for keystore.alias
 <AndroidBoundLayout Include="Resources\layout\Main.axml" />
 ```
 
-<a name="AndroidEnvironment" />
+<a name="AndroidEnvironment"></a>
 
 ### <a name="androidenvironment"></a>AndroidEnvironment
 
@@ -968,7 +968,7 @@ Xamarin.Android 5.1부터 `@(Content)` 빌드 작업을 사용하려고 하면 `
 
 빌드 동작이 *LinkDescription*인 파일은 [링커 동작을 제어](~/cross-platform/deploy-test/linker.md)하는 데 사용됩니다.
 
-<a name="ProguardConfiguration" />
+<a name="ProguardConfiguration"></a>
 
 ### <a name="proguardconfiguration"></a>ProguardConfiguration
 

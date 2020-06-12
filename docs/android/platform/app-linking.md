@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: af90c286d2bb960a9f78547dd15c3d98a69529ae
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: bdcefd6a1b0192dc337afd5b5a5535a20eeaef9e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75487830"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571391"
 ---
 # <a name="app-linking-in-android"></a>Android에서 앱 연결
 
@@ -49,7 +49,7 @@ Android 6.0에서 앱 연결을 설정하려면 다음 두 가지 주요 단계�
 1. **웹 사이트 URI에 대한 하나 이상의 의도 필터 추가** &ndash; 의도 필터는 모바일 브라우저에서 URL 클릭을 처리하는 방법을 Android에게 안내합니다.
 2. **웹 사이트에 *디지털 자산 연결 JSON* 파일 게시** &ndash; 이 파일은 웹 사이트에 업로드되어 Android에서 모바일 앱과 웹 사이트의 도메인 간 관계를 확인하는 데 사용됩니다. 이 파일이 없으면 Android에서 앱을 URI의 기본 처리기로 설치할 수 없으므로 사용자가 수동으로 설치해야 합니다.
 
-<a name="configure-intent-filter" />
+<a name="configure-intent-filter"></a>
 
 ### <a name="configuring-the-intent-filter"></a>의도 필터 구성
 

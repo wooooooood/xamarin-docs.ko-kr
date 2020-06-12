@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: c8c1a5d284e5faaffae33a724c461b6fd74cf39b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 1932bc8bf5362a284ed62aa241170264826baa9e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028582"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567556"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Xamarin.iOS에서 iCloud 기능
 
@@ -25,7 +25,7 @@ iCloud 기능을 애플리케이션에 추가하는 것은 _컨테이너_ 때문
 > [!IMPORTANT]
 > Apple에서는 개발자가 유럽 연합의 GDPR(일반 데이터 보호 규정)을 제대로 처리하는 데 도움이 되는 [도구를 제공합니다](https://developer.apple.com/support/allowing-users-to-manage-data/).
 
-<a name="icloud-developer-center" />
+<a name="icloud-developer-center"></a>
 
 ## <a name="developer-center"></a>개발자 센터
 

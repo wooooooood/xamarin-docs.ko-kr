@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 43061272f3d3486926f38af792ee3b9df0c53670
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 7a3fd9e22bcf037ec669c77ac919035b0d04b942
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027235"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567933"
 ---
 # <a name="kitkat-features"></a>KitKat 기능
 
@@ -38,7 +38,7 @@ KitKat을 사용하여 Xamarin.Android 애플리케이션을 개발하려면 다
 
 [![Android SDK 관리자에서 Android 4.4 선택](kitkat-images/api19.png)](kitkat-images/api19.png#lightbox)
 
-<a name="Migrating_Your_App_to_KitKat" />
+<a name="Migrating_Your_App_to_KitKat"></a>
 
 ## <a name="migrating-your-app-to-kitkat"></a>KitKat으로 앱 마이그레이션
 
@@ -97,7 +97,7 @@ KitKat은 사용자가 선택한 하나의 기본 애플리케이션에 모든 S
 
 [WebView](xref:Android.Webkit.WebView)는 KitKat에서 변모되었습니다. 가장 큰 변화는 `WebView`로 콘텐츠를 로드하기 위해 보안이 추가된 것입니다. 이전 API 버전을 대상으로 하는 대부분의 애플리케이션이 예상대로 작동하지만 `WebView` 클래스를 사용하는 애플리케이션을 테스트하는 것이 좋습니다. 영향을 받는 WebView API에 대한 자세한 정보는 Android [Migrating to WebView in Android 4.4](https://developer.android.com/guide/webapps/migrating.html)(Android 4.4에서 WebView로 마이그레이션) 문서를 참조하세요.
 
-<a name="user_experience" />
+<a name="user_experience"></a>
 
 ## <a name="user-experience"></a>설치 환경
 
@@ -310,7 +310,7 @@ KitKat에서는 반투명 상태 및 탐색 모음 옵션을 사용하여 앱 �
 
 [![반투명 상태와 탐색 모음이 있는 앱 예시 스크린샷](kitkat-images/theme.png)](kitkat-images/theme.png#lightbox)
 
-<a name="user_content" />
+<a name="user_content"></a>
 
 ## <a name="user-content"></a>사용자 콘텐츠
 
@@ -505,7 +505,7 @@ void PrintPage ()
 
 [![PDF로 저장 메뉴를 표시하는 PrintHtmlActivity 스크린샷](kitkat-images/print2.png)](kitkat-images/print2.png#lightbox)
 
-<a name="hardware" />
+<a name="hardware"></a>
 
 ## <a name="hardware"></a>하드웨어
 
@@ -639,7 +639,7 @@ protected override void OnPause()
 > [!NOTE]
 > 단계 감지 및 계산을 위한 API가 KitKat에 함께 제공되지만 일부 전화에는 센서가 장착되어 있지 않습니다. `PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`를 실행하여 센서를 사용할 수 있는지 확인하거나, `GetDefaultSensor`의 반환 값이 `null`이 아닌지 확인할 수 있습니다.
 
-<a name="developer_tools" />
+<a name="developer_tools"></a>
 
 ## <a name="developer-tools"></a>개발자 도구
 

@@ -1,11 +1,11 @@
 ---
 ms.topic: include
-ms.openlocfilehash: 9cee898775fd10a924f14abfe913fe4dfff940f5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 0cdb59433499ec5a8f20735b936e2c8b55c44d33
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70206235"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570134"
 ---
 Xamarin은 다음 단계에 따라 _새로운_ Visual Studio 2019 설치의 일부로 설치할 수 있습니다.
 
@@ -29,7 +29,7 @@ Xamarin은 다음 단계에 따라 _새로운_ Visual Studio 2019 설치의 일�
 
     ![시작 단추의 위치](~/get-started/installation/windows-images/vs2019-launch.png)
 
-<a name="vs2019" />
+<a name="vs2019"></a>
 
 ### <a name="adding-xamarin-to-visual-studio-2019"></a>Visual Studio 2019에 Xamarin 추가
 

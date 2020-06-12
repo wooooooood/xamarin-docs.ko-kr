@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 54fcc3bb683f6ca4515d807da5c3345cf71a2df3
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 4f8e45aab8b6c92cb72a5d7cde35458c7b64b816
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303710"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573211"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Xamarin.iOS에서 Apple Pay 기능
 
@@ -28,7 +28,7 @@ Apple Pay를 사용하면 사용자의 iOS 디바이스를 통해 실제 상품�
 
 아래 단계는 위의 항목을 만드는 과정을 안내합니다.
 
-<a name="merchantid" />
+<a name="merchantid"></a>
 
 ## <a name="create-merchant-id"></a>가맹점 ID 만들기
 
@@ -48,7 +48,7 @@ Apple Pay를 사용하면 사용자의 iOS 디바이스를 통해 실제 상품�
 
     ![가맹점 ID 확인](apple-pay-capabilities-images/image59.png)
 
-<a name="appid" />
+<a name="appid"></a>
 
 ## <a name="create-an-app-id-with-the-apple-pay-capability-that-includes-the-merchant-id"></a>가맹점 ID가 포함된 Apple Pay 기능으로 앱 ID 만들기
 
@@ -91,7 +91,7 @@ Apple Pay를 사용하면 사용자의 iOS 디바이스를 통해 실제 상품�
 
 [기능 사용](~/ios/deploy-test/provisioning/capabilities/index.md) 가이드의 설명에 따라, 이 앱 ID를 사용하여 새 프로비전 프로필을 생성하거나 다시 생성할 수 있습니다.
 
-<a name="certificate" />
+<a name="certificate"></a>
 
 ## <a name="create-a-certificate-for-your-merchant-id"></a>가맹점 ID에 대한 인증서 만들기
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: aefd649fe1859306e5499addc1c08f4e42b2b424
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 172fd6a8c7ac1cfc0cfdaa428809a173b4999301
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73026691"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570091"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>iTunes Connect에서 앱 구성
 
@@ -51,7 +51,7 @@ iTunes Connect의 **계약, 세금 및 뱅킹** 섹션은 iTunes 개발자 지�
 
 다시 말하지만, iOS 애플리케이션을 검토하고 릴리스하기 위해 iTunes Connect에 제출하기 전에 _이 정보를 올바르게 설정, 적용 및 최신 상태로 유지해야 합니다_. 자세한 내용은 Apple의 [계약, 세금 및 뱅킹 관리](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/ManagingContractsandBanking.html#//apple_ref/doc/uid/TP40011225-CH21-SW1) 설명서를 참조하세요.
 
-<a name="creating" />
+<a name="creating"></a>
 
 ## <a name="creating-an-itunes-connect-record"></a>iTunes Connect 레코드 만들기
 
@@ -80,7 +80,7 @@ iOS 애플리케이션을 iTunes Connect에 추가하려면 **팀 에이전트**
 
 [![](itunesconnect-images/add04.png "The new application will be created in iTunes Connect")](itunesconnect-images/add04.png#lightbox)
 
-<a name="managing" />
+<a name="managing"></a>
 
 ## <a name="managing-app-videos-and-screenshots"></a>앱 비디오 및 스크린샷 관리
 
@@ -119,7 +119,7 @@ Apple에서는 애플리케이션이 지원하는 모든 화면 크기와 해상
 > [!NOTE]
 > 참고: 스크린샷 또는 앱 미리 보기 비디오가 애플리케이션의 현재 기능과 일치하지 않는 경우 Apple에서는 제출을 거부합니다.
 
-<a name="metadata" />
+<a name="metadata"></a>
 
 ## <a name="managing-name-description-whats-new-keywords-and-urls"></a>이름, 설명, 새로운 기능, 키워드 및 URL 관리
 
@@ -191,7 +191,7 @@ Apple에서는 개발자가 자신의 웹 사이트에 대한 링크를 제공�
 > [!IMPORTANT]
 > 참고: 이름, 설명, 새로운 기능, 키워드 또는 URL이 애플리케이션의 현재 기능과 일치하지 않는 경우 Apple에서는 제출을 거부합니다.
 
-<a name="general" />
+<a name="general"></a>
 
 ## <a name="maintaining-general-app-information"></a>일반 앱 정보 관리
 
@@ -259,7 +259,7 @@ Apple에서는 애플리케이션에 대한 저작권 정보를 제공하도록 
 > [!NOTE]
 > 참고: 범주 또는 등급이 애플리케이션의 현재 기능과 일치하지 않는 경우 Apple에서는 제출을 거부합니다.
 
-<a name="game-center" />
+<a name="game-center"></a>
 
 ## <a name="maintaining-game-center-information"></a>Game Center 정보 유지 관리
 
@@ -336,7 +336,7 @@ Apple의 Game Center를 지원하는 iOS 게임 애플리케이션의 경우 사
 7. 필요에 따라 애플리케이션을 **사용자 지정 기업 간 애플리케이션**으로 정의합니다.
 8. **저장** 단추를 클릭하여 변경 내용을 저장합니다.
 
-<a name="iap" />
+<a name="iap"></a>
 
 ## <a name="maintaining-in-app-purchase-information"></a>인앱 구매 정보 유지 관리
 

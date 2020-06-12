@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018
-ms.openlocfilehash: 6d83afa47c459633506736b2497a82c444352c90
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 8855c80dd7478813408abaf2cfec68d48eced3bc
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303518"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571833"
 ---
 # <a name="troubleshooting-tips"></a>문제 해결 팁
 
@@ -25,7 +25,7 @@ Xamarin.Android에는 각종 버그를 추적할 때 몇 군데의 장소를 살
 2. 디바이스 배포 로그.
 3. Android 디버그 로그 출력.
 
-<a name="Diagnostic_MSBuild_Output" />
+<a name="Diagnostic_MSBuild_Output"></a>
 
 ## <a name="diagnostic-msbuild-output"></a>진단 MSBuild 출력
 
@@ -81,7 +81,7 @@ Xamarin.Android는 다음과 같은 시스템 속성을 지원합니다.
 
 - *debug.mono.debug*: 빈 문자열이 아닌 경우 이는 `*mono-debug*`와 동일합니다.
 
-- *debug.mono.env*: 파이프 문자(‘ *|* ’)로 구분된 환경 변수로, 애플리케이션을 시작할 때 mono가 초기화되기 ‘전에’ 내보냅니다.  이렇게 하면 mono 로깅을 제어하는 환경 변수를 설정할 수 있습니다.
+- *debug.mono.env*: 파이프 문자(‘ *|* ’)로 구분된 환경 변수로, 애플리케이션을 시작할 때 mono가 초기화되기 ‘전에’ 내보냅니다. 이렇게 하면 mono 로깅을 제어하는 환경 변수를 설정할 수 있습니다.
 
   > [!NOTE]
   > 값이 ‘ *|* ’ 문자로 구분되며 \`*adb shell*\` 명령은 따옴표 쌍을 제거하므로 값에 따옴표를 한 수준 더 사용해야 합니다.
@@ -103,7 +103,7 @@ Xamarin.Android는 다음과 같은 시스템 속성을 지원합니다.
   - *lref*: 로컬 참조 할당 및 할당 취소 메시지를 출력합니다.
 
   > [!NOTE]
-  > 세부 정보가 ‘매우 많이’ 표시됩니다.  반드시 필요한 경우가 아닌 이상 사용하도록 설정하지 마세요.
+  > 세부 정보가 ‘매우 많이’ 표시됩니다. 반드시 필요한 경우가 아닌 이상 사용하도록 설정하지 마세요.
 
 - *debug.mono.trace*: [mono --trace](http://docs.go-mono.com/?link=man%3amono(1))`=PROPERTY_VALUE` 설정의 설정을 허용합니다.
 
@@ -163,9 +163,9 @@ D/Mono ( 2073): GC_MAJOR: (user request) pause 2.17ms, total 2.47ms, bridge 28.7
 
 `GC_BRIDGE` 메시지에서 `num-objects`는 이 통과에서 고려 중인 브리지 개체의 개수이고 `num_hash_entries`는 브리지 코드의 이번 호출에서 처리된 개체의 개수입니다.
 
-`GC_MINOR` 및 `GC_MAJOR` 메시지에서 `total`은 전역 일시 중지된(실행 중인 스레드가 없는) 지속 시간이고 `bridge`는 (Java VM을 처리하는) 브리지 처리 코드에서 소요된 시간입니다. 브리지 처리가 진행 중인 동안에는 전역 중지되지 ‘않습니다’. 
+`GC_MINOR` 및 `GC_MAJOR` 메시지에서 `total`은 전역 일시 중지된(실행 중인 스레드가 없는) 지속 시간이고 `bridge`는 (Java VM을 처리하는) 브리지 처리 코드에서 소요된 시간입니다. 브리지 처리가 진행 중인 동안에는 전역 중지되지 ‘않습니다’.
 
- ‘일반적으로’ `num_hash_entries`의 값이 클수록 `bridge` 수집에 소요되는 시간이 길어지고 수집하는 데 소요되는 `total` 시간이 길어집니다. 
+ ‘일반적으로’ `num_hash_entries`의 값이 클수록 `bridge` 수집에 소요되는 시간이 길어지고 수집하는 데 소요되는 `total` 시간이 길어집니다.
 
 ## <a name="global-reference-messages"></a>전역 참조 메시지
 
@@ -177,7 +177,7 @@ adb shell setprop debug.mono.log gref
 
 Xamarin.Android는 Java 메서드를 호출할 때 Java에 Java 인스턴스를 제공해야 하는 경우에서처럼 Java 인스턴스와 관련 관리형 인스턴스 사이의 매핑을 제공하기 위해 Android 전역 참조를 사용합니다.
 
-하지만 Android 에뮬레이터에서는 한 번에 2000개의 전역 참조만 존재하도록 허용합니다. 하드웨어에는 이보다 훨씬 큰 52000개의 전역 참조 제한이 적용됩니다. 에뮬레이터에서 애플리케이션을 실행할 때 하드웨어보다 작은 제한이 문제가 될 수 있으므로 인스턴스가 ‘어디에서’ 왔는지 아는 것이 매우 유용할 수 있습니다. 
+하지만 Android 에뮬레이터에서는 한 번에 2000개의 전역 참조만 존재하도록 허용합니다. 하드웨어에는 이보다 훨씬 큰 52000개의 전역 참조 제한이 적용됩니다. 에뮬레이터에서 애플리케이션을 실행할 때 하드웨어보다 작은 제한이 문제가 될 수 있으므로 인스턴스가 ‘어디에서’ 왔는지 아는 것이 매우 유용할 수 있습니다.
 
 > [!NOTE]
 > 전역 참조 개수는 Xamarin.Android 내부적으로 적용되며, 프로세스에 로드된 다른 네이티브 라이브러리에서 사용하는 전역 참조는 포함하지 않으며 포함할 수 없습니다. 전역 참조 개수는 추정용으로 사용하세요.
@@ -246,7 +246,7 @@ I/monodroid-gref(27679): -w- grefc 1914 gwrefc 296 handle 0xde68f95f/W from take
 
 여기서 한 가지 “재미있는” 사실을 볼 수 있습니다. 4.0 이전의 Android를 실행 중인 대상에서 gref 값은 Android 런타임의 메모리에 있는 Java 개체의 주소와 같습니다. (즉, GC는 이동하지 않는 보수적인 수집기이며 해당 개체에 직접 참조를 전달합니다.) 따라서 +g+, +w+, -g-, +g+, -w- 시퀀스 후에 결과로 나오는 gref는 원래 gref 값과 동일한 값을 갖습니다. 이로 인해 로그 문자열을 찾기가 비교적 쉬워집니다.
 
-그러나 Android 4.0은 이동하는 수집기를 가지며 더 이상 Android 런타임 VM 개체에 직접 참조를 전달하지 않습니다. 따라서 +g+, +w+, -g-, +g+, -w- 시퀀스 후에는 gref 값이 ‘달라집니다’.  여러 번의 GC 후에도 개체가 존속할 경우 여러 개의 gref 값을 갖게 되므로 인스턴스가 실제로 어디에서 할당되었는지 확인하기가 어려워집니다.
+그러나 Android 4.0은 이동하는 수집기를 가지며 더 이상 Android 런타임 VM 개체에 직접 참조를 전달하지 않습니다. 따라서 +g+, +w+, -g-, +g+, -w- 시퀀스 후에는 gref 값이 ‘달라집니다’. 여러 번의 GC 후에도 개체가 존속할 경우 여러 개의 gref 값을 갖게 되므로 인스턴스가 실제로 어디에서 할당되었는지 확인하기가 어려워집니다.
 
 ### <a name="querying-programmatically"></a>프로그래밍 방식으로 쿼리
 
@@ -270,7 +270,7 @@ Xamarin.Android는 *armeabi*, *armeabi-v7a*, *x86*과 같은 여러 디바이스
 
 릴리스 빌드는 프로젝트 속성 탭에서 선택한 ABI만 포함합니다. ABI는 하나 또는 그 이상을 선택할 수 있습니다.
 
-기본 ABI는 *armeabi*로, 가장 많은 디바이스를 지원합니다. ‘그러나’ armeabi는 다중 CPU 디바이스 및 하드웨어 부동 소수점 등을 지원하지 않습니다.  따라서 릴리스 런타임에서 armeabi를 사용하는 앱은 단일 코어에 종속되고 soft-float 구현을 사용하게 됩니다. 이 두 가지 문제는 앱의 성능을 대폭 저하할 수 있습니다.
+기본 ABI는 *armeabi*로, 가장 많은 디바이스를 지원합니다. ‘그러나’ armeabi는 다중 CPU 디바이스 및 하드웨어 부동 소수점 등을 지원하지 않습니다. 따라서 릴리스 런타임에서 armeabi를 사용하는 앱은 단일 코어에 종속되고 soft-float 구현을 사용하게 됩니다. 이 두 가지 문제는 앱의 성능을 대폭 저하할 수 있습니다.
 
 앱에 양호한 부동 소수점 성능이 필요한 경우(예: 게임 앱) *armeabi-v7a* ABI를 사용하도록 설정해야 합니다. *armeabi-v7a* 런타임만 지원하도록 할 수 있으나, 이렇게 하면 *armeabi*만 지원하는 구형 디바이스에서 앱을 실행할 수 없습니다.
 
@@ -322,7 +322,7 @@ emulator -partition-size 512 -avd MonoDroid
 
 ## <a name="install_failed_invalid_apk-when-installing-a-package"></a>패키지를 설치할 때 INSTALL\_FAILED\_INVALID\_APK가 표시됨
 
-Android 패키지 이름은 ‘반드시’ 마침표(‘ *.* ’)를 포함해야 합니다.  마침표를 포함하도록 패키지 이름을 편집합니다.
+Android 패키지 이름은 ‘반드시’ 마침표(‘ *.* ’)를 포함해야 합니다. 마침표를 포함하도록 패키지 이름을 편집합니다.
 
 - Visual Studio에서:
   - 프로젝트를 마우스 오른쪽 단추로 클릭하고 [속성]을 선택합니다.
@@ -336,12 +336,12 @@ Android 패키지 이름은 ‘반드시’ 마침표(‘ *.* ’)를 포함해�
 
 ## <a name="install_failed_missing_shared_library-when-installing-a-package"></a>패키지를 설치할 때 INSTALL\_FAILED\_MISSING\_SHARED\_LIBRARY가 표시됨
 
-이 컨텍스트에서 “공유 라이브러리”는 네이티브 공유 라이브러리(*libfoo.so*) 파일이 아니라 Google Maps와 같이 대상 디바이스에 별도로 설치해야 하는 라이브러리입니다. 
+이 컨텍스트에서 “공유 라이브러리”는 네이티브 공유 라이브러리(*libfoo.so*) 파일이 아니라 Google Maps와 같이 대상 디바이스에 별도로 설치해야 하는 라이브러리입니다.
 
 Android 패키지는 `<uses-library/>` 요소에 어느 공유 라이브러리가 필요한지 지정합니다. 대상 디바이스에 *required* 라이브러리가 없는 경우(예: `//uses-library/@android:required`가 *true*(기본값)인 경우) *INSTALL\_FAILED\_MISSING\_SHARED\_LIBRARY*와 함께 패키지 설치가 실패합니다.
 
 어느 공유 라이브러리가 필요한지 확인하려면 생성된 
-**AndroidManifest.xml** 파일(예: **obj\\Debug\\android\\AndroidManifest.xml**)에서 `<uses-library/>` 요소를 찾습니다.  `<uses-library/>` 요소는 프로젝트의 **Properties\\AndroidManifest.xml** 파일에 수동으로 추가하거나 [UsesLibraryAttribute 사용자 지정 특성](xref:Android.App.UsesLibraryAttribute)을 통해 수동으로 추가할 수 있습니다.
+**AndroidManifest.xml** 파일(예: **obj\\Debug\\android\\AndroidManifest.xml**)에서 `<uses-library/>` 요소를 찾습니다. `<uses-library/>` 요소는 프로젝트의 **Properties\\AndroidManifest.xml** 파일에 수동으로 추가하거나 [UsesLibraryAttribute 사용자 지정 특성](xref:Android.App.UsesLibraryAttribute)을 통해 수동으로 추가할 수 있습니다.
 
 예를 들어, *Mono.Android.GoogleMaps.dll*에 어셈블리 참조를 추가하면 Google Maps 공유 라이브러리에 대해 `<uses-library/>`가 암시적으로 추가됩니다.
 
@@ -369,8 +369,8 @@ E/PackageManager(  146): Package [PackageName] signatures do not match the previ
 
 ## <a name="install_failed_uid_changed-when-installing-a-package"></a>패키지를 설치할 때 INSTALL\_FAILED\_UID\_CHANGED가 표시됨
 
-Android 패키지가 설치되면 패키지에 ‘UID’(사용자 ID)가 할당됩니다. 
-현재 알려지지 않은 이유로 인해, 이미 설치된 앱 위에 설치하면 `INSTALL_FAILED_UID_CHANGED`와 함께 설치가 실패하는 경우가 있습니다. 
+Android 패키지가 설치되면 패키지에 ‘UID’(사용자 ID)가 할당됩니다.
+현재 알려지지 않은 이유로 인해, 이미 설치된 앱 위에 설치하면 `INSTALL_FAILED_UID_CHANGED`와 함께 설치가 실패하는 경우가 있습니다.
 
 ```shell
 ERROR [2015-03-23 11:19:01Z]: ANDROID: Deployment failed
@@ -381,13 +381,13 @@ Mono.AndroidTools.InstallFailedException: Failure [INSTALL_FAILED_UID_CHANGED]
    at System.Threading.Tasks.Task.Execute()
 ```
 
-이 문제를 해결하려면 앱을 Android 대상의 GUI에서 설치하거나 다음과 같이 `adb`를 사용하여 Android 패키지를 ‘완전히 제거’하세요. 
+이 문제를 해결하려면 앱을 Android 대상의 GUI에서 설치하거나 다음과 같이 `adb`를 사용하여 Android 패키지를 ‘완전히 제거’하세요.
 
 ```shell
 $ adb uninstall @PACKAGE_NAME@
 ```
 
-`adb uninstall -k`는 **사용하면 안 됩니다**. 사용할 경우 애플리케이션 데이터가 보존되고, 그에 따라 대상 디바이스에서 충돌하는 UID가 보존됩니다. 
+`adb uninstall -k`는 **사용하면 안 됩니다**. 사용할 경우 애플리케이션 데이터가 보존되고, 그에 따라 대상 디바이스에서 충돌하는 UID가 보존됩니다.
 
 ## <a name="release-apps-fail-to-launch-on-device"></a>디바이스에서 릴리스 앱이 시작되지 않음
 
@@ -547,7 +547,7 @@ E/dalvikvm(  123): VM aborting
 
 Android 런타임의 JNI 레이어는 임의 시점에 유효한 제한적인 개수의 JNI 개체 참조만을 지원합니다. 이 제한이 초과되면 문제가 발생합니다.
 
-GREF(‘전역 참조’) 제한은 에뮬레이터서는 참조 2000개이고 하드웨어에서는 참조 52000개입니다. 
+GREF(‘전역 참조’) 제한은 에뮬레이터서는 참조 2000개이고 하드웨어에서는 참조 52000개입니다.
 
 Android 디버그 로그에 다음과 같은 메시지가 표시되면 GREF를 너무 많이 만들었음을 알 수 있습니다.
 

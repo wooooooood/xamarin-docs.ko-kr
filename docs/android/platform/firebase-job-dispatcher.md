@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2018
-ms.openlocfilehash: 280fe11f935db0a364f3342b22bb9544cdda1e6d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 0ade609997e391e24d4a6da250172efa81a5d490
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020239"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571339"
 ---
 # <a name="firebase-job-dispatcher"></a>Firebase 작업 디스패처
 
@@ -173,7 +173,7 @@ int scheduleResult = dispatcher.Schedule(myJob);
 
 이러한 각 토픽은 다음 섹션에서 자세히 설명합니다.
 
-<a name="Passing_Parameters_to_a_Job" />
+<a name="Passing_Parameters_to_a_Job"></a>
 
 #### <a name="passing-parameters-to-a-job"></a>작업에 매개 변수 전달
 
@@ -201,7 +201,7 @@ public override bool OnStartJob(IJobParameters jobParameters)
 } 
 ```
 
-<a name="Setting_Constraints" />
+<a name="Setting_Constraints"></a>
 
 #### <a name="setting-constraints"></a>제약 조건 설정
 
@@ -220,7 +220,7 @@ Job myJob = dispatcher.NewJobBuilder()
                       .Build();
 ```
 
-<a name="Setting_Job_Triggers" />
+<a name="Setting_Job_Triggers"></a>
 
 `JobTrigger`는 작업을 시작해야 하는 시기에 대한 지침을 운영 체제에 제공합니다. `JobTrigger`에는 `Job`이 실행되어야 하는 예약 시간을 정의하는 _실행 시간_이 있습니다. 실행 시간은 _시작 시간_ 값과 _종료 시간_ 값으로 구성됩니다. 시작 기간은 디바이스에서 작업을 실행할 때까지 대기해야 하는 시간(초)이고, 종료 시간 값은 `Job`을 실행할 때까지 대기해야 하는 최대시간(초)입니다. 
 
@@ -236,7 +236,7 @@ Job myJob = dispatcher.NewJobBuilder()
 
 작업의 기본 `JobTrigger`는 `Trigger.Now` 값으로 표시되며, 이 값은 예약 후 최대한 빨리 작업이 실행되도록 지정합니다.
 
-<a name="Setting_a_RetryStrategy" />
+<a name="Setting_a_RetryStrategy"></a>
 
 #### <a name="setting-a-retrystrategy"></a>RetryStrategy 설정
 

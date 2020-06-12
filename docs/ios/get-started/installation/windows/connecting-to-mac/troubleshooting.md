@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 40f99fb4e7e44e0a3dc499dc603e66620b890eaa
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 311e0a84cfc71421c0992ffcecde975429eb7d3a
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75886569"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572171"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Xamarin.iOS 빌드 호스트에 대한 연결 문제 해결
 
@@ -82,7 +82,7 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
     ssh amyb@10.1.8.95
     ```
 
-    <a name="stepnine" />
+    <a name="stepnine"></a>
 
 9. **8단계가 성공하면** 연결에 대해 `ls` 같은 간단한 명령을 실행해 볼 수 있습니다.
 
@@ -112,7 +112,7 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
 12. 8단계가 실패하고 **10단계도 실패하면** Mac의 SSH 서버 프로세스가 실행되고 있지 않거나 현재 사용자의 로그인을 허용하도록 구성되지 않았을 가능성이 있습니다. 이 경우 복잡한 다른 가능성을 조사하기 전에 2단계의 원격 로그인을 다시 한 번 확인해야 합니다.
 
-<a name="knownissues" />
+<a name="knownissues"></a>
 
 ### <a name="known-issues-and-limitations"></a>알려진 문제 및 제한 사항
 
@@ -135,7 +135,7 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
 - **버그 [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** – **시스템 환경 설정 &gt; 사용자 &amp; 그룹**의 Mac 사용자에 대한 **고급 옵션** 상황에 맞는 메뉴의 **로그인 셸**이 **/bin/bash** 이외의 값으로 설정된 경우 Xamarin 4.1에서 이 문제가 발생할 수 있습니다. (Xamarin 4.2부터는 이 시나리오가 "연결할 수 없음" 오류 메시지로 연결됩니다.) **해결 방법**: **로그인 셸**을 **/bin/bash**의 원래 기본값으로 변경합니다.
 
-<a name="tryagain" />
+<a name="tryagain"></a>
 
 #### <a name="couldnt-connect-to-macbuildhostlocal-please-try-again"></a>"MacBuildHost.local에 연결할 수 없습니다. 다시 시도하세요."
 
@@ -179,7 +179,7 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
     8. **시스템 환경 설정 &gt; 공유 &gt; 원격 로그인**에서 **원격 로그인**을 해제했다가 다시 설정하여 SSH 서버를 다시 시작합니다.
 
-<a name="clearing" />
+<a name="clearing"></a>
 
 #### <a name="clearing-the-broker-idb-build-and-designer-agents-on-the-mac"></a>Mac에서 브로커, IDB, 빌드 및 디자이너 에이전트 지우기
 
@@ -260,7 +260,7 @@ Visual Studio가 빌드 호스트에 연결할 때 오류가 발생하면 출력
 
     [![](troubleshooting-images/troubleshooting-image14.png "Click the Layout Mode drop-down menu and select Thread")](troubleshooting-images/troubleshooting-image14.png#lightbox)
 
-<a name="verboselogs" />
+<a name="verboselogs"></a>
 
 #### <a name="verbose-log-files"></a>자세한 정보 표시 로그 파일
 
@@ -340,7 +340,7 @@ Visual Studio가 MEF 구성 요소 캐시 새로 고침에 실패할 경우 이 
 
 이렇게 하면 Visual Studio MEF 구성 요소 캐시를 삭제하여 캐시 손상으로 인한 문제가 해결됩니다.
 
-<a name="errors" />
+<a name="errors"></a>
 
 ### <a name="errors-due-to-existing-build-host-processes-on-the-mac"></a>Mac에 있는 기존 빌드 호스트 프로세스로 인한 오류
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 48aba9ead925d3404146795eb9a3e0588d7b600d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 141d268e7a5670f9ba8002ae9edda828538a01a4
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76724698"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571794"
 ---
 # <a name="debugging-xamarinios-apps"></a>Xamarin.iOS 앱 디버깅
 
@@ -174,7 +174,7 @@ iOS가 애플리케이션 대리자에서 `FinishedLaunching` 메서드를 시�
 
 디버거를 설정하는 동안 오류가 발생하면 [프로젝트 옵션]에서 "-v -v -v"를 추가 mtouch 인수에 추가하여 자세한 진단을 사용하도록 설정할 수 있습니다. 이렇게 하면 자세한 오류 정보가 디바이스 콘솔에 출력됩니다.
 
- <a name="WiFi_Debugging" />
+ <a name="WiFi_Debugging"></a>
 
 ## <a name="wireless-debugging"></a>무선 디버깅
 
@@ -182,7 +182,7 @@ Xamarin.iOS는 기본적으로 USB 연결을 통해 디바이스에서 애플리
 
 무선 배포 및 디버깅에 대한 자세한 내용은 [무선 배포](~/ios/deploy-test/wireless-deployment.md) 가이드를 참조하세요.
 
-<a name="Technical_Details" />
+<a name="Technical_Details"></a>
 
 ## <a name="technical-details"></a>기술 세부 정보
 
@@ -192,7 +192,7 @@ Xamarin.iOS는 새로운 Mono 소프트 디버거를 사용합니다. 별도의 
 
 이 소프트 디버거에는 디바이스에서 실행할 때 공동 작업 디버깅 구성표가 필요합니다. 즉 디버깅을 지원하기 위해 모든 시퀀스 점에서 추가 코드를 포함하도록 코드가 계측되므로 디버깅이 커질 때 바이너리가 빌드됩니다.
 
-<a name="Accessing_the_Console" />
+<a name="Accessing_the_Console"></a>
 
 ## <a name="accessing-the-console"></a>콘솔 액세스
 
@@ -204,7 +204,7 @@ Visual Studio 사용자의 경우 [출력] 창에서 사용할 수 있는 몇 �
 
 -----
 
-<a name="Debugging_Mono's_Class_Libraries" />
+<a name="Debugging_Mono's_Class_Libraries"></a>
 
 ## <a name="debugging-monos-class-libraries"></a>Mono의 클래스 라이브러리 디버깅
 

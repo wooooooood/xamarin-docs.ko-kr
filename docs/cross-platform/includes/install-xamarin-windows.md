@@ -1,11 +1,11 @@
 ---
 ms.topic: include
-ms.openlocfilehash: fedf918a2217a5fd1d5863ee5926057317fd3294
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 0c426be72ced315165dade8e862a0d06de7d6c6d
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70206234"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574674"
 ---
 Xamarin은 다음 단계에 따라 _새로운_ Visual Studio 2017 설치의 일부로 설치할 수 있습니다.
 
@@ -33,7 +33,7 @@ Xamarin은 다음 단계에 따라 _새로운_ Visual Studio 2017 설치의 일�
 
     ![시작 단추의 위치](~/get-started/installation/windows-images/05-launch.png)
 
-<a name="vs2017" />
+<a name="vs2017"></a>
 
 ### <a name="adding-xamarin-to-visual-studio-2017"></a>Visual Studio 2017에 Xamarin 추가
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 2bc8f82db29ed3c07c67293a83e6874f0cc6acb2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 36538435066bc94a81f6449774718afe9a5ce7d7
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75556524"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571989"
 ---
 # <a name="debug-on-the-android-emulator"></a>Android Emulator의 디버그
 
@@ -63,7 +63,7 @@ Visual Studio for Mac에는 디바이스 드롭다운 메뉴에 표시되는 미
 
 가상 디바이스를 수정하려면(또는 새로 만들려면) [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)를 사용해야 합니다.
 
-<a name="launching" />
+<a name="launching"></a>
 
 ## <a name="launching-the-emulator"></a>에뮬레이터 시작
 
@@ -85,7 +85,7 @@ Visual Studio 위에는 **디버그** 또는 **릴리스** 모드를 선택하�
 
 에뮬레이터는 계속 실행될 수 있습니다. 즉 앱을 시작할 때마다 매번 종료하고 다시 시작하도록 기다리지 않아도 됩니다. 처음 Xamarin.Android 앱을 에뮬레이터에서 실행하면 대상 API 수준에 대한 Xamarin.Android 공유 런타임이 설치되고 이후 애플리케이션이 설치됩니다. 런타임 설치에는 몇 분 정도 걸릴 수 있으므로 기다려야 합니다. 첫 번째 Xamarin.Android 앱이 에뮬레이터에 배포된 후에만 런타임 설치가 수행됩니다. &ndash; 이후의 배포는 앱만 에뮬레이터에 복사하는 것이므로 속도가 빨라집니다.
 
-<a name="quick-boot" />
+<a name="quick-boot"></a>
 
 ## <a name="quick-boot"></a>빠른 부팅
 

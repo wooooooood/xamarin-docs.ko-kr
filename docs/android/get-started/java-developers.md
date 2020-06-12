@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2018
-ms.openlocfilehash: b9c6694ea49607b839a3658e5cc8bac5fb529c85
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: eed18890c185ccd35d728176348c9fac481407e1
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75728059"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571404"
 ---
 # <a name="xamarin-for-java-developers"></a>Java 개발자용 Xamarin
 
@@ -86,7 +86,7 @@ C#은 Java 개발자가 현재 Android에서 사용할 수 없는 Xamarin.Androi
 >
 > 이 페이지에서 설명하는 일부 기능(예: C#의 `var` 키워드)은 최신 버전의 java에서 사용할 수 있지만(예: [Java 10의 `var`](https://developer.oracle.com/java/jdk-10-local-variable-type-inference.html)), 하지만 Android 개발자는 아직 사용할 수 없습니다.
 
-<a name="fundamentals" />
+<a name="fundamentals"></a>
 
 ## <a name="going-from-java-to-c-development"></a>Java에서 C# 개발로 이동
 
@@ -155,7 +155,7 @@ TextView label = FindViewById<TextView> (Resource.Id.Label);
 제네릭에 대한 자세한 내용은 [제네릭](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/index) 항목을 참조하세요.
 제네릭 C# 클래스에 대한 Xamarin.Android 지원에는 몇 가지 제한 사항이 있습니다. 자세한 내용은 [제한 사항](~/android/internals/limitations.md)을 참조하세요.
 
-<a name="oopfeatures" />
+<a name="oopfeatures"></a>
 
 ## <a name="object-oriented-programming-features"></a>개체 지향 프로그래밍 기능
 
@@ -293,7 +293,7 @@ Java와 마찬가지로 C#은 `abstract` 클래스와 메서드를 지원합니�
 
 C#의 다형성 지원에 대한 자세한 내용은 [다형성](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/polymorphism) 항목을 참조하세요.
 
-<a name="lambdas" />
+<a name="lambdas"></a>
 
 ## <a name="lambda-expressions"></a>람다 식
 
@@ -323,7 +323,7 @@ button.Click += (sender, args) => {
 
 C# 및 람다 식에 대한 자세한 내용은 [람다 식](https://docs.microsoft.com/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions) 항목을 참조하세요.
 
-<a name="events" />
+<a name="events"></a>
 
 ## <a name="event-handling"></a>이벤트 처리
 
@@ -371,7 +371,7 @@ startActivityButton.Click += (sender, e) => {
 
 일반적으로 람다 식은 Xamarin.Android 코드에서 이벤트 처리기를 선언하는 데 사용됩니다. 이벤트 처리기를 선언하는 이 간단한 방법은 처음에는 신비롭게 보일 수 있지만, 코드를 작성하고 읽을 때 엄청난 시간을 절약합니다. 숙련도가 높아짐에 따라 Xamarin.Android 코드에서 자주 발생하는 이 패턴을 인식하는 데 익숙해지고, 애플리케이션의 비즈니스 논리를 고려하는 데 더 많은 시간을 들이고 구문 오버헤드에 걸리는 시간을 줄일 수 있습니다.
 
-<a name="async" />
+<a name="async"></a>
 
 ## <a name="asynchronous-programming"></a>비동기 프로그래밍
 
@@ -406,7 +406,7 @@ async void downloadAsync(object sender, System.EventArgs e)
 C#의 `async`/`await`에 대한 소개는 [Async 및 Await를 사용한 비동기 프로그래밍](https://docs.microsoft.com/dotnet/csharp/async) 항목을 참조하세요.
 Xamarin의 비동기 프로그래밍 기능 지원에 대한 자세한 내용은 [비동기 지원 개요](~/cross-platform/platform/async.md)를 참조하세요.
 
-<a name="keywords" />
+<a name="keywords"></a>
 
 ## <a name="keyword-differences"></a>키워드 차이점
 
@@ -454,7 +454,7 @@ Java에서 사용되는 많은 언어 키워드가 C#에서도 사용됩니다. 
 |[value](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|클라이언트 코드에서 속성에 할당하려는 값을 참조합니다.|
 |[virtual](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/virtual)|파생 클래스에서 메서드를 재정의할 수 있도록 합니다.|
 
-<a name="interop" />
+<a name="interop"></a>
 
 ## <a name="interoperating-with-existing-java-code"></a>기존 Java 코드와의 상호 운용
 

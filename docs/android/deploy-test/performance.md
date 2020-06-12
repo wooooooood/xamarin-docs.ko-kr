@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 620a7edd4467a5a2bae60bbd82d0e1460c9f0040
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 63365ebc12089ced7de621b3a510996fa66119ce
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73021409"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571963"
 ---
 # <a name="xamarinandroid-performance"></a>Xamarin.Android 성능
 
@@ -38,7 +38,7 @@ Xamarin.Android로 빌드된 애플리케이션의 성능과 인식 성능을 �
 > [!NOTE]
 > 이 아티클을 읽기 전에 먼저 Xamarin 플랫폼을 사용하여 빌드된 애플리케이션의 메모리 사용 및 성능을 향상시키기 위한 비플랫폼 특정 기술에 대해 설명하는 [플랫폼 간 성능](~/cross-platform/deploy-test/memory-perf-best-practices.md)을 참조해야 합니다.
 
-<a name="optimizelayout" />
+<a name="optimizelayout"></a>
 
 ## <a name="optimize-layout-hierarchies"></a>레이아웃 계층 최적화
 
@@ -119,7 +119,7 @@ Xamarin.Android로 빌드된 애플리케이션의 성능과 인식 성능을 �
 
 이전 3단계 계층 구조는 2단계 계층 구조로 축소되었으며 단일 [`RelativeLayout`](xref:Android.Widget.RelativeLayout)은 두 개의 [`LinearLayout`](xref:Android.Widget.LinearLayout) 인스턴스로 대체되었습니다. 각 [`ListView`](xref:Android.Widget.ListView) 행의 레이아웃을 팽창할 때 상당한 성능 향상을 얻을 수 있습니다.
 
-<a name="optimizelistviews" />
+<a name="optimizelistviews"></a>
 
 ## <a name="optimize-list-views"></a>목록 보기 최적화
 
@@ -132,7 +132,7 @@ Xamarin.Android로 빌드된 애플리케이션의 성능과 인식 성능을 �
 
 이러한 기술은 전체적으로 [`ListView`](xref:Android.Widget.ListView) 인스턴스 스크롤을 부드럽게 유지하는 데 도움이 될 수 있습니다.
 
-<a name="reuserowviews" />
+<a name="reuserowviews"></a>
 
 ### <a name="reuse-row-views"></a>행 보기 재사용
 
@@ -157,7 +157,7 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 
 자세한 내용은 [데이터로 ListView 채우기](~/android/user-interface/layouts/list-view/populating.md)에서 [행 보기 재사용](~/android/user-interface/layouts/list-view/populating.md#row-view-re-use)을 참조하세요.
 
-<a name="removeeventhandlers" />
+<a name="removeeventhandlers"></a>
 
 ## <a name="remove-event-handlers-in-activities"></a>작업에서 이벤트 처리기 제거
 
@@ -186,7 +186,7 @@ App.Current.Service1.Updated += service1UpdateHandler;
 App.Current.Service1.Updated -= service1UpdateHandler;
 ```
 
-<a name="limitservices" />
+<a name="limitservices"></a>
 
 ## <a name="limit-the-lifespan-of-services"></a>서비스의 수명 제한
 
@@ -194,7 +194,7 @@ App.Current.Service1.Updated -= service1UpdateHandler;
 
 `IntentService`를 사용하여 서비스의 수명을 제한할 수 있습니다. 이 설정은 서비스를 시작하려고 할 때 종료됩니다.
 
-<a name="releaseresources" />
+<a name="releaseresources"></a>
 
 ## <a name="release-resources-when-notified"></a>알림을 받을 때 리소스 릴리스
 
@@ -212,7 +212,7 @@ App.Current.Service1.Updated -= service1UpdateHandler;
 
 수신된 수준에 따라 리소스를 릴리스하여 알림에 응답해야 합니다.
 
-<a name="releaseresourcesuihidden" />
+<a name="releaseresourcesuihidden"></a>
 
 ## <a name="release-resources-when-the-user-interface-is-hidden"></a>사용자 인터페이스가 숨겨질 때 리소스 릴리스
 
@@ -220,7 +220,7 @@ App.Current.Service1.Updated -= service1UpdateHandler;
 
 사용자가 UI를 종료할 때 알림을 받으려면 `Activity` 클래스에서 [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*) 콜백을 구현하고 [`TrimMemoryUiHidden`](xref:Android.Content.ComponentCallbacks2.TrimMemoryUiHidden) 레벨을 수신 대기합니다. 이는 UI가 보기에서 숨겨진다는 것을 나타냅니다. *모든* 애플리케이션의 UI 구성 요소가 사용자로부터 숨겨질 때에만 이 알림이 수신됩니다. 이 알림을 수신할 때 UI 리소스를 릴리스하면 사용자가 앱의 다른 작업에서 다시 탐색하는 경우 UI 리소스를 사용하여 작업을 다시 신속하게 시작할 수 있습니다.
 
-<a name="optimizeimages" />
+<a name="optimizeimages"></a>
 
 ## <a name="optimize-image-resources"></a>이미지 리소스 최적화
 
@@ -228,7 +228,7 @@ App.Current.Service1.Updated -= service1UpdateHandler;
 
 자세한 내용은 [플랫폼 간 성능](~/cross-platform/deploy-test/memory-perf-best-practices.md) 가이드의 [이미지 리소스 최적화](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages)를 참조하세요.
 
-<a name="disposeimages" />
+<a name="disposeimages"></a>
 
 ## <a name="dispose-of-unused-image-resources"></a>사용되지 않는 이미지 리소스 삭제
 
@@ -245,7 +245,7 @@ using (Bitmap smallPic = BitmapFactory.DecodeByteArray(smallImageByte, 0, smallI
 
 삭제 가능한 리소스를 릴리스하는 방법에 대한 자세한 내용은 [IDisposable 리소스 릴리스](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable)를 참조하세요.  
 
-<a name="avoidfloats" />
+<a name="avoidfloats"></a>
 
 ## <a name="avoid-floating-point-arithmetic"></a>부동 소수점 연산 방지
 
@@ -254,7 +254,7 @@ Android 디바이스에서 부동 소수점 연산은 정수 연산보다 2배 �
 > [!NOTE]
 > 정수 연산에 대해서도 일부 CPU는 하드웨어 나누기 기능이 부족합니다. 따라서 정수 나누기 및 모듈러스 연산은 소프트웨어에서 자주 수행됩니다.
 
-<a name="dismissdialogs" />
+<a name="dismissdialogs"></a>
 
 ## <a name="dismiss-dialogs"></a>대화 상자 해제
 

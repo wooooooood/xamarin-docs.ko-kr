@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 2d84d149b2eb4194de35fabc69cf44af99c04d25
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 5dee7e18b7f9f47493293bc552cd4f44da56ceec
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76724128"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571430"
 ---
 # <a name="manually-signing-the-apk"></a>수동으로 APK 서명
 
@@ -120,7 +120,7 @@ $ apksigner sign --ks xample.keystore --ks-key-alias publishingdoc mono.samples.
 > [!NOTE]
 > [Google 문제 62696222](https://issuetracker.google.com/issues/62696222)에 따르면 Android SDK에 **apksigner**가 "없습니다". 이 문제를 해결하는 방법은 Android SDK 빌드 도구 v25.0.3을 설치하고 해당 버전의 **apksigner**를 사용하는 것입니다.  
 
-<a name="Sign_the_APK_with_jarsigner" />
+<a name="Sign_the_APK_with_jarsigner"></a>
 
 ### <a name="sign-the-apk-with-jarsigner"></a>jarsigner를 사용하여 APK에 서명
 
