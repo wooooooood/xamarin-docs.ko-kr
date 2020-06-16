@@ -8,24 +8,24 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/10/2020
-ms.openlocfilehash: 1b3eb61bf08eb006890b8b879c560163bd131844
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: c3b0749fae9a035c234961880a4a7059ccba2349
+ms.sourcegitcommit: 8f558dba59bfb95da0ee9154c94d7121b6a59037
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84655089"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767347"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Xamarin.ios에 대 한 문제 해결 팁
 
 ## <a name="xamarinios-cannot-resolve-systemvaluetuple"></a>Xamarin.ios가 System.valuetuple를 확인할 수 없습니다.
 
-이 오류는 Visual Studio와의 비 호환성으로 인해 발생 합니다.
+이 오류는 Visual Studio와의 비호환성으로 인해 발생합니다.
 
 - **Visual Studio 2017 업데이트 1** (버전 15.1 또는 이전 버전)은 **system.valuetuple NuGet 4.3.0** (또는 이전 버전)와만 호환 됩니다.
 
 - **Visual Studio 2017 업데이트 2** (버전 15.2 이상)는 **system.valuetuple NuGet 4.3.1** 이상과만 호환 됩니다.
 
-Visual Studio 2017 설치에 해당 하는 올바른 System.valuetuple NuGet을 선택 하세요.
+사용 중인 Visual Studio 2017 설치와 호환되는 올바른 System.ValueTuple NuGet을 선택하세요.
 
 ## <a name="receiving-error-retrieving-update-information-error-message"></a>' 업데이트 정보를 검색 하는 동안 오류 발생 ' 오류 메시지를 받고 있습니다.
 
@@ -392,6 +392,9 @@ Xamarin.ios 앱에 타사 라이브러리를 포함 하는 경우 앱을 컴파�
 경우에 따라 바이러스 백신 소프트웨어가 Xamarin.ios SDK를 맬웨어로 잘못 플래그 지정 하 고 필수 파일을 제거 하 여 SDK를 손상 시킬 수 있습니다. 그러면 "Xamarin을 시작할 수 없습니다. 시작 관리자가 실행 파일 ' mlaunch.exe '을 찾을 수 없습니다."와 같은 오류가 발생 합니다.
 
 영향을 받은 경우 바이러스 백신 스캐너에서 mlaunch.exe를 제외 하 여 다시 발생 하지 않도록 합니다. 자세한 내용은 Symantec에 대해 [Symantex Endpoint Protection Manager에서 응용 프로그램 예외를 만드는 방법](https://knowledge.broadcom.com/external/article/180778/how-to-create-an-application-exception-i.html) 을 참조 하 고, Norton의 [자동 보호, Sonar.projectname) 및 다운로드 인텔리전스 검색에서 파일 및 폴더를 제외](https://support.norton.com/sp/en/uk/home/current/solutions/v3672136) 하는 방법을 참조 하세요. 또한 거짓 긍정을 [Symantec](https://symsubmit.symantec.com) 또는 [Norton](https://submit.norton.com/?type=FP)에 보고 하는 것이 좋습니다.
+
+> [!IMPORTANT]
+> Norton 사용자의 경우 커뮤니티 구성원은 [Windows](https://community.norton.com/en/comment/5179683#comment-5179683), [Mac](https://github.com/xamarin/xamarin-macios/issues/8736#issuecomment-642874505)에 설명 된 대로 유휴 검색을 사용 하지 않도록 설정 해야 하는 것을 보고 했습니다.
 
 mlaunch.exe에 대 한 제외를 추가한 후에는 누락 된 파일을 복원 하려면 다시 설치 해야 합니다. 이 작업을 수행 하는 가장 간단한 방법은 업데이트 프로그램에서 채널을 전환 하는 것입니다.
 
