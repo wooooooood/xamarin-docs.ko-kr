@@ -61,7 +61,7 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 -----
 
-`GetManifestResourceStream`은 **리소스 ID**를 사용하여 포함된 파일에 액세스하는 데 사용합니다. 기본적으로 리소스 ID는 포함 된 프로젝트의 기본 네임 스페이스가 접두사로 추가 된 파일 이름입니다 .이 경우 어셈블리는 WorkingWithFiles이 고 파일 이름은 **WorkingWithFiles** 입니다 **.** 따라서 리소스 id는 `WorkingWithFiles.LibTextResource.txt` 입니다.
+`GetManifestResourceStream`은 **리소스 ID**를 사용하여 포함된 파일에 액세스하는 데 사용합니다. 기본적으로 리소스 ID는 포함 된 프로젝트의 기본 네임 스페이스가 접두사로 붙는 파일 이름입니다 .이 경우 어셈블리는 **WorkingWithFiles** 이 고 파일 이름은 **LibTextResource.txt**이므로 리소스 id는 `WorkingWithFiles.LibTextResource.txt` 입니다.
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
