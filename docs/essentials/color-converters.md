@@ -1,21 +1,8 @@
 ---
-title: Xamarin.Essentials 색 변환기
-description: Xamarin.Essentials의 ColorConverters 클래스는 System.Drawing.Color와 함께 작동하는 몇 가지 도우미 메서드와 확장 메서드를 제공합니다.
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-ms.custom: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 57b85a909855594c70bfd529d7a794b4bd7bca7e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130223"
+title: “Xamarin.Essentials 색 변환기” description: “Xamarin.Essentials의 ColorConverters 클래스는 System.Drawing.Color와 함께 작동하는 몇 가지 도우미 메서드와 확장 메서드를 제공합니다.”
+ms.assetid: B10428D6-89E2-4714-A39F-7E6E626391B2 author: jamesmontemagno ms.author: jamont ms.date: 01/06/2020 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-color-converters"></a>Xamarin.Essentials: 색 변환기
 
 Xamarin.Essentials의 **ColorConverters** 클래스는 System.Drawing.Color에 대한 몇 가지 도우미 메서드를 제공합니다.

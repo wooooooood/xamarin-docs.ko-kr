@@ -1,8 +1,5 @@
 ---
-title: ''Xamarin.Essentials: 전화 걸기'' description: 'Xamarin.Essentials의 PhoneDialer 클래스를 사용하면 애플리케이션이 전화 걸기에서 전화 번호를 열 수 있습니다' ms.assetid: author: ms.custom: ms.author: ms.date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: “Xamarin.Essentials: 전화 걸기” description: “Xamarin.Essentials의 PhoneDialer 클래스를 사용하면 애플리케이션이 전화 걸기에서 전화 번호를 열 수 있습니다.” ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 07/02/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: 전화 걸기

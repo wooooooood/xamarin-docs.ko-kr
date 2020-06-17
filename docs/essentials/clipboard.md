@@ -1,9 +1,6 @@
 ---
-title: ''Xamarin.Essentials: 클립보드" descriiption: '이 문서에서는 애플리케이션 간에 텍스트를 복사하여 시스템 클립보드에 붙여넣을 수 있는 Xamarin.Essentials의 Clipboard 클래스를 설명합니다.'
-ms.assetid: author: ms.author: ms.date: ms.custom: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: “Xamarin.Essentials: 클립보드” description: “이 문서에서는 애플리케이션 간에 텍스트를 복사하여 시스템 클립보드에 붙여넣을 수 있는 Xamarin.Essentials의 클립보드 클래스를 설명합니다.”
+ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0 author: jamesmontemagno ms.author: jamont ms.date: 01/06/2020 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials: 클립보드

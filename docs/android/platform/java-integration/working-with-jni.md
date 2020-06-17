@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 0fa717a775ff2f1ace9e248a8afde8d373e8a1f8
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 00c9c2e9f39943960d35c30602935ed109639cf4
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76724346"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567736"
 ---
 # <a name="working-with-jni-and-xamarinandroid"></a>JNI 및 Xamarin.Android 사용
 
@@ -41,7 +41,7 @@ Java 형식 및 인터페이스를 바인딩하려면 Xamarin.Android 4.0 이상
 
 ## <a name="managed-callable-wrappers"></a>관리형 호출 가능 래퍼
 
-**MCW**(**관리형 호출 가능 래퍼**)는 클라이언트 C# 코드가 JNI의 기본 복잡성을 걱정하지 않아도 되도록 모든 JNI 기계를 래핑하는 Java 클래스 또는 인터페이스의 ‘바인딩’입니다.  대부분의 `Mono.Android.dll`은 관리형 호출 가능 래퍼로 구성됩니다.
+**MCW**(**관리형 호출 가능 래퍼**)는 클라이언트 C# 코드가 JNI의 기본 복잡성을 걱정하지 않아도 되도록 모든 JNI 기계를 래핑하는 Java 클래스 또는 인터페이스의 ‘바인딩’입니다. 대부분의 `Mono.Android.dll`은 관리형 호출 가능 래퍼로 구성됩니다.
 
 관리형 호출 가능 래퍼는 다음 두 가지 용도로 사용됩니다.
 
@@ -79,7 +79,7 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 
 ### <a name="implementation-details"></a>구현 세부 정보
 
-‘이 문서의 나머지 부분에서는 예고 없이 변경되는 구현 세부 정보를 제공합니다’(개발자가 내부적으로 진행되는 작업에 대해 궁금해할 수 있으므로 여기에 제공됨). 
+‘이 문서의 나머지 부분에서는 예고 없이 변경되는 구현 세부 정보를 제공합니다’(개발자가 내부적으로 진행되는 작업에 대해 궁금해할 수 있으므로 여기에 제공됨).
 
 다음과 같은 C# 소스를 예를 들 수 있습니다.
 
@@ -277,7 +277,7 @@ Java 메서드는 C# 메서드 및 C# 속성으로 노출됩니다. 예를 들�
 
 메서드 바인딩은 단순한 메서드 호출 이상입니다. 메서드 바인딩에는 메서드를 재정의하거나(추상 메서드 및 최종이 아닌 메서드) 구현하는(인터페이스 메서드) 기능도 포함되어 있습니다. [지원 상속, 인터페이스](#_Supporting_Inheritance,_Interfaces_1) 섹션은 가상 메서드 및 인터페이스 메서드를 지원하는 복잡성에 대해 설명합니다.
 
-<a name="_Static_Methods_1" />
+<a name="_Static_Methods_1"></a>
 
 #### <a name="static-methods"></a>정적 메서드
 
@@ -395,7 +395,7 @@ public Integer (int value)
 
 [JNIEnv.CreateInstance](xref:Android.Runtime.JNIEnv.CreateInstance*) 메서드는 `JNIEnv.FindClass`에서 반환된 값에 대해 `JNIEnv.FindClass`, `JNIEnv.GetMethodID`, `JNIEnv.NewObject` 및 `JNIEnv.DeleteGlobalReference`를 수행하기 위한 도우미입니다. 자세한 내용은 다음 섹션을 참조하십시오.
 
-<a name="_Supporting_Inheritance,_Interfaces_1" />
+<a name="_Supporting_Inheritance,_Interfaces_1"></a>
 
 ### <a name="supporting-inheritance-interfaces"></a>상속 지원, 인터페이스
 
@@ -405,7 +405,7 @@ C# 형식의 경우 `[Register]` 사용자 지정 특성 생성자에는 하나�
 
 Xamarin.Android 4.0 이전에는 기존 Java 형식에 "별칭"을 지정하는 데 `[Register]` 사용자 지정 특성을 사용할 수 없습니다. 이는 ACW 생성 프로세스에서 발생한 모든 `Java.Lang.Object` 서브클래스에 대해 ACW를 생성하기 때문입니다.
 
-Xamarin.Android 4.0에는 [RegisterAttribute.DoNotGenerateAcw](xref:Android.Runtime.RegisterAttribute.DoNotGenerateAcw) 속성이 도입되었습니다. 이 속성은 ACW 생성 프로세스 중에 주석이 지정된 형식을 ‘건너뛰도록’ 하여 새로운 관리형 호출 가능 래퍼를 선언함으로써 패키지 생성 타임에 ACW가 생성되지 않도록 합니다.  이렇게 하면 기존 Java 형식을 바인딩할 수 있습니다. 예를 들어, 정수를 더하고 결과를 반환하는 하나의 메서드 `add`를 포함하는 다음과 같은 간단한 Java 클래스 `Adder`을 살펴보겠습니다.
+Xamarin.Android 4.0에는 [RegisterAttribute.DoNotGenerateAcw](xref:Android.Runtime.RegisterAttribute.DoNotGenerateAcw) 속성이 도입되었습니다. 이 속성은 ACW 생성 프로세스 중에 주석이 지정된 형식을 ‘건너뛰도록’ 하여 새로운 관리형 호출 가능 래퍼를 선언함으로써 패키지 생성 타임에 ACW가 생성되지 않도록 합니다. 이렇게 하면 기존 Java 형식을 바인딩할 수 있습니다. 예를 들어, 정수를 더하고 결과를 반환하는 하나의 메서드 `add`를 포함하는 다음과 같은 간단한 Java 클래스 `Adder`을 살펴보겠습니다.
 
 ```java
 package mono.android.test;
@@ -436,7 +436,7 @@ partial class ManagedAdder : Adder {
 }
 ```
 
-여기서 `Adder` C# 형식은 `Adder` Java 형식에 ‘별칭’을 지정합니다.  `[Register]` 특성은 `mono.android.test.Adder` Java 형식의 JNI 이름을 지정하는 데 사용되고, `DoNotGenerateAcw` 속성은 ACW 생성을 금지하는 데 사용됩니다. 이로 인해 `ManagedAdder` 형식에 대한 ACW가 생성되고 그 결과로 `mono.android.test.Adder` 형식이 올바르게 서브클래싱됩니다. `RegisterAttribute.DoNotGenerateAcw` 속성을 사용하지 않았으면 Xamarin.Android 빌드 프로세스에서 새로운 `mono.android.test.Adder` Java 형식을 생성했을 것입니다. 이 경우 `mono.android.test.Adder` 형식이 두 개의 개별 파일에 두 번 표시되므로 컴파일 오류가 발생합니다.
+여기서 `Adder` C# 형식은 `Adder` Java 형식에 ‘별칭’을 지정합니다. `[Register]` 특성은 `mono.android.test.Adder` Java 형식의 JNI 이름을 지정하는 데 사용되고, `DoNotGenerateAcw` 속성은 ACW 생성을 금지하는 데 사용됩니다. 이로 인해 `ManagedAdder` 형식에 대한 ACW가 생성되고 그 결과로 `mono.android.test.Adder` 형식이 올바르게 서브클래싱됩니다. `RegisterAttribute.DoNotGenerateAcw` 속성을 사용하지 않았으면 Xamarin.Android 빌드 프로세스에서 새로운 `mono.android.test.Adder` Java 형식을 생성했을 것입니다. 이 경우 `mono.android.test.Adder` 형식이 두 개의 개별 파일에 두 번 표시되므로 컴파일 오류가 발생합니다.
 
 ### <a name="binding-virtual-methods"></a>가상 메서드 바인딩
 
@@ -567,7 +567,7 @@ int FunctionName(JNIEnv *env, jobject this, int a, int b)
 
 Xamarin.Android는 `RegisterNatives` 메서드를 노출하지 않습니다. 대신 ACW와 MCW는 `RegisterNatives`을 호출하는 데 필요한 정보를 제공합니다. 즉, ACW는 메서드 이름 및 JNI 형식 시그니처를 포함하고, 누락된 유일한 항목은 연결할 함수 포인터입니다.
 
-여기에 ‘커넥터 메서드’가 옵니다.  세 번째 `[Register]` 사용자 지정 특성 매개 변수는 등록 된 형식에 정의된 메서드의 이름 또는 매개 변수를 허용하지 않고 `System.Delegate`를 반환하는 등록된 형식의 기본 클래스입니다. 그런 후 반환된 `System.Delegate`는 올바른 JNI 함수 시그니처가 있는 메서드를 나타냅니다. 마지막으로, 대리자가 Java에 제공될 때 GC가 수집하지 않도록 커넥터 메서드에서 반환하는 대리자는 루팅‘되어야 합니다’. 
+여기에 ‘커넥터 메서드’가 옵니다. 세 번째 `[Register]` 사용자 지정 특성 매개 변수는 등록 된 형식에 정의된 메서드의 이름 또는 매개 변수를 허용하지 않고 `System.Delegate`를 반환하는 등록된 형식의 기본 클래스입니다. 그런 후 반환된 `System.Delegate`는 올바른 JNI 함수 시그니처가 있는 메서드를 나타냅니다. 마지막으로, 대리자가 Java에 제공될 때 GC가 수집하지 않도록 커넥터 메서드에서 반환하는 대리자는 루팅‘되어야 합니다’.
 
 ```csharp
 #pragma warning disable 0169
@@ -667,7 +667,7 @@ public class Adder : Java.Lang.Object {
 
 1. `RegisterAttribute.DoNotGenerateAcw`가 `true`인 경우
 
-그런 다음, GC 상호 작용의 경우 형식에는 런타임에 `Java.Lang.Object` 또는 `Java.Lang.Object` 서브클래스를 참조할 수 있는 필드가 ‘없어야 합니다’.  예를 들어, `System.Object` 형식의 필드와 모든 인터페이스 형식은 허용되지 않습니다. `Java.Lang.Object` 인스턴스를 참조할 수 없는 형식(예: `System.String` 및 `List<int>`)이 허용됩니다. 해당 제한 사항으로 인해 GC를 통한 조기 개체 수집이 방지됩니다.
+그런 다음, GC 상호 작용의 경우 형식에는 런타임에 `Java.Lang.Object` 또는 `Java.Lang.Object` 서브클래스를 참조할 수 있는 필드가 ‘없어야 합니다’. 예를 들어, `System.Object` 형식의 필드와 모든 인터페이스 형식은 허용되지 않습니다. `Java.Lang.Object` 인스턴스를 참조할 수 없는 형식(예: `System.String` 및 `List<int>`)이 허용됩니다. 해당 제한 사항으로 인해 GC를 통한 조기 개체 수집이 방지됩니다.
 
 `Java.Lang.Object` 인스턴스를 참조할 수 있는 인스턴스 필드가 형식에 포함되어야 하는 경우 필드 형식은 `System.WeakReference` 또는 `GCHandle`이어야 합니다.
 
@@ -735,7 +735,7 @@ C# 인터페이스 정의는 다음 요구 사항을 충족해야 합니다.
 
 `abstract` 및 `virtual` 메서드를 바인딩할 때 커넥터 메서드는 등록 중인 형식의 상속 계층 구조 내에서 검색됩니다. 인터페이스에는 본문이 포함된 메서드가 없을 수 있으므로 해당 방식이 작동하지 않습니다. 따라서 커넥터 메서드가 있는 위치를 나타내는 형식을 지정해야 합니다. 형식은 커넥터 메서드 문자열 내에서 콜론 `':'`을 입력한 후에 지정되면 호출자를 포함하는 형식의 어셈블리 정규화 형식 이름이어야 합니다.
 
-인터페이스 메서드 선언은 ‘호환되는’ 형식을 사용하여 해당 Java 메서드를 변환하는 것입니다.  Java 기본 형식의 경우 호환되는 형식이 해당 C# 형식입니다(예: Java `int`는 C# `int`임). 참조 형식의 경우 호환되는 형식은 적절한 Java 형식의 JNI 핸들을 제공할 수 있는 형식입니다.
+인터페이스 메서드 선언은 ‘호환되는’ 형식을 사용하여 해당 Java 메서드를 변환하는 것입니다. Java 기본 형식의 경우 호환되는 형식이 해당 C# 형식입니다(예: Java `int`는 C# `int`임). 참조 형식의 경우 호환되는 형식은 적절한 Java 형식의 JNI 핸들을 제공할 수 있는 형식입니다.
 
 인터페이스 멤버는 Java에 의해 직접 호출되지 않습니다. 즉, 호출은 호출자 형식을 통해 조정되므로 어느 정도 유연성이 허용됩니다.
 
@@ -969,9 +969,9 @@ new JValue (currentSum));
 
 ## <a name="jni-object-references"></a>JNI 개체 참조
 
-많은 JNIEnv 메서드는 `GCHandle`과 비슷한 *JNI* ‘개체 참조’를 반환합니다.  JNI는 로컬 참조, 전역 참조 및 약한 전역 참조의 세 가지 개체 참조 형식을 제공합니다. 해당 세 가지 형식은 모두 `System.IntPtr`로 표시‘되지만’(JNI 함수 형식 섹션에 따라) `JNIEnv` 메서드에서 반환되는 모든 `IntPtr`이 참조인 것은 아닙니다.  예를 들어 [JNIEnv.GetMethodID](xref:Android.Runtime.JNIEnv.GetMethodID*)는 `IntPtr`을 반환하지만 개체 참조를 반환하지 않고 `jmethodID`를 반환합니다. 자세한 내용은 [JNI 함수 설명서](https://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html)를 참조하세요.
+많은 JNIEnv 메서드는 `GCHandle`과 비슷한 *JNI* ‘개체 참조’를 반환합니다. JNI는 로컬 참조, 전역 참조 및 약한 전역 참조의 세 가지 개체 참조 형식을 제공합니다. 해당 세 가지 형식은 모두 `System.IntPtr`로 표시‘되지만’(JNI 함수 형식 섹션에 따라) `JNIEnv` 메서드에서 반환되는 모든 `IntPtr`이 참조인 것은 아닙니다. 예를 들어 [JNIEnv.GetMethodID](xref:Android.Runtime.JNIEnv.GetMethodID*)는 `IntPtr`을 반환하지만 개체 참조를 반환하지 않고 `jmethodID`를 반환합니다. 자세한 내용은 [JNI 함수 설명서](https://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html)를 참조하세요.
 
-로컬 참조는 ‘대부분의’ 참조 생성 메서드를 통해 생성됩니다. 
+로컬 참조는 ‘대부분의’ 참조 생성 메서드를 통해 생성됩니다.
 Android에서는 지정된 시간에 제한된 수(일반적으로 512개)의 로컬 참조만 존재할 수 있습니다. 로컬 참조는 [JNIEnv.DeleteLocalRef](xref:Android.Runtime.JNIEnv.DeleteLocalRef*)를 통해 삭제할 수 있습니다.
 JNI와 달리, 개체 참조를 반환하는 모든 참조 JNIEnv 메서드가 로컬 참조를 반환하는 것은 아닙니다. 즉, [JNIEnv.FindClass](xref:Android.Runtime.JNIEnv.FindClass*)는 *전역* 참조를 반환합니다. 가능한 한 빨리, 로컬 참조를 삭제하는 것이 좋습니다. 개체 주위에 [Java.Lang.Object](xref:Java.Lang.Object)를 생성하고 [Java.Lang.Object(IntPtr handle, JniHandleOwnership transfer)](xref:Java.Lang.Object#ctor*) 생성자에 대해 `JniHandleOwnership.TransferLocalRef`을 지정하면 됩니다.
 
@@ -1049,19 +1049,19 @@ IntPtr lrefString = JNIEnv.CallObjectMethod(instance, methodID);
 Java.Lang.String value = Java.Lang.Object.GetObject<Java.Lang.String>( lrefString, JniHandleOwnership.TransferLocalRef);
 ```
 
-<a name="_Looking_up_Java_Types" />
+<a name="_Looking_up_Java_Types"></a>
 
 ## <a name="looking-up-java-types"></a>Java 형식 조회
 
-JNI에서 필드 또는 메서드를 조회하려면 필드 또는 메서드에 대한 선언 형식을 먼저 조회해야 합니다. [Android.Runtime.JNIEnv.FindClass(string)](xref:Android.Runtime.JNIEnv.FindClass*)) 메서드는 Java 형식을 조회하는 데 사용됩니다. 문자열 매개 변수는 ‘단순 형식 참조’이거나 Java 형식의 경우 ‘전체 형식 참조’입니다.   단순 전체 형식 참조에 대한 자세한 내용은 [JNI 형식 참조 섹션](#_JNI_Type_References)을 참조하세요.
+JNI에서 필드 또는 메서드를 조회하려면 필드 또는 메서드에 대한 선언 형식을 먼저 조회해야 합니다. [Android.Runtime.JNIEnv.FindClass(string)](xref:Android.Runtime.JNIEnv.FindClass*)) 메서드는 Java 형식을 조회하는 데 사용됩니다. 문자열 매개 변수는 ‘단순 형식 참조’이거나 Java 형식의 경우 ‘전체 형식 참조’입니다.  단순 전체 형식 참조에 대한 자세한 내용은 [JNI 형식 참조 섹션](#_JNI_Type_References)을 참조하세요.
 
 참고: 개체 인스턴스를 반환하는 다른 모든 `JNIEnv` 메서드와 달리 `FindClass`는 지역 참조가 아닌 전역 참조를 반환합니다.
 
-<a name="_Instance_Fields" />
+<a name="_Instance_Fields"></a>
 
 ## <a name="instance-fields"></a>인스턴스 필드
 
-필드는 ‘필드 ID’를 통해 조작됩니다.  필드 ID는 필드가 정의된 클래스, 필드 이름 및 필드의 [JNI 형식 시그니처](#JNI_Type_Signatures)가 필요한 [JNIEnv.GetFieldID](xref:Android.Runtime.JNIEnv.GetFieldID*)를 통해 가져옵니다.
+필드는 ‘필드 ID’를 통해 조작됩니다. 필드 ID는 필드가 정의된 클래스, 필드 이름 및 필드의 [JNI 형식 시그니처](#JNI_Type_Signatures)가 필요한 [JNIEnv.GetFieldID](xref:Android.Runtime.JNIEnv.GetFieldID*)를 통해 가져옵니다.
 
 필드 ID는 해제할 필요가 없으며 해당 Java 형식이 로드되기만 하면 유효합니다. (Android는 현재 클래스 언로드를 지원하지 않습니다.)
 
@@ -1123,11 +1123,11 @@ JNIEnv.SetField(IntPtr instance, IntPtr fieldID, Type value);
 
 - [JNIEnv.SetField](xref:Android.Runtime.JNIEnv.SetField*))   &ndash; `double` 인스턴스 필드의 값을 씁니다.
 
-<a name="_Static_Fields" />
+<a name="_Static_Fields"></a>
 
 ## <a name="static-fields"></a>정적 필드
 
-정적 필드는 ‘필드 ID’를 통해 조작됩니다.  필드 ID는 필드가 정의된 클래스, 필드 이름 및 필드의 [JNI 형식 시그니처](#JNI_Type_Signatures)가 필요한 [JNIEnv.GetStaticFieldID](xref:Android.Runtime.JNIEnv.GetStaticFieldID*)를 통해 가져옵니다.
+정적 필드는 ‘필드 ID’를 통해 조작됩니다. 필드 ID는 필드가 정의된 클래스, 필드 이름 및 필드의 [JNI 형식 시그니처](#JNI_Type_Signatures)가 필요한 [JNIEnv.GetStaticFieldID](xref:Android.Runtime.JNIEnv.GetStaticFieldID*)를 통해 가져옵니다.
 
 필드 ID는 해제할 필요가 없으며 해당 Java 형식이 로드되기만 하면 유효합니다. (Android는 현재 클래스 언로드를 지원하지 않습니다.)
 
@@ -1187,11 +1187,11 @@ JNIEnv.SetStaticField(IntPtr class, IntPtr fieldID, Type value);
 
 - [JNIEnv.SetStaticField](xref:Android.Runtime.JNIEnv.SetStaticField*))   &ndash; `double` 정적 필드의 값을 씁니다.
 
-<a name="_Instance_Methods" />
+<a name="_Instance_Methods"></a>
 
 ## <a name="instance-methods"></a>인스턴스 메서드
 
-인스턴스 메서드는 ‘메서드 ID’를 통해 호출됩니다.  메서드 ID는 메서드가 정의된 형식, 메서드 이름 및 메서드의 [JNI 형식 시그니처](#JNI_Type_Signatures)가 필요한 [JNIEnv.GetMethodID](xref:Android.Runtime.JNIEnv.GetMethodID*)를 통해 가져옵니다.
+인스턴스 메서드는 ‘메서드 ID’를 통해 호출됩니다. 메서드 ID는 메서드가 정의된 형식, 메서드 이름 및 메서드의 [JNI 형식 시그니처](#JNI_Type_Signatures)가 필요한 [JNIEnv.GetMethodID](xref:Android.Runtime.JNIEnv.GetMethodID*)를 통해 가져옵니다.
 
 메서드 ID는 해제할 필요가 없으며 해당 Java 형식이 로드되기만 하면 유효합니다. (Android는 현재 클래스 언로드를 지원하지 않습니다.)
 
@@ -1253,11 +1253,11 @@ JNIEnv.SetStaticField(IntPtr class, IntPtr fieldID, Type value);
 
 - [JNIEnv.CallNonvirtualDoubleMethod](xref:Android.Runtime.JNIEnv.CallNonvirtualDoubleMethod*) &ndash; `double` 값을 반환하는 메서드를 비가상으로 호출합니다.
 
-<a name="_Static_Methods" />
+<a name="_Static_Methods"></a>
 
 ## <a name="static-methods"></a>정적 메서드
 
-정적 메서드는 ‘메서드 ID’를 통해 호출됩니다.  메서드 ID는 메서드가 정의된 형식, 메서드 이름 및 메서드의 [JNI 형식 시그니처](#JNI_Type_Signatures)가 필요한 [JNIEnv.GetStaticMethodID](xref:Android.Runtime.JNIEnv.GetStaticMethodID*)를 통해 가져옵니다.
+정적 메서드는 ‘메서드 ID’를 통해 호출됩니다. 메서드 ID는 메서드가 정의된 형식, 메서드 이름 및 메서드의 [JNI 형식 시그니처](#JNI_Type_Signatures)가 필요한 [JNIEnv.GetStaticMethodID](xref:Android.Runtime.JNIEnv.GetStaticMethodID*)를 통해 가져옵니다.
 
 메서드 ID는 해제할 필요가 없으며 해당 Java 형식이 로드되기만 하면 유효합니다. (Android는 현재 클래스 언로드를 지원하지 않습니다.)
 
@@ -1287,7 +1287,7 @@ JNIEnv.SetStaticField(IntPtr class, IntPtr fieldID, Type value);
 
 - [JNIEnv.CallStaticDoubleMethod](xref:Android.Runtime.JNIEnv.CallStaticDoubleMethod*) &ndash; `double` 값을 반환하는 정적 메서드를 호출합니다.
 
-<a name="JNI_Type_Signatures" />
+<a name="JNI_Type_Signatures"></a>
 
 ## <a name="jni-type-signatures"></a>JNI 형식 시그니처
 
@@ -1305,9 +1305,9 @@ JNI 형식 시그니처는 다음과 같습니다.
 (ILjava/lang/String;[I)J
 ```
 
-일반적으로 `javap` 명령을 사용하여 JNI 시그니처를 결정하는 것이 ‘강력히’ 권장됩니다.  예를 들어, [java.lang.Thread.State.valueOf(String)](https://developer.android.com/reference/java/lang/Thread.State.html#valueOf(java.lang.String)) 메서드의 JNI 형식 시그니처는 "(Ljava/lang/String;)Ljava/lang/Thread$State;"이지만 [java.lang.Thread.State.values](https://developer.android.com/reference/java/lang/Thread.State.html#values) 메서드의 JNI 형식 시그니처는 "()[Ljava/lang/Thread$State;"입니다. 후행 세미콜론에 유의하세요. 해당 세미콜론은 JNI 형식 시그니처의 일부가 ‘됩니다’. 
+일반적으로 `javap` 명령을 사용하여 JNI 시그니처를 결정하는 것이 ‘강력히’ 권장됩니다. 예를 들어, [java.lang.Thread.State.valueOf(String)](https://developer.android.com/reference/java/lang/Thread.State.html#valueOf(java.lang.String)) 메서드의 JNI 형식 시그니처는 "(Ljava/lang/String;)Ljava/lang/Thread$State;"이지만 [java.lang.Thread.State.values](https://developer.android.com/reference/java/lang/Thread.State.html#values) 메서드의 JNI 형식 시그니처는 "()[Ljava/lang/Thread$State;"입니다. 후행 세미콜론에 유의하세요. 해당 세미콜론은 JNI 형식 시그니처의 일부가 ‘됩니다’.
 
-<a name="_JNI_Type_References" />
+<a name="_JNI_Type_References"></a>
 
 ## <a name="jni-type-references"></a>JNI 형식 참조
 
@@ -1333,7 +1333,7 @@ JNI 형식 참조에는 다음 네 가지 형식이 있습니다.
 - `bool`의 경우 `"Z"`입니다.
 - `void` 메서드 반환 형식의 경우 `"V"`입니다.
 
-<a name="_Simplified_Type_References_1" />
+<a name="_Simplified_Type_References_1"></a>
 
 ### <a name="simplified-type-references"></a>단순 형식 참조
 
@@ -1394,7 +1394,7 @@ static {};
 
 ## <a name="java-generics-and-type-erasure"></a>Java 제네릭 및 형식 지우기
 
-*대부분*은 JNI를 통해 표시되는 것처럼 Java 제네릭은  존재하지 않습니다.
+*대부분*은 JNI를 통해 표시되는 것처럼 Java 제네릭은 존재하지 않습니다.
 "좋은 방법"이 있지만 JNI가 제네릭 멤버를 조회하고 호출하는 방식이 아니라 Java가 제네릭과 상호 작용하는 방식일 고려해야 합니다.
 
 JNI을 통해 상호 작용하는 경우 제네릭 형식 또는 멤버와 비제네릭 형식 또는 멤버 간에는 차이가 없습니다. 예를 들어, 제네릭 형식 [java.lang.Class&lt;T&gt;](https://developer.android.com/reference/java/lang/Class.html)도 "원시" 제네릭 형식 `java.lang.Class`이며, 두 형식 모두 동일한 단순 형식 참조 `"java/lang/Class"`를 포함합니다.

@@ -1,9 +1,6 @@
 ---
-title: ''Xamarin.Essentials: SMS'' description: ‘Xamarin.Essentials의 Sms 클래스를 사용하면 애플리케이션이 기본 SMS 애플리케이션에서 수신자에게 보내도록 지정된 메시지를 열 수 있습니다.’
-ms.assetid: author: ms.custom: ms.author: ms.date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: “Xamarin.Essentials: SMS” description: “Xamarin.Essentials의 SMS 클래스를 사용하면 애플리케이션이 기본 SMS 애플리케이션에서 수신자에게 보내도록 지정된 메시지를 열 수 있습니다.”
+ms.assetid: 81A757F2-6F2A-458F-B9BE-770ADEBFAB58 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # <a name="xamarinessentials-sms"></a>Xamarin.Essentials: SMS

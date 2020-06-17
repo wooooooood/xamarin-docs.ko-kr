@@ -1,8 +1,6 @@
 ---
-title: ''Xamarin.Essentials: MainThread'' description: ms.assetid: author: ms.custom: ms.author: ms.date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: “Xamarin.Essentials: MainThread” description: “MainThread 클래스를 사용하면 애플리케이션에서 주요 실행 스레드에 코드를 실행할 수 있습니다.”
+ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 08/20/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
