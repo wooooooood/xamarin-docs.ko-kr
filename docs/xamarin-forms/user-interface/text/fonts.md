@@ -45,7 +45,7 @@ Xamarin.Forms는 [`NamedSize`](xref:Xamarin.Forms.NamedSize) 특정 글꼴 크�
 속성에서 **bold** 및 *이탤릭체* 와 같은 글꼴 스타일을 설정할 수 있습니다 `FontAttributes` . 현재 지원 되는 값은 다음과 같습니다.
 
 - **없음**
-- **글꼴로**
+- **굵게**
 - **서식을**
 
 `FontAttribute`열거형은 다음과 같이 사용할 수 있습니다. 단일 특성을 지정 하거나 함께 지정할 수 있습니다 `OR` .
@@ -102,7 +102,7 @@ Xamarin.Forms텍스트를 표시 하는 컨트롤에는 모두 `FontSize` XAML�
 
 Xamarin.Forms[`NamedSize`](xref:Xamarin.Forms.NamedSize)특정 글꼴 크기를 나타내는 열거형의 필드를 정의 합니다. 다음 표에서는 `NamedSize` 구성원 및 iOS, Android 및 유니버설 Windows 플랫폼 (UWP)의 기본 크기를 보여 줍니다.
 
-| 멤버 | iOS | Android | UWP |
+| 구성원 | iOS | Android | UWP |
 | --- | --- | --- | --- |
 | `Default` | 16 | 14 | 14 |
 | `Micro` | 11 | 10 | 15.667 |

@@ -36,7 +36,7 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스가 포함
 * 텍스트
 * 세부 정보
 * ImageSource
-* 측면
+* 양상
 
 ```xaml
 <pages:HeroImage
@@ -46,7 +46,7 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스가 포함
 />
 ```
 
-**OWA(Outlook Web Access)**
+**Android**
 
 ![](controls-images/heroimage-light-android.png "Android의 HeroImage 컨트롤") ![](controls-images/heroimage-dark-android.png "Android의 HeroImage 컨트롤")
 
@@ -64,7 +64,7 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스가 포함
 * 세부 정보
 * ImageSource
 * PlaceholdImageSource
-* 측면
+* 양상
 
 ```xaml
 <StackLayout Spacing="0">
@@ -78,7 +78,7 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스가 포함
 
 이러한 스크린샷은 `ListItem` 밝은 테마와 어두운 테마를 모두 사용 하 여 iOS 및 Android 플랫폼에 대 한을 보여 줍니다.
 
-**OWA(Outlook Web Access)**
+**Android**
 
 ![](controls-images/listitem-light-android.png "Android의 ListItem 컨트롤") ![](controls-images/listitem-dark-android.png "Android의 ListItem 컨트롤")
 
@@ -108,7 +108,7 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스가 포함
 
 기본 제공 되는 밝은 테마와 어두운 테마에 해당 하는 색을 사용 하 여 아래의 스크린샷 처럼 표시 됩니다.
 
-**OWA(Outlook Web Access)**
+**Android**
 
 ![](controls-images/cardview-light-android.png "Android의 CardView 사용자 지정 컨트롤") ![](controls-images/cardview-dark-android.png "Android의 CardView 사용자 지정 컨트롤")
 

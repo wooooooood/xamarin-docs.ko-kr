@@ -100,7 +100,7 @@ public class DeviceStylesPageCS : ContentPage
 
 [`Style`](xref:Xamarin.Forms.NavigableElement.Style)각 인스턴스의 속성은 [`Label`](xref:Xamarin.Forms.Label) 클래스의 적절 한 속성으로 설정 됩니다 [`Devices.Styles`](xref:Xamarin.Forms.Device.Styles) .
 
-## <a name="accessibility"></a>액세스 가능성
+## <a name="accessibility"></a>접근성
 
 *장치* 스타일은 내게 필요한 옵션 기본 설정을 준수 하므로 각 플랫폼에서 접근성 기본 설정이 변경 될 때 글꼴 크기가 변경 됩니다. 따라서 액세스 가능한 텍스트를 지원 하려면 *장치* 스타일이 응용 프로그램 내의 모든 텍스트 스타일에 대 한 기준으로 사용 되는지 확인 합니다.
 

@@ -318,7 +318,7 @@ public class MainActivity : FormsAppCompatActivity
 }
 ```
 
-### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
+### <a name="universal-windows-platform"></a>UWP
 
 유니버설 Windows 플랫폼에서 MSAL을 사용 하는 데 필요한 추가 설치는 없습니다.
 

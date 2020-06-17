@@ -222,7 +222,7 @@ Xamarin.Forms응용 프로그램이 API 28 이상을 대상으로 하는 경우 
 
 [![Android의 위치 권한 요청 스크린샷](setup-images/permission-android.png "Android 권한 요청")](setup-images/permission-android-large.png#lightbox "Android 권한 요청")
 
-### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
+### <a name="universal-windows-platform"></a>UWP
 
 UWP에서는 응용 프로그램이 인증 되어야 맵을 표시 하 고 map service를 사용할 수 있습니다. 응용 프로그램을 인증 하려면 맵 인증 키를 지정 해야 합니다. 자세한 내용은 [지도 인증 키 요청](/windows/uwp/maps-and-location/authentication-key)을 참조 하세요. 그런 다음 메서드 호출에서 인증 토큰을 지정 `FormsMaps.Init("AUTHORIZATION_TOKEN")` 하 여 Bing Maps를 사용 하 여 응용 프로그램을 인증 합니다.
 

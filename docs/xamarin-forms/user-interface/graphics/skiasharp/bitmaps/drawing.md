@@ -188,7 +188,7 @@ Color = new SKColor(0, 0, 0, 0)
 
 그릴 새 비트맵을 만들 필요는 없습니다. 기존 비트맵을 그릴 수도 있습니다.
 
-**원숭이 콧수염** 페이지는 해당 생성자를 사용 하 여 **monkeyface .png** 이미지를 로드 합니다. 그런 다음이 `SKCanvas` 비트맵을 기반으로 개체를 만들고 및 개체를 사용 하 여 `SKPaint` `SKPath` 콧수염을 그립니다.
+**원숭이 콧수염** 페이지는 해당 생성자를 사용 하 여 **MonkeyFace.png** 이미지를 로드 합니다. 그런 다음이 `SKCanvas` 비트맵을 기반으로 개체를 만들고 및 개체를 사용 하 여 `SKPaint` `SKPath` 콧수염을 그립니다.
 
 ```csharp
 public partial class MonkeyMoustachePage : ContentPage

@@ -3,7 +3,7 @@
 assetid: 097f87f2-d891-4f3c-be02-fb7d195a481a: xamarin-forms author: davidbritch: dabritch:: 05/28/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
 
-# <a name="xamarinforms-fast-renderers"></a>Xamarin.Forms 빠른 렌더러
+# <a name="xamarinforms-fast-renderers"></a>Xamarin.Forms빠른 렌더러
 
 일반적으로 Android에서 대부분의 원래 컨트롤 렌더러는 다음과 같은 두 가지 보기로 구성 됩니다.
 

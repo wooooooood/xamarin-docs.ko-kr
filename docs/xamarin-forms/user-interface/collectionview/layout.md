@@ -586,5 +586,5 @@ void OnImageTapped(object sender, EventArgs e)
 ## <a name="related-links"></a>관련 링크
 
 - [CollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
-- [오른쪽에서 왼쪽 지역화](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
+- [오른쪽에서 왼쪽으로 쓰는 언어 지역화](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
 - [Xamarin.FormsCollectionView 스크롤](scrolling.md)

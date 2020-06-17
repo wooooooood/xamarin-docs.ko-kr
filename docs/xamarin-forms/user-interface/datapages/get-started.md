@@ -181,7 +181,7 @@ x = typeof(Xamarin.Forms.Themes.LightThemeResources);
 x = typeof(Xamarin.Forms.Themes.iOS.UnderlineEffect);
 ```
 
-**OWA(Outlook Web Access)**
+**Android**
 
 **MainActivity.cs** 에서 다음 줄을 추가 합니다.`LoadApplication`
 

@@ -112,7 +112,7 @@ C #에서 기본 제공 스타일은 다음에서 선택 됩니다 `Device.Style
 label.Style = Device.Styles.TitleStyle;
 ```
 
-## <a name="accessibility"></a>액세스 가능성
+## <a name="accessibility"></a>접근성
 
 기본 제공 스타일은 접근성 기본 설정을 보다 쉽게 적용할 수 있도록 하기 위해 존재 합니다. 기본 제공 스타일을 사용 하는 경우 사용자가 접근성 기본 설정을 적절 하 게 설정 하면 글꼴 크기가 자동으로 증가 합니다.
 

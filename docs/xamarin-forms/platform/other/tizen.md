@@ -9,7 +9,7 @@ _Tizen .NET을 사용 하면 Tizen 응용 프로그램을 개발 하 여 Tv, 착
 
 Tizen .NET을 사용 하면 Xamarin.Forms 및 Tizen .net framework를 사용 하 여 .net 응용 프로그램을 빌드할 수 있습니다. Tizen .NET 플랫폼은 Samsung에서 지원 됩니다. Xamarin.Forms를 사용 하면 사용자 인터페이스를 쉽게 만들 수 있으며, TizenFX API는 최신 TV, 모바일, wearable 및 IoT 장치에 있는 하드웨어에 인터페이스를 제공 합니다. Tizen .NET에 대 한 자세한 내용은 [Tizen .Net 응용 프로그램 소개](https://developer.tizen.org/development/training/.net-application)를 참조 하세요.
 
-## <a name="get-started"></a>시작하기
+## <a name="get-started"></a>시작
 
 Tizen .NET 응용 프로그램 개발을 시작 하려면 먼저 개발 환경을 설정 해야 합니다. 자세한 내용은 [Tizen에 대 한 Visual Studio Tools 설치](https://developer.tizen.org/development/visual-studio-tools-tizen/installing-visual-studio-tools-tizen)를 참조 하세요.
 

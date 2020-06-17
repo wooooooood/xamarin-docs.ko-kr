@@ -5,7 +5,7 @@ assetid: 7B315BEC-7A35-48F4-A9C7-EF40255E95FF: xamarin-forms author: davidbritch
 
 # <a name="xaml-namespace-recommended-prefixes-in-xamarinforms"></a>XAML 네임 스페이스 권장 접두사Xamarin.Forms
 
-`XmlnsPrefixAttribute`클래스를 사용 하 여 xaml 사용을 위해 xaml 네임 스페이스와 연결할 권장 접두사를 지정할 수 있습니다. 접두사는 xaml로의 개체 트리 serialization을 지원 하거나 XAML 편집 기능이 있는 디자인 환경과 상호 작용할 때 유용 합니다. 예를 들면 다음과 같습니다.
+`XmlnsPrefixAttribute`클래스를 사용 하 여 xaml 사용을 위해 xaml 네임 스페이스와 연결할 권장 접두사를 지정할 수 있습니다. 접두사는 xaml로의 개체 트리 serialization을 지원 하거나 XAML 편집 기능이 있는 디자인 환경과 상호 작용할 때 유용 합니다. 다음은 그 예입니다.
 
 - XAML 텍스트 편집기는를 `XmlnsPrefixAttribute` 초기 xaml 네임 스페이스 매핑에 대 한 힌트로 사용할 수 있습니다 `xmlns` .
 - XAML 디자인 환경에서는를 사용 `XmlnsPrefixAttribute` 하 여 개체를 도구 상자에서 시각적 디자인 화면으로 끌어 올 때 xaml에 매핑을 추가할 수 있습니다.

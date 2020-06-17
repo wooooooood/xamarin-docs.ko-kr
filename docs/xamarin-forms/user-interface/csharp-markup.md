@@ -217,7 +217,7 @@ new Label { Text = "Tap Me" }
 
 제스처 인식기는 이기 때문에 `BindableObject` `Bind` 초기화할 때 및 확장 메서드를 사용할 수 있습니다 `BindCommand` . 또한 확장 메서드를 사용 하 여 사용자 지정 제스처 인식기 형식을 초기화할 수 있습니다 `Gesture<TGestureElement, TGestureRecognizer>` .
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>레이아웃
 
 C # 태그에는 레이아웃의 위치 지정 및 뷰의 콘텐츠를 지 원하는 일련의 레이아웃 확장 메서드가 포함 되어 있습니다.
 

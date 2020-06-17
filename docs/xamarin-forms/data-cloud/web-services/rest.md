@@ -40,7 +40,7 @@ REST의 단순성은 모바일 응용 프로그램에서 웹 서비스에 액세
 
 REST 서비스는 ASP.NET Core를 사용 하 여 작성 되며 다음 작업을 제공 합니다.
 
-|연산|HTTP 메서드|상대 URI|매개 변수|
+|작업(Operation)|HTTP 메서드|상대 URI|매개 변수|
 |--- |--- |--- |--- |
 |할 일 항목의 목록 가져오기|GET|/api/todoitems/|
 |새 할 일 항목 만들기|POST|/api/todoitems/|JSON 형식의 TodoItem|

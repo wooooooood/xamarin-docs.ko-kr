@@ -136,7 +136,7 @@ public partial class LightenAndDarkenPage : ContentPage
 
 다음 표에서는 모든 분리 가능한 blend 모드를 보여 줍니다. 두 번째 열은 변경 내용을 생성 하지 않는 원본 색을 표시 합니다.
 
-| Blend 모드   | 변경 내용 없음 | 연산 |
+| Blend 모드   | 변경 내용 없음 | 작업(Operation) |
 | ------------ | --------- | --------- |
 | `Plus`       | 검정     | 색 추가: Sc + Dc |
 | `Modulate`   | 흰색     | 색을 곱하여 어둡게: Sc · Dc | 

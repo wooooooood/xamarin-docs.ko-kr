@@ -222,7 +222,7 @@ public static TodoItemDatabase Database
 }
 ```
 
-이 속성을 사용 하면 Xamarin.Forms 구성 요소가 `Database` 사용자 상호 작용에 대 한 응답으로 인스턴스에서 데이터 검색 및 조작 메서드를 호출할 수 있습니다. 예를 들면 다음과 같습니다.
+이 속성을 사용 하면 Xamarin.Forms 구성 요소가 `Database` 사용자 상호 작용에 대 한 응답으로 인스턴스에서 데이터 검색 및 조작 메서드를 호출할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 var saveButton = new Button { Text = "Save" };

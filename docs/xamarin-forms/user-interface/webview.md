@@ -11,7 +11,7 @@ assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5: xamarin-forms author: davidbritch
 
 ![앱 브라우저에서](webview-images/in-app-browser.png)
 
-## <a name="content"></a>Content
+## <a name="content"></a>콘텐츠
 
 `WebView`는 다음과 같은 콘텐츠 형식을 지원 합니다.
 
@@ -103,7 +103,7 @@ browser.Source = htmlSource;
 
 ### <a name="local-html-content"></a>로컬 HTML 콘텐츠
 
-웹 보기는 앱 내에 포함 된 HTML, CSS 및 JavaScript의 콘텐츠를 표시할 수 있습니다. 예를 들면 다음과 같습니다.
+웹 보기는 앱 내에 포함 된 HTML, CSS 및 JavaScript의 콘텐츠를 표시할 수 있습니다. 다음은 그 예입니다.
 
 ```html
 <html>
@@ -229,7 +229,7 @@ using (var streamReader = new StreamReader (assetManager.Open ("local.html")))
 }
 ```
 
-#### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
+#### <a name="universal-windows-platform"></a>UWP
 
 UWP (유니버설 Windows 플랫폼) 프로젝트에서 빌드 작업을 *내용*으로 설정 하 여 프로젝트 루트에 HTML, CSS 및 이미지를 넣습니다.
 
@@ -315,7 +315,7 @@ public partial class InAppBrowserXaml : ContentPage
 }
 ```
 
-정말 간단하죠.
+간단하죠.
 
 ![웹 보기 탐색 단추](webview-images/in-app-browser.png)
 
@@ -341,7 +341,7 @@ public partial class InAppBrowserXaml : ContentPage
 - `Source`– 탐색을 수행한 요소입니다.
 - `Url`– 탐색 대상입니다.
 
-로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 되는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) . 예를 들면 다음과 같습니다.
+로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 되는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) . 다음은 그 예입니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -416,7 +416,7 @@ webView.Reload();
 - **Android** &ndash; `INTERNET`네트워크에서 콘텐츠를 표시 하는 경우에만 필요 합니다. 로컬 콘텐츠에는 특별 한 권한이 필요 하지 않습니다.
 - **iOS** &ndash; 특별 한 권한이 필요 하지 않습니다.
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>레이아웃
 
 대부분의 다른 Xamarin.Forms 뷰와 달리에서는 `WebView` `HeightRequest` `WidthRequest` stacklayout 또는 RelativeLayout에 포함 된 경우 및가 지정 되어야 합니다. 이러한 속성을 지정 하지 않으면 `WebView` 가 렌더링 되지 않습니다.
 

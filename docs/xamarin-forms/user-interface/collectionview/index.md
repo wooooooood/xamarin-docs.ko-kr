@@ -9,7 +9,7 @@ assetid: 2BC9B223-2D5C-4B09-849C-B9D578954557: xamarin-forms author: davidbritch
 
 는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 다른 레이아웃 사양을 사용 하 여 데이터 목록을 표시 하기 위한 유연 하 고 성능이 뛰어난 뷰입니다.
 
-## <a name="data"></a>[데이터](populate-data.md)
+## <a name="data"></a>[Data](populate-data.md)
 
 는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 속성을를 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 구현 하는 컬렉션으로 설정 하 여 데이터로 채워집니다 `IEnumerable` . 속성을로 설정 하 여 목록에 있는 각 항목의 모양을 정의할 수 있습니다 [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) .
 

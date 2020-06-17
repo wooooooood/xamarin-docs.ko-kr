@@ -3,7 +3,7 @@
 assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5: xamarin-forms author: davidbritch: dabritch:: 12/04/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
 
-# <a name="xamarinforms-button"></a>Xamarin.Forms단추만
+# <a name="xamarinforms-button"></a>Xamarin.Forms 단추
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 
@@ -755,18 +755,18 @@ IOS 프로젝트의 **Resources** 폴더에는이 이미지의 세 가지 크기
 
 Android 프로젝트의 경우 비트맵은 모두 동일한 이름을 갖지만 **Resources** 폴더의 다른 하위 폴더에 저장 됩니다.
 
-- **/Resources/drawable-hdpi/MonkeyFace.png** 로 저장 된 72 픽셀 사각형 비트맵
-- **/Resources/drawable-xhdpi/MonkeyFace.png** 로 저장 된 96 픽셀 사각형 비트맵
-- **/Resources/drawable-xxhdpi/MonkeyFace.png** 로 저장 된 144 픽셀 사각형 비트맵
-- **/Resources/drawable-xxxhdpi/MonkeyFace.png** 로 저장 된 192 픽셀 사각형 비트맵
+- /Resources/drawable-hdpi/로 저장 된 72 픽셀 사각형 비트맵 **MonkeyFace.png**
+- /Resources/drawable-xhdpi/로 저장 된 96 픽셀 사각형 비트맵 **MonkeyFace.png**
+- /Resources/drawable-xxhdpi/로 저장 된 144 픽셀 사각형 비트맵 **MonkeyFace.png**
+- /Resources/drawable-xxxhdpi/로 저장 된 192 픽셀 사각형 비트맵 **MonkeyFace.png**
 
 여기에는 **Androidresource**의 **빌드 작업이** 제공 되었습니다.
 
 UWP 프로젝트에서 비트맵은 프로젝트의 어디에 나 저장 될 수 있지만 일반적으로 사용자 지정 폴더 또는 **자산** 기존 폴더에 저장 됩니다. UWP 프로젝트는 다음 비트맵을 포함 합니다.
 
-- **/Assets/MonkeyFace.scale-100.png** 로 저장 된 48 픽셀 사각형 비트맵
-- **/Assets/MonkeyFace.scale-200.png** 로 저장 된 96 픽셀 사각형 비트맵
-- **/Assets/MonkeyFace.scale-400.png** 로 저장 된 192 픽셀 사각형 비트맵
+- /Assets/로 저장 된 48 픽셀 사각형 비트맵 **MonkeyFace.scale-100.png**
+- /Assets/로 저장 된 96 픽셀 사각형 비트맵 **MonkeyFace.scale-200.png**
+- /Assets/로 저장 된 192 픽셀 사각형 비트맵 **MonkeyFace.scale-400.png**
 
 **콘텐츠의** **빌드 작업이** 모두 제공 되었습니다.
 

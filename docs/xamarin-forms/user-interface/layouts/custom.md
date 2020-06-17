@@ -15,7 +15,7 @@ _Xamarin은 5 가지 레이아웃 클래스 (StackLayout, AbsoluteLayout, Relati
 
 Xamarin.Forms사용자 지정 레이아웃을 만들려면 레이아웃 및 무효화 주기를 충분히 이해 해야 합니다. 이러한 주기는 이제 설명 되어 있습니다.
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>레이아웃
 
 레이아웃은 페이지를 사용 하 여 시각적 트리 위쪽에서 시작 하 고 시각적 트리의 모든 분기를 진행 하 여 페이지의 모든 시각적 요소를 포함 합니다. 다른 요소에 대 한 부모인 요소는 자신을 기준으로 자식 항목의 크기를 조정 하 고 위치를 지정 해야 합니다.
 
@@ -401,6 +401,6 @@ async Task<ImageList> GetImageListAsync()
 - [WrapLayout (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [사용자 지정 레이아웃](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
 - [에서 사용자 지정 레이아웃 만들기 Xamarin.Forms (비디오)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
-- [Layout\<T>](xref:Xamarin.Forms.Layout`1)
+- [레이아웃\<T>](xref:Xamarin.Forms.Layout`1)
 - [레이아웃](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)

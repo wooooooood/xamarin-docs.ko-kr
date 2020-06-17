@@ -41,7 +41,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 | [`Image`](xref:Xamarin.Forms.Image)비트맵을 표시 합니다. 비트맵은 웹을 통해 다운로드 하거나, 공용 프로젝트 또는 플랫폼 프로젝트에 리소스로 포함 하거나, .NET 개체를 사용 하 여 만들 수 있습니다 `Stream` .<br /><br />[API 설명서](xref:Xamarin.Forms.Image)  /  [가이드](~/xamarin-forms/user-interface/images.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages) | [![이미지 예제](views-images/Image.png "이미지 예제")](views-images/Image-Large.png#lightbox "이미지 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageDemoPage.xaml) |
 |     |     |
 
-### <a name="map"></a>맵
+### <a name="map"></a>지도
 
 |     |     |
 | --- | --- |

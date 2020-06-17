@@ -20,7 +20,7 @@ ms. 항목: 문제 해결: assetid: 160FBE13-4B4F-9248-A5CBE58FDD7F: davidbritch
 
     예제: `<package id="Xamarin.Forms" version="1.5.1.6471" />` -> `<package id="Xamarin.Forms" version="2.1.0.6529" />`
 
-4. 기본 [다중 프로젝트 템플릿 파일](https://msdn.microsoft.com/library/ms185308.aspx) ()의 "name" 요소를 변경 `Xamarin.Forms.PCL.vstemplate` 하 여 고유 하 게 만듭니다. 예를 들면 다음과 같습니다.
+4. 기본 [다중 프로젝트 템플릿 파일](https://msdn.microsoft.com/library/ms185308.aspx) ()의 "name" 요소를 변경 `Xamarin.Forms.PCL.vstemplate` 하 여 고유 하 게 만듭니다. 다음은 그 예입니다.
 
     > `<Name>Blank App (Xamarin.Forms Portable) - 2.1.0.6529</Name>`
 

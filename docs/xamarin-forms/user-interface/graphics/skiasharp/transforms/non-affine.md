@@ -381,7 +381,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-몇 가지 예제는 다음과 같습니다.
+예를 들어 다음과 같은 노래를 선택할 수 있다.
 
 [![](non-affine-images/tapertransform-small.png "Triple screenshot of the Taper Transform page")](non-affine-images/tapertransform-large.png#lightbox "Triple screenshot of the Taper Transform page")
 

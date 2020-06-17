@@ -41,7 +41,7 @@ public interface INavigationService
 
 이 인터페이스는 구현 하는 클래스에서 다음 메서드를 제공 하도록 지정 합니다.
 
-|방법|목적|
+|방법|용도|
 |--- |--- |
 |`InitializeAsync`|앱이 시작 될 때 두 페이지 중 하나를 탐색 합니다.|
 |`NavigateToAsync`|지정 된 페이지에 대 한 계층적 탐색을 수행 합니다.|

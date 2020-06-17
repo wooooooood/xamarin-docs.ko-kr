@@ -13,7 +13,7 @@ assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F: xamarin-forms author: davidbritch
 
 - [**페이지**](pages.md)
 - [**레이아웃**](layouts.md)
-- [**보기**](views.md)
+- [**뷰**](views.md)
 - [**셀**](cells.md)
 
 Xamarin.Forms페이지는 일반적으로 전체 화면을 차지 합니다. 이 페이지에는 일반적으로 뷰 및 다른 레이아웃이 포함 된 레이아웃이 포함 되어 있습니다. 셀은 및와의 연결에 사용 되는 특수 구성 요소 [`TableView`](views.md#tableview) [`ListView`](views.md#listview) 입니다. 에서 사용자 인터페이스를 빌드하는 데 일반적으로 사용 되는 형식 계층 구조를 보여 주는 클래스 다이어그램은 Xamarin.Forms [ Xamarin.Forms Controls 클래스 계층 구조](~/xamarin-forms/internals/class-hierarchy.md)에서 찾을 수 있습니다.

@@ -3,7 +3,7 @@
 assetid: 17296F14-640D-484B-A24C-A4E9B7013E4F: xamarin-forms ms. custom: xamu-video author: davidbritch: dabritch: ms. date: 02/21/2020 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
-# <a name="xamarinforms-visual-state-manager"></a>Xamarin.Forms 시각적 개체 상태 관리자
+# <a name="xamarinforms-visual-state-manager"></a>Xamarin.Forms Visual State Manager
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 

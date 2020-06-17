@@ -199,4 +199,4 @@ radioButton.CheckedChanged += (sender, e) =>
 
 - [RadioButton 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
 - [Xamarin.Forms 단추](~/xamarin-forms/user-interface/button.md)
-- [Xamarin.Forms 시각적 개체 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

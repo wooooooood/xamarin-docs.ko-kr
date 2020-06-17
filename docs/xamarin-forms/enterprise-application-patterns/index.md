@@ -61,11 +61,11 @@ Xamarin.FormsASP.NET MVC 웹 응용 프로그램과 통신 하는 앱에 인증 
 
 많은 최신 웹 기반 솔루션은 웹 서버에서 호스트 되는 웹 서비스를 사용 하 여 원격 클라이언트 응용 프로그램에 대 한 기능을 제공 합니다. 웹 서비스에서 노출 하는 작업은 web API를 구성 하 고, 클라이언트 앱은 API에서 노출 하는 데이터 또는 작업이 구현 되는 방식을 몰라도 웹 API를 활용할 수 있어야 합니다.
 
-## <a name="unit-testing"></a>[유닛 테스트](unit-testing.md)
+## <a name="unit-testing"></a>[단위 테스트](unit-testing.md)
 
 MVVM 응용 프로그램에서 모델을 테스트 하 고 모델을 확인 하는 것은 다른 클래스를 테스트 하는 것과 동일 하며, 동일한 도구와 기법을 사용할 수 있습니다. 그러나 모델 클래스를 모델링 하 고 보는 데 일반적으로 사용할 수 있는 몇 가지 패턴이 있습니다. 이러한 패턴은 특정 유닛 테스트 기법을 활용 합니다.
 
-## <a name="feedback"></a>피드백
+## <a name="feedback"></a>사용자 의견
 
 이 프로젝트에는 질문을 게시 하 고 피드백을 제공할 수 있는 커뮤니티 사이트가 있습니다. 커뮤니티 사이트는 [GitHub](https://github.com/dotnet-architecture/eShopOnContainers)에 있습니다. 또는 전자책에 대 한 피드백을에 전자 메일로 보낼 수 있습니다 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com) .
 

@@ -20,7 +20,7 @@ assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38: xamarin-forms author: davidbritch
   - **[비례 값](#proportional-values)** &ndash; 비례 값의 작동 방식을 이해 합니다.
     - **[절대값](#absolute-values)** &ndash; 절대값이 어떻게 작동 하는지 이해 합니다.
 
-## <a name="purpose"></a>목적
+## <a name="purpose"></a>용도
 
 의 위치 지정 모델 때문에 `AbsoluteLayout` 레이아웃을 사용 하면 레이아웃의 어느 쪽 이나 가운데 맞춤을 사용 하 여 요소를 쉽게 배치할 수 있습니다. 비례 크기와 위치를 사용 하 여의 요소는 `AbsoluteLayout` 보기 크기에 맞게 자동으로 확장 될 수 있습니다. 위치만 크기를 조정 하지 않아야 하는 항목의 경우에는 절대값 및 비례 값을 혼합할 수 있습니다.
 

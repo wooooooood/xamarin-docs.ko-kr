@@ -61,7 +61,7 @@ contentView.Content = textView.ToView();
 
 이 예제에서는 `stackLayout` 및 `contentView` 인스턴스가 XAML 또는 c #에서 이전에 생성 된 것으로 가정 합니다.
 
-### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
+### <a name="universal-windows-platform"></a>UWP
 
 다음 코드 예제에서는 및에를 추가 하는 방법을 보여 줍니다 `TextBlock` [`StackLayout`](xref:Xamarin.Forms.StackLayout) [`ContentView`](xref:Xamarin.Forms.ContentView) .
 
@@ -218,7 +218,7 @@ stackLayout.Children.Add (customControl, FixSize);
 
 ![](code-images/android-good-measurement.png "Android CustomControl with Custom GetDesiredSize Delegate")
 
-### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
+### <a name="universal-windows-platform"></a>UWP
 
 다음 코드 예제에서는 `CustomControl` 에서 상속 되는 클래스를 보여 줍니다 `Panel` .
 
