@@ -1,21 +1,21 @@
 ---
-title: Xamarin.Forms 모달 페이지
-description: Xamarin.Forms는 모달 페이지를 지원합니다. 모달 페이지는 사용자가 작업이 완료되거나 취소될 때까지 다른 부분으로 이동할 수 없는 자체 포함된 작업을 완료하도록 권장합니다. 이 문서에서는 모달 페이지를 탐색하는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 모달 페이지” description: “Xamarin.Forms는 모달 페이지를 지원합니다.'
+description: '모달 페이지는 사용자가 작업이 완료되거나 취소될 때까지 다른 부분으로 이동할 수 없는 자체 포함된 작업을 완료하도록 권장합니다. 이 문서에서는 모달 페이지를 탐색하는 방법을 설명합니다.” ms.prod: xamarin ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4f6547049f2801e5d15115c0ae80af9a07034731
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: aecab26efaed9815ec6916877b5f42297821582c
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137828"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569610"
 ---
 # <a name="xamarinforms-modal-pages"></a>Xamarin.Forms 모달 페이지
 
@@ -25,8 +25,8 @@ _Xamarin.Forms는 모달 페이지를 지원합니다. 모달 페이지는 사�
 
 이 문서에서는 다음 토픽을 설명합니다.
 
-- [탐색 수행](#Performing_Navigation) – 모달 스택에 페이지를 푸시하고, 모달 스택에서 페이지를 팝하고, 뒤로 단추를 사용하지 않도록 설정하고, 페이지 전환에 애니메이션을 적용합니다.
-- [탐색할 때 데이터를 전달](#Passing_Data_when_Navigating) – 페이지 생성자 및 `BindingContext`를 통해 데이터를 전달합니다.
+- [탐색 수행](#performing-navigation) – 모달 스택에 페이지를 푸시하고, 모달 스택에서 페이지를 팝하고, 뒤로 단추를 사용하지 않도록 설정하고, 페이지 전환에 애니메이션을 적용합니다.
+- [탐색할 때 데이터를 전달](#passing-data-when-navigating) – 페이지 생성자 및 `BindingContext`를 통해 데이터를 전달합니다.
 
 ## <a name="overview"></a>개요
 
@@ -38,18 +38,14 @@ _Xamarin.Forms는 모달 페이지를 지원합니다. 모달 페이지는 사�
 
 ![](modal-images/popping.png "Popping a Page from the Modal Stack")
 
-<a name="Performing_Navigation" />
-
 ## <a name="performing-navigation"></a>탐색 수행
 
-모달 탐색 메서드는 모든 [`Page`](xref:Xamarin.Forms.Page) 파생 형식의 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성에 의해 노출됩니다. 이러한 메서드는 모달 스택으로 [모달 페이지를 푸시](#Pushing_Pages_to_the_Modal_Stack)하고, 모달 스택에서 [모달 페이지를 팝](#Popping_Pages_from_the_Modal_Stack)하는 기능을 제공합니다.
+모달 탐색 메서드는 모든 [`Page`](xref:Xamarin.Forms.Page) 파생 형식의 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성에 의해 노출됩니다. 이러한 메서드는 모달 스택으로 [모달 페이지를 푸시](#pushing-pages-to-the-modal-stack)하고, 모달 스택에서 [모달 페이지를 팝](#popping-pages-from-the-modal-stack)하는 기능을 제공합니다.
 
 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성은 또한 모달 스택의 모달 페이지를 얻을 수 있는 [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) 속성을 노출합니다. 그러나 모달 스택 조작을 수행하거나 모달 탐색에서 루트 페이지에 빼(pop)는 개념은 없습니다. 이러한 작업이 기본 플랫폼에서 보편적으로 지원되지 않기 때문입니다.
 
 > [!NOTE]
 > [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 인스턴스는 모달 페이지 탐색을 수행하는 데 필요하지 않습니다.
-
-<a name="Pushing_Pages_to_the_Modal_Stack" />
 
 ### <a name="pushing-pages-to-the-modal-stack"></a>페이지를 모달 스택에 푸시
 
@@ -80,8 +76,6 @@ async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
 
 > [!NOTE]
 > [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) 및 [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) 재정의에 대한 호출을 페이지 탐색의 보장된 표시로 다룰 수는 없습니다. 예를 들어 iOS에서 `OnDisappearing` 재정의는 애플리케이션이 종료될 때 활성 페이지에 호출됩니다.
-
-<a name="Popping_Pages_from_the_Modal_Stack" />
 
 ### <a name="popping-pages-from-the-modal-stack"></a>모달 스택에서 페이지 팝
 
@@ -127,8 +121,6 @@ async void OnDismissButtonClicked (object sender, EventArgs args)
 ```
 
 기본 플랫폼에서 지원되는 경우 매개 변수를 `true`로 설정하면 페이지 전환 애니메이션을 사용하도록 설정되고, `boolean` 매개 변수를 `false`로 설정하면 페이지 전환 애니메이션을 사용하지 않도록 설정됩니다. 그러나 이 매개 변수가 없는 푸시 및 팝 메서드는 기본적으로 애니메이션을 사용하도록 설정합니다.
-
-<a name="Passing_Data_when_Navigating" />
 
 ## <a name="passing-data-when-navigating"></a>탐색 시 데이터 전달
 

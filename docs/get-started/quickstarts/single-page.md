@@ -1,22 +1,22 @@
 ---
-title: 단일 페이지 Xamarin.Forms 애플리케이션 만들기
-description: 이 문서에서는 노트를 입력하고 디바이스 스토리지에 유지할 수 있는 단일 페이지 플랫폼 간 Xamarin.Forms 애플리케이션을 만드는 방법을 설명합니다.
-zone_pivot_groups: ''
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “단일 페이지 Xamarin.Forms 애플리케이션 만들기” description: “이 문서에서는 노트를 입력하고 디바이스 스토리지에 유지할 수 있는 단일 페이지 플랫폼 간 Xamarin.Forms 애플리케이션을 만드는 방법을 설명합니다.”'
+description: 'zone_pivot_groups: platform-dev16 ms.topic: quickstart ms.prod: xamarin ms.assetid: E8CF05B1-54B9-428B-8518-D068837BD61E ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/01/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+zone_pivot_groups: platform-dev16
+ms.topic: quickstart
+ms.prod: xamarin
+ms.assetid: E8CF05B1-54B9-428B-8518-D068837BD61E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: b9a3017fc8188d3669b64d95c968b2d0a5325358
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84136073"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>단일 페이지 Xamarin.Forms 애플리케이션 만들기

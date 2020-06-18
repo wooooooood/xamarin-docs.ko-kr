@@ -1,21 +1,21 @@
 ---
-title: ''
-description: Xamarin.Forms 항목 컨트롤을 사용하면 한 줄 텍스트를 편집할 수 있습니다. 이 문서에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 항목 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “항목 사용자 지정” description: “Xamarin.Forms 항목 컨트롤을 사용하면 한 줄 텍스트를 편집할 수 있습니다.'
+description: '이 문서에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 항목 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다.” ms.prod: xamarin ms.assetid: 7B5DD10D-0411-424F-88D8-8A474DF16D8D ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/26/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 7B5DD10D-0411-424F-88D8-8A474DF16D8D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 61bd66fd25b7aea3e5be346f79e63d410164b002
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: d28a9079d27310dde0e5ea5bf80c83895bbcf1d4
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138985"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571573"
 ---
 # <a name="customizing-an-entry"></a>항목 사용자 지정
 
@@ -31,16 +31,14 @@ Xamarin.Forms 항목 컨트롤을 사용하면 한 줄 텍스트를 편집할 �
 
 렌더링 프로세스는 각 플랫폼에서 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤에 대한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현하는 데 활용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
-1. Xamarin.Forms 사용자 지정 컨트롤을 [만듭니다](#Creating_the_Custom_Entry_Control).
-1. Xamarin.Forms에서 사용자 지정 컨트롤을 [사용합니다](#Consuming_the_Custom_Control).
-1. 각 플랫폼의 컨트롤에 대한 사용자 지정 렌더러를 [만듭니다](#Creating_the_Custom_Renderer_on_each_Platform).
+1. Xamarin.Forms 사용자 지정 컨트롤을 [만듭니다](#creating-the-custom-entry-control).
+1. Xamarin.Forms에서 사용자 지정 컨트롤을 [사용합니다](#consuming-the-custom-control).
+1. 각 플랫폼의 컨트롤에 대한 사용자 지정 렌더러를 [만듭니다](#creating-the-custom-renderer-on-each-platform).
 
 이제 각 플랫폼에 서로 다른 배경색을 가진 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤을 구현하기 위해 각 항목을 차례로 설명합니다.
 
 > [!IMPORTANT]
 > 이 문서에서는 간단한 사용자 지정 렌더러를 만드는 방법을 설명합니다. 그러나 각 플랫폼에 서로 다른 배경색을 가진 `Entry`를 구현하기 위해 사용자 지정 렌더러를 만들 필요는 없습니다. 플랫폼별 값을 제공하기 위해 [`Device`](xref:Xamarin.Forms.Device) 클래스 또는 `OnPlatform` 태그 확장을 사용하면 더 쉽게 수행할 수 있습니다. 자세한 내용은 [플랫폼별 값 제공](~/xamarin-forms/platform/device.md#provide-platform-specific-values) 및 [OnPlatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension)을 참조하세요.
-
-<a name="Creating_the_Custom_Entry_Control" />
 
 ## <a name="creating-the-custom-entry-control"></a>사용자 지정 항목 컨트롤 만들기
 
@@ -53,8 +51,6 @@ public class MyEntry : Entry
 ```
 
 `MyEntry` 컨트롤은 .NET Standard 라이브러리 프로젝트에서 만들어지며 단순히 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤입니다. 컨트롤의 사용자 지정은 사용자 지정 렌더러에서 수행되므로 `MyEntry` 컨트롤에서 추가 구현이 필요하지 않습니다.
-
-<a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>사용자 지정 컨트롤 사용
 
@@ -98,8 +94,6 @@ public class MainPage : ContentPage
 이 코드는 페이지에 가로 및 세로 모두 중앙에 있는 [`Label`](xref:Xamarin.Forms.Label) 및 `MyEntry` 컨트롤을 표시할 새 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 개체를 인스턴스화합니다.
 
 이제 각 애플리케이션 프로젝트에 사용자 지정 렌더러를 추가하여 각 플랫폼에서 컨트롤의 모양을 사용자 지정할 수 있습니다.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>각 플랫폼에서 사용자 지정 렌더러 만들기
 

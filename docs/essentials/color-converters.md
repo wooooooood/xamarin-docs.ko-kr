@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials 색 변환기” description: “Xamarin.Essentials의 ColorConverters 클래스는 System.Drawing.Color와 함께 작동하는 몇 가지 도우미 메서드와 확장 메서드를 제공합니다.”
-ms.assetid: B10428D6-89E2-4714-A39F-7E6E626391B2 author: jamesmontemagno ms.author: jamont ms.date: 01/06/2020 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Xamarin.Essentials 색 변환기
+description: Xamarin.Essentials의 ColorConverters 클래스는 System.Drawing.Color와 함께 작동하는 몇 가지 도우미 메서드와 확장 메서드를 제공합니다.
+ms.assetid: B10428D6-89E2-4714-A39F-7E6E626391B2
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/06/2020
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ff6a5bed600f45dcd48867596a7fc8aa45decb82
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802438"
 ---
-
 # <a name="xamarinessentials-color-converters"></a>Xamarin.Essentials: 색 변환기
 
 Xamarin.Essentials의 **ColorConverters** 클래스는 System.Drawing.Color에 대한 몇 가지 도우미 메서드를 제공합니다.
@@ -70,9 +83,9 @@ var system = platform.ToSystemColor();
 
 ## <a name="api"></a>API
 
-- [색 변환기 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/ColorConverters.shared.cs)
+- [색 변환기 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Types/ColorConverters.shared.cs)
 - [색 변환기 API 설명서](xref:Xamarin.Essentials.ColorConverters)
-- [색 확장 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/ColorConverters.shared.cs)
+- [색 확장 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Types/ColorConverters.shared.cs)
 - [색 확장 API 설명서](xref:Xamarin.Essentials.ColorExtensions)
 
 ## <a name="related-video"></a>관련 동영상

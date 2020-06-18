@@ -1,20 +1,20 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “이동 제스처 인식기 추가” description: “이 문서에서는 이미지 콘텐츠가 이미지 차원보다 작게 뷰포트에 표시되는 경우 모든 이미지 콘텐츠를 볼 수 있도록 이동 제스처를 사용하여 이미지를 가로 및 세로로 이동하는 방법을 설명합니다.”'
+description: 'ms.prod: xamarin ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/21/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/21/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 53122991811c06360e8d015a753096cb35c1cca0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84137633"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>이동 제스처 인식기 추가

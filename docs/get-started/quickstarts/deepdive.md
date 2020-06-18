@@ -1,23 +1,23 @@
 ---
-title: Xamarin.Forms 빠른 시작 심층 분석
-description: 이 문서에서는 Xamarin.Forms를 사용하여 애플리케이션 개발의 기본적인 사항을 검사합니다. Xamarin.Forms 애플리케이션 분석, 아키텍처 및 애플리케이션 기본 사항, 사용자 인터페이스에 대해 다루었습니다.
-zone_pivot_groups: ''
-ms.topic: ''
-ms.prod: ''
-ms.custom: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 빠른 시작 심층 분석” description: “이 문서에서는 Xamarin.Forms를 사용하여 애플리케이션 개발의 기본적인 사항을 검사합니다.'
+description: 'Xamarin.Forms 애플리케이션 분석, 아키텍처 및 애플리케이션 기본 사항, 사용자 인터페이스에 대해 다루었습니다.” zone_pivot_groups: platform ms.topic: quickstart ms.prod: xamarin ms.custom: video ms.assetid: 7B2340A1-6883-41D8-860C-0BB6C4E0C316 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/27/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+zone_pivot_groups: platform
+ms.topic: quickstart
+ms.prod: xamarin
+ms.custom: video
+ms.assetid: 7B2340A1-6883-41D8-860C-0BB6C4E0C316
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 1bfb76f71a2ac9d8bc9ae84152501909000b9623
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84132524"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.Forms 빠른 시작 심층 분석

@@ -1,21 +1,21 @@
 ---
-title: Xamarin.Forms 회전식 페이지
-description: Xamarin.Forms CarouselPage는 사용자가 옆으로 살짝 밀어서 갤러리와 같은 콘텐츠 페이지를 탐색할 수 있는 페이지입니다. 이 문서에서는 페이지의 컬렉션을 탐색 하려면 CarouselPage를 사용하는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 회전식 페이지” description: “Xamarin.Forms CarouselPage는 사용자가 옆으로 살짝 밀어서 갤러리와 같은 콘텐츠 페이지를 탐색할 수 있는 페이지입니다.'
+description: '이 문서에서는 페이지의 컬렉션을 탐색하기 위해 CarouselPage를 사용하는 방법을 설명합니다.” ms.prod: xamarin ms.assetid: 2D14FC9D-DF5F-427E-9006-2AAE61ECF8DC ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 2D14FC9D-DF5F-427E-9006-2AAE61ECF8DC
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4d0cebe98b66f3596e72624efed90e965b942bfc
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: 896f652d69bca0f186e53185926ee5c46d87fa7c
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137529"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570676"
 ---
 # <a name="xamarinforms-carousel-page"></a>Xamarin.Forms 회전식 페이지
 
@@ -51,15 +51,13 @@ Xamarin.Forms CarouselPage는 사용자가 옆으로 살짝 밀어서 갤러리�
 
 두 방법을 [`CarouselPage`](xref:Xamarin.Forms.CarouselPage)를 만드는 데 사용할 수 있습니다.
 
-- [`ContentPage`](xref:Xamarin.Forms.ContentPage) 자식 인스턴스의 컬렉션으로 `CarouselPage`를 [채웁니다](#Populating_a_CarouselPage_with_a_Page_Collection).
-- 컬렉션을 [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) 속성에 [할당](#Populating_a_CarouselPage_with_a_Template)하고 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)을 [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) 속성에 할당하여 컬렉션 개체에 대해 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스를 반환합니다.
+- [`ContentPage`](xref:Xamarin.Forms.ContentPage) 자식 인스턴스의 컬렉션으로 `CarouselPage`를 [채웁니다](#populate-a-carouselpage-with-a-page-collection).
+- 컬렉션을 [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) 속성에 [할당](#populate-a-carouselpage-with-a-template)하고 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)을 [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) 속성에 할당하여 컬렉션 개체에 대해 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스를 반환합니다.
 
 두 방법 모두를 사용하면 `CarouselPage`에는 표시될 다음 페이지로 이동하는 살짝 밀기 상호 작용을 통해 각 페이지가 차례로 표시됩니다.
 
 > [!NOTE]
 > [`CarouselPage`](xref:Xamarin.Forms.CarouselPage)는 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스 또는 `ContentPage` 파생물로만 채울 수 있습니다.
-
-<a name="Populating_a_CarouselPage_with_a_Page_Collection" />
 
 ### <a name="populate-a-carouselpage-with-a-page-collection"></a>페이지 컬렉션으로 CarouselPage 채우기
 
@@ -148,8 +146,6 @@ public class MainPageCS : CarouselPage
 ```
 
 각 [`ContentPage`](xref:Xamarin.Forms.ContentPage)는 특정 색상에 대해 [`Label`](xref:Xamarin.Forms.Label)을, 해당 색상에 대해 [`BoxView`](xref:Xamarin.Forms.BoxView)를 표시합니다.
-
-<a name="Populating_a_CarouselPage_with_a_Template" />
 
 ### <a name="populate-a-carouselpage-with-a-template"></a>템플릿으로 CarouselPage 채우기
 

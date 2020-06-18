@@ -1,21 +1,21 @@
 ---
-title: Xamarin.Forms 바인딩 경로
-description: 이 문서에서는 Xamarin.Forms 데이터 바인딩을 사용하여 바인딩 클래스의 경로 속성에서 하위 속성 및 컬렉션 멤버에 액세스하는 방법에 대해 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 바인딩 경로” description: “이 문서에서는 Xamarin.Forms 데이터 바인딩을 사용하여 바인딩 클래스의 경로 속성에서 하위 속성 및 컬렉션 멤버에 액세스하는 방법에 대해 설명합니다.”'
+description: 'ms.prod: xamarin ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/05/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0657f39d0584405ea1a6d7611ac789488817770f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: a0ac8a568c3e8c46fa7e53112461aa0bff5684ae
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139744"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570793"
 ---
 # <a name="xamarinforms-binding-path"></a>Xamarin.Forms 바인딩 경로
 
@@ -127,7 +127,7 @@ ms.locfileid: "84139744"
 </Label>
 ```
 
-XAML에서 생성자 인수를 지정하는 방법에 대한 자세한 내용은 [생성자 인수 전달](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments)을 참조하세요.
+XAML에서 생성자 인수를 지정하는 방법에 대한 자세한 내용은 [생성자 인수 전달](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments)을 참조하세요.
 
 마지막으로, 마지막 예제는 `StackLayout` 자식 중 하나를 참조하는 점을 제외하고 두 번째 예제와 비슷합니다.
 

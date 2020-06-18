@@ -1,22 +1,22 @@
 ---
-title: 다중 페이지 Xamarin.Forms 애플리케이션에서 탐색 수행
-description: ''
-zone_pivot_groups: ''
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “다중 페이지 Xamarin.Forms 애플리케이션에서 탐색 수행” description: “이 문서에서는 단일 노트 저장이 가능한 단일 페이지 애플리케이션을 여러 노트의 저장이 가능한 다중 페이지 애플리케이션으로 전환하는 방법을 설명합니다.”'
+description: 'zone_pivot_groups: platform ms.topic: quickstart ms.prod: xamarin ms.assetid: 9DC3B3D6-6CBC-4705-BE80-3D86A9E65F92 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/01/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+zone_pivot_groups: platform
+ms.topic: quickstart
+ms.prod: xamarin
+ms.assetid: 9DC3B3D6-6CBC-4705-BE80-3D86A9E65F92
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: b3616d0cf4804dfb37d4fe65034796c672dec828
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84127883"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>다중 페이지 Xamarin.Forms 애플리케이션에서 탐색 수행

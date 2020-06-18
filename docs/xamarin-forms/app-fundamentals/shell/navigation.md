@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Forms Shell 탐색
-description: Xamarin.Forms Shell 애플리케이션은 설정된 탐색 계층 구조를 따르지 않고도 애플리케이션의 모든 페이지로 이동을 허용하는 URI 기반 탐색 환경을 이용할 수 있습니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 셸 탐색” description: “Xamarin.Forms 셸 애플리케이션은 설정된 탐색 계층 구조를 따르지 않고도 애플리케이션의 모든 페이지로 이동을 허용하는 URI 기반 탐색 환경을 이용할 수 있습니다.”'
+description: 'ms.prod: xamarin ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/02/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: e67d49f300a8a98ec5685c33abf98f5b2ded08ed
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84132394"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Xamarin.Forms Shell 탐색

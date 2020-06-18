@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Forms 바인딩 값 변환기
-description: 이 문서에서는 값 변환기를 구현하여(바인딩 변환기 또는 바인딩 값 변환기라고도 함) Xamarin.Forms 데이터 바인딩 내의 값을 캐스팅하거나 변환하는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 바인딩 값 변환기” description: “이 문서에서는 값 변환기를 구현하여(바인딩 변환기 또는 바인딩 값 변환기라고도 함) Xamarin.Forms 데이터 바인딩 내의 값을 캐스팅하거나 변환하는 방법을 설명합니다.”'
+description: 'ms.prod: xamarin ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/05/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: e1a4faabc8f0703b497062a8c5d587221692dab7
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84139765"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Xamarin.Forms 바인딩 값 변환기

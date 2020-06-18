@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Forms Shell 수명 주기
-description: 셸 애플리케이션은 Xamarin.Forms 수명 주기를 기준으로 하며, Appearing 이벤트는 페이지가 화면에 표시되려고 할 때 발생하고, Disappearing 이벤트는 페이지가 화면에서 사라지려고 할 때 발생합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 셸 수명 주기” description: “셸 애플리케이션은 Xamarin.Forms 수명 주기를 기준으로 하며, Appearing 이벤트는 페이지가 화면에 표시되려고 할 때 발생하고, Disappearing 이벤트는 페이지가 화면에서 사라지려고 할 때 발생합니다.”'
+description: 'ms.prod: xamarin ms.assetid: 4E4EE50E-3BB4-441D-8355-CD9CD26ED1D0 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 07/25/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 4E4EE50E-3BB4-441D-8355-CD9CD26ED1D0
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 3a7a46187d861098b61f638a3fb460d890b081dd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84138725"
 ---
 # <a name="xamarinforms-shell-lifecycle"></a>Xamarin.Forms Shell 수명 주기

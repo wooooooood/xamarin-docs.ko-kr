@@ -1,19 +1,19 @@
 ---
-title: Xamarin.Essentials 시작하기
-description: Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 iOS, Android 또는 UWP 애플리케이션에서 작동하는 단일 플랫폼 간 API를 제공합니다.
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.custom: ''
-ms.date: ''
+title: 'title: “Xamarin.Essentials 시작” description: “Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 iOS, Android 또는 UWP 애플리케이션에서 작동하는 단일 플랫폼 간 API를 제공합니다.”'
+description: 'ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9 author: jamesmontemagno ms.author: jamont ms.custom: video ms.date: 05/11/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
+author: jamesmontemagno
+ms.author: jamont
+ms.custom: video
+ms.date: 05/11/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 0c0052b35475522ffb3634ebe22f69f66fe3b22b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84129313"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Xamarin.Essentials 시작하기

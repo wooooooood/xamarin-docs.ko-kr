@@ -1,18 +1,18 @@
 ---
-title: Xamarin.Essentials 플랫폼 및 기능 지원
-description: Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 iOS, Android 또는 UWP 애플리케이션에서 작동하는 단일 플랫폼 간 API를 제공합니다.
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Essentials 플랫폼 및 기능 지원” description: “Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 iOS, Android 또는 UWP 애플리케이션에서 작동하는 단일 플랫폼 간 API를 제공합니다.”'
+description: 'ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4 author: jamesmontemagno ms.author: jamont ms.date: 08/20/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 08/20/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: b052e03f3ca57229988a29b7d3f38f5fa7bb6f97
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84137178"
 ---
 # <a name="platform-support"></a>플랫폼 지원

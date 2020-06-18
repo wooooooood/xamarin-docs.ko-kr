@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Forms Shell 레이아웃
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 셸 레이아웃” description: “플라이아웃 후에 셸 애플리케이션에서 다음 탐색 수준은 아래쪽 탭 표시줄입니다.'
+description: '또는 애플리케이션에 대한 탐색 패턴은 아래쪽 탭에서 시작될 수 있으며 플라이아웃을 사용하지 않습니다. 두 경우 모두 아래쪽 탭에 둘 이상의 페이지가 포함되면 위쪽 탭으로 페이지를 탐색할 수 있습니다.” ms.prod: xamarin ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/06/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: fa49cdb7944e3ab942ccda611af906e2822b072a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84139960"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Xamarin.Forms Shell 탭

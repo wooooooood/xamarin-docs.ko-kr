@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Forms 이중 화면 플랫폼 도우미
-description: 이 가이드에서는 Xamarin.Forms DualScreenHelper 클래스를 사용하여 Surface Duo 및 Surface Neo와 같은 이중 화면 디바이스의 앱 환경을 최적화하는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 이중 화면 플랫폼 도우미” description: “이 가이드에서는 Xamarin.Forms DualScreenHelper 클래스를 사용하여 Surface Duo 및 Surface Neo와 같은 이중 화면 디바이스의 앱 환경을 최적화하는 방법을 설명합니다.”'
+description: 'ms.prod: xamarin ms.assetid: 5aa184c2-5611-427d-85c7-1c56486c3e1b ms.technology: xamarin-forms author: davidortinau ms.author: daortin ms.date: 02/08/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 5aa184c2-5611-427d-85c7-1c56486c3e1b
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: d9daf5a24c0dcfd07d529955c411259f4c1359df
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84138946"
 ---
 # <a name="xamarinforms-dual-screen-platform-helpers"></a>Xamarin.Forms 이중 화면 플랫폼 도우미

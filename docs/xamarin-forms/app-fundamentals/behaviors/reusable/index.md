@@ -1,20 +1,20 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “재사용 가능한 동작” description: “동작은 둘 이상의 애플리케이션에서 다시 사용할 수 있습니다.'
+description: '이 문서에서는 일반적으로 사용되는 기능을 수행하는 유용한 동작을 만드는 방법을 설명합니다.” ms.prod: xamarin ms.assetid: DC9AA512-3624-4EE6-AB5E-628EBA55D2DF ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/06/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: DC9AA512-3624-4EE6-AB5E-628EBA55D2DF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: a668a6272a7158de3594f6001cc552ff294cf1a3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84135748"
 ---
 # <a name="reusable-behaviors"></a>재사용 가능한 동작

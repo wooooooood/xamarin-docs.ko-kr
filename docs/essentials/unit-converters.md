@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials 단위 변환기” description: “Xamarin.Essentials의 UnitConverters 클래스는 Xamarin.Essentials를 사용할 때 개발자를 돕기 위한 여러 단위 변환기를 제공합니다.”
-ms.assetid: 35DE2704-E730-4337-9476-66CD53376943 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 01/06/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Xamarin.Essentials 단위 변환기
+description: Xamarin.Essentials의 UnitConverters 클래스는 Xamarin.Essentials를 사용할 때 개발자를 돕기 위한 여러 단위 변환기를 제공합니다.
+ms.assetid: 35DE2704-E730-4337-9476-66CD53376943
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 01/06/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 332762a83796fef24278c6685a29f7d31a10dadc
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801857"
 ---
-
 # <a name="xamarinessentials-unit-converters"></a>Xamarin.Essentials: 단위 변환기
 
 **UnitConverters** 클래스는 Xamarin.Essentials를 사용할 때 개발자를 돕기 위한 여러 단위 변환기를 제공합니다.
@@ -59,7 +72,7 @@ var celsius = UnitConverters.FahrenheitToCelsius(32.0);
 
 ## <a name="api"></a>API
 
-- [단위 변환기 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/UnitConverters.shared.cs)
+- [단위 변환기 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Types/UnitConverters.shared.cs)
 - [단위 변환기 API 설명서](xref:Xamarin.Essentials.UnitConverters)
 
 ## <a name="related-video"></a>관련 동영상

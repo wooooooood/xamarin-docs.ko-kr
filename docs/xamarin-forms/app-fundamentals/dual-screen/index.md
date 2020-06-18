@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Forms 이중 화면
-description: 이 가이드에서는 이중 화면 디바이스용 Xamarin.Forms 앱을 만드는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 이중 화면” description: “이 가이드에서는 이중 화면 디바이스용 Xamarin.Forms 앱을 만드는 방법을 설명합니다.”'
+description: 'ms.prod: xamarin ms.assetid: f9906e83-f8ae-48f9-997b-e1540b96ee8e ms.technology: xamarin-forms author: davidortinau ms.author: daortin ms.date: 02/08/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: f9906e83-f8ae-48f9-997b-e1540b96ee8e
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: aeaaeb732adaea45446d6baf833027801abf4d2a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84138907"
 ---
 # <a name="xamarinforms-dual-screen"></a>Xamarin.Forms 이중 화면

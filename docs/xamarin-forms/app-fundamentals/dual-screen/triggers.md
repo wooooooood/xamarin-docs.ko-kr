@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Forms 이중 화면 트리거
-description: 이 문서에서는 Xamarin.Forms 이중 화면 트리거를 사용하여 XAML에서 사용자 인터페이스 변경에 응답하는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 이중 화면 트리거” description: “이 문서에서는 Xamarin.Forms 이중 화면 트리거를 사용하여 XAML에서 사용자 인터페이스 변경에 응답하는 방법을 설명합니다.”'
+description: 'ms.prod: xamarin ms.assetid: 2181715D-3995-4E71-9A21-6B892F0B3B59 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 02/28/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 2181715D-3995-4E71-9A21-6B892F0B3B59
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: df10327b2ac12d2b119f1ab558d7f27e8c319507
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84131198"
 ---
 # <a name="xamarinforms-dual-screen-triggers"></a>Xamarin.Forms 이중 화면 트리거

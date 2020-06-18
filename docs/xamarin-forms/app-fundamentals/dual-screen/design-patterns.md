@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Forms 이중 화면 디자인 패턴
-description: 이 가이드에서는 Xamarin.Forms가 이중 화면 디바이스에 최적화된 다양한 디자인 패턴을 지원하는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 이중 화면 디자인 패턴” description: “이 가이드에서는 Xamarin.Forms가 이중 화면 디바이스에 최적화된 다양한 디자인 패턴을 지원하는 방법을 설명합니다.”'
+description: 'ms.prod: xamarin ms.assetid: 3176d792-6dba-4e00-b463-497c58678ee9 ms.technology: xamarin-forms author: davidortinau ms.author: daortin ms.date: 02/08/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 3176d792-6dba-4e00-b463-497c58678ee9
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 277fb67eeea465239d9340e755240288286d2359
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84138790"
 ---
 # <a name="xamarinforms-dual-screen-design-patterns"></a>Xamarin.Forms 이중 화면 디자인 패턴

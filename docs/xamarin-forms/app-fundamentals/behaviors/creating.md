@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Forms 동작 만들기
-description: Xamarin.Forms 동작은 Behavior 또는 Behavior<T> 클래스에서 파생되어 만들어집니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여 줍니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 동작 만들기” description: “Xamarin.Forms 동작은 Behavior 또는 Behavior<T> 클래스에서 파생되어 만들어집니다.'
+description: '이 문서에서는 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여 줍니다.” ms.prod: xamarin ms.assetid: 300C16FE-A7E0-445B-9099-8E93ABB6F73D ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/06/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 300C16FE-A7E0-445B-9099-8E93ABB6F73D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 67db30b5caadce75a41755530db2b245562d0304
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84135826"
 ---
 # <a name="create-xamarinforms-behaviors"></a>Xamarin.Forms 동작 만들기

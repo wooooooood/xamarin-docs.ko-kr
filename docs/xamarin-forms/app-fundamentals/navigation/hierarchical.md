@@ -1,21 +1,21 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “계층적 탐색” description: “이 문서에서는 NavigationPage 클래스를 사용하여 후입선출(LIFO) 페이지 스택 탐색을 수행하는 방법을 보여 줍니다.”'
+description: 'ms.prod: xamarin ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/10/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 92774cffdfed7412bdb4d44993dc221993ad56c8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: ec35b03e7e96f0730813918bdd96e1408cfabde7
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137888"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571495"
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
 
@@ -32,8 +32,6 @@ _NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으�
 ![](hierarchical-images/popping.png "Popping a Page from the Navigation Stack")
 
 탐색 메서드는 모든 [`Page`](xref:Xamarin.Forms.Page) 파생 형식의 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성에 의해 노출됩니다. 이 메서드는 탐색 스택에 페이지를 푸시하고 탐색 스택에서 페이지를 꺼내 스택 조작을 수행하는 기능을 제공합니다.
-
-<a name="Performing_Navigation" />
 
 ## <a name="performing-navigation"></a>탐색 수행
 
@@ -154,8 +152,6 @@ async void OnRootPageButtonClicked (object sender, EventArgs e)
 
 기본 플랫폼에서 지원되는 경우 매개 변수를 `true`로 설정하면 페이지 전환 애니메이션을 사용하도록 설정되고, `boolean` 매개 변수를 `false`로 설정하면 페이지 전환 애니메이션을 사용하지 않도록 설정됩니다. 그러나 이 매개 변수가 없는 푸시 및 팝 메서드는 기본적으로 애니메이션을 사용하도록 설정합니다.
 
-<a name="Passing_Data_when_Navigating" />
-
 ## <a name="passing-data-when-navigating"></a>탐색 시 데이터 전달
 
 경우에 따라 페이지에서 탐색하는 동안 다른 페이지로 데이터를 전달해야 합니다. 페이지 생성자를 통해 데이터를 전달하는 방법과 새 페이지의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)를 데이터로 설정하는 방법의 두 방법으로 이 작업을 수행할 수 있습니다. 각 방법을 이제 차례차례 설명하겠습니다.
@@ -274,8 +270,6 @@ public class SecondPageCS : ContentPage
 ![](hierarchical-images/passing-data-bindingcontext.png "Data Passed Through a BindingContext")
 
 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 기본](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)을 참조하세요.
-
-<a name="Manipulating_the_Navigation_Stack" />
 
 ## <a name="manipulating-the-navigation-stack"></a>탐색 스택 조작
 

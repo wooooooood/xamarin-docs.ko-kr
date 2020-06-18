@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Forms 명령 인터페이스
-description: 이 문서에서는 Xamarin.Forms 데이터 바인딩을 사용하여 Command 속성을 구현하는 방법을 설명합니다. 명령 인터페이스는 MVVM 아키텍처에 훨씬 더 적합한 명령을 구현하는 또 다른 방법을 제공합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 명령 인터페이스” description: “이 문서에서는 Xamarin.Forms 데이터 바인딩을 사용하여 Command 속성을 구현하는 방법을 설명합니다.'
+description: '명령 인터페이스는 MVVM 아키텍처에 훨씬 더 적합한 명령을 구현하는 또 다른 방법을 제공합니다.” ms.prod: xamarin ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/05/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 253255f08cec6f08e03df94798c8572f7cf10f30
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84139726"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Xamarin.Forms 명령 인터페이스

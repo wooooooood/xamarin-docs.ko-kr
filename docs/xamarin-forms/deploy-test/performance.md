@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Forms 앱 성능 향상
-description: Xamarin.Forms 애플리케이션의 성능을 높일 수 있는 많은 기법이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 애플리케이션에서 소비하는 메모리의 양을 크게 줄일 수 있습니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 앱 성능 향상” description: “Xamarin.Forms 애플리케이션의 성능을 높일 수 있는 많은 기법이 있습니다.'
+description: '해당 기술은 전체적으로 CPU에서 수행하는 작업의 양과 애플리케이션에서 소모하는 메모리의 양을 크게 줄일 수 있습니다.” ms.prod: xamarin ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/27/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/27/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 96b5939fd1f8448d45d1398fd56770f9032de083
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84139115"
 ---
 # <a name="improve-xamarinforms-app-performance"></a>Xamarin.Forms 앱 성능 향상

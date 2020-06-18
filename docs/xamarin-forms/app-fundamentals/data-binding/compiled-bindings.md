@@ -1,21 +1,21 @@
 ---
-title: Xamarin.Forms 컴파일된 바인딩
-description: 이 문서에서는 컴파일된 바인딩을 사용하여 Xamarin.Forms 애플리케이션에서 데이터 바인딩 성능을 향상시키는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 컴파일된 바인딩” description: “이 문서에서는 컴파일된 바인딩을 사용하여 Xamarin.Forms 애플리케이션에서 데이터 바인딩 성능을 향상하는 방법을 설명합니다.”'
+description: 'ms.prod: xamarin ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 09/18/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/18/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1f811de95009900016bb8b442265a9a079e0f612
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: 094691796fed9653f2a2e468ccb1c33d1a408a49
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139755"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571560"
 ---
 # <a name="xamarinforms-compiled-bindings"></a>Xamarin.Forms 컴파일된 바인딩
 
@@ -73,7 +73,7 @@ _컴파일된 바인딩을 클래식 바인딩보다 더 빨리 확인할 수 �
 </ContentPage>
 ```
 
-루트 [`StackLayout`](xref:Xamarin.Forms.StackLayout)은 `HslColorViewModel`을 인스턴스화하고 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성에 대한 속성 요소 태그 내의 `Color` 속성을 초기화합니다. 이 루트 `StackLayout`도 `x:DataType` 특성을 viewmodel 형식으로 정의하고 루트 `StackLayout` 뷰 계층 구조의 모든 바인딩 식을 컴파일한다는 것을 나타냅니다. 결국 빌드 오류로 나타나는 존재하지 않는 viewmodel 속성에 바인딩하려면 바인딩 식 중 하나를 변경하여 확인할 수 있습니다. 이 예제에서는 `x:DataType` 특성을 문자열 리터럴로 설정하고 있지만, `x:Type` 태그 확장을 사용하여 형식으로 설정할 수도 있습니다. `x:Type` 태그 확장에 대한 자세한 내용은 [x:Type 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#type)을 참조하세요.
+루트 [`StackLayout`](xref:Xamarin.Forms.StackLayout)은 `HslColorViewModel`을 인스턴스화하고 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성에 대한 속성 요소 태그 내의 `Color` 속성을 초기화합니다. 이 루트 `StackLayout`도 `x:DataType` 특성을 viewmodel 형식으로 정의하고 루트 `StackLayout` 뷰 계층 구조의 모든 바인딩 식을 컴파일한다는 것을 나타냅니다. 결국 빌드 오류로 나타나는 존재하지 않는 viewmodel 속성에 바인딩하려면 바인딩 식 중 하나를 변경하여 확인할 수 있습니다. 이 예제에서는 `x:DataType` 특성을 문자열 리터럴로 설정하고 있지만, `x:Type` 태그 확장을 사용하여 형식으로 설정할 수도 있습니다. `x:Type` 태그 확장에 대한 자세한 내용은 [x:Type 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension)을 참조하세요.
 
 > [!IMPORTANT]
 > 이 `x:DataType` 특성은 뷰 계층 구조의 모든 지점에서 다시 정의할 수 있습니다.
@@ -127,7 +127,7 @@ _컴파일된 바인딩을 클래식 바인딩보다 더 빨리 확인할 수 �
 
 [`ListView.ItemsSource`](xref:Xamarin.Forms.ListView) 속성은 `NamedColor.All` 정적 속성으로 설정됩니다. `NamedColor` 클래스는 .NET 리플렉션을 사용하여 [`Color`](xref:Xamarin.Forms.Color) 구조에서 모든 정적 공용 필드를 열거하고 `All` 정적 속성에서 액세스할 수 있는 컬렉션의 이름으로 저장합니다. 따라서 `ListView`는 모든 `NamedColor` 인스턴스로 채워집니다. `ListView`의 각 항목의 경우 해당 항목에 대한 바인딩 컨텍스트는 `NamedColor` 개체로 설정됩니다. [`ViewCell`](xref:Xamarin.Forms.ViewCell)의 [`BoxView`](xref:Xamarin.Forms.BoxView) 및 [`Label`](xref:Xamarin.Forms.Label) 요소는 `NamedColor` 속성에 바인딩됩니다.
 
-[`DataTemplate`](xref:Xamarin.Forms.DataTemplate)은 `x:DataType` 특성을 `NamedColor` 형식으로 정의하고 `DataTemplate` 뷰 계층 구조의 모든 바인딩 식을 컴파일한다는 것을 나타냅니다. 결국 빌드 오류로 나타나는 존재하지 않는 `NamedColor` 속성에 바인딩하려면 바인딩 식 중 하나를 변경하여 확인할 수 있습니다.  이 예제에서는 `x:DataType` 특성을 문자열 리터럴로 설정하고 있지만, `x:Type` 태그 확장을 사용하여 형식으로 설정할 수도 있습니다. `x:Type` 태그 확장에 대한 자세한 내용은 [x:Type 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#type)을 참조하세요.
+[`DataTemplate`](xref:Xamarin.Forms.DataTemplate)은 `x:DataType` 특성을 `NamedColor` 형식으로 정의하고 `DataTemplate` 뷰 계층 구조의 모든 바인딩 식을 컴파일한다는 것을 나타냅니다. 결국 빌드 오류로 나타나는 존재하지 않는 `NamedColor` 속성에 바인딩하려면 바인딩 식 중 하나를 변경하여 확인할 수 있습니다.  이 예제에서는 `x:DataType` 특성을 문자열 리터럴로 설정하고 있지만, `x:Type` 태그 확장을 사용하여 형식으로 설정할 수도 있습니다. `x:Type` 태그 확장에 대한 자세한 내용은 [x:Type 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension)을 참조하세요.
 
 애플리케이션을 처음 실행하는 경우 [`ListView`](xref:Xamarin.Forms.ListView)는 `NamedColor` 인스턴스로 채워집니다. `ListView`의 항목을 선택하면 [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) 속성이 `ListView`에서 선택한 항목의 색상으로 설정됩니다.
 
@@ -163,7 +163,7 @@ _컴파일된 바인딩을 클래식 바인딩보다 더 빨리 확인할 수 �
 
 루트 [`StackLayout`](xref:Xamarin.Forms.StackLayout)은 `x:DataType` 특성을 `HslColorViewModel` 형식으로 설정하고 루트 `StackLayout` 뷰 계층 구조의 모든 바인딩 식을 컴파일한다는 것을 나타냅니다. 그러나 내부 `StackLayout`은 `x:Null` 태그 식을 사용하여 `x:DataType` 특성을 `null`로 다시 정의합니다. 따라서 내부 `StackLayout` 내의 바인딩 식은 클래식 바인딩을 사용합니다. 루트 `StackLayout` 계층 구조 내의 [`BoxView`](xref:Xamarin.Forms.BoxView)만 컴파일된 바인딩을 사용합니다.
 
-`x:Null` 태그 식에 대한 자세한 내용은 [x:Null Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#null)을 참조하세요.
+`x:Null` 태그 식에 대한 자세한 내용은 [x:Null Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#xnull-markup-extension)을 참조하세요.
 
 ## <a name="performance"></a>성능
 

@@ -1,21 +1,21 @@
 ---
-title: Xamarin.Forms 접근성
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 접근성” description: “접근성이 있는 애플리케이션을 구축하면 다양한 요구 사항과 환경으로 사용자 인터페이스에 접근하는 사람들이 애플리케이션을 사용할 수 있습니다.”'
+description: 'ms.prod: xamarin ms.assetid: 99B8A8E8-6F5E-46BC-9639-1C4A6D301049 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 05/28/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials] ms.custom: video'
+ms.prod: xamarin
+ms.assetid: 99B8A8E8-6F5E-46BC-9639-1C4A6D301049
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/28/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.custom: ''
+ms.custom: video
 ms.openlocfilehash: 7ac8b305ae09e005013aea9f83fb4a3e4740f2b2
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84129809"
 ---
 # <a name="xamarinforms-accessibility"></a>Xamarin.Forms 접근성

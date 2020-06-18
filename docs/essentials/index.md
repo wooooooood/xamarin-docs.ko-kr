@@ -1,34 +1,35 @@
 ---
 title: Xamarin.Essentials
-description: 이 문서에는 모바일 애플리케이션의 플랫폼 간 API를 개발자에게 제공하는 Xamarin.Essentials를 설명하는 다양한 가이드에 대한 링크가 들어 있습니다.
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
+description: 'title: “Xamarin.Essentials” description: “이 문서에는 모바일 애플리케이션의 플랫폼 간 API를 개발자에게 제공하는 Xamarin.Essentials를 설명하는 다양한 가이드에 대한 링크가 들어 있습니다.”'
+ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 02/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 27421ecc8b089321cd2331829d87365f3cf37a65
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84139466"
 ---
 # Xamarin.Essentials
 
-Xamarin.Essentials는 모바일 애플리케이션의 플랫폼 간 API를 개발자에게 제공합니다.
+ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A author: jamesmontemagno ms.author: jamont ms.date: 02/26/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
-Android, iOS 및 UWP는 개발자가 Xamarin을 활용하여 C#에서 모두 액세스할 수 있는 고유한 운영 체제 및 플랫폼 API를 제공합니다. Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 Xamarin.Forms, Android, iOS 또는 UWP 애플리케이션에서 작동하는 단일 플랫폼 간 API를 제공합니다.
+Xamarin.Essentials는 모바일 애플리케이션의 플랫폼 간 API를 개발자에게 제공합니다. Android, iOS 및 UWP는 개발자가 Xamarin을 활용하여 C#에서 모두 액세스할 수 있는 고유한 운영 체제 및 플랫폼 API를 제공합니다.
 
-## <a name="get-started-with-xamarinessentialsget-startedmdcontextxamarinxamarin-forms"></a>[Xamarin.Essentials 시작](get-started.md?context=xamarin/xamarin-forms)
+## <a name="get-started-with-xamarinessentialsget-startedmdcontextxamarinxamarin-forms"></a>Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 Xamarin.Forms, Android, iOS 또는 UWP 애플리케이션에서 작동하는 단일 플랫폼 간 API를 제공합니다.
 
-기존 또는 새로운 Xamarin.Forms, Android, iOS 또는 UWP 프로젝트에 **Xamarin.Essentials** NuGet 패키지를 설치하려면 [시작 가이드](get-started.md)를 따르세요.
+[Xamarin.Essentials 시작](get-started.md?context=xamarin/xamarin-forms)
 
-## <a name="feature-guides"></a>기능 가이드
+## <a name="feature-guides"></a>기존 또는 새로운 Xamarin.Forms, Android, iOS 또는 UWP 프로젝트에 **Xamarin.Essentials** NuGet 패키지를 설치하려면 [시작 가이드](get-started.md)를 따르세요.
 
-다음과 같은 Xamarin.Essentials 기능을 애플리케이션에 통합하려면 가이드를 따르세요.
+기능 가이드
 
+* 다음과 같은 Xamarin.Essentials 기능을 애플리케이션에 통합하려면 가이드를 따르세요.
 * [가속도계](accelerometer.md?context=xamarin/xamarin-forms) - 3차원 공간에서 디바이스의 가속 데이터를 검색합니다.
 * [앱 정보](app-information.md?context=xamarin/xamarin-forms) - 애플리케이션에 대한 정보를 확인합니다.
 * [앱 테마](app-theme.md?context=xamarin/xamarin-forms) – 애플리케이션에 대해 요청된 현재 테마를 검색합니다.
@@ -64,16 +65,15 @@ Android, iOS 및 UWP는 개발자가 Xamarin을 활용하여 C#에서 모두 액
 * [단위 변환기](unit-converters.md?context=xamarin/xamarin-forms) – 단위를 변환하는 도우미 메서드.
 * [버전 추적](version-tracking.md?context=xamarin/xamarin-forms) - 애플리케이션 버전 및 빌드 번호를 추적합니다.
 * [진동](vibrate.md?context=xamarin/xamarin-forms) - 디바이스를 진동합니다.
-* [웹 인증자](web-authenticator.md?context=xamarin/xamarin-forms) - 웹 인증 흐름을 시작하고 콜백을 수신 대기합니다.
 
-## <a name="troubleshooting"></a>[문제 해결](troubleshooting.md?context=xamarin/xamarin-forms)
+## <a name="troubleshooting"></a>[웹 인증자](web-authenticator.md?context=xamarin/xamarin-forms) - 웹 인증 흐름을 시작하고 콜백을 수신 대기합니다.
 
-문제가 발생하는 경우 도움말을 찾으세요.
+[문제 해결](troubleshooting.md?context=xamarin/xamarin-forms)
 
-## <a name="release-notes"></a>[릴리스 정보](https://docs.microsoft.com/xamarin/essentials/release-notes/)
+## <a name="release-notes"></a>문제가 발생하는 경우 도움말을 찾으세요.
 
-Xamarin.Essentials의 각 릴리스에 대한 전체 릴리스 정보를 찾으세요.
+[릴리스 정보](https://docs.microsoft.com/xamarin/essentials/release-notes/)
 
-## <a name="api-documentation"></a>[API 문서](xref:Xamarin.Essentials)
+## <a name="api-documentation"></a>Xamarin.Essentials의 각 릴리스에 대한 전체 릴리스 정보를 찾으세요.
 
-API 문서에서 Xamarin.Essentials의 모든 기능을 살펴보세요.
+[API 문서](xref:Xamarin.Essentials)

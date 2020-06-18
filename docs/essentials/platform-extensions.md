@@ -1,8 +1,20 @@
 ---
-title: “Xamarin.Essentials 플랫폼 확장” description: “Xamarin.Essentials는 Rect, 크기 및 포인트와 같은 플랫폼 형식으로 작업해야 할 때 몇 가지 플랫폼 확장 메서드를 제공합니다.”
-ms.assetid: AB4D198A-4FD7-479E-8627-01F887A6D056 author: jamesmontemagno ms.author: jamont ms.date: 03/13/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Xamarin.Essentials 플랫폼 확장
+description: Xamarin.Essentials는 Rect, Size, Point와 같은 플랫폼 형식으로 작업해야 하는 경우 몇 가지 플랫폼 확장 메서드를 제공합니다.
+ms.assetid: AB4D198A-4FD7-479E-8627-01F887A6D056
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 03/13/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 56cb9619a4132f6568cee8fbf590965934024639
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801925"
 ---
-
 # <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: 플랫폼 확장
 
 Xamarin.Essentials는 Rect, Size, Point와 같은 플랫폼 형식으로 작업해야 하는 경우 몇 가지 플랫폼 확장 메서드를 제공합니다. 즉, iOS, Android 및 UWP의 특정 유형에 대해 이 유형의 `System` 버전 사이를 변환할 수 있습니다.
@@ -135,7 +147,7 @@ var system2 = platform.ToSystemRectangle();
 
 ## <a name="api"></a>API
 
-- [변환기 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/PlatformExtensions)
+- [변환기 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Types/PlatformExtensions)
 - [포인트 변환기 API 설명서](xref:Xamarin.Essentials.PointExtensions)
 - [사각형 변환기 API 설명서](xref:Xamarin.Essentials.RectangleExtensions)
 - [크기 변환기 API 설명서](xref:Xamarin.Essentials.SizeExtensions)

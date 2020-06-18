@@ -1,21 +1,21 @@
 ---
-title: Xamarin.Forms의 문자열 및 이미지 지역화
-description: .NET 리소스 파일을 사용하여 Xamarin.Forms 앱을 지역화할 수 있습니다.
-zone_pivot_groups: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms의 문자열 및 이미지 지역화” description: “.NET 리소스 파일을 사용하여 Xamarin.Forms 앱을 지역화할 수 있습니다.”'
+description: 'zone_pivot_groups: "platform" ms.prod: xamarin ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509 ms.technology: xamarin-forms author: profexorgeek ms.author: jusjohns ms.date: 11/01/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+zone_pivot_groups: platform
+ms.prod: xamarin
+ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 11/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: af15dc5a23404a11be6207bef7b4fc3e4bf9fad7
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84137607"
 ---
 # <a name="xamarinforms-string-and-image-localization"></a>Xamarin.Forms 문자열 및 이미지 지역화

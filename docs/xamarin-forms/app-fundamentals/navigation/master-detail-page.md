@@ -1,21 +1,21 @@
 ---
-title: Xamarin.Forms 마스터-세부 정보 페이지
-description: Xamarin.Forms MasterDetailPage는 두 개의 관련 정보 페이지를 관리하는 페이지입니다. 이러한 페이지는 항목을 표시하는 마스터 페이지와 이 페이지의 항목에 대한 세부 정보를 표시하는 세부 정보 페이지입니다. 이 문서에서는 MasterDetailPage를 사용하는 방법과 정보 페이지 간에 이동하는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 마스터-세부 정보 페이지” description: “Xamarin.Forms MasterDetailPage는 두 개의 관련 정보 페이지를 관리하는 페이지입니다. 해당 페이지는 항목을 표시하는 마스터 페이지와 이 페이지의 항목에 대한 세부 정보를 표시하는 세부 정보 페이지입니다.'
+description: '이 문서에서는 MasterDetailPage를 사용하는 방법과 정보 페이지 간에 이동하는 방법을 설명합니다.” ms.prod: xamarin ms.assetid: 119945E3-58B8-4630-A3D2-8B561529D53B ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 12/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 119945E3-58B8-4630-A3D2-8B561529D53B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 89b1dedcb6219a32332641550018405abd4b6870
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: c751a1843479f1e98739964631999dfdb0e3b634
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137815"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569636"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Xamarin.Forms 마스터-세부 정보 페이지
 
@@ -51,11 +51,11 @@ Xamarin.Forms MasterDetailPage는 두 개의 관련 정보 페이지를 관리�
 
 - iOS의 경우 마스터 페이지를 왼쪽에서 밀면 세부 정보 페이지가 오른쪽으로 *밀리고* 세부 정보 페이지의 왼쪽 부분이 계속 표시됩니다.
 - Android의 경우 세부 정보 페이지와 마스터 페이지가 서로 *겹쳐집니다*.
-- UWP에서 마스터 페이지는 [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) 속성이 `Popover`로 설정된 경우 세부 정보 페이지의 남은 부분에서 슬라이드됩니다. 자세한 내용은 [세부 정보 페이지 표시 동작 제어](#Controlling_the_Detail_Page_Display_Behavior)를 참조하세요.
+- UWP에서 마스터 페이지는 [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) 속성이 `Popover`로 설정된 경우 세부 정보 페이지의 남은 부분에서 슬라이드됩니다. 자세한 내용은 [세부 정보 페이지 표시 동작 제어](#controlling-the-detail-page-display-behavior)를 참조하세요.
 
 iOS와 Android의 마스터 페이지가 세로 모드의 마스터 페이지와 비슷한 너비를 갖고 있으므로 더 많은 세부 페이지가 표시된다는 점을 제외하고는 가로 모드에서도 이와 비슷한 동작이 관찰됩니다.
 
-탐색 동작을 제어하는 방법에 대한 자세한 내용은 [세부 정보 페이지의 표시 동작 제어](#Controlling_the_Detail_Page_Display_Behavior)를 참조하세요.
+탐색 동작을 제어하는 방법에 대한 자세한 내용은 [세부 정보 페이지의 표시 동작 제어](#controlling-the-detail-page-display-behavior)를 참조하세요.
 
 ## <a name="creating-a-masterdetailpage"></a>MasterDetailPage 만들기
 
@@ -249,8 +249,6 @@ public partial class MainPage : MasterDetailPage
 다음 스크린샷에서는 마스터 페이지에서 선택한 후에 표시되는 `ContactPage` 세부 정보 페이지를 보여 줍니다.
 
 ![](master-detail-page-images/detailpage.png "Detail Page Example")
-
-<a name="Controlling_the_Detail_Page_Display_Behavior" />
 
 ### <a name="controlling-the-detail-page-display-behavior"></a>세부 정보 페이지의 표시 동작 제어
 

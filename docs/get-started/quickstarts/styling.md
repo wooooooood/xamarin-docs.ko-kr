@@ -1,22 +1,22 @@
 ---
-title: 플랫폼 간 Xamarin.Forms 애플리케이션 스타일 지정
-description: 이 문서에서는 XAML 스타일로 플랫폼 간 Xamarin.Forms 애플리케이션의 스타일을 지정하는 방법을 설명합니다.
-zone_pivot_groups: ''
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “플랫폼 간 Xamarin.Forms 애플리케이션 스타일 지정” description: “이 문서에서는 XAML 스타일로 플랫폼 간 Xamarin.Forms 애플리케이션의 스타일을 지정하는 방법을 설명합니다.”'
+description: 'zone_pivot_groups: platform ms.topic: quickstart ms.prod: xamarin ms.assetid: CCCF8E57-D021-4542-8709-5808570FC26A ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 02/07/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+zone_pivot_groups: platform
+ms.topic: quickstart
+ms.prod: xamarin
+ms.assetid: CCCF8E57-D021-4542-8709-5808570FC26A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/07/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 2d458bafc5bb1c8dcffc7858fd15734187f7612b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84134071"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>플랫폼 간 Xamarin.Forms 애플리케이션 스타일 지정

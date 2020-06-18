@@ -1,21 +1,21 @@
 ---
-title: Xamarin.Forms 기본 바인딩
-description: 이 문서에서는 Xamarin.Forms 데이터 바인딩을 사용하는 방법을 설명합니다. 이 바인딩은 두 개체 사이의 속성 쌍을 연결하며, 이러한 개체 중 적어도 하나는 일반적으로 사용자 인터페이스 개체입니다. 이러한 두 개체는 대상과 원본이라고 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 기본 바인딩” description: “이 문서에서는 Xamarin.Forms 데이터 바인딩을 사용하는 방법을 설명합니다. 이 바인딩은 두 개체 사이의 속성 쌍을 연결하며, 개체 중 하나 이상은 일반적으로 사용자 인터페이스 개체입니다.'
+description: '두 개체는 대상 및 소스라고 합니다.” ms.prod: xamarin ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/22/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials] ms.custom: video'
+ms.prod: xamarin
+ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/22/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.custom: ''
+ms.custom: video
 ms.openlocfilehash: c0c6bc6e1005997548952aedc09cd83a451e7caa
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84133551"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Xamarin.Forms 기본 바인딩

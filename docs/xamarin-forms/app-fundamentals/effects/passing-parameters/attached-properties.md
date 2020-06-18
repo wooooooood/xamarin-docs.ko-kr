@@ -1,20 +1,20 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “연결된 속성으로 효과 매개 변수 전달” description: “연결된 속성은 런타임 속성 변경 내용에 응답하는 효과 매개 변수를 정의하는 데 사용할 수 있습니다.'
+description: '이 문서에서는 연결된 속성을 사용하여 효과에 매개 변수를 전달하고 런타임 시 매개 변수를 변경하는 방법을 설명합니다.” ms.prod: xamarin ms.assetid: DFCDCB9F-17DD-4117-BD53-B4FB206BB387 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 08/05/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: DFCDCB9F-17DD-4117-BD53-B4FB206BB387
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: cf03d0c32d80d7a1821e323acdc84a351413efec
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84138881"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>연결된 속성으로 효과 매개 변수 전달

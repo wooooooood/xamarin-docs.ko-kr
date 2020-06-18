@@ -1,21 +1,21 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “맵 핀 사용자 지정” description: “이 문서에서는 각 플랫폼에서 사용자 지정된 핀과 사용자 지정된 핀 데이터 뷰가 있는 네이티브 맵을 나타내는 맵 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 설명합니다.”'
+description: 'ms.prod: xamarin ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 11/06/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 30fcc8304d32d8ebdef38df8550bcd8c26514701
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: 06ff88f1d4f272d9b77737d2168418c007afe8bc
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135332"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573900"
 ---
 # <a name="customizing-a-map-pin"></a>지도 핀 사용자 지정
 
@@ -31,16 +31,14 @@ _이 문서에서는 각 플랫폼에서 사용자 지정된 핀과 사용자 �
 
 렌더링 프로세스는 각 플랫폼에서 [`Map`](xref:Xamarin.Forms.Maps.Map)에 대한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현하는 데 사용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
-1. Xamarin.Forms 사용자 지정 맵을 [만듭니다](#Creating_the_Custom_Map).
-1. Xamarin.Forms에서 사용자 지정 맵을 [사용합니다](#Consuming_the_Custom_Map).
-1. 각 플랫폼의 맵에 대한 사용자 지정 렌더러를 [만듭니다](#Creating_the_Custom_Renderer_on_each_Platform).
+1. Xamarin.Forms 사용자 지정 맵을 [만듭니다](#creating-the-custom-map).
+1. Xamarin.Forms에서 사용자 지정 맵을 [사용합니다](#consuming-the-custom-map).
+1. 각 플랫폼의 맵에 대한 사용자 지정 렌더러를 [만듭니다](#creating-the-custom-renderer-on-each-platform).
 
 이제 각 항목을 차례로 설명하여, 사용자 지정된 핀이 있는 네이티브 맵과 각 플랫폼에 있는 핀 데이터의 사용자 지정된 보기를 표시하는 `CustomMap` 랜더러를 구현합니다.
 
 > [!NOTE]
 > [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps)는 사용 전에 초기화되고 구성되어야 합니다. 자세한 내용은 [`Maps Control`](~/xamarin-forms/user-interface/map/index.md)를 참조하세요.
-
-<a name="Creating_the_Custom_Map" />
 
 ## <a name="creating-the-custom-map"></a>사용자 지정 맵 만들기
 
@@ -64,8 +62,6 @@ public class CustomPin : Pin
 ```
 
 이 클래스는 `CustomPin`을 [`Pin`](xref:Xamarin.Forms.Maps.Pin) 클래스의 속성으로 상속하고 `Name` 및 `Url` 속성을 추가하는 것으로 정의합니다.
-
-<a name="Consuming_the_Custom_Map" />
 
 ## <a name="consuming-the-custom-map"></a>사용자 지정 맵 사용
 
@@ -125,8 +121,6 @@ public MapPage()
 이 초기화에서는 사용자 지정 핀을 추가하고 [`Position`](xref:Xamarin.Forms.Maps.Position) 및 [`Distance`](xref:Xamarin.Forms.Maps.Distance)에서 [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan)을 생성하여 맵의 위치와 확대/축소 수준을 변경하는 [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) 메서드를 사용하여 맵 보기를 배치합니다.
 
 이제 각 애플리케이션 프로젝트에 사용자 지정 렌더러를 추가하여 네이티브 맵 컨트롤을 사용자 지정할 수 있습니다.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>각 플랫폼에서 사용자 지정 렌더러 만들기
 
@@ -231,10 +225,8 @@ namespace CustomRenderer.iOS
 
 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 `OnElementChanged` 메서드는 [`MKMapView`](xref:MapKit.MKMapView) 인스턴스의 다음 구성을 수행합니다.
 
-- [`GetViewForAnnotation`](xref:MapKit.MKMapView.GetViewForAnnotation*) 속성은 `GetViewForAnnotation` 메서드로 설정됩니다. 이 메서드는 [주석의 위치가 맵에 표시](#Displaying_the_Annotation)될 때 호출되고 표시 전에 주석을 사용자 지정하는 데 사용됩니다.
-- `CalloutAccessoryControlTapped`, `DidSelectAnnotationView` 및 `DidDeselectAnnotationView` 이벤트에 대한 이벤트 처리기가 등록됩니다. 이러한 이벤트는 사용자가 [설명선에 오른쪽 액세서리를 태핑](#Tapping_on_the_Right_Callout_Accessory_View)하고 사용자가 주석을 각각 [선택](#Selecting_the_Annotation) 및 [선택 취소](#Deselecting_the_Annotation)할 때 해제됩니다. 이벤트는 렌더러가 변경 내용에 연결된 요소에서만 등록이 취소됩니다.
-
-<a name="Displaying_the_Annotation" />
+- [`GetViewForAnnotation`](xref:MapKit.MKMapView.GetViewForAnnotation*) 속성은 `GetViewForAnnotation` 메서드로 설정됩니다. 이 메서드는 [주석의 위치가 맵에 표시](#displaying-the-annotation)될 때 호출되고 표시 전에 주석을 사용자 지정하는 데 사용됩니다.
+- `CalloutAccessoryControlTapped`, `DidSelectAnnotationView` 및 `DidDeselectAnnotationView` 이벤트에 대한 이벤트 처리기가 등록됩니다. 이러한 이벤트는 사용자가 [설명선에 오른쪽 액세서리를 태핑](#tapping-on-the-right-callout-accessory-view)하고 사용자가 주석을 각각 [선택](#selecting-the-annotation) 및 [선택 취소](#deselecting-the-annotation)할 때 해제됩니다. 이벤트는 렌더러가 변경 내용에 연결된 요소에서만 등록이 취소됩니다.
 
 #### <a name="displaying-the-annotation"></a>주석 표시
 
@@ -285,12 +277,10 @@ protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKA
     - `CustomMKAnnotationView.CalloutOffset` 속성은 설명선이 주석 위 중앙에 위치하도록 지정하는 `CGPoint`로 설정됩니다.
     - `CustomMKAnnotationView.LeftCalloutAccessoryView` 속성은 주석 제목 및 주소 왼쪽에 표시되는 monkey 이미지로 설정됩니다.
     - `CustomMKAnnotationView.RightCalloutAccessoryView` 속성은 주석 제목 및 주소 오른쪽에 표시되는 *정보* 단추로 설정됩니다.
-    - `CustomMKAnnotationView.Name` 속성은 `GetCustomPin` 메서드에서 반환된 `CustomPin.Name` 속성으로 설정됩니다. 이렇게 하면 주석을 식별할 수 있으므로, 원하는 경우 [설명선을 추가로 사용자 지정할 수 있습니다](#Selecting_the_Annotation).
-    - `CustomMKAnnotationView.Url` 속성은 `GetCustomPin` 메서드에서 반환된 `CustomPin.Url` 속성으로 설정됩니다. 사용자가 [오른쪽 설명선 액세서리 보기에 표시된 단추를 누를](#Tapping_on_the_Right_Callout_Accessory_View) 때 URL이 탐색됩니다.
+    - `CustomMKAnnotationView.Name` 속성은 `GetCustomPin` 메서드에서 반환된 `CustomPin.Name` 속성으로 설정됩니다. 이렇게 하면 주석을 식별할 수 있으므로, 원하는 경우 [설명선을 추가로 사용자 지정할 수 있습니다](#selecting-the-annotation).
+    - `CustomMKAnnotationView.Url` 속성은 `GetCustomPin` 메서드에서 반환된 `CustomPin.Url` 속성으로 설정됩니다. 사용자가 [오른쪽 설명선 액세서리 보기에 표시된 단추를 누를](#tapping-on-the-right-callout-accessory-view) 때 URL이 탐색됩니다.
 1. 주석을 누를 때 설명선이 표시되도록 [`MKAnnotationView.CanShowCallout`](xref:MapKit.MKAnnotationView.CanShowCallout*) 속성이 `true`로 설정됩니다.
 1. 주석이 맵에 표시하기 위해 반환됩니다.
-
-<a name="Selecting_the_Annotation" />
 
 #### <a name="selecting-the-annotation"></a>주석 선택
 
@@ -316,8 +306,6 @@ void OnDidSelectAnnotationView(object sender, MKAnnotationViewEventArgs e)
 
 이 메서드는 선택한 주석의 `Name` 속성이 `Xamarin`으로 설정된 경우 Xamarin 로고 이미지를 포함하는 `UIView` 인스턴스를 추가하여 기존 설명선(왼쪽 및 오른쪽 액세서리 보기 포함)을 확장합니다. 이렇게 하면 여러 주석에 대해 다양한 설명선을 표시할 수 있는 시나리오를 허용합니다. `UIView` 인스턴스는 기존 설명선 위 가운데에 표시됩니다.
 
-<a name="Tapping_on_the_Right_Callout_Accessory_View" />
-
 #### <a name="tapping-on-the-right-callout-accessory-view"></a>오른쪽 설명선 액세서리 보기 태핑
 
 사용자가 오른쪽 설명선 액세서리 보기의 *정보* 단추를 누르면 `CalloutAccessoryControlTapped` 이벤트가 발생하며, 차례로 `OnCalloutAccessoryControlTapped` 메서드가 실행됩니다.
@@ -334,8 +322,6 @@ void OnCalloutAccessoryControlTapped(object sender, MKMapViewAccessoryTappedEven
 ```
 
 이 메서드는 웹 브라우저를 열고 `CustomMKAnnotationView.Url` 속성에 저장된 주소로 이동합니다. .NET Standard 라이브러리 프로젝트에서 `CustomPin` 컬렉션을 만들 때 주소가 정의되었습니다.
-
-<a name="Deselecting_the_Annotation" />
 
 #### <a name="deselecting-the-annotation"></a>주석 취소
 
@@ -407,9 +393,9 @@ namespace CustomRenderer.Droid
 }
 ```
 
-사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 `OnElementChanged` 메서드는 컨트롤에서 사용자 지정 핀 목록을 검색합니다. `GoogleMap` 인스턴스를 사용할 수 있게 되면 `OnMapReady` 재정의가 호출됩니다. 이 메서드는 [정보 창을 클릭할](#Clicking_on_the_Info_Window) 때 발생하는 `InfoWindowClick` 이벤트에 대한 이벤트 처리기를 등록하고, 렌더러가 연결된 요소가 변경될 때만 구독 취소됩니다. `OnMapReady` 재정의는 `SetInfoWindowAdapter` 메서드를 호출하여 `CustomMapRenderer` 클래스 인스턴스가 정보 창을 사용자 지정하는 방법을 제공하도록 지정합니다.
+사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 `OnElementChanged` 메서드는 컨트롤에서 사용자 지정 핀 목록을 검색합니다. `GoogleMap` 인스턴스를 사용할 수 있게 되면 `OnMapReady` 재정의가 호출됩니다. 이 메서드는 [정보 창을 클릭할](#clicking-on-the-info-window) 때 발생하는 `InfoWindowClick` 이벤트에 대한 이벤트 처리기를 등록하고, 렌더러가 연결된 요소가 변경될 때만 구독 취소됩니다. `OnMapReady` 재정의는 `SetInfoWindowAdapter` 메서드를 호출하여 `CustomMapRenderer` 클래스 인스턴스가 정보 창을 사용자 지정하는 방법을 제공하도록 지정합니다.
 
-`CustomMapRenderer` 클래스가 `GoogleMap.IInfoWindowAdapter` 인터페이스를 구현하여 [정보 창을 사용자 지정](#Customizing_the_Info_Window)합니다. 이 인터페이스는 다음 메서드를 구현해야 한다고 지정합니다.
+`CustomMapRenderer` 클래스가 `GoogleMap.IInfoWindowAdapter` 인터페이스를 구현하여 [정보 창을 사용자 지정](#customizing-the-info-window)합니다. 이 인터페이스는 다음 메서드를 구현해야 한다고 지정합니다.
 
 - `public Android.Views.View GetInfoWindow(Marker marker)` – 이 메서드는 표식에 대한 사용자 지정 정보 창을 반환하기 위해 호출됩니다. `null`을 반환하면 기본 창 렌더링이 사용됩니다. `View`를 반환하면 `View`가 정보 창 프레임 내에 배치됩니다.
 - `public Android.Views.View GetInfoContents(Marker marker)` – 이 메서드는 정보 창의 콘텐츠를 포함하는 `View`를 반환하기 위해 호출되며 `GetInfoWindow` 메서드가 `null`을 반환하는 경우에만 호출됩니다. `null`을 반환하면 정보 창 콘텐츠의 기본 렌더링이 사용됩니다.
@@ -436,8 +422,6 @@ protected override MarkerOptions CreateMarker(Pin pin)
 
 > [!NOTE]
 > 필요한 경우 맵 렌더러에서 `GetMarkerForPin` 메서드를 호출하여 `Pin`에서 `Marker`를 검색할 수 있습니다.
-
-<a name="Customizing_the_Info_Window" />
 
 #### <a name="customizing-the-info-window"></a>정보 창 사용자 지정
 
@@ -494,8 +478,6 @@ public Android.Views.View GetInfoContents(Marker marker)
 
 > [!NOTE]
 > 정보 창은 라이브 `View`가 아닙니다. 대신 Android는 `View`를 정적 비트맵으로 변환하고 이를 이미지로 표시합니다. 즉, 정보 창은 클릭 이벤트에 응답할 수 있지만, 터치 이벤트나 제스처에 응답할 수 없으며 정보 창의 개별 컨트롤은 자체 클릭 이벤트에 응답할 수 없습니다.
-
-<a name="Clicking_on_the_Info_Window" />
 
 #### <a name="clicking-on-the-info-window"></a>정보 창 클릭
 

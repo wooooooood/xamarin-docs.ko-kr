@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Forms DataTemplateSelector 만들기
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms DataTemplateSelector 만들기” description: “이 문서에서는 데이터 바인딩된 속성 값을 기반으로, 런타임 시 DataTemplate을 선택하는 데 사용할 수 있는 DataTemplateSelector를 만들고 사용하는 방법을 보여 줍니다.”'
+description: 'ms.prod: xamarin ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/08/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/08/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 74650eb2c52f1da9d0c539b711784896267ed183
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84135956"
 ---
 # <a name="creating-a-xamarinforms-datatemplateselector"></a>Xamarin.Forms DataTemplateSelector 만들기

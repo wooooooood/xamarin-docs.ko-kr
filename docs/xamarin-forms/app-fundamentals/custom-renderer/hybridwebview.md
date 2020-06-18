@@ -1,20 +1,20 @@
 ---
-title: ''
-description: Xamarin.Forms WebView는 앱에서 웹 및 HTML 콘텐츠를 표시하는 보기입니다. 이 문서에서는 JavaScript에서 C# 코드를 호출할 수 있도록 WebView를 확장하는 사용자 지정 렌더러를 만드는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “WebView 사용자 지정” description: “Xamarin.Forms WebView는 앱에서 웹 및 HTML 콘텐츠를 표시하는 뷰입니다.'
+description: '이 문서에서는 JavaScript에서 C# 코드를 호출할 수 있도록 WebView를 확장하는 사용자 지정 렌더러를 만드는 방법을 설명합니다.” ms.prod: xamarin ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/31/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/31/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 8c83742896af4a22bcff327df82c1b14ff983bb2
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84138972"
 ---
 # <a name="customizing-a-webview"></a>WebView 사용자 지정
@@ -165,7 +165,7 @@ public partial class HybridWebViewPage : ContentPage
 
 각 플랫폼 렌더러 클래스에서 `OnElementChanged` 메서드의 재정의된 버전은 네이티브 컨트롤 사용자 지정을 수행하는 위치입니다. 렌더링되는 Xamarin.Forms 컨트롤에 대한 참조는 `Element` 속성을 통해 얻을 수 있습니다.
 
-각 사용자 지정 렌더러 클래스는 렌더러를 Xamarin.Forms에 등록하는 `ExportRenderer` 특성으로 데코레이트됩니다. 이 특성은 렌더링되는 Xamarin.Forms 사용자 지정 컨트롤의 형식 이름과 지정 렌더러의 형식 이름이라는 두 가지 매개 변수를 사용합니다. 특성의 `assembly` 접두사는 특성이 전체 어셈블리에 적용되도록 지정합니다.
+각 사용자 지정 렌더러 클래스는 렌더러를 Xamarin.Forms에 등록하는 `ExportRenderer` 특성으로 데코레이트됩니다. 이 특성은 렌더링되는 Xamarin.Forms 사용자 지정 컨트롤의 형식 이름과 사용자 지정 렌더러의 형식 이름이라는 두 가지 매개 변수를 사용합니다. 특성의 `assembly` 접두사는 특성이 전체 어셈블리에 적용되도록 지정합니다.
 
 다음 섹션에서는 각 네이티브 웹 컨트롤에서 로드하는 웹 페이지의 구조, JavaScript에서 C#을 호출하는 프로세스, 각 플랫폼 사용자 지정 렌더러 클래스에서 이를 구현하는 방법을 설명합니다.
 

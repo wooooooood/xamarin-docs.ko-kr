@@ -1,29 +1,29 @@
 ---
-title: Xamarin.Forms 앱 클래스
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 앱 클래스” description: “이 문서에서는 기본 App 클래스의 기능을 설명합니다. 이 클래스에는 앱의 초기 페이지로 설정할 속성과 수명 주기 상태 변경 전체에 걸친 단순 값을 저장하는 영구 사전이 포함되어 있습니다.”'
+description: 'ms.prod: xamarin ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D ms.technology: xamarin-forms ms.custom: video author: davidbritch ms.author: dabritch ms.date: 02/19/2016 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
+ms.technology: xamarin-forms
+ms.custom: video
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/19/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2f4b568809f949d813de86ae88cbe621cfa3161c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: 1e761830fb08662a82a8bf98b4544aafaa6eccf7
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129690"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573354"
 ---
 # <a name="xamarinforms-app-class"></a>Xamarin.Forms 앱 클래스
 
 `Application` 기본 클래스에서 제공하여 프로젝트의 기본 `App` 하위 클래스에 공개되는 기능은 다음과 같습니다.
 
 * `MainPage` 속성 - 앱의 초기 페이지를 설정할 위치입니다.
-* 영구 [`Properties` 사전](#Properties_Dictionary) - 수명 주기 상태 변경 전반에 걸친 단순 값을 저장합니다.
+* 영구 [`Properties` 사전](#properties-dictionary) - 수명 주기 상태 변경 전반에 걸친 단순 값을 저장합니다.
 * 정적 `Current` 속성 - 현재 애플리케이션 개체에 대한 참조를 포함합니다.
 
 또한 [수명 주기 메서드](~/xamarin-forms/app-fundamentals/app-lifecycle.md)(예: `OnStart`, `OnSleep`, `OnResume`)와 모달 탐색 이벤트도 제공합니다.
@@ -76,8 +76,6 @@ public class App : Xamarin.Forms.Application
     }
 }
 ```
-
-<a name="Properties_Dictionary" />
 
 ## <a name="properties-dictionary"></a>속성 사전
 

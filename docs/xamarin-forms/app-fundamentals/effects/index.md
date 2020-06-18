@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Forms 효과
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 'title: “Xamarin.Forms 효과” description: “효과를 사용하면 사용자 지정 렌더러 구현에 의존하지 않고도 각 플랫폼의 네이티브 컨트롤을 사용자 지정할 수 있습니다.”'
+description: 'ms.prod: xamarin ms.assetid: 8AF168A7-4CD9-4603-B961-15B8B1543784 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/01/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]'
+ms.prod: xamarin
+ms.assetid: 8AF168A7-4CD9-4603-B961-15B8B1543784
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: a6206d2c561df74a01b7d7408e8d542f1e2189d3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/10/2020
 ms.locfileid: "84139336"
 ---
 # <a name="xamarinforms-effects"></a>Xamarin.Forms 효과
