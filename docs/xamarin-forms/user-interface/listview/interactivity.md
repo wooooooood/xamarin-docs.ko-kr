@@ -1,8 +1,22 @@
 ---
-제목: "ListView 대화형 작업" 설명: "이 문서에서는 Xamarin.Forms 선택 항목, 컨텍스트 작업 및 끌어오기-새로 고침을 구현 하 여 ListView에 대화형 작업을 추가 하는 방법을 설명 합니다."
-assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647: xamarin-forms author: davidbritch: dabritch:: 09/25/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: ListView 대화형 작업
+description: 이 문서에서는 Xamarin.Forms 선택 항목, 컨텍스트 작업 및 끌어오기-새로 고침을 구현 하 여 ListView에 대화형 작업을 추가 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/25/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5142965216b328172ae7fa04cdc0c13590f5ff38
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139890"
 ---
-
 # <a name="listview-interactivity"></a>ListView 대화형 작업
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)

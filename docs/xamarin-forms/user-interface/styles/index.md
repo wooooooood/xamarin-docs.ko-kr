@@ -1,8 +1,22 @@
 ---
-제목: "응용 프로그램 스타일 지정 Xamarin.Forms " 설명: "이 가이드에서는 XAML 스타일을 사용 하 여 응용 프로그램을 스타일 지정 하 고 CSS 스타일시트를 사용 하는 방법을 설명 Xamarin.Forms 합니다."
-assetid: EABF5072-B89B-4356-B7B3-1C6B40358926: xamarin-forms author: davidbritch: dabritch: ms. date: 04/28/2018 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 앱 스타일 지정 Xamarin.Forms
+description: 이 가이드 Xamarin.Forms 에서는 XAML 스타일을 사용 하 고 CSS 스타일시트를 사용 하 여 응용 프로그램의 스타일을 만드는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: EABF5072-B89B-4356-B7B3-1C6B40358926
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/28/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8775793c2d9ae1ba6e1eba38fe48647b43056bf8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140116"
 ---
-
 # <a name="styling-xamarinforms-apps"></a>앱 스타일 지정 Xamarin.Forms
 
 ## <a name="styling-xamarinforms-apps-using-xaml-stylesxamlindexmd"></a>[XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](xaml/index.md)

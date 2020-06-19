@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp 비트맵" 설명: "SkiaSharp 비트맵의 비트를 로드, 저장, 표시, 생성, 그리기, 애니메이션 및 액세스 하는 방법을 알아봅니다."
-ms. prod: xamarin ms. 기술: skiasharp assetid: 70C19370-157A-4B1B-9532-F77E32AC21BC author: davidbritch: dabritch: 07/17/2018: no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp 비트맵
+description: SkiaSharp 비트맵의 비트를 로드, 저장, 표시, 만들기, 그리기 켜기, 애니메이션 및 액세스 하는 방법에 대해 알아봅니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 70C19370-157A-4B1B-9532-F77E32AC21BC
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1d21fc199dd67471440ca0e3eeaf9a140e7a1967
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140233"
 ---
-
 # <a name="skiasharp-bitmaps"></a>SkiaSharp 비트맵
 
 비트맵은 디스플레이 장치의 픽셀에 해당 하는 데이터의 사각형 배열입니다. 비트맵과 연결 된 그래픽 프로그래밍 영역은 선 및 곡선의 _벡터 그래픽과_ 달리 _래스터 그래픽_ (초기 비디오 표시의 스캔 줄 이름)이 라고도 합니다. 

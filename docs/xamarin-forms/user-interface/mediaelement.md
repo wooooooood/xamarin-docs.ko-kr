@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms mediaelement" 설명: "이 문서에서는 MediaElement를 사용 하 여 응용 프로그램에서 비디오와 오디오를 재생 하는 방법을 설명 Xamarin.Forms 합니다."
-assetid: e65f1e56-a80d-46c7-9ff4-7ae6650a3165: xamarin-forms author: davidbritch: dabritch:: 02/18/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.FormsMediaElement
+description: 이 문서에서는 MediaElement를 사용 하 여 응용 프로그램에서 비디오와 오디오를 재생 하는 방법을 설명 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: e65f1e56-a80d-46c7-9ff4-7ae6650a3165
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/18/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1dfa51177bba3ebf1e3e29208cc926c77567a048
+ms.sourcegitcommit: c000c0ed15b7b2ef2a8f46a39171e11b6d9f8a5d
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84980105"
 ---
-
 # <a name="xamarinforms-mediaelement"></a>Xamarin.FormsMediaElement
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

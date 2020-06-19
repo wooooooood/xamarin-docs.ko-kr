@@ -1,8 +1,22 @@
 ---
-title: "UrhoSharp in Xamarin.Forms " description: "이 문서에서는 UrhoSharp를 사용 하 여 고급 시각화를 위해 3d 그래픽을 응용 프로그램에 추가 하는 방법을 설명 Xamarin.Forms 합니다."
-assetid: 0646B98E-CC04-4537-9715-9F82338FD7FF: xamarin-forms author: davidbritch: dabritch:: 03/11/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: UrhoSharp 사용Xamarin.Forms
+description: 이 문서에서는 UrhoSharp를 사용 하 여 고급 시각화를 위해 3D 그래픽을 응용 프로그램에 추가 하는 방법을 설명 Xamarin.Forms 합니다.
+ms.prod: xamarin
+ms.assetid: 0646B98E-CC04-4537-9715-9F82338FD7FF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/11/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: fbf717092da7f77e265803fae87efb5bf0e9876f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84574368"
 ---
-
 # <a name="using-urhosharp-in-xamarinforms"></a>UrhoSharp 사용Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/urho-samples/tree/master/FormsSample)

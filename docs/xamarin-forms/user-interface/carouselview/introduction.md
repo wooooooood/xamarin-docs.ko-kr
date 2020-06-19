@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms CarouselView 소개" 설명: "CarouselView은 사용자가 항목 컬렉션 간을 이동 하기 위해 살짝 밀기 할 수 있는 스크롤 가능한 레이아웃으로 데이터를 제공 하는 보기입니다."
-assetid: 2a96e4bd-c29b-4658-bb4c-ab00872b0f8f ms. 기술: xamarin-forms author: davidbritch: dabritch: ms. date: 10/08/2019 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsCarouselView 소개
+description: CarouselView는 스크롤 가능한 레이아웃으로 데이터를 표시 하기 위한 뷰입니다. 사용자는 항목 컬렉션을 통해 이동할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: 2a96e4bd-c29b-4658-bb4c-ab00872b0f8f
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/08/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2e67acd0188e1147481005502ad9ccdaada645d9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140272"
 ---
-
 # <a name="xamarinforms-carouselview-introduction"></a>Xamarin.FormsCarouselView 소개
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

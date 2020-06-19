@@ -1,8 +1,23 @@
 ---
-제목: "다음의 동적 스타일" Xamarin.Forms 설명: "이 문서에서는 Xamarin.Forms 동적 리소스를 사용 하 여 런타임에 응용 프로그램이 런타임에 동적으로 스타일 변경에 응답할 수 있는 방법을 설명 합니다."
-assetid: 13D4FA4B-DF10-42BF-B001-2C49367FC216: xamarin-forms author: davidbritch: dabritch:: 05/28/2019 no loc: [ Xamarin.Forms , Xamarin.Essentials ] ms. custom: video
+title: 의 동적 스타일Xamarin.Forms
+description: 이 문서에서는 Xamarin.Forms 동적 리소스를 사용 하 여 런타임에 응용 프로그램에서 동적으로 스타일 변경에 응답할 수 있는 방법에 대해 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 13D4FA4B-DF10-42BF-B001-2C49367FC216
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/28/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.custom: video
+ms.openlocfilehash: d40ca3423cca68757cf458faf5cca1138aec5461
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140090"
 ---
-
 # <a name="dynamic-styles-in-xamarinforms"></a>의 동적 스타일Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)

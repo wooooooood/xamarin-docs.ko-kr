@@ -1,8 +1,22 @@
 ---
-제목: "XAML 태그 확장 사용" 설명: "이 문서에서는 Xamarin.Forms xaml 태그 확장을 사용 하 여 다양 한 소스에서 요소 특성을 설정할 수 있도록 하 여 xaml의 기능과 유연성을 향상 시키는 방법을 설명 합니다."
-assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C: xamarin-forms author: davidbritch: dabritch:: 04/21/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: XAML 태그 확장 사용
+description: 이 문서에서는 Xamarin.Forms 다양 한 소스에서 요소 특성을 설정할 수 있도록 하 여 xaml 태그 확장을 사용 하 여 xaml의 기능과 유연성을 향상 시키는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/17/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e1429c3f39e37dc552d7f6ca8767058e5aec853b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84903113"
 ---
-
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
@@ -18,7 +32,7 @@ XAML 태그 확장은 다양 한 소스에서 요소 특성을 설정할 수 있
 - [`OnIdiom`](#onidiom-markup-extension)– 응용 프로그램이 실행 되 고 있는 장치를 기준으로 UI 모양을 사용자 지정 합니다.
 - [`DataTemplate`](#datatemplate-markup-extension)– 형식을로 변환 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 합니다.
 - [`FontImage`](#fontimage-markup-extension)–를 표시할 수 있는 모든 보기에 글꼴 아이콘을 표시 `ImageSource` 합니다.
-- [`OnAppTheme`](#onapptheme-markup-extension)– 현재 시스템 테마를 기반으로 리소스를 사용 합니다.
+- [`AppThemeBinding`](#appthemebinding-markup-extension)– 현재 시스템 테마를 기반으로 리소스를 사용 합니다.
 
 추가 XAML 태그 확장은 이전에 다른 XAML 구현에서 지원 되었으며 에서도 지원 됩니다 Xamarin.Forms . 이에 대해서는 다른 문서에 자세히 설명 되어 있습니다.
 
@@ -566,60 +580,55 @@ public partial class TypeDemoPage : ContentPage
 
 개체에서 글꼴 아이콘 데이터를 지정 하 여 글꼴 아이콘을 표시 하는 방법에 대 한 자세한 내용은 `FontImageSource` [글꼴 아이콘 표시](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons)를 참조 하세요.
 
-## <a name="onapptheme-markup-extension"></a>OnAppTheme 태그 확장
+## <a name="appthemebinding-markup-extension"></a>AppThemeBinding 태그 확장
 
-`OnAppTheme`태그 확장을 사용 하면 현재 시스템 테마에 따라 이미지나 색과 같은 소비할 리소스를 지정할 수 있습니다. 클래스와 동일한 기능을 제공 `OnAppTheme<T>` 하지만 더 간결 하 게 표현 합니다.
+`AppThemeBinding`태그 확장을 사용 하면 현재 시스템 테마에 따라 이미지나 색과 같은 소비할 리소스를 지정할 수 있습니다.
 
 > [!IMPORTANT]
-> `OnAppTheme`태그 확장에는 최소 운영 체제 요구 사항이 있습니다. 자세한 내용은 [ Xamarin.Forms 응용 프로그램에서 시스템 테마 변경 내용에 응답](~/xamarin-forms/user-interface/theming/system-theme-changes.md)을 참조 하세요.
+> `AppThemeBinding`태그 확장에는 최소 운영 체제 요구 사항이 있습니다. 자세한 내용은 [ Xamarin.Forms 응용 프로그램에서 시스템 테마 변경 내용에 응답](~/xamarin-forms/user-interface/theming/system-theme-changes.md)을 참조 하세요.
 
-`OnAppTheme` 태그 확장은 다음 속성을 정의하는 `OnAppThemeExtension` 클래스에서 지원됩니다.
+`AppThemeBinding` 태그 확장은 다음 속성을 정의하는 `AppThemeBindingExtension` 클래스에서 지원됩니다.
 
 - `Default``object`기본적으로 사용 되는 리소스로 설정 하는 형식의입니다.
 - `Light``object`장치에서 밝은 테마를 사용할 때 사용할 리소스로 설정 하는 형식의입니다.
 - `Dark``object`장치에서 짙은 테마를 사용할 때 사용할 리소스로 설정 하는 형식의입니다.
 - `Value``object`태그 확장에서 현재 사용 중인 리소스를 반환 하는 형식의입니다.
-- `Converter``IValueConverter`구현으로 설정할 수 있는 형식의입니다 `IValueConverter` .
-- `ConverterParameter`형식으로 `object` , 구현에 전달할 값으로 설정할 수 있습니다 `IValueConverter` .
 
 > [!NOTE]
-> XAML 파서를 사용하면 `OnAppThemeExtension` 클래스를 `OnAppTheme`로 축약할 수 있습니다.
+> XAML 파서를 사용하면 `AppThemeBindingExtension` 클래스를 `AppBindingTheme`로 축약할 수 있습니다.
 
-`Default`속성은의 content 속성입니다 `OnAppThemeExtension` . 따라서 중괄호로 표시 되는 XAML 태그 식의 경우 `Default=` 첫 번째 인수인 경우 식의 일부를 제거할 수 있습니다.
+`Default`속성은의 content 속성입니다 `AppThemeBindingExtension` . 따라서 중괄호로 표시 되는 XAML 태그 식의 경우 `Default=` 첫 번째 인수인 경우 식의 일부를 제거할 수 있습니다.
 
-**Onapptheme 데모** 페이지에는 태그 확장을 사용 하는 방법이 나와 `OnAppTheme` 있습니다.
+**AppThemeBinding Demo** 페이지에서는 태그 확장을 사용 하는 방법을 보여 줍니다 `AppThemeBinding` .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MarkupExtensions.OnAppThemeDemoPage"
-             Title="OnAppTheme Demo">
+             x:Class="MarkupExtensions.AppThemeBindingDemoPage"
+             Title="AppThemeBinding Demo">
     <ContentPage.Resources>
 
         <Style x:Key="labelStyle"
                TargetType="Label">
             <Setter Property="TextColor"
-                    Value="{OnAppTheme Black, Light=Blue, Dark=Teal}" />
+                    Value="{AppThemeBinding Black, Light=Blue, Dark=Teal}" />
         </Style>
 
     </ContentPage.Resources>
     <StackLayout Margin="20">
         <Label Text="This text is green in light mode, and red in dark mode."
-               TextColor="{OnAppTheme Light=Green, Dark=Red}" />
+               TextColor="{AppThemeBinding Light=Green, Dark=Red}" />
         <Label Text="This text is black by default, blue in light mode, and teal in dark mode."
-               Style="{DynamicResource labelStyle}" />
+               Style="{StaticResource labelStyle}" />
     </StackLayout>
 </ContentPage>
 ```
 
 이 예제에서는 [`Label`](xref:Xamarin.Forms.Label) 장치에서 밝은 테마를 사용 하 고 장치에서 짙은 테마를 사용 하는 경우 빨간색으로 설정 된 첫 번째의 텍스트 색을 녹색으로 설정 합니다. 두 번째에 `Label` [`TextColor`](xref:Xamarin.Forms.Label.TextColor) 는를 통해 설정 된 속성이 있습니다 [`Style`](xref:Xamarin.Forms.Style) . 이는 `Style` 기본적으로의 텍스트 색을 검정으로 설정 하 `Label` 고, 장치에서 밝은 테마를 사용 하는 경우 blue로, 장치에서 짙은 테마를 사용 하는 경우 청록으로 설정 합니다.
 
-> [!NOTE]
-> 태그 확장을 [`Style`](xref:Xamarin.Forms.Style) 사용 하는는 `OnAppTheme` 태그 확장을 사용 하는 컨트롤에 적용 해야 `DynamicResource` 시스템 테마가 변경 될 때 앱의 UI가 업데이트 됩니다.
-
 실행 중인 프로그램은 다음과 같습니다.
 
-![OnAppTheme 데모](consuming-images/onappthemedemo.png "OnAppTheme 데모")
+![AppThemeBinding 데모](consuming-images/appthemebindingdemo.png "AppThemeBinding 데모")
 
 ## <a name="define-markup-extensions"></a>태그 확장 정의
 

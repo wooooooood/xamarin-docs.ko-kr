@@ -1,8 +1,22 @@
 ---
-제목: "설명:"의 장치 스타일 Xamarin.Forms Xamarin.Forms 은 Device. styles 클래스에서 장치 스타일 이라고 하는 6 가지 동적 스타일을 포함 합니다. 이 문서에서는 응용 프로그램에서 장치 스타일을 사용 하는 방법을 설명 Xamarin.Forms 합니다. "
-assetid: 7FF19ED1-0822-4238-9435-AD970317A2F8: xamarin-forms author: davidbritch: dabritch:: 02/17/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 장치 스타일Xamarin.Forms
+description: Xamarin.Forms에는 device. Styles 클래스에서 장치 스타일 이라고 하는 6 가지 동적 스타일이 포함 되어 있습니다. 이 문서에서는 응용 프로그램에서 장치 스타일을 사용 하는 방법을 설명 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 7FF19ED1-0822-4238-9435-AD970317A2F8
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/17/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b835847fea39e1c2f968e7b81fb9d22f68ea461c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140103"
 ---
-
 # <a name="device-styles-in-xamarinforms"></a>장치 스타일Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)

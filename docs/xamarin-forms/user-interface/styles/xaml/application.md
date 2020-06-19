@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 설명:" 스타일을 응용 프로그램의 리소스 사전에 추가 하 여 전역 스타일을 전역으로 사용할 수 있습니다. 이렇게 하면 페이지 또는 컨트롤에서 스타일의 중복을 방지할 수 있습니다. "
-assetid: BDC65F82-65E0-4C8E-BB91-8E340EB2D15A: xamarin-forms author: davidbritch: dabritch:: 02/17/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 전역 스타일Xamarin.Forms
+description: 스타일은 응용 프로그램의 리소스 사전에 추가 하 여 전역적으로 사용할 수 있습니다. 이렇게 하면 여러 페이지나 컨트롤에서 스타일의 중복을 방지할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: BDC65F82-65E0-4C8E-BB91-8E340EB2D15A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/17/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2a222c3ee2234904cce94b52a14654728a1aa6d1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140129"
 ---
-
 # <a name="global-styles-in-xamarinforms"></a>전역 스타일Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)

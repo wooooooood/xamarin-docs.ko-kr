@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms listview" 설명: "이 가이드에서는 Xamarin.Forms 데이터를 대화형 목록에 표시 하는 데 사용할 수 있는 ListView를 소개 합니다."
-assetid: FEFDF7E0-720F-4BD1-863F-4477226AA695: xamarin-forms author: davidbritch: dabritch:: 09/04/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms뷰
+description: 이 가이드에서는 Xamarin.Forms 대화형 목록에 데이터를 표시 하는 데 사용할 수 있는 ListView를 소개 합니다.
+ms.prod: xamarin
+ms.assetid: FEFDF7E0-720F-4BD1-863F-4477226AA695
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/04/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a1ff8dd5c8a8a4051cea8ce4b288c42bdbaa8d31
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139908"
 ---
-
 # <a name="xamarinforms-listview"></a>Xamarin.Forms뷰
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistview)

@@ -1,8 +1,22 @@
 ---
-제목: "4 부. 데이터 바인딩 기본 사항 "설명:" 데이터 바인딩을 사용 하면 두 개체의 속성을 연결 하 여 한 개체의 변경으로 인해 다른 개체가 변경 될 수 있습니다. "
-ms. prod: xamarin ms. 기술: xamarin assetid: 342288C3-BB4C-4924-B178-72E112D777BA author: davidbritch ms. author: dabritch: 10/25/2017: no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 4부. 데이터 바인딩 기본 사항
+description: 데이터 바인딩을 사용 하면 두 개체의 속성을 연결 하 여 한 개체의 변경으로 인해 다른 개체의 변경 내용을 적용할 수 있습니다.
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 08be571d3ba69891a56c08efd556a999e51431c8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139856"
 ---
-
 # <a name="part-4-data-binding-basics"></a>4부. 데이터 바인딩 기본 사항
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

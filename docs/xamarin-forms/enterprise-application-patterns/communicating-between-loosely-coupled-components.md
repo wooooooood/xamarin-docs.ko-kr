@@ -1,7 +1,22 @@
 ---
-제목: "느슨하게 결합 된 구성 요소 간 통신" 설명: "이 장은 eShopOnContainers mobile 앱이 게시-구독 패턴을 구현 하는 방법을 설명 합니다. 개체 및 형식 참조로 연결 하기 불편 한 구성 요소 간에 메시지 기반 통신을 허용 하면" ms. prod: xamarin assetid: 1194af33-8a91-48d2-88b5-b84d77f2ce6ms. 기술: xamarin-forms author: davidbritch m. author: dabritch: 08/07/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 느슨하게 결합된 구성 요소 간 통신
+description: '이 장에서는 eShopOnContainers 모바일 앱이 게시-구독 패턴을 구현 하는 방법에 대해 설명 합니다 .이 패턴을 사용 하면 개체 및 형식 참조로 쉽게 연결할 수 있는 구성 요소 간에 메시지 기반 통신이 가능 합니다. '
+ms.prod: xamarin
+ms.assetid: 1194af33-8a91-48d2-88b5-b84d77f2ce69
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c35cd6e30e7843cda0431581025aa7440a21cc29
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140051"
 ---
-
 # <a name="communicating-between-loosely-coupled-components"></a>느슨하게 결합된 구성 요소 간 통신
 
 게시-구독 패턴은 게시자가 구독자로 알려진 수신자를 몰라도 메시지를 보내는 메시징 패턴입니다. 마찬가지로 구독자는 게시자를 전혀 알지 못해도 특정 메시지를 수신 대기합니다.

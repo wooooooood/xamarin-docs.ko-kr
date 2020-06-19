@@ -1,8 +1,22 @@
 ---
-제목: "설명:"의 파일 처리 Xamarin.Forms Xamarin.Forms 는 .NET Standard 라이브러리의 코드를 사용 하거나 포함 된 리소스를 사용 하 여 구현할 수 있습니다. "
-assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8: xamarin-forms author: davidbritch: dabritch:: 06/21/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 파일 처리Xamarin.Forms
+description: 를 사용 하 여 파일을 처리 Xamarin.Forms 하는 것은 .NET Standard 라이브러리의 코드를 사용 하거나 포함 된 리소스를 사용 하 여 구현할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/21/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f62e5522b5b9a10a3806a70fe949561d77ce0d4e
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84574355"
 ---
-
 # <a name="file-handling-in-xamarinforms"></a>파일 처리Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)

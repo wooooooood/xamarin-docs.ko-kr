@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms " 설명: "이미지를 사용 하 여 플랫폼 간에 이미지를 공유할 수 있으며, Xamarin.Forms 각 플랫폼에 대해 특별히 로드 하거나 표시를 위해 다운로드할 수 있습니다."
-assetid: C025AB53-05CC-49BA-9815-75D6DF9E40B7: xamarin-forms author: davidbritch: dabritch:: 12/04/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 이미지Xamarin.Forms
+description: 이미지는를 사용 하 여 플랫폼 간에 공유 될 수 있으며 Xamarin.Forms , 각 플랫폼에 대해 특별히 로드 하거나 표시를 위해 다운로드할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: C025AB53-05CC-49BA-9815-75D6DF9E40B7
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/19/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7117bb809c43ab5edb67e8367840b17cd1d97ef9
+ms.sourcegitcommit: c000c0ed15b7b2ef2a8f46a39171e11b6d9f8a5d
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84980092"
 ---
-
 # <a name="images-in-xamarinforms"></a>이미지Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
@@ -15,7 +29,7 @@ _이미지는를 사용 하 여 플랫폼 간에 공유 될 수 있으며 Xamari
 
 ## <a name="display-images"></a>이미지 표시
 
-Xamarin.Forms뷰를 사용 하 여 [`Image`](xref:Xamarin.Forms.Image) 페이지에 이미지를 표시 합니다. 여기에는 두 가지 중요 한 속성이 있습니다.
+Xamarin.Forms뷰를 사용 하 여 [`Image`](xref:Xamarin.Forms.Image) 페이지에 이미지를 표시 합니다. 여기에는 몇 가지 중요 한 속성이 있습니다.
 
 - [`Source`](xref:Xamarin.Forms.Image.Source)- [`ImageSource`](xref:Xamarin.Forms.ImageSource) 표시할 이미지를 설정 하는 파일, Uri 또는 리소스 중 하나입니다.
 - [`Aspect`](xref:Xamarin.Forms.Image.Aspect)-이미지가 표시 되는 범위 내에서 이미지의 크기를 조정 하는 방법 (스트레치, 자르기 또는 레터 박스).
@@ -30,7 +44,7 @@ Xamarin.Forms뷰를 사용 하 여 [`Image`](xref:Xamarin.Forms.Image) 페이지
 [`Aspect`](xref:Xamarin.Forms.Image.Aspect)속성은 이미지가 표시 영역에 맞게 조정 되는 방법을 결정 합니다.
 
 - [`Fill`](xref:Xamarin.Forms.Aspect.Fill)-표시 영역을 완전히 그리고 정확 하 게 채우도록 이미지를 확장 합니다. 이로 인해 이미지가 왜곡 될 수 있습니다.
-- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill)-모양을 유지 하면서 표시 영역을 채우도록 이미지를 클리핑 합니다 (즉, 왜곡 안 함).
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill)-화면을 유지 하면서 화면에 표시 영역을 채우도록 이미지를 클리핑 합니다 (즉, 왜곡이 발생 하지 않음).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit)-이미지 (필요한 경우)를 Letterboxes 하 여 전체 이미지가 표시 영역에 들어가도록 이미지의 너비 또는 높이에 따라 위쪽/아래쪽 또는 옆쪽에 공백이 추가 됩니다.
 
 이미지는 [로컬 파일](#local-images)에서 로드 하거나, [포함 된 리소스](#embedded-images)에서 로드 하거나, [다운로드](#download-images)하거나, 스트림에서 로드할 수 있습니다. 또한 [`Image`](xref:Xamarin.Forms.Image) 개체에 글꼴 아이콘 데이터를 지정 하 여 보기에서 글꼴 아이콘을 표시할 수 있습니다 `FontImageSource` . 자세한 내용은 글꼴 가이드에서 [글꼴 아이콘 표시](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) [를 참조](~/xamarin-forms/user-interface/text/fonts.md) 하세요.
@@ -39,7 +53,7 @@ Xamarin.Forms뷰를 사용 하 여 [`Image`](xref:Xamarin.Forms.Image) 페이지
 
 이미지 파일은 각 응용 프로그램 프로젝트에 추가 되 고 공유 코드에서 참조 될 수 있습니다 Xamarin.Forms . 이미지를 배포하는 이 메서드는 다양한 플랫폼 또는 약간 다른 디자인의 다양한 해결 방법을 사용하는 경우와 같이 이미지가 특정 플랫폼을 지정하는 경우에 필요합니다.
 
-모든 앱에서 단일 이미지를 사용 하려면 *동일한 파일 이름이 모든 플랫폼에서 사용*되어야 하며 유효한 Android 리소스 이름 이어야 합니다 (소문자, 숫자, 밑줄 및 마침표만 사용할 수 있음).
+모든 앱에서 단일 이미지를 사용 하려면 *동일한 파일 이름이 모든 플랫폼에서 사용*되어야 하며 유효한 Android 리소스 이름 이어야 합니다 (예: 소문자, 숫자, 밑줄 및 마침표만 사용할 수 있음).
 
 - **ios** -ios 9 이후 이미지를 관리 하 고 지 원하는 기본 방법은 응용 프로그램의 다양 한 장치 및 크기 조정 요소를 지 원하는 데 필요한 모든 이미지 버전을 포함 해야 하는 **Asset Catalog 이미지 집합**을 사용 하는 것입니다. 자세한 내용은 [자산 카탈로그 이미지 집합에 이미지 추가](~/ios/app-fundamentals/images-icons/displaying-an-image.md)를 참조 하세요.
 - **Android** - **빌드 작업: AndroidResource**를 사용 하 여 **리소스/그릴** 때 디렉터리에 이미지를 추가 합니다. 이미지의 높은 및 낮은 DPI 버전 ( **ldpi**, 그릴 수 있는- **hdpi**및 그릴 수 있는 **-xhdpi**와 같이 적절 하 게 명명 된 **리소스** 하위 디렉터리)을 제공할 수도 있습니다.
@@ -231,14 +245,13 @@ var imageSource = ImageSource.FromResource("filename.png",
 다음 XAML과 같이 이미지를 표시 하기 위해 자동으로 다운로드할 수 있습니다.
 
 ```xaml
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
        x:Class="WorkingWithImages.DownloadImagesXaml">
   <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
     <Label Text="Image UriSource Xaml" />
-    <Image Source="https://xamarin.com/content/images/pages/forms/example-app.png" />
-    <Label Text="example-app.png gets downloaded from xamarin.com" />
+    <Image Source="https://aka.ms/campus.jpg" />
+    <Label Text="campus.jpg gets downloaded from microsoft.com" />
   </StackLayout>
 </ContentPage>
 ```
@@ -248,7 +261,7 @@ var imageSource = ImageSource.FromResource("filename.png",
 ```csharp
 var webImage = new Image {
      Source = ImageSource.FromUri(
-        new Uri("https://xamarin.com/content/images/pages/forms/example-app.png")
+        new Uri("https://aka.ms/campus.jpg")
      ) };
 ```
 
@@ -257,7 +270,7 @@ var webImage = new Image {
 URI 문자열에 대 한 암시적 변환도 있으므로 다음 예제도 작동 합니다.
 
 ```csharp
-webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.png";
+webImage.Source = "https://aka.ms/campus.jpg";
 ```
 
 다음 스크린샷에는 각 플랫폼에 원격 이미지를 표시 한 결과가 나와 있습니다.
@@ -274,7 +287,7 @@ webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.pn
 캐싱은 기본적으로 사용 하도록 설정 되며 24 시간 동안 로컬로 이미지를 저장 합니다. 특정 이미지에 대 한 캐싱을 사용 하지 않도록 설정 하려면 다음과 같이 이미지 원본을 인스턴스화합니다.
 
 ```csharp
-image.Source = new UriImageSource { CachingEnabled = false, Uri = new Uri("http://server.com/image") };
+image.Source = new UriImageSource { CachingEnabled = false, Uri = new Uri("https://server.com/image") };
 ```
 
 특정 캐시 기간을 설정 하려면 (예: 5 일) 다음과 같이 이미지 원본을 인스턴스화합니다.
@@ -282,7 +295,7 @@ image.Source = new UriImageSource { CachingEnabled = false, Uri = new Uri("http:
 ```csharp
 webImage.Source = new UriImageSource
 {
-    Uri = new Uri("https://xamarin.com/content/images/pages/forms/example-app.png"),
+    Uri = new Uri("https://aka.ms/campus.jpg"),
     CachingEnabled = true,
     CacheValidity = new TimeSpan(5,0,0,0)
 };

@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp 비트맵에 애니메이션 적용" 설명: "일련의 비트맵을 순차적으로 표시 하 고 애니메이션 GIF 파일을 렌더링 하 여 비트맵 애니메이션을 수행 하는 방법을 알아봅니다."
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD author: davidbritch: dabritch: 07/12/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp 비트맵에 애니메이션 적용
+description: 일련의 비트맵을 순차적으로 표시 하 고 애니메이션 GIF 파일을 렌더링 하 여 비트맵 애니메이션을 수행 하는 방법을 알아봅니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/12/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 763f44c26d653aa32429b2aa764989e18e8b8078
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139973"
 ---
-
 # <a name="animating-skiasharp-bitmaps"></a>SkiaSharp 비트맵에 애니메이션 적용
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
