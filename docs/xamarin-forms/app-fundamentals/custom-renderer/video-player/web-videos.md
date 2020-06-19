@@ -1,20 +1,20 @@
 ---
-title: ''
+title: 웹 비디오 재생
 description: 이 문서에서는 Xamarin.Forms를 사용하여 비디오 플레이어 애플리케이션에서 웹 비디오를 재생하는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: 75781A10-865D-4BA8-8D6B-E3DA012922BC
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: b4269b768d6dd9a0eadbbe557f701f8a43b74c99
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84133681"
 ---
 # <a name="playing-a-web-video"></a>웹 비디오 재생

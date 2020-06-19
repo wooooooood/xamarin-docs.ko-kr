@@ -1,20 +1,20 @@
 ---
 title: Xamarin.Forms 데이터 템플릿 소개
 description: Xamarin.Forms 데이터 템플릿은 지원되는 컨트롤에 있는 데이터 프레젠테이션을 정의하는 기능을 제공합니다. 이 문서에서는 데이터 템플릿이 필요한 이유를 검토하면서 데이터 템플릿을 소개합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: 4ED4ACF4-BE4A-44ED-8EAF-C03947B8663B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: f71e0a67b823d92a17158a076707f606f6a4c73f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84136112"
 ---
 # <a name="introduction-to-xamarinforms-data-templates"></a>Xamarin.Forms 데이터 템플릿 소개

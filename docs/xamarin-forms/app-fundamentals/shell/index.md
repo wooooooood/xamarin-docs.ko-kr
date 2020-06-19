@@ -1,20 +1,20 @@
 ---
 title: Xamarin.Forms Shell
 description: 이 가이드에서는 대부분의 애플리케이션에서 필요로 하는 기본 기능을 제공하여 Xamarin.Forms 애플리케이션의 복잡성을 줄이는 Xamarin.Forms Shell을 사용하는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: 85B322AA-808F-41B6-953A-5877264AE643
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/28/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 0acf00d85c2bfb823ec1cfba099179bb6743117c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84138751"
 ---
 # <a name="xamarinforms-shell"></a>Xamarin.Forms Shell

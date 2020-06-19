@@ -1,9 +1,21 @@
 ---
-title: “Xamarin.Forms란?”
-description: “이 문서에서는 Xamarin.Forms 및 관련 라이브러리를 소개합니다.”
-ms.prod: xamarin ms.assetid: C1E24DB9-3099-4F79-BB88-10AABF7D4614 author: profexorgeek ms.author: jusjohns ms.date: 05/28/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Xamarin.Forms란?
+description: 이 문서에서는 Xamarin.Forms과 관련 라이브러리를 소개합니다.
+ms.prod: xamarin
+ms.assetid: C1E24DB9-3099-4F79-BB88-10AABF7D4614
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 05/28/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: eb76da9be7fcb227c465c0a046b967b2f70b1cfb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198314"
 ---
-
 # <a name="what-is-xamarinforms"></a>Xamarin.Forms란?
 
 [![iOS 및 Android의 Xamarin.Forms 애플리케이션 예제 스크린샷](what-is-xamarin-forms-images/xamarin-forms-app-cropped.png)](what-is-xamarin-forms-images/xamarin-forms-app.png#lightbox)

@@ -1,20 +1,20 @@
 ---
-title: ''
+title: 애플리케이션 리소스 비디오 로드
 description: 이 문서에서는 Xamarin.Forms를 사용하여 비디오 플레이어 애플리케이션에서 애플리케이션 리소스로 저장된 비디오를 로드하는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: F75BD540-9354-4C17-A119-57F3DEC66D54
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 472c6c2a7c5a084520aee6b8ae160d9329c3f593
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84133765"
 ---
 # <a name="loading-application-resource-videos"></a>애플리케이션 리소스 비디오 로드

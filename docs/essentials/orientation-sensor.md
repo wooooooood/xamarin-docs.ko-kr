@@ -1,6 +1,19 @@
 ---
-title: “Xamarin.Essentials: OrientationSensor” description: “OrientationSensor 클래스를 사용하면 3차원 공간에서 디바이스의 방향을 모니터링할 수 있습니다.”
-ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5 author: jamesmontemagno ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: OrientationSensor'
+description: OrientationSensor 클래스를 사용하면 3차원 공간에서 디바이스의 방향을 모니터링할 수 있습니다.
+ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e61a3730e80c8fb60aee076b028ee54bed6887b3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802224"
 ---
 # <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: OrientationSensor
 
@@ -100,5 +113,5 @@ public class OrientationSensorTest
 
 ## <a name="api"></a>API
 
-- [OrientationSensor 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/OrientationSensor)
+- [OrientationSensor 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/OrientationSensor)
 - [OrientationSensor API 문서](xref:Xamarin.Essentials.OrientationSensor)

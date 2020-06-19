@@ -1,20 +1,20 @@
 ---
 title: Xamarin.Forms 빠른 시작
 description: Visual Studio 및 Mac용 Visual Studio를 사용하여 Xamarin.Forms 애플리케이션을 개발하는 방법에 대한 빠른 시작.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 3318B8F8-3B24-489E-8E7B-28FA948796F8
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 03d20114fb84bf17be40d9166e32c3d631786069
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84132511"
 ---
 # <a name="xamarinforms-quickstarts"></a>Xamarin.Forms 빠른 시작

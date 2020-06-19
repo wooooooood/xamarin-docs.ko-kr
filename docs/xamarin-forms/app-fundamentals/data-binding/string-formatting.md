@@ -1,20 +1,20 @@
 ---
 title: Xamarin.Forms 문자열 서식 지정
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+description: 이 문서에서는 Xamarin.FOrms 데이터 바인딩을 사용하여 개체에 문자열 형식을 지정하고 나타내는 방법을 설명합니다. 이것은 자리 표시자를 사용하여 바인딩의 StringFormat을 표준 .NET 형식 지정 문자열로 설정하여 구현할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: d08a89d5394a227e3cee76603e4e97d2cf9495e0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84135761"
 ---
 # <a name="xamarinforms-string-formatting"></a>Xamarin.Forms 문자열 서식 지정

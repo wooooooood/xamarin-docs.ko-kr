@@ -1,20 +1,20 @@
 ---
 title: Xamarin.Forms 지역화
 description: 기본 제공되는 .NET 지역화 프레임워크는 Xamarin.Forms로 플랫폼 간 다국어 애플리케이션을 빌드하는 데 사용할 수 있습니다. 텍스트 및 이미지를 지역화할 수 있고 애플리케이션은 오른쪽에서 왼쪽 흐름 방향을 지원할 수 있습니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: 97BF843B-BDAA-4CEA-8189-6DB54B291D7F
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: dddb80e8fb683547d2bf6ba0b74e870fe240695c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84137568"
 ---
 # <a name="xamarinforms-localization"></a>Xamarin.Forms 지역화

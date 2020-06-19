@@ -1,20 +1,20 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 연결된 동작
+description: 연결된 동작은 연결된 속성이 하나 이상 있는 정적 클래스입니다. 이 문서에서는 연결된 동작을 만들고 사용하는 방법을 설명합니다.
+ms.prod: xamarin
+ms.assetid: ECEE6AEC-44FA-4AF7-BAD0-88C6EE48422E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 08b1c738dc87bb9373436a3fd96486eb15341112
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84139427"
 ---
 # <a name="attached-behaviors"></a>연결된 동작

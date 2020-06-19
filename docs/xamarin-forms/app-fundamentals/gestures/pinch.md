@@ -1,20 +1,20 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 손가락 모으기 제스처 인식기 추가
+description: 이 문서에서는 손가락 모으기 제스처를 사용하여 손가락 모으기 위치에서 이미지의 대화형 확대/축소를 수행하는 방법을 설명합니다.
+ms.prod: xamarin
+ms.assetid: 832F7810-F0CF-441A-B04A-3975F3FB8B29
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/21/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: da4a8bc66a7986efd3683de6dce1f6af618b85cc
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84137854"
 ---
 # <a name="adding-a-pinch-gesture-recognizer"></a>손가락 모으기 제스처 인식기 추가

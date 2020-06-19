@@ -1,19 +1,19 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: Windows에서 Xamarin 미리 보기 설치
+description: 이 문서에서는 미리 보기 릴리스 채널을 사용하여 Visual Studio 2019에 Xamarin의 미리 보기 버전을 설치하는 방법을 설명합니다.
+ms.prod: xamarin
+ms.assetid: 9F730444-06E8-4B3F-8A19-CA95CD484FFA
+author: conceptdev
+ms.author: crdun
+ms.date: 03/20/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 5ccd5a610ad41c0160a6778a63a367376bd200b3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84134019"
 ---
 # <a name="installing-xamarin-preview-on-windows"></a>Windows에서 Xamarin 미리 보기 설치

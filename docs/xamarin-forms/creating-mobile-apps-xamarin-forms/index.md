@@ -1,8 +1,22 @@
 ---
-title: “Xamarin.Forms로 Mobile Apps 만들기 설명서 책” description: “Charles Petzold가 집필한 전자 버전의 Creating Mobile Apps with Xamarin.Forms 책을 읽고 Xamarin.Forms 애플리케이션 개발에 대해 알아봅니다.”
-ms.prod: xamarin ms.assetid: CDE99818-689B-4376-9DC4-C4102AC0F931 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 07/19/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Creating Mobile Apps with Xamarin.Forms 책
+description: Charles Petzold가 집필한 전자 버전의 Creating Mobile Apps with Xamarin.Forms 책을 읽고 Xamarin.Forms 애플리케이션 개발에 대해 알아봅니다.
+ms.prod: xamarin
+ms.assetid: CDE99818-689B-4376-9DC4-C4102AC0F931
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e38c319db0d0adf23a2ec0d328ccc3822e33f66d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198290"
 ---
-
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Creating Mobile Apps with Xamarin.Forms 책
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples)

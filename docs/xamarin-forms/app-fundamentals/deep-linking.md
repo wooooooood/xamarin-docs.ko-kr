@@ -1,22 +1,22 @@
 ---
-title: ''
+title: 애플리케이션 인덱싱 및 딥 링크 설정
 description: 이 문서에서는 애플리케이션 인덱싱 및 딥 링크를 사용하여 iOS 및 Android 디바이스에서 Xamarin.Forms 애플리케이션 콘텐츠를 검색 가능하게 하는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d93f9bbcfafc3cb71d6b71159f6d3368f50c08be
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: c7f5979b93ff35b14ec7c13418a4565604f46bd7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135735"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570637"
 ---
 # <a name="application-indexing-and-deep-linking"></a>애플리케이션 인덱싱 및 딥 링크 설정
 
@@ -155,8 +155,6 @@ Application.Current.AppLinks.DeregisterLink (appLink);
 
 > [!NOTE]
 > Android에서는 검색 결과에서 인덱싱된 콘텐츠를 제거할 수 없습니다.
-
-<a name="responding" />
 
 ## <a name="responding-to-a-deep-link"></a>딥 링크에 응답
 

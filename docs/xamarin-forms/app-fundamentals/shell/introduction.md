@@ -1,20 +1,20 @@
 ---
 title: Xamarin.Forms Shell 소개
 description: Xamarin.Forms Shell은 일반 탐색 사용자 환경, URI 기반 탐색 체계 및 통합 검색 처리기를 포함하여 대부분의 애플리케이션에 필요한 기본 기능을 제공합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: 4604DCB5-83DA-458A-8B02-6508A740BE0E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/20/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 29a99161ff2ef2d71b6c803db994522bfe80ed03
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84138738"
 ---
 # <a name="xamarinforms-shell-introduction"></a>Xamarin.Forms Shell 소개

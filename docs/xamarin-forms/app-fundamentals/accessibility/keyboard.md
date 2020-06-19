@@ -1,20 +1,20 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 키보드 접근성
+description: 기본 탭 시퀀스를 사용하지 않고 TabIndex 속성 및 IsTapStop 속성의 결합으로 탭 시퀀스를 지정하여 경우에 따라 UI의 접근성을 조정할 필요가 있습니다.
+ms.prod: xamarin
+ms.assetid: 8be8f498-558a-4894-a01f-91a0d3ef927e
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/09/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: e1590d0a4f9716541f18bc4f50a2c480c5e4478a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84129781"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Xamarin.Forms에서의 키보드 접근성

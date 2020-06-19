@@ -1,20 +1,20 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 살짝 밀기 제스처 인식기 추가
+description: 이 문서에서는 뷰에서 발생한 살짝 밀기 제스처를 인식하는 방법을 설명합니다.
+ms.prod: xamarin
+ms.assetid: 164976C2-1429-49FB-9EB6-621E2681C19B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 03663803313c870a3361c6e1ffc85cf1f8999068
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84137890"
 ---
 # <a name="adding-a-swipe-gesture-recognizer"></a>살짝 밀기 제스처 인식기 추가

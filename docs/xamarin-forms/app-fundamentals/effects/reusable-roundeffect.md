@@ -1,20 +1,20 @@
 ---
 title: Xamarin.Forms 재사용 가능한 RoundEffect
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+description: RoundEffect는 VisualElement에서 파생된 모든 컨트롤에 적용하여 컨트롤을 원으로 렌더링할 수 있는 재사용 가능한 효과입니다.
+ms.prod: xamarin
+ms.assetid: B5DE7507-B565-4EE5-9897-27E5733FD173
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 10/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: fc3776934a4c109b2527132b11c6c6a93b7d9f9e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84138855"
 ---
 # <a name="xamarinforms-reusable-roundeffect"></a>Xamarin.Forms 재사용 가능한 RoundEffect

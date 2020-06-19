@@ -1,21 +1,21 @@
 ---
-title: ''
+title: 탭 제스처 인식기 추가
 description: 이 문서에서는 Xamarin.Forms 애플리케이션에서 탭 감지를 위한 탭 제스처를 사용하는 방법을 설명합니다. 탭 감지는 TapGestureRecognizer 클래스를 사용하여 구현됩니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/21/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0470419dd5070424c362dec8d4b1978507985783
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: 1f5b476ac83f801b4ccded3e18bb601c06e0d0ef
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137620"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570611"
 ---
 # <a name="adding-a-tap-gesture-recognizer"></a>탭 제스처 인식기 추가
 
@@ -40,8 +40,6 @@ tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
 ```
 
 [`NumberOfTapsRequired`](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired)가 1보다 크게 설정되면 설정된 일정 기간(이 기간은 구성할 수 없음) 내에 탭이 발생할 경우에만 이벤트 처리기가 실행됩니다. 두 번째(또는 후속) 탭이 해당 기간 내에 발생하지 않으면 실질적으로 무시되고 ‘탭 수’는 다시 시작됩니다.
-
-<a name="Using_Xaml" />
 
 ## <a name="using-xaml"></a>XAML 사용
 

@@ -1,20 +1,20 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 효과에 매개 변수 전달
+description: 효과 매개 변수는 속성을 사용하여 정의할 수 있으며 해당 효과를 다시 사용할 수 있습니다. 그런 다음, 효과를 인스턴스화할 때 각 속성에 대한 값을 지정하여 매개 변수를 효과에 전달할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: F6429859-6EF7-48BE-A0CB-8F42B8A75215
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 42d3943b00fc2ae5385343f946d9d96743e955cd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84138842"
 ---
 # <a name="passing-parameters-to-an-effect"></a>효과에 매개 변수 전달

@@ -1,20 +1,20 @@
 ---
 title: Xamarin.Forms 사용자 지정 렌더러
 description: 개발자는 사용자 지정 렌더러를 통해 각 플랫폼에서 네이티브 컨트롤의 렌더링을 재정의하여 Xamarin.Forms 컨트롤의 모양과 동작을 사용자 지정할 수 있습니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/03/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: be281f9b7987a8d23ba6ac93f0771e432f277d45
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84138920"
 ---
 # <a name="xamarinforms-custom-renderers"></a>Xamarin.Forms 사용자 지정 렌더러

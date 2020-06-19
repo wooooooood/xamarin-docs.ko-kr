@@ -1,31 +1,29 @@
 ---
 title: Xamarin.Forms 앱 수명 주기
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+description: 이 문서에서는 수명 주기 메서드, 페이지 알림 이벤트 및 모달 탐색 이벤트를 포함하여 애플리케이션 수명 주기에 응답하는 방법을 설명합니다.
+ms.prod: xamarin
+ms.assetid: 69B416CF-B243-4790-AB29-F030B32465BE
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/31/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3793a54f04b2c028752e18e2a5a238c275c2958a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: 2a67d0c3adb54332bf30879a5b6f1d086581f0ec
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129677"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573341"
 ---
 # <a name="xamarinforms-app-lifecycle"></a>Xamarin.Forms 앱 수명 주기
 
 [`Application`](xref:Xamarin.Forms.Application) 기본 클래스에서 제공하는 기능은 다음과 같습니다.
 
-- [수명 주기 메서드](#Lifecycle_Methods) `OnStart`, `OnSleep` 및 `OnResume`.
-- [페이지 탐색 이벤트](#page) [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing), [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing).
-- [모달 탐색 이벤트](#modal) `ModalPushing`, `ModalPushed`, `ModalPopping` 및 `ModalPopped`.
-
-<a name="Lifecycle_Methods" />
+- [수명 주기 메서드](#lifecycle-methods) `OnStart`, `OnSleep` 및 `OnResume`.
+- [페이지 탐색 이벤트](#page-navigation-events) [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing), [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing).
+- [모달 탐색 이벤트](#modal-navigation-events) `ModalPushing`, `ModalPushed`, `ModalPopping` 및 `ModalPopped`.
 
 ## <a name="lifecycle-methods"></a>수명 주기 메서드
 
@@ -58,9 +56,7 @@ protected override void OnResume()
 > [!IMPORTANT]
 > Android에서는 기본 작업의 `[Activity()]` 특성에 `ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation`이 없는 경우 애플리케이션이 처음 시작될 때 `OnStart` 메서드가 호출됩니다.
 
-<a name="page" />
-
-## <a name="page-notification-events"></a>페이지 알림 이벤트
+## <a name="page-navigation-events"></a>페이지 탐색 이벤트
 
 [`Application`](xref:Xamarin.Forms.Application) 클래스에는 나타나는 페이지와 사라지는 페이지에 대한 알림을 제공하는 두 개의 이벤트가 있습니다.
 
@@ -71,8 +67,6 @@ protected override void OnResume()
 
 > [!NOTE]
 > [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing) 및 [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing) 이벤트는 각각 [`Page.Appearing`](xref:Xamarin.Forms.Page.Appearing) 및 [`Page.Disappearing`](xref:Xamarin.Forms.Page.Disappearing) 이벤트가 발생한 직후에 [`Page`](xref:Xamarin.Forms.Page) 기본 클래스에서 발생합니다.
-
-<a name="modal" />
 
 ## <a name="modal-navigation-events"></a>모달 탐색 이벤트
 

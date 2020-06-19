@@ -1,20 +1,20 @@
 ---
-title: ''
+title: 플레이어에 비디오 소스 바인딩
 description: 이 문서에서는 Xamarin.Forms를 사용하여 비디오 플레이어에 비디오 소스를 바인딩하는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: 504E0C7E-051A-4AF2-B654-BAB4D0957928
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: c02764d6160bb8ce2481a3cf67e357933d25934f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84133733"
 ---
 # <a name="binding-video-sources-to-the-player"></a>플레이어에 비디오 소스 바인딩

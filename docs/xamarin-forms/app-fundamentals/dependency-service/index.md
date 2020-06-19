@@ -1,20 +1,20 @@
 ---
 title: Xamarin.Forms DependencyService
 description: Xamarin.Forms DependencyService 클래스는 Xamarin.Forms 애플리케이션이 공유 코드에서 네이티브 플랫폼 기능을 호출할 수 있도록 하는 서비스 로케이터입니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: 403479F2-6751-41F2-ADCE-3AF595062FE4
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 126e2d2373bad923fe1d66fe355ad811c15fbe4f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84138374"
 ---
 # <a name="xamarinforms-dependencyservice"></a>Xamarin.Forms DependencyService

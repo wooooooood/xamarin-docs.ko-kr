@@ -1,20 +1,20 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 효과로부터 이벤트 호출
+description: 효과는 기본 네이티브 뷰의 변경을 신호로 알리는 이벤트를 정의하고 호출할 수 있습니다. 이 문서에서는 하위 수준 멀티 터치 손가락 추적을 구현하는 방법과 터치 동작을 신호로 알려주는 이벤트를 생성하는 방법을 보여줍니다.
+ms.prod: xamarin
+ms.assetid: 6A724681-55EB-45B8-9EED-7E412AB19DD2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 892bffa4027a1a61d6c22cc26d1556fb007432d8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84136983"
 ---
 # <a name="invoking-events-from-effects"></a>효과로부터 이벤트 호출

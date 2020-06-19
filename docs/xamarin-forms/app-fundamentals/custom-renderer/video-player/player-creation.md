@@ -1,20 +1,20 @@
 ---
-title: ''
+title: 플랫폼 비디오 플레이어 만들기
 description: 이 문서에서는 Xamarin.Forms를 사용하여 각 플랫폼에서 비디오 플레이어 사용자 지정 렌더러를 구현하는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: EEE2FB9B-EB73-4A3F-A859-7A1D4808E149
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: d026ecc3288da155aefb0f68ee0c70721106c0da
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84133746"
 ---
 # <a name="creating-the-platform-video-players"></a>플랫폼 비디오 플레이어 만들기

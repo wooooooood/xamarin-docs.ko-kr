@@ -1,21 +1,21 @@
 ---
-title: ''
+title: 오른쪽에서 왼쪽으로 쓰는 언어 지역화
 description: 오른쪽에서 왼쪽으로 쓰는 언어 지역화는 Xamarin.Forms 애플리케이션에 오른쪽에서 왼쪽 흐름 방향을 추가로 지원합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: 90E0CB16-C42A-4CC8-A70E-0C2CFB64A429
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/07/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 212674472706a36c66436a3955ab7b988f8e246b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84137555"
 ---
 # <a name="right-to-left-localization"></a>오른쪽에서 왼쪽으로 쓰는 언어 지역화

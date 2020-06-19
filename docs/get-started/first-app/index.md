@@ -1,22 +1,22 @@
 ---
 title: 첫 번째 Xamarin.Forms 앱 빌드
 description: Visual Studio에서 첫 번째 Xamarin.Forms 애플리케이션을 빌드하는 방법을 보여 주는 비디오 가이드입니다.
-zone_pivot_groups: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
+zone_pivot_groups: platform-dev16
+ms.prod: xamarin
+ms.assetid: 72B6AF82-4D98-47E5-AB54-0A35B3253468
+ms.technology: xamarin-forms
+ms.custom: video
+author: conceptdev
+ms.author: crdun
+ms.date: 05/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: da56bde956a0ff7730ef6737e2802c3723d6d716
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84133484"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>첫 번째 Xamarin.Forms 앱 빌드

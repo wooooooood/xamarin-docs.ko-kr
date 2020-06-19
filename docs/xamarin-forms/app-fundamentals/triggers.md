@@ -1,20 +1,20 @@
 ---
 title: Xamarin.Forms 트리거
 description: 이 문서에서는 Xamarin.Forms 트리거를 사용하여 XAML에서 사용자 인터페이스 변경에 응답하는 방법을 설명합니다. 트리거를 사용하면 XAML에서 이벤트 또는 속성 변경에 따라 컨트롤의 모양을 변경하는 작업을 선언적으로 표현할 수 있습니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: f92ad47ae883f4b1b413ae5192a9add83045bb77
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84136957"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.Forms 트리거

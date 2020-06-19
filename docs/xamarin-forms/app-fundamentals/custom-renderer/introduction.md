@@ -1,20 +1,20 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 사용자 지정 렌더러 소개
+description: 이 문서에서는 사용자 지정 렌더러를 소개하고 사용자 지정 렌더러를 만드는 과정을 간략하게 설명합니다.
+ms.prod: xamarin
+ms.assetid: 264314BE-1C5C-4727-A14E-F6F98151CDBD
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/19/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: e2bed4d5e8f89efa2997fb085278c4b549870245
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84135323"
 ---
 # <a name="introduction-to-custom-renderers"></a>사용자 지정 렌더러 소개

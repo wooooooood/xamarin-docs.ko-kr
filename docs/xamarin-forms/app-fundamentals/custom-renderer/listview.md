@@ -1,21 +1,21 @@
 ---
-title: ''
+title: ListView 사용자 지정
 description: Xamarin.Forms ListView는 데이터의 컬렉션을 세로 목록으로 표시하는 보기입니다. 이 문서에서는 네이티브 목록 컨트롤 성능을 보다 효과적으로 제어할 수 있도록 플랫폼별 리스트 컨트롤과 네이티브 셀 레이아웃을 캡슐화하는 사용자 지정 렌더러를 만드는 방법을 보여줍니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: 2FBCB8C8-4F32-45E7-954F-63AD29D5F1B5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3403948c2853289610a73bb36073f09c0c86137d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: dc28cdaf78c72c219706a30c30af7f90ae7c4eec
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135306"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84569623"
 ---
 # <a name="customizing-a-listview"></a>ListView 사용자 지정
 
@@ -31,13 +31,11 @@ _Xamarin.Forms ListView는 데이터의 컬렉션을 세로 목록으로 표시�
 
 렌더링 프로세스는 각 플랫폼에서 [`ListView`](xref:Xamarin.Forms.ListView)에 대한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현하는 데 활용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
-1. Xamarin.Forms 사용자 지정 컨트롤을 [만듭니다](#Creating_the_Custom_ListView_Control).
-1. Xamarin.Forms에서 사용자 지정 컨트롤을 [사용합니다](#Consuming_the_Custom_Control).
-1. 각 플랫폼의 컨트롤에 대한 사용자 지정 렌더러를 [만듭니다](#Creating_the_Custom_Renderer_on_each_Platform).
+1. Xamarin.Forms 사용자 지정 컨트롤을 [만듭니다](#creating-the-custom-listview-control).
+1. Xamarin.Forms에서 사용자 지정 컨트롤을 [사용합니다](#consuming-the-custom-control).
+1. 각 플랫폼의 컨트롤에 대한 사용자 지정 렌더러를 [만듭니다](#creating-the-custom-renderer-on-each-platform).
 
 이제 플랫폼별 목록 컨트롤 및 네이티브 셀 레이아웃을 활용하는 `NativeListView` 렌더러를 구현하도록 각 항목을 차례로 설명합니다. 이 시나리오는 다시 사용할 수 있는 목록 및 셀 코드를 포함하는 기존 네이티브 앱을 이식하는 경우에 유용합니다. 또한 데이터 가상화와 같은 성능에 영향을 줄 수 있는 목록 컨트롤 기능의 자세한 사용자 지정을 허용합니다.
-
-<a name="Creating_the_Custom_ListView_Control" />
 
 ## <a name="creating-the-custom-listview-control"></a>사용자 지정 ListView 컨트롤 만들기
 
@@ -66,8 +64,6 @@ public class NativeListView : ListView
 ```
 
 `NativeListView`는 .NET 표준 라이브러리 프로젝트에서 생성되고 사용자 지정 컨트롤에 대한 API를 정의합니다. 이 컨트롤은 데이터로 `ListView`를 채우는 데 사용되는 `Items` 속성을 노출하며, 표시 목적을 위해 바인딩되는 데이터가 될 수 있습니다. 또한 항목이 플랫폼별 네이티브 목록 컨트롤에서 선택될 때마다 발생하는 `ItemSelected` 이벤트를 노출합니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 기본](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)을 참조하세요.
-
-<a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>사용자 지정 컨트롤 사용
 
@@ -142,8 +138,6 @@ public class MainPageCS : ContentPage
 > `NativeListView` 사용자 지정 컨트롤은 스크롤 기능을 포함하는 플랫폼별 목록 컨트롤을 사용하여 렌더링되므로 사용자 지정 컨트롤은 [`ScrollView`](xref:Xamarin.Forms.ScrollView)와 같은 스크롤할 수 있는 레이아웃 컨트롤에서 호스트되어서는 안 됩니다.
 
 이제 각 애플리케이션 프로젝트에 사용자 지정 렌더러를 추가하여 플랫폼별 목록 컨트롤 및 네이티브 셀 레이아웃을 만들 수 있습니다.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>각 플랫폼에서 사용자 지정 렌더러 만들기
 

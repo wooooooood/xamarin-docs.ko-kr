@@ -1,20 +1,20 @@
 ---
 title: Xamarin.Forms 바인딩 모드
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+description: 이 문서에서는 BindingMode 열거형의 멤버를 통해 지정되는 바인딩 모드를 사용하여 원본과 대상 간의 정보 흐름을 제어하는 방법을 설명합니다. 바인딩할 수 있는 모든 속성에는 기본 바인딩 모드가 있으며, 속성이 데이터 바인딩 대상일 때 적용되는 모드를 나타냅니다.
+ms.prod: xamarin
+ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/01/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: c14215071a1d9d3ec804c307fa6edbbe4ddcf8e9
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84139778"
 ---
 # <a name="xamarinforms-binding-mode"></a>Xamarin.Forms 바인딩 모드

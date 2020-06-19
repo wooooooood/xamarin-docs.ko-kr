@@ -1,21 +1,21 @@
 ---
 title: Xamarin.Forms DataTemplate 만들기
 description: 데이터 템플릿은 ResourceDictionary에서 인라인으로 만들거나 사용자 지정 형식 또는 적절한 Xamarin.Forms 셀 형식으로 만들 수 있습니다. 이 문서에서는 각 기법을 살펴봅니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: CFF4AB5E-9069-461C-84D8-F9F6C38510AB
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3e91d6f091870fe9203e67eda1454b8062383deb
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: 3054180a9deb1357357c90db7b7fbdd8058b6773
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139934"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565501"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>Xamarin.Forms DataTemplate 만들기
 
@@ -25,15 +25,13 @@ _데이터 템플릿은 ResourceDictionary에서 인라인으로 만들거나 �
 
 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)에 대한 일반적인 시나리오는 [`ListView`](xref:Xamarin.Forms.ListView)에서 개체 컬렉션의 데이터를 표시하는 것입니다. [`ListView`](xref:Xamarin.Forms.ListView)에서 각 셀에 대한 데이터 모양은 [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) 속성을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)으로 설정하여 관리할 수 있습니다. 이 작업을 수행하는 데 사용할 수 있는 여러 기법이 있습니다.
 
-- [인라인 DataTemplate 만들기](#inline)
-- [형식과 함께 DataTemplate 만들기](#type)
-- [DataTemplate을 리소스로 만들기](#resource)
+- [인라인 DataTemplate 만들기](#creating-an-inline-datatemplate)
+- [형식과 함께 DataTemplate 만들기](#creating-a-datatemplate-with-a-type)
+- [DataTemplate을 리소스로 만들기](#creating-a-datatemplate-as-a-resource)
 
 다음 스크린샷에 표시된 것처럼 사용되는 기법에 관계 없이, [`ListView`](xref:Xamarin.Forms.ListView)에서 각 셀의 모양은 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)으로 정의됩니다.
 
 ![](creating-images/data-template-appearance.png "ListView with a DataTemplate")
-
-<a name="inline" />
 
 ## <a name="creating-an-inline-datatemplate"></a>인라인 DataTemplate 만들기
 
@@ -114,8 +112,6 @@ public class WithDataTemplatePageCS : ContentPage
 ```
 
 C#에서는 인라인 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)이 `Func` 인수를 지정하는 생성자 오버로드를 사용하여 생성됩니다.
-
-<a name="type" />
 
 ## <a name="creating-a-datatemplate-with-a-type"></a>형식과 함께 DataTemplate 만들기
 
@@ -220,8 +216,6 @@ public class PersonCellCS : ViewCell
 
 > [!NOTE]
 > Xamarin.Forms에도 [`ListView`](xref:Xamarin.Forms.ListView) 셀에 간단한 데이터를 표시하는 데 사용할 수 있는 셀 형식이 포함됩니다. 자세한 내용은 [셀 모양](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)을 참조하세요.
-
-<a name="resource" />
 
 ## <a name="creating-a-datatemplate-as-a-resource"></a>DataTemplate을 리소스로 만들기
 
