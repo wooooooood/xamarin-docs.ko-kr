@@ -10,12 +10,12 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a6a137de367a99026cf44c92a86afe5f3c6f0cf2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a5c7dc7af657dbb988ca51eb82cf60ca8b033cbd
+ms.sourcegitcommit: 34fa3086c55b1e01838419c930f839c20662c362
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/18/2020
-ms.locfileid: "84947315"
+ms.locfileid: "84990842"
 ---
 # <a name="xamarinforms-shapes-polyline"></a>Xamarin.Forms도형: 폴리라인
 
@@ -45,5 +45,5 @@ ms.locfileid: "84947315"
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapedemos/)
+- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms셰이프도](index.md)

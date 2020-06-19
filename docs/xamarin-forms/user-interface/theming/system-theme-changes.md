@@ -10,12 +10,12 @@ ms.date: 06/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 86ad823466470033c458ad44a404e8ab667c1b95
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 28bcbed3a03a2abbec42a619062579419a3063a4
+ms.sourcegitcommit: 8a18471b3d96f3f726b66f9bc50a829f1c122f29
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/18/2020
-ms.locfileid: "84903079"
+ms.locfileid: "84988201"
 ---
 # <a name="respond-to-system-theme-changes-in-xamarinforms-applications"></a>응용 프로그램의 시스템 테마 변경 내용에 응답 Xamarin.Forms
 
@@ -135,13 +135,16 @@ OSAppTheme currentTheme = Application.Current.RequestedTheme;
 
 ## <a name="set-the-current-user-theme"></a>현재 사용자 테마 설정
 
-응용 프로그램에서 사용 하는 테마는 `Application.UserTheme` 다음과 같은 형식의 속성을 사용 하 여 설정할 수 있습니다 `OSAppTheme` .
+응용 프로그램에서 사용 하는 테마는 `Application.UserAppTheme` `OSAppTheme` 현재 작동 중인 시스템 테마에 관계 없이 형식의 속성을 사용 하 여 설정할 수 있습니다.
 
 ```csharp
 Application.Current.UserAppTheme = OSAppTheme.Dark;
 ```
 
-이 예제에서는 시스템 어둡게 모드에 대해 정의 된 테마를 사용 하도록 응용 프로그램을 설정 합니다.
+이 예제에서 응용 프로그램은 현재 작동 중인 시스템 테마에 관계 없이 시스템 어둡게 모드에 대해 정의 된 테마를 사용 하도록 설정 됩니다.
+
+> [!NOTE]
+> 속성을로 설정 하 여 `UserAppTheme` `OSAppTheme.Unspecified` 운영 체제 테마를 기본값으로 설정 합니다.
 
 ## <a name="react-to-theme-changes"></a>테마 변경에 대응
 

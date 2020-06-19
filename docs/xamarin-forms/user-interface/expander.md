@@ -10,12 +10,12 @@ ms.date: 04/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5e9afa0f6d27003891963af5715d5721e3129306
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 33659dd52452c575c403d0a25b24f17daf9e3f17
+ms.sourcegitcommit: 8a18471b3d96f3f726b66f9bc50a829f1c122f29
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/18/2020
-ms.locfileid: "84129573"
+ms.locfileid: "84988215"
 ---
 # <a name="xamarinforms-expander"></a>Xamarin.Forms기호
 
@@ -45,7 +45,6 @@ Xamarin.Forms `Expander` 컨트롤은 모든 콘텐츠를 호스트 하는 확�
 - `ForceUpdateSizeCommand``ICommand`는의 크기를 강제로 업데이트할 때 실행 되는 명령을 정의 하는 형식의입니다 `Expander` . 이 속성은 `OneWayToSource` 바인딩 모드를 사용 합니다.
 - `Header`[`View`](xref:Xamarin.Forms.View)헤더 콘텐츠를 정의 하는 형식의입니다.
 - `IsExpanded`가 `bool` 확장 되었는지 여부를 결정 하는 형식의입니다 `Expander` . 이 속성은 `TwoWay` 바인딩 모드를 사용 하며 기본값은 `false` 입니다.
-- `Spacing``double`-헤더와 해당 내용 사이의 공백을 나타내는 형식의 이 속성의 기본값은 0입니다.
 - `State`의 상태를 `ExpanderState` 나타내는 형식의입니다 `Expander` . 이 속성은 `OneWayToSource` 바인딩 모드를 사용 합니다.
 
 이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
@@ -224,51 +223,18 @@ expander.Content = grid;
 
 트리거에 대 한 자세한 내용은 [ Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)를 참조 하세요.
 
-## <a name="define-the-space-between-header-and-content"></a>헤더와 내용 사이의 간격을 정의 합니다.
-
-기본적으로의 콘텐츠는 `Expander` 머리글 바로 아래에 나타납니다. 그러나 `Spacing` 속성을 `double` 콘텐츠와 헤더 사이의 빈 공간을 나타내는 값으로 설정 하 여이 동작을 변경할 수 있습니다.
-
-```xaml
-<Expander Spacing="50"
-          IsExpanded="true">
-    <Expander.Header>
-        <Label Text="Baboon"
-               FontAttributes="Bold"
-               FontSize="Medium" />
-    </Expander.Header>
-    <Grid Padding="10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-        <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
-               Aspect="AspectFill"
-               HeightRequest="120"
-               WidthRequest="120" />
-        <Label Grid.Column="1"
-               Text="Baboons are African and Arabian Old World monkeys belonging to the genus Papio, part of the subfamily Cercopithecinae."
-               FontAttributes="Italic" />
-    </Grid>
-</Expander>
-```
-
-이 예제에서 콘텐츠는 `Expander` 헤더 아래에 50 장치 독립적 단위로 표시 됩니다.
-
-![IOS 및 Android에서 간격이 설정 된 확장기의 스크린샷](expander-images/expander-spacing.png "IOS 및 Android에서 간격이 설정 된 확장기")
-
 ## <a name="embed-an-expander-in-an-expander"></a>확장기에 확장 포함
 
 의 콘텐츠를 `Expander` 다른 컨트롤로 설정 하 여 `Expander` 여러 수준의 확장을 사용할 수 있습니다. 다음 XAML은 `Expander` 다른 개체인 콘텐츠가 있는를 보여 줍니다 `Expander` .
 
 ```xaml
-<Expander Spacing="10">
+<Expander>
     <Expander.Header>
         <Label Text="{Binding Name}"
                FontAttributes="Bold"
                FontSize="Medium" />
     </Expander.Header>
-    <Expander Padding="10"
-              Spacing="10">
+    <Expander Padding="10">
         <Expander.Header>
             <Label Text="{Binding Location}"
                    FontSize="Medium" />

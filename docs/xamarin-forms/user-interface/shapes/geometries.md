@@ -10,12 +10,12 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bac0846700d6bcc7b23681dcb6ebf8ddafa155bc
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: c816da59dce291e6fbd354e2c6079fe24044e978
+ms.sourcegitcommit: 34fa3086c55b1e01838419c930f839c20662c362
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/18/2020
-ms.locfileid: "84947382"
+ms.locfileid: "84990773"
 ---
 # <a name="xamarinforms-shapes-geometries"></a>Xamarin.Forms도형: 기 하 도형
 
@@ -201,5 +201,5 @@ ms.locfileid: "84947382"
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapedemos/)
+- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms셰이프도](index.md)

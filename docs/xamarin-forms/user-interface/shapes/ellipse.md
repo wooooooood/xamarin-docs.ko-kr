@@ -10,12 +10,12 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7638a7a9bb272d1f1904c3e446cdf0b7838c27bd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 719713368971b0b278cd4a4a9721e863a17ae16d
+ms.sourcegitcommit: 34fa3086c55b1e01838419c930f839c20662c362
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/18/2020
-ms.locfileid: "84947318"
+ms.locfileid: "84990789"
 ---
 # <a name="xamarinforms-shapes-ellipse"></a>Xamarin.Forms도형: 타원
 
@@ -50,5 +50,5 @@ ms.locfileid: "84947318"
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapedemos/)
+- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms셰이프도](index.md)
