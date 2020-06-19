@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 스텝 퍼" 설명: " Xamarin.Forms 스텝 퍼를 사용 하면 사용자가 값 범위에서 숫자 값을 선택할 수 있습니다. 이는 빼기 및 더하기 기호를 사용 하 여 레이블이 지정 된 두 개의 단추로 구성 됩니다. 두 단추를 조작 하면 선택한 값이 증분 방식으로 변경 됩니다. "
-assetid: 62571B3E-D84B-4F52-9FC7-C105D6733B16: xamarin-forms author: davidbritch: dabritch:: 10/17/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms퍼
+description: Xamarin.Forms스텝 퍼를 사용 하면 사용자가 값 범위에서 숫자 값을 선택할 수 있습니다. 이는 빼기 및 더하기 기호를 사용 하 여 레이블이 지정 된 두 개의 단추로 구성 됩니다. 두 단추를 조작 하면 선택한 값이 증분 방식으로 변경 됩니다.
+ms.prod: xamarin
+ms.assetid: 62571B3E-D84B-4F52-9FC7-C105D6733B16
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4f071530fb17de44d8ede786ca1b42f5e11f4f7c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84130548"
 ---
-
 # <a name="xamarinforms-stepper"></a>Xamarin.Forms퍼
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)

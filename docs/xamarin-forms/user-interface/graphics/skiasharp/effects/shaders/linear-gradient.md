@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp 선형 그라데이션" 설명: "두 색의 점진적 혼합으로 구성 된 그라데이션을 사용 하 여 선 또는 채우기 영역을 스트로크 하는 방법을 알아봅니다."
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 20A2A8C4-FEB7-478D-BF57-C92E26117B6A author: davidbritch: dabritch: 08/23/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp 선형 그라데이션
+description: 두 색의 점진적 혼합으로 구성 된 그라데이션을 사용 하 여 선 또는 채우기 영역을 스트로크 하는 방법에 대해 알아봅니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 20A2A8C4-FEB7-478D-BF57-C92E26117B6A
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 43aa429046c1b0f72a1cbe6a5b921da9b8907a49
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132225"
 ---
-
 # <a name="the-skiasharp-linear-gradient"></a>SkiaSharp 선형 그라데이션
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

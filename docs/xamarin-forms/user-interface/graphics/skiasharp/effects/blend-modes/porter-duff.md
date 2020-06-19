@@ -1,8 +1,22 @@
 ---
-제목: "Porter-Duff blend 모드" 설명: "Porter-Duff blend 모드를 사용 하 여 원본 및 대상 이미지에 따라 장면을 작성 합니다."
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5 author: davidbritch: dabritch: 08/23/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Porter-Duff blend 모드
+description: Porter-Duff blend 모드를 사용 하 여 원본 및 대상 이미지를 기반으로 장면을 작성 합니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a1e6290c0f85b54c3fd8958bc43667714bdece20
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84131055"
 ---
-
 # <a name="porter-duff-blend-modes"></a>Porter-Duff blend 모드
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

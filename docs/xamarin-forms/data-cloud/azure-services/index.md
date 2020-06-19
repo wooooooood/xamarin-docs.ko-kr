@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 및 Azure 서비스" 설명: "이 문서에서는 Azure Notification Hubs를 사용 하 여 플랫폼 간 푸시 알림을 응용 프로그램에 보내는 방법을 설명 Xamarin.Forms 합니다."
-assetid: 07C60A42-A9E1-4DD0-8874-BD9487DC3EA2: xamarin-forms author: davidbritch: dabritch:: 06/28/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms및 Azure 서비스
+description: 이 문서에서는 Azure Notification Hubs를 사용 하 여 플랫폼 간 푸시 알림을 응용 프로그램에 보내는 방법을 설명 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 07C60A42-A9E1-4DD0-8874-BD9487DC3EA2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/28/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a63b6329b9e8f4bcdc18a973b538e1e2e44bca67
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84130977"
 ---
-
 # <a name="xamarinforms-and-azure-services"></a>Xamarin.Forms및 Azure 서비스
 
 ## <a name="consume-an-azure-cosmos-db-document-database-in-xamarinformsazure-cosmosdbmd"></a>[에서 Azure Cosmos DB 문서 데이터베이스 사용Xamarin.Forms](azure-cosmosdb.md)

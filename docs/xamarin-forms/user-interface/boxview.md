@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms boxview" 설명: "이 문서에서는 응용 프로그램에서 장식, 그래픽 및 상호 작용을 위해 색이 지정 된 사각형을 사용 하는 방법을 설명 Xamarin.Forms 합니다."
-assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A: xamarin-forms author: davidbritch: dabritch:: 07/26/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.FormsBoxView
+description: 이 문서에서는 응용 프로그램에서 장식, 그래픽 및 상호 작용에 색이 지정 된 사각형을 사용 하는 방법을 설명 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/26/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 06f1813bafb34a9c32603490e66f8caa6c6a6a22
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573822"
 ---
-
 # <a name="xamarinforms-boxview"></a>Xamarin.FormsBoxView
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)

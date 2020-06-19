@@ -1,8 +1,23 @@
 ---
-제목: " Xamarin.Forms 리소스 사전" 설명: " Xamarin.Forms XAML 리소스는 응용 프로그램 전체에서 공유 하 고 다시 사용할 수 있는 개체 Xamarin.Forms 입니다."
-assetid: DF103686-4A92-40FA-9CF1-A9376293B13C: xamarin-forms author: davidbritch: dabritch:: 04/01/2020 no loc: [ Xamarin.Forms , Xamarin.Essentials ] ms. custom: video
+title: Xamarin.Forms리소스 사전
+description: Xamarin.FormsXAML 리소스는 응용 프로그램 전체에서 공유 하 고 다시 사용할 수 있는 개체입니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/01/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.custom: video
+ms.openlocfilehash: a1c7cfd4a0f3549b11ac51dc13b40da552f6b758
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139414"
 ---
-
 # <a name="xamarinforms-resource-dictionaries"></a>Xamarin.Forms리소스 사전
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)

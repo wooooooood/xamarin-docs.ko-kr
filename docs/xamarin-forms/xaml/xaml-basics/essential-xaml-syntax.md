@@ -1,8 +1,22 @@
 ---
-제목: "2 부. 필수 XAML 구문 "설명:"이 문서에서는 속성 요소와 연결 된 속성의 필수 XAML 구문 기능을 설명 합니다.
-assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A. 기술: xamarin 양식 작성자: davidbritch: dabritch: ms. 날짜: 10/25/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 2부. 필수 XAML 구문
+description: 이 문서에서는 속성 요소와 연결 된 속성의 필수 XAML 구문 기능에 대해 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c400bb342568a0399e2a582496f85ead273b6994
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572184"
 ---
-
 # <a name="part-2-essential-xaml-syntax"></a>2부. 필수 XAML 구문
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

@@ -1,6 +1,21 @@
 ---
-제목: " Xamarin.Forms 도구 상자를 사용 하 여 Xaml 편집" 설명: "xaml 도구 상자에는 열려 있는 xaml 파일로 직접 끌어올 수 있는 모든 기본 제공 레이아웃 및 컨트롤이 포함 되어 있습니다.
-assetid: 513D1247-8AD0-4611-8660-1D277CD369E1: xamarin-forms author: conceptdev: crdun ms. date: 08/29/2018 no loc: [ Xamarin.Forms , Xamarin.Essentials ].
+title: Xamarin.Forms도구 상자를 사용 하 여 XAML 편집
+description: XAML 도구 상자에는 열려 있는 XAML 파일로 직접 끌어올 수 있는 모든 기본 제공 레이아웃 및 컨트롤이 포함 되어 있습니다.
+ms.prod: xamarin
+ms.assetid: 513D1247-8AD0-4611-8660-1D277CD369E1
+ms.technology: xamarin-forms
+author: conceptdev
+ms.author: crdun
+ms.date: 08/29/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 76d6a6f39692445f208f250ca7f6141a1e1ad450
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84197999"
 ---
 # <a name="xamarinforms-xaml-toolbox"></a>Xamarin.FormsXAML 도구 상자
 

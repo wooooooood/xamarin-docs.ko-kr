@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp 비트맵을 파일에 저장" 설명: "SkiaSharp에서 지 원하는 다양 한 파일 형식에서 사용자의 사진 라이브러리에 비트맵을 저장 하는 방법을 알아봅니다."
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C author: davidbritch: dabritch: 07/10/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp 비트맵을 파일에 저장
+description: SkiaSharp에서 지 원하는 다양 한 파일 형식에서 사용자의 사진 라이브러리에 비트맵을 저장 하는 방법을 알아봅니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 01f4fcf1953658af44d2a8996913860a3b605abf
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138660"
 ---
-
 # <a name="saving-skiasharp-bitmaps-to-files"></a>SkiaSharp 비트맵을 파일에 저장
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -442,7 +456,7 @@ public partial class SaveFileFormatsPage : ContentPage
 
 **파일 형식 저장** 페이지에서 저장 하는 비트맵은 600 픽셀 사각형입니다. 픽셀당 4 바이트를 사용 하 여 메모리에서 총 144만 바이트입니다. 다음 표에서는 다양 한 파일 형식 및 품질 조합의 파일 크기를 보여 줍니다.
 
-|서식|품질|Size|
+|형식|품질|크기|
 |------|------:|---:|
 | PNG | 해당 없음 | 492K |
 | JPEG | 0 | 2.95 k |

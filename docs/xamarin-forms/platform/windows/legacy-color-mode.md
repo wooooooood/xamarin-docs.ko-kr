@@ -1,8 +1,22 @@
 ---
-제목: "Windows의 VisualElement 레거시 색 모드" 설명: "플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 레거시 색 모드를 사용 하지 않도록 설정 하는 Windows 플랫폼별를 사용 하는 방법을 설명 Xamarin.Forms 합니다. "
-assetid: B8759309-07C7-4DCA-A18A-C1A198A7951B: xamarin-forms author: davidbritch: dabritch:: 10/24/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Windows의 VisualElement 레거시 색 모드
+description: 플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 레거시 색 모드를 사용 하지 않도록 설정 하는 Windows 플랫폼별를 사용 하는 방법을 설명 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: B8759309-07C7-4DCA-A18A-C1A198A7951B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3bcbee04edbeebf3949673a53edde4200856f5c6
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132113"
 ---
-
 # <a name="visualelement-legacy-color-mode-on-windows"></a>Windows의 VisualElement 레거시 색 모드
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

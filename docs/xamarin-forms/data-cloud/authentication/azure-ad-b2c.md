@@ -1,8 +1,22 @@
 ---
-제목: "Azure Active Directory B2C를 사용 하 여 사용자 인증" 설명: "Azure Active Directory B2C 소비자 지향 웹 및 모바일 응용 프로그램을 위한 클라우드 id 관리 기능을 제공 합니다. 이 문서에서는 Azure Active Directory B2C를 사용 하 여 Microsoft 인증 라이브러리를 통해 id 관리를 모바일 응용 프로그램에 통합 하는 방법을 보여 줍니다. "
-assetid: B0A5DB65-0585-4A00-B908-22CCC286E6B6: xamarin-forms author: davidbritch: dabritch:: 12/04/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Azure Active Directory B2C로 사용자 인증
+description: Azure Active Directory B2C는 소비자 지향 웹 및 모바일 응용 프로그램을 위한 클라우드 id 관리 기능을 제공 합니다. 이 문서에서는 Azure Active Directory B2C를 사용 하 여 Microsoft 인증 라이브러리를 통해 id 관리를 모바일 응용 프로그램에 통합 하는 방법을 보여 줍니다.
+ms.prod: xamarin
+ms.assetid: B0A5DB65-0585-4A00-B908-22CCC286E6B6
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/04/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 64529b81a375ee5a8cc8a96ec557c03401e60495
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84130574"
 ---
-
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Azure Active Directory B2C로 사용자 인증
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)

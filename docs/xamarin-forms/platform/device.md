@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 장치 클래스" 설명: "이 문서에서는 장치 클래스를 사용 하 여 플랫폼 별로 기능과 레이아웃을 세밀 하 게 제어 하는 방법을 설명 Xamarin.Forms 합니다."
-assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF: xamarin-forms author: davidbritch: dabritch:: 04/17/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms장치 클래스
+description: 이 문서에서는 Xamarin.Forms 플랫폼 단위로 기능과 레이아웃을 세밀 하 게 제어 하기 위해 장치 클래스를 사용 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/17/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ba4e93b8f364d6887439b05017a9cd373dce5985
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572327"
 ---
-
 # <a name="xamarinforms-device-class"></a>Xamarin.Forms장치 클래스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)

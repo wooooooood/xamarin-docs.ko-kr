@@ -1,8 +1,21 @@
 ---
-제목: "SkiaSharp Graphics in Xamarin.Forms " description: "SkiaSharp는 Google 제품에서 광범위 하 게 사용 되는 오픈 소스 기능을 제공 하는 .net 및 c # 용 2d 그래픽 시스템입니다. 이 가이드에서는 응용 프로그램에서 2D 그래픽에 SkiaSharp를 사용 하는 방법을 설명 Xamarin.Forms 합니다. "
-assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB author: davidbritch: dabritch ms. date: 09/11/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp 그래픽Xamarin.Forms
+description: 'SkiaSharp는 Google 제품에서 광범위 하 게 사용 되는 오픈 소스 Kia 그래픽 엔진으로 구동 되는 .NET 및 c # 용 2D 그래픽 시스템입니다. 이 가이드에서는 응용 프로그램에서 2D 그래픽에 SkiaSharp를 사용 하는 방법을 설명 합니다 Xamarin.Forms .'
+ms.prod: xamarin
+ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/11/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 855bd0d357950b019487b3ea05e379915f54b9d4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127636"
 ---
-
 # <a name="skiasharp-graphics-in-xamarinforms"></a>SkiaSharp 그래픽Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

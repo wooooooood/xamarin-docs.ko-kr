@@ -1,7 +1,23 @@
 ---
-제목: "문제 해결" 설명: "일반적인 오류 조건 및 해결 방법" ms. 항목: 문제 해결: assetid: 63291951-7375-4CBF-BCC3-2E4AD157A2C8: xamarin-forms author: davidbritch ms. author: dabritch. 날짜: 04/25/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 문제 해결
+description: 일반적인 오류 조건 및 해결 방법
+ms.topic: troubleshooting
+ms.prod: xamarin
+ms.assetid: 63291951-7375-4CBF-BCC3-2E4AD157A2C8
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 237dfd637d5456636afd19ea0175cb388773d273
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135917"
 ---
-
 # <a name="troubleshooting"></a>문제 해결
 
 _일반적인 오류 조건 및 해결 방법_

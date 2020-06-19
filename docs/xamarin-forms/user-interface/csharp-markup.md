@@ -1,8 +1,22 @@
 ---
-제목: "c # Xamarin.Forms 태그" 설명: "c # 태그는 Xamarin.Forms c #에서 선언적 사용자 인터페이스를 작성 하는 프로세스를 간소화 하는 흐름 도우미 메서드 및 클래스의 옵트인 (opt in) 집합입니다."
-assetid: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0: xamarin-forms author: davidbritch: dabritch:: 05/15/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 'Xamarin.FormsC # 태그'
+description: 'C # 태그는 Xamarin.Forms c #에서 선언적 사용자 인터페이스를 작성 하는 프로세스를 간소화 하는 흐름 도우미 메서드 및 클래스의 옵트인 (opt in) 집합입니다.'
+ms.prod: xamarin
+ms.assetid: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 939727d3dd8d419cdc020d33d3e7241dcedb8158
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137750"
 ---
-
 # <a name="xamarinforms-c-markup"></a>Xamarin.FormsC # 태그
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

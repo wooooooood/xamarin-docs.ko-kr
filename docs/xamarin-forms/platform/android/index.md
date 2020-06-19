@@ -1,8 +1,22 @@
 ---
-제목: "Android 플랫폼 기능" 설명: "이 문서에서는 응용 프로그램에 Android 관련 기능을 추가 하는 방법을 설명 Xamarin.Forms 합니다."
-assetid: E24168F3-0138-4814-86EA-B467F6B8A545: xamarin-forms author: davidbritch: dabritch:: 12/11/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Android 플랫폼 기능
+description: 이 문서에서는 응용 프로그램에 Android 관련 기능을 추가 하는 방법을 설명 Xamarin.Forms 합니다.
+ms.prod: xamarin
+ms.assetid: E24168F3-0138-4814-86EA-B467F6B8A545
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/11/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3045db1248aa16529d4e43b9a8afc97377cfd9cb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128961"
 ---
-
 # <a name="android-platform-features"></a>Android 플랫폼 기능
 
 Xamarin.FormsAndroid 용 응용 프로그램을 개발 하려면 Visual Studio가 필요 합니다. [지원 되는 플랫폼 페이지](~/get-started/supported-platforms.md) 에는 필수 구성 요소에 대 한 자세한 정보가 포함 되어 있습니다.

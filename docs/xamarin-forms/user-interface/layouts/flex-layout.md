@@ -1,8 +1,23 @@
 ---
-제목: "트 Xamarin.Forms 레이아웃" 설명: "자식 뷰의 컬렉션을 누적 하거나 래핑하는 데에는 '가 나이를 사용 합니다."
-assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8: xamarin-forms ms. custom: xamu-video author: davidbritch: dabritch: ms. date: 05/07/2018 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 가는 Xamarin.Forms 레이아웃
+description: 자식 보기의 컬렉션을 누적 하거나 래핑하는 데는는 안 됩니다.
+ms.prod: xamarin
+ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/07/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 518bf97be3dd9d906d574b15434b0bfa67612516
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570689"
 ---
-
 # <a name="the-xamarinforms-flexlayout"></a>가는 Xamarin.Forms 레이아웃
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)

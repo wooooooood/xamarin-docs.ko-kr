@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp 투명도" 설명: "투명도를 사용 하 여 여러 개체를 단일 장면으로 결합 합니다."
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: B62F9487-C30E-4C63-BAB1-4C091FF50378 author: davidbritch: dabritch: 08/23/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp 투명도
+description: 투명도를 사용 하 여 여러 개체를 단일 장면으로 결합 합니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: B62F9487-C30E-4C63-BAB1-4C091FF50378
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 735aae1b9d94865bd34450861bd6c57b08c420c2
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84134721"
 ---
-
 # <a name="skiasharp-transparency"></a>SkiaSharp 투명도
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

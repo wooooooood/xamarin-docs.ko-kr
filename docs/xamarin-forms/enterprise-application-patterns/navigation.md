@@ -1,8 +1,22 @@
 ---
-제목: "엔터프라이즈 앱 탐색" 설명: "이 장은 eShopOnContainers 모바일 앱이 모델 보기에서 모델을 처음 탐색 하는 방법에 대해 설명 합니다."
-assetid: 4cad57b5-7fe4-4527-a988-d9b60c9620b4: xamarin-forms author: davidbritch: dabritch:: 08/07/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 엔터프라이즈 앱 탐색
+description: 이 장에서는 eShopOnContainers 모바일 앱이 모델 보기에서 모델에 대 한 첫 번째 탐색을 수행 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 4cad57b5-7fe4-4527-a988-d9b60c9620b4
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ca562120a819d4d9fe09b2ee5891a78f1010b1a5
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572028"
 ---
-
 # <a name="enterprise-app-navigation"></a>엔터프라이즈 앱 탐색
 
 Xamarin.Forms에는 내부 논리 기반 상태 변경으로 인해 일반적으로 사용자가 UI와 상호 작용 하거나 앱 자체에서 발생 하는 페이지 탐색에 대 한 지원이 포함 됩니다. 그러나 다음 문제를 충족 해야 하므로 MVVM (모델-뷰-ViewModel) 패턴을 사용 하는 앱에서 탐색을 구현 하는 것이 복잡할 수 있습니다.
@@ -41,7 +55,7 @@ public interface INavigationService
 
 이 인터페이스는 구현 하는 클래스에서 다음 메서드를 제공 하도록 지정 합니다.
 
-|방법|용도|
+|방법|목적|
 |--- |--- |
 |`InitializeAsync`|앱이 시작 될 때 두 페이지 중 하나를 탐색 합니다.|
 |`NavigateToAsync`|지정 된 페이지에 대 한 계층적 탐색을 수행 합니다.|

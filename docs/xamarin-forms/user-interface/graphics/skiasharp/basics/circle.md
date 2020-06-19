@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp에서 간단한 원 그리기" 설명: "이 문서에서는 캔버스 및 그리기 개체를 비롯 한 SkiaSharp Drawing의 기본 사항을 Xamarin.Forms 응용 프로그램에 설명 하 고 샘플 코드를 사용 하 여이를 보여 줍니다."
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8 author: davidbritch: dabritch: 03/10/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp에서 간단한 원 그리기
+description: 이 문서에서는 응용 프로그램에서 캔버스 및 그리기 개체를 비롯 한 SkiaSharp drawing의 기본 사항을 설명 Xamarin.Forms 하 고 샘플 코드를 사용 하 여이를 보여 줍니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: fb873102bfb8568b8298a39ea2429fb6c27af175
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137724"
 ---
-
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>SkiaSharp에서 간단한 원 그리기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

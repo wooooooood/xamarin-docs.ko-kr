@@ -1,8 +1,22 @@
 ---
-제목: "XAML 미리 보기에서 사용자 지정 컨트롤 렌더링" 설명: "이 문서에서는 XAML 미리 보기에서 사용자 지정 컨트롤을 표시 하는 방법을 설명 합니다."
-assetid: 4D795372-CB8F-48F4-B63D-845E44B261F7: xamarin-forms author: maddyleger1: maleger:: 03/27/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: XAML 미리 보기에서 사용자 지정 컨트롤 렌더링
+description: 이 문서에서는 XAML 미리 보기에서 사용자 지정 컨트롤을 표시 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 4D795372-CB8F-48F4-B63D-845E44B261F7
+ms.technology: xamarin-forms
+author: maddyleger1
+ms.author: maleger
+ms.date: 03/27/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4f20a0586aee998c10372c60c96577321e697aad
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137269"
 ---
-
 # <a name="render-custom-controls-in-the-xaml-previewer"></a>XAML 미리 보기에서 사용자 지정 컨트롤 렌더링
 
 _사용자 지정 컨트롤은 XAML 미리 보기에서 예상 대로 작동 하지 않을 수도 있습니다. 이 문서의 지침을 사용 하 여 사용자 지정 컨트롤 미리 보기의 제한 사항을 이해 합니다._

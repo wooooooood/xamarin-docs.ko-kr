@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp 비트맵 표시" 설명: "가로 세로 비율을 유지 하면서 SkiaSharp 비트맵을 픽셀 크기로 표시 하 고 사각형을 채우도록 확장 하는 방법을 알아봅니다."
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9 author: davidbritch: dabritch: 07/17/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp 비트맵 표시
+description: 가로 세로 비율을 유지 하면서 SkiaSharp 비트맵을 픽셀 크기로 표시 하 고 사각형을 채우도록 확장 하는 방법을 알아봅니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b0fecac02c44e3ba721dd4625e7bee264c6869d0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84134760"
 ---
-
 # <a name="displaying-skiasharp-bitmaps"></a>SkiaSharp 비트맵 표시
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,8 +1,22 @@
 ---
-제목: "xaml 파일에 대해 Visual Studio XAML 디자이너가 작동 하지 않는 이유는 무엇입니까 Xamarin.Forms ?"
-ms. 토픽: 문제 해결: assetid: cab2eefb-c52f-4d81-866e-8f1feabbdd64: xamarin-forms author: davidbritch: dabritch:: 04/25/2017-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Visual Studio XAML 디자이너가 xaml 파일에 대해 작동 하지 않는 이유는 무엇 Xamarin.Forms 인가요?
+ms.topic: troubleshooting
+ms.prod: xamarin
+ms.assetid: cab2eefb-c52f-4d81-866e-8f1feabbdd64
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9f9cf570da0d8e078d1d05e74dc0f65994080c6c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135891"
 ---
-
 # <a name="why-doesnt-the-visual-studio-xaml-designer-work-for-xamarinforms-xaml-files"></a>Visual Studio XAML 디자이너가 xaml 파일에 대해 작동 하지 않는 이유는 무엇 Xamarin.Forms 인가요?
 
 Xamarin.Forms는 현재 XAML 파일에 대 한 비주얼 디자이너를 지원 하지 않습니다. 이로 인해 Visual Studio의 *XAML Ui 디자이너* 또는 *인코딩을 사용 하는 xaml Ui 디자이너*에서 Forms xaml 파일을 열려고 하면 다음과 같은 오류 메시지가 throw 됩니다.

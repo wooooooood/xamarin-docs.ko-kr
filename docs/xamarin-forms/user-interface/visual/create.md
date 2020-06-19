@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 시각적 렌더러 만들기" 설명: " Xamarin.Forms 뷰를 서브 클래스 하지 않고도 visualelement 개체에 선택적으로 적용할 시각적 개체 만들기 Xamarin.Forms "
-assetid: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59: xamarin-forms author: davidbritch: dabritch:: 03/12/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms시각적 렌더러 만들기
+description: Xamarin.Forms뷰를 서브 클래스 하지 않고도 VisualElement 개체에 선택적으로 적용 되는 시각적 개체를 만듭니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/12/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 23edbb007e912d13858686d1c5ec574c9e3349c7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127143"
 ---
-
 # <a name="create-a-xamarinforms-visual-renderer"></a>Xamarin.Forms시각적 렌더러 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)

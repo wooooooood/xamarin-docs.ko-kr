@@ -1,8 +1,22 @@
 ---
-제목: "장치 방향" 설명: "이 문서에서는 Xamarin.Forms 세로 및 가로 방향으로 잘 보이는 응용 프로그램을 레이아웃 하는 방법을 설명 합니다."
-assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2: xamarin-forms author: davidbritch: dabritch:: 04/24/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 디바이스 방향
+description: 이 문서에서는 Xamarin.Forms 세로 및 가로 방향으로 크게 보이는 응용 프로그램을 레이아웃 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/24/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0b1a47d4dcc92fca4d280708a2cbbe9374c17da8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573302"
 ---
-
 # <a name="device-orientation"></a>디바이스 방향
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)

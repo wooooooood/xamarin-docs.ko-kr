@@ -1,8 +1,23 @@
 ---
-제목: "Xamarin Live Reload (미리 보기)" 설명: "다른 컴파일 및 배포를 요구 하지 않고 사용 중인 XAML에 대 한 변경 내용 확인"을 참조 하세요.
-assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d: xamarin-forms author: pierceboggan: piboggan 로봇: noindex ms. date: 10/26/2018 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin 라이브 다시 로드 (미리 보기)
+description: 다른 컴파일 및 배포를 요구 하지 않고 사용 중인 XAML 리플렉션 변경 내용을 참조 하세요.
+ms.prod: xamarin
+ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
+ms.technology: xamarin-forms
+author: pierceboggan
+ms.author: piboggan
+robots: noindex
+ms.date: 10/26/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b67594e2675c774512f3bf64f2e91ef10dbff444
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84134214"
 ---
-
 # <a name="xamarin-live-reload-preview"></a>Xamarin 라이브 다시 로드 (미리 보기)
 
 > [!NOTE]

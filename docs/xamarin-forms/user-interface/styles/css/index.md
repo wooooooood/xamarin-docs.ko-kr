@@ -1,6 +1,22 @@
 ---
-제목: " Xamarin.Forms CSS 스타일시트 (css)를 사용 하 여 앱 스타일 지정" 설명: "은 Xamarin.Forms CSS 스타일시트 (css)를 사용 하 여 시각적 요소 스타일 지정을 지원 합니다."
-assetid: C89D57A6-DAB9-4C42-963F-26D67627DDC2: xamarin-forms ms. custom: xamu-video author: davidbritch: dabritch: ms. date: 04/17/2020 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsCSS 스타일시트를 사용 하 여 앱 스타일 지정 (CSS)
+description: Xamarin.FormsCSS (CSS 스타일시트)를 사용 하 여 시각적 요소 스타일 지정을 지원 합니다.
+ms.prod: xamarin
+ms.assetid: C89D57A6-DAB9-4C42-963F-26D67627DDC2
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/20/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9375c4078c75d8e4788cb31a3d6a6a3a10100f49
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946231"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Xamarin.FormsCSS 스타일시트를 사용 하 여 앱 스타일 지정 (CSS)
 
@@ -145,6 +161,12 @@ public partial class MyPage : ContentPage
 CSS는 선택기를 사용 하 여 대상으로 지정할 요소를 결정 합니다. 일치 하는 선택기를 사용 하는 스타일은 정의 순서 대로 연속적으로 적용 됩니다. 특정 항목에 대해 정의 된 스타일은 항상 마지막에 적용 됩니다. 지원 되는 선택기에 대 한 자세한 내용은 [선택기 참조](#selector-reference)를 참조 하세요.
 
 CSS는 속성을 사용 하 여 선택한 요소의 스타일을 만듭니다. 각 속성에는 가능한 값 집합이 있고 일부 속성은 모든 요소 형식에 영향을 줄 수 있으며, 다른 속성은 요소 그룹에 적용 됩니다. 지원 되는 속성에 대 한 자세한 내용은 [속성 참조](#property-reference)를 참조 하세요.
+
+동일한 속성을 설정 하는 경우 자식 스타일 시트는 항상 부모 스타일 시트를 재정의 합니다. 따라서 동일한 속성을 설정 하는 스타일을 적용할 때 다음 우선 순위 규칙을 따릅니다.
+
+- 응용 프로그램 리소스에 정의 된 스타일은 같은 속성을 설정한 경우 페이지 리소스에 정의 된 스타일로 덮어쓰여집니다.
+- 페이지 리소스에 정의 된 스타일은 같은 속성을 설정 하는 경우 컨트롤 리소스에 정의 된 스타일로 덮어쓰여집니다.
+- 응용 프로그램 리소스에 정의 된 스타일은 같은 속성을 설정 하는 경우 컨트롤 리소스에 정의 된 스타일로 덮어쓰여집니다.
 
 > [!IMPORTANT]
 > CSS 변수는 지원 되지 않습니다.

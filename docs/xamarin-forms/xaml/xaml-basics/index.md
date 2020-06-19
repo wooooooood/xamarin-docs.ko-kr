@@ -1,8 +1,23 @@
 ---
-제목: " Xamarin.Forms XAML 기본 사항" 설명: "이 가이드에서는 모바일 장치에 대 한 플랫폼 간 XAML을 시작 하는 방법을 설명 합니다. 개발자는 XAML을 Xamarin.Forms 사용 하 여 코드 대신 태그를 사용 하 여 응용 프로그램에서 사용자 인터페이스를 정의할 수 있습니다. "
-ms. prod: xamarin ms. custom: video assetid: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF: xamarin-forms author: davidbritch: dabritch:: 10/25/2017-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsXAML 기본 사항
+description: 이 가이드에서는 모바일 장치용 플랫폼 간 XAML을 시작 하는 방법을 설명 합니다. 개발자는 XAML을 Xamarin.Forms 사용 하 여 코드 대신 태그를 사용 하 여 응용 프로그램에서 사용자 인터페이스를 정의할 수 있습니다.
+ms.prod: xamarin
+ms.custom: video
+ms.assetid: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8f5f69038f7d5cfe7ad46f013acb1519c4e9569f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138621"
 ---
-
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.FormsXAML 기본 사항
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

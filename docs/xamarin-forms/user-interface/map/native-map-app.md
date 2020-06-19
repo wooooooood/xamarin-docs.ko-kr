@@ -1,8 +1,22 @@
 ---
-제목: "" 설명: "에서 네이티브 맵 앱을 시작 합니다 Xamarin.Forms . 각 플랫폼의 네이티브 맵 앱은 시작 Xamarin.Forms 관리자 클래스를 통해 응용 프로그램에서 시작할 수 있습니다 Xamarin.Essentials ."
-assetid: 5CF7CD67-3F20-4D80-B99E-D35A5FD1019A: xamarin-forms author: davidbritch: dabritch:: 10/30/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 에서 네이티브 맵 앱을 시작 합니다.Xamarin.Forms
+description: 각 플랫폼의 네이티브 맵 앱은 Xamarin.Forms 시작 관리자 클래스를 통해 응용 프로그램에서 시작할 수 있습니다 Xamarin.Essentials .
+ms.prod: xamarin
+ms.assetid: 5CF7CD67-3F20-4D80-B99E-D35A5FD1019A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/30/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c135d5dd02bba5102f5a93132f079526c84865d5
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84129340"
 ---
-
 # <a name="launch-the-native-map-app-from-xamarinforms"></a>에서 네이티브 맵 앱을 시작 합니다.Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

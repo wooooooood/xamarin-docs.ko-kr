@@ -1,8 +1,22 @@
 ---
-제목: "DataPages 컨트롤 참조" 설명: "이 문서에서는 datapages NuGet 패키지에서 사용할 수 있는 컨트롤을 소개 Xamarin.Forms 합니다."
-assetid: 891615D0-E8BD-4ACC-A7F0-4C3725FBCC31: xamarin-forms author: davidbritch: dabritch:: 12/01/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: DataPages 컨트롤 참조
+description: 이 문서에서는 datapages NuGet 패키지에서 사용할 수 있는 컨트롤을 소개 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 891615D0-E8BD-4ACC-A7F0-4C3725FBCC31
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/01/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 86b526fff305b195221aca3fb6a86ad0823cb145
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84569402"
 ---
-
 # <a name="datapages-controls-reference"></a>DataPages 컨트롤 참조
 
 ![](~/media/shared/preview.png "This API is currently in preview")

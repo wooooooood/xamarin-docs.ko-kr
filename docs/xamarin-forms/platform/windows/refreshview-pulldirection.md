@@ -1,8 +1,22 @@
 ---
-제목: "Windows의 RefreshView 풀" 설명: "플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 RefreshView의 끌어오기 방향을 변경할 수 있도록 하는 Windows 플랫폼별를 사용 하는 방법을 설명 합니다. "
-assetid: 407A82B-281E-4384-9696-C0655830B84D m. 기술: xamarin-forms author: davidbritch: dabritch. 날짜: 09/20/2019 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Windows의 RefreshView 풀 방향
+description: 플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 RefreshView의 끌어오기 방향을 변경할 수 있도록 하는 Windows 플랫폼별를 사용 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 407A862B-281E-4384-9696-C0655830B84D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/20/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 46a1b4d00b9eea276b9a3b3d5bffbdac3d31e0ef
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136580"
 ---
-
 # <a name="refreshview-pull-direction-on-windows"></a>Windows의 RefreshView 풀 방향
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

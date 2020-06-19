@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp 비트맵에서 만들기 및 그리기" 설명: "SkiaSharp 비트맵을 만들고이 비트맵을 기반으로 캔버스를 만들어이 비트맵을 그리는 방법에 대해 알아봅니다."
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F author: davidbritch: dabritch: 07/17/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp 비트맵 만들기 및 그리기
+description: SkiaSharp 비트맵을 만들고이 비트맵을 기반으로 캔버스를 만들어 이러한 비트맵을 그리는 방법에 대해 알아봅니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c045e297beca675c0582efc2f75b1d6b2bcedcf8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573296"
 ---
-
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>SkiaSharp 비트맵 만들기 및 그리기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

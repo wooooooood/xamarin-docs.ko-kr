@@ -1,8 +1,23 @@
 ---
-제목: "5 부. 데이터 바인딩에서 MVVM "description:"으로의 MVVM 패턴은 세 가지 소프트웨어 계층 (XAML 사용자 인터페이스 (뷰 라고 함)을 구분 합니다. 모델 이라고 하는 기본 데이터 그리고 뷰와 모델 간의 중개자 (ViewModel 이라고 함)입니다. "
-ms. prod: xamarin ms. custom: video assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81: xamarin-forms author: davidbritch: dabritch:: 10/25/2017-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 5부. 데이터 바인딩에서 MVVM까지
+description: MVVM 패턴은 세 가지 소프트웨어 계층 (XAML 사용자 인터페이스 (뷰 라고 함)을 구분 합니다. 모델 이라고 하는 기본 데이터 ViewModel 이라고 하는 뷰와 모델 간의 중개자입니다.
+ms.prod: xamarin
+ms.custom: video
+ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 047cf963394325e8f88759ffe9da7dcf2ca3ad12
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127532"
 ---
-
 # <a name="part-5-from-data-bindings-to-mvvm"></a>5부. 데이터 바인딩에서 MVVM까지
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

@@ -1,6 +1,21 @@
 ---
-제목: "Azure Functions" Xamarin.Forms 설명: "Azure Functions를 사용 하 여 시작 Xamarin.Forms "
-assetid: 2F311A60-A6FC-4051-B938: AEF32086642F author: conceptdev: crdun ms. custom: video ms. date: 04/02/2019 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Azure FunctionsXamarin.Forms
+description: 을 사용 하 여 Azure Functions 시작 Xamarin.Forms 합니다.
+ms.prod: xamarin
+ms.assetid: 2F311A60-A6FC-4051-B938-AEF32086642F
+author: conceptdev
+ms.author: crdun
+ms.custom: video
+ms.date: 04/02/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 420cead8a43f35815110eb7ce3b183f10bb3ccd4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84197568"
 ---
 # <a name="get-started-with-azure-functions"></a>Azure Functions 시작
 

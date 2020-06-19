@@ -1,8 +1,22 @@
 ---
-제목: "iOS의 동시 이동 제스처 인식" 설명: "플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 응용 프로그램에서 동시 이동 제스처 인식을 사용할 수 있도록 하는 iOS 플랫폼 관련 기능을 사용 하는 방법을 설명 합니다. "
-assetid: 883D89DA-F8FF-4B97-9C3F-2DD05C96A495: xamarin-forms author: davidbritch: dabritch:: 10/24/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: IOS에서 동시 이동 제스처 인식
+description: 플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 응용 프로그램에서 동시 이동 제스처 인식을 사용 하도록 설정 하는 iOS 플랫폼 관련 기능을 사용 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 883D89DA-F8FF-4B97-9C3F-2DD05C96A495
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 125685150243ba8e8099cbfbdfec90e5a0b4d6b7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138582"
 ---
-
 # <a name="simultaneous-pan-gesture-recognition-on-ios"></a>IOS에서 동시 이동 제스처 인식
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

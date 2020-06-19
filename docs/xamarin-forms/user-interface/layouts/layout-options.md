@@ -1,8 +1,22 @@
 ---
-title: "" description: "의 레이아웃 옵션 Xamarin.Forms Xamarin.Forms 은 Layoutoptions 형식의 HorizontalOptions 및 VerticalOptions 속성을 가집니다. 이 문서에서는 각 LayoutOptions 값이 뷰의 맞춤 및 확장에 미치는 영향을 설명 합니다. "
-assetid: 7CAB5631-5153-4DEF-8AD7-C6011CE44307MS. 기술: xamarin-forms author: davidbritch: dabritch: ms. date: 02/10/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 의 레이아웃 옵션Xamarin.Forms
+description: 모든 Xamarin.Forms 보기에는 LayoutOptions 형식의 HorizontalOptions 및 VerticalOptions 속성이 있습니다. 이 문서에서는 각 LayoutOptions 값이 뷰의 맞춤 및 확장에 미치는 영향을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 7CAB5631-5153-4DEF-8AD7-C6011CE44307
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6fa03cf5c18e21ce5ca9e7ea907f50c8de6f3e6c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573263"
 ---
-
 # <a name="layout-options-in-xamarinforms"></a>의 레이아웃 옵션Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)

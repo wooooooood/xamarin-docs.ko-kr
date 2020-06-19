@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms stacklayout" 설명: "StackLayout은 1 차원 스택의 자식 뷰를 가로 또는 세로로 구성 합니다."
-assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8: xamarin-forms author: davidbritch: dabritch:: 05/11/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.FormsStackLayout
+description: StackLayout은 1 차원 스택의 자식 뷰를 가로 또는 세로로 구성 합니다.
+ms.prod: xamarin
+ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/11/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f624674cc6d4ba1bdc34a42fb52fb63ff8a7135a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137971"
 ---
-
 # <a name="xamarinforms-stacklayout"></a>Xamarin.FormsStackLayout
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)

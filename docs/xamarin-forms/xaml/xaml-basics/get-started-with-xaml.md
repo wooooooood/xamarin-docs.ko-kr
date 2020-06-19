@@ -1,8 +1,22 @@
 ---
-제목: "1 부. 응용 프로그램에서 XAML "설명:"을 시작 하면 Xamarin.Forms 대부분의 경우 xaml은 페이지의 시각적 콘텐츠를 정의 하는 데 사용 되 고 코드 숨김이 파일에 함께 작동 합니다. "
-assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9: xamarin-forms author: davidbritch: dabritch:: 09/30/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 1부. XAML 시작
+description: Xamarin.Forms응용 프로그램에서 XAML은 주로 페이지의 시각적 콘텐츠를 정의 하는 데 사용 되며 코드 숨김이 포함 된 파일과 함께 작동 합니다.
+ms.prod: xamarin
+ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/30/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e38080fc9bc4ef0b74eb8c12c3a3f646c4888f53
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198072"
 ---
-
 # <a name="part-1-getting-started-with-xaml"></a>1부. XAML 시작
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 빠른 렌더러" 설명: "이 문서에서는 Xamarin.Forms 생성 된 네이티브 컨트롤 계층 구조를 평면화 하 여 Android에서 컨트롤의 인플레이션 및 렌더링 비용을 줄이는 빠른 렌더러를 소개 합니다."
-assetid: 097f87f2-d891-4f3c-be02-fb7d195a481a: xamarin-forms author: davidbritch: dabritch:: 05/28/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms빠른 렌더러
+description: 이 문서에서는 Xamarin.Forms 생성 된 네이티브 컨트롤 계층 구조를 평면화 하 여 Android에서 컨트롤의 인플레이션 및 렌더링 비용을 줄이는 빠른 렌더러를 소개 합니다.
+ms.prod: xamarin
+ms.assetid: 097f87f2-d891-4f3c-be02-fb7d195a481a
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/28/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 29f79e4aed0314fe1590fa26c8e4b052e14a94d6
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198059"
 ---
-
 # <a name="xamarinforms-fast-renderers"></a>Xamarin.Forms빠른 렌더러
 
 일반적으로 Android에서 대부분의 원래 컨트롤 렌더러는 다음과 같은 두 가지 보기로 구성 됩니다.

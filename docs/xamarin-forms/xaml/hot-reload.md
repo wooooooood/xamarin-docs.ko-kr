@@ -1,8 +1,22 @@
 ---
-제목: "xaml 핫 다시 로드 Xamarin.Forms " 설명: "실행 중인 응용 프로그램에서 xaml 파일에 대 한 변경 내용을 즉시 다시 로드 하므로 Xamarin.Forms 모든 xaml 변경 후 프로젝트를 빌드할 필요가 없습니다."
-assetid: E220F054-32EE-424C-A7E5-6156BE271519: xamarin-forms author: maddyleger1: maleger:: 03/14/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: XAML 핫 재 로드Xamarin.Forms
+description: 모든 XAML 변경 후 프로젝트를 빌드할 필요가 없도록 실행 중인 응용 프로그램에서 XAML 파일에 대 한 변경 내용을 즉시 다시 로드 Xamarin.Forms 합니다.
+ms.prod: xamarin
+ms.assetid: E220F054-32EE-424C-A7E5-6156BE271519
+ms.technology: xamarin-forms
+author: maddyleger1
+ms.author: maleger
+ms.date: 03/14/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0655739c95ba58b8d93aae6d3987d54bd0582c7b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127454"
 ---
-
 # <a name="xaml-hot-reload-for-xamarinforms"></a>XAML 핫 재 로드Xamarin.Forms
 
 XAML 핫 다시 로드는 기존 워크플로에 연결 하 여 생산성을 높이고 시간을 절약 합니다. XAML 핫 다시 로드를 사용 하지 않으면 XAML 변경 내용을 확인할 때마다 앱을 빌드하고 배포 해야 합니다. 핫 다시 로드를 사용 하 여 XAML 파일을 저장 하면 변경 내용이 실행 중인 앱에 라이브 반영 됩니다. 또한 탐색 상태와 데이터가 유지 되므로 앱에서 사용자의 자리를 잃지 않고도 UI를 신속 하 게 반복할 수 있습니다. 따라서 XAML 핫 다시 로드를 사용 하 여 UI 변경의 유효성을 검사 하기 위해 앱을 다시 작성 하 고 배포 하는 시간을 줄일 수 있습니다.

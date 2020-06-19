@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms IndicatorView" description: "IndicatorView은 CarouselView에 있는 항목의 수 및 현재 위치를 나타내는 표시기를 표시 하는 컨트롤입니다."
-assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2: xamarin-forms author: davidbritch: dabritch:: 02/27/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.FormsIndicatorView
+description: IndicatorView는 CarouselView에서 항목 수 및 현재 위치를 나타내는 표시기를 표시 하는 컨트롤입니다.
+ms.prod: xamarin
+ms.assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/27/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e4c7d528cc61bb71fc495c830780ea4245ff3d87
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946379"
 ---
-
 # <a name="xamarinforms-indicatorview"></a>Xamarin.FormsIndicatorView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -12,12 +26,6 @@ assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2: xamarin-forms author: davidbritch
 는 `IndicatorView` 항목의 수 및 현재 위치를 나타내는 표시기를에 표시 하는 컨트롤입니다 `CarouselView` .
 
 [![IOS 및 Android에서 CarouselView 및 IndicatorView의 스크린샷](indicatorview-images/circles.png "IndicatorView 원")](indicatorview-images/circles-large.png#lightbox "IndicatorView 원")
-
-`IndicatorView`는 Xamarin.Forms iOS 및 Android 플랫폼에서 4.4, 유니버설 Windows 플랫폼에서 4.5에 제공 됩니다. 그러나 현재 실험적 이며 iOS의 클래스에 다음 코드 줄을 추가 `AppDelegate` 하거나를 `MainActivity` 호출 하기 전에 Android의 클래스에 다음 코드 줄을 추가 하는 방법 으로만 사용할 수 있습니다 `Forms.Init` .
-
-```csharp
-Forms.SetFlags("IndicatorView_Experimental");
-```
 
 `IndicatorView`는 다음 속성을 정의합니다.
 

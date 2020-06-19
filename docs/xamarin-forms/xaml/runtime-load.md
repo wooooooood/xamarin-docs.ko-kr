@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms LoadFromXaml 확장 메서드를 사용 하 여 런타임에 Xaml 로드" 설명: "xaml을 로드 하 고 구문 분석할 수 있습니다."
-assetid: 25F73FBF-2DD3-468E-A2D8-0897414F0F4A: xamarin-forms author: davidbritch: dabritch:: 12/12/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 런타임에 XAML 로드Xamarin.Forms
+description: LoadFromXaml 확장 메서드를 사용 하 여 런타임에 XAML을 로드 하 고 구문 분석할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: 25F73FBF-2DD3-468E-A2D8-0897414F0F4A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/12/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d750aa84a48ad4c8015a619d819134cefc63c3d9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139375"
 ---
-
 # <a name="loading-xaml-at-runtime-in-xamarinforms"></a>런타임에 XAML 로드Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)

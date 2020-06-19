@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 로컬 데이터 저장소" 설명: "공유 코드에서 파일 처리를 수행 하는 방법 Xamarin.Forms 및 SQLite.Net를 사용 하 여 로컬 SQLite 데이터베이스에서 데이터를 읽고 쓰는 방법에 대해 알아봅니다."
-assetid: A324C247-7DA8-4B14-A813-25F85525E32B: xamarin-forms author: davidbritch: dabritch:: 06/27/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms로컬 데이터 저장소
+description: 공유 코드에서 파일 처리를 수행 하는 방법 Xamarin.Forms 및 SQLite.Net를 사용 하 여 로컬 SQLite 데이터베이스에서 데이터를 읽고 쓰는 방법을 알아봅니다.
+ms.prod: xamarin
+ms.assetid: A324C247-7DA8-4B14-A813-25F85525E32B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/27/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 997a659dd01e410f791af28d1b657055296081c8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127116"
 ---
-
 # <a name="xamarinforms-local-data-storage"></a>Xamarin.Forms로컬 데이터 저장소
 
 ## <a name="files"></a>[파일](files.md)

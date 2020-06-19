@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp Drawing 기본 사항" 설명: "이 가이드에서는 SkiaSharp 그래픽 개념 및 응용 프로그램의 좌표에 대 한 기본 사항을 설명 합니다 Xamarin.Forms ."
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B author: davidbritch: dabritch: 03/10/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp 그리기 기본 사항
+description: 이 가이드에서는 SkiaSharp 그래픽 개념 및 응용 프로그램의 좌표에 대 한 기본 사항을 설명 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: fd82f7ffe135c12c9dfc59c3353d7d9f5d73068c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137711"
 ---
-
 # <a name="skiasharp-drawing-basics"></a>SkiaSharp 그리기 기본 사항
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp 색 필터" 설명: "색 필터를 사용 하 여 색을 변환 또는 테이블로 변환" 합니다.
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 774E7B55-AEC8-4F12-B657-1C0CEE01AD63 author: davidbritch: dabritch: 08/28/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp 색 필터
+description: 색 필터를 사용 하 여 색을 변환 또는 테이블로 변환할 수 있습니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 774E7B55-AEC8-4F12-B657-1C0CEE01AD63
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/28/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b9c89d4d426884d678e77687ffa226cced97be58
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136385"
 ---
-
 # <a name="skiasharp-color-filters"></a>SkiaSharp 색 필터
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

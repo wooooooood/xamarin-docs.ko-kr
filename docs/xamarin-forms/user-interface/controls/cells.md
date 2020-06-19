@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms 셀" 설명: " Xamarin.Forms 셀은 Listview 및 tableviews에 추가할 수 있습니다. 이 문서에는에 포함 된 셀이 나열 되어 Xamarin.Forms 있습니다.
-assetid: 77DA0C89-35D6-4C09-A072-3ADE53FD56CF: xamarin-forms author: davidbritch: dabritch:: 01/12/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms셀
+description: Xamarin.Forms셀은 Listview 및 TableViews에 추가할 수 있습니다. 이 문서에서는에 포함 된 셀을 나열 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 77DA0C89-35D6-4C09-A072-3ADE53FD56CF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/12/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: fff62aea5a20a8a14271123c4664c2c0b4e26d1e
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573328"
 ---
-
 # <a name="xamarinforms-cells"></a>Xamarin.Forms셀
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)

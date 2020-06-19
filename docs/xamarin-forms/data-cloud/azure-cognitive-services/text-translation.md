@@ -1,8 +1,22 @@
 ---
-제목: "변환기 API를 사용 하는 텍스트 변환" 설명: "Microsoft Translator API를 사용 하 여 REST API를 통해 음성 및 텍스트를 변환할 수 있습니다. 이 문서에서는 Microsoft Translator Text API를 사용 하 여 응용 프로그램에서 한 언어에서 다른 언어로 텍스트를 변환 하는 방법을 설명 Xamarin.Forms 합니다. "
-assetid: 68330242-92C5-46F1-B1E3-2395D8823B0C: xamarin-forms author: davidbritch: dabritch:: 02/08/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Translator API를 사용 하 여 텍스트 번역
+description: Microsoft Translator API를 사용 하 여 REST API에서 음성 및 텍스트를 변환할 수 있습니다. 이 문서에서는 Microsoft Translator Text API를 사용 하 여 응용 프로그램에서 한 언어에서 다른 언어로 텍스트를 변환 하는 방법을 설명 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 68330242-92C5-46F1-B1E3-2395D8823B0C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/08/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f0f43f8f2113b6bd0a800ed3e0bd96b641575b1c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139284"
 ---
-
 # <a name="text-translation-using-the-translator-api"></a>Translator API를 사용 하 여 텍스트 번역
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

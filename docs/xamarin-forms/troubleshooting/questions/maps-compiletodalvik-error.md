@@ -1,8 +1,22 @@
 ---
-제목: Xamarin.Forms "왜 COMPILETODALVIK 예기치 않은 최상위 오류를 발생 하는 맵 Android 프로젝트 실패? "
-ms. 토픽: 문제 해결: assetid: C0251EB1-F509-47AD-98D6-846AF46425E5: xamarin-forms author: davidbritch: dabritch:: 04/25/2017-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 그 이유는 Xamarin.Forms 무엇 인가요? 지도 Android 프로젝트가 예기치 않은 최상위 오류 COMPILETODALVIK으로 실패 하나요?
+ms.topic: troubleshooting
+ms.prod: xamarin
+ms.assetid: C0251EB1-F509-47AD-98D6-846AF46425E5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e29535e71cb77b05da41c043c6fd932ae4f5ce95
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135852"
 ---
-
 # <a name="why-does-my-xamarinformsmaps-android-project-fail-with-compiletodalvik-unexpected-top-level-error"></a>그 이유는 Xamarin.Forms 무엇 인가요? 지도 Android 프로젝트가 예기치 않은 최상위 오류 COMPILETODALVIK으로 실패 하나요?
 
 이 오류는 Mac용 Visual Studio의 오류 패드 또는 Visual Studio의 빌드 출력 창에서 볼 수 있습니다. Android 프로젝트에서를 사용 Xamarin.Forms 합니다. 맵.

@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms CarouselView data" description: "system.windows.controls.itemscontrol.itemssource 속성을 IEnumerable을 구현 하는 컬렉션으로 설정 하 여 CarouselView를 데이터로 채웁니다."
-assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0: xamarin-forms author: davidbritch: dabritch:: 04/29/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.FormsCarouselView 데이터
+description: CarouselView는 System.windows.controls.itemscontrol.itemssource 속성을 IEnumerable을 구현 하는 컬렉션으로 설정 하 여 데이터로 채워집니다.
+ms.prod: xamarin
+ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/29/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1081bfafae8e4d7a7a522414e9b45cde48037f1d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136554"
 ---
-
 # <a name="xamarinforms-carouselview-data"></a>Xamarin.FormsCarouselView 데이터
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

@@ -1,8 +1,22 @@
 ---
-제목: "Windows의 MasterDetailPage 탐색 모음" 설명: "플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 MasterDetailPage의 탐색 모음을 축소 하는 Windows 플랫폼별를 사용 하는 방법을 설명 합니다.
-assetid: 0E7436C9-FA3E-40CD-801C-3F7ED95C412D: xamarin-forms author: davidbritch: dabritch:: 10/24/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Windows의 MasterDetailPage 탐색 모음
+description: 플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 MasterDetailPage 탐색 모음을 축소 하는 Windows 플랫폼 관련 기능을 사용 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 0E7436C9-FA3E-40CD-801C-3F7ED95C412D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d3ae71685c7aaebdceacb5f8b7cd5f3dd308407c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137252"
 ---
-
 # <a name="masterdetailpage-navigation-bar-on-windows"></a>Windows의 MasterDetailPage 탐색 모음
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

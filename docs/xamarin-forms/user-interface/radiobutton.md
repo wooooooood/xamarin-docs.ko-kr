@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms radiobutton" description: " Xamarin.Forms radiobutton은 사용자가 집합에서 하나의 옵션을 선택할 수 있도록 하는 단추 유형입니다. 각 옵션은 하나의 라디오 단추로 표시 되며 하나의 라디오 단추만 그룹에서 선택할 수 있습니다. "
-assetid: E2AA40E0-69A5-41DF-BFC4-C151CA657451: xamarin-forms author: davidbritch: dabritch:: 03/13/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms라디오
+description: Xamarin.FormsRadioButton은 사용자가 집합에서 하나의 옵션을 선택할 수 있도록 하는 단추 유형입니다. 각 옵션은 하나의 라디오 단추로 표시 되 고 그룹에서 라디오 단추 하나를 선택할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: E2AA40E0-69A5-41DF-BFC4-C151CA657451
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/13/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f7cbd11f98127cb73514112dae785102ff9c51c0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127625"
 ---
-
 # <a name="xamarinforms-radiobutton"></a>Xamarin.Forms라디오
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)

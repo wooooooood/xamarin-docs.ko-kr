@@ -1,8 +1,22 @@
 ---
-제목: "엔터프라이즈 앱 개발에 대 한 설명" 설명: "이 장에서는를 사용 하는 엔터프라이즈 응용 프로그램 패턴에 대 한 안내를 제공 Xamarin.Forms 합니다."
-assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c: xamarin-forms author: davidbritch: dabritch:: 08/07/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 엔터프라이즈 앱 개발에 대 한 앞으로
+description: 이 장에서는를 사용 하는 엔터프라이즈 응용 프로그램 패턴의 앞에를 제공 Xamarin.Forms 합니다.
+ms.prod: xamarin
+ms.assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6ea63fc483025fc6f9b0c7f379b6dfdc6ca30de8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198095"
 ---
-
 # <a name="preface-to-enterprise-app-development"></a>엔터프라이즈 앱 개발에 대 한 앞으로
 
 이 전자책를 사용 하 여 플랫폼 간 엔터프라이즈 앱을 빌드하는 방법에 대 한 지침을 제공 Xamarin.Forms 합니다. Xamarin.Forms는 개발자가 iOS, Android 및 유니버설 Windows 플랫폼 (UWP)를 비롯 한 여러 플랫폼에서 공유할 수 있는 네이티브 사용자 인터페이스 레이아웃을 쉽게 만들 수 있도록 하는 플랫폼 간 UI 도구 키트입니다. 이 솔루션은 B2E (business to Employee), B2B (business to Business) 및 B2C (Business to Consumer) 앱에 대 한 종합적인 솔루션을 제공 하 여 모든 대상 플랫폼에서 코드를 공유 하 고 TCO (총 소유 비용)를 낮추는 기능을 제공 합니다.

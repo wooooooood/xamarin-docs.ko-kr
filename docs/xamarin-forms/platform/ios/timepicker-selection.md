@@ -1,8 +1,22 @@
 ---
-제목: "TimePicker 항목 선택 iOS" 설명: "플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 TimePicker에서 항목 선택을 수행 하는 시기를 제어 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다. "
-assetid: 554AC877-8698-4B8C-A676-80DD64305A06: xamarin-forms author: davidbritch: dabritch:: 01/15/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: IOS에서 TimePicker 항목 선택
+description: 플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 TimePicker에서 항목 선택을 수행 하는 시기를 제어 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 554AC877-8698-4B8C-A676-80DD64305A06
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 009482c8f1e90aaa2f592ea04d8fd4f0f31324e8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137022"
 ---
-
 # <a name="timepicker-item-selection-on-ios"></a>IOS에서 TimePicker 항목 선택
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

@@ -1,8 +1,22 @@
 ---
-제목: "ListView 셀 모양 사용자 지정" 설명: "이 문서에서는 Xamarin.Forms listview 컨트롤의 편의를 활용 하면서 응용 프로그램에 데이터를 제공 하는 옵션을 살펴봅니다."
-assetid: FD45CB91-1A8F-46FB-B432-6BC20492E456: xamarin-forms author: davidbritch: dabritch:: 09/12/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: ListView 셀 모양 사용자 지정
+description: 이 문서에서는 Xamarin.Forms ListView 컨트롤의 편의를 활용 하면서 응용 프로그램에 데이터를 제공 하는 옵션을 살펴봅니다.
+ms.prod: xamarin
+ms.assetid: FD45CB91-1A8F-46FB-B432-6BC20492E456
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/12/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: cdede547e3ef7cf9f7b6d89751c7476a2ce66d3d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84129014"
 ---
-
 # <a name="customizing-listview-cell-appearance"></a>ListView 셀 모양 사용자 지정
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)

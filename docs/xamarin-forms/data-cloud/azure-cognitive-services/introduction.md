@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 및 Azure Cognitive Services 소개" 설명: "이 문서에서는 일부 Microsoft 인식 서비스 api를 호출 하는 방법을 보여 주는 샘플 응용 프로그램을 소개 합니다."
-assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0: xamarin-forms author: davidbritch: dabritch:: 02/08/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.FormsAzure Cognitive Services 소개
+description: 이 문서에서는 일부 Microsoft 인식 서비스 Api를 호출 하는 방법을 보여 주는 예제 응용 프로그램에 대해 소개 합니다.
+ms.prod: xamarin
+ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/08/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7c2a63c40d1006c7d83c9dde871e17d4b194bdca
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84129716"
 ---
-
 # <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.FormsAzure Cognitive Services 소개
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
@@ -46,13 +60,13 @@ _Microsoft Cognitive Services는 개발자가 얼굴 인식, 음성 인식 및 �
 
 샘플 응용 프로그램에 대 한 공유 코드 프로젝트는 다음과 같은 5 개의 기본 폴더로 구성 됩니다.
 
-|폴더|용도|
+|폴더|목적|
 |--- |--- |
 |모델|응용 프로그램에 대 한 데이터 모델 클래스를 포함 합니다. 여기에는 `TodoItem` 응용 프로그램에서 사용 하는 데이터의 단일 항목을 모델링 하는 클래스가 포함 됩니다. 이 폴더에는 여러 Microsoft 인식 서비스 Api에서 반환 된 JSON 응답을 모델링 하는 데 사용 되는 클래스도 포함 되어 있습니다.|
 |리포지토리|`ITodoItemRepository` `TodoItemRepository` 데이터베이스 작업을 수행 하는 데 사용 되는 인터페이스와 클래스를 포함 합니다.|
 |Services|`DependencyService`플랫폼 프로젝트의 인터페이스를 구현 하는 클래스를 찾기 위해 클래스에서 사용 하는 인터페이스와 함께 다양 한 Microsoft 인지 서비스 api에 액세스 하는 데 사용 되는 인터페이스와 클래스를 포함 합니다.|
 |유틸리티|클래스에서 `Timer` `AuthenticationService` 9 분 마다 JWT 액세스 토큰을 갱신 하는 데 사용 하는 클래스를 포함 합니다.|
-|뷰|응용 프로그램에 대 한 페이지를 포함 합니다.|
+|보기|응용 프로그램에 대 한 페이지를 포함 합니다.|
 
 공유 코드 프로젝트에는 몇 가지 중요 한 파일도 포함 되어 있습니다.
 

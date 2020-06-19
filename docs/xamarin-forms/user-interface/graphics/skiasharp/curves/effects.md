@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp의 경로 효과" 설명: "이 문서에서는 패스를 스트로크 및 채우기에 사용할 수 있도록 하는 다양 한 SkiaSharp Path 효과를 설명 하 고 샘플 코드를 사용 하 여이를 보여 줍니다."
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 95167D1F-A718-405A-AFCC-90E596D422F3 author: davidbritch: dabritch: 07/29/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp의 경로 효과
+description: 이 문서에서는 스트로크 및 채우기에 경로를 사용할 수 있도록 하는 다양 한 SkiaSharp path 효과를 설명 하 고 샘플 코드를 사용 하 여이를 보여 줍니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/29/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f3a5a581ffb4ca2acf1d4209b8b7a744f0daa5eb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128055"
 ---
-
 # <a name="path-effects-in-skiasharp"></a>SkiaSharp의 경로 효과
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

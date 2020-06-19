@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms imagebutton" 설명: "Imagebutton은 이미지를 표시 하 고 응용 프로그램이 특정 작업을 수행 하도록 지시 하는 탭 또는 클릭에 응답 합니다."
-assetid: B5906AB6-3F79-4FCB-8C78-1F0AF18AB39E: xamarin-forms author: davidbritch: dabritch:: 12/04/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.FormsImageButton
+description: ImageButton은 이미지를 표시 하 고 응용 프로그램이 특정 작업을 수행 하도록 지시 하는 탭 또는 클릭에 응답 합니다.
+ms.prod: xamarin
+ms.assetid: B5906AB6-3F79-4FCB-8C78-1F0AF18AB39E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/04/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7d81c0ce4dc2a46a840a34cc9084c8f2388a0169
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137646"
 ---
-
 # <a name="xamarinforms-imagebutton"></a>Xamarin.FormsImageButton
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)

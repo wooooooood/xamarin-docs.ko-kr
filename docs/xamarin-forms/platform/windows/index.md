@@ -1,8 +1,22 @@
 ---
-제목: "Windows 플랫폼 기능" 설명: "이 문서에서는에서 사용할 수 있는 Windows 플랫폼 지원을 설명 Xamarin.Forms 합니다."
-assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F: xamarin-forms author: davidbritch: dabritch:: 01/16/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Windows 플랫폼 기능
+description: 이 문서에서는에서 사용할 수 있는 Windows 플랫폼 지원을 설명 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/16/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 52246ce5d54ba97e91777f598f25c187901f89c4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137776"
 ---
-
 # <a name="windows-platform-features"></a>Windows 플랫폼 기능
 
 Xamarin.FormsWindows 플랫폼용 응용 프로그램을 개발 하려면 Visual Studio가 필요 합니다. [지원 되는 플랫폼 페이지](~/get-started/supported-platforms.md) 에는 필수 구성 요소에 대 한 자세한 정보가 포함 되어 있습니다.

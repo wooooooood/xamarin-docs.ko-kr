@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms ScrollView" description: " Xamarin.Forms ScrollView은 콘텐츠를 스크롤할 수 있는 레이아웃입니다."
-assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E: xamarin-forms author: davidbritch: dabritch:: 05/27/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.FormsScrollView
+description: Xamarin.FormsScrollView는 콘텐츠를 스크롤할 수 있는 레이아웃입니다.
+ms.prod: xamarin
+ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/27/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f527acabe3b051cbfd6450ba6f5328449b1a728c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84199196"
 ---
-
 # <a name="xamarinforms-scrollview"></a>Xamarin.FormsScrollView
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)

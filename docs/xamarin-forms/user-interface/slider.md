@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 슬라이더" 설명: " Xamarin.Forms 슬라이더는 연속 범위에서 double 값을 선택 하기 위해 사용자가 조작할 수 있는 가로 막대입니다. 이 문서에서는 슬라이더 클래스를 사용 하 여 연속 값 범위에서 값을 선택 하는 방법을 설명 합니다. "
-assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878: xamarin-forms author: davidbritch: dabritch:: 02/27/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms슬라이드
+description: Xamarin.Forms슬라이더는 연속 범위에서 double 값을 선택 하기 위해 사용자가 조작할 수 있는 가로 막대입니다. 이 문서에서는 Slider 클래스를 사용 하 여 연속 값 범위에서 값을 선택 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/27/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9fc61dcac588f49fc1df7ee96792cf55bdfa46c5
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572041"
 ---
-
 # <a name="xamarinforms-slider"></a>Xamarin.Forms슬라이드
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)

@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp 줄 및 경로" 설명: "이 문서에서는 SkiaSharp를 사용 하 여 응용 프로그램에서 선과 그래픽 경로를 그리는 방법을 설명 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 줍니다."
-assetid: 316A15FE-383D-4D06-8641-BAC7EE7474CA: xamarin-skiasharp author: davidbritch: dabritch:: 03/10/2017:: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: SkiaSharp 선 및 경로
+description: 이 문서에서는 SkiaSharp를 사용 하 여 응용 프로그램에서 선과 그래픽 경로를 그리는 방법을 설명 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 줍니다.
+ms.prod: xamarin
+ms.assetid: 316A15FE-383D-4D06-8641-BAC7EE7474CA
+ms.technology: xamarin-skiasharp
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 97c7305e59a023e65535186bbbe39a9c2b7d4c26
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138998"
 ---
-
 # <a name="skiasharp-lines-and-paths"></a>SkiaSharp 선 및 경로
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

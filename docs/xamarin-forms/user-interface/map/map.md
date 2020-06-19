@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 맵 컨트롤" 설명: "맵 컨트롤은 지도를 표시 하 고 주석을 추가 하는 플랫폼 간 뷰입니다. 각 플랫폼에 대해 기본 지도 컨트롤을 사용 하 여 사용자에 게 빠르고 친숙 한 지도 환경을 제공 합니다. "
-assetid: 22C99029-0B16-43A6-BF58-26B48C4AED38: xamarin-forms author: davidbritch: dabritch:: 10/29/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms맵 컨트롤
+description: 지도 컨트롤은 지도를 표시 하 고 주석을 추가 하는 플랫폼 간 뷰입니다. 각 플랫폼에 대해 네이티브 맵 컨트롤을 사용 하 여 사용자에 게 빠르고 친숙 한 지도 환경을 제공 합니다.
+ms.prod: xamarin
+ms.assetid: 22C99029-0B16-43A6-BF58-26B48C4AED38
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/20/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1aee81b6988e1f3a7099c2722b6f336f071ad8c0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946366"
 ---
-
 # <a name="xamarinforms-map-control"></a>Xamarin.Forms맵 컨트롤
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
@@ -23,6 +37,7 @@ assetid: 22C99029-0B16-43A6-BF58-26B48C4AED38: xamarin-forms author: davidbritch
 - [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType)형식의은 [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) 지도의 표시 스타일을 나타냅니다.
 - `MoveToLastRegionOnLayoutChange`형식의는 `bool` 레이아웃 변경이 발생할 때 표시 되는 맵 영역을 현재 영역에서 이전 집합 영역으로 이동할지 여부를 제어 합니다.
 - [`Pins`](xref:Xamarin.Forms.Maps.Map.Pins)형식의는 `IList<Pin>` 맵의 핀 목록을 나타냅니다.
+- `TrafficEnabled`형식의는 `bool` 트래픽 데이터가 맵에 중첩 되는지 여부를 나타냅니다.
 - [`VisibleRegion`](xref:Xamarin.Forms.Maps.Map.VisibleRegion)형식의는 [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) 맵의 현재 표시 된 영역을 반환 합니다.
 
 , 및 속성을 제외 하 고 이러한 `MapElements` 속성 `Pins` `VisibleRegion` 은 개체에 의해 지원 되며이 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 는 데이터 바인딩의 대상이 될 수 있음을 의미 합니다.
@@ -172,7 +187,7 @@ MapSpan mapSpan = MapSpan.FromCenterAndRadius(position, Distance.FromKilometers(
 map.MoveToRegion(mapSpan);
 ```
 
-## <a name="zoom-the-map"></a>지도 확대/축소
+## <a name="zoom-the-map"></a>맵 확대/축소
 
 의 확대/축소 수준은 [`Map`](xref:Xamarin.Forms.Maps.Map) 해당 위치를 변경 하지 않고 변경할 수 있습니다. 이 작업은 맵 UI를 사용 하 여 수행 하거나 [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) 현재 위치를 인수로 사용 하는 인수를 사용 하 여 메서드를 프로그래밍 방식으로 호출할 수 있습니다 [`Position`](xref:Xamarin.Forms.Maps.Position) .
 
@@ -196,6 +211,23 @@ if (map.VisibleRegion != null)
 
 > [!NOTE]
 > 지도 사용자 지정 렌더러를 만들어 추가 맵 동작 사용자 지정을 수행할 수 있습니다. 자세한 내용은 [ Xamarin.Forms 맵 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)을 참조 하세요.
+
+### <a name="show-traffic-data"></a>트래픽 데이터 표시
+
+[`Map`](xref:Xamarin.Forms.Maps.Map)클래스는 `TrafficEnabled` 형식의 속성을 정의 합니다 `bool` . 기본적으로이 속성은 `false` 트래픽 데이터가 맵에 중첩 되지 않음을 나타내는입니다. 이 속성이로 설정 되 면 `true` 트래픽 데이터가 맵에 중첩 됩니다. 다음 예제에서는이 속성을 설정 하는 방법을 보여 줍니다.
+
+```xaml
+<maps:Map TrafficEnabled="true" />
+```
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+Map map = new Map
+{
+    TrafficEnabled = true
+};
+```
 
 ### <a name="disable-scroll"></a>스크롤 사용 안 함
 

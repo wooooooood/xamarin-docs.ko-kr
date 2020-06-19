@@ -1,8 +1,22 @@
 ---
-제목: "설명:"의 사용자 지정 애니메이션 Xamarin.Forms :이 문서에서는 Xamarin.ios 애니메이션 클래스를 사용 하 여 애니메이션을 만들고 취소 하 고, 여러 애니메이션을 동기화 하 고, 기존 애니메이션 메서드에서 애니메이션을 적용 하지 않는 속성에 애니메이션을 적용 하는 사용자 지정 애니메이션을 만드는 방법을 보여 줍니다. "
-assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907: xamarin-forms author: davidbritch: dabritch:: 02/10/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 사용자 지정 애니메이션Xamarin.Forms
+description: 이 문서에서는 Xamarin.ios 애니메이션 클래스를 사용 하 여 애니메이션을 만들고 취소 하 고, 여러 애니메이션을 동기화 하 고, 기존 애니메이션 메서드에서 애니메이션을 적용 하지 않는 속성에 애니메이션을 적용 하는 사용자 지정 애니메이션을 만드는 방법을 보여 줍니다.
+ms.prod: xamarin
+ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/10/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 573f18de0d7593d832505eb6bb2b492caea024a1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946106"
 ---
-
 # <a name="custom-animations-in-xamarinforms"></a>사용자 지정 애니메이션Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
@@ -37,7 +51,7 @@ animation.Commit (this, "SimpleAnimation", 16, 2000, Easing.Linear, (v, c) => im
 
 - 첫 번째 인수 (*owner*)는 애니메이션의 소유자를 식별 합니다. 애니메이션이 적용 되는 시각적 요소 또는 페이지와 같은 다른 시각적 요소가 될 수 있습니다.
 - 두 번째 인수 (*이름*)는 이름을 사용 하 여 애니메이션을 식별 합니다. 이름은 소유자와 결합 되어 애니메이션을 고유 하 게 식별 합니다. 그러면이 고유 id를 사용 하 여 애니메이션이 실행 중인지 여부를 확인할 수 있습니다 ([ `AnimationIsRunning` ] (f: Xamarin.Forms ). 애니메이션 확장. 애니메이션 실행 ( Xamarin.Forms . System.windows.media.animation.ianimatable>))을 (를) 만들거나 취소 하려면 ([ `AbortAnimation` ] (f: Xamarin.Forms . AbortAnimation ( Xamarin.Forms . System.windows.media.animation.ianimatable>)).
-- 세 번째 인수 (*rate*)는 생성자에 정의 된 콜백 메서드 호출 사이의 시간 (밀리초)을 나타냅니다. [`Animation`](xref:Xamarin.Forms.Animation)
+- 세 번째 인수 (*rate*)는 생성자에 정의 된 콜백 메서드를 호출할 때마다 시간 (밀리초)을 나타냅니다 [`Animation`](xref:Xamarin.Forms.Animation) .
 - 네 번째 인수 (*길이*)는 애니메이션의 기간 (밀리초)을 나타냅니다.
 - 다섯 번째 인수 (*감속/가속*)는 애니메이션에 사용할 감속/가속 함수를 정의 합니다. 또는 감속/가속 함수를 생성자에 대 한 인수로 지정할 수 있습니다 [`Animation`](xref:Xamarin.Forms.Animation) . 감속/가속 함수에 대 한 자세한 내용은 [감속/가속 함수](~/xamarin-forms/user-interface/animation/easing.md)를 참조 하세요.
 - 여섯 번째 인수 (*마침*)는 애니메이션이 완료 될 때 실행 되는 콜백입니다. 이 콜백은 마지막 값을 나타내는 첫 번째 인수를 사용 하 여 두 개의 인수를 사용 하 고 두 번째 인수는 `bool` 애니메이션이 취소 된 경우로 설정 된입니다 `true` . 또는 *완성* 된 콜백을 생성자에 대 한 인수로 지정할 수 있습니다 [`Animation`](xref:Xamarin.Forms.Animation) . 그러나 단일 애니메이션을 사용 하면 생성자와 메서드에서 *완료* 된 콜백이 지정 된 경우 `Animation` `Commit` 메서드에 지정 된 콜백만 실행 됩니다 `Commit` .

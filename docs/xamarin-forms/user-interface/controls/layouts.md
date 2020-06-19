@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 레이아웃" 설명: " Xamarin.Forms 레이아웃은 사용자 인터페이스 컨트롤을 시각적 구조로 구성 하는 데 사용 됩니다. 이 문서에서는에 포함 된 레이아웃을 나열 Xamarin.Forms 합니다.
-assetid: F4180997-BA21-453A-9958-D1E2940DF050: xamarin-forms author: davidbritch: dabritch: ms. date: 05/21/2018 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Forms모양의
+description: Xamarin.Forms레이아웃은 사용자 인터페이스 컨트롤을 시각적 구조체로 구성 하는 데 사용 됩니다. 이 문서에서는에 포함 된 레이아웃을 나열 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: F4180997-BA21-453A-9958-D1E2940DF050
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/21/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 751a004e0051fcbfd0592654b0e73f26874b15d3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84567088"
 ---
-
 # <a name="xamarinforms-layouts"></a>Xamarin.Forms모양의
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)

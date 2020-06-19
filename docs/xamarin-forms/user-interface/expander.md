@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 확장기" 설명: " Xamarin.Forms 확장기 컨트롤은 콘텐츠를 호스트 하는 확장 가능한 컨테이너를 제공 합니다. 확장 헤더를 누르면 콘텐츠가 표시 되거나 숨겨집니다. "
-assetid: 381DCB55-522D-4414-B45B-E8DD70AA9985: xamarin-forms author: davidbritch: dabritch: ms. date: 04/15/2020 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Forms기호
+description: Xamarin.Forms확장기 컨트롤은 모든 콘텐츠를 호스트 하는 확장 가능한 컨테이너를 제공 합니다. 확장 헤더를 누르면 콘텐츠가 표시 되거나 숨겨집니다.
+ms.prod: xamarin
+ms.assetid: 381DCB55-522D-4414-B45B-E8DD70AA9985
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5e9afa0f6d27003891963af5715d5721e3129306
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84129573"
 ---
-
 # <a name="xamarinforms-expander"></a>Xamarin.Forms기호
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)

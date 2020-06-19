@@ -1,8 +1,22 @@
 ---
-제목: "분리 되지 않은 혼합 모드" 설명: "색상, 채도 또는 광도를 변경 하는 데 분리 되지 않은 혼합 모드를 사용 합니다."
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF author: davidbritch: dabritch: 08/23/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 분리 되지 않은 혼합 모드
+description: 분리 되지 않은 혼합 모드를 사용 하 여 색상, 채도 또는 광도를 변경 합니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 52be7641ac3b2983f537e11bccd76f2a5b52574d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84130184"
 ---
-
 # <a name="the-non-separable-blend-modes"></a>분리 되지 않은 혼합 모드
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

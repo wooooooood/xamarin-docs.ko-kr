@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 공용 컨트롤 속성, 메서드 및 이벤트" 설명: "이 문서에서는 클래스 파생에 일반적으로 사용 되는 VisualElement 클래스에 정의 된 공용 속성, 메서드 및 이벤트에 대해 설명 합니다."
-assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D: xamarin-forms author: profexorgeek: jusjohns:: 08/21/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms공용 컨트롤 속성, 메서드 및 이벤트
+description: 이 문서에서는 파생 클래스에서 일반적으로 사용 되는 VisualElement 클래스에 정의 된 공용 속성, 메서드 및 이벤트에 대해 설명 합니다.
+ms.prod: xamarin
+ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 08/21/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: deb894cccd5b6a2a9d908ef8967de91f00e7d297
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136424"
 ---
-
 # <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Forms공용 컨트롤 속성, 메서드 및 이벤트
 
 Xamarin.Forms `VisualElement` 클래스는 응용 프로그램에서 사용 되는 대부분의 컨트롤에 대 한 기본 클래스입니다 Xamarin.Forms . `VisualElement`클래스는 클래스 파생에 사용 되는 여러 [속성](#properties), [메서드](#methods)및 [이벤트](#events) 를 정의 합니다.

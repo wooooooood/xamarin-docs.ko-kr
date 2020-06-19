@@ -1,8 +1,22 @@
 ---
-제목: "엔터프라이즈 앱에서 유효성 검사" 설명: "이 장은 eShopOnContainers 모바일 앱에서 사용자 입력의 유효성 검사를 수행 하는 방법을 설명 합니다. 여기에는 유효성 검사 규칙 지정, 유효성 검사 트리거 및 유효성 검사 오류 표시가 포함 됩니다.
-assetid: 56e4f0fc-48d9-4033-91ec-173bb46a5e4d: xamarin-forms author: davidbritch: dabritch:: 08/07/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 엔터프라이즈 앱의 유효성 검사
+description: 이 장에서는 eShopOnContainers 모바일 앱이 사용자 입력에 대 한 유효성 검사를 수행 하는 방법을 설명 합니다. 여기에는 유효성 검사 규칙 지정, 유효성 검사 트리거 및 유효성 검사 오류 표시가 포함 됩니다.
+ms.prod: xamarin
+ms.assetid: 56e4f0fc-48d9-4033-91ec-173bb46a5e4d
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a4b82552956ab0e75d0a76a14ce7c919c744e09a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565332"
 ---
-
 # <a name="validation-in-enterprise-apps"></a>엔터프라이즈 앱의 유효성 검사
 
 사용자의 입력을 허용 하는 모든 앱은 입력이 올바른지 확인 해야 합니다. 예를 들어 앱은 특정 범위의 문자만 포함 하는 입력을 확인 하거나 특정 길이 이거나 특정 형식과 일치 시킬 수 있습니다. 유효성 검사를 수행 하지 않으면 사용자가 응용 프로그램 실패를 유발 하는 데이터를 제공할 수 있습니다. 유효성 검사는 비즈니스 규칙을 적용 하 고 공격자가 악성 데이터를 삽입 하는 것을 방지 합니다.

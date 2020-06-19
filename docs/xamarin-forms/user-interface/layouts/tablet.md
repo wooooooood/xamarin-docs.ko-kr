@@ -1,8 +1,22 @@
 ---
-제목: "태블릿 및 데스크톱 앱의 레이아웃" 설명: "이 문서에서는 Xamarin.Forms 휴대폰과 달리 태블릿 용 응용 프로그램 레이아웃을 최적화 하는 방법을 설명 합니다."
-assetid: D62F472B-4345-4983-8403-659A538B591F: xamarin-forms author: davidbritch: dabritch:: 02/01/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 태블릿 및 데스크톱 앱의 레이아웃
+description: 이 문서에서는 Xamarin.Forms 휴대폰과 달리 태블릿 용 응용 프로그램 레이아웃을 최적화 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: D62F472B-4345-4983-8403-659A538B591F
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/01/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0ecbc850960465296dc4047277bdafe78ac800a4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573250"
 ---
-
 # <a name="layout-for-tablet-and-desktop-apps"></a>태블릿 및 데스크톱 앱의 레이아웃
 
 Xamarin.Forms는 지원 되는 플랫폼에서 사용할 수 있는 모든 장치 유형을 지원 하므로 휴대폰 외에도 앱을 다음에서 실행할 수 있습니다.

@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 재질 시각적 개체" 설명: " Xamarin.Forms 재질 시각적 개체를 사용 하 여 Xamarin.Forms iOS 및 Android에서 거의 동일 하 게 보이는 응용 프로그램을 만들 수 있습니다."
-assetid: B774F68C-EF9E-49E1-B738-CDC64879ADA2: xamarin-forms author: profexorgeek: jusjohns:: 11/25/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms 재질 시각적 개체
+description: Xamarin.Forms재질 시각적 개체는 Xamarin.Forms iOS 및 Android에서 거의 동일 하 게 보이는 응용 프로그램을 만드는 데 사용할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: B774F68C-EF9E-49E1-B738-CDC64879ADA2
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 11/25/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: bba7d77d8cf565b1b2db2c1324e171389c5d0280
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127181"
 ---
-
 # <a name="xamarinforms-material-visual"></a>Xamarin.Forms 재질 시각적 개체
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)

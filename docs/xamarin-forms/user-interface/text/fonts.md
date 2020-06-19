@@ -1,8 +1,22 @@
 ---
-제목: "의 글꼴 Xamarin.Forms " 설명: "이 문서에서는 응용 프로그램에 텍스트를 표시 하는 컨트롤에 대 한 글꼴 정보를 지정 하는 방법을 설명 Xamarin.Forms 합니다."
-assetid: 49DD2249-C575-41AE-AE06-08F890FD6031: xamarin-forms author: davidbritch: dabritch:: 04/01/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 글꼴Xamarin.Forms
+description: 이 문서에서는 응용 프로그램에 텍스트를 표시 하는 컨트롤에 대 한 글꼴 정보를 지정 하는 방법을 설명 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/01/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a657915edb41573f9637128b4c88233d58a5909a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572210"
 ---
-
 # <a name="fonts-in-xamarinforms"></a>글꼴Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)

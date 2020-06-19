@@ -1,8 +1,22 @@
 ---
-제목: "apple을 사용 하 여 로그인" Xamarin.Forms 설명: "apple에 로그인 하면 사용자에 게 id 보호가 제공 되며,의 플랫폼 간 모바일 시나리오에 대해 구현할 수 있습니다 Xamarin.Forms ."
-assetid: 414465F8-0CC8-4078-B3D1-F36983069658 밀리초. 기술: xamarin forms author: davidortinau: daortin: ms. date: 09/10/2019 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 에서 Apple으로 로그인Xamarin.Forms
+description: Apple로 로그인은 사용자를 위한 id 보호 기능을 제공 하며,의 플랫폼 간 모바일 시나리오에 대해 구현할 수 있습니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 414465F8-0CC8-4078-B3D1-F36983069658
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 09/10/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 84c7fdef5d12dfe6fca6294b3125e90761349002
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139453"
 ---
-
 # <a name="sign-in-with-apple-in-xamarinforms"></a>에서 Apple으로 로그인Xamarin.Forms
 
 Apple에 로그인 하면 사용자에 게 id 보호를 제공 하는 새로운 서비스가 도입 됩니다. IOS 13 Apple의 경우 타사 인증 공급자를 사용 하는 모든 앱에서 Apple에 로그인을 제공 해야 합니다. Xamarin.ios에서이 기능을 사용 하는 방법에 대 한 지침은 [여기를 참조](~/ios/platform/ios13/sign-in.md)하세요.

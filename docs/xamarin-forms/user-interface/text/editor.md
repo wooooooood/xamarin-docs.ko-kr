@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 편집기" 설명: "이 문서에서는 편집기 컨트롤을 사용 하 여 Xamarin.Forms 응용 프로그램에서 여러 줄 텍스트 입력을 허용 하는 방법을 설명 합니다."
-assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07: xamarin-forms author: davidbritch: dabritch:: 09/26/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms 편집기
+description: 이 문서에서는 편집기 컨트롤을 사용 하 여 Xamarin.Forms 응용 프로그램에서 여러 줄 텍스트 입력을 허용 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/26/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 02749c9f8f55427bb1742e78464bbc003f1f7358
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136177"
 ---
-
 # <a name="xamarinforms-editor"></a>Xamarin.Forms 편집기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

@@ -1,8 +1,22 @@
 ---
-제목: "설명:"의 애니메이션에는 Xamarin.Forms Xamarin.Forms 간단한 애니메이션을 만들기에는 간단 하 고 복잡 한 애니메이션을 만들 수 있을 정도로 충분 한 자체 애니메이션 인프라가 포함 되어 있습니다. "
-assetid: AC0B4127-ECA3-44DA-8A24-A2B10A275083: xamarin-forms author: davidbritch: dabritch:: 07/14/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 애니메이션Xamarin.Forms
+description: Xamarin.Forms에는 간단한 애니메이션을 만들기에는 간단 하 고 복잡 한 애니메이션을 만들 수 있는 다양 한 애니메이션 인프라가 포함 되어 있습니다.
+ms.prod: xamarin
+ms.assetid: AC0B4127-ECA3-44DA-8A24-A2B10A275083
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/14/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 88a671c4d28d62a5f73e90a7b2fa9c45b7dbe8b1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84129001"
 ---
-
 # <a name="animation-in-xamarinforms"></a>애니메이션Xamarin.Forms
 
 _Xamarin에는 간단한 애니메이션을 만들기에는 간단 하 고 복잡 한 애니메이션을 만들 수 있는 다양 한 애니메이션 인프라가 포함 되어 있습니다._

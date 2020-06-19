@@ -1,8 +1,23 @@
 ---
-제목: "" 설명: "에서 Azure Cosmos DB 문서 데이터베이스를 사용 합니다. Xamarin.Forms 이 문서에서는 Azure Cosmos DB .NET Standard 클라이언트 라이브러리를 사용 하 여 Azure Cosmos DB 문서 데이터베이스를 응용 프로그램에 통합 하는 방법을 설명 Xamarin.Forms 합니다."
-assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C: xamarin-forms ms. custom: xamu-video author: davidbritch: dabritch: ms. date: 06/16/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 에서 Azure Cosmos DB 문서 데이터베이스 사용Xamarin.Forms
+description: 이 문서에서는 Azure Cosmos DB .NET Standard 클라이언트 라이브러리를 사용 하 여 Azure Cosmos DB 문서 데이터베이스를 응용 프로그램에 통합 하는 방법을 설명 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/16/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b8cd2ea2f54e4bfdfea4fa5787a01aca252691b4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84564656"
 ---
-
 # <a name="consume-an-azure-cosmos-db-document-database-in-xamarinforms"></a>에서 Azure Cosmos DB 문서 데이터베이스 사용Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)

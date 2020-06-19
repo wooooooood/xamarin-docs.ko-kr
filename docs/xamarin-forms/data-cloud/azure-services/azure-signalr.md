@@ -1,7 +1,21 @@
 ---
-제목: "Azure SignalR Service with Xamarin.Forms " description: "Azure SignalR service를 시작 하 Azure Functions 고 Xamarin.Forms " ms. prod: assetid: 1B9A69EF-C200-41BF-B098-D978D7F9CD8F author: profexorgeek: jusjohns: ms. date: 06/07/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Azure SignalR ServiceXamarin.Forms
+description: Azure SignalR Service를 시작 하 고 다음을 사용 하 여 Azure Functions 하세요.Xamarin.Forms
+ms.prod: xamarin
+ms.assetid: 1B9A69EF-C200-41BF-B098-D978D7F9CD8F
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 06/07/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ffa44beb68dc845a64d8bf2a9f86f6d7e56df8f9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139440"
 ---
-
 # <a name="azure-signalr-service-with-xamarinforms"></a>Azure SignalR ServiceXamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresignalr/)

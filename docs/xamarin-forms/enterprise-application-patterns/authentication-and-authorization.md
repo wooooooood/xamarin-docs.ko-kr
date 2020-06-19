@@ -1,8 +1,22 @@
 ---
-제목: "인증 및 권한 부여" 설명: "이 장은 eShopOnContainers mobile 앱이 컨테이너 화 된 마이크로 서비스에 대 한 인증 및 권한 부여를 수행 하는 방법을 설명 합니다."
-assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e: xamarin-forms author: davidbritch: dabritch:: 08/08/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 인증 및 권한 부여
+description: 이 장에서는 eShopOnContainers mobile 앱이 컨테이너 화 된 마이크로 서비스에 대 한 인증 및 권한 부여를 수행 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/08/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8b712b2a5d7eeb2ee5e71047b9e6c460eb10d72a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573835"
 ---
-
 # <a name="authentication-and-authorization"></a>인증 및 권한 부여
 
 인증은 사용자의 이름 및 암호와 같은 id 자격 증명을 가져오고 기관에 대해 해당 자격 증명의 유효성을 검사 하는 프로세스입니다. 자격 증명이 유효 하면 자격 증명을 제출한 엔터티가 인증 된 id로 간주 됩니다. Id가 인증 되 면 권한 부여 프로세스에서 해당 id에 지정 된 리소스에 대 한 액세스 권한이 있는지 여부를 확인 합니다.

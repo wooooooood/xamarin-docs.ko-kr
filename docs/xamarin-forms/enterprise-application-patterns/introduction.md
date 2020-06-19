@@ -1,8 +1,22 @@
 ---
-제목: "엔터프라이즈 앱 개발 소개" 설명: "이 장에서는 엔터프라이즈 앱 개발에 대 한 소개를 제공 하 고 eShopOnContainers 모바일 앱을 소개 합니다."
-assetid: cbce0659-fa03-447a-86ec-140438143230 ms. 기술: xamarin-forms author: davidbritch: dabritch: ms. 날짜: 08/07/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 엔터프라이즈 앱 개발 소개
+description: 이 장에서는 엔터프라이즈 앱 개발에 대 한 소개를 제공 하 고 eShopOnContainers 모바일 앱을 소개 합니다.
+ms.prod: xamarin
+ms.assetid: cbce0659-fa03-447a-86ec-140438143230
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e78e7c3056d4f1e22114819f54c1df261aec70e1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198110"
 ---
-
 # <a name="introduction-to-enterprise-app-development"></a>엔터프라이즈 앱 개발 소개
 
 플랫폼에 관계 없이 엔터프라이즈 앱 개발자는 다음과 같은 몇 가지 문제를 직면 하 고 있습니다.
@@ -133,7 +147,7 @@ EShopOnContainers PCL 프로젝트에는 다음 폴더가 포함 되어 있습�
 |컨버터|바인딩에 사용자 지정 논리를 적용 하는 값 변환기를 포함 합니다.|
 |효과|`EntryLineColorEffect`특정 컨트롤의 테두리 색을 변경 하는 데 사용 되는 클래스를 포함 `Entry` 합니다.|
 |예외|사용자 지정를 포함 `ServiceAuthenticationException` 합니다.|
-|확장|및 클래스에 대 한 확장 메서드를 포함 `VisualElement` `IEnumerable` 합니다.|
+|Extensions|및 클래스에 대 한 확장 메서드를 포함 `VisualElement` `IEnumerable` 합니다.|
 |도우미|앱에 대 한 도우미 클래스를 포함 합니다.|
 |모델|앱에 대 한 모델 클래스를 포함 합니다.|
 |속성|`AssemblyInfo.cs`.Net 어셈블리 메타 데이터 파일을 포함 합니다.|
@@ -141,7 +155,7 @@ EShopOnContainers PCL 프로젝트에는 다음 폴더가 포함 되어 있습�
 |트리거|`BeginAnimation`XAML에서 애니메이션을 호출 하는 데 사용 되는 트리거를 포함 합니다.|
 |유효성 검사|데이터 입력의 유효성 검사와 관련 된 클래스를 포함 합니다.|
 |ViewModels|페이지에 노출 되는 응용 프로그램 논리를 포함 합니다.|
-|뷰|앱에 대 한 페이지를 포함 합니다.|
+|보기|앱에 대 한 페이지를 포함 합니다.|
 
 ##### <a name="platform-projects"></a>플랫폼 프로젝트
 

@@ -1,8 +1,22 @@
 ---
-제목: "모델-뷰-ViewModel 패턴" 설명: "이 장은 eShopOnContainers mobile 앱이 MVVM 패턴을 사용 하 여 사용자 인터페이스에서 앱의 비즈니스 및 프레젠테이션 논리를 명확 하 게 구분 하는 방법을 설명 합니다."
-assetid: dd8c1813-df44-4947-bcee-1a1ff2334b87: xamarin-forms author: davidbritch: dabritch:: 08/07/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 모델 뷰-ViewModel 패턴
+description: 이 장에서는 eShopOnContainers 모바일 앱이 MVVM 패턴을 사용 하 여 사용자 인터페이스에서 앱의 비즈니스 및 프레젠테이션 논리를 명확 하 게 구분 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: dd8c1813-df44-4947-bcee-1a1ff2334b87
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c07fc9f42c4175b4e4569ab95a951b24c130c4f3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572054"
 ---
-
 # <a name="the-model-view-viewmodel-pattern"></a>모델 뷰-ViewModel 패턴
 
 Xamarin.Forms일반적으로 개발자 환경에는 XAML에서 사용자 인터페이스를 만든 다음 사용자 인터페이스에서 작동 하는 코드 숨김이 추가 됩니다. 앱이 수정 되 고 크기와 범위가 증가 함에 따라 복잡 한 유지 관리 문제가 발생할 수 있습니다. 이러한 문제에는 ui 컨트롤과 비즈니스 논리를 긴밀 하 게 결합 하 여 UI를 수정 하는 비용과 이러한 코드를 단위 테스트 하는 어려움을 포함 합니다.
@@ -28,7 +42,7 @@ MVVM 패턴을 사용 하는 이점은 다음과 같습니다.
 
 MVVM를 효과적으로 사용 하는 핵심은 응용 프로그램 코드를 올바른 클래스로 요소를 구분 하는 방법과 클래스가 상호 작용 하는 방식을 이해 하는 것입니다. 다음 섹션에서는 MVVM 패턴의 각 클래스에 대 한 책임을 설명 합니다.
 
-### <a name="view"></a>View
+### <a name="view"></a>보기
 
 보기는 사용자가 화면에서 볼 수 있는 구조, 레이아웃 및 모양을 정의 하는 작업을 담당 합니다. 각 보기는 비즈니스 논리를 포함 하지 않는 제한 된 코드 숨김으로 XAML로 정의 하는 것이 가장 좋습니다. 그러나 경우에 따라 코드 숨김이 XAML에서 표현 하기 어려운 시각적 동작을 구현 하는 UI 논리 (예: 애니메이션)를 포함할 수 있습니다.
 

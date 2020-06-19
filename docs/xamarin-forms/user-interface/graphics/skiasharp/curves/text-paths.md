@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp의 경로 및 텍스트" 설명: "이 문서에서는 SkiaSharp 경로와 텍스트의 교집합을 알아보고 샘플 코드를 사용 하 여이를 보여 줍니다."
-assetid: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B: xamarin-skiasharp author: davidbritch: dabritch:: 08/01/2017:: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: SkiaSharp의 경로 및 텍스트
+description: 이 문서에서는 SkiaSharp 경로와 텍스트의 교집합을 알아보고 샘플 코드를 사용 하 여이를 보여 줍니다.
+ms.prod: xamarin
+ms.assetid: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B
+ms.technology: xamarin-skiasharp
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/01/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b0cbb7d26a2aea02a3255fc75947c20a3d803b86
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84131900"
 ---
-
 # <a name="paths-and-text-in-skiasharp"></a>SkiaSharp의 경로 및 텍스트
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

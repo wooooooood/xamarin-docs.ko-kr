@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 맵 초기화 및 구성" 설명: " Xamarin.Forms . Maps NuGet 패키지는 응용 프로그램에서 maps 기능을 사용 하는 데 필요 합니다. 또한 사용자의 위치에 액세스 하려면 응용 프로그램에 대 한 위치 권한이 부여 되어야 합니다. "
-assetid: 59CD1344-8248-406C-9144-0C8A67141E5B: xamarin-forms author: davidbritch: dabritch:: 02/07/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms맵 초기화 및 구성
+description: Xamarin.Forms입니다. Maps NuGet 패키지는 응용 프로그램에서 maps 기능을 사용 하는 데 필요 합니다. 또한 사용자의 위치에 액세스 하려면 응용 프로그램에 대 한 위치 권한이 있어야 합니다.
+ms.prod: xamarin
+ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/07/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 52e2ac5f8075c57f533fcba064223f355e07ba48
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139843"
 ---
-
 # <a name="xamarinforms-map-initialization-and-configuration"></a>Xamarin.Forms맵 초기화 및 구성
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

@@ -1,8 +1,22 @@
 ---
-title: "컨트롤 참조" 설명: "응용 프로그램을 생성 하는 데 사용 되는 모든 사용자 인터페이스 요소에 대 한 설명 Xamarin.Forms 입니다. 이 문서에서는 응용 프로그램의 사용자 인터페이스를 구성 하는 컨트롤 그룹을 나열 Xamarin.Forms 합니다. "
-assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F: xamarin-forms author: davidbritch: dabritch:: 08/08/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 컨트롤 참조
+description: 응용 프로그램을 생성 하는 데 사용 되는 모든 사용자 인터페이스 요소에 대 한 설명 Xamarin.Forms 입니다. 이 문서에서는 응용 프로그램의 사용자 인터페이스를 구성 하는 컨트롤 그룹을 나열 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/08/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e843f0e42f4f66a6ce4e60c2f5d8a233d19f1df6
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136398"
 ---
-
 # <a name="controls-reference"></a>컨트롤 참조
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
@@ -13,7 +27,7 @@ assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F: xamarin-forms author: davidbritch
 
 - [**페이지**](pages.md)
 - [**레이아웃**](layouts.md)
-- [**뷰**](views.md)
+- [**보기**](views.md)
 - [**셀**](cells.md)
 
 Xamarin.Forms페이지는 일반적으로 전체 화면을 차지 합니다. 이 페이지에는 일반적으로 뷰 및 다른 레이아웃이 포함 된 레이아웃이 포함 되어 있습니다. 셀은 및와의 연결에 사용 되는 특수 구성 요소 [`TableView`](views.md#tableview) [`ListView`](views.md#listview) 입니다. 에서 사용자 인터페이스를 빌드하는 데 일반적으로 사용 되는 형식 계층 구조를 보여 주는 클래스 다이어그램은 Xamarin.Forms [ Xamarin.Forms Controls 클래스 계층 구조](~/xamarin-forms/internals/class-hierarchy.md)에서 찾을 수 있습니다.

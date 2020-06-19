@@ -1,8 +1,23 @@
 ---
-제목: "Mac 플랫폼 설정" 설명: "이 문서에서는 프로젝트에 Mac 프로젝트를 추가 하는 방법을 설명 합니다. 그러면 Xamarin.Forms macOS Sierra 및 macOS El Capitan에서 실행할 수 있는 앱이 생성 됩니다."
-assetid: EEC549E0-F182-4F9C-B2BA-B31D19569AA5: xamarin-forms ms. custom: xamu-video author: davidbritch: dabritch: ms. date: 05/03/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Mac 플랫폼 설정
+description: 이 문서에서는 Xamarin.Forms macOS Sierra 및 macOS El Capitan에서 실행할 수 있는 앱을 생성 하는 Mac 프로젝트를 프로젝트에 추가 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: EEC549E0-F182-4F9C-B2BA-B31D19569AA5
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/03/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 11897d2d3b8b7ba0a62956f1dbe4d8b873352e7a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139557"
 ---
-
 # <a name="mac-platform-setup"></a>Mac 플랫폼 설정
 
 ![미리 보기](~/media/shared/preview.png)

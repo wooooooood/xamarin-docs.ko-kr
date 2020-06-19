@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 웹 보기" 설명: "이 문서에서는 웹 보기 클래스를 사용 하 여 Xamarin.Forms 로컬 또는 네트워크 웹 콘텐츠와 문서를 사용자에 게 표시 하는 방법을 설명 합니다."
-assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5: xamarin-forms author: davidbritch: dabritch:: 05/06/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms웹
+description: 이 문서에서는 웹 보기 클래스를 사용 하 여 Xamarin.Forms 로컬 또는 네트워크 웹 콘텐츠와 문서를 사용자에 게 제공 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/06/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9b07e044e55f99a7a183e55c566bf59dbd082655
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198162"
 ---
-
 # <a name="xamarinforms-webview"></a>Xamarin.Forms웹
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)

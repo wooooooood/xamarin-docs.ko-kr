@@ -1,8 +1,22 @@
 ---
-제목: "도구 Xamarin.Forms 모음 항목" 설명: "도구 모음 항목 클래스는 응용 프로그램의 탐색 모음에서 사용 되는 특수 한 종류의 단추입니다."
-assetId: CC737D54-0280-46BD-A2BC-A0FB67DDD6A1: xamarin-forms author: profexorgeek: jusjohns:: 07/29/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms항목 항목
+description: 도구 모음 항목 클래스는 응용 프로그램의 탐색 모음에서 사용 되는 특수 한 형식의 단추입니다.
+ms.prod: xamarin
+ms.assetId: CC737D54-0280-46BD-A2BC-A0FB67DDD6A1
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 07/29/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 46aba32ebbae1646b9af00877bba530b619210cd
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138218"
 ---
-
 # <a name="xamarinforms-toolbaritem"></a>Xamarin.Forms항목 항목
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)

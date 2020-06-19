@@ -1,8 +1,22 @@
 ---
-제목: "원격 데이터에 액세스" 설명: "이 장은 eShopOnContainers 모바일 앱이 컨테이너 화 된 마이크로 서비스에서 데이터에 액세스 하는 방법을 설명 합니다."
-assetid: 42eba6f5-9784-4e1a-9943-5c1fbeea7452: xamarin-forms author: davidbritch: dabritch:: 08/07/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 원격 데이터에 액세스
+description: 이 장에서는 eShopOnContainers mobile app이 컨테이너 화 된 마이크로 서비스에서 데이터에 액세스 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 42eba6f5-9784-4e1a-9943-5c1fbeea7452
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: cef3c2369bb4aee81a52ddd27d6ad732d7544dfa
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573848"
 ---
-
 # <a name="accessing-remote-data"></a>원격 데이터에 액세스
 
 많은 최신 웹 기반 솔루션은 웹 서버에서 호스트 되는 웹 서비스를 사용 하 여 원격 클라이언트 응용 프로그램에 대 한 기능을 제공 합니다. 웹 API는 웹 서비스에 표시되는 작업으로 구성됩니다.

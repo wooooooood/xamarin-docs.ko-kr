@@ -1,8 +1,22 @@
 ---
-제목: "Windows 프로젝트 설정" 설명: "이전 Xamarin.Forms 솔루션 (또는 macOS에서 만든)은 유니버설 Windows 플랫폼 프로젝트를 포함 하지 않으므로이 문서에서는 기존 솔루션에 새 UWP 프로젝트를 추가 하는 방법을 설명 Xamarin.Forms 합니다."
-assetid: A0774D2E-6994-4D91-84E8-DAB66FC92320: xamarin-forms author: davidbritch: dabritch:: 04/10/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Windows 프로젝트 설정
+description: 이전 Xamarin.Forms 솔루션 (또는 macOS에서 만든)은 유니버설 Windows 플랫폼 프로젝트를 포함 하지 않으므로이 문서에서는 기존 솔루션에 새 UWP 프로젝트를 추가 하는 방법을 설명 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: A0774D2E-6994-4D91-84E8-DAB66FC92320
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 13b46fd06b0116332241b0d523aea707d56b39ec
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573367"
 ---
-
 # <a name="setup-windows-projects"></a>Windows 프로젝트 설정
 
 _기존 솔루션에 새 Windows 프로젝트 추가 Xamarin.Forms_

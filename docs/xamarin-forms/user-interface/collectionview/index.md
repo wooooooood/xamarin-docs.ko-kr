@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms CollectionView" description: "CollectionView는 서로 다른 레이아웃 사양을 사용 하 여 데이터 목록을 표시 하기 위한 유연 하 고 성능이 뛰어난 뷰입니다."
-assetid: 2BC9B223-2D5C-4B09-849C-B9D578954557: xamarin-forms author: davidbritch: dabritch:: 07/24/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms CollectionView
+description: CollectionView는 다양 한 레이아웃 사양을 사용 하 여 데이터 목록을 표시 하기 위한 유연 하 고 성능이 뛰어난 뷰입니다.
+ms.prod: xamarin
+ms.assetid: 2BC9B223-2D5C-4B09-849C-B9D578954557
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/24/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a2c9fd9e6e48192bc2237d6b451b533fcee6e6ed
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136450"
 ---
-
 # <a name="xamarinforms-collectionview"></a>Xamarin.Forms CollectionView
 
 ## <a name="introduction"></a>[소개](introduction.md)

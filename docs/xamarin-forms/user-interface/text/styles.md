@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 텍스트 스타일" 설명: "이 문서에서는 응용 프로그램에서 텍스트의 스타일을 지정 하는 방법을 설명 Xamarin.Forms 합니다. 스타일은 한 번 정의 하 여 여러 뷰에서 사용할 수 있지만 스타일은 한 형식의 뷰에서만 사용할 수 있습니다. "
-assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF: xamarin-forms author: davidbritch: dabritch:: 05/22/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms텍스트 스타일
+description: 이 문서에서는 응용 프로그램에서 텍스트의 스타일을 지정 하는 방법을 설명 합니다 Xamarin.Forms . 스타일은 한 번 정의 하 여 여러 뷰에서 사용할 수 있지만 스타일은 한 형식의 뷰에서만 사용할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/22/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7d82348231c4b4905f2f70b80f73c45f2f0bf66b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572002"
 ---
-
 # <a name="xamarinforms-text-styles"></a>Xamarin.Forms텍스트 스타일
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

@@ -1,8 +1,22 @@
 ---
-제목: "Face API를 사용 하는 인식 된 Emotion 인식" 설명: "Face API는 이미지에서 얼굴 식을 입력으로 사용 하 고 이미지의 각 면에 대 한 감정을 집합에 대 한 신뢰도 수준을 포함 하는 데이터를 반환 합니다. 이 문서에서는 Face API를 사용 하 여 응용 프로그램을 평가 하는 emotion를 인식 하는 방법을 설명 Xamarin.Forms 합니다.
-assetid: 19D36A7C-E8D8-43D1-BE80-48DE6C02879A: xamarin-forms author: davidbritch: dabritch:: 05/10/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Face API를 사용 하는 인식 된 Emotion 인식
+description: Face API는 이미지에서 얼굴 식을 입력으로 사용 하 고 이미지의 각 면에 대 한 감정을 집합에 대 한 신뢰 수준을 포함 하는 데이터를 반환 합니다. 이 문서에서는 emotion를 Face API 사용 하 여 응용 프로그램의 등급을 평가 하는 방법을 설명 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 19D36A7C-E8D8-43D1-BE80-48DE6C02879A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ff384605b35f6406b628da99de500b550da811c9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136060"
 ---
-
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Face API를 사용 하는 인식 된 Emotion 인식
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

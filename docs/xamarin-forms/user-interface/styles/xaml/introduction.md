@@ -1,8 +1,22 @@
 ---
-제목: "스타일 소개 Xamarin.Forms " 설명: "스타일을 사용 하면 시각적 요소의 모양을 사용자 지정할 수 있습니다. 스타일은 특정 형식에 대해 정의 되며 해당 형식에 사용할 수 있는 속성에 대 한 값을 포함 합니다. "
-assetid: 3FF899C0-6CFB-4C1D-837D-9E9E10181967: xamarin-forms author: davidbritch: dabritch:: 04/27/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 스타일 소개 Xamarin.Forms
+description: 스타일을 사용 하면 시각적 요소의 모양을 사용자 지정할 수 있습니다. 스타일은 특정 형식에 대해 정의 되며 해당 형식에 사용할 수 있는 속성에 대 한 값을 포함 합니다.
+ms.prod: xamarin
+ms.assetid: 3FF899C0-6CFB-4C1D-837D-9E9E10181967
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/27/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5766af7da3a0cf550a2ccb3a926dad25fd7962eb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138825"
 ---
-
 # <a name="introduction-to-xamarinforms-styles"></a>스타일 소개 Xamarin.Forms
 
 _스타일을 사용 하면 시각적 요소의 모양을 사용자 지정할 수 있습니다. 스타일은 특정 형식에 대해 정의 되며 해당 형식에 사용할 수 있는 속성에 대 한 값을 포함 합니다._

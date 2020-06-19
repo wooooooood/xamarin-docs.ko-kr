@@ -1,8 +1,22 @@
 ---
-제목: "설명:" 텍스트에는 Xamarin.Forms Xamarin.Forms 텍스트 작업을 위한 세 가지 기본 보기가 있으며,이 문서에서는이를 사용 하 여 응용 프로그램에 텍스트를 입력 하 고 표시 하는 방법을 설명 Xamarin.Forms 합니다. "
-assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416: xamarin-forms author: davidbritch: dabritch:: 10/26/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 텍스트 텍스트Xamarin.Forms
+description: Xamarin.Forms에는 텍스트 작업을 위한 세 가지 기본 보기가 있으며,이 문서에서는이를 사용 하 여 응용 프로그램에 텍스트를 입력 하 고 표시 하는 방법을 설명 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/26/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b44a0b3e3542638874ee366a86967d73c0d53652
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573796"
 ---
-
 # <a name="text-in-xamarinforms"></a>텍스트 텍스트Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

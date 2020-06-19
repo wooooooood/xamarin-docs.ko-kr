@@ -1,8 +1,22 @@
 ---
-제목: "iOS 관련 서식 추가" 설명: "이 문서에서는 사용자 지정 렌더러를 사용 하지 않고 iOS 관련 모양을 설정 하는 방법을 설명 Xamarin.Forms 합니다."
-assetid: CE50E207-D092-4D88-8439-1B51F178E7ED: xamarin-forms author: davidbritch: dabritch:: 01/29/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: IOS 특정 형식 추가
+description: 이 문서에서는 사용자 지정 렌더러를 사용 하지 않고 iOS 관련 모양을 설정 하는 방법을 설명 Xamarin.Forms 합니다.
+ms.prod: xamarin
+ms.assetid: CE50E207-D092-4D88-8439-1B51F178E7ED
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/29/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 062dd77f1dc7b82f16bfbc6d46e44d4adeb73350
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84564708"
 ---
-
 # <a name="adding-ios-specific-formatting"></a>IOS 특정 형식 추가
 
 IOS 관련 형식을 설정 하는 한 가지 방법은 컨트롤에 대 한 [사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) 를 만들고 각 플랫폼에 대 한 플랫폼별 스타일과 색을 설정 하는 것입니다.

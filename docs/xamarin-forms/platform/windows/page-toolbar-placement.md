@@ -1,8 +1,22 @@
 ---
-제목: "Windows에서 페이지 도구 모음 배치" 설명: "플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 페이지에서 도구 모음의 배치를 변경 하는 Windows 플랫폼 관련 기능을 사용 하는 방법을 설명 합니다.
-assetid: 99F29E95-0C36-4A3B-BDE8-7E9F119E844E: xamarin-forms author: davidbritch: dabritch:: 10/24/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Windows의 페이지 도구 모음 배치
+description: 플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 페이지에서 도구 모음의 배치를 변경 하는 Windows 플랫폼 관련 기능을 사용 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 99F29E95-0C36-4A3B-BDE8-7E9F119E844E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 76b4633e6b224e234f9d5f693f4e01ed7a35d6db
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138049"
 ---
-
 # <a name="page-toolbar-placement-on-windows"></a>Windows의 페이지 도구 모음 배치
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

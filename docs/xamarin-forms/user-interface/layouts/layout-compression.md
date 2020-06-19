@@ -1,8 +1,22 @@
 ---
-제목: "레이아웃 압축" 설명: "레이아웃 압축은 페이지 렌더링 성능을 향상 시키기 위해 시각적 트리에서 지정 된 레이아웃을 제거 합니다. 이 문서에서는 레이아웃 압축 및이를 통해 얻을 수 있는 혜택을 사용 하도록 설정 하는 방법을 설명 합니다. "
-assetid: da9e1b26-9d31-4762-94c3-4039f306b7f2: xamarin-forms author: davidbritch: dabritch:: 12/13/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 레이아웃 압축
+description: 레이아웃 압축은 페이지 렌더링 성능을 향상 시키기 위해 시각적 트리에서 지정 된 레이아웃을 제거 합니다. 이 문서에서는 레이아웃 압축 및 가져올 수 있는 이점을 사용 하도록 설정 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: da9e1b26-9d31-4762-94c3-4039f306b7f2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/13/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 40af5aeaa51025dae70113faa6f7ff83edf43c73
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138028"
 ---
-
 # <a name="layout-compression"></a>레이아웃 압축
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)

@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 그리드" 설명: " Xamarin.Forms 그리드는 자식을 셀의 행과 열로 구성 하는 레이아웃입니다."
-assetid: 762B1802-D185-494C-B643-74EED55882FE. 기술: xamarin-forms author: davidbritch: dabritch: ms. date: 05/15/2020 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Forms그리드에
+description: Xamarin.Forms표는 자식 항목을 셀의 행과 열로 구성 하는 레이아웃입니다.
+ms.prod: xamarin
+ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9d2e697a07e033fd7c3c8d3efffa1d67f6c097c3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946341"
 ---
-
 # <a name="xamarinforms-grid"></a>Xamarin.Forms그리드에
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
@@ -274,6 +288,21 @@ grid.Children.Add(bottomRight, 1, 2, 1, 2); // second column, second row
 
 > [!NOTE]
 > 또한 및 메서드를 사용 하 여 자식 뷰를에 추가할 수 있습니다 [`Grid`](xref:Xamarin.Forms.Grid) [`AddHorizontal`](xref:Xamarin.Forms.Grid.IGridList`1.AddHorizontal*) .이 메서드는 [`AddVertical`](xref:Xamarin.Forms.Grid.IGridList`1.AddVertical*) 단일 행 이나 단일 열에 자식을 추가 `Grid` 합니다. `Grid`그러면는 이러한 호출이 수행 될 때 행 또는 열을 확장 하 고 올바른 셀에 자식을 자동으로 배치할 수 있습니다.
+
+### <a name="simplify-row-and-column-definitions"></a>행 및 열 정의 간소화
+
+XAML에서의 행 및 열 특성은 [`Grid`](xref:Xamarin.Forms.Grid) [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) 각 행과 열에 대해 및 개체를 정의 하지 않아도 되는 단순화 된 구문을 사용 하 여 지정할 수 있습니다. 대신 [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) 및 속성은 [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) 쉼표로 구분 된 값을 포함 하는 문자열로 설정 될 수 있습니다 [`GridUnitType`](xref:Xamarin.Forms.GridUnitType) . 여기서 형식 변환기는 Xamarin.Forms create 및 object로 기본 설정 됩니다 `RowDefinition` `ColumnDefinition` .
+
+```xaml
+<Grid RowDefinitions="1*, Auto, 25, 14, 20"
+      ColumnDefinitions="*, 2*, Auto, 300">
+    ...
+</Grid>
+```
+
+이 예제에서에는 [`Grid`](xref:Xamarin.Forms.Grid) 5 개의 행과 4 개의 열이 있습니다. 세 번째, 네 번째 및 다섯 번째 행은 절대값으로 설정 되 고 두 번째 행은 내용에 자동으로 크기가 조정 됩니다. 그런 다음 나머지 높이가 첫 번째 행에 할당 됩니다.
+
+위의 열은 절대 너비로 설정 되며 세 번째 열은 해당 내용에 대 한 자동 크기 조정입니다. 나머지 너비는 별 앞의 숫자를 기준으로 첫 번째 및 두 번째 열 사이에 비례 하 게 할당 됩니다. 이 예에서는가와 같기 때문에 두 번째 열의 너비가 첫 번째 열의 두 배가 됩니다 `*` `1*` .
 
 ## <a name="space-between-rows-and-columns"></a>행과 열 사이의 간격
 

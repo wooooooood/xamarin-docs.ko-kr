@@ -1,8 +1,22 @@
 ---
-제목: "전자책를 사용 하는 엔터프라이즈 응용 프로그램 패턴 Xamarin.Forms " 설명: "이 전자책는 융통성 있고, 유지 관리 가능 하며, 테스트 가능한 엔터프라이즈 응용 프로그램을 개발 하기 위한 아키텍처 지침을 제공 Xamarin.Forms 합니다
-assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832: xamarin-forms author: davidbritch: dabritch: ms. date: 08/07/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Forms 전자책을 사용한 엔터프라이즈 애플리케이션 패턴
+description: 이 전자책는 조정 가능 하 고, 유지 관리 가능 하 고, 테스트 가능한 Xamarin.Forms 엔터프라이즈 응용 프로그램을 개발 하기 위한 아키텍처 지침
+ms.prod: xamarin
+ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: cc0f98d94c76ff63e7a002dfb92b51eae153d7b4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139401"
 ---
-
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Xamarin.Forms 전자책을 사용한 엔터프라이즈 애플리케이션 패턴
 
 _조정 가능 하 고, 유지 관리 가능 하며, 테스트 가능한 Xamarin.Forms 엔터프라이즈 응용 프로그램을 개발 하기 위한 아키텍처 지침_

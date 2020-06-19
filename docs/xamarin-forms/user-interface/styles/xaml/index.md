@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms Xaml 스타일을 사용 하 여 앱 스타일 지정" 설명: "이 가이드에서는 xaml 스타일을 사용 하 여 응용 프로그램의 모양을 사용자 지정 하는 방법을 설명 Xamarin.Forms 합니다."
-assetid: 344A34AA-4765-BC8A-875D9A6B5EA8 ms. 기술: xamarin 양식 작성자: davidbritch: dabritch: ms. 날짜: 01/30/2019 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정
+description: 이 가이드에서는 Xamarin.Forms XAML 스타일을 사용 하 여 응용 프로그램의 모양을 사용자 지정 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 344A34AA-B19A-4765-BC8A-875D9A6B5EA8
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/30/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 72effe15d3456b5a48cbf5d09e889600134ac686
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84903092"
 ---
-
 # <a name="styling-xamarinforms-apps-using-xaml-styles"></a>XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정
 
 ## <a name="introduction"></a>[소개](introduction.md)

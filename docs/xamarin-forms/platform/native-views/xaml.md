@@ -1,8 +1,22 @@
 ---
-제목: "XAML의 네이티브 뷰" 설명: "iOS, Android 및 유니버설 Windows 플랫폼의 기본 뷰는 xaml 파일에서 직접 참조할 수 있습니다 Xamarin.Forms . 속성 및 이벤트 처리기는 네이티브 뷰에서 설정할 수 있으며 뷰와 상호 작용할 수 있습니다 Xamarin.Forms . 이 문서에서는 XAML 파일에서 네이티브 뷰를 사용 하는 방법을 보여 줍니다 Xamarin.Forms . "
-assetid: 7A856D31-B300-409E-9AEB-F8A4DB99B37E: xamarin-forms author: davidbritch: dabritch:: 03/23/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: XAML의 네이티브 뷰
+description: IOS, Android 및 유니버설 Windows 플랫폼의 기본 뷰는 XAML 파일에서 직접 참조할 수 있습니다 Xamarin.Forms . 속성 및 이벤트 처리기는 네이티브 뷰에서 설정할 수 있으며 뷰와 상호 작용할 수 있습니다 Xamarin.Forms . 이 문서에서는 XAML 파일에서 네이티브 뷰를 사용 하는 방법을 보여 줍니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 7A856D31-B300-409E-9AEB-F8A4DB99B37E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/23/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0d6aa84a886d450d1dc42ec31edf16380b795404
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84564643"
 ---
-
 # <a name="native-views-in-xaml"></a>XAML의 네이티브 뷰
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)

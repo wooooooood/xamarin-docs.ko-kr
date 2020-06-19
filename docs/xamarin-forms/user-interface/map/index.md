@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 지도" 설명: "지도 컨트롤은 지도를 표시 하 고가 필요 Xamarin.Forms 합니다. 맵 NuGet 패키지입니다. "
-assetid: B669B5EE-D24C-4C69-93E1-2CA5CC9108B5: xamarin-forms author: davidbritch: dabritch:: 10/29/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms매핑할
+description: 지도 컨트롤은 지도를 표시 하 고가 필요 합니다 Xamarin.Forms . NuGet 패키지를 매핑합니다.
+ms.prod: xamarin
+ms.assetid: B669B5EE-D24C-4C69-93E1-2CA5CC9108B5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/29/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2461ffa8168207e6a57fae005f752be48772a34a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139830"
 ---
-
 # <a name="xamarinforms-map"></a>Xamarin.Forms매핑할
 
 ## <a name="initialization-and-configuration"></a>[초기화 및 구성](setup.md)

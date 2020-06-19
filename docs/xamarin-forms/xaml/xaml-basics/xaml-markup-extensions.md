@@ -1,8 +1,22 @@
 ---
-제목: "3 부. Xaml 태그 확장 "설명:" XAML 태그 확장은 다른 소스에서 간접적으로 참조 되는 개체 또는 값으로 속성을 설정할 수 있도록 하는 XAML의 중요 한 기능을 구성 합니다. "
-ms. prod: xamarin ms. 기술: assetid: F4A37564-B18B-42FF-B841-9A1949895AB6 author: davidbritch: dabritch:: 03/27/2018:: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 3부. XAML 태그 확장
+description: XAML 태그 확장은 다른 소스에서 간접적으로 참조 되는 개체 또는 값으로 속성을 설정할 수 있도록 하는 XAML의 중요 한 기능을 구성 합니다.
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/27/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3fcea963b253ea34601a36434007f18d925975eb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84131341"
 ---
-
 # <a name="part-3-xaml-markup-extensions"></a>3부. XAML 태그 확장
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

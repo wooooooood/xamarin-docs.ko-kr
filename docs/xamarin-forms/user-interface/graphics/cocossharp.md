@@ -1,7 +1,22 @@
 ---
-제목: "CocosSharp in Xamarin.Forms " description: "CocosSharp를 사용 하 여 고급 시각화를 위해 응용 프로그램에 정확한 모양, 이미지 및 텍스트 렌더링을 추가할 수 있습니다. prod: assetid: E0F404D5-5C6B-4288-92EC-78996C674E4E:: xamarin: davidbritch author:: dabritch: 05/03/2016: [ Xamarin.Forms , Xamarin.Essentials ]
+title: CocosSharp 사용Xamarin.Forms
+description: CocosSharp를 사용 하 여 고급 시각화를 위해 정확한 셰이프, 이미지 및 텍스트 렌더링을 응용 프로그램에 추가할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: E0F404D5-5C6B-4288-92EC-78996C674E4E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/03/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a3183997eb229fd3548a1afeccf82670cf651a71
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565306"
 ---
-
 # <a name="using-cocossharp-in-xamarinforms"></a>CocosSharp 사용Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)

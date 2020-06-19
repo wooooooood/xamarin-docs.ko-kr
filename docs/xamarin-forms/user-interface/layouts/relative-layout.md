@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms RelativeLayout" 설명: "이 문서에서는 RelativeLayout 클래스를 사용 하 여 Xamarin.Forms 모든 화면 크기에 맞게 크기가 조정 되는 ui를 만드는 방법을 설명 합니다."
-assetid: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A: xamarin-forms author: davidbritch: dabritch:: 11/25/2015-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.FormsRelativeLayout
+description: 이 문서에서는 RelativeLayout 클래스를 사용 하 여 Xamarin.Forms 모든 화면 크기에 맞게 크기가 조정 되는 ui를 만드는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/25/2015
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f250b109f759bcf6bb7fa4ac0573743ac12c4bc1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127194"
 ---
-
 # <a name="xamarinforms-relativelayout"></a>Xamarin.FormsRelativeLayout
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)

@@ -1,8 +1,22 @@
 ---
-제목: "c #의 네이티브 뷰" 설명: "iOS, Android 및 UWP의 기본 뷰는 Xamarin.Forms c #을 사용 하 여 만든 페이지에서 직접 참조할 수 있습니다. 이 문서에서는 Xamarin.Forms c #을 사용 하 여 만든 레이아웃에 네이티브 뷰를 추가 하는 방법과 사용자 지정 보기의 레이아웃을 재정의 하 여 해당 측정 API 사용법을 수정 하는 방법을 보여 줍니다. "
-assetid: 230F937C-F914-4B21-8EA1-1A2A9E644769: xamarin-forms author: davidbritch: dabritch:: 04/27/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: C#의 네이티브 뷰
+description: 'IOS, Android 및 UWP의 기본 뷰는 Xamarin.Forms c #을 사용 하 여 만든 페이지에서 직접 참조할 수 있습니다. 이 문서에서는 Xamarin.Forms c #을 사용 하 여 만든 레이아웃에 네이티브 뷰를 추가 하는 방법과 사용자 지정 뷰의 레이아웃을 재정의 하 여 해당 측정 API 사용법을 수정 하는 방법을 보여 줍니다.'
+ms.prod: xamarin
+ms.assetid: 230F937C-F914-4B21-8EA1-1A2A9E644769
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/27/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 18cdeccbdff86a6b20aab4b33db259f1f06ee096
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139596"
 ---
-
 # <a name="native-views-in-c"></a>C의 네이티브 뷰\#
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)

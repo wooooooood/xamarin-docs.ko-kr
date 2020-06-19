@@ -1,8 +1,22 @@
 ---
-제목: "" description: Azure Storage "에서 Azure Storage의 데이터 저장 및 액세스는 Xamarin.Forms 구조화 되지 않은 데이터와 구조화 된 데이터를 저장 하는 데 사용할 수 있는 확장 가능한 클라우드 저장소 솔루션입니다. 이 문서에서는를 사용 하 여 Xamarin.Forms Azure Storage에서 텍스트 및 이진 데이터를 저장 하는 방법과 데이터에 액세스 하는 방법을 설명 합니다. "
-assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB: xamarin-forms author: davidbritch: dabritch:: 12/28/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Azure Storage의 데이터 저장 및 액세스Xamarin.Forms
+description: Azure Storage는 구조화 되지 않은 구조화 된 데이터와 구조화 된 데이터를 저장 하는 데 사용할 수 있는 확장 가능한 클라우드 저장소 솔루션입니다. 이 문서에서는를 사용 하 여 Xamarin.Forms Azure Storage에서 텍스트 및 이진 데이터를 저장 하는 방법과 데이터에 액세스 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/28/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a69edd3bf014809cc479dcb7cba0e430dcefbe5b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84564682"
 ---
-
 # <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Azure Storage의 데이터 저장 및 액세스Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)

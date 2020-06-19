@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp의 기본 애니메이션" 설명: "이 문서에서는 응용 프로그램에서 SkiaSharp 그래픽에 애니메이션 효과를 주는 방법을 설명 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 줍니다."
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 31C96FD6-07E4-4473-A551-24753A5118C3 author: davidbritch: dabritch: 03/10/2017:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp의 기본 애니메이션
+description: 이 문서에서는 응용 프로그램에서 SkiaSharp 그래픽에 애니메이션 효과를 주는 방법을 설명 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 줍니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9a59f65655772768860ce29128f14a48641abc26
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84134279"
 ---
-
 # <a name="basic-animation-in-skiasharp"></a>SkiaSharp의 기본 애니메이션
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

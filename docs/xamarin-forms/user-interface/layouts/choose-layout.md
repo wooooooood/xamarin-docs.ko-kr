@@ -1,8 +1,22 @@
 ---
-제목: "레이아웃 선택 Xamarin.Forms " 설명: " Xamarin.Forms 레이아웃 클래스를 사용 하 여 응용 프로그램에서 UI 컨트롤을 정렬 하 고 그룹화 할 수 있습니다."
-assetid: 05A39752-A174-447E-A30D-3CC9EF98CB96: xamarin-forms author: davidbritch: dabritch:: 08/21/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 레이아웃 선택 Xamarin.Forms
+description: Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 UI 컨트롤을 정렬 하 고 그룹화 할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: 05A39752-A174-447E-A30D-3CC9EF98CB96
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/21/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 16a48423d05ce1cede75c0020bf18f4f398f5adc
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138504"
 ---
-
 # <a name="choose-a-xamarinforms-layout"></a>레이아웃 선택 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)

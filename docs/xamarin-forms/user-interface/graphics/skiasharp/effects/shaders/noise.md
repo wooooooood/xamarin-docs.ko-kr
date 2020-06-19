@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp 노이즈 및 작성" 설명: "Perlin 노이즈 셰이더를 생성 하 고 다른 셰이더와 결합 합니다."
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 90C2D00A-2876-43EA-A836-538C3318CF93 author: davidbritch: dabritch: 08/23/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp 노이즈 및 작성
+description: Perlin 노이즈 셰이더를 생성 하 고 다른 셰이더와 결합 합니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 90C2D00A-2876-43EA-A836-538C3318CF93
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 45ec48c0b7b58e26fa47d7343e96bb49591cb339
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127766"
 ---
-
 # <a name="skiasharp-noise-and-composing"></a>SkiaSharp 노이즈 및 작성
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

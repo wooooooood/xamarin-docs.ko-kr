@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 및 웹 서비스" 설명: "이 가이드에서는 다른 웹 서비스와 통신 하 여 응용 프로그램에 CRUD (만들기, 읽기, 업데이트 및 삭제) 기능을 제공 하는 방법을 설명 합니다. Xamarin.Forms 여기서 다루는 항목에는 ASMX 서비스, WCF 서비스, REST 서비스와의 통신이 포함 됩니다.
-assetid: 8B360BDA-E933-4AF-900-0E3532FDFMS. 기술: xamarin-forms author: davidbritch: dabritch: ms. date: 06/27/2019 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Forms및 웹 서비스
+description: 이 가이드에서는 다른 웹 서비스와 통신 하 여 응용 프로그램에 CRUD (만들기, 읽기, 업데이트 및 삭제) 기능을 제공 하는 방법을 설명 합니다 Xamarin.Forms . 이 항목에서는 ASMX 서비스, WCF 서비스, REST 서비스와의 통신을 다룹니다.
+ms.prod: xamarin
+ms.assetid: 8B360BDA-E4E3-4A3F-9004-0E35362F49F8
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/27/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5b2613b94d2c347d9bc6a94086f869b07ab8a55b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84131887"
 ---
-
 # <a name="xamarinforms-and-web-services"></a>Xamarin.Forms및 웹 서비스
 
 ## <a name="introduction"></a>[소개](introduction.md)

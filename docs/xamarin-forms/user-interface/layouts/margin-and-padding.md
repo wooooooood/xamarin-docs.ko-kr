@@ -1,8 +1,22 @@
 ---
-제목: "여백 및 패딩" 설명: "사용자 인터페이스에서 요소를 렌더링할 때 여백 및 안쪽 여백 속성은 레이아웃 동작을 제어 합니다. 이 문서에서는 두 속성의 차이점 및 설정 하는 방법에 대해 설명 합니다. "
-assetid: BEB096BB-51DF-410F-B0F1-D235287B0F4A: xamarin-forms author: davidbritch: dabritch:: 04/27/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 여백 및 안쪽 여백
+description: 여백 및 안쪽 여백 속성은 요소가 사용자 인터페이스에서 렌더링 될 때 레이아웃 동작을 제어 합니다. 이 문서에서는 두 속성의 차이점 및 설정 하는 방법에 대해 설명 합니다.
+ms.prod: xamarin
+ms.assetid: BEB096BB-51DF-410F-B0F1-D235287B0F4A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/27/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6ae4116be99f076a7afd5ed9c2823bc12f445e18
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137993"
 ---
-
 # <a name="margin-and-padding"></a>여백 및 안쪽 여백
 
 _여백 및 안쪽 여백 속성은 요소가 사용자 인터페이스에서 렌더링 될 때 레이아웃 동작을 제어 합니다. 이 문서에서는 두 속성의 차이점 및 설정 하는 방법에 대해 설명 합니다._

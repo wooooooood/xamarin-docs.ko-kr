@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp 셰이더" 설명: "셰이더를 사용 하 여 그라데이션, 비트맵 타일 및 Perlin 노이즈 만들기"
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 272B1BEB-0CBC-4E81-A3B9-A9C69AEE3722 author: davidbritch: dabritch: 08/23/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp 셰이더
+description: 셰이더를 사용 하 여 그라데이션, 비트맵 타일 및 Perlin 노이즈를 만듭니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 272B1BEB-0CBC-4E81-A3B9-A9C69AEE3722
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8f4ef3a583a7f9078f62c899d3b2abfc0848cc79
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135436"
 ---
-
 # <a name="skiasharp-shaders"></a>SkiaSharp 셰이더
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

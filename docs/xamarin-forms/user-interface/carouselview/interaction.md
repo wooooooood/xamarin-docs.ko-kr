@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms CarouselView 상호 작용" 설명: "currentitem 및 Position 속성을 통해 CarouselView에 현재 표시 된 항목에 액세스할 수 있습니다."
-assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992: xamarin-forms author: davidbritch: dabritch:: 02/11/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.FormsCarouselView 상호 작용
+description: CarouselView에 현재 표시 된 항목은 CurrentItem 및 Position 속성을 통해 액세스할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/11/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 57c501c0f789ce448d8381cbbccb46666cf06305
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137412"
 ---
-
 # <a name="xamarinforms-carouselview-interaction"></a>Xamarin.FormsCarouselView 상호 작용
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)

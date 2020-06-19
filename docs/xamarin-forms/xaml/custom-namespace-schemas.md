@@ -1,8 +1,22 @@
 ---
-제목: "" description: "의 XAML 사용자 지정 네임 스페이스 스키마 Xamarin.Forms -사용자 지정 URL과 하나 이상의 CLR 네임 스페이스 간의 매핑을 지정 하는 매핑하기 클래스를 사용 하 여 xaml 사용자 지정 네임 스페이스 스키마를 정의할 수 있습니다. 그런 다음 사용자 지정 네임 스페이스 스키마를 XAML 네임 스페이스 선언에 사용할 수 있습니다. "
-assetid: FDF201A1-8C35-4569-A728-F9B0A0C5B31A: xamarin-forms author: davidbritch: dabritch:: 12/21/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 의 XAML 사용자 지정 네임 스페이스 스키마Xamarin.Forms
+description: 사용자 지정 URL과 하나 이상의 CLR 네임 스페이스 간의 매핑을 지정 하는 매핑하기 클래스를 사용 하 여 XAML 사용자 지정 네임 스페이스 스키마를 정의할 수 있습니다. 그런 다음 사용자 지정 네임 스페이스 스키마를 XAML 네임 스페이스 선언에 사용할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: FDF201A1-8C35-4569-A728-F9B0A0C5B31A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/21/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 41a95b1a82ab8aa1f6938e5a2bcdebcef368e72d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138166"
 ---
-
 # <a name="xaml-custom-namespace-schemas-in-xamarinforms"></a>의 XAML 사용자 지정 네임 스페이스 스키마Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)

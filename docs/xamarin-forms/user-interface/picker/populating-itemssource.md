@@ -1,8 +1,22 @@
 ---
-제목: "선택의 System.windows.controls.itemscontrol.itemssource 속성 설정" 설명: "선택 보기는 데이터 목록에서 텍스트 항목을 선택 하는 컨트롤입니다. 이 문서에서는 System.windows.controls.itemscontrol.itemssource 속성을 설정 하 고 사용자가 항목 선택 항목에 응답 하는 방법을 사용 하 여 선택기를 데이터로 채우는 방법을 설명 합니다. "
-assetid: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5: xamarin-forms author: davidbritch: dabritch:: 02/26/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 선택기의 ItemsSource 속성 설정
+description: 선택 뷰는 데이터 목록에서 텍스트 항목을 선택 하는 컨트롤입니다. 이 문서에서는 System.windows.controls.itemscontrol.itemssource 속성을 설정 하 여 데이터를 사용 하 여 선택기를 채우는 방법과 사용자가 항목 선택 항목에 응답 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/26/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8c4fc732082a77a2e471465af448a487862b513c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136294"
 ---
-
 # <a name="setting-a-pickers-itemssource-property"></a>선택기의 ItemsSource 속성 설정
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)

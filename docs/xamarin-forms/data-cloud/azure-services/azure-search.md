@@ -1,8 +1,22 @@
 ---
-제목: "Azure Search를 사용 하 여 데이터 검색 및 Xamarin.Forms " 설명: "이 문서에서는 Microsoft Azure 검색 라이브러리를 사용 하 여 Azure Search을 응용 프로그램에 통합 하는 방법을 보여 줍니다 Xamarin.Forms ."
-assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B: xamarin-forms author: davidbritch: dabritch:: 12/05/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Azure Search 및를 사용 하 여 데이터 검색Xamarin.Forms
+description: 이 문서에서는 Microsoft Azure 검색 라이브러리를 사용 하 여 Azure Search을 응용 프로그램에 통합 하는 방법을 보여 줍니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/05/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 33675fbb644c5967726fee29b3e235247aec633a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565359"
 ---
-
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Azure Search 및를 사용 하 여 데이터 검색Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)

@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms Xamarin 네이티브 프로젝트의" 설명: "이 문서에서는 xamarin 네이티브 프로젝트에 직접 추가 된 ContentPage 파생 페이지를 사용 하는 방법 및 둘 사이를 탐색 하는 방법을 설명 합니다."
-assetid: f343fc21-dfb1-4364-a332-9da6705d36bc: xamarin-forms author: davidbritch: dabritch:: 08/19/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.FormsXamarin 네이티브 프로젝트에서
+description: 이 문서에서는 Xamarin 네이티브 프로젝트에 직접 추가 된 ContentPage 파생 페이지를 사용 하는 방법과 이러한 페이지 간에 이동 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/19/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9fb741a03d1c8dd2a8754120d0b46567d8889a0b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132277"
 ---
-
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin.FormsXamarin 네이티브 프로젝트에서
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)

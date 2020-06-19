@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp 비트맵 자르기" 설명: "SkiaSharp를 사용 하 여 대화형으로 자르기 사각형의 사용자 인터페이스를 디자인 하는 방법을 알아봅니다."
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30 author: davidbritch: dabritch: 07/17/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp 비트맵 자르기
+description: SkiaSharp를 사용 하 여 자르기 사각형의 대화형 설명 사용자 인터페이스를 디자인 하는 방법에 대해 알아봅니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d613c4f73c0a377a599b0137ce2f2b557c04ad6a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572340"
 ---
-
 # <a name="cropping-skiasharp-bitmaps"></a>SkiaSharp 비트맵 자르기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

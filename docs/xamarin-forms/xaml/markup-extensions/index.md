@@ -1,8 +1,22 @@
 ---
-제목: "XAML 태그 확장" 설명: "이 문서에서는 Xamarin.Forms xaml 태그 확장을 사용 하 여 리터럴 텍스트 문자열이 아닌 소스에서 요소 특성을 설정할 수 있도록 하 여 xaml의 기능과 유연성을 확장 하는 방법을 설명 합니다."
-assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F: xamarin-forms author: davidbritch: dabritch:: 01/05/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: XAML 태그 확장
+description: 이 문서에서는 Xamarin.Forms xaml 태그 확장을 사용 하 여 리터럴 텍스트 문자열이 아닌 소스에서 요소 특성을 설정할 수 있도록 하 여 xaml의 기능과 유연성을 확장 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/05/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 568cffc335f28b1a47f3278ad061d851ebef84b6
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84130392"
 ---
-
 # <a name="xaml-markup-extensions"></a>XAML 태그 확장
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)

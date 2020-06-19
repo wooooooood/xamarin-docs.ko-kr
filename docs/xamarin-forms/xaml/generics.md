@@ -1,8 +1,22 @@
 ---
-제목: "xaml의 제네릭 Xamarin.Forms " 설명: " Xamarin.Forms xaml은 제네릭 제약 조건을 형식 인수로 지정 하 여 제네릭 CLR 형식을 사용할 수 있도록 지원 합니다."
-assetid: 97B73048-4F90-41AD-AB48-8EB804C4998B: xamarin-forms author: davidbritch: dabritch:: 04/28/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: XAML의 제네릭 Xamarin.Forms
+description: Xamarin.FormsXAML은 제네릭 제약 조건을 형식 인수로 지정 하 여 제네릭 CLR 형식을 사용할 수 있도록 지원 합니다.
+ms.prod: xamarin
+ms.assetid: 97B73048-4F90-41AD-AB48-8EB804C4998B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/28/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5a033e5feeefc41b97be29491a70632e767aa1b4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565202"
 ---
-
 # <a name="generics-in-xamarinforms-xaml"></a>XAML의 제네릭 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)

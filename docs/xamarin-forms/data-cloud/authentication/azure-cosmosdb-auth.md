@@ -1,8 +1,22 @@
 ---
-제목: "Azure Cosmos DB 문서 데이터베이스를 사용 하 여 사용자를 인증 하 고 Xamarin.Forms " 설명: "이 문서에서는 사용자가 응용 프로그램에서 자신의 문서에만 액세스할 수 있도록 분할 된 컬렉션 Azure Cosmos DB 액세스 제어를 결합 하는 방법을 설명 Xamarin.Forms 합니다."
-assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D: xamarin-forms author: davidbritch: dabritch:: 06/16/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Azure Cosmos DB 문서 데이터베이스를 사용 하 여 사용자 인증Xamarin.Forms
+description: 이 문서에서는 사용자가 응용 프로그램에서 자신의 문서에만 액세스할 수 있도록 분할 된 컬렉션 Azure Cosmos DB 액세스 제어를 결합 하는 방법을 설명 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/16/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7e1fb6342db4c97ea6946db366d356267c8c1b90
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570559"
 ---
-
 # <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Azure Cosmos DB 문서 데이터베이스를 사용 하 여 사용자 인증Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)

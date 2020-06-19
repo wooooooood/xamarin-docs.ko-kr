@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 페이지" 설명: " Xamarin.Forms 페이지는 플랫폼 간 모바일 응용 프로그램 화면을 나타냅니다. 이 문서에서는에 포함 된 페이지를 나열 Xamarin.Forms 합니다.
-assetid: 9C8C710F-E312-420B-9324-A7A20CEDB7EC: xamarin-forms author: davidbritch: dabritch: ms. date: 01/12/2016 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Forms Pages
+description: Xamarin.Forms페이지는 플랫폼 간 모바일 응용 프로그램 화면을 나타냅니다. 이 문서에서는에 포함 된 페이지를 나열 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 9C8C710F-E312-420B-9324-A7A20CEDB7EC
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/12/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b72564ebbb057c8154140c9845961d4c42e93db3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573315"
 ---
-
 # <a name="xamarinforms-pages"></a>Xamarin.Forms Pages
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)

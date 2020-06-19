@@ -1,8 +1,22 @@
 ---
-제목: "구성 관리" 설명: "이 장은 eShopOnContainers 모바일 앱이 구성 관리를 구현 하 여 앱 설정 및 사용자 설정을 제공 하는 방법을 설명 합니다."
-assetid: 50d6e780-e768-47f8-9361-3af11e56b87b 밀리초. 기술: xamarin-forms author: davidbritch ms. author: dabritch. date: 08/07/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 구성 관리
+description: 이 장에서는 eShopOnContainers mobile 앱이 구성 관리를 구현 하 여 앱 설정 및 사용자 설정을 제공 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 50d6e780-e768-47f8-9361-3af11e56b87b
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f6f61503f619c08ed3e4eae2adf6ddb2c474f99f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84571482"
 ---
-
 # <a name="configuration-management"></a>구성 관리
 
 설정을 사용 하면 응용 프로그램의 동작을 구성 하는 데이터를 분리 하 여 앱을 다시 빌드하지 않고도 동작을 변경할 수 있습니다. 설정에는 앱 설정 및 사용자 설정의 두 가지 유형이 있습니다.

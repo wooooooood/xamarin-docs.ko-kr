@@ -1,8 +1,22 @@
 ---
-제목: "설명:" 명시적 스타일 Xamarin.Forms 은 스타일 속성을 설정 하 여 컨트롤에 선택적으로 적용 되는 스타일입니다. 이 문서에서는 응용 프로그램에서 명시적 스타일을 사용 하는 방법을 설명 Xamarin.Forms 합니다. "
-assetid: C0DF9F8F-B431-4374-A574-325BC3C41A3B: xamarin-forms author: davidbritch: dabritch:: 02/17/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 명시적 스타일Xamarin.Forms
+description: 명시적 스타일은 스타일 속성을 설정 하 여 컨트롤에 선택적으로 적용 되는 스타일입니다. 이 문서에서는 응용 프로그램에서 명시적 스타일을 사용 하는 방법을 설명 Xamarin.Forms 합니다.
+ms.prod: xamarin
+ms.assetid: C0DF9F8F-B431-4374-A574-325BC3C41A3B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/17/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 62b84a5028c17c28a69a887a832028c2064fa78d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136268"
 ---
-
 # <a name="explicit-styles-in-xamarinforms"></a>명시적 스타일Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)

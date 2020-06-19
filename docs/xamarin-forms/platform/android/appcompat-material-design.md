@@ -1,8 +1,22 @@
 ---
-제목: "AppCompat 및 재질 디자인 추가" 설명: "이 문서에서는 기존 Xamarin.Forms Android 앱을 AppCompat 및 자재 디자인을 사용 하도록 변환 하는 방법을 설명 합니다."
-assetid: 045FBCDF-4D45-48BB-9911-BD3938C87D58. 기술: xamarin 양식 작성자: davidbritch: dabritch: ms. 날짜: 06/27/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: AppCompat 및 재질 디자인 추가
+description: 이 문서에서는 Xamarin.Forms AppCompat 및 재질 디자인을 사용 하도록 기존 Android 앱을 변환 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 045FBCDF-4D45-48BB-9911-BD3938C87D58
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/27/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 24206f6d6764c73f13a4b06fb44fa746f9d353af
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135709"
 ---
-
 # <a name="adding-appcompat-and-material-design"></a>AppCompat 및 재질 디자인 추가
 
 _이러한 단계에 따라 기존 Xamarin.Forms Android 앱에서 AppCompat 및 재질 디자인을 사용 하도록 변환 합니다._

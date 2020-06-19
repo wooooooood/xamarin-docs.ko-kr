@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 보기" 설명: " Xamarin.Forms 뷰는 플랫폼 간 모바일 사용자 인터페이스의 빌딩 블록입니다. 이 문서에는에 포함 된 뷰가 나열 되어 Xamarin.Forms 있습니다.
-assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC: xamarin-forms author: davidbritch: dabritch:: 04/16/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms레이아웃
+description: Xamarin.Forms뷰는 플랫폼 간 모바일 사용자 인터페이스의 빌딩 블록입니다. 이 문서에서는에 포함 된 보기를 나열 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/16/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8c15626e405645d28a785c32d276860f9751ea25
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132381"
 ---
-
 # <a name="xamarinforms-views"></a>Xamarin.Forms레이아웃
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)

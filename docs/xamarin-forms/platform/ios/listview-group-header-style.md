@@ -1,8 +1,22 @@
 ---
-제목: "iOS의 ListView 그룹 헤더 스타일" 설명: "플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 스크롤 하는 동안 ListView 머리글 셀의 부동 여부를 제어 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다. "
-assetid: 099B2C7F-727F-4BCF-903B-87E728108C24 밀리초. 기술: xamarin forms author: davidbritch: dabritch: ms. date: 10/24/2018 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: IOS의 ListView 그룹 머리글 스타일
+description: 플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 스크롤 하는 동안 ListView 머리글 셀의 부동 여부를 제어 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 099B2C7F-727F-4BCF-903B-87E728108C24
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 46e8dec3d5644defdeb8a2265a73815adfde92d8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136036"
 ---
-
 # <a name="listview-group-header-style-on-ios"></a>IOS의 ListView 그룹 머리글 스타일
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

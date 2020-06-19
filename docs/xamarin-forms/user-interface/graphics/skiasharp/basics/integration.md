@@ -1,8 +1,22 @@
 ---
-제목: "다음에 통합" Xamarin.Forms 설명: "이 문서에서는 터치 및 요소에 응답 하는 SkiaSharp 그래픽을 만드는 방법을 설명 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 줍니다."
-skiasharp assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A author: davidbritch: dabritch: ms. date: 02/09/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 통합Xamarin.Forms
+description: 이 문서에서는 터치 및 요소에 응답 하는 SkiaSharp 그래픽을 만드는 방법을 설명 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 줍니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/09/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9e763184f38719cda4526eb0a2dfdf39b2191a03
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137698"
 ---
-
 # <a name="integrating-with-xamarinforms"></a>통합Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

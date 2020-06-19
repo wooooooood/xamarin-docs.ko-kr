@@ -1,8 +1,22 @@
 ---
-제목: "SkiaSharp 이미지 필터" 설명: "이미지 필터를 사용 하 여 흐리게 및 그림자를 만드는 방법을 알아봅니다."
-ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63 author: davidbritch: dabritch: 08/27/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp 이미지 필터
+description: 이미지 필터를 사용 하 여 어두운 그림자를 만드는 방법에 대해 알아봅니다.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/27/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: eedbca080fce9f3001a7b1e2358845fd63c6121b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136346"
 ---
-
 # <a name="skiasharp-image-filters"></a>SkiaSharp 이미지 필터
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

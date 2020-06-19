@@ -1,6 +1,21 @@
 ---
-제목: " Xamarin.Forms 프레임" 설명: " Xamarin.Forms frame 클래스는 색, 그림자 및 기타 옵션으로 구성할 수 있는 테두리를 사용 하 여 보기 또는 레이아웃을 래핑하는 데 사용 되는 레이아웃입니다."
-assetId: 4E074714-0928-41C8-A468-B60E23236A8C: xamarin-forms author: profexorgeek: jusjohns:: 08/06/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms프레임씩
+description: Xamarin.FormsFrame 클래스는 색, 그림자 및 기타 옵션으로 구성할 수 있는 테두리를 사용 하 여 보기 또는 레이아웃을 래핑하는 데 사용 되는 레이아웃입니다.
+ms.prod: xamarin
+ms.assetId: 4E074714-0928-41C8-A468-B60E23236A8C
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 08/06/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 42192111befbefda7e0f62b7691a8392c2828818
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137191"
 ---
 # <a name="xamarinforms-frame"></a>Xamarin.Forms프레임씩
 

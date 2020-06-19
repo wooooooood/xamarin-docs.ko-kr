@@ -1,8 +1,22 @@
 ---
-제목: "Speech Service API를 사용 하는 음성 인식" 설명: "이 문서는 Azure Speech Service API를 사용 하 여 응용 프로그램에서 음성으로 텍스트를 높여줄 하는 방법을 설명 Xamarin.Forms 합니다."
-assetid: B435FF6B-8785-48D9-B2D9-1893F5A87EA1: xamarin-forms author: profexorgeek: jusjohns:: 01/14/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 음성 인식 음성 서비스 API 사용
+description: 이 문서에서는 Azure Speech Service API를 사용 하 여 응용 프로그램에서 음성을 텍스트로 높여줄 하는 방법을 설명 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: B435FF6B-8785-48D9-B2D9-1893F5A87EA1
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 01/14/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 171ecc02fda304135e5f535c3e798067595d7047
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139323"
 ---
-
 # <a name="speech-recognition-using-azure-speech-service"></a>Azure 음성 서비스를 사용한 음성 인식
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)

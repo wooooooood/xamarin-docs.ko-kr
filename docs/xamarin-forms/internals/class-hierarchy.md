@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 컨트롤 클래스 계층 구조" 설명: "개발자는 응용 프로그램의 사용자 인터페이스를 만드는 데 사용 되는 형식의 계층 구조에 대해 잘 알고 있어야 Xamarin.Forms 합니다."
-assetid: C89E6B98-464D-4BBE-BF11-13A5FCBBF420: xamarin-forms author: davidbritch: dabritch:: 01/07/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.FormsControls 클래스 계층 구조
+description: 개발자는 응용 프로그램의 사용자 인터페이스를 만드는 데 사용 되는 형식의 계층 구조에 대해 잘 알고 있어야 합니다 Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: C89E6B98-464D-4BBE-BF11-13A5FCBBF420
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/07/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0087e2bb81c7c9204a782519a9eeb9891adc297a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138643"
 ---
-
 # <a name="xamarinforms-controls-class-hierarchy"></a>Xamarin.FormsControls 클래스 계층 구조
 
 Xamarin.Forms는 여러 네임 스페이스에 대해 수백 개의 형식으로 구성 됩니다. 개발자는 Xamarin.Forms 네임 스페이스에 상주 하는 응용 프로그램의 사용자 인터페이스를 만드는 데 사용 되는 형식의 계층 구조에 대해 가장 잘 알고 있어야 합니다 `Xamarin.Forms` .

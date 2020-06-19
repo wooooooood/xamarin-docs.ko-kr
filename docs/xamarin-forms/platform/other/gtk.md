@@ -1,7 +1,22 @@
 ---
-제목: "GTK # Platform Setup" description: "에 Xamarin.Forms 는 이제 gtk # platform" ms. prod: assetid: 3417FB95-3E4B-47DA-85D0-F34832747236에 대 한 미리 보기 지원이 있습니다. 기술: xamarin-forms author: davidbritch, author: dabritch: 04/10/2018: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'GTK # 플랫폼 설정'
+description: 'Xamarin.Forms이제 GTK # platform에 대 한 미리 보기 지원이 제공 됩니다.'
+ms.prod: xamarin
+ms.assetid: 3417FB95-3E4B-47DA-85D0-F34832747236
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a5635da9f7c083609ce1e0f120d0613fff9bd77b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198102"
 ---
-
 # <a name="gtk-platform-setup"></a>GTK # 플랫폼 설정
 
 ![미리 보기](~/media/shared/preview.png)

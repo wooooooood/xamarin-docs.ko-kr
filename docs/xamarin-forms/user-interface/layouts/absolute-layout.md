@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms AbsoluteLayout" 설명: "이 문서에서는 AbsoluteLayout 클래스를 사용 하 여 픽셀에 맞는 ui를 만드는 방법을 설명 합니다 Xamarin.Forms . 이 클래스는 자식 요소를 자체 크기와 위치 또는 절대 값에 비례하여 배치 하 고 크기를 지정 합니다. "
-assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38: xamarin-forms author: davidbritch: dabritch:: 11/25/2015-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.FormsAbsoluteLayout
+description: 이 문서에서는 AbsoluteLayout 클래스를 사용 하 여 픽셀에 맞는 Ui를 만드는 방법을 설명 합니다 Xamarin.Forms . 이 클래스는 자식 요소를 고유한 크기와 위치에 비례 하거나 절대 값에 비례하여 배치 및 크기를 지정 합니다.
+ms.prod: xamarin
+ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/25/2015
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 110b01d6482fbe3e23a772c90194b6bf40d54877
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570533"
 ---
-
 # <a name="xamarinforms-absolutelayout"></a>Xamarin.FormsAbsoluteLayout
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
@@ -20,7 +34,7 @@ assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38: xamarin-forms author: davidbritch
   - **[비례 값](#proportional-values)** &ndash; 비례 값의 작동 방식을 이해 합니다.
     - **[절대값](#absolute-values)** &ndash; 절대값이 어떻게 작동 하는지 이해 합니다.
 
-## <a name="purpose"></a>용도
+## <a name="purpose"></a>목적
 
 의 위치 지정 모델 때문에 `AbsoluteLayout` 레이아웃을 사용 하면 레이아웃의 어느 쪽 이나 가운데 맞춤을 사용 하 여 요소를 쉽게 배치할 수 있습니다. 비례 크기와 위치를 사용 하 여의 요소는 `AbsoluteLayout` 보기 크기에 맞게 자동으로 확장 될 수 있습니다. 위치만 크기를 조정 하지 않아야 하는 항목의 경우에는 절대값 및 비례 값을 혼합할 수 있습니다.
 

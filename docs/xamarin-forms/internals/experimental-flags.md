@@ -1,8 +1,22 @@
 ---
-제목: " Xamarin.Forms 실험적 플래그" 설명: " Xamarin.Forms 실험적 플래그를 사용 하면 엔지니어링 팀에서 사용자에 게 새로운 기능을 제공 하는 동시에 기능 api를 안정적인 릴리스로 전환 하기 전에 변경할 수 있습니다."
-assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2: xamarin-forms author: davidbritch: dabritch:: 04/14/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: Xamarin.Forms실험적 플래그
+description: Xamarin.Forms실험 플래그를 사용 하면 엔지니어링 팀에서 사용자에 게 새 기능을 보다 신속 하 게 제공할 수 있으며, 기능 Api를 안정적인 릴리스로 전환 하기 전에 변경할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 17fcc996b4dc8013a23a598ece8e240caba3f775
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946119"
 ---
-
 # <a name="xamarinforms-experimental-flags"></a>Xamarin.Forms실험적 플래그
 
 새 Xamarin.Forms 기능이 구현 되 면 종종 실험적 플래그 뒤에 배치 됩니다. 이를 통해 엔지니어링 팀은 새로운 기능을 보다 신속 하 게 제공할 수 있으며, 기능 Api를 안정적인 릴리스로 전환 하기 전에 계속 해 서 변경할 수 있습니다. 그러면 기능이 안정적인 릴리스로 이동 되 면 실험적 플래그가 제거 됩니다.
@@ -12,10 +26,10 @@ Xamarin.Forms에는 다음 실험적 플래그가 포함 되어 있습니다.
 - `AppTheme_Experimental`
 - `CarouselView_Experimental`
 - `Expander_Experimental`
-- `IndicatorView_Experimental`
 - `Markup_Experimental`
 - `MediaElement_Experimental`
 - `RadioButton_Experimental`
+- `Shapes_Experimental`
 - `Shell_UWP_Experimental`
 - `StateTriggers_Experimental`
 - `SwipeView_Experimental`
@@ -44,7 +58,7 @@ Xamarin.Forms.Forms.SetFlags("CarouselView_Experimental");
 `Xamarin.Forms.Forms.SetFlags`메서드는 `string` 단일 메서드 호출에서 여러 실험적 플래그를 사용할 수 있도록 하는 배열 인수를 수락 합니다.
 
 ```csharp
-Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "IndicatorView_Experimental", "SwipeView_Experimental" });
+Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "MediaElement_Experimental", "SwipeView_Experimental" });
 ```
 
 > [!WARNING]

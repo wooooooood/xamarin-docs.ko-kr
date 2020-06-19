@@ -1,8 +1,22 @@
 ---
-제목: "iOS의 엔트리 커서 색" 설명: "플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 항목의 커서 색을 설정 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다. "
-assetid: 867D70BA-53F9-4434-8094-85D71DCECC2D: xamarin-forms author: davidbritch: dabritch:: 10/24/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: IOS의 항목 커서 색
+description: 플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 항목의 커서 색을 설정 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: 867D70BA-53F9-4434-8094-85D71DCECC2D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4d934fd2155a6a088dd543658555bf104b38f302
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138543"
 ---
-
 # <a name="entry-cursor-color-on-ios"></a>IOS의 항목 커서 색
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

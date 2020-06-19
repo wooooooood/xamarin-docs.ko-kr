@@ -1,8 +1,22 @@
 ---
-제목: "연결 된 속성" 설명: "이 문서에서는 연결 된 속성을 소개 하 고이를 만들고 사용 하는 방법을 보여 줍니다."
-assetid: 6E9DCDC3-A0E4-46A6-BAA9-4FEB6DF8A5A8: xamarin-forms author: davidbritch: dabritch:: 06/02/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 연결된 속성
+description: 이 문서에서는 연결 된 속성을 소개 하 고 이러한 속성을 만들고 사용 하는 방법을 보여 줍니다.
+ms.prod: xamarin
+ms.assetid: 6E9DCDC3-A0E4-46A6-BAA9-4FEB6DF8A5A8
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/02/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1f26a4415a75b2b02fd7d6893e366ef81156f077
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138192"
 ---
-
 # <a name="attached-properties"></a>연결된 속성
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)

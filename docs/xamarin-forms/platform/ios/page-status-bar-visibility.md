@@ -1,8 +1,22 @@
 ---
-제목: "iOS의 페이지 상태 표시줄 표시 유형" 설명: "플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 페이지에서 상태 표시줄의 표시 여부를 설정 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다. "
-assetid: D8BB7C24-A27F-4758-8557-6A81F909ABD9: xamarin-forms author: davidbritch: dabritch:: 10/24/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: IOS의 페이지 상태 표시줄 표시 유형
+description: 플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 페이지에서 상태 표시줄의 표시 여부를 설정 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: D8BB7C24-A27F-4758-8557-6A81F909ABD9
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 69594924f26afff133d8f211199cac44e66254d9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128029"
 ---
-
 # <a name="page-status-bar-visibility-on-ios"></a>IOS의 페이지 상태 표시줄 표시 유형
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

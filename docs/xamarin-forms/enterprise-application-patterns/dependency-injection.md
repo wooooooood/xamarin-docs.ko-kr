@@ -1,8 +1,22 @@
 ---
-제목: "종속성 주입" 설명: "이 장은 eShopOnContainers mobile 앱에서 종속성 주입을 사용 하 여 이러한 형식에 종속 된 코드에서 구체적인 형식을 분리 하는 방법에 대해 설명 합니다."
-assetid: a150f2d1-06f8-4aed-ab4e-7a847d69f103: xamarin-forms author: davidbritch: dabritch:: 11/04/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
+title: 종속성 주입
+description: 이 장에서는 eShopOnContainers 모바일 앱에서 종속성 주입을 사용 하 여 이러한 형식에 종속 된 코드에서 구체적인 형식을 분리 하는 방법을 설명 합니다.
+ms.prod: xamarin
+ms.assetid: a150f2d1-06f8-4aed-ab4e-7a847d69f103
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/04/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 99cac3c597cf1d7351d3214ce59fd0a0a0a46400
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572353"
 ---
-
 # <a name="dependency-injection"></a>종속성 주입
 
 일반적으로 클래스 생성자는 개체를 인스턴스화할 때 호출 되며, 개체가 필요로 하는 모든 값은 생성자에 인수로 전달 됩니다. 이는 종속성 주입의 한 예제 이며 특히 *생성자 주입*이라고 합니다. 개체에 필요한 종속성이 생성자에 삽입 됩니다.
