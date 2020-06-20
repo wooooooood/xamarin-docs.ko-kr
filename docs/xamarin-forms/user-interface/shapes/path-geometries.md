@@ -1,6 +1,6 @@
 ---
-title: 'Xamarin.Forms도형: 기 하 도형'
-description: Xamarin.Formsgeometry 클래스를 사용 하 여 2D 도형의 기 하 도형을 설명할 수 있습니다.
+title: 'Xamarin.Forms도형: 경로 기 하 도형'
+description: Xamarin.Forms경로 기 하 도형 클래스를 사용 하 여 2D 셰이프의 기 하 도형에 대해 설명할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05fcd1ada62bffa4829ad422ee5eda36d9d75ae3
-ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+ms.openlocfilehash: 5718b0594581928e6f00e11a15163d176615378f
+ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104263"
+ms.locfileid: "85101881"
 ---
-# <a name="xamarinforms-shapes-geometries"></a>Xamarin.Forms도형: 기 하 도형
+# <a name="xamarinforms-shapes-path-geometries"></a>Xamarin.Forms도형: 경로 기 하 도형
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
@@ -189,29 +189,6 @@ ms.locfileid: "85104263"
 ```
 
 이 예제에서는 `EllipseGeometry` 서로 다른 중심 좌표를 사용 하 여 동일한 x 반지름 및 y 반지름 좌표를 사용 하는 네 개의 개체를 결합 합니다. 그러면 겹치는 네 개의 원이 생성 되 고,이는 해당 내부가 채우기 규칙을 사용 하 여 주황색으로 채워집니다 `EvenOdd` .
-
-## <a name="clip-geometries"></a>클립 기 하 도형
-
-클래스에는 [`VisualElement`](xref:Xamarin.Forms.VisualElement) `Clip` `Geometry` 요소의 콘텐츠의 윤곽선을 정의 하는 형식의 속성이 있습니다. `Clip`속성이 개체로 설정 된 경우 `Geometry` 의 영역 내에 있는 영역만 `Geometry` 표시 됩니다.
-
-다음 예제에서는 `Geometry` 개체를의 클립 영역으로 사용 하는 방법을 보여 줍니다 [`Image`](xref:Xamarin.Forms.Image) .
-
-```xaml
-<Image Source="monkeyface.png">
-    <Image.Clip>
-        <EllipseGeometry RadiusX="100"
-                         RadiusY="100"
-                         Center="180,180" />
-    </Image.Clip>
-</Image>
-```
-
-이 예제에서는 `EllipseGeometry` `RadiusX` 및 `RadiusY` 값이 100이 고 값이 `Center` (180180) 인이의 속성으로 설정 됩니다 `Clip` [`Image`](xref:Xamarin.Forms.Image) . 타원의 영역 내에 있는 이미지 부분만 표시 됩니다.
-
-![EllipseGeometry를 사용 하 여 이미지 잘라내기](geometries-images/clip-ellipsegeometry.png "EllipseGeometry를 사용 하 여 이미지 잘라내기")
-
-> [!NOTE]
-> 간단한 기 하 도형, 경로 기 하 도형 및 복합 기 하 도형을 사용 하 여 개체를 클리핑할 수 있습니다 [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
 
 ## <a name="other-features"></a>기타 기능
 

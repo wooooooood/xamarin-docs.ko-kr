@@ -10,18 +10,18 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 48d68d2597986a941a6ac3a8df0d99f09f421e62
-ms.sourcegitcommit: 34fa3086c55b1e01838419c930f839c20662c362
+ms.openlocfilehash: cb2e3ea68f181f0a6e6392c012db221ef35d65bd
+ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990880"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104296"
 ---
 # <a name="xamarinforms-shapes-path"></a>Xamarin.Forms셰이프: 경로
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 
 `Path`클래스는 클래스에서 파생 `Shape` 되며 곡선 및 복잡 한 도형을 그리는 데 사용할 수 있습니다. 이러한 곡선과 도형은 종종 개체를 사용 하 여 설명 `Geometry` 합니다. 클래스가 클래스에서 상속 하는 속성에 대 한 자세한 내용은 `Path` `Shape` [ Xamarin.Forms 셰이프](index.md)를 참조 하세요.
 
@@ -36,7 +36,7 @@ ms.locfileid: "84990880"
 
 ## <a name="create-a-path"></a>경로 만들기
 
-다음 XAML 예제에서는 특수 한 약어 구문을 사용 하 여 다각형을 그리는 방법을 보여 줍니다.
+다음 XAML 예제에서는 경로 태그 구문 이라고 하는 특수 한 축약 구문을 사용 하 여 다각형을 그리는 방법을 보여 줍니다.
 
 ```xaml
 <Path Data="M 10,50 L 200,70"
@@ -48,7 +48,12 @@ ms.locfileid: "84990880"
       WidthRequest="100" />
 ```
 
-`Data`문자열은 `M` 경로에 대 한 시작점을 설정 하는로 표시 되는 "moveto" 명령으로 시작 합니다. 경로 데이터 매개 변수는 대/소문자를 구분 합니다. 대문자는 `M` 시작점의 절대 위치를 나타냅니다. 소문자는 `m` 상대 좌표를 표시 합니다. `L`는 시작점에서 지정 된 끝점으로 직선을 만드는 line 명령입니다.
+`Data`문자열은 `M` 경로에 대 한 시작점을 설정 하는로 표시 되는 "moveto" 명령으로 시작 합니다. `L`는 시작점에서 지정 된 끝점으로 직선을 만드는 line 명령입니다.
+
+> [!NOTE]
+> 경로 태그 구문은 XAML 에서만 사용할 수 있습니다.
+
+경로 태그 구문에 대 한 자세한 내용은 [ Xamarin.Forms 경로 태그 구문](path-markup-syntax.md)을 참조 하세요.
 
 ## <a name="path-geometry"></a>경로 기 하 도형
 
@@ -91,7 +96,8 @@ ms.locfileid: "84990880"
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [ShapeDemos (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 - [Xamarin.Forms셰이프도](index.md)
-- [Xamarin.Forms도형 기 하 도형](geometries.md)
+- [Xamarin.Forms형상의](geometries.md)
+- [Xamarin.Forms경로 태그 구문](path-markup-syntax.md)
 - [Xamarin.Forms경로 변환](path-transforms.md)

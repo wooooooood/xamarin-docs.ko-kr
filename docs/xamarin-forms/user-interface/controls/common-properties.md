@@ -6,16 +6,16 @@ ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 08/21/2019
+ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: deb894cccd5b6a2a9d908ef8967de91f00e7d297
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f3ab70dc20dda78e3acf400cf51d0ee9df84ff93
+ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136424"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104329"
 ---
 # <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Forms공용 컨트롤 속성, 메서드 및 이벤트
 
@@ -23,7 +23,7 @@ Xamarin.Forms `VisualElement` 클래스는 응용 프로그램에서 사용 되�
 
 ## <a name="properties"></a>속성
 
-인스턴스에서 사용할 수 있는 속성은 다음과 같습니다 `VisualElement` . 전체 목록은 [Visualelement API 속성](xref:Xamarin.Forms.VisualElement#properties)을 참조 하세요.
+개체에서 사용할 수 있는 속성은 다음과 같습니다 [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
 
 ### [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX)
 
@@ -44,6 +44,10 @@ Xamarin.Forms `VisualElement` 클래스는 응용 프로그램에서 사용 되�
 ### [`Bounds`](xref:Xamarin.Forms.VisualElement.Bounds)
 
 `Bounds`속성은 `Rectangle` 컨트롤이 차지 하는 공간을 나타내는 읽기 전용 개체입니다. `Bounds`속성 값은 레이아웃 주기 동안 할당 됩니다. 에는 `Rectangle` `struct` 사각형의 교차 및 포함을 테스트 하는 데 유용한 속성과 메서드가 포함 되어 있습니다. 자세한 내용은 [ Xamarin.Forms 사각형 API](xref:Xamarin.Forms.Rectangle)를 참조 하세요.
+
+### `Clip`
+
+`Clip`속성은 `Geometry` 요소의 내용에 대 한 개요를 정의 하는 개체입니다. 클립을 정의 하려면 `Geometry` 와 같은 개체를 사용 `EllipseGeometry` 하 여 요소의 속성을 설정 `Clip` 합니다. 기 하 도형 영역에 있는 영역만 표시 됩니다. 자세한 내용은 [클립 기 하 도형](~/xamarin-forms/user-interface/shapes/geometries.md#clip-geometries)을 참조 하세요.
 
 ### [`Effects`](xref:Xamarin.Forms.Element.Effects)
 
@@ -268,4 +272,4 @@ Android, iOS 및 UWP 플랫폼에는 장치에 따라 다를 수 있는 여러 �
 
 ## <a name="related-links"></a>관련 링크
 
-* [VisualElement API 설명서](xref:Xamarin.Forms.VisualElement)
+- [VisualElement API](xref:Xamarin.Forms.VisualElement)

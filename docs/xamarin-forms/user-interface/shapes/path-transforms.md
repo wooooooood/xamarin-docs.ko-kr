@@ -10,18 +10,18 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5814bb73f843031d672df0573775abb002fd3644
-ms.sourcegitcommit: 34fa3086c55b1e01838419c930f839c20662c362
+ms.openlocfilehash: c0abf7b30192ac9183c28e89d7917ea8d08dfc4f
+ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990803"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85101328"
 ---
 # <a name="xamarinforms-shapes-path-transforms"></a>Xamarin.Forms셰이프: 경로 변환
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 
 는 `Transform` `Path` 한 좌표 공간에서 다른 좌표 공간으로 개체를 변환 하는 방법을 정의 합니다. 이 매핑은 `Matrix` 세 개의 값 열이 있는 세 개의 행 컬렉션인 변환으로 설명 됩니다 `double` .
 
@@ -352,5 +352,5 @@ Xamarin.Forms에는 개체에 다중 변환 적용을 지 원하는 두 개의 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [ShapeDemos (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 - [Xamarin.Forms셰이프도](index.md)
