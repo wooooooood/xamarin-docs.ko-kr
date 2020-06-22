@@ -9,16 +9,16 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 03/19/2020
+  ms.date: 06/16/2020
   no-loc:
   - Xamarin.Forms
   - Xamarin.Essentials
-  ms.openlocfilehash: 04b2a09f455446337620325859802ee1ae40cb5e
-  ms.sourcegitcommit: 2105091f2eeb7844b19ae94708a6ab07e3e79bce
+  ms.openlocfilehash: e07215723a6c54e9d5ce3eb22103cb5eba7929d2
+  ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/29/2020
-  ms.locfileid: "84198343"
+  ms.lasthandoff: 06/19/2020
+  ms.locfileid: "85104273"
 landingContent:
 - title: 컨트롤 참조
   linkLists:
@@ -38,12 +38,6 @@ landingContent:
       url: controls/common-properties.md
     - text: 타사 컨트롤
       url: controls/thirdparty.md
-- title: C#의 선언적 UI
-  linkLists:
-  - linkListType: concept
-    links:
-    - text: C# 태그
-      url: csharp-markup.md
 - title: 프레젠테이션 뷰
   linkLists:
   - linkListType: concept
@@ -158,6 +152,30 @@ landingContent:
       url: visual/index.md
     - text: 시각적 개체 상태 관리자
       url: visual-state-manager.md
+- title: 도형
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 개요
+      url: shapes/index.md
+    - text: 타원
+      url: shapes/ellipse.md
+    - text: Geometry
+      url: shapes/geometries.md
+    - text: 줄
+      url: shapes/line.md
+    - text: 경로
+      url: shapes/path.md
+    - text: 경로 태그 구문
+      url: shapes/path-markup-syntax.md
+    - text: 경로 변환
+      url: shapes/path-transforms.md
+    - text: 다각형
+      url: shapes/polygon.md
+    - text: 폴리라인
+      url: shapes/polyline.md
+    - text: 사각형
+      url: shapes/rectangle.md
 - title: 레이아웃
   linkLists:
   - linkListType: concept
