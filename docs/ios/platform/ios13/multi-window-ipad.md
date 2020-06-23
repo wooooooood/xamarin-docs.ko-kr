@@ -7,20 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/20/2019
-ms.openlocfilehash: b3f96f342679d8be6d2f8fbc0ad5962ca675d2a5
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: ce7df59d41efdd2d151fd2ea73cf26b40ee7fa10
+ms.sourcegitcommit: 834466c9d9cf35e9659e467ce0123e5f5ade6138
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71213806"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85129911"
 ---
-# <a name="multiple-windows-for-ipad"></a>IPad 용 다중 창
+# <a name="multiple-windows-for-ipad"></a>IPad용 다중 창
 
 이제 iOS 13은 iPad의 동일한 앱에 대해 side-by-side 창을 지원 합니다. 그러면 windows 간에 새로운 환경 및 끌어서 놓기 상호 작용을 수행할 수 있습니다. 이 문서에서는이 기능을 지원 하도록 응용 프로그램을 설정 하는 방법을 보여 주고 이러한 새로운 기능을 소개 합니다. 
 
 ## <a name="project-configuration"></a>프로젝트 구성
 
-`info.plist` 여러 창 `UIApplicationSceneManifest` `UIApplicationSupportsMultipleScenes` `UISceneConfigurations` 에 대해 프로젝트를 구성 하려면 앱에서이 형식의 활동을 처리 하 고 여러 창에 대해를 사용 하도록 설정 하 고 `NSUserActivityTypes` storyboard를 사용 하 여 장면을 만듭니다.
+여러 창에 대해 프로젝트를 구성 하려면를 수정 하 여 `info.plist` iOS에 게 `NSUserActivityTypes` 이 형식의 활동을 처리 하 고 `UIApplicationSceneManifest` 여러 창에 대해를 사용 하도록 설정 하 `UIApplicationSupportsMultipleScenes` 고 `UISceneConfigurations` 장면을 스토리 보드와 연결 합니다.
 
 ```xml
 <key>NSUserActivityTypes</key>
@@ -79,14 +79,14 @@ public UIDragItem [] GetItemsForBeginningDragSession (UICollectionView collectio
 }
 ```
 
-위의 `selectedPhoto` 코드에서 모델 개체에는 호출 `OpenDetailUserActivity()`된 `NSUserActivity` 를 반환 하는 메서드가 있습니다. 끌기 제스처가 완료 `UIDragItem` 되 면을 `userActivity` 통해 `NSItemProvider`를 사용 하 여를 표시 합니다.
+위의 코드에서 `selectedPhoto` 모델 개체에는 호출 된를 반환 하는 메서드가 `NSUserActivity` 있습니다 `OpenDetailUserActivity()` . 끌기 제스처가 완료 되 면을 통해를 사용 하 여를 `UIDragItem` 표시 합니다 `userActivity` `NSItemProvider` .
 
 **명시적 작업** -단추나 링크의 사용자 제스처는 새 창을 열 수 있는 기능을 제공 합니다.
 
-에서를 `UISceneSession` 호출`RequestSceneSessionActivation`하 여 새를 시작할 수 있습니다. `UIApplication` 기존 장면이 이미 있는 경우이를 사용 해야 합니다. 기본적으로 새 장면이 생성 됩니다.
+에서를 `UIApplication` 호출 하 여 새를 시작할 수 있습니다 `UISceneSession` `RequestSceneSessionActivation` . 기존 장면이 이미 있는 경우이를 사용 해야 합니다. 기본적으로 새 장면이 생성 됩니다.
 
 ```csharp
-pubic void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
+public void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
 {
     var userActivity = selectedPhoto.OpenDetailUserActivity ();
 
@@ -99,7 +99,7 @@ pubic void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
 }
 ```
 
-이 예제에서 `userActivity` 는 명시적 사용자 작업을 기반으로 응용 프로그램의 새 창을 열기 위해 `RequestSceneSessionActivation` 메서드에 전달 되는 유일한 값입니다 .이 `UICollectionView`경우 `ItemSelected` 의 처리기입니다.
+이 예제에서는 `userActivity` `RequestSceneSessionActivation` 명시적 사용자 작업을 기반으로 응용 프로그램의 새 창을 열기 위해 메서드에 전달 되는 유일한 값입니다 .이 경우 `ItemSelected` 의 처리기입니다 `UICollectionView` .
 
 ## <a name="related-links"></a>관련 링크
 
