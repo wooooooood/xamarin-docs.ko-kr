@@ -10,18 +10,18 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 053805c14f195ef0dd3ae8f0cfcac2ee7425271d
-ms.sourcegitcommit: dc49ba58510eeb52048a866e5d3daf5f1f68fbd2
+ms.openlocfilehash: 725f892a667b4e89d55266abcf69e5394b09b6a5
+ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85130913"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243835"
 ---
 # <a name="xamarinforms-shapes-ellipse"></a>Xamarin.Forms도형: 타원
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 `Ellipse`클래스는 클래스에서 파생 `Shape` 되며 타원과 원을 그리는 데 사용할 수 있습니다. 클래스가 클래스에서 상속 하는 속성에 대 한 자세한 내용은 `Ellipse` `Shape` [ Xamarin.Forms 셰이프](index.md)를 참조 하세요.
 
@@ -29,7 +29,7 @@ ms.locfileid: "85130913"
 
 ## <a name="create-an-ellipse"></a>타원 만들기
 
-타원을 그리려면 개체를 만들고 `Ellipse` 해당 및 속성을 설정 `WidthRequest` `HeightRequest` 합니다. 해당 `Fill` 속성을 사용 하 여 [`Color`](xref:Xamarin.Forms.Color) 타원의 내부를 그리는 데 사용 되는를 지정 합니다. 해당 `Stroke` 속성을 사용 하 여 `Color` 타원의 윤곽선을 그리는 데 사용 되는를 지정 합니다. `StrokeThickness`속성은 타원 윤곽선의 두께를 지정 합니다.
+타원을 그리려면 개체를 만들고 `Ellipse` 해당 및 속성을 설정 `WidthRequest` `HeightRequest` 합니다. 타원 안쪽에를 그리려면 해당 속성을로 설정 `Fill` [`Color`](xref:Xamarin.Forms.Color) 합니다. 타원에 윤곽선을 지정 하려면 해당 속성을로 설정 `Stroke` [`Color`](xref:Xamarin.Forms.Color) 합니다. `StrokeThickness`속성은 타원 윤곽선의 두께를 지정 합니다.
 
 원을 그리려면 `WidthRequest` `HeightRequest` 개체의 및 속성을 동일 하 게 설정 `Ellipse` 합니다.
 
@@ -60,7 +60,9 @@ ms.locfileid: "85130913"
 
 ![원으로](ellipse-images/circle.png "Circle")
 
+파선 타원을 그리는 방법에 대 한 자세한 내용은 [파선 도형 그리기](index.md#draw-dashed-shapes)를 참조 하세요.
+
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms셰이프도](index.md)

@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 13c79d7597325a3bf8dbabfa2983d55a92309c4b
-ms.sourcegitcommit: dc49ba58510eeb52048a866e5d3daf5f1f68fbd2
+ms.openlocfilehash: fdab7d422040aee5a00b16bb1e301f917b0c4883
+ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85130884"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243765"
 ---
 # <a name="xamarinforms-shapes"></a>Xamarin.Forms셰이프도
 
@@ -97,7 +97,82 @@ Xamarin.Forms클래스에서 파생 되는 개체의 수를 정의 `Shape` 합�
 
 ![Stretch 셰이프](images/aspect.png "Stretch 셰이프")
 
+## <a name="draw-dashed-shapes"></a>파선 도형 그리기
+
+`Shape`개체에는 `StrokeDashArray` 형식의 속성이 `DoubleCollection` 있습니다. 이 속성은 `double` 셰이프를 윤곽선으로 표시 하는 데 사용 되는 대시와 간격의 패턴을 나타내는 값의 컬렉션을 나타냅니다. 는 `DoubleCollection` `ObservableCollection` 값의입니다 `double` . `double`컬렉션의 각은 대시 또는 간격의 길이를 지정 합니다. 인덱스 0에 있는 컬렉션의 첫 번째 항목은 대시의 길이를 지정 합니다. 인덱스 1에 있는 컬렉션의 두 번째 항목은 간격의 길이를 지정 합니다. 따라서 짝수 인덱스 값을 가진 개체는 대시를 지정 하 고 홀수 인덱스 값을 가진 개체는 간격을 지정 합니다.
+
+`Shape`개체에는 `StrokeDashOffset` `double` 대시 패턴 내에서 대시가 시작 되는 거리를 지정 하는 형식의 속성도 있습니다. 이 속성을 설정 하지 않으면 실선이 발생 합니다 `Shape` .
+
+및 속성을 설정 하 여 파선 셰이프를 그릴 수 있습니다 `StrokeDashArray` `StrokeDashOffset` . `StrokeDashArray`속성은 하나 이상의 값으로 설정 되어야 하며 `double` 각 쌍은 단일 쉼표 및/또는 하나 이상의 공백으로 구분 됩니다. 예를 들어 "0.5 1.0" 및 "0.5, 1.0"은 모두 유효 합니다.
+
+다음 XAML 예제에서는 파선 사각형을 그리는 방법을 보여 줍니다.
+
+```xaml
+<Rectangle Fill="DarkBlue"
+           Stroke="Red"
+           StrokeThickness="4"
+           StrokeDashArray="1,1"
+           StrokeDashOffset="6"
+           WidthRequest="150"
+           HeightRequest="50"
+           HorizontalOptions="Start" />
+```
+
+이 예제에서는 파선 스트로크를 사용 하 여 채워진 사각형을 그립니다.
+
+![파선 사각형](images/dashed-rectangle.png "파선")
+
+## <a name="control-line-ends"></a>줄 끝 제어
+
+줄에는 시작 단면, 줄 본문 및 끝 캡의 세 부분이 있습니다. 시작 및 끝 캡은 선 또는 세그먼트의 시작과 끝에 있는 셰이프를 설명 합니다.
+
+`Shape`개체에는 `StrokeLineCap` `PenLineCap` 줄의 시작과 끝에 있는 셰이프를 설명 하는 형식의 속성이 있습니다. `PenLineCap` 열거형은 다음 멤버를 정의합니다.
+
+- `Flat`는 줄의 마지막 점을 벗어나 확장 되지 않는 캡을 나타냅니다. 이 값은 선 끝 모양과 유사 하며 속성의 기본값입니다 `StrokeLineCap` .
+- `Square`-높이가 선 두께와 같고 길이가 선 두께의 절반에 해당 하는 사각형을 나타내는입니다.
+- `Round`-지름이 선 두께와 같은 반원를 나타냅니다.
+
+> [!IMPORTANT]
+> `StrokeLineCap`시작점 또는 끝점이 없는 도형에 속성을 설정 하는 경우에는 속성이 적용 되지 않습니다. 예를 들어, 또는에서이 속성을 설정 하면이 속성이 적용 되지 않습니다 `Ellipse` `Rectangle` .
+
+다음 XAML은 속성을 설정 하는 방법을 보여 줍니다 `StrokeLineCap` .
+
+```xaml
+<Line X1="0"
+      Y1="20"
+      X2="300"
+      Y2="20"
+      StrokeLineCap="Round"
+      Stroke="Red"
+      StrokeThickness="12" />
+```
+
+이 예제에서 빨간색 선은 줄의 시작과 끝에서 반올림 됩니다.
+
+![선 끝이](images/linecap.png "선 끝이")
+
+## <a name="control-line-joins"></a>줄 조인 제어
+
+`Shape`개체에는 `StrokeLineJoin` 형식의 속성이 있으며,이 속성은 `PenLineJoin` 셰이프의 꼭 짓 점에 사용 되는 조인 유형을 지정 합니다. `PenLineJoin` 열거형은 다음 멤버를 정의합니다.
+
+- `Miter`는 정규 각도 버텍스를 나타냅니다. 이 값은 `StrokeLineJoin` 속성의 기본값입니다.
+- `Bevel`는 경사진 정점을 나타냅니다.
+- `Round`는 반올림 된 꼭 짓 점을 나타냅니다.
+
+다음 XAML은 속성을 설정 하는 방법을 보여 줍니다 `StrokeLineJoin` .
+
+```xaml
+<Polyline Points="20 20,250 50,20 120"
+          Stroke="DarkBlue"
+          StrokeThickness="20"
+          StrokeLineJoin="Round" />
+```
+
+이 예제에서 진한 파란색 폴리라인는 꼭 짓 점에 둥근 조인이 있습니다.
+
+![줄 조인](images/linejoin.png "줄 조인")
+
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [색의Xamarin.Forms](~/xamarin-forms/user-interface/colors.md)

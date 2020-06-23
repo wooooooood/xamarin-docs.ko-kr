@@ -10,18 +10,18 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cb2e3ea68f181f0a6e6392c012db221ef35d65bd
-ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+ms.openlocfilehash: 384dcef3c2b480166f17e91d547f8cda39c83dc0
+ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104296"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85132972"
 ---
 # <a name="xamarinforms-shapes-path"></a>Xamarin.Forms셰이프: 경로
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 `Path`클래스는 클래스에서 파생 `Shape` 되며 곡선 및 복잡 한 도형을 그리는 데 사용할 수 있습니다. 이러한 곡선과 도형은 종종 개체를 사용 하 여 설명 `Geometry` 합니다. 클래스가 클래스에서 상속 하는 속성에 대 한 자세한 내용은 `Path` `Shape` [ Xamarin.Forms 셰이프](index.md)를 참조 하세요.
 
@@ -96,7 +96,7 @@ ms.locfileid: "85104296"
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms셰이프도](index.md)
 - [Xamarin.Forms형상의](geometries.md)
 - [Xamarin.Forms경로 태그 구문](path-markup-syntax.md)

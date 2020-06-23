@@ -10,18 +10,18 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05fcd1ada62bffa4829ad422ee5eda36d9d75ae3
-ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+ms.openlocfilehash: c3b869d10d454453172065b30eb7ce32da81c8ce
+ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104263"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133037"
 ---
 # <a name="xamarinforms-shapes-geometries"></a>Xamarin.Forms도형: 기 하 도형
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 `Geometry`클래스 및이 클래스에서 파생 되는 클래스를 사용 하 여 2d 셰이프의 기 하 도형에 대해 설명할 수 있습니다. `Geometry`개체는 사각형 및 원과 같은 단순 또는 두 개 이상의 geometry 개체에서 만든 복합 일 수 있습니다. `PathGeometry`원호 및 곡선을 설명할 수 있는 클래스를 사용 하 여 더 복잡 한 기 하 도형을 만들 수 있습니다.
 
@@ -224,5 +224,5 @@ ms.locfileid: "85104263"
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms셰이프도](index.md)

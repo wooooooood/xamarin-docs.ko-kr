@@ -10,18 +10,18 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 263b77371e6fc991704fd86f2616d567584c832a
-ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+ms.openlocfilehash: 943636ac82163c3c575577bb4c56f6433cf73339
+ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104335"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85132949"
 ---
 # <a name="xamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms셰이프: 경로 태그 구문
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도형을 조밀 지정할 수 있습니다. 구문은 속성에 문자열 값으로 지정 됩니다 `Path.Data` .
 
@@ -170,5 +170,5 @@ Close 명령의 구문은 `Z` 또는 `z` 입니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [ShapeDemos (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms형상의](geometries.md)
