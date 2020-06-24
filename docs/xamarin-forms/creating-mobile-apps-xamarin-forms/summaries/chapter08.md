@@ -1,21 +1,20 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 8. Code and XAML in harmony''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 요약 - 8장. 코드와 XAML의 조화
+description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 8장. 코드와 XAML의 조화'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 90db8b4f11095a2a56c82c3f563844efbcf7e2b1
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84136827"
 ---
 # <a name="summary-of-chapter-8-code-and-xaml-in-harmony"></a>요약 - 8장. 코드와 XAML의 조화

@@ -1,11 +1,22 @@
 ---
-title: ‘Xamarin.Forms Shell 애플리케이션 만들기’ description: ‘Xamarin.Forms Shell 애플리케이션을 만들기 위한 프로세스는 Shell 클래스를 서브클래싱하고 애플리케이션의 App 클래스의 MainPage 속성을 서브클래싱된 Shell 개체로 설정한 다음, 서브클래싱된 Shell 클래스에서 애플리케이션의 시각적 계층 구조를 설명하는 XAML 파일을 만드는 것입니다.’
-ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: Xamarin.Forms Shell 애플리케이션 만들기
+description: Xamarin.Forms 셸 애플리케이션을 만들기 위한 프로세스는 셸 클래스를 서브클래싱하는 XAML 파일을 만들고, 애플리케이션의 앱 클래스 MainPage 속성을 서브클래싱된 셸 개체로 설정한 다음, 서브클래싱된 셸 클래스에서 애플리케이션의 시각적 계층 구조를 설명하는 것입니다.
+ms.prod: xamarin
+ms.assetid: 2A51D78F-6CD5-4BC4-A62E-11CEFA799987
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/24/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 62c323dd73f656d5b4f4e06c672fd952845efb22
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137802"
 ---
-
 # <a name="create-a-xamarinforms-shell-application"></a>Xamarin.Forms Shell 애플리케이션 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

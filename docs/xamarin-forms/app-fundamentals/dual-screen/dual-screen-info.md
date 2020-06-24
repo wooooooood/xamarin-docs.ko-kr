@@ -1,21 +1,21 @@
 ---
 title: Xamarin.Forms 이중 화면 디바이스 기능
 description: 이 가이드에서는 Xamarin.Forms DualScreenInfo 클래스를 사용하여 Surface Duo 및 Surface Neo와 같은 이중 화면 디바이스의 앱 환경을 최적화하는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 59575823a9ec29847a60209e846ba244e51ca0c0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: 12f3ac86d2418c6516d000371753fc8ae65d557c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138933"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946353"
 ---
 # <a name="xamarinforms-dual-screen-device-capabilities"></a>Xamarin.Forms 이중 화면 디바이스 기능
 
@@ -32,15 +32,15 @@ ms.locfileid: "84138933"
 - `IsLandscape` - 디바이스가 가로인지 여부를 나타냅니다. 애플리케이션이 두 화면에 걸쳐 있는 경우 기본 방향 API가 방향을 올바르게 보고하지 않기 때문에 이 속성이 유용합니다.
 - `SpanMode` - 레이아웃이 세로, 가로 또는 단일 창 중 어떤 모드인지를 나타냅니다.
 
-이에 더해, 속성이 하나라도 변경되면 `PropertyChanged` 이벤트가 발생합니다.
+또한, 속성이 변경되면 `PropertyChanged` 이벤트가 발생하고 힌지 각도가 변경되면 `HingeAngleChanged` 이벤트가 발생합니다.
 
-## <a name="poll-hinge-angle-on-android"></a>Android의 힌지 각도 확인
+## <a name="poll-hinge-angle-on-android-and-uwp"></a>Android 및 UWP의 힌지 각도 확인
 
-Android 플랫폼 프로젝트에서 `DualScreenInfo`에 액세스할 때 다음과 같은 속성을 사용할 수 있습니다.
+Android 및 UWP 플랫폼 프로젝트에서 `DualScreenInfo`에 액세스할 때 다음과 같은 메서드를 사용할 수 있습니다.
 
 - `GetHingeAngleAsync` - 디바이스 힌지의 현재 각도를 검색합니다. 시뮬레이터를 사용하는 경우 압력 센서를 수정하여 HingeAngle을 설정할 수 있습니다.
 
-이 속성은 다음과 같이 Android 사용자 지정 렌더러에서 사용할 수 있습니다.
+이 메서드는 Android 및 UWP의 사용자 지정 렌더러에서 호출할 수 있습니다. 다음 코드는 Android 사용자 지정 렌더러 예시를 보여줍니다.
 
 ```csharp
 public class HingeAngleLabelRenderer : Xamarin.Forms.Platform.Android.FastRenderers.LabelRenderer

@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials: 공유” description: “Xamarin.Essentials에서 Share 클래스를 사용하면 디바이스에 있는 다른 Share의 텍스트 및 웹 링크와 같은 데이터를 공유할 수 있습니다.”
-ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665 author: jamesmontemagno ms.author: jamont ms.date: 01/06/2020 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 공유'
+description: Xamarin.Essentials에서 Share 클래스를 사용하면 디바이스에 있는 다른 Share의 텍스트 및 웹 링크와 같은 데이터를 공유할 수 있습니다.
+ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/06/2020
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ef4c9961e7e1fac20084247f4c85e87b79bcc427
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801935"
 ---
-
 # <a name="xamarinessentials-share"></a>Xamarin.Essentials: 공유
 
 **Share** 클래스를 사용하면 Share이 디바이스에 있는 다른 Share의 텍스트 및 웹 링크와 같은 데이터를 공유할 수 있습니다.
@@ -102,7 +115,7 @@ await Share.RequestAsync(new ShareFileRequest
 
 ## <a name="api"></a>API
 
-- [Share 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Share)
+- [Share 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Share)
 - [Share API 문서](xref:Xamarin.Essentials.Share)
 
 ## <a name="related-video"></a>관련 동영상

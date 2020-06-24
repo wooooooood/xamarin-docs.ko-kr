@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials: 지리적 위치” description: “이 문서에서는 디바이스의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공하는 Xamarin.Essentials의 Geolocation 클래스를 설명합니다.”
-ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 03/13/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 지리적 위치'
+description: 이 문서에서는 디바이스의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공하는 Xamarin.Essentials의 Geolocation 클래스를 설명합니다.
+ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 03/13/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f54c31afef691d316cbc3108792ab3158359c47c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802321"
 ---
-
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: 지리적 위치
 
 **Geolocation** 클래스는 디바이스의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공합니다.
@@ -231,7 +244,7 @@ UWP에서 고도는 미터 단위로 반환됩니다. 자세한 내용은 [Altit
 
 ## <a name="api"></a>API
 
-- [지리적 위치 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geolocation)
+- [지리적 위치 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Geolocation)
 - [지리적 위치 API 문서](xref:Xamarin.Essentials.Geolocation)
 
 ## <a name="related-video"></a>관련 동영상

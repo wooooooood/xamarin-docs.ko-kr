@@ -1,8 +1,20 @@
 ---
-title: “Xamarin.Essentials: 웹 인증자” description: “이 문서에서는 Xamarin.Essentials의 WebAuthenticator 클래스에 대해 설명합니다. 이 클래스를 사용하면 앱에 대한 콜백을 수신 대기하는 브라우저 기반 인증 흐름을 시작할 수 있습니다.”
-ms.assetid: 3D95371E-5D59-440E-8D31-F3C04E493DC1 author: redth ms.author: jodick ms.date: 03/26/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 웹 인증자'
+description: 이 문서에서는 Xamarin.Essentials의 WebAuthenticator 클래스에 대해 설명합니다. 이 클래스를 사용하면 앱에 대한 콜백을 수신 대기하는 브라우저 기반 인증 흐름을 시작할 수 있습니다.
+ms.assetid: 3D95371E-5D59-440E-8D31-F3C04E493DC1
+author: redth
+ms.author: jodick
+ms.date: 03/26/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 578e750afd718c684d70217355629a0286d2b028
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801883"
 ---
-
 # <a name="xamarinessentials-web-authenticator"></a>Xamarin.Essentials: 웹 인증자
 
 **WebAuthenticator** 클래스를 사용하면 앱에 등록된 특정 URL에 대한 콜백을 수신 대기하는 브라우저 기반 흐름을 시작할 수 있습니다.
@@ -220,6 +232,6 @@ Essentials 리포지토리에서 [전체 컨트롤러 샘플](https://github.com
 -----
 ## <a name="api"></a>API
 
-- [WebAuthenticator 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/WebAuthenticator)
+- [WebAuthenticator 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/WebAuthenticator)
 - [WebAuthenticator API 설명서](xref:Xamarin.Essentials.WebAuthenticator)
 - [ASP.NET Core 서버 샘플](https://github.com/xamarin/Essentials/blob/develop/Samples/Sample.Server.WebAuthenticator/)

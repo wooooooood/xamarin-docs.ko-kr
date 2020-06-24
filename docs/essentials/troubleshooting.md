@@ -1,11 +1,20 @@
 ---
-title: ''Xamarin.Essentials: 문제 해결'' description: ‘이 문서에서는 Xamarin.Essentials 라이브러리를 사용하여 개발할 때 발생하는 문제를 해결하는 방법을 설명합니다.’
-ms.assetid: author: ms.author: ms.date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: 'Xamarin.Essentials: 문제 해결'
+description: 이 문서에서는 Xamarin.Essentials 라이브러리를 사용하여 개발할 때 발생하는 문제를 해결하는 방법을 설명합니다.
+ms.assetid: 2E474FAF-F841-4E3C-B815-F7ABD8EE3361
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/06/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 67a060667cef5f96fa864aa2db3356ac5b9b2dfb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137126"
 ---
-
 # <a name="xamarinessentials-troubleshooting"></a>Xamarin.Essentials: 문제 해결
 
 ## <a name="error-version-conflict-detected-for-xamarinandroidsupportcompat"></a>오류: Xamarin.Android.Support.Compat에 대한 버전 충돌이 검색되었습니다.

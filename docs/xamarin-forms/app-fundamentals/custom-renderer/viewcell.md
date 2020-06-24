@@ -1,11 +1,22 @@
 ---
-title: description: ‘Xamarin.Forms ViewCell은 ListView 또는 TableView에 추가할 수 있는 셀이며, 개발자 정의 보기를 포함하고 있습니다. 이 문서에서는 Xamarin.Forms ListView 컨트롤 내부에 호스팅되는 ViewCell에 대한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다.’
-ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: ViewCell 사용자 지정
+description: Xamarin.Forms ViewCell은 ListView 또는 TableView에 추가할 수 있는 셀이며, 개발자 정의 보기를 포함하고 있습니다. 이 문서에서는 Xamarin.Forms ListView 컨트롤 내부에 호스팅되는 ViewCell에 대한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다.
+ms.prod: xamarin
+ms.assetid: 61F378C9-6DEF-436B-ACC3-2324B25D404E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/07/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c908da816352e8b3790ded0bef932e1485170abd
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573874"
 ---
-
 # <a name="customizing-a-viewcell"></a>ViewCell 사용자 지정
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
@@ -20,13 +31,11 @@ _Xamarin.Forms ViewCell은 ListView 또는 TableView에 추가할 수 있는 셀
 
 렌더링 프로세스는 각 플랫폼에서 [`ViewCell`](xref:Xamarin.Forms.ViewCell)에 대한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현하는 데 활용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
-1. Xamarin.Forms 사용자 지정 셀을 [만듭니다](#Creating_the_Custom_Cell).
-1. Xamarin.Forms의 사용자 지정 셀을 [사용합니다](#Consuming_the_Custom_Cell).
-1. 각 플랫폼의 셀에 대한 사용자 지정 렌더러를 [만듭니다](#Creating_the_Custom_Renderer_on_each_Platform).
+1. Xamarin.Forms 사용자 지정 셀을 [만듭니다](#creating-the-custom-cell).
+1. Xamarin.Forms의 사용자 지정 셀을 [사용합니다](#consuming-the-custom-cell).
+1. 각 플랫폼의 셀에 대한 사용자 지정 렌더러를 [만듭니다](#creating-the-custom-renderer-on-each-platform).
 
 이제 각 항목을 차례로 살펴보면서 Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤 내부에 호스트되는 각 셀에 플랫폼별 레이아웃의 장점을 활용하는 `NativeCell` 렌더러를 구현하겠습니다. 이렇게 하면 `ListView`를 스크롤하는 동안 Xamarin.Forms 레이아웃 계산이 반복적으로 호출되지 않습니다.
-
-<a name="Creating_the_Custom_Cell" />
 
 ## <a name="creating-the-custom-cell"></a>사용자 지정 셀 만들기
 
@@ -62,8 +71,6 @@ public class NativeCell : ViewCell
 ```
 
 `NativeCell` 클래스는 .NET Standard 라이브러리 프로젝트에서 생성되고 사용자 지정 셀에 대한 API를 정의합니다. 사용자 지정 셀은 데이터 바인딩을 통해 표시할 수 있는 `Name`, `Category` 및 `ImageFilename` 속성을 공개합니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 기본](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)을 참조하세요.
-
-<a name="Consuming_the_Custom_Cell" />
 
 ## <a name="consuming-the-custom-cell"></a>사용자 지정 셀 사용
 
@@ -143,8 +150,6 @@ Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤은 [`ItemSourc
 목록의 각 행에는 이름, 범주 및 이미지 파일 이름의 세 가지 데이터 항목이 있습니다. 목록의 각 행 레이아웃은 [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) 바인딩 가능 속성을 통해 참조되는 `DataTemplate`에서 정의됩니다. `DataTemplate`은 목록의 각 데이터 행이 데이터 바인딩을 통해 `Name`, `Category` 및 `ImageFilename` 속성을 표시하는 `NativeCell`이 되도록 정의합니다. `ListView` 컨트롤에 대한 자세한 내용은 [ListView](~/xamarin-forms/user-interface/listview/index.md)를 참조하세요.
 
 이제 각 애플리케이션 프로젝트에 사용자 지정 렌더러를 추가하여 각 셀의 플랫폼별 레이아웃을 사용자 지정할 수 있습니다.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>각 플랫폼에서 사용자 지정 렌더러 만들기
 

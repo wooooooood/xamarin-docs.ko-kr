@@ -1,8 +1,22 @@
 ---
-title: “Xamarin.Forms 지원 플랫폼” description: “Xamarin.Forms의 플랫폼 및 개발 시스템 요구 사항.”
-ms.prod: xamarin ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/22/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Xamarin.Forms 지원 플랫폼
+description: Xamarin.Forms의 플랫폼 및 개발 시스템 요구 사항.
+ms.prod: xamarin
+ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/22/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f93af19587cf962ac0c852599157261a087dadbc
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84197538"
 ---
-
 # <a name="xamarinforms-supported-platforms"></a>Xamarin.Forms 지원 플랫폼
 
 다음 운영 체제에 대한 Xamarin.Forms 애플리케이션을 작성할 수 있습니다.

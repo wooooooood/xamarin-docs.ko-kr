@@ -1,11 +1,22 @@
 ---
-title: 'Xamarin.Forms Shell 사용자 지정 렌더러' description: 'Xamarin.Forms 셸 애플리케이션은 다양한 셸 클래스가 공개하는 속성 및 메서드를 통해 세부적으로 사용자 지정할 수 있습니다. 그러나 더 정교한 플랫폼별 사용자 지정이 필요한 경우에는 셸 사용자 지정 렌더러를 만들 수도 있습니다.'
-ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: Xamarin.Forms Shell 사용자 지정 렌더러
+description: Xamarin.Forms 셸 애플리케이션은 다양한 셸 클래스가 공개하는 속성 및 메서드를 통해 세부적으로 사용자 지정할 수 있습니다. 그러나 더 정교한 플랫폼별 사용자 지정이 필요한 경우에는 셸 사용자 지정 렌더러를 만들 수도 있습니다.
+ms.prod: xamarin
+ms.assetid: 3B1A6AE8-1D1E-4C34-B9AB-48F4444FEF32
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/06/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 321539f877a86804245d27a2d76d1edeb1abd1e9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137789"
 ---
-
 # <a name="xamarinforms-shell-custom-renderers"></a>Xamarin.Forms Shell 사용자 지정 렌더러
 
 Xamarin.Forms Shell 애플리케이션의 이점 중 하나는 다양한 셸 클래스가 공개하는 속성 및 메서드를 통해 해당 모양과 동작을 세부적으로 사용자 지정할 수 있다는 것입니다. 그러나 더 정교한 플랫폼별 사용자 지정이 필요한 경우에는 셸 사용자 지정 렌더러를 만들 수도 있습니다. 다른 사용자 지정 렌더러와 마찬가지로, 다른 플랫폼에서 기본 동작을 허용하는 동안 셸 사용자 지정 렌더러를 하나의 플랫폼 프로젝트에만 추가하여 모양과 동작을 사용자 지정할 수 있습니다. 또는 다른 셸 사용자 지정 렌더러를 각 플랫폼 프로젝트에 추가하여 iOS 및 Android에서 모양과 동작을 사용자 지정할 수 있습니다.

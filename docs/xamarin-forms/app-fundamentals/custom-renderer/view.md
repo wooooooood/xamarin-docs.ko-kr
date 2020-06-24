@@ -1,21 +1,21 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 보기 구현
+description: 이 문서에서는 디바이스 카메라에서 미리 보기 동영상 스트림을 표시하는 데 사용되는 Xamarin.Forms 사용자 지정 컨트롤의 사용자 지정 렌더러를 만드는 방법을 설명합니다.
+ms.prod: xamarin
+ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e565a2bcddf292d37bc3dd07a8edbbabec709d8a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: c239955a093120c3a16ea3236946eb645ea9a4b4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133564"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570806"
 ---
 # <a name="implementing-a-view"></a>보기 구현
 
@@ -31,13 +31,11 @@ _Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤은 화면에
 
 렌더링 프로세스는 각 플랫폼에서 [`View`](xref:Xamarin.Forms.View)에 대한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현하는 데 사용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
-1. Xamarin.Forms 사용자 지정 컨트롤을 [만듭니다](#Creating_the_Custom_Control).
-1. Xamarin.Forms에서 사용자 지정 컨트롤을 [사용합니다](#Consuming_the_Custom_Control).
-1. 각 플랫폼의 컨트롤에 대한 사용자 지정 렌더러를 [만듭니다](#Creating_the_Custom_Renderer_on_each_Platform).
+1. Xamarin.Forms 사용자 지정 컨트롤을 [만듭니다](#creating-the-custom-control).
+1. Xamarin.Forms에서 사용자 지정 컨트롤을 [사용합니다](#consuming-the-custom-control).
+1. 각 플랫폼의 컨트롤에 대한 사용자 지정 렌더러를 [만듭니다](#creating-the-custom-renderer-on-each-platform).
 
 디바이스의 카메라에서 미리 보기 비디오 스트림을 표시하는 `CameraPreview` 렌더러를 구현하기 위해 각 항목을 차례로 살펴보겠습니다. 비디오 스트림을 탭하면 중지 및 시작됩니다.
-
-<a name="Creating_the_Custom_Control" />
 
 ## <a name="creating-the-custom-control"></a>사용자 지정 컨트롤 만들기
 
@@ -60,8 +58,6 @@ public class CameraPreview : View
 ```
 
 `CameraPreview` 사용자 지정 컨트롤은 .NET Standard 라이브러리 프로젝트에서 생성되고 컨트롤에 대한 API를 정의합니다. 사용자 지정 컨트롤은 디바이스의 전면 또는 후면 카메라의 비디오 스트림을 표시해야 하는지 여부를 제어하는 데 사용되는 `Camera` 속성을 노출합니다. 컨트롤이 생성될 때 `Camera` 속성에 대해 값이 지정되지 않은 경우에는 기본적으로 후면 카메라가 지정됩니다.
-
-<a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>사용자 지정 컨트롤 사용
 
@@ -108,8 +104,6 @@ public class MainPageCS : ContentPage
 `CameraPreview` 사용자 지정 컨트롤의 인스턴스는 디바이스의 카메라에서 미리 보기 비디오 스트림을 표시하는 데 사용됩니다. 필요에 따라 `Camera` 속성에 대한 값을 지정하는 것 외에 컨트롤의 사용자 지정은 사용자 지정 렌더러에서 수행됩니다.
 
 이제 각 애플리케이션 프로젝트에 사용자 지정 렌더러를 추가하여 플랫폼별 카메라 미리 보기 컨트롤을 만들 수 있습니다.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>각 플랫폼에서 사용자 지정 렌더러 만들기
 

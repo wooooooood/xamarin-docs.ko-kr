@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials: 권한” description: “이 문서에서는 런타임 권한을 확인하고 요청하는 기능을 제공하는 Xamarin.Essentials의 Permissions 클래스에 대해 설명합니다.”
-ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57 author: jamesmontemagno ms.author: jamont ms.custom: video ms.date: 01/06/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 사용 권한'
+description: 이 문서에서는 런타임 권한을 확인하고 요청하는 기능을 제공하는 Xamarin.Essentials의 Permissions 클래스에 대해 설명합니다.
+ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
+author: jamesmontemagno
+ms.author: jamont
+ms.custom: video
+ms.date: 01/06/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5de10511d73614570d6308b6f4deb7b4ca55549a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802236"
 ---
-
 # <a name="xamarinessentials-permissions"></a>Xamarin.Essentials: 사용 권한
 
 **Permissions** 클래스는 런타임 권한을 확인하고 요청하는 기능을 제공합니다.
@@ -214,7 +227,7 @@ await Permissions.RequestAsync<ReadWriteStoragePermission>();
 
 ## <a name="api"></a>API
 
-- [권한 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Permissions)
+- [권한 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Permissions)
 - [권한 API 설명서](xref:Xamarin.Essentials.Permissions)
 
 

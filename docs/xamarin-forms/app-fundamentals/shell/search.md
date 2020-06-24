@@ -1,11 +1,22 @@
 ---
-title: 'Xamarin.Forms Shell 검색' description: 'Xamarin.Forms Shell 애플리케이션은 각 페이지 위쪽에 추가될 수 있는 검색 상자에 제공되는 통합 검색 기능을 사용할 수 있습니다.'
-ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: Xamarin.Forms Shell 검색
+description: Xamarin.Forms 셸 애플리케이션은 각 페이지 위쪽에 추가될 수 있는 검색 상자에 제공되는 통합 검색 기능을 사용할 수 있습니다.
+ms.prod: xamarin
+ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/18/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: cc5e0c4cb8b474a1b7e23b476b0c5125eb2ba298
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138088"
 ---
-
 # <a name="xamarinforms-shell-search"></a>Xamarin.Forms Shell 검색
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

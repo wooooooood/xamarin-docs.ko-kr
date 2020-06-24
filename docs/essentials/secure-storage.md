@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials: 보안 스토리지” description: “이 문서에서는 간단한 키/값 쌍을 안전하게 저장하는 데 도움이 되는, Xamarin.Essentials의 SecureStorage 클래스에 관해 설명합니다.” 클래스 사용 방법, 플랫폼 구현 관련 정보 및 제한 사항을 설명합니다.”
-ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64 author: jamesmontemagno ms.author: jamont ms.date: 04/02/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 보안 스토리지'
+description: 이 문서에서는 간단한 키/값 쌍을 안전하게 저장하는 데 도움이 되는 Xamarin.Essentials의 SecureStorage 클래스에 관해 설명합니다. 클래스 사용 방법, 플랫폼 구현 관련 정보 및 제한 사항을 설명합니다.
+ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 04/02/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 061bc1cfe785ad080092ba21340f7d38bc499ed9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801948"
 ---
-
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: 보안 스토리지
 
 **SecureStorage** 클래스는 간단한 키/값 쌍을 안전하게 저장하는 데 도움이 됩니다.
@@ -155,7 +168,7 @@ KeyChain 데이터가 iCloud와 동기화되어 애플리케이션을 제거해�
 
 ## <a name="api"></a>API
 
-- [SecureStorage 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/SecureStorage)
+- [SecureStorage 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/SecureStorage)
 - [SecureStorage API 문서](xref:Xamarin.Essentials.SecureStorage)
 
 ## <a name="related-video"></a>관련 동영상

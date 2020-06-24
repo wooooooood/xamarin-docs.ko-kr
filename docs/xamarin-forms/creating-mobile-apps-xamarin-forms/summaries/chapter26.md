@@ -1,21 +1,20 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 26. Custom layouts''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 요약 - 26장. 사용자 지정 레이아웃
+description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 26장. 사용자 지정 레이아웃'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: deb46d1a70e7c707c998be8669b4af3b8e8d7ead
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84136606"
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>요약 - 26장. 사용자 지정 레이아웃

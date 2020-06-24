@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials: 지오코딩” description: “Xamarin.Essentials의 Geocoding 클래스는 위치 좌표에 장소 표시를 지오코딩하고 좌표를 장소 표시로 역 지오코딩하는 API를 제공합니다.”
-ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90 author: jamesmontemagno ms.author: jamont ms.date: 05/28/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 지오코딩'
+description: Xamarin.Essentials의 Geocoding 클래스는 위치 좌표에 장소 표시를 지오코딩하고 좌표를 장소 표시로 역 지오코딩하는 API를 제공합니다.
+ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 05/28/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 66383e441435b5f4bdb48224c9ab602f28072b3d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802332"
 ---
-
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: 지오코딩
 
 **Geocoding** 클래스는 위치 좌표에 장소 표시를 지오코딩하고 좌표를 장소 표시로 역 지오코딩하는 API를 제공합니다.
@@ -113,7 +126,7 @@ catch (Exception ex)
 
 ## <a name="api"></a>API
 
-- [지오코딩 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geocoding)
+- [지오코딩 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Geocoding)
 - [지오코딩 API 문서](xref:Xamarin.Essentials.Geocoding)
 
 ## <a name="related-video"></a>관련 동영상

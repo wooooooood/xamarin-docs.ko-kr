@@ -1,21 +1,20 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 3. Deeper into text''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 3장 요약 텍스트 더 자세히 알아보기
+description: 'Xamarin.Forms로 모바일 앱 만들기: 3장 요약 텍스트 더 자세히 알아보기'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 5423a9f716f384eca107003bdeca69615f8b459f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84136905"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>3장 요약 텍스트 더 자세히 알아보기

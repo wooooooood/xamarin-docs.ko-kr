@@ -1,7 +1,22 @@
 ---
-title: “4장 요약. 스택 스크롤” description: “Xamarin.Forms로 Mobile Apps 만들기: 챕터 4 요약. 스택 스크롤” ms.prod: xamarin ms.technology: xamarin-forms ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44 author: davidbritch ms.author: dabritch ms.date: 07/19/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 챕터 4 요약. 스택 스크롤
+description: 'Xamarin.Forms로 모바일 앱 만들기: 챕터 4 요약. 스택 스크롤'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6b86bfe1e343cd50f4a133726d16364b3efb8bee
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198268"
 ---
-
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>챕터 4 요약. 스택 스크롤
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)

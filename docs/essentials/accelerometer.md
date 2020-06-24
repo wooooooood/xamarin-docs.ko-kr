@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials: 가속도계” description: “Xamarin.Essentials의 가속도계 클래스를 사용하면 3차원 공간에서 디바이스의 가속을 나타내는 디바이스의 가속도계 센서를 모니터링할 수 있습니다.”
-ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5 author: jamesmontemagno ms.author: jamont ms.date: 04/02/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 가속도계'
+description: Xamarin.Essentials의 Accelerometer 클래스를 사용하면 3차원 공간에서 디바이스의 가속을 나타내는 디바이스의 가속도계 센서를 모니터링할 수 있습니다.
+ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 04/02/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f3d7b313039e66294a0095fd34a2caa6689cef2e
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802529"
 ---
-
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: 가속도계
 
 **Accelerometer** 클래스를 사용하면 3차원 공간에서 디바이스의 가속을 나타내는 디바이스의 가속도계 센서를 모니터링할 수 있습니다.
@@ -80,7 +93,7 @@ X축은 가로이고 오른쪽을 가리키며, Y축은 세로이고 위를 가�
 
 ## <a name="api"></a>API
 
-- [가속도계 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
+- [가속도계 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Accelerometer)
 - [가속도계 API 설명서](xref:Xamarin.Essentials.Accelerometer)
 
 ## <a name="related-video"></a>관련 동영상

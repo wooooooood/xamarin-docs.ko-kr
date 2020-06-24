@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials: 버전 추적” description: “Xamarin.Essentials의 VersionTracking 클래스를 사용하면 애플리케이션 버전 및 빌드 번호를 확인하고 처음으로 애플리케이션을 시작했는지와 같은 추가 정보를 확인할 수 있고 현재 버전의 경우 이전 빌드 정보를 가져올 수 있습니다.”
-ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3 author: jamesmontemagno ms.author: jamont ms.date: 05/28/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 버전 추적'
+description: Xamarin.Essentials의 VersionTracking 클래스를 사용하면 애플리케이션 버전 및 빌드 번호를 확인하고 처음으로 애플리케이션을 시작했는지와 같은 추가 정보를 확인할 수 있고 현재 버전의 경우 이전 빌드 정보를 가져올 수 있습니다.
+ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 05/28/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 20819d76c23ca43f60073bcc2cd762abda280374
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802041"
 ---
-
 # <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: 버전 추적
 
 **VersionTracking** 클래스를 사용하면 애플리케이션 버전 및 빌드 번호를 확인하고 애플리케이션의 처음 시작되었는지 여부와 같은 추가 정보를 확인할 수 있고 현재 버전의 경우 이전 빌드 정보를 가져올 수 있습니다.
@@ -69,7 +82,7 @@ var buildHistory = VersionTracking.BuildHistory;
 
 ## <a name="api"></a>API
 
-- [버전 추적 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/VersionTracking)
+- [버전 추적 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/VersionTracking)
 - [버전 추적 API 문서](xref:Xamarin.Essentials.VersionTracking)
 
 ## <a name="related-video"></a>관련 동영상

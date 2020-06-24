@@ -1,21 +1,21 @@
 ---
 title: Xamarin.Forms DependencyService 등록 및 확인
 description: 이 문서에서는 Xamarin.Forms DependencyService 클래스를 사용하여 네이티브 플랫폼 기능을 호출하는 방법을 설명합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+ms.prod: xamarin
+ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 50d77e9ba41767aa1f676bf21994431844fc4530
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: 050b53be5e4ae67e2adbc1436bbd56ff824f5f7b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138777"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946392"
 ---
 # <a name="xamarinforms-dependencyservice-registration-and-resolution"></a>Xamarin.Forms DependencyService 등록 및 확인
 
@@ -27,7 +27,7 @@ Xamarin.Forms [`DependencyService`](xref:Xamarin.Forms.DependencyService)를 사
 
 [`DependencyService`](xref:Xamarin.Forms.DependencyService)에 플랫폼 구현을 등록해야 Xamarin.Forms가 런타임에 해당 구현을 찾을 수 있습니다.
 
-[`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) 또는 [`Register`](xref:Xamarin.Forms.DependencyService.Register*) 메서드를 사용하여 등록을 수행할 수 있습니다.
+[`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) 또는 [`Register`](xref:Xamarin.Forms.DependencyService.Register*) 및 `RegisterSingleton` 메서드를 사용하여 등록을 수행할 수 있습니다.
 
 > [!IMPORTANT]
 > .NET 네이티브 컴파일을 사용하는 UWP 프로젝트의 릴리스 빌드는 [`Register`](xref:Xamarin.Forms.DependencyService.Register*) 메서드를 사용하여 플랫폼 구현을 등록해야 합니다.
@@ -63,7 +63,7 @@ namespace DependencyServiceDemos.iOS
 
 ### <a name="registration-by-method"></a>메서드로 등록
 
-[`DependencyService.Register`](xref:Xamarin.Forms.DependencyService.Register*) 메서드를 사용하여 [`DependencyService`](xref:Xamarin.Forms.DependencyService)에 플랫폼 구현을 등록할 수 있습니다.
+[`DependencyService.Register`](xref:Xamarin.Forms.DependencyService.Register*) 메서드 및 `RegisterSingleton` 메서드를 사용하여 [`DependencyService`](xref:Xamarin.Forms.DependencyService)에 플랫폼 구현을 등록할 수 있습니다.
 
 다음 예제에서는 [`Register`](xref:Xamarin.Forms.DependencyService.Register*) 메서드를 사용하여 `IDeviceOrientationService` 인터페이스의 iOS 구현을 등록하는 방법을 보여 줍니다.
 
@@ -89,10 +89,19 @@ DependencyService.Register<DeviceOrientationService>();
 
 이 예제에서 [`Register`](xref:Xamarin.Forms.DependencyService.Register*) 메서드는 [`DependencyService`](xref:Xamarin.Forms.DependencyService)에 `DeviceOrientationService`를 등록합니다. 결과적으로 구체적인 형식이 구현하는 인터페이스에 해당 형식이 등록됩니다.
 
-마찬가지로 다른 플랫폼의 `IDeviceOrientationService` 인터페이스 구현은 [`Register`](xref:Xamarin.Forms.DependencyService.Register*) 메서드를 사용하여 등록해야 합니다.
+아니면, `RegisterSingleton` 메서드를 사용하여 기존 개체 인스턴스를 싱글톤으로 등록할 수도 있습니다.
+
+```csharp
+var service = new DeviceOrientationService();
+DependencyService.RegisterSingleton<IDeviceOrientationService>(service);
+```
+
+이 예에서 `RegisterSingleton` 메서드는 `IDeviceOrientationService` 인터페이스에 대해 `DeviceOrientationService` 개체를 싱글톤으로 등록합니다.
+
+마찬가지로 다른 플랫폼의 `IDeviceOrientationService` 인터페이스 구현은 [`Register`](xref:Xamarin.Forms.DependencyService.Register*) 메서드 또는 `RegisterSingleton` 메서드를 사용하여 등록해야 합니다.
 
 > [!IMPORTANT]
-> [`Register`](xref:Xamarin.Forms.DependencyService.Register*) 메서드를 통한 등록을 플랫폼 프로젝트에서 수행한 후 플랫폼 구현이 제공하는 기능을 공유 코드에서 호출해야 합니다.
+> [`Register`](xref:Xamarin.Forms.DependencyService.Register*) 및 `RegisterSingleton` 메서드를 통한 등록을 플랫폼 프로젝트에서 수행한 후 플랫폼 구현이 제공하는 기능을 공유 코드에서 호출해야 합니다.
 
 ## <a name="resolve-the-platform-implementations"></a>플랫폼 구현 확인
 
@@ -105,7 +114,12 @@ DependencyService.Register<DeviceOrientationService>();
 
 ### <a name="resolve-using-the-getlttgt-method"></a>Get&lt;T&gt; 메서드를 사용하여 확인
 
-[`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) 메서드는 런타임에 인터페이스 `T`의 플랫폼 구현을 검색하고 이 구현의 인스턴스를 싱글톤으로 만듭니다. 이 인스턴스는 애플리케이션의 수명 동안 유지되며 동일한 플랫폼 구현을 확인하는 후속 호출은 동일한 인스턴스를 검색합니다.
+[`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) 메서드는 런타임에 인터페이스 `T`의 플랫폼 구현을 검색하고 다음 중 하나를 수행합니다.
+
+- 이 구현의 인스턴스를 싱글톤으로 만듭니다.
+- 기존 인스턴스를 싱글톤으로 반환하며, 이는 `RegisterSingleton` 메서드로 `DependencyService`에 등록됩니다.
+
+두 경우 모두 인스턴스는 애플리케이션의 수명 동안 유지되며 동일한 플랫폼 구현을 확인하는 후속 호출은 동일한 인스턴스를 검색합니다.
 
 다음 코드는 [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) 메서드를 호출하여 `IDeviceOrientationService` 인터페이스를 확인한 후 해당 `GetOrientation` 메서드를 호출하는 예제를 보여 줍니다.
 
@@ -121,7 +135,7 @@ DeviceOrientation orientation = DependencyService.Get<IDeviceOrientationService>
 ```
 
 > [!NOTE]
-> [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) 메서드는 기본적으로 인터페이스 `T`의 플랫폼 구현 인스턴스를 싱글톤으로 만듭니다. 그러나 이 동작을 변경할 수 있습니다. 자세한 내용은 [확인된 개체의 수명 관리](#manage-the-lifetime-of-resolved-objects)를 참조하세요.
+> [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) 메서드는 기본적으로 인터페이스 `T`의 플랫폼 구현 인스턴스를 싱글톤으로 반환합니다. 그러나 이 동작을 변경할 수 있습니다. 자세한 내용은 [확인된 개체의 수명 관리](#manage-the-lifetime-of-resolved-objects)를 참조하세요.
 
 ### <a name="resolve-using-the-resolvelttgt-method"></a>Resolve&lt;T&gt; 메서드를 사용하여 확인
 
@@ -141,7 +155,7 @@ DeviceOrientation orientation = DependencyService.Resolve<IDeviceOrientationServ
 ```
 
 > [!NOTE]
-> [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) 메서드가 [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) 메서드 호출로 대체되면 이 메서드는 기본적으로 인터페이스 `T`의 플랫폼 구현 인스턴스를 싱글톤으로 만듭니다. 그러나 이 동작을 변경할 수 있습니다. 자세한 내용은 [확인된 개체의 수명 관리](#manage-the-lifetime-of-resolved-objects)를 참조하세요.
+> [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) 메서드가 [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) 메서드 호출로 대체되면 이 메서드는 기본적으로 인터페이스 `T`의 플랫폼 구현 인스턴스를 싱글톤으로 반환합니다. 그러나 이 동작을 변경할 수 있습니다. 자세한 내용은 [확인된 개체의 수명 관리](#manage-the-lifetime-of-resolved-objects)를 참조하세요.
 
 ## <a name="manage-the-lifetime-of-resolved-objects"></a>확인된 개체의 수명 관리
 

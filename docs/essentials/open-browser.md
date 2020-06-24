@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials 브라우저 열기” description: “Xamarin.Essentials에서 Browser 클래스를 사용하면 애플리케이션이 최적화된 시스템 기본 브라우저 또는 외부 브라우저에서 웹 링크를 열 수 있습니다.”
-ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33 author: jamesmontemagno ms.author: jamont ms.date: 04/02/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Xamarin.Essentials 브라우저 열기
+description: Xamarin.Essentials에서 Browser 클래스를 사용하면 애플리케이션이 최적화된 시스템 기본 브라우저 또는 외부 브라우저에서 웹 링크를 열 수 있습니다.
+ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 04/02/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 997c6b66b5dba43eb440130f3f58d31a5a274815
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802242"
 ---
-
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: 브라우저
 
 **Browser** 클래스를 사용하면 애플리케이션이 최적화된 시스템 기본 브라우저 또는 외부 브라우저에서 웹 링크를 열 수 있습니다.
@@ -84,7 +97,7 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 ## <a name="api"></a>API
 
-- [Browser 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Browser)
+- [Browser 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Browser)
 - [Browser API 문서](xref:Xamarin.Essentials.Browser)
 
 ## <a name="related-video"></a>관련 동영상

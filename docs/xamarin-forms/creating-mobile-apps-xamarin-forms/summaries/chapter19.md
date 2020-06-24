@@ -1,21 +1,20 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 19. Collection views''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 19장의 요약 정보입니다. 컬렉션 뷰
+description: 'Xamarin.Forms로 모바일 앱 만들기: 19장의 요약 정보입니다. 컬렉션 뷰'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 0eafdeffb6783a0ed54fdf23e6d10de24e2b4c6f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84136697"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>19장의 요약 정보입니다. 컬렉션 뷰

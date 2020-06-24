@@ -1,8 +1,20 @@
 ---
-title: “Xamarin.Essentials: 지표” description: “Xamarin.Essentials에서 Barometer 클래스를 사용하면 압력을 측정하는 디바이스의 기압계 센서를 모니터링할 수 있습니다.”
-ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1 author: jamesmontemagno ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 지표'
+description: Xamarin.Essentials에서 Barometer 클래스를 사용하면 압력을 측정하는 디바이스의 기압계 센서를 모니터링할 수 있습니다.
+ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9a2742a5d515c864611361e85ea0678e9c5611ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802496"
 ---
-
 # <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: 지표
 
 **Barometer** 클래스를 사용하면 압력을 측정하는 디바이스의 기압계 센서를 모니터링할 수 있습니다.
@@ -84,5 +96,5 @@ public class BarometerTest
 
 ## <a name="api"></a>API
 
-- [Barometer 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Barometer)
+- [Barometer 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Barometer)
 - [Barometer API 문서](xref:Xamarin.Essentials.Barometer)

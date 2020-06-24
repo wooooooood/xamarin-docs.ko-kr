@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials: 파일 시스템 도우미” description: “Xamarin.Essentials의 FileSystem 클래스에는 앱 패키지 내에서 애플리케이션의 캐시 및 데이터와 열린 파일을 찾기 위한 일련의 도우미가 포함되어 있습니다.”
-ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 파일 시스템 도우미'
+description: Xamarin.Essentials의 FileSystem 클래스에는 앱 패키지 내에서 애플리케이션의 캐시 및 데이터와 열린 파일을 찾기 위한 일련의 도우미가 포함되어 있습니다.
+ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5fafc24d9c4bd35d4ef0010ae4530341316c878a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802359"
 ---
-
 # <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: 파일 시스템 도우미
 
 **FileSystem** 클래스에는 앱 패키지 내에서 애플리케이션의 캐시 및 데이터와 열린 파일을 찾기 위한 일련의 도우미가 포함되어 있습니다.
@@ -70,7 +83,7 @@ UWP 프로젝트의 루트에 파일을 추가하고 빌드 작업을 **Content*
 
 ## <a name="api"></a>API
 
-- [파일 시스템 도우미 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/FileSystem)
+- [파일 시스템 도우미 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/FileSystem)
 - [파일 시스템 API 문서](xref:Xamarin.Essentials.FileSystem)
 
 ## <a name="related-video"></a>관련 동영상

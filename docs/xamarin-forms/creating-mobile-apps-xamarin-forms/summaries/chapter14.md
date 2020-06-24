@@ -1,21 +1,20 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 14. Absolute layout''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: 요약 - 14장 절대 레이아웃
+description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 14장 절대 레이아웃'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 72ee9c4a481388e69aeeb52dbd5b8eeaabb164f6
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84136762"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>요약 - 14장 절대 레이아웃

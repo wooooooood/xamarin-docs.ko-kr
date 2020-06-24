@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials: 디바이스 표시 정보” description: “이 문서에서는 애플리케이션이 실행 중인 디바이스의 화면 메트릭을 제공하는 Xamarin.Essentials의 DeviceDisplay 클래스를 설명합니다.”
-ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 디바이스 표시 정보'
+description: 이 문서에서는 애플리케이션이 실행 중인 디바이스의 화면 메트릭을 제공하는 Xamarin.Essentials의 DeviceDisplay 클래스를 설명합니다.
+ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 867e6bd1828d4158f70226dbaad678f9d6037bb0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802403"
 ---
-
 # <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: 디바이스 표시 정보
 
 **DeviceDisplay** 클래스는 애플리케이션이 실행되고 있는 디바이스의 화면 메트릭에 관한 정보를 제공하고, 애플리케이션이 실행 중일 때 화면이 절전 상태가 되지 않도록 요청할 수 있습니다.
@@ -92,7 +105,7 @@ public class KeepScreenOnTest
 
 ## <a name="api"></a>API
 
-- [DeviceDisplay 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DeviceDisplay)
+- [DeviceDisplay 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/DeviceDisplay)
 - [DeviceDisplay API 문서](xref:Xamarin.Essentials.DeviceDisplay)
 
 ## <a name="related-video"></a>관련 동영상

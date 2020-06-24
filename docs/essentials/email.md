@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials: 전자 메일” description: “Xamarin.Essentials에서 Email 클래스를 사용하면 애플리케이션이 제목, 본문 및 받는 사람(받는 사람, 참조, 숨은 참조)을 포함한 지정된 정보를 사용하여 기본 메일 애플리케이션을 열 수 있습니다.”
-ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 08/20/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 전자 메일'
+description: Xamarin.Essentials에서 Email 클래스를 사용하면 애플리케이션이 제목, 본문 및 받는 사람(받는 사람, 참조, 숨은 참조)을 포함한 지정된 정보를 사용하여 기본 메일 애플리케이션을 열 수 있습니다.
+ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 08/20/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: eba2b6decc74c63e6b2790287842e6cc9b237bd2
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802380"
 ---
-
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: 전자 메일
 
 **Email** 클래스를 사용하면 애플리케이션이 제목, 본문 및 받는 사람(받는 사람, 참조, 숨은 참조)을 포함한 지정된 정보를 사용하여 기본 메일 애플리케이션을 열 수 있습니다.
@@ -95,7 +108,7 @@ await Email.ComposeAsync(message);
 
 ## <a name="api"></a>API
 
-- [메일 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
+- [메일 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Email)
 - [메일 API 문서](xref:Xamarin.Essentials.Email)
 
 ## <a name="related-video"></a>관련 동영상

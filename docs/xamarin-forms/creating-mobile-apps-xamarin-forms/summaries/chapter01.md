@@ -1,21 +1,20 @@
 ---
 title: 요약 - 1장. Xamarin.Forms가 왜 적합한가요?
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 1. How does Xamarin.Forms fit in?''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
+description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 1장. Xamarin.Forms가 왜 적합한가요?'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 48b2fb429d206f6582886c94d4d99839d790dc8d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
+ms.lasthandoff: 06/18/2020
 ms.locfileid: "84136931"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>요약 - 1장. Xamarin.Forms가 왜 적합한가요?

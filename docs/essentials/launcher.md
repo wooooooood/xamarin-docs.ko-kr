@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials 시작 관리자” description: “Xamarin.Essentials에서 Launcher 클래스를 사용하면 애플리케이션이 시스템을 통해 URI를 열 수 있습니다.”
-ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 08/20/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: Xamarin.Essentials 시작 관리자
+description: Xamarin.Essentials에서 Launcher 클래스를 사용하면 애플리케이션이 시스템을 통해 URI를 열 수 있습니다.
+ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 08/20/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: dcb236c47cf2eec77b3b90da798b0cf0d58f3c1d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802311"
 ---
-
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: 시작 관리자
 
 **Launcher** 클래스를 사용하면 애플리케이션이 시스템을 통해 URI를 열 수 있습니다. 다른 애플리케이션의 사용자 지정 URI 체계에 대한 딥 링크를 설정할 때 주로 사용됩니다. 브라우저에서 웹 사이트를 열려면 **[Browser](open-browser.md)** API를 참조해야 합니다.
@@ -108,7 +121,7 @@ await Launcher.OpenAsync(new OpenFileRequest
 
 ## <a name="api"></a>API
 
-- [Launcher 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Launcher)
+- [Launcher 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Launcher)
 - [Launcher API 문서](xref:Xamarin.Essentials.Launcher)
 
 ## <a name="related-video"></a>관련 동영상

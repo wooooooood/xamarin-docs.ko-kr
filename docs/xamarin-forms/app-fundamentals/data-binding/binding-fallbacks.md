@@ -1,27 +1,27 @@
 ---
 title: Xamarin.Forms 바인딩 대체
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+description: 이 문서에서는 바인딩에 실패하는 경우 사용할 대체 값을 정의하여 바인딩을 보다 강력하게 만드는 방법에 대해 설명합니다.
+ms.prod: xamarin
+ms.assetid: 637ACD9D-3E5D-4014-86DE-A77D1FEF238A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/16/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f3aadef1960618731c3749507233933b8bf7630e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: 2c5ce10aa0a1137ad4e4832d5dc931c902b82810
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133479"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946210"
 ---
 # <a name="xamarinforms-binding-fallbacks"></a>Xamarin.Forms 바인딩 대체
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-바인딩 소스를 확인할 수 없거나 바인딩에 성공하지만 `null` 값을 반환하기 때문에 경우에 따라 데이터 바인딩이 실패합니다. 값 변환기 또는 기타 추가 코드를 사용하여 이러한 시나리오를 처리할 수 있고 데이터 바인딩은 바인딩 프로세스에 실패하는 경우 사용할 대체 값을 정의하여 더 강력하게 만들 수 있습니다. 바인딩 식에서 [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) 및 [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) 속성을 정의하여 이 작업을 수행할 수 있습니다. 이러한 속성이 [`BindingBase`](xref:Xamarin.Forms.BindingBase) 클래스에 위치하기 때문에 바인딩, 컴파일된 바인딩 및 `Binding` 태그 확장과 함께 사용할 수 있습니다.
+바인딩 소스를 확인할 수 없거나 바인딩에 성공하지만 `null` 값을 반환하기 때문에 경우에 따라 데이터 바인딩이 실패합니다. 값 변환기 또는 기타 추가 코드를 사용하여 이러한 시나리오를 처리할 수 있고 데이터 바인딩은 바인딩 프로세스에 실패하는 경우 사용할 대체 값을 정의하여 더 강력하게 만들 수 있습니다. 바인딩 식에서 [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) 및 [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) 속성을 정의하여 이 작업을 수행할 수 있습니다. 이러한 속성이 [`BindingBase`](xref:Xamarin.Forms.BindingBase) 클래스에 위치하기 때문에, 바인딩, 다중 바인딩, 컴파일된 바인딩 및 `Binding` 태그 확장과 함께 사용할 수 있습니다.
 
 > [!NOTE]
 > 바인딩 식에서 [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) 및 [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) 속성을 사용하는 것은 선택 사항입니다.

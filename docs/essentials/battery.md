@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials: 배터리” description: “이 문서에서는 디바이스의 배터리 정보를 확인하고 변경 내용을 모니터링할 수 있는 Xamarin.Essentials의 Battery 클래스를 설명합니다.”
-ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43 author: jamesmontemagno ms.author: jamont ms.date: 01/22/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 배터리'
+description: 이 문서에서는 디바이스의 배터리 정보를 확인하고 변경 내용을 모니터링할 수 있는 Xamarin.Essentials의 Battery 클래스를 설명합니다.
+ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/22/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3138db09c2a3d343f36aa48f561930df47f48ae6
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802480"
 ---
-
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: 배터리
 
 **Battery** 클래스를 사용하면 디바이스의 배터리 정보를 확인하고 변경 사항을 모니터링할 수 있으며, 디바이스가 절전 모드로 실행 중인지를 나타내는 디바이스 절전 상태 관련 정보를 확인할 수 있습니다. 디바이스의 절전 상태가 켜짐이면 애플리케이션에서 후순위 처리를 피해야 합니다.
@@ -171,7 +184,7 @@ public class EnergySaverTest
 
 ## <a name="api"></a>API
 
-- [배터리 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Battery)
+- [배터리 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Battery)
 - [배터리 API 문서](xref:Xamarin.Essentials.Battery)
 
 ## <a name="related-video"></a>관련 동영상

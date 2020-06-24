@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials: 손전등” description: “이 문서에서는 디바이스의 카메라 플래시를 켜거나 꺼서 손전등으로 전환하는 기능이 있는 Xamarin.Essentials의 Flashlight 클래스를 설명합니다.”
-ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 손전등'
+description: 이 문서에서는 디바이스의 카메라 플래시를 켜거나 꺼서 손전등으로 전환하는 기능이 있는 Xamarin.Essentials의 Flashlight 클래스를 설명합니다.
+ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7a8a90674b395c90f698a4a0854dc0dc3fc5fe15
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802344"
 ---
-
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: 손전등
 
 **Flashlight** 클래스에는 디바이스의 카메라 플래시를 켜거나 꺼서 손전등으로 전환하는 기능이 있습니다.
@@ -113,7 +126,7 @@ Flashlight 클래스는 디바이스의 운영 체제에 따라 최적화되었�
 
 ## <a name="api"></a>API
 
-- [손전등 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
+- [손전등 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Flashlight)
 - [손전등 API 문서](xref:Xamarin.Essentials.Flashlight)
 
 ## <a name="related-video"></a>관련 동영상

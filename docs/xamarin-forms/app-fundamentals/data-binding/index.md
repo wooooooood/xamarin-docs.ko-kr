@@ -1,21 +1,21 @@
 ---
 title: Xamarin.Forms 데이터 바인딩
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+description: 데이터 바인딩은 두 개체의 속성을 연결하여 한 속성의 변경 내용이 다른 속성에 자동으로 반영되도록 하는 기술입니다. 데이터 바인딩은 MVVM(Model-View-ViewModel) 애플리케이션 아키텍처의 필수적인 부분입니다.
+ms.prod: xamarin
+ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4b99877342ddbaf9ad5606ec5dc284818fcfeffd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: 9abbe60865cbf5fb9082b5f4882c27fe095b36ac
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946457"
 ---
 # <a name="xamarinforms-data-binding"></a>Xamarin.Forms 데이터 바인딩
 
@@ -69,6 +69,10 @@ Xamarin.Forms 애플리케이션은 하나 이상의 페이지로 구성되며 �
 ## <a name="binding-fallbacks"></a>[바인딩 대체](binding-fallbacks.md)
 
 바인딩 프로세스가 실패할 경우 사용할 대체 값을 정의하여 데이터 바인딩을 더욱 강력하게 만듭니다.
+
+## <a name="multi-bindings"></a>[다중 바인딩](multibinding.md)
+
+[`Binding`](xref:Xamarin.Forms.Binding) 개체 컬렉션을 단일 바인딩 대상 속성에 연결합니다.
 
 ## <a name="the-command-interface"></a>[명령 인터페이스](commanding.md)
 

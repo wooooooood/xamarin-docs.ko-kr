@@ -1,8 +1,20 @@
 ---
-title: “Xamarin.Essentials: 지자기 센터” description: “Xamarin.Essentials의 지자기센터 클래스를 사용하면 지구 자기장을 기준으로 디바이스 방향을 나타내는 디바이스의 지자기 센터 센서를 모니터링할 수 있습니다.”
-ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B author: jamesmontemagno ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 지자기 센터'
+description: Xamarin.Essentials의 Magnetometer 클래스를 사용하면 지구 자기장을 기준으로 디바이스 방향을 나타내는 디바이스의 지자기 센터 센서를 모니터링할 수 있습니다.
+ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b01bc1fd9c65186952635c5f472b1ac6beb0c9bd
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802283"
 ---
-
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: 지자기 센터
 
 **Magnetometer** 클래스를 사용하면 지구 자기장을 기준으로 디바이스 방향을 나타내는 디바이스의 지자기 센터 센서를 모니터링할 수 있습니다.
@@ -68,5 +80,5 @@ public class MagnetometerTest
 
 ## <a name="api"></a>API
 
-- [지자기 센터 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Magnetometer)
+- [지자기 센터 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Magnetometer)
 - [지자기 센터 API 문서](xref:Xamarin.Essentials.Magnetometer)

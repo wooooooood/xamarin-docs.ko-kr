@@ -1,8 +1,22 @@
 ---
-title: “사진 라이브러리에서 사진 선택” description: “이 문서에서는 Xamarin.Forms DependencyService 클래스를 사용하여 휴대폰의 사진 라이브러리에서 사진을 선택하는 방법을 설명합니다.”
-ms.prod: xamarin ms.assetid: 4F51B0E7-6A63-403C-B488-500CCBCE75DD ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/06/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 사진 라이브러리에서 사진 선택
+description: 이 문서에서는 Xamarin.Forms DependencyService 클래스를 사용하여 휴대폰의 사진 라이브러리에서 사진을 선택하는 방법을 설명합니다.
+ms.prod: xamarin
+ms.assetid: 4F51B0E7-6A63-403C-B488-500CCBCE75DD
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/06/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9f999d56fbf178be160e91756643c127d574b090
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84197550"
 ---
-
 # <a name="picking-a-photo-from-the-picture-library"></a>사진 라이브러리에서 사진 선택
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)

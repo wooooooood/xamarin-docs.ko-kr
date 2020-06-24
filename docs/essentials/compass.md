@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials: 나침반” description: “이 문서에서는 디바이스의 자기 북쪽 방향을 모니터링할 수 있는 Xamarin.Essentials의 Compass 클래스를 설명합니다.”
-ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 나침반'
+description: 이 문서에서는 디바이스의 자기 북쪽 방향을 모니터링할 수 있는 Xamarin.Essentials의 Compass 클래스를 설명합니다.
+ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f85c6c1d262606ce75131e6ba39f326526bb8eb7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802460"
 ---
-
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: 나침반
 
 **Compass** 클래스를 사용하면 디바이스의 자기 북쪽 방향을 모니터링할 수 있습니다.
@@ -87,7 +100,7 @@ Compass.Start(SensorSpeed.UI, applyLowPassFilter: true);
 
 ## <a name="api"></a>API
 
-- [나침반 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Compass)
+- [나침반 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Compass)
 - [나침반 API 문서](xref:Xamarin.Essentials.Compass)
 
 ## <a name="related-video"></a>관련 동영상

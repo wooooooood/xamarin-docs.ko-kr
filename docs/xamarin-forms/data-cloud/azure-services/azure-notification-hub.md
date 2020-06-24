@@ -1,20 +1,22 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
+title: Azure Notification Hubs 및 Xamarin.Forms를 사용하여 푸시 알림 보내기 및 받기
+description: 이 문서에서는 Azure Notification Hubs를 사용하여 Xamarin.Forms 애플리케이션에 플랫폼 간 푸시 알림을 보내는 방법을 설명합니다.
+ms.prod: xamarin
+ms.assetid: 07D13195-3A0D-4C95-ACF0-143A9084973C
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 11/27/2019
 no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
 - Firebase
-ms.openlocfilehash: 6b91884124f6c6dac366e30b8437a5f6e06ee162
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+ms.openlocfilehash: 5f7b83c1fc907de790b382aabde0c5a957e5a8bb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133330"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565423"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Azure Notification Hubs 및 Xamarin.Forms를 사용하여 푸시 알림 보내기 및 받기
 
@@ -26,7 +28,7 @@ ms.locfileid: "84133330"
 
 1. [푸시 알림 서비스 및 Azure Notification Hub를 설정합니다](#set-up-push-notification-services-and-azure-notification-hub).
 1. [템플릿 및 태그를 사용하는 방법을 이해합니다](#register-templates-and-tags-with-the-azure-notification-hub).
-1. [플랫폼 간 Xamarin.Forms 애플리케이션을 만듭니다](#xamarinforms-application-functionality).
+1. [여러 플랫폼에서 사용 가능한 Xamarin.Forms 애플리케이션을 만듭니다.](#xamarinforms-application-functionality)
 1. [푸시 알림에 대한 네이티브 Android 프로젝트를 구성합니다](#configure-the-android-application-for-notifications).
 1. [푸시 알림에 대한 네이티브 iOS 프로젝트를 구성합니다](#configure-ios-for-notifications).
 1. [Azure Notification Hub를 사용한 테스트 알림](#test-notifications-in-the-azure-portal).
@@ -365,7 +367,7 @@ public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompa
 1. `Xamarin.Azure.NotificationHubs.iOS` NuGet 패키지를 프로젝트에 추가합니다.
 1. APNS를 사용하여 알림을 [등록](#register-for-notifications-with-apns)합니다.
 1. Azure Notification Hub에 애플리케이션을 [등록](#register-with-azure-notification-hub-and-subscribe-to-tags)하고 태그를 구독합니다.
-1. Xamarin.Forms UI에 APNS 알림을 [추가](#add-apns-notifications-to-xamarinforms-ui)합니다.
+1. APNS 알림을 Xamarin.Forms UI에 [추가](#add-apns-notifications-to-xamarinforms-ui)합니다.
 
 다음 스크린샷은 Visual Studio 내의 `Entitlements.plist` 파일에서 선택된 **푸시 알림 사용** 옵션을 보여 줍니다.
 
