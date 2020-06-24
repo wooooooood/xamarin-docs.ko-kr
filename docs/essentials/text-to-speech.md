@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials: 텍스트 음성 변환” description: “Xamarin.Essentials의 TextToSpeech 클래스를 사용하면 애플리케이션이 기본 제공 텍스트 음성 변환 엔진을 이용하여 디바이스에서 텍스트를 말하고, 엔진이 지원할 수 있는 사용 가능한 언어를 쿼리할 수도 있습니다.”
-ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 텍스트 음성 변환'
+description: Xamarin.Essentials의 TextToSpeech 클래스를 사용하면 애플리케이션이 기본 제공 텍스트 음성 변환 엔진을 이용하여 디바이스에서 텍스트를 말하고, 엔진이 지원할 수 있는 사용 가능한 언어를 쿼리할 수도 있습니다.
+ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 452a54637c270f80c2e1add4d6cadedbb4b27077
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801831"
 ---
-
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: 텍스트 음성 변환
 
 **TextToSpeech** 클래스를 사용하면 애플리케이션이 기본 제공 텍스트 음성 변환 엔진을 이용하여 디바이스에서 텍스트를 말하고, 엔진이 지원할 수 있는 사용 가능한 언어를 쿼리할 수도 있습니다.
@@ -139,7 +152,7 @@ public async Task SpeakNow()
 
 ## <a name="api"></a>API
 
-- [TextToSpeech 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/TextToSpeech)
+- [TextToSpeech 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/TextToSpeech)
 - [TextToSpeech API 문서](xref:Xamarin.Essentials.TextToSpeech)
 
 ## <a name="related-video"></a>관련 동영상
