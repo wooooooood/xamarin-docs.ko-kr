@@ -10,12 +10,12 @@ ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fee7dd2a2e5b713b3a82fc2e1227b21caddbceaa
-ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
+ms.openlocfilehash: 5ffbf452816eb9e60d70175a995419a124bcc457
+ms.sourcegitcommit: 8f6cc5208f675c8cfb645bd9ffb0fc1f8ea71411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243836"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326165"
 ---
 # <a name="xamarinforms-shapes-polyline"></a>Xamarin.Forms도형: 폴리라인
 
@@ -34,10 +34,7 @@ ms.locfileid: "85243836"
 
 `PointsCollection`형식은 `ObservableCollection` 개체의입니다 [`Point`](xref:Xamarin.Forms.Point) . `Point`구조체는 `X` `Y` `double` 2d 공간에서 x 및 y 좌표 쌍을 나타내는 형식의 및 속성을 정의 합니다. 따라서 속성은 `Points` 단일 쉼표 및/또는 하나 이상의 공백으로 구분 되는 다중선 꼭 짓 점 점을 설명 하는 x 좌표 및 y 좌표 쌍의 목록으로 설정 되어야 합니다. 예를 들어 "40, 10 70, 80" 및 "40 10, 70 80"는 모두 유효 합니다.
 
-`FillRule` 열거형은 다음 멤버를 정의합니다.
-
-- `EvenOdd`다중선의 채우기 영역에 점이 있는지 여부를 결정 하는 규칙을 나타냅니다. 지점에서 무한대로 임의의 방향으로 광선을 그리고 광선이 교차 하는 모양 내 세그먼트의 수를 계산 합니다. 이 숫자가 홀수 이면 점이 내부에 있습니다. 이 숫자가 짝수 이면 지점은 바깥쪽입니다.
-- `Nonzero`다중선의 채우기 영역에 점이 있는지 여부를 결정 하는 규칙을 나타냅니다. 지점에서 점에서 모든 방향으로 무한대로 광선을 그려 하 고 도형의 세그먼트가 광선과 교차 하는 위치를 확인 합니다. 0부터 시작 하 여 세그먼트가 왼쪽에서 오른쪽으로 광선과 교차할 때마다 카운트가 증가 하 고 세그먼트가 오른쪽에서 왼쪽으로 광선과 교차할 때마다 감소 합니다. 교차 수를 계산한 후 결과가 0 이면 점이 다중선 외부에 있습니다. 그렇지 않으면 내부에 있습니다.
+열거형에 대 한 자세한 내용은 `FillRule` [ Xamarin.Forms 셰이프: 채우기 규칙](fillrules.md)을 참조 하세요.
 
 ## <a name="create-a-polyline"></a>다중선 만들기
 
@@ -104,3 +101,4 @@ ms.locfileid: "85243836"
 
 - [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms셰이프도](index.md)
+- [Xamarin.Forms셰이프: 채우기 규칙](fillrules.md)

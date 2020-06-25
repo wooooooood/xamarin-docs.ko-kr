@@ -10,12 +10,12 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 943636ac82163c3c575577bb4c56f6433cf73339
-ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
+ms.openlocfilehash: d2eb0ac68bf754e45ffcd2a1c77e4347bb3bcf4c
+ms.sourcegitcommit: 8f6cc5208f675c8cfb645bd9ffb0fc1f8ea71411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85132949"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326209"
 ---
 # <a name="xamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms셰이프: 경로 태그 구문
 
@@ -35,7 +35,7 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 
 이 구문에서 다음을 수행 합니다.
 
-- *Fillrule* 은 `Xamarin.Forms.Shapes.FillRule` geometry에서 또는를 사용 해야 하는지 여부를 지정 하는 선택적입니다 `EvenOdd` `Nonzero` `FillRule` . `F0`는 채우기 규칙을 지정 `EvenOdd` 하 고는 `F1` 채우기 규칙을 지정 합니다 `Nonzero` .
+- *Fillrule* 은 `Xamarin.Forms.Shapes.FillRule` geometry에서 또는를 사용 해야 하는지 여부를 지정 하는 선택적입니다 `EvenOdd` `Nonzero` `FillRule` . `F0`는 채우기 규칙을 지정 `EvenOdd` 하 고는 `F1` 채우기 규칙을 지정 합니다 `Nonzero` . 채우기 규칙에 대 한 자세한 내용은 [ Xamarin.Forms 셰이프: 채우기 규칙](fillrules.md)을 참조 하세요.
 -  *figureDescription* 은 이동 명령, 그리기 명령 및 선택적 닫기 명령으로 구성 된 그림을 나타냅니다. Move 명령은 그림의 시작점을 지정 합니다. 그리기 명령은 그림의 내용을 설명 하 고 선택적 닫기 명령은 그림을 닫습니다.
 
 위의 예제에서 path 태그 구문은 이동 명령 ()을 사용 하 여 시작점을 지정 하 `M` 고, 줄 명령 ()을 사용 하 여 일련의 직선을 지정 하 `L` 고, close 명령 ()을 사용 하 여 경로를 닫습니다 `Z` .
@@ -172,3 +172,4 @@ Close 명령의 구문은 `Z` 또는 `z` 입니다.
 
 - [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms형상의](geometries.md)
+- [Xamarin.Forms셰이프: 채우기 규칙](fillrules.md)

@@ -10,12 +10,12 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c3b869d10d454453172065b30eb7ce32da81c8ce
-ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
+ms.openlocfilehash: 412b0255dafcbd752c7b350ddc25ecd13f8f98d8
+ms.sourcegitcommit: 8f6cc5208f675c8cfb645bd9ffb0fc1f8ea71411
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133037"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326183"
 ---
 # <a name="xamarinforms-shapes-geometries"></a>Xamarin.Forms도형: 기 하 도형
 
@@ -37,7 +37,7 @@ ms.locfileid: "85133037"
 
 타원 기 하 도형은 기 하 도형 또는 타원 또는 원을 나타내고, 중심점, x 반지름 및 y 반지름에 의해 정의 됩니다.
 
-`EllipseGeometry`클래스는 다음 속성을 정의 합니다.
+`EllipseGeometry` 클래스는 다음과 같은 속성을 정의합니다.
 
 - `Center`는 `Point` 도형의 중심점을 나타내는 형식의입니다.
 - `RadiusX``double`기 하 도형의 x 반경 값을 나타내는 형식의입니다. 이 속성의 기본값은 0.0입니다.
@@ -65,7 +65,7 @@ ms.locfileid: "85133037"
 
 선 기 하 도형은 선의 기 하 도형을 나타내고 선 및 끝점의 시작점을 지정 하 여 정의 됩니다.
 
-`LimeGeometry`클래스는 다음 속성을 정의 합니다.
+`LimeGeometry` 클래스는 다음과 같은 속성을 정의합니다.
 
 - `StartPoint`는 `Point` 선의 시작점을 나타내는 형식의입니다.
 - `EndPoint``Point`선의 끝점을 나타내는 형식의입니다.
@@ -90,7 +90,7 @@ ms.locfileid: "85133037"
 
 사각형 기 하 도형은 사각형을 나타내며 `Rect` 상대 위치와 높이 및 너비를 지정 하는 구조체를 사용 하 여 정의 됩니다.
 
-`RectangleGeometry`클래스는 다음 속성을 정의 합니다.
+`RectangleGeometry` 클래스는 다음과 같은 속성을 정의합니다.
 
 - `Rect``FormsRect`사각형의 크기를 나타내는 형식의입니다.
 
@@ -114,7 +114,7 @@ ms.locfileid: "85133037"
 
 경로 기 하 도형은 원호, 곡선, 타원, 선, 사각형으로 구성 될 수 있는 복잡 한 도형을 설명 합니다.
 
-`PathGeometry`클래스는 다음 속성을 정의 합니다.
+`PathGeometry` 클래스는 다음과 같은 속성을 정의합니다.
 
 - `Figures`는 `PathFigureCollection` `PathFigure` 경로의 콘텐츠를 설명 하는 개체의 컬렉션을 나타내는 형식의입니다.
 - `FillRule``FillRule`기 하 도형에 포함 된 교차 영역이 결합 되는 방법을 결정 하는 형식의입니다. 이 속성의 기본값은 `FillRule.EvenOdd`입니다.
@@ -123,6 +123,8 @@ ms.locfileid: "85133037"
 > `Figures`속성은 `ContentProperty` 클래스의입니다 `PathGeometry` . 따라서 XAML에서 명시적으로 설정할 필요가 없습니다.
 
 이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+
+열거형에 대 한 자세한 내용은 `FillRule` [ Xamarin.Forms 셰이프: 채우기 규칙](fillrules.md)을 참조 하세요.
 
 는 `PathGeometry` 개체의 컬렉션으로 구성 되며 `PathFigure` 각 개체는 기 하 `PathFigure` 도형의 셰이프를 설명 합니다. 각 `PathFigure` 은 각각 `PathSegment` 모양의 세그먼트를 설명 하는 하나 이상의 개체로 구성 됩니다. 세그먼트에는 여러 가지 유형이 있습니다.
 
@@ -226,3 +228,4 @@ ms.locfileid: "85133037"
 
 - [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms셰이프도](index.md)
+- [Xamarin.Forms셰이프: 채우기 규칙](fillrules.md)

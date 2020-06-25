@@ -1,7 +1,22 @@
 ---
-title: “요약 - 22장. 애니메이션” description: “Xamarin.Forms로 Mobile Apps 만들기: 22장의 요약 정보입니다. 애니메이션” ms.prod: xamarin ms.technology: xamarin-forms ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695 author: davidbritch ms.author: dabritch ms.date: 11/07/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 22장의 요약 정보입니다. 애니메이션
+description: 'Xamarin.Forms로 모바일 앱 만들기: 22장의 요약 정보입니다. 애니메이션'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2a8a089c210a3fe2f48dbe32bf8cda6179af2a78
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136632"
 ---
-
 # <a name="summary-of-chapter-22-animation"></a>22장의 요약 정보입니다. 애니메이션
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22)

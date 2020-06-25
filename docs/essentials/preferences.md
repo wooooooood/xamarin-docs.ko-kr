@@ -1,8 +1,21 @@
 ---
-title: “Xamarin.Essentials: 기본 설정” description: “이 문서에서는 키/값 저장소에 애플리케이션 기본 설정을 저장하는 Xamarin.Essentials의 Preferences 클래스를 설명합니다.” 또한 해당 클래스 및 저장할 수 있는 데이터 형식을 사용하는 방법을 설명합니다.”
-ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF author: jamesmontemagno ms.author: jamont ms.date: 01/15/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
+title: 'Xamarin.Essentials: 기본 설정'
+description: 이 문서에서는 키/값 저장소에 애플리케이션 기본 설정을 저장하는 Xamarin.Essentials의 Preferences 클래스를 설명합니다. 또한 해당 클래스 및 저장할 수 있는 데이터 형식을 사용하는 방법을 설명합니다.
+ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/15/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: acc0c48776c7a91e9e5a060928564bc6e0c1d775
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801818"
 ---
-
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: 기본 설정
 
 **Preferences** 클래스를 사용하여 키/값 저장소에 애플리케이션 기본 설정을 저장할 수 있습니다.
@@ -104,7 +117,7 @@ Preferences.Clear();
 
 ## <a name="api"></a>API
 
-- [기본 설정 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Preferences)
+- [기본 설정 소스 코드](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Preferences)
 - [기본 설정 API 문서](xref:Xamarin.Essentials.Preferences)
 
 ## <a name="related-video"></a>관련 동영상
