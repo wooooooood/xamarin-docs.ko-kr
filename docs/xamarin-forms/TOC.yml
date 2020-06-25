@@ -543,6 +543,8 @@
                   href: user-interface/shapes/index.md
                 - name: 타원
                   href: user-interface/shapes/ellipse.md
+                - name: 채우기 규칙
+                  href: user-interface/shapes/fillrules.md
                 - name: Geometry
                   href: user-interface/shapes/geometries.md
                 - name: 줄

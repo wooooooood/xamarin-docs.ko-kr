@@ -13,12 +13,12 @@ metadata:
   no-loc:
   - Xamarin.Forms
   - Xamarin.Essentials
-  ms.openlocfilehash: e07215723a6c54e9d5ce3eb22103cb5eba7929d2
-  ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+  ms.openlocfilehash: a0acc942c84f085c2cff4a70b5863ae4f4644bc6
+  ms.sourcegitcommit: 8f6cc5208f675c8cfb645bd9ffb0fc1f8ea71411
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 06/19/2020
-  ms.locfileid: "85104273"
+  ms.lasthandoff: 06/24/2020
+  ms.locfileid: "85326119"
 landingContent:
 - title: 컨트롤 참조
   linkLists:
@@ -160,16 +160,14 @@ landingContent:
       url: shapes/index.md
     - text: 타원
       url: shapes/ellipse.md
+    - text: 채우기 규칙
+      url: shapes/fillrules.md
     - text: Geometry
       url: shapes/geometries.md
     - text: 줄
       url: shapes/line.md
     - text: 경로
       url: shapes/path.md
-    - text: 경로 태그 구문
-      url: shapes/path-markup-syntax.md
-    - text: 경로 변환
-      url: shapes/path-transforms.md
     - text: 다각형
       url: shapes/polygon.md
     - text: 폴리라인
