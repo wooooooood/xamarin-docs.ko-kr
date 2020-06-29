@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: jondouglas
 ms.author: jodou
 ms.date: 02/13/2020
-ms.openlocfilehash: a776dbb2ecfaf0942d79c2b403c13f98cdc7c2e2
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 2a9260bc782d2b19e6fd74356738276e1648dcf2
+ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571976"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104349"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>에뮬레이터 성능에 대한 하드웨어 가속(Hyper-V & HAXM)
 
@@ -142,9 +142,9 @@ systeminfo
 
 ### <a name="installing-haxm"></a>HAXM 설치
 
-Windows용 HAXM 설치 패키지는 [Intel Hardware Accelerated Execution Manager](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager) 페이지에서 사용할 수 있습니다. HAXM을 다운로드하여 설치하려면 다음 단계를 수행합니다.
+Windows용 HAXM 설치 패키지는 [Intel Hardware Accelerated Execution Manager](https://github.com/intel/haxm/releases) GitHub 릴리스 페이지에서 사용할 수 있습니다. HAXM을 다운로드하여 설치하려면 다음 단계를 수행합니다.
 
-1. Intel 웹 사이트에서 최신 Windows용 [HAXM 가상화 엔진](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager/) 설치 관리자를 다운로드합니다. Intel 웹 사이트에서 직접 HAXM 설치 프로그램을 다운로드할 경우의 장점은 최신 버전을 사용할 수 있다는 점입니다.
+1. Intel 웹 사이트에서 최신 Windows용 [HAXM 가상화 엔진](https://github.com/intel/haxm/releases) 설치 관리자를 다운로드합니다. Intel 웹 사이트에서 직접 HAXM 설치 프로그램을 다운로드할 경우의 장점은 최신 버전을 사용할 수 있다는 점입니다.
 
 2. **intelhaxm-android.exe**를 실행하여 HAXM 설치 관리자를 시작합니다. 설치 관리자 대화 상자에서 기본값을 적용합니다.
 

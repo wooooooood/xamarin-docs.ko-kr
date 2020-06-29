@@ -6,13 +6,13 @@ ms.assetid: E73AE622-664C-4A90-B5B2-BD47D0E7A1A7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/16/2020
-ms.openlocfilehash: 2fc5db2ddb456c9c5c6160b7fc7ce501488722de
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.date: 06/18/2020
+ms.openlocfilehash: dfe6da8a76b447bf0c2a6c0a3bea9823e498d5e4
+ms.sourcegitcommit: 8a18471b3d96f3f726b66f9bc50a829f1c122f29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84947137"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84988186"
 ---
 # <a name="xamarinforms-multi-bindings"></a>Xamarin.Forms 다중 바인딩
 
@@ -53,15 +53,16 @@ public class AllTrueMultiConverter : IMultiValueConverter
     {
         if (values == null || !targetType.IsAssignableFrom(typeof(bool)))
         {
-            // Return UnsetValue to use the binding FallbackValue
-            return BindableProperty.UnsetValue;
+            return false;
+            // Alternatively, return BindableProperty.UnsetValue to use the binding FallbackValue
         }
 
         foreach (var value in values)
         {
             if (!(value is bool b))
             {
-                return BindableProperty.UnsetValue;
+                return false;
+                // Alternatively, return BindableProperty.UnsetValue to use the binding FallbackValue
             }
             else if (!b)
             {
@@ -106,7 +107,7 @@ public class AllTrueMultiConverter : IMultiValueConverter
 - `null`은 변환기가 변환을 수행할 수 없으며, 바인딩에 `TargetNullValue`가 사용될 것임을 나타냅니다.
 
 > [!IMPORTANT]
-> 다중 값 변환기의 `Convert` 메서드는 `BindableProperty.UnsetValue`를 반환하여 예상되는 문제를 처리해야 합니다. 이 값을 수신하는 `MultiBinding` 개체는 [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue)를 정의해야 합니다.
+> `Convert` 메서드에서 `BindableProperty.UnsetValue`를 수신하는 `MultiBinding`은 [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) 속성을 정의해야 합니다. 마찬가지로 `Convert` 메서드에서 `null`을 수신하는 `MultiBinding`도 [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) 속성을 정의해야 합니다.
 
 `ConvertBack` 메서드는 바인딩 대상을 소스 바인딩 값으로 변환합니다. 이 메서드는 네 개의 인수를 허용합니다.
 
@@ -120,9 +121,6 @@ public class AllTrueMultiConverter : IMultiValueConverter
 - `i` 위치의 `BindableProperty.UnsetValue`는 변환기가 인덱스 `i`의 소스 바인딩에 대한 값을 제공할 수 없으며 설정된 값이 없음을 나타냅니다.
 - `i` 위치의 `Binding.DoNothing`은 인덱스 `i`의 소스 바인딩에 설정된 값이 없음을 나타냅니다.
 - `null`은 변환기가 변환을 수행할 수 없거나 이 방향으로는 변환이 지원되지 않음을 나타냅니다.
-
-> [!IMPORTANT]
-> 다중 값 변환기의 `ConvertBack` 메서드는 `null`를 반환하여 예상되는 문제를 처리해야 합니다.
 
 ## <a name="consume-a-imultivalueconverter"></a>IMultiValueConverter 사용
 
@@ -142,8 +140,7 @@ public class AllTrueMultiConverter : IMultiValueConverter
 
     <CheckBox>
         <CheckBox.IsChecked>
-            <MultiBinding Converter="{StaticResource AllTrueConverter}"
-                          FallbackValue="false">
+            <MultiBinding Converter="{StaticResource AllTrueConverter}">
                 <Binding Path="Employee.IsOver16" />
                 <Binding Path="Employee.HasPassedTest" />
                 <Binding Path="Employee.IsSuspended"
@@ -154,7 +151,7 @@ public class AllTrueMultiConverter : IMultiValueConverter
 </ContentPage>    
 ```
 
-이 예제에서 `MultiBinding` 개체는 세 개의 [`Binding`](xref:Xamarin.Forms.Binding) 개체가 `true`로 평가할 경우 [`CheckBox.IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) 속성을 `true`로 설정하는 데 `AllTrueMultiConverter`를 사용합니다. 그렇지 않으면 `CheckBox.IsChecked` 속성은 `false`로 설정됩니다. `AllTrueMultiConverter`가 `BindableProperty.UnsetValue`를 반환할 수 있으므로 [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue)가 정의됩니다.
+이 예제에서 `MultiBinding` 개체는 세 개의 [`Binding`](xref:Xamarin.Forms.Binding) 개체가 `true`로 평가할 경우 [`CheckBox.IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) 속성을 `true`로 설정하는 데 `AllTrueMultiConverter`를 사용합니다. 그렇지 않으면 `CheckBox.IsChecked` 속성은 `false`로 설정됩니다.
 
 기본적으로 [`CheckBox.IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) 속성은 [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) 바인딩을 사용합니다. 따라서 `AllTrueMultiConverter` 인스턴스의 `ConvertBack` 메서드는 사용자가 [`CheckBox`](xref:Xamarin.Forms.CheckBox)를 선택하지 않은 경우에 실행되며, 이때 소스 바인딩 값은 `CheckBox.IsChecked` 속성 값으로 설정됩니다.
 
@@ -187,7 +184,7 @@ Xamarin.Forms의 문자열 서식 지정에 대한 자세한 정보는 [Xamarin.
 
 바인딩 프로세스가 실패할 경우 사용할 대체 값을 정의하여 데이터 바인딩을 더욱 강력하게 만들 수 있습니다. `MultiBinding` 개체에서 [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) 및 [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) 속성을 선택적으로 정의하여 이 작업을 수행할 수 있습니다.
 
-`IMultiValueConverter` 인스턴스가 `BindableProperty.UnsetValue`를 반환할 경우 `MultiBinding`은 [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue)을 사용하며, 이는 변환기가 값을 생성하지 않았음을 나타냅니다. `IMultiValueConverter` 인스턴스가 `null`을 반환하면 `MultiBinding`은 [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue)를 사용하며, 이는 변환기가 변환을 수행할 수 없음을 나타냅니다.
+`IMultiValueConverter` 인스턴스의 `Convert` 메서드가 `BindableProperty.UnsetValue`를 반환하면 `MultiBinding`은 [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue)를 사용하며, 이는 변환기가 값을 생성하지 않았음을 나타냅니다. `IMultiValueConverter` 인스턴스의 `Convert` 메서드가 `null`을 반환하면 `MultiBinding`은 [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue)를 사용하며, 이는 변환기가 변환을 수행할 수 없음을 나타냅니다.
 
 바인딩 대체에 대한 자세한 정보는 [Xamarin.Forms 바인딩 대체](binding-fallbacks.md)를 참조하세요.
 
@@ -210,10 +207,8 @@ Xamarin.Forms의 문자열 서식 지정에 대한 자세한 정보는 [Xamarin.
 
     <CheckBox>
         <CheckBox.IsChecked>
-            <MultiBinding Converter="{StaticResource AnyTrueConverter}"
-                          FallbackValue="false">
-                <MultiBinding Converter="{StaticResource AllTrueConverter}"
-                              FallbackValue="false">
+            <MultiBinding Converter="{StaticResource AnyTrueConverter}">
+                <MultiBinding Converter="{StaticResource AllTrueConverter}">
                     <Binding Path="Employee.IsOver16" />
                     <Binding Path="Employee.HasPassedTest" />
                     <Binding Path="Employee.IsSuspended" Converter="{StaticResource InverterConverter}" />                        
@@ -242,8 +237,7 @@ Xamarin.Forms의 문자열 서식 지정에 대한 자세한 정보는 [Xamarin.
                       IsExpanded="{Binding IsExpanded, Source={RelativeSource TemplatedParent}}"
                       BackgroundColor="{Binding CardColor}">
                 <Expander.IsVisible>
-                    <MultiBinding Converter="{StaticResource AllTrueConverter}"
-                                  FallbackValue="false">
+                    <MultiBinding Converter="{StaticResource AllTrueConverter}">
                         <Binding Path="IsExpanded" />
                         <Binding Path="IsEnabled" />
                     </MultiBinding>

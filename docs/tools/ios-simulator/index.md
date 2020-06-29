@@ -6,12 +6,12 @@ ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2019
-ms.openlocfilehash: d5898f9c6ee30eb1f12bf6480b93a609e762e6ea
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 84c5a72f887f38c5efcee09cfc19986093db226e
+ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75886595"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85101345"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Windows용 원격 iOS 시뮬레이터
 
@@ -23,7 +23,7 @@ Windows용 원격 iOS 시뮬레이터를 사용하면 Visual Studio 2019 및 Vis
 
 Windows용 원격 iOS 시뮬레이터는 Visual Studio 2019 및 Visual Studio 2017에서 Xamarin의 일부로 자동으로 설치됩니다. 이를 사용하려면 다음 단계를 수행합니다.
 
-1. [Visual 2019를 Mac 빌드 호스트에 페어링합니다](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. [Visual Studio 2019를 Mac 빌드 호스트에 페어링합니다](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Visual Studio에서 iOS 또는 tvOS 프로젝트 디버깅을 시작합니다. Windows용 원격 iOS 시뮬레이터가 Windows 컴퓨터에 표시됩니다.
 
 단계별 가이드는 [이 비디오](deploy.md)를 시청하세요.
