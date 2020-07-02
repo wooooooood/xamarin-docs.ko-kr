@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fdab7d422040aee5a00b16bb1e301f917b0c4883
-ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
+ms.openlocfilehash: 1a1ba09b5be6901b1b07ed9aa3fd9a1b88770efc
+ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243765"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85795020"
 ---
 # <a name="xamarinforms-shapes"></a>Xamarin.Forms셰이프도
 
@@ -81,7 +81,6 @@ Xamarin.Forms클래스에서 파생 되는 개체의 수를 정의 `Shape` 합�
 ```xaml
 <Path Aspect="Uniform"
       Stroke="Yellow"
-      StrokeThickness="1"
       Fill="Red"
       BackgroundColor="LightGray"
       HorizontalOptions="Start"

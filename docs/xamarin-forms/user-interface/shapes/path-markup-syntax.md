@@ -10,12 +10,12 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d2eb0ac68bf754e45ffcd2a1c77e4347bb3bcf4c
-ms.sourcegitcommit: 8f6cc5208f675c8cfb645bd9ffb0fc1f8ea71411
+ms.openlocfilehash: 68b7f4a245a60df1723f5a6442f30dc2b1a15932
+ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326209"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85794975"
 ---
 # <a name="xamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms셰이프: 경로 태그 구문
 
@@ -27,7 +27,6 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Data="M13.908992,16.207977 L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983Z" />
 ```
 
@@ -35,8 +34,8 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 
 이 구문에서 다음을 수행 합니다.
 
-- *Fillrule* 은 `Xamarin.Forms.Shapes.FillRule` geometry에서 또는를 사용 해야 하는지 여부를 지정 하는 선택적입니다 `EvenOdd` `Nonzero` `FillRule` . `F0`는 채우기 규칙을 지정 `EvenOdd` 하 고는 `F1` 채우기 규칙을 지정 합니다 `Nonzero` . 채우기 규칙에 대 한 자세한 내용은 [ Xamarin.Forms 셰이프: 채우기 규칙](fillrules.md)을 참조 하세요.
--  *figureDescription* 은 이동 명령, 그리기 명령 및 선택적 닫기 명령으로 구성 된 그림을 나타냅니다. Move 명령은 그림의 시작점을 지정 합니다. 그리기 명령은 그림의 내용을 설명 하 고 선택적 닫기 명령은 그림을 닫습니다.
+- *Fillrule* 은 `Xamarin.Forms.Shapes.FillRule` geometry에서 또는를 사용 해야 하는지 여부를 지정 하는 선택적입니다 `EvenOdd` `Nonzero` `FillRule` . `F0`는 채우기 규칙을 지정 하는 데 사용 되는 `EvenOdd` 반면는 `F1` 채우기 규칙을 지정 하는 데 사용 됩니다 `Nonzero` . 채우기 규칙에 대 한 자세한 내용은 [ Xamarin.Forms 셰이프: 채우기 규칙](fillrules.md)을 참조 하세요.
+- *figureDescription* 은 이동 명령, 그리기 명령 및 선택적 닫기 명령으로 구성 된 그림을 나타냅니다. Move 명령은 그림의 시작점을 지정 합니다. 그리기 명령은 그림의 내용을 설명 하 고 선택적 닫기 명령은 그림을 닫습니다.
 
 위의 예제에서 path 태그 구문은 이동 명령 ()을 사용 하 여 시작점을 지정 하 `M` 고, 줄 명령 ()을 사용 하 여 일련의 직선을 지정 하 `L` 고, close 명령 ()을 사용 하 여 경로를 닫습니다 `Z` .
 
@@ -66,7 +65,7 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 - 부드러운 정방형 3 차원 곡선 ( `T` 또는 `t` )입니다.
 - 타원형 원호 ( `A` 또는 `a` )입니다.
 
-각 그리기 명령은 대문자 또는 소문자를 사용 하 여 지정 됩니다. 동일한 유형의 명령을 두 번 이상 입력 하는 경우 중복 명령 항목을 생략할 수 있습니다. 예를 들면 `L 100,200 300,400` 와 같습니다 `L 100, 200 L 300,400` .
+각 그리기 명령은 대/소문자를 구분 하지 않는 문자를 사용 하 여 지정 됩니다. 동일한 유형의 명령을 두 번 이상 입력 하는 경우 중복 명령 항목을 생략할 수 있습니다. 예를 들면 `L 100,200 300,400` 와 같습니다 `L 100,200 L 300,400` .
 
 ### <a name="line-command"></a>줄 명령
 
@@ -150,7 +149,7 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 - `sweepDirectionFlag`원호를 양의 각도 방향으로 그리면 1로 설정 하 고 그렇지 않으면 0으로 설정 해야 합니다.
 - `endPoint`호를 [`Point`](xref:Xamarin.Forms.Point) 그릴입니다.
 
-`A150,150 0 1,0 150,-150`는 유효한 타원형 호 명령의 예입니다.
+`A 150,150 0 1,0 150,-150`는 유효한 타원형 호 명령의 예입니다.
 
 ## <a name="close-command"></a>닫기 명령
 
@@ -171,5 +170,5 @@ Close 명령의 구문은 `Z` 또는 `z` 입니다.
 ## <a name="related-links"></a>관련 링크
 
 - [ShapeDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.Forms형상의](geometries.md)
+- [Xamarin.Forms도형: 기 하 도형](geometries.md)
 - [Xamarin.Forms셰이프: 채우기 규칙](fillrules.md)

@@ -10,12 +10,12 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f3ab70dc20dda78e3acf400cf51d0ee9df84ff93
-ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+ms.openlocfilehash: 9afad335de60e605ef6551b0878455674a40750f
+ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104329"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85795025"
 ---
 # <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Forms공용 컨트롤 속성, 메서드 및 이벤트
 
@@ -47,7 +47,7 @@ Xamarin.Forms `VisualElement` 클래스는 응용 프로그램에서 사용 되�
 
 ### `Clip`
 
-`Clip`속성은 `Geometry` 요소의 내용에 대 한 개요를 정의 하는 개체입니다. 클립을 정의 하려면 `Geometry` 와 같은 개체를 사용 `EllipseGeometry` 하 여 요소의 속성을 설정 `Clip` 합니다. 기 하 도형 영역에 있는 영역만 표시 됩니다. 자세한 내용은 [클립 기 하 도형](~/xamarin-forms/user-interface/shapes/geometries.md#clip-geometries)을 참조 하세요.
+`Clip`속성은 `Geometry` 요소의 내용에 대 한 개요를 정의 하는 개체입니다. 클립을 정의 하려면 `Geometry` 와 같은 개체를 사용 `EllipseGeometry` 하 여 요소의 속성을 설정 `Clip` 합니다. 기 하 도형 영역에 있는 영역만 표시 됩니다. 자세한 내용은 [Geometry를 사용 하 여 클리핑](~/xamarin-forms/user-interface/shapes/geometries.md#clip-with-a-geometry)을 참조 하세요.
 
 ### [`Effects`](xref:Xamarin.Forms.Element.Effects)
 
