@@ -7,16 +7,19 @@ ms.technology: xamarin-ios
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: b650f86a1bba62d5db7463875de3398db9c33842
-ms.sourcegitcommit: b751605179bef8eee2df92cb484011a7dceb6fda
+ms.openlocfilehash: 3c63b1a4ed58b0efcc510085934a5380e6049ae7
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77497985"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853156"
 ---
 # <a name="walkthrough-bind-an-ios-swift-library"></a>연습: iOS Swift 라이브러리 바인딩
 
-Xamarin을 사용 하면 모바일 개발자가 Visual Studio 및 C#를 사용 하 여 플랫폼 간 네이티브 모바일 환경을 만들 수 있습니다. IOS platform SDK 구성 요소를 즉시 사용할 수 있습니다. 그러나 대부분의 경우에는 해당 플랫폼용으로 개발 된 타사 Sdk를 사용 하 여 바인딩을 통해 수행할 수 있도록 하는 것이 좋습니다. 타사 목표-C 프레임 워크를 Xamarin.ios 응용 프로그램에 통합 하려면 응용 프로그램에서 사용할 수 있으려면 먼저 해당 응용 프로그램에 대 한 Xamarin.ios 바인딩을 만들어야 합니다.
+> [!IMPORTANT]
+> 현재 Xamarin 플랫폼에서 사용자 지정 바인딩 사용을 조사 하 고 있습니다. 향후 개발 노력을 알리기 위해 [**이 설문 조사**](https://www.surveymonkey.com/r/KKBHNLT) 를 수행 하세요.
+
+Xamarin을 사용 하면 모바일 개발자가 Visual Studio 및 c #을 사용 하 여 플랫폼 간 네이티브 모바일 환경을 만들 수 있습니다. IOS platform SDK 구성 요소를 즉시 사용할 수 있습니다. 그러나 대부분의 경우에는 해당 플랫폼용으로 개발 된 타사 Sdk를 사용 하 여 바인딩을 통해 수행할 수 있도록 하는 것이 좋습니다. 타사 목표-C 프레임 워크를 Xamarin.ios 응용 프로그램에 통합 하려면 응용 프로그램에서 사용할 수 있으려면 먼저 해당 응용 프로그램에 대 한 Xamarin.ios 바인딩을 만들어야 합니다.
 
 IOS 플랫폼은 해당 네이티브 언어 및 도구와 함께 지속적으로 진화 하 고 있으며 Swift는 현재 iOS 개발 분야에서 가장 많은 동적 영역 중 하나입니다. 여러 타사 Sdk가 이미 목표-C에서 Swift로 마이그레이션 되었으며 새로운 과제가 제공 됩니다. Swift 바인딩 프로세스는 객관적인 C와 유사 하지만 AppStore에 허용 되는 Xamarin.ios 응용 프로그램을 성공적으로 빌드하고 실행 하려면 추가 단계와 구성 설정이 필요 합니다.
 
@@ -37,11 +40,11 @@ Swift는 처음에는 2014에 Apple에서 도입 되었으며, 현재는 타사 
 
 ## <a name="build-a-native-library"></a>네이티브 라이브러리 빌드
 
-첫 번째 단계는 목표-C 헤더를 사용 하는 네이티브 Swift 프레임 워크를 빌드하는 것입니다. 프레임 워크는 일반적으로 타사 개발자가 제공 하며 다음 디렉터리의 패키지에 포함 된 헤더를 포함 합니다. **\<FrameworkName >. 프레임 워크/헤더/\<FrameworkName >-Swift. h**.
+첫 번째 단계는 목표-C 헤더를 사용 하는 네이티브 Swift 프레임 워크를 빌드하는 것입니다. 프레임 워크는 일반적으로 타사 개발자가 제공 하며 다음 디렉터리의 패키지에 포함 된 헤더를 포함 ** \<FrameworkName> 합니다. 프레임 워크/헤더/ \<FrameworkName> -Swift**.
 
-이 헤더는 Xamarin.ios 바인딩 메타 데이터를 생성 하 고 Swift framework 멤버를 노출 하는 클래스를 C# 생성 하는 데 사용 되는 공용 인터페이스를 노출 합니다. 헤더가 존재 하지 않거나 불완전 한 공용 인터페이스를 포함 하는 경우 (예: 클래스/멤버가 표시 되지 않는 경우) 두 가지 옵션이 있습니다.
+이 헤더는 Xamarin.ios 바인딩 메타 데이터를 생성 하 고 Swift framework 멤버를 노출 하는 c # 클래스를 생성 하는 데 사용 되는 공용 인터페이스를 노출 합니다. 헤더가 존재 하지 않거나 불완전 한 공용 인터페이스를 포함 하는 경우 (예: 클래스/멤버가 표시 되지 않는 경우) 두 가지 옵션이 있습니다.
 
-- Swift 소스 코드를 업데이트 하 여 헤더를 생성 하 고 `@objc` 특성으로 필요한 멤버를 표시 합니다.
+- Swift 소스 코드를 업데이트 하 여 헤더를 생성 하 고 필요한 멤버를 특성으로 표시 합니다. `@objc`
 - 공용 인터페이스를 제어 하 고 기본 프레임 워크에 대 한 모든 호출을 프록시 하는 프록시 프레임 워크 빌드
 
 이 자습서에서는 항상 사용할 수 있는 타사 소스 코드에 대 한 종속성이 적기 때문에 두 번째 방법을 설명 합니다. 첫 번째 방법을 사용 하지 않는 또 다른 이유는 이후 프레임 워크 변경을 지 원하는 데 필요한 추가 노력입니다. 타사 소스 코드에 변경 내용을 추가 하는 것을 시작한 후에는 이러한 변경 내용을 지원 하 고 이후의 모든 업데이트를 사용 하 여 잠재적으로 병합할 책임이 있습니다.
@@ -84,11 +87,11 @@ Swift는 처음에는 2014에 Apple에서 도입 되었으며, 현재는 타사 
 
     출력은 비어 있어야 합니다. 그렇지 않으면 특정 구성에 대 한 프로젝트 설정을 검토 합니다.
 
-1. **목표-C 생성 된 인터페이스 헤더 이름** 옵션이 설정 되어 있는지 확인 하 고 헤더 이름을 지정 합니다. 기본 이름은 **\<FrameworkName >-Swift입니다.**
+1. **목표-C 생성 된 인터페이스 헤더 이름** 옵션이 설정 되어 있는지 확인 하 고 헤더 이름을 지정 합니다. 기본 이름은 ** \<FrameworkName> -Swift입니다.**
 
     [![xcode objectice-c 헤더 사용 옵션](walkthrough-images/xcode-objcheaderenabled-option.png)](walkthrough-images/xcode-objcheaderenabled-option.png#lightbox)
 
-1. 원하는 메서드를 표시 하 고 `@objc` 특성으로 표시 하 고 아래 정의 된 추가 규칙을 적용 합니다. 이 단계를 거치지 않고 프레임 워크를 빌드하면 생성 된 목표-C 헤더가 비어 있고 Xamarin.ios가 Swift framework 멤버에 액세스할 수 없습니다. 새 Swift 파일 **SwiftFrameworkProxy** 를 만들고 다음 코드를 정의 하 여 기본 GIGYA Swift SDK에 대 한 초기화 논리를 노출 합니다.
+1. 원하는 메서드를 노출 하 고 특성을 사용 하 여 표시 `@objc` 하 고 아래 정의 된 추가 규칙을 적용 합니다. 이 단계를 거치지 않고 프레임 워크를 빌드하면 생성 된 목표-C 헤더가 비어 있고 Xamarin.ios가 Swift framework 멤버에 액세스할 수 없습니다. 새 Swift 파일 **SwiftFrameworkProxy** 를 만들고 다음 코드를 정의 하 여 기본 GIGYA Swift SDK에 대 한 초기화 논리를 노출 합니다.
 
     ```swift
     import Foundation
@@ -111,9 +114,9 @@ Swift는 처음에는 2014에 Apple에서 도입 되었으며, 현재는 타사 
     위의 코드에 대 한 몇 가지 중요 한 참고 사항:
 
     - 원본 타사 Gigya SDK에서 Gigya 모듈을 가져와 이제 프레임 워크의 모든 멤버에 액세스할 수 있습니다.
-    - SwiftFrameworkProxy 클래스를 이름을 지정 하는 `@objc` 특성으로 표시 합니다. 그렇지 않으면 `_TtC19SwiftFrameworkProxy19SwiftFrameworkProxy`와 같이 읽을 수 없는 고유 이름이 생성 됩니다. 형식 이름은 나중에 이름으로 사용 되므로 명확 하 게 정의 해야 합니다.
-    - `NSObject`에서 프록시 클래스를 상속 합니다. 그렇지 않은 경우에는 목표-C 헤더 파일에 생성 되지 않습니다.
-    - 모든 멤버를 `public`으로 표시 되도록 표시 합니다.
+    - 이름을 지정 하는 특성을 사용 하 여 SwiftFrameworkProxy 클래스 `@objc` 를 표시 합니다. 그렇지 않으면와 같이 읽을 수 없는 고유 이름이 생성 됩니다 `_TtC19SwiftFrameworkProxy19SwiftFrameworkProxy` . 형식 이름은 나중에 이름으로 사용 되므로 명확 하 게 정의 해야 합니다.
+    - 에서 프록시 클래스를 상속 합니다 `NSObject` . 그렇지 않은 경우에는 목표-C 헤더 파일에 생성 되지 않습니다.
+    - 모든 멤버를로 표시 되도록 표시 `public` 합니다.
 
 1. 스키마 빌드 구성을 **디버그** 에서 **릴리스**로 변경 합니다. 이렇게 하려면 **Xcode > 대상 > 구성표 편집** 대화 상자를 연 다음 **빌드 구성** 옵션을 **릴리스**로 설정 합니다.
 
@@ -200,7 +203,7 @@ Swift는 처음에는 2014에 Apple에서 도입 되었으며, 현재는 타사 
 
 ## <a name="prepare-metadata"></a>메타 데이터 준비
 
-이번에는 Xamarin.ios 바인딩에서 사용할 준비가 된 목표로 생성 된 인터페이스 헤더가 있는 프레임 워크를 사용 해야 합니다.  다음 단계는 클래스를 생성 C# 하기 위해 바인딩 프로젝트에서 사용 되는 API 정의 인터페이스를 준비 하는 것입니다. 이러한 정의는 [목표 Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) 도구 및 생성 된 헤더 파일에서 수동으로 또는 자동으로 만들 수 있습니다. Sharpie를 사용 하 여 메타 데이터를 생성 합니다.
+이번에는 Xamarin.ios 바인딩에서 사용할 준비가 된 목표로 생성 된 인터페이스 헤더가 있는 프레임 워크를 사용 해야 합니다.  다음 단계는 c # 클래스를 생성 하기 위해 바인딩 프로젝트에서 사용 되는 API 정의 인터페이스를 준비 하는 것입니다. 이러한 정의는 [목표 Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) 도구 및 생성 된 헤더 파일에서 수동으로 또는 자동으로 만들 수 있습니다. Sharpie를 사용 하 여 메타 데이터를 생성 합니다.
 
 1. 공식 다운로드 웹 사이트에서 최신 [목표 Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) 도구를 다운로드 하 고 마법사에 따라 설치 합니다. 설치가 완료 되 면 sharpie 명령을 실행 하 여 확인할 수 있습니다.
 
@@ -223,7 +226,7 @@ Swift는 처음에는 2014에 Apple에서 도입 되었으며, 현재는 타사 
         [write] StructsAndEnums.cs
     ```
 
-    이 도구는 다음 C# 코드와 유사 하 게 표시 되는 각각의 노출 된 목표-C 멤버에 대 한 메타 데이터를 생성 합니다. 볼 수 있듯이 사용자가 읽을 수 있는 형식 및 간단한 멤버 매핑이 있으므로 수동으로 정의할 수 있습니다.
+    이 도구는 다음 코드와 유사 하 게 표시 되는 각각의 노출 된 목표-C 멤버에 대해 c # 메타 데이터를 생성 합니다. 볼 수 있듯이 사용자가 읽을 수 있는 형식 및 간단한 멤버 매핑이 있으므로 수동으로 정의할 수 있습니다.
 
     ```csharp
     [Export ("initForApiKey:")]
@@ -249,7 +252,7 @@ Swift는 처음에는 2014에 Apple에서 도입 되었으며, 현재는 타사 
 
     ![visual studio 프로젝트 구조 메타 데이터](walkthrough-images/visualstudio-project-structure-metadata.png)
 
-    메타 데이터 자체는 언어를 사용 하 여 C# 노출 된 각 목표 C 클래스 및 멤버를 설명 합니다. C# 선언과 함께 원래 목표-C 헤더 정의를 볼 수 있습니다.
+    메타 데이터 자체는 c # 언어를 사용 하 여 노출 된 각 목표 C 클래스 및 멤버를 설명 합니다. C # 선언과 함께 원래 목표-C 헤더 정의를 볼 수 있습니다.
 
     ```csharp
     // @interface SwiftFrameworkProxy : NSObject
@@ -262,7 +265,7 @@ Swift는 처음에는 2014에 Apple에서 도입 되었으며, 현재는 타사 
     }
     ```
 
-    유효한 C# 코드 이더라도 그대로 사용 되지 않고, xamarin.ios 도구에서이 메타 데이터 정의에 따라 클래스를 생성 C# 하는 데 사용 됩니다. 결과적으로, 인터페이스 대신 SwiftFrameworkProxy 코드에서 인스턴스화할 수 있는 동일한 C# 이름의 클래스를 얻을 수 있습니다. 이 클래스는 메타 데이터에 의해 정의 된 메서드, 속성 및 기타 멤버를 가져옵니다 .이 멤버는 C# 특정 방식으로 호출 됩니다.
+    이는 유효한 c # 코드 이더라도 그대로 사용 되지 않고, Xamarin.ios 도구에서이 메타 데이터 정의에 따라 c # 클래스를 생성 하는 데 사용 됩니다. 결과적으로, 인터페이스 대신 SwiftFrameworkProxy 코드에서 인스턴스화할 수 있는 동일한 이름의 c # 클래스를 가져옵니다. 이 클래스는 메타 데이터에 의해 정의 된 메서드, 속성 및 기타 멤버를 가져옵니다 .이 멤버는 c # 방식으로 호출 됩니다.
 
 1. 생성 된 이전 fat 프레임 워크 및 해당 프레임 워크의 각 종속성에 네이티브 참조를 추가 합니다. 이 경우 SwiftFrameworkProxy 및 Gigya framework 네이티브 참조를 모두 바인딩 프로젝트에 추가 합니다.
 
@@ -294,9 +297,9 @@ Swift는 처음에는 2014에 Apple에서 도입 되었으며, 현재는 타사 
         L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/ -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos -Wl,-rpath -Wl,@executable_path/Frameworks
         ```
 
-        처음 두 가지 옵션 ( `-L ...` )은 네이티브 컴파일러에 swift 라이브러리를 찾을 위치를 알려 줍니다. 네이티브 컴파일러는 올바른 아키텍처가 없는 라이브러리를 무시 합니다. 즉, 시뮬레이터 라이브러리와 장치 라이브러리의 위치를 동시에 전달할 수 있으므로 시뮬레이터 및 장치 빌드 모두에 대해 작동 합니다. iOS에 대 한 경로만 올바릅니다. tvOS 및 watchOS의 경우 업데이트 해야 합니다. 한 가지 단점은이 접근 방식을 사용 하는 경우에는 Xcode의 올바른 작업이 필요 합니다. 바인딩 라이브러리의 소비자가 다른 위치에 Xcode 경우에는 작동 하지 않습니다. 다른 해결 방법은 실행 프로젝트의 iOS 빌드 옵션 (`--gcc_flags -L... -L...`)에서 추가 mtouch 인수에 이러한 옵션을 추가 하는 것입니다. 세 번째 옵션은 OS가 찾을 수 있도록 네이티브 링커가 실행 파일에 swift 라이브러리의 위치를 저장 하도록 합니다.
+        처음 두 가지 옵션 (이 옵션  `-L ...`   )은 네이티브 컴파일러에 swift 라이브러리를 찾을 위치를 알려 줍니다. 네이티브 컴파일러는 올바른 아키텍처가 없는 라이브러리를 무시 합니다. 즉, 시뮬레이터 라이브러리와 장치 라이브러리의 위치를 동시에 전달 하 여 시뮬레이터 및 장치 빌드 모두에 대해 작동 하도록 할 수 있습니다. 이러한 경로는 iOS에만 정확 하 고 tvOS 및 watchOS는 업데이트 해야 합니다. 한 가지 단점은이 접근 방식을 사용 하는 경우에는 Xcode의 올바른 작업이 필요 합니다. 바인딩 라이브러리의 소비자가 다른 위치에 Xcode 경우에는 작동 하지 않습니다. 대체 솔루션은 실행 프로젝트의 iOS 빌드 옵션 ()에서 추가 mtouch 인수에 이러한 옵션을 추가 하는 것입니다 `--gcc_flags -L... -L...` . 세 번째 옵션은 OS가 찾을 수 있도록 네이티브 링커가 실행 파일에 swift 라이브러리의 위치를 저장 하도록 합니다.
 
-1. 최종 작업은 라이브러리를 빌드하고 컴파일 오류가 없는지 확인 하는 것입니다. 목표 Sharpie에서 생성 된 바인딩 메타 데이터는 `[Verify]` 특성으로 주석이 지정 됩니다. 이러한 특성은 바인딩을 원래 목표-C 선언 (바인딩된 선언 위의 설명에 제공 됨)과 비교 하 여 목표 Sharpie이 올바른 사물 인지 확인 해야 함을 의미 합니다. [다음 링크](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify)를 사용 하 여 특성으로 표시 된 멤버에 대해 자세히 알아볼 수 있습니다. 프로젝트가 빌드되면 Xamarin.ios 응용 프로그램에서 사용 될 수 있습니다.
+1. 최종 작업은 라이브러리를 빌드하고 컴파일 오류가 없는지 확인 하는 것입니다. 일반적으로 목표 Sharpie에서 생성 된 바인딩 메타 데이터는 특성으로 주석이 추가 됩니다  `[Verify]`   . 이러한 특성은 바인딩을 원래 목표-C 선언 (바인딩된 선언 위의 설명에 제공 됨)과 비교 하 여 목표 Sharpie이 올바른 사물 인지 확인 해야 함을 의미 합니다. [다음 링크](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify)를 사용 하 여 특성으로 표시 된 멤버에 대해 자세히 알아볼 수 있습니다. 프로젝트가 빌드되면 Xamarin.ios 응용 프로그램에서 사용 될 수 있습니다.
 
 ## <a name="consume-the-binding-library"></a>바인딩 라이브러리 사용
 
@@ -334,11 +337,11 @@ Swift는 처음에는 2014에 Apple에서 도입 되었으며, 현재는 타사 
     }
     ```
 
-1. 앱을 실행 하 고, 디버그 출력에서 다음 줄이 표시 되어야 합니다. `Gigya initialized with domain: us1.gigya.com`. 단추를 클릭 하 여 인증 흐름을 활성화 합니다.
+1. 앱을 실행 하 고, 디버그 출력에서 다음 줄이 표시 되어야 합니다 `Gigya initialized with domain: us1.gigya.com` . 단추를 클릭 하 여 인증 흐름을 활성화 합니다.
 
     [![swift 프록시 결과](walkthrough-images/swiftproxy-result.png)](walkthrough-images/swiftproxy-result.png#lightbox)
 
-축하합니다! Swift 프레임 워크를 사용 하는 Xamarin.ios 앱 및 바인딩 라이브러리를 성공적으로 만들었습니다. 위의 응용 프로그램은 iOS 12.2 이상에서 시작 되므로 iOS 12.2 이상에서 실행 됩니다 .이 iOS 버전에서 시작 하는 ABI에는 [ABI 안정성](https://swift.org/blog/swift-5-1-released/) 및 모든 IOS 시작 Swift 런타임 라이브러리가 포함 되어 Swift 5.1 +로 컴파일된 응용 프로그램을 실행 하는 데 사용할 수 있습니다. 이전 iOS 버전에 대 한 지원을 추가 해야 하는 경우 몇 가지 단계를 더 수행 해야 합니다.
+지금까지 Swift 프레임 워크를 사용 하는 Xamarin.ios 앱 및 바인딩 라이브러리를 성공적으로 만들었습니다. 위의 응용 프로그램은 iOS 12.2 이상에서 시작 되므로 iOS 12.2 이상에서 실행 됩니다 .이 iOS 버전에서 시작 하는 ABI에는 [ABI 안정성](https://swift.org/blog/swift-5-1-released/) 및 모든 IOS 시작 Swift 런타임 라이브러리가 포함 되어 Swift 5.1 +로 컴파일된 응용 프로그램을 실행 하는 데 사용할 수 있습니다. 이전 iOS 버전에 대 한 지원을 추가 해야 하는 경우 몇 가지 단계를 더 수행 해야 합니다.
 
 1. IOS 12.1 및 이전 버전에 대 한 지원을 추가 하려면 프레임 워크를 컴파일하는 데 사용 되는 특정 Swift dylibs를 제공 하려고 합니다. [SwiftRuntimeSupport](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/) NuGet 패키지를 사용 하 여 필요한 라이브러리를 IPA로 처리 하 고 복사 합니다. 대상 프로젝트에 NuGet 참조를 추가 하 고 응용 프로그램을 다시 빌드합니다. 추가 단계가 필요 하지 않습니다. NuGet 패키지는 빌드 프로세스를 사용 하 여 실행 되는 특정 작업을 설치 하 고, 필수 Swift dylibs를 식별 하 고, 최종 IPA를 사용 하 여 패키지 합니다.
 

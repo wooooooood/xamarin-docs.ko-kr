@@ -6,16 +6,16 @@ ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/16/2020
+ms.date: 07/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 554a9dd0ca8be54c35d1891b60149bbbb66c3e7c
-ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
+ms.openlocfilehash: 41de95c452212dce77d6365265e4813170c9b9b9
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85795009"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853054"
 ---
 # <a name="xamarinforms-shapes-path-transforms"></a>Xamarin.Forms셰이프: 경로 변환
 
@@ -23,22 +23,9 @@ ms.locfileid: "85795009"
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
-는 `Transform` `Path` 한 좌표 공간에서 다른 좌표 공간으로 개체를 변환 하는 방법을 정의 합니다. 이 매핑은 `Matrix` 세 개의 값 열이 있는 세 개의 행 컬렉션인 변환으로 설명 됩니다 `double` .
+는 `Transform` `Path` 한 좌표 공간에서 다른 좌표 공간으로 개체를 변환 하는 방법을 정의 합니다. 개체에 변환을 적용 하면 `Path` 개체가 UI에서 렌더링 되는 방식을 변경 합니다.
 
-3x3 행렬은 2D x-y 평면의 변환에 사용 됩니다. 상관 변환 매트릭스를 곱하여 회전 및 기울이기와 같은 모든 수의 선형 변환을 형성 하 고 그 다음에 변환을 수행할 수 있습니다. 다음 표에서는 행렬의 구조를 보여 줍니다 Xamarin.Forms .
-
-| | | |
-|---------|---------|-----|
-| M11     | M12     | 0.0 |
-| M21     | M22     | 0.0 |
-| OffsetX | OffsetY | 1.0 |
-
-행렬 값을 조작 하 여 개체를 회전, 크기 조정, 기울이기 및 변환할 수 있습니다 `Path` . 예를 들어 값을 100로 변경 하는 경우 `OffsetX` `Path` x 축을 따라 개체 100 장치 독립적 단위를 이동 하 여 사용할 수 있습니다. 값을 3으로 변경 하는 경우 `M22` 이 값을 사용 하 여 `Path` 개체를 현재 높이의 3 배로 늘일 수 있습니다. 두 값을 모두 변경 하는 경우 `Path` x 축을 따라 개체 100 장치 독립적 단위를 이동 하 고 높이를 3의 비율로 늘립니다.
-
-> [!NOTE]
-> 상관 변환 행렬의 최종 열은 (0, 0, 1)과 같으므로 처음 두 열의 멤버만 지정 해야 합니다. 최종 행의 멤버 `OffsetX` 와는 `OffsetY` 변환 값을 나타냅니다.
-
-구조체를 직접 사용 하 여 개별 요소를 변환할 수 있지만는 `Matrix` Xamarin.Forms `Path` 행렬을 사용 하 여 직접 작업 하지 않고도 개체를 변형할 수 있는 다음 클래스도 제공 합니다.
+변환은 회전, 크기 조정, 기울이기 및 변환의 네 가지 일반적인 분류로 분류할 수 있습니다. Xamarin.Forms이러한 각 변환 분류에 대해 클래스를 정의 합니다.
 
 - `RotateTransform`지정 된로를 회전 하는입니다 `Path` `Angle` .
 - `ScaleTransform`는 `Path` 지정 된 및 양만큼 개체 크기를 조정 `ScaleX` `ScaleY` 합니다.
@@ -47,11 +34,11 @@ ms.locfileid: "85795009"
 
 Xamarin.Forms에서는 더 복잡 한 변환을 만들기 위한 다음 클래스도 제공 합니다.
 
-- `TransformGroup`는 `Transform` 다른 개체로 구성 된 복합를 나타냅니다 `Transform` .
-- `CompositeTransform`는 `Transform` 다른 개체로 구성 된 복합를 나타냅니다 `Transform` .
-- `MatrixTransform`는 다른 클래스에서 제공 하지 않는 사용자 지정 변환을 만듭니다 `Transform` .
+- `TransformGroup`는 여러 transform 개체로 구성 된 복합 변환을 나타냅니다.
+- `CompositeTransform`-개체에 여러 변환 작업을 적용 `Path` 합니다.
+- `MatrixTransform`는 다른 변환 클래스에서 제공 하지 않는 사용자 지정 변환을 만듭니다.
 
-이러한 모든 클래스는 `Transform` 형식의 속성을 정의 하는 클래스에서 파생 `Value` `Matrix` 됩니다. 이 속성은 현재 변환을 `Matrix` 개체로 나타냅니다.
+이러한 모든 클래스는 `Transform` 형식의 속성을 정의 하는 클래스에서 파생 `Value` `Matrix` 됩니다. 이 속성은 현재 변환을 `Matrix` 개체로 나타냅니다. 구조체에 대 한 자세한 내용은 `Matrix` [Transform 행렬](#transform-matrix)을 참조 하세요.
 
 에 변환을 적용 하려면 `Path` transform 클래스를 만들고이를 속성의 값으로 설정 `Path.RenderTransform` 합니다.
 
@@ -125,13 +112,13 @@ Xamarin.Forms에서는 더 복잡 한 변환을 만들기 위한 다음 클래�
     <Path.RenderTransform>
         <ScaleTransform CenterX="0"
                         CenterY="0"
-                        ScaleX="2"
-                        ScaleY="2" />
+                        ScaleX="1.5"
+                        ScaleY="1.5" />
     </Path.RenderTransform>
 </Path>
 ```
 
-이 예제에서 개체는 `Path` 크기를 2 배 확장 합니다.
+이 예제에서 개체는 `Path` 크기의 1.5 배 크기를 조정 합니다.
 
 ## <a name="skew-transform"></a>변형 기울이기
 
@@ -148,7 +135,8 @@ Xamarin.Forms에서는 더 복잡 한 변환을 만들기 위한 다음 클래�
 
 기울이기 변환의 효과를 예측 하려면가 `AngleX` 원래 좌표계를 기준으로 x 축 값을 기울이는 것이 좋습니다. 따라서 `AngleX` 30의 경우 y 축은 원본을 통해 30도 회전 하 고 x의 값을 해당 원점에서 30도 기울입니다. 마찬가지로, `AngleY` 30의는 개체의 y 값을 `Path` 원점 으로부터 30도 기울입니다.
 
-`Path`현재 위치에서 개체를 기울이려면 `CenterX` 및 `CenterY` 속성을 개체의 중심점으로 설정 합니다.
+> [!NOTE]
+> `Path`현재 위치에서 개체를 기울이려면 `CenterX` 및 `CenterY` 속성을 개체의 중심점으로 설정 합니다.
 
 다음 예제에서는 개체를 기울이는 방법을 보여 줍니다 `Path` .
 
@@ -201,7 +189,7 @@ Xamarin.Forms에서는 더 복잡 한 변환을 만들기 위한 다음 클래�
 
 이 예제에서 개체는 `Path` 50 장치 독립적 단위로 오른쪽으로 이동 하 고, 50 장치 독립적 단위는 아래로 이동 합니다.
 
-## <a name="apply-multiple-transforms"></a>여러 변환 적용
+## <a name="multiple-transforms"></a>여러 변환
 
 Xamarin.Forms에는 개체에 다중 변환 적용을 지 원하는 두 개의 클래스가 있습니다 `Path` . 이는 `TransformGroup` , 및 `CompositeTransform` 입니다. 는 `TransformGroup` 원하는 순서로 변환을 수행 하는 반면는 `CompositeTransform` 특정 순서로 변환을 수행 합니다.
 
@@ -209,11 +197,7 @@ Xamarin.Forms에는 개체에 다중 변환 적용을 지 원하는 두 개의 �
 
 변환 그룹은 여러 개체로 구성 된 복합 변환을 나타냅니다 `Transform` .
 
-클래스 `TransformGroup` 에서 파생 되는 클래스는 `Transform` 다음 속성을 정의 합니다.
-
-- `Children`는 `TransformCollection` 개체의 컬렉션을 나타내는 형식의입니다 `Transform` .
-
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
+클래스 `TransformGroup` 에서 파생 되는 클래스는 `Transform` `Children` `TransformCollection` 개체의 컬렉션을 나타내는 형식의 속성을 정의 `Transform` 합니다. 이 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상이 될 수 있고 스타일을 지정할 수 있습니다.
 
 변환 순서는 클래스를 사용 하는 복합 변환에서 중요 합니다 `TransformGroup` . 예를 들어 경우 먼저 회전 다음 크기 조정, 변환, 결과 얻게 다른 보다 먼저 변환 하는 경우 다음 회전 하 고 확장 합니다. 한 가지 이유는 회전 및 크기 조정과 같은 변환이 좌표계의 원점을 기준으로 수행 된다는 것입니다. 원본에서 가운데에 있는 개체의 크기를 조정 하면 원점에서 벗어나 이동 된 개체의 크기를 조정 하는 다른 결과가 생성 됩니다. 마찬가지로, 개체를 회전 하면 원점에 중점을 두는 원본에서 이동 된 개체를 회전 다른 결과 생성 합니다.
 
@@ -228,14 +212,15 @@ Xamarin.Forms에는 개체에 다중 변환 적용을 지 원하는 두 개의 �
       Data="M13.908992,16.207977L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983z">
     <Path.RenderTransform>
         <TransformGroup>
-            <ScaleTransform ScaleY="2" />
+            <ScaleTransform ScaleX="1.5"
+                            ScaleY="1.5" />
             <RotateTransform Angle="45" />
         </TransformGroup>
     </Path.RenderTransform>
 </Path>
 ```
 
-이 예제에서 개체는 `Path` 크기의 2 배 확장 되 고 45 각도로 회전 됩니다.
+이 예제에서 개체는 `Path` 크기를 1.5 배까지 확장 한 다음 45 도씩 회전 합니다.
 
 ## <a name="composite-transforms"></a>복합 변환
 
@@ -277,8 +262,8 @@ Xamarin.Forms에는 개체에 다중 변환 적용을 지 원하는 두 개의 �
       WidthRequest="100"
       Data="M13.908992,16.207977L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983z">
     <Path.RenderTransform>
-        <CompositeTransform ScaleX="2"
-                            ScaleY="2"
+        <CompositeTransform ScaleX="1.5"
+                            ScaleY="1.5"
                             Rotation="45"
                             TranslateX="50"
                             TranslateY="50" />
@@ -286,19 +271,47 @@ Xamarin.Forms에는 개체에 다중 변환 적용을 지 원하는 두 개의 �
 </Path>
 ```
 
-이 예제에서 개체는 `Path` 크기를 2 배 확장 하 고 45 각도로 회전 한 다음 50 장치 독립적 단위로 변환 됩니다.
+이 예제에서 개체는 `Path` 크기를 1.5 배까지 확장 한 다음 45도로 회전 한 다음 50 장치 독립적 단위로 변환 됩니다.
+
+## <a name="transform-matrix"></a>행렬 변환
+
+변환은 2D 공간에서 변환을 수행 하는 3x3 유사 변환 매트릭스와 관련 하 여 설명할 수 있습니다. 이 3x3 행렬은 `Matrix` 세 개의 행과 세 개의 값 열로 이루어진 컬렉션인 구조체로 표현 됩니다 `double` .
+
+`Matrix`구조체는 다음 속성을 정의 합니다.
+
+- `Determinant`는 `double` 행렬의 행렬식을 가져오는 형식의입니다.
+- `HasInverse``bool`행렬을 반전할 수 있는지 여부를 나타내는 형식의입니다.
+- `Identity`는 `Matrix` 항등 매트릭스를 가져오는 형식의입니다.
+- `HasIdentity`는 `bool` 매트릭스가 항등 매트릭스 인지 여부를 나타내는 형식의입니다.
+- `M11`는 `double` 행렬의 첫 번째 행과 첫 번째 열 값을 나타내는 형식입니다.
+- `M12`는 `double` 행렬의 첫 번째 행과 두 번째 열 값을 나타내는 형식입니다.
+- `M21`는 `double` 행렬의 두 번째 행과 첫 번째 열 값을 나타내는 형식입니다.
+- `M22`는 `double` 행렬의 두 번째 행과 두 번째 열 값을 나타내는 형식입니다.
+- `OffsetX``double`행렬의 세 번째 행과 첫 번째 열 값을 나타내는 형식의입니다.
+- `OffsetY``double`행렬의 세 번째 행과 두 번째 열 값을 나타내는 형식의입니다.
+
+`OffsetX`및 `OffsetY` 속성은 각각 x 축과 y 축을 따라 좌표 공간을 변환할 크기를 지정 하기 때문에 이름이 지정 됩니다.
+
+또한 구조체는,, 등을 포함 하 여 `Matrix` 행렬 값을 조작 하는 데 사용할 수 있는 일련의 메서드를 노출 `Append` `Invert` `Multiply` `Prepend` 합니다.
+
+다음 표에서는 행렬의 구조를 보여 줍니다 Xamarin.Forms .
+
+| | | |
+|---------|---------|-----|
+| M11     | M12     | 0.0 |
+| M21     | M22     | 0.0 |
+| OffsetX | OffsetY | 1.0 |
+
+> [!NOTE]
+> 상관 변환 행렬의 최종 열은 (0, 0, 1)과 같으므로 처음 두 열의 멤버만 지정 해야 합니다.
+
+행렬 값을 조작 하 여 개체를 회전, 크기 조정, 기울이기 및 변환할 수 있습니다 `Path` . 예를 들어 값을 100로 변경 하는 경우 `OffsetX` `Path` x 축을 따라 개체 100 장치 독립적 단위를 이동 하 여 사용할 수 있습니다. 값을 3으로 변경 하는 경우 `M22` 이 값을 사용 하 여 `Path` 개체를 현재 높이의 3 배로 늘일 수 있습니다. 두 값을 모두 변경 하는 경우 `Path` x 축을 따라 개체 100 장치 독립적 단위를 이동 하 고 높이를 3의 비율로 늘립니다. 또한 관계 변환 매트릭스를 곱하여 회전 및 기울이기와 같은 모든 수의 선형 변환을 형성 하 고 그 다음에 변환을 수행할 수 있습니다.
 
 ## <a name="custom-transforms"></a>사용자 지정 변환
 
-행렬 변환은 상관 행렬을 사용 하 여 2D 평면에서 개체 또는 좌표계를 조작 합니다. 3x3 행렬은 변환에 사용 됩니다. 유사 행렬 변환을 곱하여 변환 후의 회전 및 기울이기와 같은 선형 변환을 형성할 수 있습니다.
+클래스 `MatrixTransform` 에서 파생 되는 클래스는 `Transform` `Matrix` `Matrix` 변환을 정의 하는 행렬을 나타내는 형식의 속성을 정의 합니다. 이 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상이 될 수 있고 스타일을 지정할 수 있습니다.
 
-클래스 `MatrixTransform` 에서 파생 되는 클래스는 `Transform` 다음 속성을 정의 합니다.
-
-- `Matrix`는 `Matrix` 변환을 정의 하는 행렬을 나타내는 형식의입니다.
-
-이 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
-
-`MatrixTransform`클래스는 `RotateTransform` ,, `ScaleTransform` `SkewTransform` 또는 `TranslateTransform` 클래스에서 제공 하지 않는 사용자 지정 변환을 만드는 데 사용 됩니다.
+,, 또는 개체를 사용 하 여 설명할 수 있는 변환은에서 `TranslateTransform` `ScaleTransform` 동일 하 게 설명할 `RotateTransform` `SkewTransform` 수 있습니다 `MatrixTransform` . 그러나,, `TranslateTransform` `ScaleTransform` `RotateTransform` 및 `SkewTransform` 클래스는에서 벡터 구성 요소를 설정 하는 것 보다 더 쉽게 사용할 `Matrix` 수 있습니다. 따라서 클래스는 `MatrixTransform` 일반적으로 `RotateTransform` ,, `ScaleTransform` `SkewTransform` 또는 클래스에서 제공 하지 않는 사용자 지정 변환을 만드는 데 사용 됩니다 `TranslateTransform` .
 
 다음 예제에서는 `Path` 를 사용 하 여 개체를 변환 하는 방법을 보여 줍니다 `MatrixTransform` .
 
@@ -306,8 +319,6 @@ Xamarin.Forms에는 개체에 다중 변환 적용을 지 원하는 두 개의 �
 <Path Stroke="Black"
       Aspect="Uniform"
       HorizontalOptions="Center"
-      HeightRequest="100"
-      WidthRequest="100"
       Data="M13.908992,16.207977L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983z">
     <Path.RenderTransform>
         <MatrixTransform>
@@ -315,8 +326,8 @@ Xamarin.Forms에는 개체에 다중 변환 적용을 지 원하는 두 개의 �
                 <!-- M11 stretches, M12 skews -->
                 <Matrix OffsetX="10"
                         OffsetY="100"
-                        M11="3"
-                        M12="2" />
+                        M11="1.5"
+                        M12="1" />
             </MatrixTransform.Matrix>
         </MatrixTransform>
     </Path.RenderTransform>
@@ -331,16 +342,24 @@ Xamarin.Forms에는 개체에 다중 변환 적용을 지 원하는 두 개의 �
 <Path Stroke="Black"
       Aspect="Uniform"
       HorizontalOptions="Center"
-      HeightRequest="100"
-      WidthRequest="100"
       Data="M13.908992,16.207977L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983z">
     <Path.RenderTransform>
-        <MatrixTransform Matrix="3,2,0,1,10,100" />
+        <MatrixTransform Matrix="1.5,1,0,1,10,100" />
     </Path.RenderTransform>
 </Path>
 ```
 
-이 예제에서 속성은 `Matrix` `M11` ,,,, `M12` `M21` `M22` `OffsetX` , `OffsetY` 의 6 개 멤버로 구성 된 쉼표로 구분 된 문자열로 지정 됩니다.
+이 예제에서 속성은 `Matrix` `M11` ,,,, `M12` `M21` `M22` `OffsetX` , `OffsetY` 의 6 개 멤버로 구성 된 쉼표로 구분 된 문자열로 지정 됩니다. 이 예제에서 구성원은 쉼표로 구분 되지만 하나 이상의 공백으로 구분 될 수도 있습니다.
+
+또한 이전 예제는 속성의 값과 같은 6 개의 멤버를 지정 하 여 훨씬 더 간소화할 수 있습니다 `RenderTransform` .
+
+```xaml
+<Path Stroke="Black"
+      Aspect="Uniform"
+      HorizontalOptions="Center"
+      RenderTransform="1.5 1 0 1 10 100"
+      Data="M13.908992,16.207977L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983z" />
+```
 
 ## <a name="related-links"></a>관련 링크
 

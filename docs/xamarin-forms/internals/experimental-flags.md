@@ -10,12 +10,12 @@ ms.date: 06/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 17fcc996b4dc8013a23a598ece8e240caba3f775
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: bd35722c76cce245701b7a548514d402cd978d38
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946119"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853069"
 ---
 # <a name="xamarinforms-experimental-flags"></a>Xamarin.Forms실험적 플래그
 
@@ -31,7 +31,6 @@ Xamarin.Forms에는 다음 실험적 플래그가 포함 되어 있습니다.
 - `RadioButton_Experimental`
 - `Shapes_Experimental`
 - `Shell_UWP_Experimental`
-- `StateTriggers_Experimental`
 - `SwipeView_Experimental`
 
 실험적 플래그 뒤에 있는 기능을 사용 하려면 응용 프로그램에서 플래그 또는 플래그를 사용 하도록 설정 해야 합니다. 실험적 플래그를 사용 하는 방법에는 두 가지가 있습니다.

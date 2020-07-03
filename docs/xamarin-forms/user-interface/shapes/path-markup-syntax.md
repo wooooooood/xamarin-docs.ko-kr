@@ -10,12 +10,12 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 68b7f4a245a60df1723f5a6442f30dc2b1a15932
-ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
+ms.openlocfilehash: 124c739f68ce8a3fcbc359a07513a2bcb178578f
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85794975"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853132"
 ---
 # <a name="xamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms셰이프: 경로 태그 구문
 
@@ -59,11 +59,11 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 - 줄 ( `L` 또는 `l` )입니다.
 - 가로 선 ( `H` 또는 `h` )입니다.
 - 세로 선 ( `V` 또는 `v` )입니다.
+- 타원형 원호 ( `A` 또는 `a` )입니다.
 - 입방 형 3 차원 곡선 ( `C` 또는 `c` )입니다.
 - 정방형 3 차원 곡선 ( `Q` 또는 `q` )입니다.
 - 부드러운 입방 형 3 차원 곡선 ( `S` 또는 `s` )입니다.
 - 부드러운 정방형 3 차원 곡선 ( `T` 또는 `t` )입니다.
-- 타원형 원호 ( `A` 또는 `a` )입니다.
 
 각 그리기 명령은 대/소문자를 구분 하지 않는 문자를 사용 하 여 지정 됩니다. 동일한 유형의 명령을 두 번 이상 입력 하는 경우 중복 명령 항목을 생략할 수 있습니다. 예를 들면 `L 100,200 300,400` 와 같습니다 `L 100,200 L 300,400` .
 
@@ -74,6 +74,8 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 이 구문에서 *끝점* 은 선의 끝점을 [`Point`](xref:Xamarin.Forms.Point) 나타내는입니다.
 
 `L 20,30`및 `L 20 30` 은 올바른 줄 명령의 예입니다.
+
+직선을 개체로 만드는 방법에 대 한 자세한 내용은 `PathGeometry` [Linesegment 만들기](geometries.md#create-a-linesegment)를 참조 하세요.
 
 ### <a name="horizontal-line-command"></a>가로선 명령
 
@@ -91,6 +93,22 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 
 `V 90`은 유효한 수직선 명령의 예입니다.
 
+### <a name="elliptical-arc-command"></a>타원형 원호 명령
+
+타원형 원호 명령은 현재 지점과 지정 된 끝점 사이에 타원형 호를 만듭니다. 이 명령의 구문은 `A` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endpoint* 또는 `a` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endpoint*입니다.
+
+이 구문에서 다음을 수행 합니다.
+
+- `size`[`Size`](xref:Xamarin.Forms.Size)원호의 x 및 y 반지름을 나타내는입니다.
+- `rotationAngle`는 `double` 타원의 회전 각도 (도)를 나타내는입니다.
+- `isLargeArcFlag`원호의 각도가 180도 이상이 면 1로 설정 하 고 그렇지 않으면 0으로 설정 해야 합니다.
+- `sweepDirectionFlag`원호를 양의 각도 방향으로 그리면 1로 설정 하 고 그렇지 않으면 0으로 설정 해야 합니다.
+- `endPoint`호를 [`Point`](xref:Xamarin.Forms.Point) 그릴입니다.
+
+`A 150,150 0 1,0 150,-150`는 유효한 타원형 호 명령의 예입니다.
+
+원형 원호를 개체로 만드는 방법에 대 한 자세한 내용은 `PathGeometry` [arcsegment 만들기](geometries.md#create-an-arcsegment)를 참조 하세요.
+
 ### <a name="cubic-bezier-curve-command"></a>입방 형 3 차원 곡선 명령
 
 입방 형 3 차원 곡선 명령은 지정 된 두 제어점을 사용 하 여 현재 지점과 지정 된 끝점 간에 입방 형 3 차원 곡선을 만듭니다. 이 명령의 구문은 다음과 같습니다. `C` *controlPoint1* *controlPoint2* *endpoint* 또는 `c` *controlPoint1* *controlPoint2* *endpoint*.
@@ -103,6 +121,8 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 
 `C 100,200 200,400 300,200`는 유효한 입방 형 3 차원 곡선 명령의 예입니다.
 
+입방 형 3 차원 곡선을 개체로 만드는 방법에 대 한 자세한 내용은 `PathGeometry` [Create a system.windows.media.beziersegment>](geometries.md#create-a-beziersegment)을 참조 하세요.
+
 ### <a name="quadratic-bezier-curve-command"></a>정방형 3 차원 곡선 명령
 
 정방형 3 차원 곡선 명령은 지정 된 제어점을 사용 하 여 현재 지점과 지정 된 끝점 사이에 정방형 3 차원 곡선을 만듭니다. 이 명령의 구문은: `Q` *controlPoint* *endpoint* 또는 `q` *controlPoint* *endpoint*입니다.
@@ -113,6 +133,8 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 - *끝점* 은 [`Point`](xref:Xamarin.Forms.Point) 곡선이 그려지는 점을 나타내는입니다.
 
 `Q 100,200 300,200`은 유효한 정방형 3차원 곡선 명령의 예입니다.
+
+정방형 3 차원 곡선을 개체로 만드는 방법에 대 한 자세한 내용은 `PathGeometry` [Create a QuadraticBezierSegment](geometries.md#create-a-quadraticbeziersegment)을 참조 하세요.
 
 ### <a name="smooth-cubic-bezier-curve-command"></a>부드러운 입방 형 3 차원 곡선 명령
 
@@ -136,20 +158,6 @@ Xamarin.Forms경로 태그 구문을 사용 하면 XAML에서 경로 기 하 도
 제어점은 현재 점을 기준으로 이전 명령의 제어점의 리플렉션으로 간주됩니다. 이전 명령이 없거나 이전 명령이 정방형 3 차원 곡선 또는 부드러운 정방형 3 차원 곡선 명령이 아닌 경우 제어점은 현재 지점과 일치 하는 것으로 간주 됩니다.
 
 `T 100,30`는 유효한 부드러운 정방형 3 차원 곡선 명령의 예입니다.
-
-### <a name="elliptical-arc-command"></a>타원형 원호 명령
-
-타원형 원호 명령은 현재 지점과 지정 된 끝점 사이에 타원형 호를 만듭니다. 이 명령의 구문은 `A` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endpoint* 또는 `a` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endpoint*입니다.
-
-이 구문에서 다음을 수행 합니다.
-
-- `size`[`Size`](xref:Xamarin.Forms.Size)원호의 x 및 y 반지름을 나타내는입니다.
-- `rotationAngle`는 `double` 타원의 회전 각도 (도)를 나타내는입니다.
-- `isLargeArcFlag`원호의 각도가 180도 이상이 면 1로 설정 하 고 그렇지 않으면 0으로 설정 해야 합니다.
-- `sweepDirectionFlag`원호를 양의 각도 방향으로 그리면 1로 설정 하 고 그렇지 않으면 0으로 설정 해야 합니다.
-- `endPoint`호를 [`Point`](xref:Xamarin.Forms.Point) 그릴입니다.
-
-`A 150,150 0 1,0 150,-150`는 유효한 타원형 호 명령의 예입니다.
 
 ## <a name="close-command"></a>닫기 명령
 

@@ -7,14 +7,17 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 328633bc58f17216c071a2b2cd779704da2bbf74
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c36159984f314ecbf90f98df6472eee2149eee92
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569415"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853168"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS 목표-C 라이브러리 바인딩
+
+> [!IMPORTANT]
+> 현재 Xamarin 플랫폼에서 사용자 지정 바인딩 사용을 조사 하 고 있습니다. 향후 개발 노력을 알리기 위해 [**이 설문 조사**](https://www.surveymonkey.com/r/KKBHNLT) 를 수행 하세요.
 
 _이 문서에서는 기존 목표-C 라이브러리, InfColorPicker에 대 한 Xamarin.ios 바인딩을 만드는 실습 연습을 제공 합니다. 정적 목표-C 라이브러리 컴파일, 바인딩 및 Xamarin.ios 응용 프로그램에서 바인딩을 사용 하는 것과 같은 항목을 다룹니다._
 
@@ -274,7 +277,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 1. **파일** 메뉴에서 **새**  >  **프로젝트**...를 선택 합니다.
 
-    ![새 프로젝트를 시작 하는 중](walkthrough-images/bind01vs.png "새 프로젝트를 시작 하는 중")
+    ![새 프로젝트 시작](walkthrough-images/bind01vs.png "새 프로젝트 시작")
 
 1. 새 프로젝트 대화 상자에서 **Visual c # > iPhone & iPad > IOS 바인딩 라이브러리 (Xamarin)** 를 선택 합니다.
 
@@ -670,7 +673,7 @@ private void HandleTouchUpInsideWithStrongDelegate (object sender, EventArgs e)
 
 [![](walkthrough-images/run01.png "Running the Application")](walkthrough-images/run01.png#lightbox)
 
-축하합니다! 이 시점에서 Xamarin.ios 응용 프로그램에서 사용할 목적-C 라이브러리를 성공적으로 만들고 바인딩 했습니다. 다음으로 약한 대리자를 사용 하는 방법을 살펴보겠습니다.
+지금까지 이 시점에서 Xamarin.ios 응용 프로그램에서 사용할 목적-C 라이브러리를 성공적으로 만들고 바인딩 했습니다. 다음으로 약한 대리자를 사용 하는 방법을 살펴보겠습니다.
 
 ### <a name="implementing-a-weak-delegate"></a>약한 대리자 구현
 

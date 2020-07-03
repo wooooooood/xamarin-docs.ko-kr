@@ -1,20 +1,23 @@
 ---
 title: IOS Swift 라이브러리 바인딩
-description: 이 문서에서는 Swift 코드에 C# 대 한 바인딩을 만들어 xamarin.ios 응용 프로그램에서 네이티브 라이브러리 및 CocoaPods를 사용할 수 있도록 하는 방법을 설명 합니다.
+description: '이 문서에서는 Swift 코드에 c # 바인딩을 만들어 Xamarin.ios 응용 프로그램에서 네이티브 라이브러리 및 CocoaPods를 사용할 수 있도록 하는 방법을 설명 합니다.'
 ms.prod: xamarin
 ms.assetid: 890EFCCA-A2A2-4561-88EA-30DE3041F61D
 ms.technology: xamarin-ios
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: 9a683f31016a9db4271e3909e421f27ef83c2080
-ms.sourcegitcommit: b751605179bef8eee2df92cb484011a7dceb6fda
+ms.openlocfilehash: 72ab1d9f10ee308313569528d152d5930a258207
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77497961"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85852971"
 ---
 # <a name="bind-ios-swift-libraries"></a>IOS Swift 라이브러리 바인딩
+
+> [!IMPORTANT]
+> 현재 Xamarin 플랫폼에서 사용자 지정 바인딩 사용을 조사 하 고 있습니다. 향후 개발 노력을 알리기 위해 [**이 설문 조사**](https://www.surveymonkey.com/r/KKBHNLT) 를 수행 하세요.
 
 IOS 플랫폼은 해당 네이티브 언어 및 도구와 함께 지속적으로 진화 하 고 있으며 최신 제품을 사용 하 여 개발 된 많은 타사 라이브러리도 있습니다. 코드 및 구성 요소 재사용을 최대화 하는 것은 플랫폼 간 개발의 주요 목표 중 하나입니다. Swift를 사용 하 여 빌드된 구성 요소를 다시 사용 하는 기능은 개발자의 인기를 지속적으로 성장 하는 Xamarin 개발자에 게 점점 더 중요 해지고 있습니다. 이미 일반 [목표-C](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough) 라이브러리를 바인딩하는 프로세스에 대해 잘 알고 있을 수 있습니다. 이제 [Swift 프레임 워크를 바인딩하](walkthrough.md)는 프로세스를 설명 하는 추가 설명서를 사용할 수 있으므로 동일한 방식으로 Xamarin 응용 프로그램에서 사용할 수 있습니다. 이 문서의 목적은 Xamarin에 대 한 Swift 바인딩을 만드는 개략적인 방법을 설명 하는 것입니다.
 
@@ -23,7 +26,7 @@ IOS 플랫폼은 해당 네이티브 언어 및 도구와 함께 지속적으로
 Xamarin을 사용 하면 Xamarin 응용 프로그램에서 사용할 수 있도록 타사 네이티브 라이브러리를 바인딩할 수 있습니다. Swift는 새 언어 이며이 언어로 작성 된 라이브러리에 대 한 바인딩을 만들려면 몇 가지 추가 단계와 도구가 필요 합니다. 이 방법은 다음 네 단계를 포함 합니다.
 
 1. 네이티브 라이브러리 빌드
-1. Xamarin 도구에서 클래스를 생성할 C# 수 있도록 하는 xamarin 메타 데이터 준비
+1. Xamarin 도구에서 c # 클래스를 생성할 수 있도록 하는 Xamarin 메타 데이터 준비
 1. 네이티브 라이브러리 및 메타 데이터를 사용 하 여 Xamarin 바인딩 라이브러리 빌드
 1. Xamarin 응용 프로그램에서 Xamarin 바인딩 라이브러리 사용
 
@@ -31,14 +34,14 @@ Xamarin을 사용 하면 Xamarin 응용 프로그램에서 사용할 수 있도�
 
 ### <a name="build-the-native-library"></a>네이티브 라이브러리 빌드
 
-첫 번째 단계는 기본 Swift 프레임 워크를 목표로 준비 하는 것입니다. 이 파일은 원하는 Swift 클래스, 메서드 및 필드를 노출 하는 자동 생성 헤더로,이를 목표 C와 궁극적 C# 으로 모두 Xamarin 바인딩 라이브러리를 통해 액세스할 수 있도록 합니다. 이 파일은 다음 경로에 있는 프레임 워크 내에 있습니다. **\<FrameworkName >. 프레임 워크/헤더/\<FrameworkName >-Swift. h**. 노출 된 인터페이스에 필요한 모든 멤버가 있는 경우 다음 단계로 건너뛸 수 있습니다. 그렇지 않으면 해당 멤버를 노출 하는 데 추가 단계가 필요 합니다. 접근 방식은 Swift framework 소스 코드에 액세스할 수 있는지 여부에 따라 달라 집니다.
+첫 번째 단계는 기본 Swift 프레임 워크를 목표로 준비 하는 것입니다. 이 파일은 원하는 Swift 클래스, 메서드 및 필드를 노출 하 여 Xamarin 바인딩 라이브러리를 통해 목표 C와 궁극적으로 c # 모두에 액세스할 수 있도록 하는 자동 생성 된 헤더입니다. 이 파일은 프레임 워크 내에서 프레임 ** \<FrameworkName> 워크/헤더/ \<FrameworkName> -Swift**경로 아래에 있습니다. 노출 된 인터페이스에 필요한 모든 멤버가 있는 경우 다음 단계로 건너뛸 수 있습니다. 그렇지 않으면 해당 멤버를 노출 하는 데 추가 단계가 필요 합니다. 접근 방식은 Swift framework 소스 코드에 액세스할 수 있는지 여부에 따라 달라 집니다.
 
-- 코드에 대 한 액세스 권한이 있는 경우 필요한 Swift 멤버를 `@objc` 특성으로 데코레이팅 하 고 몇 가지 추가 규칙을 적용 하 여 Xcode 빌드 도구에서 이러한 멤버를 목표-C 세계 및 헤더에 노출 해야 한다는 것을 알 수 있습니다.
-- 소스 코드에 액세스할 수 없는 경우 원래 Swift 프레임 워크를 래핑하고 `@objc` 특성을 사용 하 여 응용 프로그램에 필요한 공용 인터페이스를 정의 하는 프록시 Swift 프레임 워크를 만들어야 합니다.
+- 코드에 액세스할 수 있는 경우 필요한 Swift 멤버를 특성으로 데코레이팅 하 `@objc` 고 몇 가지 추가 규칙을 적용 하 여 Xcode 빌드 도구에서 이러한 멤버를 목표-C 세계 및 헤더에 노출 해야 한다는 것을 알 수 있습니다.
+- 소스 코드에 액세스할 수 없는 경우 원래 Swift 프레임 워크를 래핑하고 특성을 사용 하 여 응용 프로그램에 필요한 공용 인터페이스를 정의 하는 프록시 Swift 프레임 워크를 만들어야 `@objc` 합니다.
 
 ### <a name="prepare-the-xamarin-metadata"></a>Xamarin 메타 데이터 준비
 
-두 번째 단계는 클래스를 생성 C# 하기 위해 바인딩 프로젝트에서 사용 하는 API 정의 인터페이스를 준비 하는 것입니다. 이러한 정의는 [목표 Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) 도구에 의해 수동으로 또는 자동으로 생성 될 수 있으며, 앞서 언급 한 **\<FrameworkName >-Swift** 헤더 파일이 생성 됩니다. 메타 데이터를 생성 한 후에는 수동으로 확인 하 고 유효성을 검사 해야 합니다.
+두 번째 단계는 c # 클래스를 생성 하기 위해 바인딩 프로젝트에서 사용 되는 API 정의 인터페이스를 준비 하는 것입니다. 이러한 정의는 [목표 Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) 도구와 앞에서 생성 된 ** \<FrameworkName> Swift** 헤더 파일에서 수동으로 또는 자동으로 만들 수 있습니다. 메타 데이터를 생성 한 후에는 수동으로 확인 하 고 유효성을 검사 해야 합니다.
 
 ### <a name="build-the-xamarinios-binding-library"></a>Xamarin.ios 바인딩 라이브러리를 빌드합니다.
 
