@@ -8,12 +8,12 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 578e750afd718c684d70217355629a0286d2b028
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6b094ddd7334da777d39d403eb06d72558c96ed2
+ms.sourcegitcommit: 82eabb0eaa4a674897aa6d5e64efb91fd580c330
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84801883"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100193"
 ---
 # <a name="xamarinessentials-web-authenticator"></a>Xamarin.Essentials: 웹 인증자
 
@@ -192,7 +192,7 @@ var accessToken = r?.AccessToken;
 
 1. ASP.NET Core 웹앱에 원하는 [외부 소셜 인증 공급자](https://docs.microsoft.com/aspnet/core/security/authentication/social/?view=aspnetcore-3.1&tabs=visual-studio)를 설치합니다.
 2. `.AddAuthentication()` 호출에서 기본 인증 체계를 `CookieAuthenticationDefaults.AuthenticationScheme`으로 설정합니다.
-3. Startup.cs `.AddAuthentication()` 호출에서 `.AddCookies()`를 사용합니다.
+3. Startup.cs `.AddAuthentication()` 호출에서 `.AddCookie()`를 사용합니다.
 4. `.SaveTokens = true;`를 사용하여 모든 공급자를 구성해야 합니다.
 
 > [!TIP]

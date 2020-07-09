@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/18/2020
-ms.openlocfilehash: dfe6da8a76b447bf0c2a6c0a3bea9823e498d5e4
-ms.sourcegitcommit: 8a18471b3d96f3f726b66f9bc50a829f1c122f29
+ms.openlocfilehash: 0aafe01fcbde6cf1aacf3e2dd47444d4b77021e2
+ms.sourcegitcommit: 79ba3deb031c8a60d0841bb3dbeaaf65daf2b224
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84988186"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85846384"
 ---
 # <a name="xamarinforms-multi-bindings"></a>Xamarin.Forms 다중 바인딩
 
@@ -44,7 +44,7 @@ ms.locfileid: "84988186"
 
 ## <a name="define-a-imultivalueconverter"></a>IMultiValueConverter 정의
 
-`IMultiValueConverter` 인터페이스를 사용하면 사용자 지정 로직을 `MultiBinding`에 적용할 수 있습니다. 변환기를 `MultiBinding`과 연결하려면 `IValueConverter` 인터페이스를 구현하는 클래스를 만든 다음 `Convert` 및 `ConvertBack` 메서드를 구현합니다.
+`IMultiValueConverter` 인터페이스를 사용하면 사용자 지정 로직을 `MultiBinding`에 적용할 수 있습니다. 변환기를 `MultiBinding`과 연결하려면 `IMultiValueConverter` 인터페이스를 구현하는 클래스를 만든 다음 `Convert` 및 `ConvertBack` 메서드를 구현합니다.
 
 ```csharp
 public class AllTrueMultiConverter : IMultiValueConverter

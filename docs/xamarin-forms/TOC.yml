@@ -405,6 +405,32 @@
                   href: user-interface/map/native-map-app.md
             - name: MediaElement
               href: user-interface/mediaelement.md
+            - name: 도형
+              items:
+                - name: 개요
+                  href: user-interface/shapes/index.md
+                - name: 타원
+                  href: user-interface/shapes/ellipse.md
+                - name: 채우기 규칙
+                  href: user-interface/shapes/fillrules.md
+                - name: Geometry
+                  href: user-interface/shapes/geometries.md
+                - name: 줄
+                  href: user-interface/shapes/line.md
+                - name: 경로
+                  items:
+                    - name: 경로
+                      href: user-interface/shapes/path.md
+                    - name: 경로 태그 구문
+                      href: user-interface/shapes/path-markup-syntax.md
+                    - name: 경로 변환
+                      href: user-interface/shapes/path-transforms.md
+                - name: 다각형
+                  href: user-interface/shapes/polygon.md
+                - name: 폴리라인
+                  href: user-interface/shapes/polyline.md
+                - name: 사각형
+                  href: user-interface/shapes/rectangle.md
             - name: WebView
               href: user-interface/webview.md
         - name: 명령 시작
@@ -537,32 +563,6 @@
               href: user-interface/text/fonts.md
             - name: SkiaSharp를 사용한 그래픽
               href: user-interface/graphics/skiasharp/index.md
-            - name: 도형
-              items:
-                - name: 개요
-                  href: user-interface/shapes/index.md
-                - name: 타원
-                  href: user-interface/shapes/ellipse.md
-                - name: 채우기 규칙
-                  href: user-interface/shapes/fillrules.md
-                - name: Geometry
-                  href: user-interface/shapes/geometries.md
-                - name: 줄
-                  href: user-interface/shapes/line.md
-                - name: 경로
-                  items:
-                    - name: 경로
-                      href: user-interface/shapes/path.md
-                    - name: 경로 태그 구문
-                      href: user-interface/shapes/path-markup-syntax.md
-                    - name: 경로 변환
-                      href: user-interface/shapes/path-transforms.md
-                - name: 다각형
-                  href: user-interface/shapes/polygon.md
-                - name: 폴리라인
-                  href: user-interface/shapes/polyline.md
-                - name: 사각형
-                  href: user-interface/shapes/rectangle.md
             - name: 시작 화면
               href: user-interface/splashscreen.md
             - name: 스타일
