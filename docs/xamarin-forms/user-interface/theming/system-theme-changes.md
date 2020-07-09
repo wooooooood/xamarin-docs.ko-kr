@@ -10,12 +10,12 @@ ms.date: 06/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 28bcbed3a03a2abbec42a619062579419a3063a4
-ms.sourcegitcommit: 8a18471b3d96f3f726b66f9bc50a829f1c122f29
+ms.openlocfilehash: b451fe004ca21c8770658f31c9c38253e073c259
+ms.sourcegitcommit: 82eabb0eaa4a674897aa6d5e64efb91fd580c330
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84988201"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100185"
 ---
 # <a name="respond-to-system-theme-changes-in-xamarinforms-applications"></a>응용 프로그램의 시스템 테마 변경 내용에 응답 Xamarin.Forms
 
@@ -158,6 +158,9 @@ Application.Current.RequestedThemeChanged += (s, a) =>
 ```
 
 이벤트와 함께 제공 되는 개체에는 `AppThemeChangedEventArgs` `RequestedThemeChanged` 형식의 이라는 단일 속성이 있습니다 `RequestedTheme` `OSAppTheme` . 이 속성을 검사 하 여 요청 된 시스템 테마를 검색할 수 있습니다.
+
+> [!IMPORTANT]
+> Android의 테마 변경 내용에 응답 하려면 `ConfigChanges.UiMode` 클래스의 특성에 플래그를 포함 해야 합니다 `Activity` `MainActivity` .
 
 ## <a name="related-links"></a>관련 링크
 
