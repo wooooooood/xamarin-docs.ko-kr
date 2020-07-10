@@ -7,14 +7,17 @@ ms.technology: xamarin-android
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: cbd7c796cd13aa45dc107bddf06ca44d6adbdf9d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: af926b518c55bd0d6c73180e512dd669e93778f7
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77519680"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853057"
 ---
 # <a name="walkthrough-bind-an-android-kotlin-library"></a>연습: Android Kotlin 라이브러리 바인딩
+
+> [!IMPORTANT]
+> 현재 Xamarin 플랫폼에서 사용자 지정 바인딩 사용을 조사하고 있습니다. [**설문 조사**](https://www.surveymonkey.com/r/KKBHNLT)에 참여하여 향후 개발 작업에 대해 알려 주시기 바랍니다.
 
 모바일 개발자는 Xamarin을 통해 Visual Studio 및 C#을 사용하여 플랫폼 간 네이티브 모바일 앱을 만들 수 있습니다. Android 플랫폼 SDK 구성 요소를 즉시 사용할 수 있지만 대부분의 개발자는 해당 플랫폼용으로 작성된 타사 SDK를 사용하며, Xamarin에서는 바인딩을 통해 타사 SDK를 사용할 수 있습니다. 타사 Android 프레임워크를 Xamarin.Android 애플리케이션에 통합하려면 먼저 타사 프레임워크에 대한 Xamarin.Android 바인딩을 만들어야 합니다. 그러면 애플리케이션에서 타사 프레임워크를 사용할 수 있습니다.
 
@@ -173,7 +176,7 @@ AAR 파일은 컴파일된 Kotlin 소스 코드 및 자산을 포함하는 Andro
 
     BubblePicker 샘플에는 서명되지 않은 형식을 사용하는 멤버가 없으므로 추가 변경이 필요하지 않습니다.
 
-- 제네릭 매개 변수를 사용하는 Kotlin 멤버는 기본적으로 Java.`Lang.Object` 형식의 매개 변수로 변환됩니다. 예를 들어 Kotlin 메서드에는 다음과 같은 \<T> 제네릭 매개 변수가 있습니다.
+- 제네릭 매개 변수를 사용하는 Kotlin 멤버는 기본적으로 Java.`Lang.Object` 형식의 매개 변수로 변환됩니다. 예를 들어 Kotlin 메서드에는 다음과 같이 제네릭 매개 변수 \<T>가 있습니다.
 
     ```Kotlin
     public open fun <T>fooGenericMethod(value: T) : String {

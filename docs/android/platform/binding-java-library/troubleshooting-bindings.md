@@ -7,14 +7,17 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 0c273797d7512f062260e49e0f71fdd1132f037b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 3ec01d9322d4b6706fccd0959ae5944f71e82664
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76723805"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853017"
 ---
 # <a name="troubleshooting-bindings"></a>바인딩 문제 해결
+
+> [!IMPORTANT]
+> 현재 Xamarin 플랫폼에서 사용자 지정 바인딩 사용을 조사하고 있습니다. [**설문 조사**](https://www.surveymonkey.com/r/KKBHNLT)에 참여하여 향후 개발 작업에 대해 알려 주시기 바랍니다.
 
 _이 문서에서는 바인딩을 생성할 때 발생할 수 있는 여러 일반적인 오류를 요약하고 가능한 원인과 해결 방법을 설명합니다._
 

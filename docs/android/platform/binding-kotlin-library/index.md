@@ -7,14 +7,17 @@ ms.technology: xamarin-android
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: ec7d154b0d7fcb055bd398089e142fe8b1d9f60e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: d2251a0219ca25ecd37e42361e49ac966bac131d
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77497967"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85852991"
 ---
 # <a name="bind-android-kotlin-libraries"></a>Android Kotlin 라이브러리 바인딩
+
+> [!IMPORTANT]
+> 현재 Xamarin 플랫폼에서 사용자 지정 바인딩 사용을 조사하고 있습니다. [**설문 조사**](https://www.surveymonkey.com/r/KKBHNLT)에 참여하여 향후 개발 작업에 대해 알려 주시기 바랍니다.
 
 Android 플랫폼은 해당 네이티브 언어 및 도구와 함께 지속적으로 진화하고 있으며 최신 제품을 사용하여 개발된 타사 라이브러리가 많이 있습니다. 코드 및 구성 요소 재사용을 최대화하는 것은 플랫폼 간 개발의 주요 목표 중 하나입니다. Kotlin을 사용하여 빌드된 구성 요소를 다시 사용하는 기능이 Xamarin 개발자 사이에서 인기가 점점 높아지면서 그 중요성도 높아지고 있습니다. 일반적인 [Java](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/) 라이브러리를 바인딩하는 프로세스는 이미 잘 알고 있을 것입니다. 현재 [Kotlin 라이브러리 바인딩](walkthrough.md) 프로세스를 설명하는 추가 설명서가 제공되므로 Xamarin 애플리케이션에서 동일한 방식으로 라이브러리를 사용할 수 있습니다. 이 문서의 목적은 Xamarin에 대한 Kotlin 바인딩을 만드는 개략적인 방법을 설명하는 것입니다.
 

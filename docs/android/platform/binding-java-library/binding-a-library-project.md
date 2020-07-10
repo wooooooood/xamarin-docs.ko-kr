@@ -7,14 +7,17 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 2ac402bf423c9f3fe136d1ba31622d915d2e2eef
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 54de1cde65e9c1ab9cb758c057a87c6b15c4da54
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027734"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853035"
 ---
 # <a name="binding-an-eclipse-library-project"></a>Eclipse 라이브러리 프로젝트 바인딩
+
+> [!IMPORTANT]
+> 현재 Xamarin 플랫폼에서 사용자 지정 바인딩 사용을 조사하고 있습니다. [**설문 조사**](https://www.surveymonkey.com/r/KKBHNLT)에 참여하여 향후 개발 작업에 대해 알려 주시기 바랍니다.
 
 _이 연습에서는 Xamarin.Android 프로젝트 템플릿을 사용하여 Eclipse Android 라이브러리 프로젝트를 바인딩하는 방법을 설명합니다._
 

@@ -7,14 +7,17 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 2a88888b2306589930ad6386fb69bbd3b48924b7
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 5439e213c0016ea01935d617f5f6b5a3edf3eee8
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571378"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853010"
 ---
 # <a name="java-bindings-metadata"></a>Java 바인딩 메타데이터
+
+> [!IMPORTANT]
+> 현재 Xamarin 플랫폼에서 사용자 지정 바인딩 사용을 조사하고 있습니다. [**설문 조사**](https://www.surveymonkey.com/r/KKBHNLT)에 참여하여 향후 개발 작업에 대해 알려 주시기 바랍니다.
 
 _Xamarin.Android의 C# 코드는 바인딩을 통해 JNI(Java Native Interface)에 지정된 하위 수준 세부 정보를 추상화하는 메커니즘인 Java 라이브러리를 호출합니다. Xamarin.Android는 이러한 바인딩을 생성하는 도구를 제공합니다. 개발자는 이 도구를 통해 메타데이터를 사용하여 바인딩을 만드는 방법을 제어할 수 있으며, 이를 통해 네임스페이스 수정이나 멤버 이름 바꾸기 같은 절차를 수행할 수 있습니다 이 문서에서는 메타데이터가 작동하는 방식을 설명하고, 메타데이터에서 지원하는 특성을 요약하고, 이 메타데이터를 수정하여 바인딩 문제를 해결하는 방법을 설명합니다._
 

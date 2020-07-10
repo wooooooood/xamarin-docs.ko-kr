@@ -10,12 +10,12 @@ ms.date: 04/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f92ad47ae883f4b1b413ae5192a9add83045bb77
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a287ff28ab62fcfcc00c88858cf3595ba2fa5118
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136957"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853133"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.Forms 트리거
 
@@ -319,11 +319,7 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 
 ## <a name="state-triggers"></a>상태 트리거
 
-상태 트리거는 Xamarin.Forms 4.5에서 도입되었으며 [`VisualState`](xref:Xamarin.Forms.VisualState)를 적용해야 하는 조건을 정의하는 특수한 트리거 그룹입니다. 그러나 현재는 실험적이며 *App.xaml.cs* 파일에 다음 코드 줄을 추가해서만 사용할 수 있습니다.
-
-```csharp
-Device.SetFlags(new string[]{ "StateTriggers_Experimental" });
-```
+상태 트리거는 [`VisualState`](xref:Xamarin.Forms.VisualState)를 적용해야 하는 조건을 정의하는 특수한 트리거 그룹입니다. 
 
 상태 트리거는 [`VisualState`](xref:Xamarin.Forms.VisualState)의 [`StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) 컬렉션에 추가됩니다. 이 컬렉션은 단일 상태 트리거 또는 여러 상태 트리거를 포함할 수 있습니다. 컬렉션의 상태 트리거가 활성 상태인 경우 [`VisualState`](xref:Xamarin.Forms.VisualState)가 적용됩니다.
 

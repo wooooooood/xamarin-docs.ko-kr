@@ -7,20 +7,23 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/11/2018
-ms.openlocfilehash: 59969abae739db1d9035ec31738c39a3912f47ae
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 336462176813b9985e2c269273d08c4aacbea9b5
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027772"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853105"
 ---
 # <a name="binding-a-jar"></a>JAR 바인딩
+
+> [!IMPORTANT]
+> 현재 Xamarin 플랫폼에서 사용자 지정 바인딩 사용을 조사하고 있습니다. [**설문 조사**](https://www.surveymonkey.com/r/KKBHNLT)에 참여하여 향후 개발 작업에 대해 알려 주시기 바랍니다.
 
 _이 연습에서는 Android .JAR 파일에서 Xamarin.Android Java 바인딩 라이브러리를 만드는 방법에 대한 단계별 지침을 제공합니다._
 
 ## <a name="overview"></a>개요
 
-Android 커뮤니티는 앱에서 사용하면 좋은 다양한 Java 라이브러리를 제공합니다. 해당 Java 라이브러리는 종종 .JAR(Java Archive) 형식으로 패키지되지만 해당 기능을 Xamarin.Android 앱에서 사용할 수 있도록 ‘Java 바인딩 라이브러리’에 .JAR를 패키지할 수 있습니다.  Java 바인딩 라이브러리의 목적은 자동으로 생성된 코드 래퍼를 통해 .JAR 파일의 API를 C# 코드에서 사용할 수 있게 만드는 것입니다.
+Android 커뮤니티는 앱에서 사용하면 좋은 다양한 Java 라이브러리를 제공합니다. 해당 Java 라이브러리는 종종 .JAR(Java Archive) 형식으로 패키지되지만 해당 기능을 Xamarin.Android 앱에서 사용할 수 있도록 ‘Java 바인딩 라이브러리’에 .JAR를 패키지할 수 있습니다. Java 바인딩 라이브러리의 목적은 자동으로 생성된 코드 래퍼를 통해 .JAR 파일의 API를 C# 코드에서 사용할 수 있게 만드는 것입니다.
 
 Xamarin 도구는 하나 이상의 입력 .JAR 파일에서 바인딩 라이브러리를 생성할 수 있습니다. 바인딩 라이브러리(.DLL 어셈블리)에는 다음이 포함됩니다. 
 
@@ -77,7 +80,7 @@ Picasso.With (this)
 
 아래 단계를 시작하기 전에 [picasso-2.x.x.jar](http://repo1.maven.org/maven2/com/squareup/picasso/picasso/2.5.2/picasso-2.5.2.jar)을 다운로드하세요.
 
-먼저 새 바인딩 라이브러리 프로젝트를 만듭니다. Mac용 Visual Studio 또는 Visual Studio에서 새 솔루션을 만들고 ‘Android 바인딩 라이브러리’ 템플릿을 선택합니다.  이 연습의 스크린샷은 Visual Studio를 사용하지만 Mac용 Visual Studio는 매우 유사합니다. 솔루션 이름을 **JarBinding**으 지정합니다. 
+먼저 새 바인딩 라이브러리 프로젝트를 만듭니다. Mac용 Visual Studio 또는 Visual Studio에서 새 솔루션을 만들고 ‘Android 바인딩 라이브러리’ 템플릿을 선택합니다. 이 연습의 스크린샷은 Visual Studio를 사용하지만 Mac용 Visual Studio는 매우 유사합니다. 솔루션 이름을 **JarBinding**으 지정합니다. 
 
 [![JarBinding 라이브러리 프로젝트 만들기](binding-a-jar-images/01-new-bindings-library-sml.w157.png)](binding-a-jar-images/01-new-bindings-library.w157.png#lightbox)
 
@@ -93,7 +96,7 @@ Picasso.With (this)
 
 [![프로젝트에 추가된 Jar](binding-a-jar-images/04-jar-added-sml.png)](binding-a-jar-images/04-jar-added.png#lightbox)
 
-Java 바인딩 라이브러리 프로젝트를 만드는 경우 .JAR을 바인딩 라이브러리에 포함할지 또는 별도로 패키지할지를 지정해야 합니다. 이렇게 하려면 다음 ‘빌드 작업’ 중 하나를 지정합니다.  
+Java 바인딩 라이브러리 프로젝트를 만드는 경우 .JAR을 바인딩 라이브러리에 포함할지 또는 별도로 패키지할지를 지정해야 합니다. 이렇게 하려면 다음 ‘빌드 작업’ 중 하나를 지정합니다. 
 
 - **EmbeddedJar** &ndash; .JAR은 바인딩 라이브러리에 포함됩니다.
 
@@ -105,7 +108,7 @@ Java 바인딩 라이브러리 프로젝트를 만드는 경우 .JAR을 바인�
 
 [![EmbeddedJar 빌드 작업 선택](binding-a-jar-images/05-embeddedjar-sml.png)](binding-a-jar-images/05-embeddedjar.png#lightbox)
 
-그런 다음, 프로젝트 속성을 열어 ‘대상 프레임워크’를 구성합니다.  .JAR은 Android API를 사용하는 경우 대상 프레임워크를 .JAR에 필요한 API 레벨로 설정합니다. 일반적으로 .JAR 파일의 개발자는 .JAR이 호환되는 API 레벨을 나타냅니다. (일반적으로 대상 프레임워크 설정 및 Android API 레벨에 대한 자세한 내용은 [Android API 레벨 이해](~/android/app-fundamentals/android-api-levels.md)를 참조하세요.)
+그런 다음, 프로젝트 속성을 열어 ‘대상 프레임워크’를 구성합니다. .JAR은 Android API를 사용하는 경우 대상 프레임워크를 .JAR에 필요한 API 레벨로 설정합니다. 일반적으로 .JAR 파일의 개발자는 .JAR이 호환되는 API 레벨을 나타냅니다. (일반적으로 대상 프레임워크 설정 및 Android API 레벨에 대한 자세한 내용은 [Android API 레벨 이해](~/android/app-fundamentals/android-api-levels.md)를 참조하세요.)
 
 바인딩 라이브러리의 대상 API 레벨을 설정합니다(이 예제에서는 API 레벨 19 사용). 
 
