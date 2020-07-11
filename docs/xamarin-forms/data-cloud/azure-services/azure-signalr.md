@@ -9,12 +9,12 @@ ms.date: 06/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ffa44beb68dc845a64d8bf2a9f86f6d7e56df8f9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4ef1f9aadd93c971adb66ede442796c2b72c2c9a
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139440"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226835"
 ---
 # <a name="azure-signalr-service-with-xamarinforms"></a>Azure SignalR ServiceXamarin.Forms
 
@@ -310,8 +310,8 @@ SignalR chat 응용 프로그램은 다음과 같이 제공 된 iOS, Android 및
 
 ## <a name="related-links"></a>관련 링크
 
-* [Xamarin 및 SignalR를 사용 하 여 실시간 모바일 앱 개발](https://mybuild.techcommunity.microsoft.com/sessions/77333/)
+* [Xamarin 및 SignalR를 사용 하 여 실시간 모바일 앱 개발](https://www.youtube.com/watch?v=AlqZ1LpUXeg)
 * [SignalR 소개](/aspnet/signalr/overview/getting-started/introduction-to-signalr)
 * [Azure Functions 소개](/azure/azure-functions/functions-overview)
-* [Azure Functions 설명서](/azure/azure-functions/) 리소스를 참조하세요.
+* [Azure Functions 설명서](/azure/azure-functions/)
 * [MVVM SignalR chat 샘플](https://github.com/lbugnion/sample-xamarin-signalr)

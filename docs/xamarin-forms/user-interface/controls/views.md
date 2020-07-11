@@ -6,22 +6,22 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/16/2020
+ms.date: 07/09/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8c15626e405645d28a785c32d276860f9751ea25
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: bd503ce9fd04d80fc0f791131f67f6f1a86ae84a
+ms.sourcegitcommit: cd0c0999b53e825b60471bfbfd4144cfcd783587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84132381"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86225690"
 ---
 # <a name="xamarinforms-views"></a>Xamarin.Forms레이아웃
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
-_Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 빌딩 블록입니다._
+_Xamarin.Forms뷰는 플랫폼 간 모바일 사용자 인터페이스의 빌딩 블록입니다._
 
 뷰는 다른 그래픽 프로그래밍 환경에서 일반적으로 *컨트롤이* 나 *위젯* 으로 알려진 레이블, 단추 및 슬라이더와 같은 사용자 인터페이스 개체입니다. 모두에서 지원 되는 뷰는 Xamarin.Forms 클래스에서 파생 [`View`](xref:Xamarin.Forms.View) 됩니다. 여러 범주로 나눌 수 있습니다.
 
@@ -34,11 +34,18 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 | [`BoxView`](xref:Xamarin.Forms.BoxView)속성으로 색이 지정 된 실선 사각형을 표시 합니다 [`Color`](xref:Xamarin.Forms.BoxView.Color) . `BoxView`에는 40x40의 기본 크기 요청이 있습니다. 다른 크기의 경우 [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 및 속성을 할당 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.BoxView)  /  [가이드](~/xamarin-forms/user-interface/boxview.md)  /  [Sample 1](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview), [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-textdecoration), [3](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-listviewcolors/), [4](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife), [5](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-dotmatrixclock), [6](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock) | [![BoxView 예제](views-images/BoxView.png "BoxView 예제")](views-images/BoxView-Large.png#lightbox "BoxView 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/BoxViewDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/BoxViewDemoPage.xaml) |
 |     |     |
 
+### <a name="ellipse"></a>타원
+
+|     |    |
+| --- | ---|
+| [`Ellipse`](xref:Xamarin.Forms.Shapes.Ellipse)x 크기의 타원이 나 원을 표시 [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 합니다. 타원 안쪽에를 그리려면 해당 속성을로 설정 [`Fill`](xref:Xamarin.Forms.Shapes.Shape.Fill) [`Color`](xref:Xamarin.Forms.Color) 합니다. 타원에 윤곽선을 지정 하려면 해당 속성을로 설정 [`Stroke`](xref:Xamarin.Forms.Shapes.Shape.Stroke) `Color` 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Shapes.Ellipse)  /  [가이드](~/xamarin-forms/user-interface/shapes/ellipse.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos) | [![타원 예](views-images/Ellipse.png "타원 예")](views-images/Ellipse-Large.png#lightbox "타원 예")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EllipseDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EllipseDemoPage.xaml) |
+|     |     |
+
 ### <a name="expander"></a>Expander
 
 |     |     |
 | --- | --- |
-| `Expander`모든 콘텐츠를 호스트 하는 확장 가능한 컨테이너를 제공 하며 헤더와 콘텐츠로 구성 됩니다. 속성을 헤더로 표시 되는로 설정 하 `Header` [`View`](xref:Xamarin.Forms.View) 고, 탭을 `Content` [`View`](xref:Xamarin.Forms.View) 통해 머리글을 확장할 때 표시 되는 속성을로 설정 합니다.<br /><br />[가이드](~/xamarin-forms/user-interface/expander.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos) | [![확장기 예제](views-images/Expander.png "확장기 예제")](views-images/Expander-Large.png#lightbox "확장기 예제")<br /> [이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ExpanderDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ExpanderDemoPage.xaml) |
+| [`Expander`](xref:Xamarin.Forms.Expander)모든 콘텐츠를 호스트 하는 확장 가능한 컨테이너를 제공 하며 헤더와 콘텐츠로 구성 됩니다. 속성을 헤더로 표시 되는로 설정 하 `Header` [`View`](xref:Xamarin.Forms.View) 고, 탭을 `Content` [`View`](xref:Xamarin.Forms.View) 통해 머리글을 확장할 때 표시 되는 속성을로 설정 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Expander)  /  [가이드](~/xamarin-forms/user-interface/expander.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos) | [![확장기 예제](views-images/Expander.png "확장기 예제")](views-images/Expander-Large.png#lightbox "확장기 예제")<br /> [이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ExpanderDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ExpanderDemoPage.xaml) |
 |     |     |
 
 ### <a name="label"></a>레이블
@@ -48,6 +55,13 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 | [`Label`](xref:Xamarin.Forms.Label)상수 또는 변수 서식 지정을 사용 하 여 한 줄 텍스트 문자열 또는 텍스트의 여러 줄 블록을 표시 합니다. [`Text`](xref:Xamarin.Forms.Label.Text)상수 형식에 대 한 속성을 문자열로 설정 하거나 [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) [`FormattedString`](xref:Xamarin.Forms.FormattedString) 변수 서식 지정을 위해 속성을 개체로 설정 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Label)  /  [가이드](~/xamarin-forms/user-interface/text/label.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![레이블 예](views-images/Label.png "레이블 예")](views-images/Label-Large.png#lightbox "레이블 예")<br /> [이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/LabelDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/LabelDemoPage.xaml) |
 |     |     |
 
+### <a name="line"></a>꺾은선형
+
+|     |     |
+| --- | --- |
+| [`Line`](xref:Xamarin.Forms.Shapes.Line)시작점에서 끝점 까지의 선을 표시 합니다. 시작점은 및 속성으로 표시 되 [`X1`](xref:Xamarin.Forms.Shapes.Line.X1) 는 [`Y1`](xref:Xamarin.Forms.Shapes.Line.Y1) 반면 끝점은 및 속성으로 표시 됩니다 [`X2`](xref:Xamarin.Forms.Shapes.Line.X2) [`Y2`](xref:Xamarin.Forms.Shapes.Line.Y2) . 줄의 색을 설정 하려면 해당 속성을로 설정 [`Stroke`](xref:Xamarin.Forms.Shapes.Shape.Stroke) [`Color`](xref:Xamarin.Forms.Color) 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Shapes.Line)  /  [가이드](~/xamarin-forms/user-interface/shapes/line.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos) | [![줄 예제](views-images/Line.png "줄 예제")](views-images/Line-Large.png#lightbox "줄 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/LineDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/LineDemoPage.xaml) |
+|     |     |
+
 ### <a name="image"></a>이미지
 
 |     |     |
@@ -55,7 +69,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 | [`Image`](xref:Xamarin.Forms.Image)비트맵을 표시 합니다. 비트맵은 웹을 통해 다운로드 하거나, 공용 프로젝트 또는 플랫폼 프로젝트에 리소스로 포함 하거나, .NET 개체를 사용 하 여 만들 수 있습니다 `Stream` .<br /><br />[API 설명서](xref:Xamarin.Forms.Image)  /  [가이드](~/xamarin-forms/user-interface/images.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages) | [![이미지 예제](views-images/Image.png "이미지 예제")](views-images/Image-Large.png#lightbox "이미지 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageDemoPage.xaml) |
 |     |     |
 
-### <a name="map"></a>지도
+### <a name="map"></a>맵
 
 |     |     |
 | --- | --- |
@@ -74,6 +88,34 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 |     |     |
 | --- | --- |
 | [`OpenGLView`](xref:Xamarin.Forms.OpenGLView)iOS 및 Android 프로젝트에서 OpenGL 그래픽을 표시 합니다. 유니버설 Windows 플랫폼는 지원 되지 않습니다. IOS 및 Android 프로젝트에는 **OpenTK-1.0** 어셈블리 또는 **OpenTK** 버전 1.0.0.0 어셈블리에 대 한 참조가 필요 합니다. `OpenGLView`공유 프로젝트에서를 사용 하는 것이 더 쉽습니다. .NET Standard 라이브러리에서 사용 되는 경우 샘플 코드에 표시 된 것과 같이 종속성 서비스도 필요 합니다.<br /><br />이 기능은에 기본 제공 되는 유일한 그래픽 기능 Xamarin.Forms 이지만 Xamarin.Forms 응용 프로그램은, 또는를 사용 하 여 그래픽을 렌더링할 수도 있습니다 [`SkiaSharp`](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) [`UrhoSharp`](~/xamarin-forms/user-interface/graphics/urhosharp.md) .<br /><br />[API 문서](xref:Xamarin.Forms.OpenGLView)<br /><br /> | [![OpenGLView 예제](views-images/OpenGLView.png "OpenGLView 예제")](views-images/OpenGLView-Large.png#lightbox "OpenGLView 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs)  /  에 대 한 c # 코드 [코드 숨김이](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) 포함 된 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) |
+|     |     |
+
+### <a name="path"></a>경로
+
+|     |     |
+| --- | --- |
+| [`Path`](xref:Xamarin.Forms.Shapes.Path)곡선 및 복잡 한 도형을 표시 합니다. [`Data`](xref:Xamarin.Forms.Shapes.Path.Data)속성은 그릴 모양을 지정 합니다. 모양의 색을 설정 하려면 해당 속성을로 설정 [`Stroke`](xref:Xamarin.Forms.Shapes.Shape.Stroke) [`Color`](xref:Xamarin.Forms.Color) 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Shapes.Path)  /  [가이드](~/xamarin-forms/user-interface/shapes/path.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos) | [![경로 예](views-images/Path.png "경로 예")](views-images/Path-Large.png#lightbox "경로 예")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/PathDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PathDemoPage.xaml) |
+|     |     |
+
+### <a name="polygon"></a>다각형
+
+|     |     |
+| --- | --- |
+| [`Polygon`](xref:Xamarin.Forms.Shapes.Polygon)다각형을 표시 합니다. 속성은 다각형의 [`Points`](xref:Xamarin.Forms.Shapes.Polygon.Points) 꼭 짓 점을 지정 하는 반면 속성은 [`FillRule`](xref:Xamarin.Forms.Shapes.Polygon.FillRule) 다각형의 내부 채우기가 결정 되는 방법을 지정 합니다. 다각형 내부를 그리려면 해당 속성을로 설정 [`Fill`](xref:Xamarin.Forms.Shapes.Shape.Fill) [`Color`](xref:Xamarin.Forms.Color) 합니다. 다각형에 윤곽선을 지정 하려면 해당 속성을로 설정 [`Stroke`](xref:Xamarin.Forms.Shapes.Shape.Stroke) `Color` 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Shapes.Polygon)  /  [가이드](~/xamarin-forms/user-interface/shapes/polygon.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos) | [![Polygon 예](views-images/Polygon.png "Polygon 예")](views-images/Polygon-Large.png#lightbox "Polygon 예")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/PolygonDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PolygonDemoPage.xaml) |
+|     |     |
+
+### <a name="polyline"></a>폴리라인
+
+|     |     |
+| --- | --- |
+| [`Polyline`](xref:Xamarin.Forms.Shapes.Polyline)일련의 연결 된 직선을 표시 합니다. 속성은 다중선의 [`Points`](xref:Xamarin.Forms.Shapes.Polygon.Points) 꼭 짓 점을 지정 하는 반면 속성은 [`FillRule`](xref:Xamarin.Forms.Shapes.Polygon.FillRule) 다중선의 내부 채우기가 결정 되는 방법을 지정 합니다. 다중선 내부에를 그리려면 해당 속성을로 설정 [`Fill`](xref:Xamarin.Forms.Shapes.Shape.Fill) [`Color`](xref:Xamarin.Forms.Color) 합니다. 다중선에 윤곽선을 지정 하려면 해당 속성을로 설정 [`Stroke`](xref:Xamarin.Forms.Shapes.Shape.Stroke) `Color` 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Shapes.Polyline)  /  [가이드](~/xamarin-forms/user-interface/shapes/polyline.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos) | [![다중선 예](views-images/Polyline.png "다중선 예")](views-images/Polyline-Large.png#lightbox "다중선 예")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/PolylineDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PolylineDemoPage.xaml) |
+|     |     |
+
+### <a name="rectangle"></a>사각형
+
+|     |     |
+| --- | --- |
+| [`Rectangle`](xref:Xamarin.Forms.Shapes.Rectangle)사각형 또는 사각형을 표시 합니다. 사각형 안에를 그리려면 해당 속성을로 설정 [`Fill`](xref:Xamarin.Forms.Shapes.Shape.Fill) [`Color`](xref:Xamarin.Forms.Color) 합니다. 사각형에 윤곽선을 지정 하려면 해당 속성을로 설정 [`Stroke`](xref:Xamarin.Forms.Shapes.Shape.Stroke) `Color` 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Shapes.Rectangle)  /  [가이드](~/xamarin-forms/user-interface/shapes/rectangle.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos) | [![사각형 예제](views-images/Rectangle.png "사각형 예제")](views-images/Rectangle-Large.png#lightbox "사각형 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RectangleDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RectangleDemoPage.xaml) |
 |     |     |
 
 ### <a name="webview"></a>WebView
@@ -96,21 +138,21 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 
 |     |     |
 | --- | --- |
-| `ImageButton`는 이미지를 표시 하 고 눌린 이벤트를 발생 시키는 사각형 개체입니다 `Clicked` .<br /><br /> [가이드](~/xamarin-forms/user-interface/imagebutton.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![ImageButton 예제](views-images/ImageButton.png "ImageButton 예제")](views-images/ImageButton-Large.png#lightbox "ImageButton 예제")<br /> [이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageButtonDemoPage.cs)  /  에 대 한 c # 코드 [코드 숨김이](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml.cs) 포함 된 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml) |
+| [`ImageButton`](xref:Xamarin.Forms.ImageButton)는 이미지를 표시 하 고 눌린 이벤트를 발생 시키는 사각형 개체입니다 `Clicked` .<br /><br />[API 설명서](xref:Xamarin.Forms.ImageButton)  /  [가이드](~/xamarin-forms/user-interface/imagebutton.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![ImageButton 예제](views-images/ImageButton.png "ImageButton 예제")](views-images/ImageButton-Large.png#lightbox "ImageButton 예제")<br /> [이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageButtonDemoPage.cs)  /  에 대 한 c # 코드 [코드 숨김이](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml.cs) 포함 된 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml) |
 |     |     |
 
 ### <a name="radiobutton"></a>RadioButton
 
 |     |     |
 | --- | --- |
-| `RadioButton`집합에서 하나의 옵션을 선택할 수 있도록 허용 하 고 선택이 `CheckedChanged` 발생할 때 이벤트를 발생 시킵니다.<br /><br />[가이드](~/xamarin-forms/user-interface/radiobutton.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/) | [![RadioButton 예](views-images/RadioButton.png "RadioButton 예")](views-images/RadioButton-Large.png#lightbox "RadioButton 예")<br /> [이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RadioButtonDemoPage.cs)  /  에 대 한 c # 코드 [코드 숨김이](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RadioButtonDemoPage.xaml.cs) 포함 된 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RadioButtonDemoPage.xaml) |
+| [`RadioButton`](xref:Xamarin.Forms.RadioButton)집합에서 하나의 옵션을 선택할 수 있도록 허용 하 고 선택이 `CheckedChanged` 발생할 때 이벤트를 발생 시킵니다.<br /><br />[API 설명서](xref:Xamarin.Forms.RadioButton)  /  [가이드](~/xamarin-forms/user-interface/radiobutton.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/) | [![RadioButton 예](views-images/RadioButton.png "RadioButton 예")](views-images/RadioButton-Large.png#lightbox "RadioButton 예")<br /> [이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RadioButtonDemoPage.cs)  /  에 대 한 c # 코드 [코드 숨김이](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RadioButtonDemoPage.xaml.cs) 포함 된 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RadioButtonDemoPage.xaml) |
 |     |     |
 
 ### <a name="refreshview"></a>RefreshView
 
 |     |     |
 | --- | --- |
-| `RefreshView`는 스크롤 가능한 콘텐츠를 위한 끌어오기-새로 고침 기능을 제공 하는 컨테이너 컨트롤입니다. `ICommand`속성으로 정의 된는 `Command` 새로 고침이 트리거될 때 실행 되 고, 속성은 `IsRefreshing` 컨트롤의 현재 상태를 나타냅니다.<br /><br /> [가이드](~/xamarin-forms/user-interface/refreshview.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![RefreshView 예제](views-images/RefreshView.png "RefreshView 예제")](views-images/RefreshView-Large.png#lightbox "RefreshView 예제")<br /> [이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RefreshViewDemoPage.cs)  /  에 대 한 c # 코드 [코드 숨김이](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml.cs) 포함 된 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml) |
+| [`RefreshView`](xref:Xamarin.Forms.RefreshView)는 스크롤 가능한 콘텐츠를 위한 끌어오기-새로 고침 기능을 제공 하는 컨테이너 컨트롤입니다. `ICommand`속성으로 정의 된는 `Command` 새로 고침이 트리거될 때 실행 되 고, 속성은 `IsRefreshing` 컨트롤의 현재 상태를 나타냅니다.<br /><br />[API 설명서](xref:Xamarin.Forms.RefreshView)  /  [가이드](~/xamarin-forms/user-interface/refreshview.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![RefreshView 예제](views-images/RefreshView.png "RefreshView 예제")](views-images/RefreshView-Large.png#lightbox "RefreshView 예제")<br /> [이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RefreshViewDemoPage.cs)  /  에 대 한 c # 코드 [코드 숨김이](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml.cs) 포함 된 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="searchbar"></a>SearchBar
@@ -124,7 +166,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 
 |     |     |
 | --- | --- |
-| `SwipeView`는 콘텐츠 항목 주위에 래핑하는 컨테이너 컨트롤이 며 살짝 밀기 제스처로 표시 되는 상황에 맞는 메뉴 항목을 제공 합니다. 각 메뉴 항목은 `SwipeItem` `Command` 항목을 탭 할 때를 실행 하는 속성이 있는로 표시 됩니다 `ICommand` .<br /><br /> [가이드](~/xamarin-forms/user-interface/swipeview.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![SwipeView 예제](views-images/SwipeView.png "SwipeView 예제")](views-images/SwipeView-Large.png#lightbox "SwipeView 예제")<br /> [이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwipeViewDemoPage.cs)  /  에 대 한 c # 코드 [코드 숨김이](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml.cs) 포함 된 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml) |
+| [`SwipeView`](xref:Xamarin.Forms.SwipeView)는 콘텐츠 항목 주위에 래핑하는 컨테이너 컨트롤이 며 살짝 밀기 제스처로 표시 되는 상황에 맞는 메뉴 항목을 제공 합니다. 각 메뉴 항목은 `SwipeItem` `Command` 항목을 탭 할 때를 실행 하는 속성이 있는로 표시 됩니다 `ICommand` .<br /><br />[API 설명서](xref:Xamarin.Forms.SwipeView)  /  [가이드](~/xamarin-forms/user-interface/swipeview.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![SwipeView 예제](views-images/SwipeView.png "SwipeView 예제")](views-images/SwipeView-Large.png#lightbox "SwipeView 예제")<br /> [이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwipeViewDemoPage.cs)  /  에 대 한 c # 코드 [코드 숨김이](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml.cs) 포함 된 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml) |
 |     |     |
 
 ## <a name="views-for-setting-values"></a>값 설정 뷰
@@ -133,7 +175,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 
 |     |     |
 | --- | --- |
-| `CheckBox`사용자가 선택 하거나 비워 둘 수 있는 단추 유형을 사용 하 여 부울 값을 선택할 수 있습니다. `IsChecked`속성은의 상태 이며 `CheckBox` `CheckedChanged` 상태가 변경 될 때 이벤트가 발생 합니다.<br /><br />API 설명서/ [가이드](~/xamarin-forms/user-interface/checkbox.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos) | [![CheckBox 예](views-images/CheckBox.png "CheckBox 예")](views-images/CheckBox-Large.png#lightbox "CheckBox 예")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxPage.xaml) |
+| [`CheckBox`](xref:Xamarin.Forms.CheckBox)사용자가 선택 하거나 비워 둘 수 있는 단추 유형을 사용 하 여 부울 값을 선택할 수 있습니다. `IsChecked`속성은의 상태 이며 `CheckBox` `CheckedChanged` 상태가 변경 될 때 이벤트가 발생 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.CheckBox)  /  [가이드](~/xamarin-forms/user-interface/checkbox.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos) | [![CheckBox 예](views-images/CheckBox.png "CheckBox 예")](views-images/CheckBox-Large.png#lightbox "CheckBox 예")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxPage.xaml) |
 |     |     |
 
 ### <a name="slider"></a>슬라이더
@@ -225,7 +267,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 
 |     |     |
 | --- | --- |
-| `IndicatorView`의 항목 수를 나타내는 표시기를 표시 `CarouselView` 합니다. 속성을 `CarouselView.IndicatorView` 개체에 설정 `IndicatorView` 하 여에 대 한 표시기를 표시 `CarouselView` 합니다. <br /><br />[가이드](~/xamarin-forms/user-interface/indicatorview.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/) | [![IndicatorView 예제](views-images/IndicatorView.png "IndicatorView 예제")](views-images/IndicatorView-Large.png#lightbox "IndicatorView 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/IndicatorViewDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/IndicatorViewDemoPage.xaml) |
+| [`IndicatorView`](xref:Xamarin.Forms.IndicatorView)의 항목 수를 나타내는 표시기를 표시 `CarouselView` 합니다. 속성을 `CarouselView.IndicatorView` 개체에 설정 `IndicatorView` 하 여에 대 한 표시기를 표시 `CarouselView` 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.IndicatorView)  /  [가이드](~/xamarin-forms/user-interface/indicatorview.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/) | [![IndicatorView 예제](views-images/IndicatorView.png "IndicatorView 예제")](views-images/IndicatorView-Large.png#lightbox "IndicatorView 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/IndicatorViewDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/IndicatorViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="listview"></a>ListView

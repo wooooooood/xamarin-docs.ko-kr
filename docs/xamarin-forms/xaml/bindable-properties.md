@@ -10,12 +10,12 @@ ms.date: 01/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 33b3763075b64ea8af615465825313a527d20db2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7d83728edc161a89b381330884e86f09b7788e3d
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138179"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226783"
 ---
 # <a name="xamarinforms-bindable-properties"></a>Xamarin.Forms바인딩 가능한 속성
 
@@ -55,6 +55,9 @@ ms.locfileid: "84138179"
 - 소유 하는 개체의 형식입니다.
 - 속성의 기본값입니다. 이렇게 하면 속성이 설정 되지 않은 경우 속성은 항상 특정 기본값을 반환 하 고 속성의 형식에 대 한 기본값과 다를 수 있습니다. [ `ClearValue` ] (F:)를 사용할 때 기본값이 복원 Xamarin.Forms 됩니다. BindableObject. ClearValue ( Xamarin.Forms . BindableProperty) 메서드는 바인딩 가능한 속성에 대해 호출 됩니다.
 
+> [!IMPORTANT]
+> 바인딩 가능한 속성에 대 한 명명 규칙은 바인딩 가능한 속성 식별자가 메서드에 지정 된 속성 이름과 일치 해야 한다는 것입니다 `Create` . 여기에는 "property"가 추가 됩니다. 
+
 다음 코드에서는 네 개의 필수 매개 변수에 대 한 식별자 및 값을 사용 하 여 바인딩 가능한 속성의 예를 보여 줍니다.
 
 ```csharp
@@ -62,7 +65,7 @@ public static readonly BindableProperty EventNameProperty =
   BindableProperty.Create ("EventName", typeof(string), typeof(EventToCommandBehavior), null);
 ```
 
-그러면 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 형식의 이라는 인스턴스가 만들어집니다 `EventName` `string` . 속성은 클래스에 의해 소유 `EventToCommandBehavior` 되며 기본값은 `null` 입니다. 바인딩 가능한 속성에 대 한 명명 규칙은 바인딩 가능한 속성 식별자가 메서드에 지정 된 속성 이름과 일치 해야 한다는 것입니다 `Create` . 여기에는 "property"가 추가 됩니다. 따라서 위의 예제에서 바인딩 가능한 속성 식별자는 `EventNameProperty` 입니다.
+그러면 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 형식의 이라는 인스턴스가 만들어집니다 `EventNameProperty` `string` . 속성은 클래스에 의해 소유 `EventToCommandBehavior` 되며 기본값은 `null` 입니다.
 
 필요에 따라 인스턴스를 만들 때 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 다음 매개 변수를 지정할 수 있습니다.
 

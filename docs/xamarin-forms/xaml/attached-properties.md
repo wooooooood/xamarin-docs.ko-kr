@@ -10,12 +10,12 @@ ms.date: 06/02/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1f26a4415a75b2b02fd7d6893e366ef81156f077
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1277b3cd875c1b4e05e45202a8e30ef2ff93972a
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138192"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226796"
 ---
 # <a name="attached-properties"></a>연결된 속성
 
@@ -44,6 +44,9 @@ ms.locfileid: "84138192"
 
 형식의 속성을 선언 하 여 연결 된 속성을 만들 수 있습니다 `public static readonly` [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 바인딩 가능한 속성은 [ `BindableProperty.CreateAttached` ] (f:) 중 하나의 반환 된 값으로 설정 해야 합니다 Xamarin.Forms . BindableProperty. CreateAttached (System.string, system.object, System.string, System.object, Xamarin.Forms . BindingMode, Xamarin.Forms . BindableProperty, Xamarin.Forms . BindableProperty. BindingPropertyChangedDelegate, Xamarin.Forms . BindableProperty, Xamarin.Forms . BindableProperty, Xamarin.Forms . BindableProperty. CreateDefaultValueDelegate) 메서드 오버 로드 선언은 소유 하는 클래스의 본문 내에 있지만 멤버 정의 외부에 있어야 합니다.
 
+> [!IMPORTANT]
+> 연결 된 속성에 대 한 명명 규칙은 연결 된 속성 식별자가 메서드에 지정 된 속성 이름과 일치 해야 한다는 것입니다 `CreateAttached` . 여기에는 "property"가 추가 됩니다.
+
 다음 코드에서는 연결 된 속성의 예를 보여 줍니다.
 
 ```csharp
@@ -51,7 +54,7 @@ public static readonly BindableProperty HasShadowProperty =
   BindableProperty.CreateAttached ("HasShadow", typeof(bool), typeof(ShadowEffect), false);
 ```
 
-그러면 형식의 이라는 연결 된 속성이 만들어집니다 `HasShadow` `bool` . 속성은 클래스에 의해 소유 `ShadowEffect` 되며 기본값은 `false` 입니다. 연결 된 속성에 대 한 명명 규칙은 연결 된 속성 식별자가 메서드에 지정 된 속성 이름과 일치 해야 한다는 것입니다 `CreateAttached` . 여기에는 "property"가 추가 됩니다. 따라서 위의 예제에서 연결 된 속성 식별자는 `HasShadowProperty` 입니다.
+그러면 형식의 이라는 연결 된 속성이 만들어집니다 `HasShadowProperty` `bool` . 속성은 클래스에 의해 소유 `ShadowEffect` 되며 기본값은 `false` 입니다.
 
 생성 중에 지정할 수 있는 매개 변수를 포함 하 여 바인딩 가능한 속성을 만드는 방법에 대 한 자세한 내용은 [바인딩 가능한 속성 만들기](~/xamarin-forms/xaml/bindable-properties.md#consume-a-bindable-property)를 참조 하세요.
 

@@ -10,12 +10,12 @@ ms.date: 12/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f7cef5fd39d82cf0a4b55337835c0fe1d57b8bf9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2268f9034a4b09adce697f5fb7b6652baa4feed6
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84197599"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226822"
 ---
 # <a name="xamarinforms-local-databases"></a>Xamarin.Forms로컬 데이터베이스
 
@@ -39,8 +39,10 @@ NuGet 패키지 관리자를 사용 하 여 **sqlite-net-library** 를 검색 �
 
 이름이 유사한 NuGet 패키지가 여러 개 있습니다. 올바른 패키지에는 이러한 특성이 있습니다.
 
-- **만든 사람:** Frank A. Krueger(praeclarum)
 - **ID:** sqlite-net-pcl
+- **작성자:** SQLite-net
+- **소유자:** praeclarum
+- **프로젝트 URL:**https://github.com/praeclarum/sqlite-net
 - **NuGet 링크:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
@@ -236,7 +238,7 @@ public static TodoItemDatabase Database
 }
 ```
 
-이 속성을 사용 하면 Xamarin.Forms 구성 요소가 `Database` 사용자 상호 작용에 대 한 응답으로 인스턴스에서 데이터 검색 및 조작 메서드를 호출할 수 있습니다. 다음은 그 예입니다.
+이 속성을 사용 하면 Xamarin.Forms 구성 요소가 `Database` 사용자 상호 작용에 대 한 응답으로 인스턴스에서 데이터 검색 및 조작 메서드를 호출할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 var saveButton = new Button { Text = "Save" };
